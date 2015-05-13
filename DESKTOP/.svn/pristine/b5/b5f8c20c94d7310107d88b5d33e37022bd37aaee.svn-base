@@ -1,0 +1,130 @@
+.billing-address-content-wrapper{
+
+
+	.heading2{
+		@include f(14);
+		line-height:1.9rem;
+		letter-spacing:.14rem;
+
+	}
+
+	.privacy-notice{
+		background: url($path-images + 'icons/lock-big.png') 70px 15px no-repeat;
+		text-align:center;
+		@include main-font();
+		@include f(13);
+		letter-spacing:0;
+	}
+
+
+	.conf{
+			text-align:center;
+		}		
+
+		.delivery-days{
+			@include rem('width', 413px);
+			margin:0 auto;
+			background: none;
+
+			.delivery-days__list{
+				background: none;
+				li {	
+						margin-bottom: 5px;
+						background: #390209;
+						padding: 0px;
+						border: 1px solid #83464b;
+						display: inherit;
+						@include rem('line-height',23px);
+						position: relative;
+						&.active {
+							background:#2c0404;
+							border : 1px solid $primary-79;
+						}
+
+				}
+					
+					.radio-wrapper{
+					display:table-cell;
+					width:15.7%;
+					position:relative;
+					
+					.form-radio-label{
+						position:absolute;
+						top:35px;
+						left:25px;
+
+						span{
+							height:auto;
+							width:20px;
+							background-position:-195px -432px;
+						}
+
+						span.checked{
+								background-position:-218px -432px;
+						}
+					}
+
+				}
+				
+				.delivery-days__desc{
+					width:63.7%;
+					display:table-cell;
+					position:relative;
+
+					p{
+						text-align: left;
+						@include proxi-font();
+						@include f(11);
+						weight:bold;
+						line-height:2rem;
+						cursor:pointer;
+						@include rem('padding', 0px);
+						@include rem('margin-top', 10px);
+					}
+
+					.delivery-days__desc__detail{
+						@include main-font;
+						@include rem('margin', 15px 0 10px);
+						weight:normal;
+						cursor:normal;
+						color:#AB999C;
+						font-style:italic;
+						height:3rem;
+						letter-spacing:0;
+						line-height:1.5rem;
+					}
+
+					.tooltip-div{
+					position:absolute;
+					top:.6rem;
+					right:95px;
+					}
+				}
+			}
+
+			.standard-delivery{
+				border:1px solid $primary-79;
+			}
+
+			.express-delivery{
+				.tooltip-div{
+					right:115px !important;
+				}
+			}
+
+			.delivery-charges{
+				position:relative;
+
+				p{
+					text-align:right;
+					position:absolute;
+					top:2rem;
+					right:1rem;
+
+				}
+			}
+
+
+
+		}
+}

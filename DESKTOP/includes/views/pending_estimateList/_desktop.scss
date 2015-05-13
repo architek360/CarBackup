@@ -1,0 +1,49 @@
+.repair-service{
+	text-align: left;
+	width:100%;
+	margin-top: 0rem;
+	display:inline-block;
+	.error{
+		@include f(12);
+	}
+	.cost-estimate{
+		width:40%;
+		display: inline-block;
+		vertical-align: top;
+		h4{
+				@include f(15);
+				@include rem('padding-top', 5px);
+				@include rem('margin', 0 0 5px 0);
+				border:none;
+				text-align:left;
+				color:$primary-20;
+				text-transform:uppercase;
+			}
+
+		p{
+
+		   font-size:1.1rem;
+		   text-align:left;
+		   font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+		}
+
+
+		.form-input{
+			height:30px;
+			padding:0;
+			font-size:1.1rem;
+		  
+		  }
+		.cta-button {
+			width: 25%;
+			@include rem('padding', 10px 0 10px 0);
+			@include rem('margin', 30px 0 0 0);
+			.cta-button__input{
+						@include f(11);
+						letter-spacing: .2rem;
+					   }
+	        }
+
+	}
+	
+}

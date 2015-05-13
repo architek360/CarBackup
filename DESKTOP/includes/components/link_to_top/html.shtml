@@ -1,0 +1,7 @@
+<!--Html for Link to Top Component-->
+
+<div class="link-to-top js-link-to-top <!--#echo var="link-class" -->">
+	<a href="#" title="<!--#echo var="link-text" -->"><!--#echo var="link-text" --></a>
+</div>
+
+<!--END of Link to Top Component-->

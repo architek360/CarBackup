@@ -1,0 +1,280 @@
+<div class="overlay-form">
+<input type="hidden" name="registrationPath" value="/content/car/us/usa/en_us/services/my-cartier/RegistrationStep1"/>
+<div class ="error_message_js-contact-ambassador-form" style="display:none;"></div>
+<div class="form-layout js-contact-ambassador-form">
+   
+<script type="text/javascript">
+  function cq5forms_preCheck_js_contact_ambassador_form(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/en-us/contact-us/contactambassadoroverlaynew.mobile.html" id="js-contact-ambassador-form" name="js-contact-ambassador-form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-contact-ambassador-form"/><input type="hidden" name=":formstart" value="/content/car/us/usa/en_us/contact-us/contactambassadoroverlaynew/jcr:content/article-containt-par/formbuilder/start"/><input type="hidden" name="_charset_" value="UTF-8"/><div class="form"><script type="text/javascript">
+(function(){
+var rulesObjects = {};
+var messagesObjects = {};
+        
+    if(rulesObjects.ambassador_title){
+        rulesObjects.ambassador_title.required="true";
+        messagesObjects.ambassador_title.required="This is a mandatory field";
+           
+        } else{
+             rulesObjects.ambassador_title= {
+            required: true
+            }
+            messagesObjects.ambassador_title = {
+            required: "This is a mandatory field"
+            }
+        }
+
+        
+    if(rulesObjects.ambassador_firstName){
+        rulesObjects.ambassador_firstName.required="true";
+        messagesObjects.ambassador_firstName.required="This is a mandatory field";
+           
+        } else{
+             rulesObjects.ambassador_firstName= {
+            required: true
+            }
+            messagesObjects.ambassador_firstName = {
+            required: "This is a mandatory field"
+            }
+        }
+
+        
+    if(rulesObjects.ambassador_lastName){
+        rulesObjects.ambassador_lastName.required="true";
+        messagesObjects.ambassador_lastName.required="This is a mandatory field";
+           
+        } else{
+             rulesObjects.ambassador_lastName= {
+            required: true
+            }
+            messagesObjects.ambassador_lastName = {
+            required: "This is a mandatory field"
+            }
+        }
+
+        
+    if(rulesObjects.ambassador_emailAddress){
+        rulesObjects.ambassador_emailAddress.required="true";
+        messagesObjects.ambassador_emailAddress.required="This is a mandatory field";
+           
+        } else{
+             rulesObjects.ambassador_emailAddress= {
+            required: true
+            }
+            messagesObjects.ambassador_emailAddress = {
+            required: "This is a mandatory field"
+            }
+        }
+
+        
+    if(rulesObjects.ambassador_emailAddress){
+        rulesObjects.ambassador_emailAddress.email="true";
+        messagesObjects.ambassador_emailAddress.email="Email has unrecognized format";
+           
+        } else{
+             rulesObjects.ambassador_emailAddress= {
+            email: true
+            }
+            messagesObjects.ambassador_emailAddress = {
+            email: "Email has unrecognized format"
+            }
+        }
+
+        
+    if(rulesObjects.ambassador_category){
+        rulesObjects.ambassador_category.required="true";
+        messagesObjects.ambassador_category.required="この欄は必須項目です";
+           
+        } else{
+             rulesObjects.ambassador_category= {
+            required: true
+            }
+            messagesObjects.ambassador_category = {
+            required: "この欄は必須項目です"
+            }
+        }
+
+        
+    if(rulesObjects.ambassador_message){
+        rulesObjects.ambassador_message.required="true";
+        messagesObjects.ambassador_message.required="This is a mandatory field";
+           
+        } else{
+             rulesObjects.ambassador_message= {
+            required: true
+            }
+            messagesObjects.ambassador_message = {
+            required: "This is a mandatory field"
+            }
+        }
+
+
+     $(document).ready(function(){
+        $("#js-contact-ambassador-form").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+                });
+     });
+   })();
+</script>
+<fieldset>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+
+
+
+        
+
+        
+
+            <h6 class="heading6"> CONTACT AN AMBASSADOR </h6>
+
+        
+
+
+
+
+
+
+        
+
+        
+
+            <h2 class="heading2"> YOUR PERSONAL DATA </h2>
+
+        
+
+
+
+
+
+</div>
+
+
+<div class="non-mandatory group-wrapper">
+                <label class="label_ambassador_title">TITLE<span class="form-mandatory"></span></label>
+<div class="form-element radio-wrapper ambassador_title">   
+                                    <input type="radio" 
+                                    id="Mr" name="ambassador_title"  value="0001" class="form-radio">
+                                   <label for="Mr" class=" form-radio-label">Mr
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper ambassador_title">   
+                                    <input type="radio" 
+                                    id="Mrs" name="ambassador_title"  value="0002" class="form-radio">
+                                   <label for="Mrs" class=" form-radio-label">Mrs
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper ambassador_title">   
+                                    <input type="radio" 
+                                    id="Ms" name="ambassador_title"  value="0003" class="form-radio">
+                                   <label for="Ms" class=" form-radio-label">Ms
+</label>                              
+                            </div>
+                        <div class="errormessage" id="errormessage-ambassador_title"></div></div>          
+        <div class="non-mandatory form-element input-wrapper ambassador_firstName">
+        <label class="label_ambassador_firstName">FIRST NAME<span class="form-mandatory"></span></label>
+<input id="ambassador_firstName" type="text" name="ambassador_firstName"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-ambassador_firstName"></div></div>
+    <div class="non-mandatory form-element input-wrapper ambassador_lastName">
+        <label class="label_ambassador_lastName">LAST NAME<span class="form-mandatory"></span></label>
+<input id="ambassador_lastName" type="text" name="ambassador_lastName"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-ambassador_lastName"></div></div>
+    <div class="non-mandatory form-element input-wrapper ambassador_emailAddress">
+        <label class="label_ambassador_emailAddress">EMAIL ADDRESS<span class="form-mandatory"></span></label>
+<input id="ambassador_emailAddress" type="text" name="ambassador_emailAddress"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-ambassador_emailAddress"></div></div>
+    <div class="non-mandatory form-element select-wrapper ambassador_category">
+     <label class="label_ambassador_category">YOUR MESSAGE IS RELATED TO<span class="form-mandatory"></span></label>
+<select name="ambassador_category" class=" form-select" 
+             id="ambassador_category">
+            <option value="Request Pricing" >
+                    Request Pricing </option>
+            <option value="Product Information" >
+                    Product Information </option>
+            <option value="Sales Policy" >
+                    Sales Policy </option>
+            <option value="Boutique Information" >
+                    Boutique Information </option>
+            <option value="E-Boutique Information" >
+                    E-Boutique Information </option>
+            <option value="After-Sales Service" >
+                    After-Sales Service </option>
+            <option value="Request a Catalog" >
+                    Request a Catalog </option>
+            <option value="Others" >
+                    Others </option>
+            </select>
+    <div class="errormessage" id="errormessage-ambassador_category"></div></div>
+<div class="non-mandatory form-element input-wrapper ambassador_message">
+        <label class="label_ambassador_message">YOUR MESSAGE<span class="form-mandatory"></span></label>
+<input id="ambassador_message" type="text" name="ambassador_message"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-ambassador_message"></div></div>
+    <div class="non-mandatory group-wrapper">
+                <div class="form-element checkbox-wrapper ambassador_checkbox_val">
+                                <input type="checkbox" 
+                                    id="box_val" name="ambassador_checkbox_val"  value="true" class="form-checkbox">
+                                    <label for="box_val" class=" form-checkbox-label">I would like to recieve information from Cartier using any of the communication method(s) that I have provided above
+</label></div>
+                        <div class="errormessage" id="errormessage-ambassador_checkbox_val"></div></div>          
+        
+</fieldset><div class="form-element button-wrapper SUBMIT">
+<input class="form-button" type="submit"
+    name="SUBMIT" value="SUBMIT" >
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+<script type="text/javascript">
+            RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : 'formType',
+                'actionName' : "ContactAmbassadorAction",
+                'currentPagePath' : "/content/car/us/usa/en_us/contact-us/contactambassadoroverlaynew",
+                'elementId' : "js-contact-ambassador-form",
+                'eventName' : 'submit'
+              });
+        </script>
+
+    </div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div> 
+</div> 

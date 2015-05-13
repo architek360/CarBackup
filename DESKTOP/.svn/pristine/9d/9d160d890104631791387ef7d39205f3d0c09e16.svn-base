@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+@import "../_theme_vars";
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+.js-reg-step-3 {
+    .regstep3-col2 {
+        display: inline-block;
+        width: 93%;
+        float: right;
+        margin: 15px 0 0;
+    }
+    .fn_addrname, .fn_zip {
+        float: left;
+        width: 44%;
+        margin-right: 8px;
+        .form-input {
+            width: 100% !important;
+        }
+    }
+    .fn_state {
+        display: inline-block;
+        width: 93%;
+        float: right;
+        margin-right: 0px;
+        .selector {
+            width: 168px !important;
+            .form-select, span {
+                width: 172px !important;
+            }
+        }
+    }
+    .fn_phno {
+        display: inline-block;
+        width: 93%;
+        float: right;
+        margin-right: 0px;
+    }
+}
+.js-address-form {
+    .addressLabel, .addressform_zip {
+        width: 46%;
+        clear: left;
+        .form-input {
+            width: 100%;
+        }
+    }
+    .addressform_address14 {
+        width: 49%;
+        margin-left: 8px;
+    }
+    .addressform_address5 {
+        float: left !important;
+        margin-right: 44px;
+        width: 46%;
+    }
+    .addressform_address6 {
+        width: 97%;
+        .form-input {
+            width: 100%;
+        }
+    }
+    .addressform_address7 {
+        clear: none;
+        width: 49%;
+        margin-left: 8px;
+    }
+    .addressform_phone {
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,22 @@
+.details-section{
+	display: block;
+	border-top: 1px solid $primary-17;
+	@include rem('padding-bottom', 60px);
+
+	.heading2{
+		@include f(12);
+		font-weight:bold;
+	}
+
+	p{
+		color:$primary-2;
+		letter-spacing: 0px;
+	}
+
+	.comp-rich-text{
+		.content-medias{
+			max-width: 30%;
+			
+		}
+	}
+}

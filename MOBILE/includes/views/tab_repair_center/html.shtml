@@ -1,0 +1,616 @@
+
+<div class="tabparsys1">
+	<div class="ecsstep1">
+		<!--#include virtual="../../components/video_content/html.shtml" -->
+		<div class="error_message_ecspre-registration_form" style="display:none;"></div>
+			<div class="form-layout ecspre-registration_form">
+			    <script type="text/javascript" src="/etc/clientlibs/foundation/form.min.1409551396574.js"></script>
+			<script type="text/javascript">
+			  function cq5forms_preCheck_ecspre_registration_form(submitid) {
+			    var dMsgs = "Please fill out the required field.";
+			    return true;
+			  }
+			</script>
+<form method="POST" action="/en-us/services/my-cartier/my-services/ecspreregistration.mobile.html" id="ecspre-registration_form" name="ecspre-registration_form" enctype="multipart/form-data" novalidate="novalidate"><input type="hidden" name=":formid" value="ecspre-registration_form"><input type="hidden" name=":formstart" value="/content/car/us/usa/en_us/services/my-cartier/my-services/ecspreregistration/jcr:content/par/tabcomponent/tab1/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><input type="hidden" name=":redirect" value="/en-us/services/my-cartier/thankyoupage.html"><div class="form"><script type="text/javascript">
+(function(){
+var rulesObjects = {};
+var messagesObjects = {};
+		
+	if(rulesObjects.productType){
+		rulesObjects.productType.required="true";
+		messagesObjects.productType.required="Field Required!";
+	       
+		} else{
+			 rulesObjects.productType= {
+	        required: true
+	        }
+	        messagesObjects.productType = {
+	        required: "Field Required!"
+	        }
+		}
+
+		
+	if(rulesObjects.warranty){
+		rulesObjects.warranty.required="true";
+		messagesObjects.warranty.required="Field Required!";
+	       
+		} else{
+			 rulesObjects.warranty= {
+	        required: true
+	        }
+	        messagesObjects.warranty = {
+	        required: "Field Required!"
+	        }
+		}
+
+		
+	if(rulesObjects.repaired){
+		rulesObjects.repaired.required="true";
+		messagesObjects.repaired.required="Field Required!";
+	       
+		} else{
+			 rulesObjects.repaired= {
+	        required: true
+	        }
+	        messagesObjects.repaired = {
+	        required: "Field Required!"
+	        }
+		}
+
+		
+	if(rulesObjects.description){
+		rulesObjects.description.required="true";
+		messagesObjects.description.required="Field Required";
+	       
+		} else{
+			 rulesObjects.description= {
+	        required: true
+	        }
+	        messagesObjects.description = {
+	        required: "Field Required"
+	        }
+		}
+
+
+     $(document).ready(function(){
+        $("#ecspre-registration_form").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,  
+			errorElement : "span",
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+                });
+     });
+   })();
+</script>
+<fieldset>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+
+
+    
+	
+
+        
+             
+                
+                
+                    	<h3 class="heading3 "> Product Description </h3>
+                
+            
+        
+
+
+
+
+
+
+
+
+</div>
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><div class="mandatory form-element select-wrapper productType">
+     <label for="Product Type" class="label_productType">Product Type<span class="form-mandatory">*</span></label>
+<div class="selector" id="uniform-productType" style="width: 261px;"><span style="width: 251px; -webkit-user-select: none;">Choose ...</span><select name="productType" class="product-type form-select" id="productType">
+            <option disabled="disabled" value="" selected="">Choose ...</option>
+<option value="GOLD">
+					GOLD </option>
+			<option value="SILVER">
+					SILVER </option>
+			</select></div>
+	<div class="errormessage" id="errormessage-productType"></div></div>
+<div class="non-mandatory form-element select-wrapper creationName">
+     <label for="Creation's Name" class="label_creationName">Creation's Name<span class="form-mandatory"></span></label>
+<div class="selector" id="uniform-creationName" style="width: 198px;"><span style="width: 188px; -webkit-user-select: none;">Choose ...</span><select name="creationName" class=" form-select" id="creationName">
+            <option disabled="disabled" value="" selected="">Choose ...</option>
+<option value="CNAME1">
+					CNAME1 </option>
+			</select></div>
+	<div class="tooltip_creationName field-tooltip">
+        <div class="tooltip-icon">
+            <img src="/content/dam/cartier_dam/tooltip_icon.png" style="height:16px;width:16px">
+            </div>   
+        <div class="tooltip-details" style="display:none;">                                  
+            &lt;div&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes&lt;/div&gt;
+</div>   
+    </div>   
+<div class="errormessage" id="errormessage-creationName"></div></div>
+<div class="non-mandatory form-element select-wrapper collection">
+     <label for="Collection" class="label_collection">Collection<span class="form-mandatory"></span></label>
+<div class="selector" id="uniform-collection" style="width: 261px;"><span style="width: 251px; -webkit-user-select: none;">-Select-</span><select name="collection" class=" form-select" id="collection">
+            <option disabled="disabled" value="" selected="">-Select-</option>
+<option value="Collection Name1">
+					Collection Name1 </option>
+			</select></div>
+	<div class="tooltip_collection field-tooltip">
+        <div class="tooltip-icon">
+            <img src="/content/dam/cartier_dam/tooltip_icon.png" style="height:16px;width:16px">
+            </div>   
+        <div class="tooltip-details" style="display:none;">                                  
+            &lt;div style="text-align: center;"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes&lt;/div&gt;
+</div>   
+    </div>   
+<div class="errormessage" id="errormessage-collection"></div></div>
+<div class="non-mandatory form-element input-wrapper serialProduct">
+        <label for="Serial Product" class="label_serialProduct">Serial Product<span class="form-mandatory"></span></label>
+<input id="serialProduct" type="text" name="serialProduct" placeholder="" class="form-input" value="">
+		 <div class="tooltip_serialProduct field-tooltip">
+        <div class="tooltip-icon">
+            <img src="/content/dam/cartier_dam/tooltip_icon.png" style="height:16px;width:16px">
+            </div>   
+        <div class="tooltip-details" style="display:none;">                                  
+            &lt;div&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes&lt;/div&gt;
+</div>   
+    </div>   
+<div class="errormessage" id="errormessage-serialProduct"></div></div>
+    <div class="non-mandatory form-element select-wrapper year">
+     <label for="Year" class="label_year">Year<span class="form-mandatory"></span></label>
+<div class="selector" id="uniform-year" style="width: 61px;"><span style="width: 51px; -webkit-user-select: none;">-Select-</span><select name="year" class=" form-select" id="year">
+            <option disabled="disabled" value="" selected="">-Select-</option>
+<option value="1990">
+					1990 </option>
+			<option value="1991">
+					1991 </option>
+			</select></div>
+	<div class="errormessage" id="errormessage-year"></div></div>
+</div><div class="parsys_column cq-colctrl-lt0-c1"><div class="non-mandatory group-wrapper">
+                <label for="Does the creation is under warranty?*" class="label_warranty">Does the creation is under warranty?*<span class="form-mandatory"></span></label>
+<div class="form-element radio-wrapper warranty">   
+                                    <input type="radio" id="001" name="warranty" value="001" class="form-radio">
+                                   <label for="001" class="form-radio-label">YES
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper warranty">   
+                                    <input type="radio" id="002" name="warranty" value="002" class="form-radio">
+                                   <label for="002" class="form-radio-label">No
+</label>                              
+                            </div>
+                        <div class="errormessage" id="errormessage-warranty"></div></div>          
+        <p class="instruction-text">Please Kindly remind that in case of "under warranty repair" the authentication provided during the order is mandatory.</p>
+<div class="non-mandatory group-wrapper">
+                <label for="Has the product already been repaired?*" class="label_repaired">Has the product already been repaired?*<span class="form-mandatory"></span></label>
+<div class="form-element radio-wrapper repaired">   
+                                    <input type="radio" id="001" name="repaired" value="001" class="form-radio">
+                                   <label for="001" class="form-radio-label">YES
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper repaired">   
+                                    <input type="radio" id="002" name="repaired" value="002" class="form-radio">
+                                   <label for="002" class="form-radio-label">No
+</label>                              
+                            </div>
+                        <div class="errormessage" id="errormessage-repaired"></div></div>          
+        <p class="instruction-text">Note that your previous repair was done by non authorized cartier affiliate ...</p>
+<div class="non-mandatory form-element select-wrapper repairedYear">
+     <label for="Year" class="label_repairedYear">Year<span class="form-mandatory"></span></label>
+<div class="selector" id="uniform-repairedYear" style="width: 61px;"><span style="width: 51px; -webkit-user-select: none;">-Select</span><select name="repairedYear" class=" form-select" id="repairedYear">
+            <option disabled="disabled" value="" selected="">-Select</option>
+<option value="1990">
+					1990 </option>
+			<option value="1991">
+					1991 </option>
+			</select></div>
+	<div class="errormessage" id="errormessage-repairedYear"></div></div>
+<div class="non-mandatory group-wrapper">
+                <label for="By Cartier?" class="label_byCartier">By Cartier?<span class="form-mandatory"></span></label>
+<div class="form-element radio-wrapper byCartier">   
+                                    <input type="radio" id="001" name="byCartier" value="001" class="form-radio">
+                                   <label for="001" class="form-radio-label">Yes
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper byCartier">   
+                                   <input type="radio" id="002" name="byCartier" value="002" class="form-radio">
+                                   <label for="002" class="form-radio-label">No
+</label>                              
+                            </div>
+                        <div class="errormessage" id="errormessage-byCartier"></div></div>          
+        </div></div><div style="clear:both"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+    <p class="heading-white-line"> </p>
+
+
+
+    
+	
+
+        
+             
+                
+                
+                    	<h3 class="heading3 "> Problem Description </h3>
+                
+            
+        
+
+
+
+
+
+
+
+
+</div>
+<div class="mandatory form-element textarea-wrapper description">
+        <label for="Problem Description" class="label_description">Problem Description<span class="form-mandatory">*</span></label>
+<textarea id="description" name="description" type="text" placeholder="Describe your problem ..." class="form-textarea"></textarea>
+			<div class="errormessage" id="errormessage-description"></div></div>
+    <p class="instruction-text">Problem's description Explanations</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+    <p class="heading-white-line"> </p>
+
+
+
+    
+	
+
+        
+             
+                
+                
+                    	<h3 class="heading3 "> Address1 </h3>
+                
+            
+        
+
+
+
+
+
+
+
+
+</div>
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><div class="address-container ecsaddress3">
+
+    <div class="js-address-select">
+                                <div class="form-element select-wrapper">
+
+               <h3 class="heading3"> To Deliver Kit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                <input type="hidden" name="actionURL" id="actionURL" value="/en-us/services/my-cartier/ecsmy-addresses">
+
+                                                                <div class="selector" id="uniform-address3" style="width: 73px;"><span style="width: 63px; -webkit-user-select: none;">SAUA</span><select class="form-select-box" name="address3" id="address3">
+
+                    <option data-id="15110" data-label="SAUA" data-pobox="" data-firstname1="CartierS" data-lastname1="lacheneS" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="NEW YORK" data-address8="" data-address9="DC" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10053" data-phone="+336 6786897569876" data-mobile="" data-default="true" selected="selected">SAUA</option>
+                    <option data-id="15402" data-label="New123" data-pobox="" data-firstname1="Rahul" data-lastname1="Aggarwala" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="350" data-address3="" data-address4="" data-address5="5th Avenue " data-address6="asdf" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10001" data-phone="09876543211" data-mobile="" data-default="false">New123</option>
+                    <option data-id="15398" data-label="New345" data-pobox="" data-firstname1="Rahul" data-lastname1="Aggarwala" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="350" data-address3="" data-address4="" data-address5="5th Avenue " data-address6="asdf" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10001" data-phone="09876543211" data-mobile="" data-default="false">New345</option>
+                    <option data-id="15090" data-label="Billing" data-pobox="" data-firstname1="Stéphanie" data-lastname1="Cartier" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0002" data-zip="10053" data-phone="+336 30 33 34 58" data-mobile="" data-default="false">Billing</option>
+                    <option data-id="15094" data-label="shipping1" data-pobox="" data-firstname1="Cartier23343" data-lastname1="lachêne" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="NEW YORK" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0003" data-zip="10053" data-phone="+336 6786897569876" data-mobile="" data-default="false">shipping1</option>
+                    <option data-id="14734" data-label="MAISON" data-pobox="" data-firstname1="LISE" data-lastname1="PASTOR" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="6104" data-address3="" data-address4="" data-address5="E Seneca Street " data-address6="" data-address7="Tucson" data-address8="" data-address9="AZ" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="homeaddress" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0002" data-zip="85712-3011" data-phone="5202901292" data-mobile="" data-default="false">MAISON</option>
+                    <option data-id="15086" data-label="TEST" data-pobox="" data-firstname1="jlkjlj " data-lastname1="yyxc x" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="768" data-address3="" data-address4="" data-address5="fifth avenue" data-address6="nx" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0003" data-zip="10053" data-phone="55555555555" data-mobile="" data-default="false">TEST</option>
+                    </select></div>
+                <div class="errormessage" id="errormessage-address3">
+                    <label for="address3" class="error">Field Required!</label>
+                </div>
+            </div> 
+
+            <div id="address-listing-detail-view" class="addressListingDetailView">
+                <div data-address-list="0" class="addressList default">
+                       <div class="address js-address-field">
+                           <h3 class="address-name-view firstname1">CartierS</h3>
+                           <h3 class="address-name-view lastname1">lacheneS</h3>
+                           <div class="addressrow">
+                               <p class="address-name-view address2">765</p>
+                               <p class="address-name-view address5">Fifth avenue</p>
+                           </div>
+                           <div class="addressrow">
+                               <p class="address-name-view address7">NEW YORK</p>
+                               <p class="address-name-view address9">DC</p>
+                               <p class="address-name-view zip">10053</p>
+                           </div>
+                           <p class="address-name-view phone">+336 6786897569876</p>
+                       </div>
+                       <div class="addressAction clearfix">
+                                <span class="button marginR marginL"><a class="js-edit" href="javascript:void(0);" data-id="73834">edit<span class="edit-icon"></span></a></span>
+                                <span class="button marginR"><a class="js-add" href="javascript:void(0);" data-id="73834">add<span class="add-icon"></span></a></span>
+    
+                       </div>
+                 </div>
+    
+          </div>
+                                <input type="hidden" name="address_3" id="address_3" class="js-hiddenfield" value="{&quot;id&quot;:15110,&quot;label&quot;:&quot;SAUA&quot;,&quot;pobox&quot;:&quot;&quot;,&quot;firstname1&quot;:&quot;CartierS&quot;,&quot;lastname1&quot;:&quot;lacheneS&quot;,&quot;firstname2&quot;:&quot;&quot;,&quot;lastname2&quot;:&quot;&quot;,&quot;addcountry&quot;:&quot;US&quot;,&quot;address1&quot;:&quot;&quot;,&quot;address2&quot;:765,&quot;address3&quot;:&quot;&quot;,&quot;address4&quot;:&quot;&quot;,&quot;address5&quot;:&quot;Fifth avenue&quot;,&quot;address6&quot;:10053,&quot;address7&quot;:&quot;NEW YORK&quot;,&quot;address8&quot;:&quot;&quot;,&quot;address9&quot;:&quot;DC&quot;,&quot;address10&quot;:&quot;&quot;,&quot;address11&quot;:&quot;&quot;,&quot;address12&quot;:&quot;&quot;,&quot;address13&quot;:&quot;&quot;,&quot;address14&quot;:&quot;&quot;,&quot;address15&quot;:&quot;&quot;,&quot;address16&quot;:&quot;&quot;,&quot;address17&quot;:&quot;&quot;,&quot;address18&quot;:&quot;&quot;,&quot;address19&quot;:&quot;&quot;,&quot;address20&quot;:&quot;0001&quot;,&quot;zip&quot;:10053,&quot;phone&quot;:&quot;+336 6786897569876&quot;,&quot;mobile&quot;:&quot;&quot;,&quot;default&quot;:true}">
+    </div>
+    <div class="js-create-text"></div>
+                <div class="js-edit-text"></div>
+</div>
+</div><div class="parsys_column cq-colctrl-lt0-c1"><div class="address-container ecsaddress1">
+
+    <div class="js-address-select">
+                                <div class="form-element select-wrapper">
+
+               <h3 class="heading3"> Billing &amp; Shipping Address</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                <input type="hidden" name="actionURL" id="actionURL" value="/en-us/services/my-cartier/ecsmy-addresses">
+
+                                                                <div class="selector" id="uniform-address1" style="width: 73px;"><span style="width: 63px; -webkit-user-select: none;">SAUA</span><select class="form-select-box" name="address1" id="address1">
+
+                    <option data-id="15110" data-label="SAUA" data-pobox="" data-firstname1="CartierS" data-lastname1="lacheneS" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="NEW YORK" data-address8="" data-address9="DC" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10053" data-phone="+336 6786897569876" data-mobile="" data-default="true" selected="selected">SAUA</option>
+                    <option data-id="15402" data-label="New123" data-pobox="" data-firstname1="Rahul" data-lastname1="Aggarwala" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="350" data-address3="" data-address4="" data-address5="5th Avenue " data-address6="asdf" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10001" data-phone="09876543211" data-mobile="" data-default="false">New123</option>
+                    <option data-id="15398" data-label="New345" data-pobox="" data-firstname1="Rahul" data-lastname1="Aggarwala" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="350" data-address3="" data-address4="" data-address5="5th Avenue " data-address6="asdf" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10001" data-phone="09876543211" data-mobile="" data-default="false">New345</option>
+                    <option data-id="15090" data-label="Billing" data-pobox="" data-firstname1="Stéphanie" data-lastname1="Cartier" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0002" data-zip="10053" data-phone="+336 30 33 34 58" data-mobile="" data-default="false">Billing</option>
+                    <option data-id="15094" data-label="shipping1" data-pobox="" data-firstname1="Cartier23343" data-lastname1="lachêne" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="NEW YORK" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0003" data-zip="10053" data-phone="+336 6786897569876" data-mobile="" data-default="false">shipping1</option>
+                    <option data-id="14734" data-label="MAISON" data-pobox="" data-firstname1="LISE" data-lastname1="PASTOR" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="6104" data-address3="" data-address4="" data-address5="E Seneca Street " data-address6="" data-address7="Tucson" data-address8="" data-address9="AZ" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="homeaddress" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0002" data-zip="85712-3011" data-phone="5202901292" data-mobile="" data-default="false">MAISON</option>
+                    <option data-id="15086" data-label="TEST" data-pobox="" data-firstname1="jlkjlj " data-lastname1="yyxc x" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="768" data-address3="" data-address4="" data-address5="fifth avenue" data-address6="nx" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0003" data-zip="10053" data-phone="55555555555" data-mobile="" data-default="false">TEST</option>
+                    </select></div>
+                <div class="errormessage" id="errormessage-address1">
+                    <label for="address1" class="error">Field Required!</label>
+                </div>
+            </div> 
+
+            <div id="address-listing-detail-view" class="addressListingDetailView">
+                <div data-address-list="0" class="addressList default">
+                       <div class="address js-address-field">
+                           <h3 class="address-name-view firstname1">CartierS</h3>
+                           <h3 class="address-name-view lastname1">lacheneS</h3>
+                           <div class="addressrow">
+                               <p class="address-name-view address2">765</p>
+                               <p class="address-name-view address5">Fifth avenue</p>
+                           </div>
+                           <div class="addressrow">
+                               <p class="address-name-view address7">NEW YORK</p>
+                               <p class="address-name-view address9">DC</p>
+                               <p class="address-name-view zip">10053</p>
+                           </div>
+                           <p class="address-name-view phone">+336 6786897569876</p>
+                       </div>
+                       <div class="addressAction clearfix">
+                                <span class="button marginR marginL"><a class="js-edit" href="javascript:void(0);" data-id="73834">edit<span class="edit-icon"></span></a></span>
+                                <span class="button marginR"><a class="js-add" href="javascript:void(0);" data-id="73834">add<span class="add-icon"></span></a></span>
+    
+                       </div>
+                 </div>
+    
+          </div>
+                                <input type="hidden" name="address_1" id="address_1" class="js-hiddenfield" value="{&quot;id&quot;:15110,&quot;label&quot;:&quot;SAUA&quot;,&quot;pobox&quot;:&quot;&quot;,&quot;firstname1&quot;:&quot;CartierS&quot;,&quot;lastname1&quot;:&quot;lacheneS&quot;,&quot;firstname2&quot;:&quot;&quot;,&quot;lastname2&quot;:&quot;&quot;,&quot;addcountry&quot;:&quot;US&quot;,&quot;address1&quot;:&quot;&quot;,&quot;address2&quot;:765,&quot;address3&quot;:&quot;&quot;,&quot;address4&quot;:&quot;&quot;,&quot;address5&quot;:&quot;Fifth avenue&quot;,&quot;address6&quot;:10053,&quot;address7&quot;:&quot;NEW YORK&quot;,&quot;address8&quot;:&quot;&quot;,&quot;address9&quot;:&quot;DC&quot;,&quot;address10&quot;:&quot;&quot;,&quot;address11&quot;:&quot;&quot;,&quot;address12&quot;:&quot;&quot;,&quot;address13&quot;:&quot;&quot;,&quot;address14&quot;:&quot;&quot;,&quot;address15&quot;:&quot;&quot;,&quot;address16&quot;:&quot;&quot;,&quot;address17&quot;:&quot;&quot;,&quot;address18&quot;:&quot;&quot;,&quot;address19&quot;:&quot;&quot;,&quot;address20&quot;:&quot;0001&quot;,&quot;zip&quot;:10053,&quot;phone&quot;:&quot;+336 6786897569876&quot;,&quot;mobile&quot;:&quot;&quot;,&quot;default&quot;:true}">
+    </div>
+    <div class="js-create-text"></div>
+                <div class="js-edit-text"></div>
+</div>
+<label for="blank">
+                <div class="checker"><span><input type="checkbox" value="blank"></span></div>
+                <span>Please configure the checkbox / radio field</span>
+            </label>
+    <div class="address-container ecsaddress2">
+
+    <div class="js-address-select">
+                                <div class="form-element select-wrapper">
+
+               <h3 class="heading3"> Shipping Address</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                <input type="hidden" name="actionURL" id="actionURL" value="/en-us/services/my-cartier/ecsmy-addresses">
+
+                                                                <div class="selector" id="uniform-address2" style="width: 73px;"><span style="width: 63px; -webkit-user-select: none;">SAUA</span><select class="form-select-box" name="address2" id="address2">
+
+                    <option data-id="15110" data-label="SAUA" data-pobox="" data-firstname1="CartierS" data-lastname1="lacheneS" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="NEW YORK" data-address8="" data-address9="DC" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10053" data-phone="+336 6786897569876" data-mobile="" data-default="true" selected="selected">SAUA</option>
+                    <option data-id="15402" data-label="New123" data-pobox="" data-firstname1="Rahul" data-lastname1="Aggarwala" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="350" data-address3="" data-address4="" data-address5="5th Avenue " data-address6="asdf" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10001" data-phone="09876543211" data-mobile="" data-default="false">New123</option>
+                    <option data-id="15398" data-label="New345" data-pobox="" data-firstname1="Rahul" data-lastname1="Aggarwala" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="350" data-address3="" data-address4="" data-address5="5th Avenue " data-address6="asdf" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0001" data-zip="10001" data-phone="09876543211" data-mobile="" data-default="false">New345</option>
+                    <option data-id="15090" data-label="Billing" data-pobox="" data-firstname1="Stéphanie" data-lastname1="Cartier" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0002" data-zip="10053" data-phone="+336 30 33 34 58" data-mobile="" data-default="false">Billing</option>
+                    <option data-id="15094" data-label="shipping1" data-pobox="" data-firstname1="Cartier23343" data-lastname1="lachêne" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="765" data-address3="" data-address4="" data-address5="Fifth avenue" data-address6="10053" data-address7="NEW YORK" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0003" data-zip="10053" data-phone="+336 6786897569876" data-mobile="" data-default="false">shipping1</option>
+                    <option data-id="14734" data-label="MAISON" data-pobox="" data-firstname1="LISE" data-lastname1="PASTOR" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="6104" data-address3="" data-address4="" data-address5="E Seneca Street " data-address6="" data-address7="Tucson" data-address8="" data-address9="AZ" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="homeaddress" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0002" data-zip="85712-3011" data-phone="5202901292" data-mobile="" data-default="false">MAISON</option>
+                    <option data-id="15086" data-label="TEST" data-pobox="" data-firstname1="jlkjlj " data-lastname1="yyxc x" data-firstname2="" data-lastname2="" data-addcountry="US" data-address1="" data-address2="768" data-address3="" data-address4="" data-address5="fifth avenue" data-address6="nx" data-address7="New York" data-address8="" data-address9="NY" data-address10="" data-address11="" data-address12="" data-address13="" data-address14="" data-address15="" data-address16="" data-address17="" data-address18="" data-address19="" data-address20="0003" data-zip="10053" data-phone="55555555555" data-mobile="" data-default="false">TEST</option>
+                    </select></div>
+                <div class="errormessage" id="errormessage-address2">
+                    <label for="address2" class="error">Field Required!</label>
+                </div>
+            </div> 
+
+            <div id="address-listing-detail-view" class="addressListingDetailView">
+                <div data-address-list="0" class="addressList default">
+                       <div class="address js-address-field">
+                           <h3 class="address-name-view firstname1">CartierS</h3>
+                           <h3 class="address-name-view lastname1">lacheneS</h3>
+                           <div class="addressrow">
+                               <p class="address-name-view address2">765</p>
+                               <p class="address-name-view address5">Fifth avenue</p>
+                           </div>
+                           <div class="addressrow">
+                               <p class="address-name-view address7">NEW YORK</p>
+                               <p class="address-name-view address9">DC</p>
+                               <p class="address-name-view zip">10053</p>
+                           </div>
+                           <p class="address-name-view phone">+336 6786897569876</p>
+                       </div>
+                       <div class="addressAction clearfix">
+                                <span class="button marginR marginL"><a class="js-edit" href="javascript:void(0);" data-id="73834">edit<span class="edit-icon"></span></a></span>
+                                <span class="button marginR"><a class="js-add" href="javascript:void(0);" data-id="73834">add<span class="add-icon"></span></a></span>
+    
+                       </div>
+                 </div>
+    
+          </div>
+                                <input type="hidden" name="address_2" id="address_2" class="js-hiddenfield" value="{&quot;id&quot;:15110,&quot;label&quot;:&quot;SAUA&quot;,&quot;pobox&quot;:&quot;&quot;,&quot;firstname1&quot;:&quot;CartierS&quot;,&quot;lastname1&quot;:&quot;lacheneS&quot;,&quot;firstname2&quot;:&quot;&quot;,&quot;lastname2&quot;:&quot;&quot;,&quot;addcountry&quot;:&quot;US&quot;,&quot;address1&quot;:&quot;&quot;,&quot;address2&quot;:765,&quot;address3&quot;:&quot;&quot;,&quot;address4&quot;:&quot;&quot;,&quot;address5&quot;:&quot;Fifth avenue&quot;,&quot;address6&quot;:10053,&quot;address7&quot;:&quot;NEW YORK&quot;,&quot;address8&quot;:&quot;&quot;,&quot;address9&quot;:&quot;DC&quot;,&quot;address10&quot;:&quot;&quot;,&quot;address11&quot;:&quot;&quot;,&quot;address12&quot;:&quot;&quot;,&quot;address13&quot;:&quot;&quot;,&quot;address14&quot;:&quot;&quot;,&quot;address15&quot;:&quot;&quot;,&quot;address16&quot;:&quot;&quot;,&quot;address17&quot;:&quot;&quot;,&quot;address18&quot;:&quot;&quot;,&quot;address19&quot;:&quot;&quot;,&quot;address20&quot;:&quot;0001&quot;,&quot;zip&quot;:10053,&quot;phone&quot;:&quot;+336 6786897569876&quot;,&quot;mobile&quot;:&quot;&quot;,&quot;default&quot;:true}">
+    </div>
+    <div class="js-create-text"></div>
+                <div class="js-edit-text"></div>
+</div>
+</div></div><div style="clear:both"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+    <p class="heading-white-line"> </p>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+
+
+ <div class="comp-rich-text rte-wrapper">  
+
+    
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+
+    
+    
+    
+</div>
+</fieldset><div class="form-element button-wrapper continue">
+<input class="form-button" type="submit" name="continue" value="Continue">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+<script type="text/javascript">
+			RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : 'formType',
+                'actionName' : "ECSPreRegistrationAction",
+                'currentPagePath' : "/content/car/us/usa/en_us/services/my-cartier/my-services/ecspreregistration",
+                'elementId' : "ecspre-registration_form",
+                'eventName' : 'submit'
+              });
+		</script>
+
+	</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div></div>
+	<div class="ecsstep2"></div>
+</div>

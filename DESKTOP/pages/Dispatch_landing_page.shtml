@@ -1,0 +1,151 @@
+<!doctype html>
+<!--#set var="PAGE_TITLE" value="Official Cartier websites &amp; online stores - The renowned French jeweler and fine watchmaker. Bridal, Luxury Accessories, Fragrances &amp; Exceptional Gifts" -->
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="DEVICE" value="desktop" -->
+<!--#include virtual="../includes/_doc_open.shtml" -->
+
+<body class="dispatch-landing">
+	<!--#set var="ICON_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/" -->
+	<section class="body-wrapper dispatch-body" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/Dispatch_background.jpg') no-repeat top center #000000">
+	<!--SITE LOGO ON HEADING STARTS-->	
+		<div class="site-logo">
+            <!--#if expr="${THEME_1}=/main_theme/" -->
+              <!--#set var="logo" value="Desk_logo.png" -->
+                           
+            <!--#else-->
+              <!--#set var="logo" value="desk_bridal_logo.png" -->
+            <!--#endif --><h1>
+            <a href="../index.html" class="top-nav__logo" title="Cartier – jeweler, watchmaker, leather goods"><img src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var="logo" -->" alt="Cartier – jeweler, watchmaker, leather goods"> </a></h1>
+           
+    	</div>
+    <!--SITE LOGO ON HEADING ENDS-->
+
+    <!--DISPATCH LANDING PAGE MAIN CONTAINER STARTS-->	
+		<div class="main-dispatch">
+			
+			<!--LEFT COLOUMN OF CONTAINER STARTS-->
+			<nav class="left-col">
+				 <h2 class="title-col">
+                      Shop online
+                  </h2>
+                  <div class="bag"></div>
+                <div class="col__content">
+                    <div class="continent"><h2>ASIA / OCEANIA</h2>
+                        <ul>
+                            <li>
+                                <a href="#">日本</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="continent"><h2>America </h2>       
+                        <ul>
+                            <li>
+                                <a href="#" title="United States"> United States </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="continent"><h2>Europe</h2>       
+                      	<ul>
+	                        <li>
+	                            <a href="#" title="Deutschland"> Deutschland</a>
+	                        </li>
+			                <li>
+			                    <a href="#" title="España">España </a>
+							</li>
+
+			                <li>
+								 <a href="#" title="France"> France </a>
+			                </li>
+
+			                <li>
+			                     <a href="#" title="United Kingdom" > United Kingdom </a>
+			                </li>
+			                <li>
+								 <a href="" title="Italia">Italia</a>
+			                </li>
+                        </ul>
+                    </div>
+                </div>
+			</nav>
+			<!--LEFT COLOUMN OF CONTAINER ENDS-->
+
+			<!--RIGHT COLOUMN OF CONTAINER STARTS-->
+			<nav class="right-col">
+				 <h2 class="title-col">
+                      Explore<br>our other sites
+                  </h2>
+                <div class="col__content">
+                    <div class="continent"><h2>ASIA / OCEANIA  </h2>       
+				        <ul>
+	                    	<li>
+	                            <a href="#" title="Italia"> Australia</a>
+	                        </li>
+	                        <li>
+	                          <a href="#" title="Italia">中国</a>
+	                        </li>
+
+	                        <li> 
+	                          <a href="#" class="asia-english" title="Italia"> 香港 </a>
+	                          <span> - </span>
+	                          <a href="#" title="Italia"> HONG KONG </a>
+	                        </li>
+
+	                        <li>
+	                          <a href="" title="대한민국"> 대한민국</a>
+	                        </li>
+
+	                        <li>
+	                          <a href="#" title="대한민국">SINGAPORE</a>
+	                          <span> - </span>
+	                          <a href="#" class="asia-english" title="대한민국"> 新加坡 </a>
+	                        </li>
+
+	                        <li>
+	                          <a href="" title="台灣"> 台灣</a>
+	                        </li>
+	                    </ul>
+
+                    </div>
+                    <div class="continent"><h2>America   </h2>                  
+	                  	<ul>
+	                    	<li>
+	                        	<a href="#" title="Brazil"> Brazil</a>
+	                        </li>
+	                        <li>
+	                           <a href="" title="México"> México </a>
+	                        </li>
+	                    </ul>
+	                </div>
+                 	<div class="continent"><h2>Europe   </h2>        
+                    	<ul>
+	                       	<li>
+	                        	<a href="" class="asia-english" title="México" > SUISSE</a>
+	                           	<span> - </span>
+	                            <a href="#" class="asia-english" title="México">SCHWEIZ</a>
+	                            <span> - </span>
+	                            <a href="#" class="asia-english" title="SVIZZERA">SVIZZERA</a>
+	                        </li>
+	                              
+	                        <li>
+	                          <a href="#" title="Российская федерация">Российская федерация </a>
+	                        </li>
+                    	</ul>
+                    </div>
+
+	                <div class="continent"><h2>other countries  </h2>         
+	                    <ul>
+	                    	<li><a href="#" title="English"> English</a>
+	                        </li>
+	                    </ul>
+                     </div>
+                </div>
+			</nav>
+
+			<!--RIGHT COLOUMN OF CONTAINER ENDS-->
+		</div>
+	<!--DISPATCH LANDING PAGE MAIN CONTAINER ENDS-->	
+
+	</section>
+	<!--#include virtual="../includes/_doc_close.shtml" -->

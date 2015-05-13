@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    Tab Content -- Desktop CSS
+\*------------------------------------*/
+
+.gallery {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	
+	.product-list-wrapper{
+		margin-top: 10px;
+	}
+
+	.bx-viewport{
+		height: 252px !important;
+	}
+	.product_listing_class{
+		border:none;
+	}
+
+	.bx-prev {
+		@include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+		position: absolute;
+		left: 10px;
+		top: 44%;		   
+
+	}
+	.bx-next {
+		@include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+		position: absolute;
+		left: 22px;
+		top: 44%;	    
+	}
+
+	.one-product{
+		width: 180px !important; 
+	}
+
+	.carousel .bx-wrapper .bx-controls-direction-left, .carousel .bx-wrapper .bx-controls-direction-right{
+		cursor: default;
+	}
+}
+
+

@@ -1,0 +1,59 @@
+<div class="coloumn-wrapper img-bottom-align clearfix">
+  <div class="row grid">
+    <div class="column grid__item one-third">
+      <article class="exhibitions">
+        <div class="comp-rich-text"> 
+          
+          <!--#set var="imgclass" value="left" --> 
+          <!--#set var="image" value="${PRODUCT_IMG_PATH}large_portique.jpg" --> 
+          <!--#include virtual="../../components/column/content.shtml" --> 
+        </div>
+      </article>
+      <div class="column grid__item">
+        <h2>LARGE PORTIQUE<br>
+          MYSTERY CLOCK</h2>
+        <h3>CARTIER PARIS, 1923</h3>
+        <p>Yellow gold, platinum, rock crystal, rose-cut diamonds, onyx, coral cabochons, black enamel. <br>
+          <br>
+          Square, 8-day double-barrel movement, gold-plated, 13 jewels, bimetallic balance, Breguet balance spring. <br>
+          <br>
+          This clock was the first in a series of 6 in the form of a Shinto “shrine gate” (portique), all different and all made by Cartier between 1923 and 1925. <br>
+          <br>
+          Sold to Mrs. H.F. McCormick, Ganna Walska (1887-1984) the opera singer of Polish origin. <br>
+          Like Daisy Fellowes and Mona Bismarck, Walska was one of the select group of fashion icons of her day. With unerring taste, she assembled a remarkable collection of jewelry, showing a marked preference for Cartier. </p>
+        <p class="productdata">35 x 23 x 13 cm</p>
+      </div>
+    </div>
+    <div class="column grid__item one-third">
+      <article class="exhibitions">
+        <div class="comp-rich-text"> 
+          
+          <!--#set var="imgclass" value="left" --> 
+          <!--#set var="image" value="${PRODUCT_IMG_PATH}mystery_clock.jpg" --> 
+          <!--#include virtual="../../components/column/content.shtml" --> 
+        </div>
+      </article>
+      <div class="column grid__item">
+        <h2>LARGE PORTIQUE<br>
+          MYSTERY CLOCK</h2>
+        <h3>CARTIER PARIS, 1923</h3>
+        <p>Louis Cartier was the first jeweler who set the design codes of modern watchmaking. Unlike his contemporaries, he believed the beauty of a watch was not just a matter of its decoration. Its size, shape and proportions, the look of the metal, the harmony between bracelet and case counted for just as much. He soon became interested in "Shaped watches" – those with a case that broke away from the traditional round design. "Tonneau" shaped watches in 1906, square cases from 1908, and "tortue" shapes in 1912 were the first examples of very beautiful watchmaking created by an innovative jeweler. Cartier never stopped conceiving new shapes,  sometimes eccentric, often very daring, but always refined. </p>
+      </div>
+    </div>
+    <div class="column grid__item one-third">
+      <article class="exhibitions">
+        <div class="comp-rich-text"> 
+          <!--#set var="imgclass" value="left" --> 
+          <!--#set var="image" value="${PRODUCT_IMG_PATH}mystery_clock_single_axle.jpg" --> 
+          <!--#include virtual="../../components/column/content.shtml" --> 
+        </div>
+      </article>
+      <div class="column grid__item">
+        <h2>LARGE PORTIQUE<br>
+          MYSTERY CLOCK</h2>
+        <h3>CARTIER PARIS, 1923</h3>
+        <p>Louis Cartier was the first jeweler who set the design codes of modern watchmaking. Unlike his contemporaries, he believed the beauty of a watch was not just a matter of its decoration. Its size, shape and proportions, the look of the metal, the harmony between bracelet and case counted for just as much. He soon became interested in "Shaped watches" – those with a case that broke away from the traditional round design. "Tonneau" shaped watches in 1906, square cases from 1908, and "tortue" shapes in 1912 were the first examples of very beautiful watchmaking created by an innovative jeweler. Cartier never stopped conceiving new shapes,  sometimes eccentric, often very daring, but always refined. </p>
+      </div>
+    </div>
+  </div>
+</div>

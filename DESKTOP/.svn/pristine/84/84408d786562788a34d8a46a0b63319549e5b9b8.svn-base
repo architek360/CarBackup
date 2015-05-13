@@ -1,0 +1,6 @@
+<!--Html for navigation icon-->
+<a href="<!--#echo var="links-to" -->" class="<!--#echo var="class-name" -->" title="<!--#echo var="link-name" -->">
+	<!--#echo var="link-name" -->
+</a>
+
+<!--Html for navigation icon-->

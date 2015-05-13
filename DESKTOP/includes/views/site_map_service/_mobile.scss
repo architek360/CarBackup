@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    faq all component  -- Mobile CSS
+\*------------------------------------*/
+.expert-guide{
+	width: 81.25%;
+	margin: 0 auto;
+	.back-button {
+		margin-left : 0;
+	}
+
+	.expert-guide__select {
+			@include rem('padding-top',50px);
+			@include rem('padding-bottom',36px);
+			label {
+			color: $white;
+			font-family: georgia;
+			@include f(24);
+			@include rem('padding-bottom',17px);
+
+		}
+	}
+	
+}

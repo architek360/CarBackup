@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    IE8 Bridal - Desktop CSS
+\*------------------------------------*/
+/* line 7, ../../../../../../sass/bridal_theme/bridal_ie.scss */
+.push-over {
+  background-color: white;
+  -ms-filter: "alpha(opacity=80)";
+}
+
+/* line 12, ../../../../../../sass/bridal_theme/bridal_ie.scss */
+.nav-show {
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+/* line 17, ../../../../../../sass/bridal_theme/bridal_ie.scss */
+.nav-heading-cont .nav-show {
+  filter: alpha(opacity=80);
+  background: white;
+}
+
+/* line 22, ../../../../../../sass/bridal_theme/bridal_ie.scss */
+.body-wrapper .header {
+  filter: alpha(opacity=80);
+  background: #f0f0f0;
+}

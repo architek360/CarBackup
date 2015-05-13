@@ -1,0 +1,89 @@
+{
+    "success" : true,   
+    "serverMessage" : "Some Server Message", 
+
+
+
+    "content" : {
+    	"jewelry" : [
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"},
+    		{"display" : "love0","value":"love"}
+    	],
+        "jewelry1" : [
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"},
+            {"display" : "love1","value":"love"}
+        ],
+        "jewelry2" : [
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"},
+            {"display" : "love2","value":"love"}
+        ],
+        "jewelry3" : [
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"},
+            {"display" : "love3","value":"love"}
+        ],
+        "jewelry4" : [
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"},
+            {"display" : "love4","value":"love"}
+        ]
+    }
+}

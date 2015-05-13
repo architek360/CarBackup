@@ -1,0 +1,25 @@
+<!-- Billing Payment Block Starts Here-->
+
+<div class="billing-shipping grid js-billing">
+  <h1 class="heading2">choose your delivery option</h1>
+    
+    <!--#set var="input-name" value="fn_deliveryadd" -->
+    <!--#set var="head-label-name" value="" -->
+    <!--#set var="radio-text1" value="billing" -->
+    <!--#set var="radio-value1" value="js-billing-address" -->
+    <!--#set var="radio-tab-text1" value="Deliver to my billing address" -->
+    <!--#set var="radio-text2" value="shipping" -->
+    <!--#set var="radio-value2" value="js-shiiping-address" -->
+    <!--#set var="radio-tab-text2" value="Deliver to Another shipping address" -->
+
+    <!--#set var="tab_content_1" value="tab_billing_address" --> 
+    <!--#set var="tab_content_2" value="tab_shipping_address" -->
+
+
+    <!--#include virtual="../../components/tabs2/html.shtml" -->
+
+
+
+</div>
+
+ <!-- Billing Payment Block Ends Here-->

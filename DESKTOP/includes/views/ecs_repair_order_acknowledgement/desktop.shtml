@@ -1,0 +1,91 @@
+  <!-- Order Acknowledgement  Starts Here-->
+
+    <div class="grid__item three-quarters ecs-review-repair-order">
+        <div class="order-review-section-left">
+            <h1 class="order-review__title">
+               Order acknowledgement
+            </h1>
+            <p class="heading__desc">Please verify your order information before proceeding to payment</p>
+
+            <div class="order-header">
+                <div class="order-date">Freitag 02 Mai 2014</div>
+                <h2 class="order-number">Bestellnr.206323</h2>
+            </div>
+            
+            <div class="separator_line"></div>
+
+
+            <!--#set var="product_size" value="on" -->
+            
+            <!--Product Detail Box For Review Order Starts Here-->
+            <div class="product-detail grid clearfix">
+                <div class="price-detail clearfix grid">
+
+					<div class="price-detail__row product-info">
+						<span class="grid__item  three-fifths  price-detail__col">Repair id: <span class="price-detail--note js-subtotal-info">12245546</span> </span>
+						<span class="grid__item  three-fifths  price-detail__col">Repair id: <span class="price-detail--note js-subtotal-info">12245546</span> </span>
+					</div>
+					
+
+					<div class="price-detail__row">
+						<span class="grid__item three-fifths  price-detail__col">component service <span class="price-detail--note js-deliverycharge-info">lorem ipsem dolor sit</span> </span>
+						<span class="grid__item grid--right two-fifths price-detail__col-right right-zero bold-font js-deliverycharge">$2,000</span>
+					</div>
+					
+					<div class="price-detail__row">
+						<span class="grid__item three-fifths  price-detail__col">component service <span class="price-detail--note js-deliverycharge-info">lorem ipsem dolor sit</span> </span>
+						<span class="grid__item grid--right two-fifths price-detail__col-right right-zero bold-font js-deliverycharge">$2,000</span>
+					</div>
+
+				</div>
+            </div>
+
+            <div class="separator_line"></div>
+
+            <!-- Product Detail Box For Review Order Ends Here-->
+
+            <div class="order-review-price-detail grid clearfix">
+                <!--#set var="sales_tax" value="on" -->
+                <!--#set var="subtotal" value="cartier_desktop" -->
+                <!--#include virtual="../../views/ecs_repair_price_details/desktop.shtml" -->
+
+                <div class="order-review__confirm clearfix">
+                    <!--#set var="text-detail" value="confirm and place order" -->
+                    <!--#set var="cta--varaint" value="cta--red js-orderack-confirm" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item one-quarter shopping-bag-rt-col">
+        <div class="order-review-section-right">
+            <div class="billing-address">    
+                <div class="address-button">
+                    <span>billing address</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/billing_address/desktop.shtml" -->
+
+            <div class="shipping-address">    
+                <div class="address-button">
+                    <span>shipping address</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/shipping_address/desktop.shtml" -->
+
+            <div class="delivery-method">    
+                <div class="address-button">
+                    <span>delivery method</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/delivery_method/desktop.shtml" -->
+        </div>
+    </div>
+
+ <!-- order acknowledgement Ends Here-->

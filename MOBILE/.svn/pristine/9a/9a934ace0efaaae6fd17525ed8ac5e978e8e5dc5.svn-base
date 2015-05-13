@@ -1,0 +1,8 @@
+<div class="main-container">
+	
+    
+    <!--#if expr="${VIEWS_1}" -->
+			<!--#include virtual="../includes/views/${VIEWS_1}/html.shtml" -->
+	<!--#endif -->
+	
+</div>

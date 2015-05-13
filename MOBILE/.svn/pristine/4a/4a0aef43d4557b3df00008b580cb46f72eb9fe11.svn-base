@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+ .shopping_bag{
+ 	width:81.25%;
+ 	margin:0 auto;
+ 	border-bottom: solid 2px #ffffff;
+ }
+

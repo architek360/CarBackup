@@ -1,0 +1,24 @@
+<div class="add-to-favorites-wrapper">
+    <!--#set var= "type"  value= "customtext" -->
+    <!--#set var= "headline"  value= "Boutique added to my Favorites" -->
+    <!--#include virtual="../../components/heading3/desktop.shtml" -->
+    <div class="formwrapper">
+        <form>
+            <!--#set var= "input-type"  value= "hidden" -->
+            <!--#set var= "input-name"  value= "boutiqueuuid" -->
+            <!--#set var= "input-prop"  value= "123456" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+
+            <!--#set var= "action-name"  value= "addboutique" -->
+            <!--#set var= "text-detail"  value= "OK" -->
+            <!--#set var= "cta--varaint"  value= "cta--red" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+        </form>
+            <!--#set var= "cta-class"  value= "arrow-show" -->
+            <!--#set var= "arrow-class"  value= "arrow-red" -->
+            <!--#set var= "more-text"  value= "Your Cartier Boutiques" -->
+            <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+    </div>
+</div>
+
+

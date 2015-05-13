@@ -1,0 +1,240 @@
+/*------------------------------------*\
+    Welcome -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..    (.my-account)
+ * ORDER DETAIL BLOCK    (.my-account__orders)
+ * MY SERVICES BLOCK     (.my-account__services)
+ * MY ACCOUNT PUSHS BLOCK(.my-account__push)
+
+ */
+
+/*------------------------------------*\
+    $MY ACCOUNT BLOCK
+\*------------------------------------*/
+
+.my-account{
+	margin: 0 auto; 
+	width: 81.25%;
+	@include font-color($primary-2);
+	.heading2{
+		border:none;
+	}
+	.welcome-message {
+		@include f(22);
+		@include main-font;
+		@include rem('padding', 30px 0 35px 0);
+		@include font-color($primary-3);
+		text-align:center;
+		span{
+			font-weight:bold;
+		}
+	}
+	.grid__item{
+		padding:0;
+	}
+	.logout-button{
+		@include f(18);
+		@include font-color($primary-3);
+		font-weight: bold;
+		@include bold-font;
+		@include rem('width', 150px);
+		text-transform:uppercase;
+		@include rem('padding', 0 0 50px 0);
+		margin:0 auto;
+		display:table;
+		background: none;
+		border: none;
+		.logout-icon{
+			@include rem(margin,-6px 0 0 10px);
+		}
+	}
+	.more-button{
+		@include rem(padding, 0px);
+	}
+
+	/*------------------------------------*\
+    	$ORDER DETAIL BLOCK
+	\*------------------------------------*/
+
+	.my-account__orders{
+		@include rem('margin', 0 0 70px 0);
+		.my-orders{
+			width: initial;
+			border-bottom: none;
+		}
+		.arrow-show {
+			@include rem(margin-right, 12px);
+			@include rem(margin-top, 2px);
+		}
+		.call-all .more-link {
+			@include rem(margin-bottom, 10px);
+			a{
+				@include rem(font-size, 18px);
+				padding-left: 3.5rem;
+
+			}
+		}
+		.order-block{
+			display:block;
+			@include f(22);
+			@include main-font;
+			@include font-color($primary-2);
+			border: 1px solid $primary-11;
+			background: $primary-1; /* Old browsers */
+			text-align:center;
+			margin: 15px auto;
+			@include rem('padding', 25px);
+			@include linear-gradient(-75deg, #000000 60%, #010000 0%, #460000 100%);
+			@include font-color($primary-3);
+			p, h3{
+				@include rem(padding, 0px);
+				@include f(18);
+				text-transform:capitalize;
+				line-height: 30px;
+
+			}
+			.order-block__details{
+				@include bold-font;
+				text-transform:uppercase;
+				@include font-color($primary-2);
+				text-align: left;
+			}
+			.order-block__more{
+				font-style:italic;
+				@include rem('padding', 64px 0 0 0);
+				text-transform:capitalize;
+				text-align:left;
+			}
+		}
+		.order-block__allorders{
+			@include font-color($primary-3);
+			margin:0 auto;
+			text-align:center;
+			.more-button{
+				text-transform:uppercase;
+				@include bold-font;
+				@include f(18);
+			}
+		}
+	}
+
+	/*------------------------------------*\
+    	$MY SERVICES BLOCK
+	\*------------------------------------*/
+
+	.my-account__services{
+		@include rem('margin', 0 0 75px 0);
+		.cta-button{
+			width:100%;
+		}
+		.form-element{
+			width:60%; 
+			margin:0 auto;
+		}
+		.services__message{
+			@include font-color($primary-6);
+			@include f(20);
+			@include main-font;
+			text-align:center;
+		}
+		.form-input{
+			background:$primary-1;
+			border:1px solid $primary-6;
+			@include rem('height', 56px);
+			width:100%;
+			@include rem('margin', 15px 0);
+			@include font-color($primary-2);
+			@include f(22);
+			outline:none;
+		}
+	}
+
+	/*------------------------------------*\
+    	$MY ACCOUNT PUSHS BLOCK
+	\*------------------------------------*/
+
+	.my-account__push{
+		display:block;
+		.push-wrapper{
+			@include font-color($primary-2);
+			text-align: center;
+			@include set-ulFix;
+			@include rem('padding', 20px 0);
+			display:inline-block;
+			width:100%;
+			li{
+				@include rem('margin', 15px 0 10px);
+				display:inline-block;
+			}
+
+			.welcome-pushes{
+				.push-block{
+
+					.push-col:first-child{
+						display: block;
+						vertical-align: middle;
+						line-height: 165px;
+
+						img{
+							background-size: cover;
+							max-width: 100%;
+							max-height: 100%;
+							vertical-align: middle;
+							width: auto;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.call-all{
+	@include font-color($primary-3);
+	margin:0 auto;
+	@include rem('padding-top', 15px);
+	text-align:center;
+	.more-button{
+		text-transform:uppercase;
+		@include f(13);
+		font-style: normal;
+		@include rem('letter-spacing', 2px);
+		&:hover{
+			@include font-color($primary-2);
+		}
+	}
+	.more-link a{
+		text-transform:uppercase;
+		@include bold-font;
+		@include f(18);
+		@include rem('letter-spacing', 2px);
+		@include setSpriteDesktop(auto, 10px ,-431px ,-155px, transparent);
+		@include rem('padding-left', 15px);
+	}
+	.more-link a:hover{
+			@include font-color($primary-2);
+	}
+}
+
+#logout-wrapper{
+	.button-wrapper.logout {
+		.form-button {
+			@include f(18);
+			@include font-color($primary-3);
+			font-weight: bold;
+			@include bold-font;
+			width:150px;
+			text-transform:uppercase;
+			@include rem('padding', 5px 45px 50px 0);
+			margin:0 auto;
+			background: none;
+			border: none;
+			@include setSpriteMobileDesktop(auto, 25px , right ,-703px, transparent);
+			display:table;
+			cursor: pointer;
+		}
+	}
+}

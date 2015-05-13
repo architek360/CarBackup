@@ -1,0 +1,33 @@
+
+    <!-- My Cartier Pushes Component  -->
+        <div class="pushes-wrapper-service-push js-pushes-wrapper-service-push">
+            <div class="push-col">
+                <img src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="pushes-img-src"-->"  alt="store locator">
+            </div>
+            <a href="#" class="push-link"> </a> 
+
+            <!-- My Cartier Pushes Component drop down starts  -->
+            <div class="push-hover">
+               
+                <h2 class="push-col_title">
+                    <a href="#" class="text-link"><!--#echo var="pushes-title" --></a>
+                </h2>
+               <!--#if expr="${pushes-description} = ''"  -->
+                <!--#else -->
+                    <div class="description">
+                        <!--#echo var="pushes-description" -->
+                    </div>
+                <!--#endif -->
+                <!--#if expr="${no-read-more}=''" -->
+                <!--#else -->
+                <div class="more">
+                    <!--#set var="arrow-class" value="more-button-arrow" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </div>    
+                <!--#endif -->                  
+            </div>
+            <!-- My Cartier Pushes Component drop down ends  -->
+
+        </div>
+    <!-- My Cartier Pushes Component ends -->
+     

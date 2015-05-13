@@ -1,0 +1,176 @@
+/*------------------------------------*\
+    ADJUSTMENT -- Desktop CSS
+\*------------------------------------*/
+.adjust-size{
+	width: 978px;
+	background: $primary-1;
+
+	.col-image{
+		display: inline-block;
+		width: 420px;
+		@include rem('padding-top', 10px);
+
+		img{
+			max-width: 420px;
+			max-height: 420px;
+		}
+	}
+
+	.col-form{
+		display: inline-block;
+		width: 510px;
+		@include rem('margin-top', 35px);
+		text-align: center;
+	}
+
+	.grid__item{
+		padding-left: 0;
+	}
+
+	ul {
+		@include set-ulFix;	/* For normalizing margins, padding*/
+		@include rem('margin-right', 24px);
+		
+		li {
+			display: block;
+			@include rem('margin', 0px 0px 30px);
+
+			.adjust-size__heading{
+				@include proxiBold-font();
+				font-weight: bold;
+				@include rem('letter-spacing', 2px);
+				text-transform: uppercase;
+				@include f(11);
+				margin: 0;
+				@include rem('padding', 25px);
+				background-color: $primary-1;
+				color:$primary-2;
+				text-align: center;
+			}
+
+			.adjust-size__line{
+			width: 60%;
+			margin: 0 auto;
+			position: relative;
+
+				.input-wrapper{
+					width: auto;
+					@include rem('margin-right', 15px);
+
+					.form-input{
+						width: 215px;
+
+					}
+				}
+
+				span.error{
+					margin-left: 7%;	
+				}
+				.more-button{
+
+				}
+
+				.form-label{
+					display: inline-block;
+					position: absolute;
+					text-align: right;
+					right: -24px;
+					text-align: right;
+					top: 10px;
+					width: auto;
+					@include proxiBold-font();
+				}
+
+				.field-suffix {
+					@include proxiBold-font();
+					@include rem('letter-spacing', 1px);
+					text-transform: uppercase;
+					@include f(11);
+					@include rem('margin-left', 10px);
+					@include rem('margin-top', 20px);
+					float: left;
+				}
+
+				.more-button {
+					display: block;
+					clear: both;
+					text-align: center;
+					@include rem('padding', 0 20px 0px);
+					@include proxi-font;
+					@include rem('padding', 5px 10px);
+					color: $primary-3;
+				    font-style: normal;
+				    @include rem('letter-spacing', 1px);
+				    @include f(9);
+						.arrow-show{
+							@include setSpriteDesktop(10px, 6px ,-431px ,-158px, transparent);
+						}
+					}
+				}
+		
+
+				.slide_switch{
+					@include rem('margin-top', 20px);
+
+					label{
+						@include f(14);
+						@include rem('letter-spacing', 1px);
+						@include proxi-font();
+						font-weight: bold;
+						@include rem('margin-right', 15px);
+						vertical-align: top;
+					}
+				}
+						
+
+				hr{
+					padding:0;
+					@include rem('margin', 30px 50px 0);
+					border: none;
+					border-bottom:1px solid $primary-100;
+					background: none;
+					right: 0;
+					width: 510px;
+					left: inherit;
+				}
+
+				.title-line{
+					border-top: 1px solid $primary-100;
+				}
+
+				.form-input{
+					border:1px solid $primary-103;
+					background: $primary-102;
+				}
+
+			}
+
+			.form-radios{
+				display: table;
+				margin: 10px auto;
+
+				.radio-wrapper{
+					text-align: center;
+					width: auto;
+					@include rem('margin-right', 15px);
+					display: inline-block;
+
+					label{
+						@include proxiBold-font();
+						@include rem('letter-spacing', 1px);
+						text-transform: none;
+						@include f(14);
+						display: inline-block;
+						@include rem('margin-bottom', 5px);
+					}
+
+					.radio-name{
+						text-transform: none;
+					}
+				}
+			}
+		}
+
+
+
+}

@@ -1,0 +1,93 @@
+<div id="sfy-slideshow" class="content_carousel-wrapper">
+  <div class="sfy-slideshow__pane carousel">
+    <ul class="sfy-slideshow bxslider js-slider">
+      <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+          </div>
+          <div class="grid__item two-thirds info__pic">
+            
+            <div class="fader-prez fader-prez-1">
+            	<div class="image-tab face-image clearfix" style="display: block;">
+			        <div class="field field-name-c-image-main field-type-image field-label-hidden">
+					    <div class="field-items">
+				          <div class="field-item even">      
+                          	<a href="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_large.png" class="zoom-trigger zoom-cursor">   
+                            <img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_small.png" alt="High Jewelry earrings Platinum, onyx, rose-cut diamonds, brilliants.">
+      </a>
+      <a href="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_large.png" class="zoom-trigger zoom-trigger-link">Zoom</a>
+						</div>
+				      </div>
+					</div>
+			    </div>
+                <div class="bullet-new"></div>
+              </div>
+          </div>
+        </section>
+      </li>
+       <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+          </div>
+		  <div class="grid__item two-thirds info__pic">
+            
+            <div class="fader-prez fader-prez-1">
+            	<div class="image-tab face-image clearfix" style="display: block;">
+			        <div class="field field-name-c-image-main field-type-image field-label-hidden">
+					    <div class="field-items">
+				          <div class="field-item even">      
+                          	<a href="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_large.png" class="zoom-trigger zoom-cursor">   
+                            <img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_small.png" alt="High Jewelry earrings Platinum, onyx, rose-cut diamonds, brilliants.">
+      </a>
+      <a href="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_large.png" class="zoom-trigger zoom-trigger-link">Zoom</a>
+						</div>
+				      </div>
+					</div>
+			    </div>
+                <div class="bullet-new"></div>
+              </div>
+          </div>
+        </section>
+      </li>
+
+      <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+          </div>
+          <div class="grid__item two-thirds info__pic">
+            
+            <div class="fader-prez fader-prez-1">
+            	<div class="image-tab face-image clearfix" style="display: block;">
+			        <div class="field field-name-c-image-main field-type-image field-label-hidden">
+					    <div class="field-items">
+				          <div class="field-item even">      
+                          	<a href="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_large.png" class="zoom-trigger zoom-cursor">   
+                            <img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_small.png" alt="High Jewelry earrings Platinum, onyx, rose-cut diamonds, brilliants.">
+      </a>
+      <a href="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_large.png" class="zoom-trigger zoom-trigger-link">Zoom</a>
+						</div>
+				      </div>
+					</div>
+			    </div>
+                <div class="bullet-new"></div>
+              </div>
+          </div>
+        </section>
+      </li>
+      
+      
+      
+    </ul>
+    </div>
+</div>
+
+

@@ -1,0 +1,12 @@
+<div id='playerKwnXZlLEDhbm'></div>
+<script type='text/javascript'>
+    jwplayer('playerKwnXZlLEDhbm').setup({
+        file: 'https://www.youtube.com/watch?v=kNrkt5X687Q',
+        title: '[L\'Odyssée de Cartier] Never Be Afraid Again',
+        width: '100%',
+        aspectratio: '16:10',
+        fallback: 'false',
+        autostart: 'true',
+        primary: 'flash'
+    });
+</script>

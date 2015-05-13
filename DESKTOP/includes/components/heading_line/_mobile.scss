@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    My Cartier Title Component -- Mobile CSS
+\*------------------------------------*/
+
+.title-line{
+	@include bold-font;
+	text-transform: uppercase;
+	@include f(18);
+	text-align: center;
+	padding:0;
+	border-top:1px solid $primary-2;
+
+	span {
+		background: $primary-1;
+		@include rem('padding', 0 25px);
+		position:relative;
+		top:-10px;
+		color:$primary-2;
+	}
+}

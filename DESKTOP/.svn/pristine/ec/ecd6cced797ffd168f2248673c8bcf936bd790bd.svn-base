@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+
+<!--#set var="COMP_1" value="date_picker" -->
+
+<!--#include virtual="../templates/base.shtml" -->
+

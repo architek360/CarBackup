@@ -1,0 +1,116 @@
+/*------------------------------------------------------------------------------*\
+    ECS REPAIR SERVICE 
+    TAB : ENTRUST MY CREATION IN A BOUTIQUE -- DESKTOP CSS
+\*------------------------------------------------------------------------------*/
+/**
+ * MODULE CONTAINER ..... main container (.tab-entrust-boutique)
+ * BOUTIQUE SEARCH CONTAINER ...... search box and find button block(.boutique-search)
+ * BOUTIQUE SEARCH RESULT CONTAINER ..... search result including google map and boutique list block(.boutique-search-result)
+ */
+
+/*------------------------------------*\ 
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.tab-entrust-boutique {
+	.js-ga-cartier-boutiques{
+		margin-top:-35px !important;
+	}
+	.repair-service{
+		border: 0 none;
+		@include rem('padding-top', 0px);
+		.boutique-search-wrapper {
+			.heading3{
+				@include f(16);
+				text-align: center;
+				letter-spacing: normal;
+			}
+
+			.breadcrumb {
+				.heading3{
+					@include rem('padding-top', 0px);
+					@include proxi-font;
+					@include rem('letter-spacing', 2px);
+					@include f(13);
+					display: inline;
+					padding-bottom: 0.4rem;
+					&.selected{
+						font-weight: bold;
+						color: $primary-2;
+						line-height: 1.4em;
+					}
+				}
+			}
+
+			border-bottom: 1px solid $primary-61;
+			.store-search-wrapper{
+				 display: inline;
+			}
+			
+			/*------------------------------------*\
+			    $BOUTIQUE SEARCH CONTAINER
+			\*------------------------------------*/
+
+			.boutique-search{
+				.see-all.result{
+					display: inline;
+    				position: relative;
+				}
+				.tabparsys2{
+					.boutique-search-wrapper{
+						border: 0 none;
+					}
+				}
+				.result{
+					.store-locater__search{
+						@include rem('width', 400px);
+						@include rem('height', 35px);
+						@include rem('margin-bottom', 20px);
+						input{
+							@include rem('width', 300px);
+							float: left;
+						}
+						.store-locater__find-button{
+							display: inline;
+							.more-button{
+								background: none;
+								@include rem('margin-top', 0px);
+								.arrow-show.js-search-but-1{
+									@include setSpriteDesktop(5px, 13px, -431px, -154px, transparent);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			/*------------------------------------*\
+			    $BOUTIQUE SEARCH RESULT CONTAINER
+			\*------------------------------------*/
+
+			.boutique-search-result{
+				.back-button{
+					@include rem('margin-top', -101px);
+					a{
+						@include proxi-font;
+						font-style: normal;
+						@include font-weight(bold);
+						@include f(11);
+						@include setSpriteDesktop(5px, 13px, -423px, -155px, transparent);
+					}
+				}
+				display: none;
+				@include rem('margin-bottom', 80px);
+				.boutique-filter-wrapper{
+					border: 0 none;
+					display: inline-block;
+					.js-store-locator_error-msg-2{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.js-ecsV3Registration .boutique-search-wrapper {margin-top:0px !important; margin-left: -27px;}

@@ -1,0 +1,55 @@
+.repair-service-registration{
+	display: block;
+	
+	color: #a0a0a0;
+
+	.main-div{
+		
+
+		.heading{
+			padding: 40px;
+			text-align: center;
+			h4{
+				@include f(24);
+				padding-top: 5px;
+				padding-bottom: 10px;
+				border:none;
+			}
+			h5{
+				padding-bottom: 5px;
+				@include f(12);
+			}
+		}
+
+		.left-div{
+	
+			padding-left: 10px;
+			padding-top: 20px;
+			width: 48%;
+			
+			float: left;
+			h4{
+				@include f(12);
+				color:red;
+			}
+			.leftdiv__desc{
+				width: 91%;
+				@include f(12);
+			}
+		}
+
+		.side-image{
+			
+			margin-left: 15px;
+			width: 48%;
+			float: left;
+			
+			a img {
+				margin-top: 10px;
+				border: none;
+				width: 100%;
+			}
+		}
+	}
+} 
+

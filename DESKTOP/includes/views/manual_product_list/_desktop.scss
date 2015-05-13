@@ -1,0 +1,102 @@
+/*------------------------------------*\
+    manual product list list -- DESKTOP CSS
+\*------------------------------------*/
+/**
+	* MAIN CONTAINER .header--desktop used as main outer container for Header.
+*/
+
+/*------------------------------------*\
+    R MAIN CONTAINER
+\*------------------------------------*/
+
+/*------------------------------------*\
+    MANUAL PRODUCT LIST -- MOBILE CSS
+\*------------------------------------*/
+/**
+	* MAIN CONTAINER - .manual-product
+	* IMAGE CONTAINER - .manual-product__teaser(it consists image , title and listing)
+	* IMAGE DESCRIPTION - .manual-product__content
+
+
+*/
+/*------------------------------------*\
+    MAIN CONTAINER
+\*------------------------------------*/
+.manual-product{
+	margin:0 auto;
+	@include font-color($primary-2);
+
+	/*------------------------------------*\
+    		IMAGE CONTAINER
+	\*------------------------------------*/
+	.teaser{
+		display:block;
+		position:relative;
+		text-align:right;
+		img{
+	 			max-width:50%;
+	 		}
+			.teaser-desc{
+	 	 	position:absolute;
+	 	 	@include rem('top',15px);
+	 	 	@include rem('left',26px);
+	 	 	width:50%;
+	 	 	
+	 	 	/*------------------------------------*\
+			    TITLE
+			\*------------------------------------*/
+	 	 	.teaser-desc__title{
+	 	 		@include f(35);
+	 	 		@include font-color($primary-2);
+	 	 		@include main-font;
+	 	 		@include rem('padding', 10px 0px 13px);
+	 	 		@include rem('letter-spacing', 3px);
+	 	 		@include rem('line-height', 35px);
+				font-family: "EBGaramond",Garamond,Georgia,serif;
+	 		}
+
+	 		/*------------------------------------*\
+			   IMAGE LISTING
+			\*------------------------------------*/
+	 		.teaser-desc__listing{
+	 			display: block;
+	 			text-align:left;
+	 			margin-top:18px;
+	 			li{
+	 				height: 24px;
+	 			}
+	 		}
+
+			.more-button {
+				font-style: inherit;
+				font-family: proximanovaBold, sans-serif;
+				font-size: 13px;
+				text-transform: uppercase;
+				color: $primary-2;
+				letter-spacing: .1em;
+				-webkit-transition: color 0.2s ease-in-out;
+				-moz-transition: color 0.2s ease-in-out;
+				-ms-transition: color 0.2s ease-in-out;
+				-o-transition: color 0.2s ease-in-out;
+				transition: color 0.2s ease-in-out;
+			}
+
+			.more-button:hover {
+				color: $primary-3;
+			}
+
+		}
+	}
+
+
+	/*------------------------------------*\
+			    IMAGE DESCRIPTION
+	\*------------------------------------*/
+
+	.manual-product__content {
+		color: $white;
+		@include f(13);
+		color:$primary-3;
+		@include main-font;
+	}
+}

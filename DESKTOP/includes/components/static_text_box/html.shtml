@@ -1,0 +1,18 @@
+<!-- Static Text Starts Here-->
+
+	<!--#if expr="${Expert-guide-title}" -->
+	 	<h3 class="heading7"><!--#echo var="Expert-guide-title" --></h3>
+	<!--#endif -->
+	<!--#if expr="${Expert-guide-selected}" -->
+	
+		<!--#if expr="${expert-content}=faq" -->
+	 		<h2 class="heading6"><!--#echo var="Expert-guide-selected" --></h2>
+	 	<!--#endif -->
+<div class="static-text-box">
+	 	<!--#if expr="${expert-content}=expert_collection_list" -->
+	 		<h1 class="heading2--32f"><!--#echo var="Expert-guide-selected" --></h1>
+	 	<!--#endif -->
+	<!--#endif -->
+</div>
+
+<!-- Static Text Starts Here-->

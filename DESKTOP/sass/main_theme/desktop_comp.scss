@@ -1,0 +1,125 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop COMP CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+ 
+@import "mobile";
+
+/*------------------------------------*\
+    $IMPORT - Desktop Styles
+\*------------------------------------*/
+
+@import "../_desktop";
+ 
+/*------------------------------------------*\
+    $IMPORT - Global Header & Footer Style
+\*-------------------------------------------*/
+@import "../_csswizardry-grids";
+@import "../../includes/global/header/_desktop";
+@import "../../includes/global/footer/_desktop";
+
+
+
+/*------------------------------------*\
+    $IMPORT - Components Styles
+\*------------------------------------*/
+@import "../../includes/components/collection_listing/_desktop";
+@import "../../includes/components/mosaic/_desktop";
+@import "../../includes/components/column/_desktop";
+@import "../../includes/components/nav_link/_desktop";
+@import "../../includes/components/carousel/_desktop";
+@import "../../includes/components/captcha/_desktop";
+@import "../../includes/components/expiration_date/_desktop";
+@import "../../includes/components/delivery_date/_desktop";
+@import "../../includes/components/credit_card_type/_desktop";
+@import "../../includes/components/progress_bar/_desktop";
+@import "../../includes/components/nav_icon/_desktop";
+@import "../../includes/components/collection_box/_desktop";
+@import "../../includes/components/jwplayer/_desktop";
+@import "../../includes/components/social_share/_desktop";
+@import "../../includes/components/form_elements/_desktop";
+@import "../../includes/components/heading_line/_desktop";
+@import "../../includes/components/welcome_pushes/_desktop";
+@import "../../includes/components/back_button/_desktop";
+@import "../../includes/components/rich_text_editor/_desktop";
+@import "../../includes/components/breadcrumb/_desktop";
+@import "../../includes/components/static_text_box/_desktop";
+@import "../../includes/components/tabs/_desktop";
+@import "../../includes/components/date_picker/_desktop";
+@import "../../includes/components/error_page/_desktop";
+
+@import "../../includes/components/ambassador_form/_desktop";
+@import "../../includes/components/request_info_form/_desktop";
+@import "../../includes/components/exceptions_slider/_desktop";
+
+@import "../../includes/components/edit_footer/_desktop";
+@import "../../includes/components/radio_buttons_group/_desktop";
+@import "../../includes/components/radio_buttons_group2/_desktop";
+@import "../../includes/components/radio_buttons_group3/_desktop";
+@import "../../includes/components/famous_diamond/_desktop";
+@import "../../includes/components/guest_checkout/_desktop";
+@import "../../includes/components/guest_account_verify_order/_desktop";
+@import "../../includes/components/tabs2/_desktop";
+@import "../../includes/components/collection_footer/_desktop";
+@import "../../includes/components/services_pushes/_desktop";
+@import "../../includes/components/highlight_pushes/_desktop";
+@import "../../includes/components/desktop_pushes/_desktop";
+@import "../../includes/components/push_hover_highlight/_desktop";
+@import "../../includes/components/quick_link_push/_desktop";
+@import "../../includes/components/service_push/_desktop";
+@import "../../includes/components/collection_push/_desktop";
+@import "../../includes/components/video_pushes/_desktop";
+@import "../../includes/components/video_content/_desktop";
+@import "../../includes/components/range_slider/_desktop";
+@import "../../includes/components/tool_tip/_desktop";
+@import "../../includes/components/time_line/_desktop";
+@import "../../includes/components/pending_estimateList/_desktop";
+@import "../../includes/components/cost_estimate_cta/_desktop";
+@import "../../includes/components/cost_estimate_cta_confirm/_desktop";
+@import "../../includes/components/assistance/_desktop";
+@import "../../includes/components/link_to_top/_desktop";
+@import "../../includes/components/refine_selector_box/_desktop";
+@import "../../includes/components/blank_overlay/_desktop";
+@import "../../includes/components/desktop_progress_bar/_desktop";
+@import "../../includes/components/desktop_date_picker/_desktop";
+@import "../../includes/components/sub_collection_landingpage/_desktop";
+
+
+
+@import "../../includes/components/vaccordion/_desktop";
+@import "../../includes/components/maison_nav/_desktop";
+@import "../../includes/components/findout_link/_desktop";
+@import "../../includes/components/boutique_scrollable/_desktop";
+@import "../../includes/components/Shopping_bag_pop_up/_desktop";
+@import "../../includes/components/filter/_desktop";
+@import "../../includes/components/details_content/_desktop";
+@import "../../includes/components/personalise_features/_desktop";
+@import "../../includes/components/billing_address/_desktop";
+@import "../../includes/components/shipping_address/_desktop";
+@import "../../includes/components/delivery_method/_desktop";
+@import "../../includes/components/modal/_desktop";
+@import "../../includes/components/add_to_favorites/_desktop";
+@import "../../includes/components/message_card_desc/_desktop";
+@import "../../includes/components/billing_confirmation/_desktop";
+@import "../../includes/components/autosuggest/_desktop";
+@import "../../includes/components/redirection/_desktop";
+@import "../../includes/components/billing_form_japan/_desktop";
+@import "../../includes/components/search_box/_desktop";
+@import "../../includes/components/social_share_email/_desktop";
+@import "../../includes/components/delivery_date_japan/_desktop";
+@import "../../includes/components/home_image/_desktop";
+@import "../../includes/components/boutique_pickup_address/_desktop";

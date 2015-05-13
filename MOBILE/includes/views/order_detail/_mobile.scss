@@ -1,0 +1,213 @@
+/*------------------------------------*\
+   ORDER DETAIL -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.order-detail)
+ * HEADING CONTAINER... For heading i.e.. h2, h3 (.order-detail__title)
+ * ACCORDION CONTAINER..... accordian block(.order-accordion)
+ * PRODUCT DETAIL CONTAINER..... product detail container(.product-detail)
+ * PRODUCT CONTAINER..... product block(.product)
+ * PRICE DETAIL CONTAINER...... price detail row(.price-detail)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.order-detail{
+	position: relative;
+ 	width:81.25%;
+ 	margin:0 auto;
+ 	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	@include rem(padding, 39px 0 20px 0);
+	text-align:center;
+	.order-reconfirm {
+		width:100%;
+	}
+
+	/*------------------------------------*\
+	    $HEADING CONTAINER
+	\*------------------------------------*/	
+
+	.order-detail__title {
+	display:block;
+	border-top:1px solid $primary-2;
+	border-bottom:1px solid $primary-2;
+	@include rem(padding, 25px 0);
+	@include rem(margin, 0 0 38px 0);
+		.heading4{
+			@include f(24);
+			@include rem(padding, 0px);
+		}
+		.heading2{
+			@include f(34);
+			@include rem(padding, 22px 0 0 0);
+			border:none;
+		}
+	}
+	.order-detail__separator{
+		height:1px;
+		@include rem('margin', 39px 0 0);
+		background:$primary-2;
+	}
+	.order-review__info-notice{
+		@include rem('padding-bottom', 30px);
+	}
+
+	/*------------------------------------*\
+		    $ACCORDION CONTAINER
+	\*------------------------------------*/
+
+	.order-accordion{
+		@include rem('padding', 64px 0 19px);
+		width:100%;
+		margin:0 auto;
+		.accordion__wrapper{
+			border-top:solid 1px $primary-6;
+		}
+		.accordion__node{
+			border-bottom:solid 1px $primary-6; 
+		}
+		.accordion_node__title{
+			@include rem('padding', 11px 0px);
+			text-align:left;
+			position:relative;
+			.accordion_node_title__ques{
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table;
+			}
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+		 	 	@include f(20);
+		 	 	@include bold-font;
+			}
+			span{
+				position:absolute;
+				right:0px;
+				top:37%;
+			}
+			.on{
+				@include setSprite(17px, 30px, -784px, -20px);
+			}
+			.off{
+				@include setSprite(17px, 30px, -743px, -20px);
+			}
+		}
+		.accordion_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color(#d4d4d4);
+		}
+	}
+
+	/*------------------------------------*\
+	    $PRODUCT DETAIL CONTAINER
+	\*------------------------------------*/
+
+	.product-detail{
+		display:block;
+		@include f(22);
+		@include main-font;
+		@include font-color($primary-2);
+		border: 1px solid $primary-11;
+		background: $primary-1; /* Old browsers */
+		text-align:center;
+		margin: 0 auto;
+		@include rem('padding', 18px 0 0);
+		@include linear-gradient(-45deg, #000000 73%, #010000 0%, #460000 100%);
+		h3{
+			@include rem('padding', 2px 0 0 0);
+			@include rem('margin', 6px 0);
+			@include f(28);
+		}
+		.product-detail__variant{
+			display:block;
+			@include f(28);
+			@include main-font;
+			font-style:italic;
+			font-weight:normal;
+			@include rem('margin', 6px 0);
+		}
+		.product-detail__size{
+			display:block;
+			@include f(16);
+			@include brand-font;
+			text-transform:uppercase;
+			font-weight:bold;
+			@include rem('margin', 6px 0);
+			@include rem('line-height', 15px);
+		}
+
+		/*------------------------------------*\
+		    $PRODUCT CONTAINER
+		\*------------------------------------*/
+
+		.product{
+			display:block;
+			padding: 0;
+			.product__image{
+				float: left;
+				width: 46%;
+				@include rem('margin', 40px 0 20px 20px);
+				line-height: 200px;
+				.image{
+					background-size: cover;
+					max-width: 100%;
+					max-height: 200px;
+					vertical-align: middle;
+				}
+			}
+			.product__price{
+				@include rem('margin', 40px 0 0);
+				@include f(40);
+				font-weight: 300;
+				text-transform: uppercase;
+				text-align: center;
+				width: 49%;
+				display: inline-block;
+				vertical-align: top;
+				.number-items {
+					display: block;
+					color: $primary-3;
+				}
+				.price-text {
+					@include rem('margin-top' ,30px);
+					display: block;
+				}
+				.note{
+					@include font-color($primary-3);
+					font-style:italic;
+					@include f(23);
+					text-transform:none;
+					display: block;
+					@include rem('padding-top' ,13px);
+				}
+			}
+		}
+	}
+
+	/*------------------------------------*\
+		    $PRICE DETAIL CONTAINER
+	\*------------------------------------*/
+	
+	.price-detail {
+		@include rem(padding, 3px 0 0);
+
+		.price-detail--note{
+			@include f(20);
+			@include rem(padding, 11px 0 0);
+		}
+		.grid__item{
+			@include rem(padding, 20px 0 10px 0);
+		}
+	}
+}
+.breadcrumb{
+	border:none;
+}

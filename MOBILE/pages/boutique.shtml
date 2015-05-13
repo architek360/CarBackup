@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+
+<!--#set var="back-static-text" value="Back to New York Boutique Results" -->
+<!--#set var="COMP_1" value="back_button" -->
+
+<!--#set var="VIEWS_1" value="boutique" -->
+
+<!--#set var="MODULE" value="boutique" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#include virtual="../templates/base.shtml" -->

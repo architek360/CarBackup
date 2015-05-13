@@ -1,0 +1,266 @@
+/*------------------------------------*\
+    IE8 - Desktop CSS
+\*------------------------------------*/
+
+
+/* line 30, ../../../../../../sass/main_theme/ie.scss */
+.carousel-wrapper .carousel {
+  min-height: 80rem;
+}
+/* line 33, ../../../../../../sass/main_theme/ie.scss */
+.carousel-wrapper .carousel .bx-wrapper .bx-pager.bx-default-pager a {
+  text-indent: -9999px;
+  display: block;
+  outline: 0;
+  width: 10px;
+  width: 1rem;
+  height: 10px;
+  height: 1rem;
+  margin: 0px 2px;
+  margin: 0px 0.2rem;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  margin: 0px 10px;
+  margin: 0px 1rem;
+  box-shadow: none;
+  background: none;
+  border: none;
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") 0px -160px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+/* line 50, ../../../../../../sass/main_theme/ie.scss */
+.carousel-wrapper .carousel .bx-wrapper .bx-pager.bx-default-pager a:hover {
+  cursor: pointer;
+  box-shadow: none;
+  background: none;
+  border: none;
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -20px -160px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+/* line 57, ../../../../../../sass/main_theme/ie.scss */
+.carousel-wrapper .carousel .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: none;
+  box-shadow: none;
+  border: none;
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -40px -160px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+		/*  .bx-pager.bx-default-pager a {
+		    text-indent: -9999px;
+		    display: block;
+		    outline: 0;
+			@include rem('width', 10px);
+			@include rem('height', 10px);
+			@include rem('margin', 0px 2px);
+			@include border-radius(9px);
+			@include rem('margin', 0px 10px);
+			box-shadow: none;
+			background: $primary-56;
+			border:1px solid $primary-56;
+			@include setSpriteDesktop(20px, 20px, -0px, -160px, transparent);
+		    cursor: pointer;
+		    border: none;
+		    box-shadow: none;
+
+		    &:hover {
+				@include setSpriteDesktop(20px, 20px, -20px, -160px, transparent);
+				cursor: pointer;
+			    border: none;
+			    box-shadow: none;
+		    }
+		    &.active {
+			    background: none;
+			    @include setSpriteDesktop(20px, 20px, -40px, -160px, transparent);
+			    border: thin none;
+			    box-shadow: none;
+		    }
+
+
+		  }*/
+/*.main-container{
+	min-height: auto !important;
+}*/
+/* line 109, ../../../../../../sass/main_theme/ie.scss */
+.nav-show {
+  border-top: 1px solid #4d4d4d;
+  border-bottom: 1px solid #4d4d4d;
+}
+
+/* line 114, ../../../../../../sass/main_theme/ie.scss */
+.dispatch-body {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/Dispatch_background.jpg") no-repeat center top;
+}
+
+/* line 119, ../../../../../../sass/main_theme/ie.scss */
+.pending-estimate table td .rejected {
+  -ms-filter: "alpha(opacity=40)";
+}
+
+/* line 123, ../../../../../../sass/main_theme/ie.scss */
+.one-third {
+  width: 33%;
+}
+
+/* line 124, ../../../../../../sass/main_theme/ie.scss */
+.one-third:first-child + .one-third + .one-third {
+  margin-right: 0;
+}
+
+/* line 126, ../../../../../../sass/main_theme/ie.scss */
+.one-third:first-child + .one-third + .one-third + .one-third + .one-third + .one-third {
+  margin-right: 0;
+}
+
+/* line 127, ../../../../../../sass/main_theme/ie.scss */
+.one-third:first-child + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third {
+  margin-right: 0;
+}
+
+/* line 128, ../../../../../../sass/main_theme/ie.scss */
+.one-third:first-child + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third + .one-third {
+  margin-right: 0;
+}
+
+/* line 130, ../../../../../../sass/main_theme/ie.scss */
+#modalWindow {
+  background: #151515;
+}
+
+/* line 137, ../../../../../../sass/main_theme/ie.scss */
+.search-form .search__term {
+  background-color: black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+/* line 143, ../../../../../../sass/main_theme/ie.scss */
+.primary-nav-container {
+  /* background-color: $primary-1;
+  -ms-filter: "alpha(opacity=40)"; */
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.4.png");
+}
+/* line 148, ../../../../../../sass/main_theme/ie.scss */
+.primary-nav-container .first-level-nav .nav-show {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.4.png");
+}
+
+/* line 153, ../../../../../../sass/main_theme/ie.scss */
+.body-wrapper .header {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.4.png");
+}
+
+/* line 156, ../../../../../../sass/main_theme/ie.scss */
+.body-wrapper.shoppingBagBg {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bg-shoppingbag.png");
+}
+
+/* line 159, ../../../../../../sass/main_theme/ie.scss */
+.shoppingBagBg .address-button {
+  background-color: #2c0404;
+}
+
+/* line 163, ../../../../../../sass/main_theme/ie.scss */
+.bx-controls-direction-right a, .home-carousel .bx-controls-direction-left a {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/transparent.png");
+}
+
+/* CSS changes for Wishlist page */
+/* line 169, ../../../../../../sass/main_theme/ie.scss */
+.wishlist .wishlist__select .edit-field .form-input {
+  padding: 5px 0 0 5px;
+}
+
+/* CSS changes for Checkout page */
+/* line 175, ../../../../../../sass/main_theme/ie.scss */
+.billing-form-japan .form-input, .billing-form .form-input {
+  padding: 5px 0 0 3px;
+}
+
+/* progressbar */
+/* line 181, ../../../../../../sass/main_theme/ie.scss */
+.progressbar {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/black-35.png") repeat scroll 0 0 transparent;
+}
+
+/* line 185, ../../../../../../sass/main_theme/ie.scss */
+.progressbar__circle-on span {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -105px -848px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 25px;
+}
+
+/* line 189, ../../../../../../sass/main_theme/ie.scss */
+.progressbar__circle-off span {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -135px -848px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 25px;
+}
+
+/* line 193, ../../../../../../sass/main_theme/ie.scss */
+.progressbar li span {
+  width: 28px;
+  height: 25px;
+}
+.quick-link-push:first-child + .quick-link-push + .quick-link-push{
+  margin-right: 0;
+}
+
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product {
+  margin-right: 0;
+}
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+.one-product:first-child + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product + .one-product{
+  margin-right: 0;
+}
+
+.pushes-wrapper_push img{
+  max-width: 85%;
+  max-height: 210px;
+}
+.home-carousel .carousel-wrapper .carousel .bx-wrapper .image{
+  display: inline;
+  width: 100%;
+}
+.footer{
+  margin-top: 1px;
+}

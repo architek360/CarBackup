@@ -1,0 +1,58 @@
+<!--Carousel start-->
+
+<div class="carousel js-others">
+    <ul class=" bxslider js-slider">
+		<li class="clearfix" data-gtm="l'odyssee">
+			<div data-picture="" data-alt="" data-class="image"> 
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.320.low.jpg" data-media="(min-width: 1px)"></div>     <!-- Small mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.320.medium.jpg" data-media="(min-width: 320px)"></div>   <!-- Portrait mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.480.medium.jpg" data-media="(min-width: 321px)"></div>   <!-- Landscape mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.476.high.jpg" data-media="(min-width: 481px)"></div>   <!-- Portrait iPad -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.620.high.jpg" data-media="(min-width: 769px)"></div>   <!-- Landscape iPad -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.1024.high.jpg" data-media="(min-width: 1025px)"></div>  <!-- Desktop -->
+	        	<img alt="" class="image" src="<!--#echo var="CONTENT_IMG_PATH" -->carousel-1.jpg">
+    		</div>
+			<div class="carousel__pic-desc title-color-1 col__1 row__1">
+				<h1>l'odyssee</h1>
+				<p>de cartier</p>
+				<a href="#">view the film</a>
+			</div>
+		</li>
+
+		<li class="clearfix" data-gtm="les heures fabuleuses de cartier">
+			<div data-picture="" data-alt="" data-class="image"> 
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.320.low.jpg" data-media="(min-width: 1px)"></div>     <!-- Small mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.320.medium.jpg" data-media="(min-width: 320px)"></div>   <!-- Portrait mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.480.medium.jpg" data-media="(min-width: 321px)"></div>   <!-- Landscape mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.476.high.jpg" data-media="(min-width: 481px)"></div>   <!-- Portrait iPad -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.620.high.jpg" data-media="(min-width: 769px)"></div>   <!-- Landscape iPad -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.1024.high.jpg" data-media="(min-width: 1025px)"></div>  <!-- Desktop -->
+	        	<img alt="" class="image" src="<!--#echo var="CONTENT_IMG_PATH" -->carousel-2.jpg">
+    		</div>
+			<div class="carousel__pic-desc title-color-2 col__2 row__2">
+				<p class="carousel_pic-desc__header"></p>
+				<p>les heures fabuleuses de cartier</p>
+				<a href="#">view the film</a>
+			</div>
+
+		</li>
+
+		<li class="clearfix" data-gtm="es heures fabuleuses de cartier">
+			<div data-picture="" data-alt="" data-class="image"> 
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.320.low.jpg" data-media="(min-width: 1px)"></div>     <!-- Small mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.320.medium.jpg" data-media="(min-width: 320px)"></div>   <!-- Portrait mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.480.medium.jpg" data-media="(min-width: 321px)"></div>   <!-- Landscape mobile -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.476.high.jpg" data-media="(min-width: 481px)"></div>   <!-- Portrait iPad -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.620.high.jpg" data-media="(min-width: 769px)"></div>   <!-- Landscape iPad -->
+	            <div data-src="/content/dam/cartier_dam/hp_hs_fpp_1.jpg.scale.1024.high.jpg" data-media="(min-width: 1025px)"></div>  <!-- Desktop -->
+	        	<img alt="" class="image" src="<!--#echo var="CONTENT_IMG_PATH" -->carousel-3.jpg" >
+    		</div>
+			<div class="carousel__pic-desc title-color-2 col__5 row__3">
+				<p class="carousel_pic-desc__header"></p>
+				<p>les heures fabuleuses de cartier</p>
+				<a href="#">view the film</a>
+			</div>			
+		</li>
+   </ul>
+</div>
+<!--Carousel end-->

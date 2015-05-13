@@ -1,0 +1,129 @@
+<common.form.ajaxReqAbort
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.ajaxReqAbort"
+        sling:message="There was some server error while making this request"/>
+    <common.form.badJSONProvided
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.badJSONProvided"
+        sling:message="JSON is not in the predefined format"/>
+    <common.form.field.emailrequired
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.field.emailrequired"
+        sling:message="Please enter a valid email address"/>
+    <common.form.field.invalidSize
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.field.invalidSize"
+        sling:message="Choose a valid size"/>
+    <common.form.field.mandatory
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.field.mandatory"
+        sling:message="This field is required"/>
+    <common.form.field.minlength
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.field.minlength"
+        sling:message="Please enter at least {0} characters!"/>
+    <common.form.fileNotFound
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.fileNotFound"
+        sling:message="There was some server error while making this request"/>
+    <common.form.messageSentFailure
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.messageSentFailure"
+        sling:message="There was some server Error"/>
+    <common.form.messageSentSuccess1
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.messageSentSuccess1"
+        sling:message="Your message has been sent"/>
+    <common.form.messageSentSuccess2
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.messageSentSuccess2"
+        sling:message="Your request has been submitted to our Client Relations Center. We will contact you as soon as possible."/>
+    <common.form.noConnection
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.noConnection"
+        sling:message="There was some server error while making this request"/>
+    <common.form.noJSONprovided
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.noJSONprovided"
+        sling:message="No JSON provided by the module"/>
+    <common.form.parserError
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.parserError"
+        sling:message="There was some server error while making this request"/>
+    <common.form.serverError
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.serverError"
+        sling:message="There was some server error while making this request"/>
+    <common.form.timeout
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.timeout"
+        sling:message="There was some server error while making this request"/>
+        <!-- start-->
+    <common.form.validOption
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.validOption"
+        sling:message="Please select a valid option"/>
+    <common.form.default
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.default"
+        sling:message="default"/>
+    <common.form.confirmEmailMatch
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.confirmEmailMatch"
+        sling:message="Email addres should matched"/>
+    <common.form.confirmPasswordMatch
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.confirmPasswordMatch"
+        sling:message="password should matched"/>
+    <common.form.valueNotEqual
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.valueNotEqual"
+        sling:message="Value must not equal arg"/>
+    <common.form.disabledValueSelected
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.disabledValueSelected"
+        sling:message="Please select a value which is not disabled"/>
+    <common.form.InputLetterAndNubmer
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.InputLetterAndNubmer"
+        sling:message="Please enter Letters and Numbers only"/>
+    <common.form.exactLength
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.InputLetterAndNubmer"
+        sling:message="Please enter exactly {0} characters"/>
+    <common.form.showPassword
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.showPassword"
+        sling:message="show"/>
+    <common.form.hidePassword
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.hidePassword"
+        sling:message="hide"/>
+    <common.form.myAddressTitle
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.myAddressTitle"
+        sling:message="Delete Confirmation"/>
+    <common.form.myAddressMessage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.myAddressMessage"
+        sling:message="You are about to delete this item. Continue?"/>
+    <common.form.myAddressYesButton
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.myAddressYesButton"
+        sling:message="yes"/>
+    <common.form.myAddressNoButton
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.myAddressNoButton"
+        sling:message="no"/>
+    <common.form.wishlistNoItems
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.wishlistNoItems"
+        sling:message="No items Left"/>
+    <common.form.okButton
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.okButton"
+        sling:message="ok"/>
+    <common.form.wishListSavePopup
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="common.form.wishListSavePopup"
+        sling:message="your comment has been updated"/>

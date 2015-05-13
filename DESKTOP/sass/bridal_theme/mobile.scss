@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    $MAIN THEME - Mobile CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT VENDOR  LIBS....................get all compass vendor libs
+ * IMPORT BASE STYLES & MIXINS ...........CSS Wizardy Grid System, Base, Helper(mixins)
+ * IMPORT THEMES..........................get all themes Styles
+ * IMPORT BASE MOBILE STYLES..............get default base mobile Style
+ * HEADER & FOOTER........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles 
+ * IMPORT VIEW............................Views Styles
+ */
+$base : main;
+$path-images : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/'; 
+/*------------------------------------*\
+    $IMPORT - Vendor Libs
+\*------------------------------------*/
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/min";
+
+/*----------------------------------------------------------*\
+    $IMPORT - CSS Wizardy Grid System, Base, Helper(mixins)
+\*----------------------------------------------------------*/
+
+@import "../_csswizardry-grids";
+@import "../_base";
+@import "../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+@import "_theme";
+

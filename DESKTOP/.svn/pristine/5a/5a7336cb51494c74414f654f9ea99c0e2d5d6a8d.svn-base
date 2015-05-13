@@ -1,0 +1,23 @@
+.date-picker{
+	.select-wrapper {
+		display:inline-block;
+		margin:0;
+		.form-label{
+			display: none;
+		}
+		.selector {
+			background-position: -430px -672px;
+			height: 28px;
+			line-height: 28px;
+			overflow: hidden;
+			padding: 0 0 0 8px;
+			padding: 0 0 0 0.8rem;
+			position: relative;
+			width: 92px !important;
+			span{
+				width: 85px !important;
+			}
+		}
+
+	}
+}

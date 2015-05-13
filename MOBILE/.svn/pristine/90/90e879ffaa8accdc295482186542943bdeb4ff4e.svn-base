@@ -1,0 +1,20 @@
+.comp-rich-text {
+	 .intro-copy {
+		@include f(25);
+		line-height: 2.7rem; 
+	}
+	.pull-out-quote {
+		@include f(25);
+		line-height: 2.7rem; 
+	}
+	
+	span.icon--pd__title{
+		@include f(25);
+		margin: 0;
+	}
+	span.icon--pd__desc{
+		margin-top: -1em;
+		padding-left: 36px;
+	}
+}
+

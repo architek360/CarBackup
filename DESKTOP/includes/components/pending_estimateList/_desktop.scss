@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    Pending Estimation -- Desktop CSS
+\*------------------------------------*/
+
+
+.pending-estimate{
+	
+	width:100%;
+	@include rem('margin', 20px 0 0 0);
+	table{
+		width:100%;
+		border-top:1px solid #4D4D4D;
+		.head td{
+			font-weight:bold;
+			@include rem('padding', 5px 0 20px 0);
+			font-style:normal;
+			text-transform:uppercase;
+		}
+		
+			td{
+				width:25%;
+				color:$primary-2;
+				@include f(11);
+				text-align:left;
+				vertical-align:middle;
+				font-style:italic;
+				border:none;
+				@include rem('padding', 0 0 5px 0);
+				font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+				.rejected{
+					opacity:0.4;
+				}
+
+				.cta-button.cta-button__inner.cta--red{
+					 @include rem('padding', 0 10px 0 10px);
+					 @include rem('margin', 0 0 0 0);
+					 width:auto;
+				}
+				
+			}
+	}
+}

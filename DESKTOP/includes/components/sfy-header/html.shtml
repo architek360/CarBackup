@@ -1,0 +1,12 @@
+<!-- SFY-HEADER  -->
+
+<h1 class="sfy-logo"><img src="<!--#echo var="CONTENT_IMG_PATH" -->sfy-logo.png" alt=" Set For You by Cartier" />
+</h1>
+<!-- SFY - Progress steps -->
+<section class="sfy-progress">
+  <ul class="sfy-progress_tab">
+    <li class="visited"><span>1</span></li>
+    <li class=""><span>2</span></li>
+    <li class=""><span>3</span></li>
+  </ul>
+</section>

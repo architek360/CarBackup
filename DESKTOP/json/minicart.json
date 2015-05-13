@@ -1,0 +1,20 @@
+{
+	"count": 2,
+	"total": "$26,784",
+	"totalInfo": "checkout.label.tax.inclTaxesText",
+	"teaserArray": [{
+		"productTitle": "anaar",
+		"productDesc": "quartz, yellow gold",
+		"imageURL": "/content/dam/rcq/car/58/19/28/581928.png/jcr:content/renditions/cq5dam.thumbnail.319.319.png",
+		"selectedQuantity": 3,
+		"variantID": "W1529856",
+    "totalDisplayPrice": "$1,280"
+	},{
+    "productTitle": "anaar",
+    "productDesc": "quartz, yellow gold",
+    "imageURL": "/content/dam/rcq/car/58/19/28/581928.png/jcr:content/renditions/cq5dam.thumbnail.319.319.png",
+    "selectedQuantity": 3,
+    "variantID": "W1529856",
+    "totalDisplayPrice": "$1,280"
+  }],
+}

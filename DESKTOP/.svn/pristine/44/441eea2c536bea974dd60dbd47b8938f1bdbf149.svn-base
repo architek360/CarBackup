@@ -1,0 +1,26 @@
+.js-reg-step-3 {
+	.form-element{margin-right:10px;width: 44%;}
+	.fn_addrname {
+		float: left;
+		width: 44%;
+		input{
+			width:100% !important;
+		}
+	}
+	.fn_addrinfo {
+		width:44%;
+	}
+	.fn_strname {
+		position:relative;
+		clear:both;
+	}
+	.fn_city {
+		width:44%;
+	}
+	.fn_phno{
+		clear:none !important;
+	}
+	#fn_zip {
+		width:189px !important;
+	}
+}

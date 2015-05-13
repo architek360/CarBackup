@@ -1,0 +1,38 @@
+<!-- Expert Guide View Starts Here-->
+
+		
+	<div class="expert-guide">
+	<h3 class="heading3">expertise guides care recommendations</h3>
+	<h2 class="heading2">jewelry</h2>
+
+    <!--#if expr="${DEVICE} = 'mobile'"  -->
+
+	<div class="expert-guide__select">
+	    <!--#set var="mandatory" value="no"-->
+	    <!--#include virtual="../../components/form_elements/label.shtml" -->
+	    <!--#set var="style-name" value="select-1" -->
+	    <!--#include virtual="../../components/form_elements/select.shtml" -->
+    </div>
+
+    <!--#elif expr="${expert_list} = 'yes'"-->
+    <div class="item-list">
+    	<ul>
+    		<li class="active"><h2><a href="#" title="Jewelry">Jewelry</a></h2></li>
+			<li><h2><a href="#" title="Watches">Watches</a></h2></li>
+			<li><h2><a href="#" title="Leather Goods">Leather Goods</a></h2></li>
+			<li><h2><a href="#" title="Lighters">Lighters</a></h2></li>
+			<li><h2><a href="#" title="Writing Instruments">Writing Instruments</a></h2></li>
+		</ul>
+	</div>
+	<!--#endif -->
+    
+    <!--#if expr="${expert-content}" -->
+    <div class="expert-guide__description">
+		<!--#include virtual="../${expert-content}/html.shtml" -->
+	</div>
+	<!--#endif -->
+
+	
+	</div>
+
+<!-- Expert Guide View Ends Here-->

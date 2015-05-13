@@ -1,0 +1,43 @@
+<div class="personal-card clearfix">
+  <h3 class="heading3"><span class="msg-icon "></span> Enclose a message card with your gift</h3>
+  <!--#include virtual="../../components/radio_buttons_group3/html.shtml" --> 
+  <span class="personal-card__message js-hide-when-blank">Your message will be printed on a exclusive gift card</span>
+  <span class="personal-card-blank__message js-blank-message">In order to receive a blank message card with your gift, click on the save button</span>
+  <div class="grid__item  logo_section">
+    <div class="logo_section_content"><span class="preview"></span></div></div>
+  <div class="grid__item  message_section">
+    <div class="personal-card__compose js-hide-when-blank">
+      <h3 class="heading3">2/ compose your message now</h3>
+      <span class="message-limit">125 characters max</span>
+      <div class="message-wrapper">
+        <textarea name="fn_composemessage" placeholder="Compose your message now" class="form-textarea js-message js-bold-class js-inputfield" maxlength="125"></textarea>
+      </div>
+    </div>
+    <h3 class="heading3 js-hide-when-blank choosefont-section">3/ choose a font</h3>
+    <!--#set var="label-first" value="Block" --> 
+    <!--#set var="class-first" value="js-bold-switch" --> 
+    <!--#set var="label-class-first" value="js-bold-class" --> 
+    <!--#set var="label-second" value="Cursive" --> 
+    <!--#set var="class-second" value="js-cursive-switch" --> 
+    <!--#set var="label-class-second" value="js-cursive-class" --> 
+    <!--#set var="radio-name" value="fn_grpchoosefont"-->
+    <div class="js-hide-when-blank"> 
+      <!--#include virtual="../../components/form_elements/slide_switch.shtml" --> 
+    </div>
+    
+    <!-- SAVE BUTTON -->
+    <div class="button-wrapper"> 
+    <!--#set var="cta--varaint" value="cta--red js-confirm-button" --> 
+      <!--#set var="text-detail" value="Save" --> 
+      <!--#set var="input-type" value="submit" --> 
+      <!--#include virtual="../../components/form_elements/button.shtml" --> 
+
+      <!--#set var="cta--varaint" value="cta--red js-cancel-ac" --> 
+      <!--#set var="text-detail" value="cancel" --> 
+      <!--#set var="input-type" value="submit" --> 
+      <!--#include virtual="../../components/form_elements/button.shtml" --> 
+      
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<!-- FIND OUT LINK  CONTAINER-->
+<div class="know-more">
+	<div class="know-more__wrapper js-accordion">
+		<div class="know-more__node js-accordion__node">
+			<div class="know-more_node__title heading3 js-accordion_node__title">
+				<span class="off"></span>
+				<div class="know-more_node_title__ques">
+					<p>Find out more</p>
+				</div>
+			</div>
+			<div class="content-more js-accordion_node__desc">
+					    <!-- DESC -->
+					    <p>
+					      Started in a spirit of enthusiasm, the project received official status in 1983 as 
+					    the Cartier Collection, led by jewellery expert Eric Nussbaum.    </p>
+					    <!-- FIN DESC -->
+					    <hr/>
+					    <!-- DESC -->
+					    <p class="font-diddot-it">
+					      Its mission is to assemble and present <br>the historic Cartier heritage <br>to the largest possible number of people.    </p>
+					    <!-- FIN DESC -->
+					    <hr/>
+					    <!-- DESC -->
+					    <p>
+					        Not in a museum dedicated to it, but in displays around the world.
+					    Since then, the Cartier Collection has never stopped growing and travelling. Since 1989, it has mounted more than 25
+					    major exhibitions in the most prestigious museums on five continents.
+					    Today it contains almost 1500 exceptional pieces acquired in public sales
+					    or from individuals. Three major publications have been devoted to it – with each piece described in detail and shown in
+					   actual size – by éditions Flammarion: <i>La Collection Cartier</i> – <i>Joaillerie</i> (2004),
+					    <i>La Collection Cartier</i> – <i>Horlogerie</i> (2006), <i>La Collection Cartier</i> – <i>Accessoires</i> (2012).    </p>
+					    <!-- FIN DESC -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FIND OUT LINK CONTAINER-->

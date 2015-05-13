@@ -1,0 +1,106 @@
+.coloumn-wrapper{
+    .col1, .col2, .col3{
+        float: left;
+        width: 33%;
+        margin: 0;
+        padding: 0;
+        .grid .grid__item:first-child{
+            padding-left: 3.693em;
+        }
+    }
+    .row{
+        letter-spacing: normal;
+        @include f(14);
+        font-family: $primary-font-2;
+        @include rem(line-height, 16px);
+        width: 100%;
+        overflow: hidden;
+        text-align: left;
+    }
+    .border-wrapped{
+        border-top: 1px solid $primary-59;
+        border-bottom: 1px solid $primary-59;
+        @include rem(padding-top, 12px);
+        @include rem(padding-bottom, 12px);
+    }
+    .bold{
+        font-style: italic;
+        font-weight: bold;
+    }
+    .grid{
+        overflow: hidden;
+        .nomargin{
+            margin: 0;
+        }
+        &.imagerow{
+            overflow: hidden;
+            display: table-cell;
+            vertical-align: bottom;
+            @include rem(width, 980px);
+            .one-third{
+                width: 33.1%;
+            }
+            .grid__item{
+                float: none;
+                display: inline-block;
+                vertical-align: bottom;
+            }
+        }
+        .image-left{
+            float: left;
+			padding-left: 10px;
+        }
+        .image-right{
+            float: right;
+        }
+        .grid__item{
+            &.top-120{
+                @include rem(margin-top,120px);
+            }
+            &:first-child{
+                padding-left: 0;
+            }
+            .grid__item{
+                padding-left: 0;
+            }
+        }
+    }
+    h2{
+        @include f(22);
+        @include rem(line-height, 24px);
+        clear: both;
+        font-weight: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+    }
+    h3{
+        @include proxi-font;
+        font-weight: bold;
+        @include f(14);
+        @include rem(height, 23px);
+        @include rem(line-height, 19px);
+        @include rem(padding-top, 4px);
+        text-align: left;
+        font-weight: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+        text-transform: uppercase;
+    }
+    p{
+        color: $primary-300;
+        letter-spacing: normal;
+        @include main-font;
+        margin: 0;
+        padding: 0;
+        @include f(14);
+        @include rem(line-height, 16px);
+        @include rem(margin-top, 7px);
+        &.productdata{
+            color: $primary-301;
+            @include f(11);
+            @include rem(line-height, 13px);
+            @include rem(padding-top, 9px);
+            margin-top: 0;
+        }
+    }
+}

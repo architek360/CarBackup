@@ -1,0 +1,195 @@
+
+    <div class="error_message_js-light-account-form" style="display:none;"></div>
+<div class="form-layout js-light-account-form">
+    <script type="text/javascript" src="/etc/clientlibs/foundation/form.min.1389714983811.js"></script>
+<script type="text/javascript">
+  function cq5forms_preCheck_js_light_account_form(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/ja/services/LightAccountPage.mobile.desktop.html" id="js-light-account-form" name="js-light-account-form" enctype="multipart/form-data" novalidate="novalidate"><input type="hidden" name=":formid" value="js-light-account-form"><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/LightAccountPage/jcr:content/par/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><input type="hidden" name=":redirect" value="/ja/services/NewsletterSuccess.html"><div class="form"><script type="text/javascript">
+var rulesObjects = {};
+var messagesObjects = {};
+        
+    if(rulesObjects.fn_grptitle){
+        rulesObjects.fn_grptitle.required="true";
+        messagesObjects.fn_grptitle.required="パスワード この欄は必須項目です";
+           
+        } else{
+             rulesObjects.fn_grptitle= {
+            required: true
+            }
+            messagesObjects.fn_grptitle = {
+            required: "パスワード この欄は必須項目です"
+            }
+        }
+
+        
+    if(rulesObjects.fn_fname){
+        rulesObjects.fn_fname.required="true";
+        messagesObjects.fn_fname.required="パスワード この欄は必須項目です";
+           
+        } else{
+             rulesObjects.fn_fname= {
+            required: true
+            }
+            messagesObjects.fn_fname = {
+            required: "パスワード この欄は必須項目です"
+            }
+        }
+
+        
+    if(rulesObjects.fn_lname){
+        rulesObjects.fn_lname.required="true";
+        messagesObjects.fn_lname.required="パスワード この欄は必須項目です";
+           
+        } else{
+             rulesObjects.fn_lname= {
+            required: true
+            }
+            messagesObjects.fn_lname = {
+            required: "パスワード この欄は必須項目です"
+            }
+        }
+
+        
+    if(rulesObjects.fn_fname2){
+        rulesObjects.fn_fname2.required="true";
+        messagesObjects.fn_fname2.required="パスワード この欄は必須項目です";
+           
+        } else{
+             rulesObjects.fn_fname2= {
+            required: true
+            }
+            messagesObjects.fn_fname2 = {
+            required: "パスワード この欄は必須項目です"
+            }
+        }
+
+        
+    if(rulesObjects.fn_lname2){
+        rulesObjects.fn_lname2.required="true";
+        messagesObjects.fn_lname2.required="パスワード この欄は必須項目です";
+           
+        } else{
+             rulesObjects.fn_lname2= {
+            required: true
+            }
+            messagesObjects.fn_lname2 = {
+            required: "パスワード この欄は必須項目です"
+            }
+        }
+
+        
+    if(rulesObjects.j_username){
+        rulesObjects.j_username.required="true";
+        messagesObjects.j_username.required="パスワード この欄は必須項目です";
+           
+        } else{
+             rulesObjects.j_username= {
+            required: true
+            }
+            messagesObjects.j_username = {
+            required: "パスワード この欄は必須項目です"
+            }
+        }
+
+
+    $(document).ready(function(){
+        $("#js-light-account-form").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+        });
+    });
+</script>
+<fieldset>
+    
+<p style="font-family: tahoma , arial , helvetica , sans-serif;font-size: 12.0px;text-align: center;">カルティエのニュースレター購読を希望します。</p>
+
+
+
+<hr><div class="heading-wrapper">
+
+<h4 class="heading4"> 必須項目を全て入力してください</h4>
+
+        </div>
+
+
+<div class="group-wrapper">
+                <label>性別*</label>
+<div class="form-element radio-wrapper fn_grptitle">   
+                                    <input type="radio" id="MR" name="fn_grptitle" value="0001" class="form-radio">
+                                   <label for="MR" class="form-radio-label">&nbsp;男性
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper fn_grptitle">   
+                                    <input type="radio" id="MRS" name="fn_grptitle" value="0002" class="form-radio">
+                                   <label for="MRS" class="form-radio-label">女性
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper fn_grptitle">   
+                                    <input type="radio" id="MS" name="fn_grptitle" value="0003" class="form-radio">
+                                   <label for="MS" class="form-radio-label">MS
+</label>                              
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_grptitle"></div><div class="form-element input-wrapper fn_fname">
+        <label>お名前（姓　漢字）*</label>
+<input id="fn_fname" type="text" name="fn_fname" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-fn_fname"></div></div>
+    <div class="form-element input-wrapper fn_lname">
+        <label>お名前（名　漢字）*</label>
+<input id="fn_lname" type="text" name="fn_lname" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-fn_lname"></div></div>
+    <div class="form-element input-wrapper fn_fname2">
+        <label>お名前（姓　カタカナ</label>
+<input id="fn_fname2" type="text" name="fn_fname2" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-fn_fname2"></div></div>
+    <div class="form-element input-wrapper fn_lname2">
+        <label>お名前（名　カタカナ</label>
+<input id="fn_lname2" type="text" name="fn_lname2" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-fn_lname2"></div></div>
+    <div class="form-element input-wrapper j_username">
+        <label>Eメールアドレス*</label>
+<input id="j_username" type="text" name="j_username" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-j_username"></div></div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input class="captcha__input" type="text" id="code" name="fn_wordvef">
+<input type="hidden" id="url" name="url" class="js-captcha-url" value="http://50.23.148.8:80/v1/captcha/140819a68956e44715.png">
+<input type="hidden" id="id" name="id" class="js-captcha-id" value="140819a68956e44715">
+<span class="img"><img src="http://50.23.148.8:80/v1/captcha/140819a68956e44715.png" alt=""></span>
+<hr><div class="comp-rich-text">  
+<p>プライバシーポリシーを承諾し、上記アドレスでカルティエのニュースレターを受信することを希望します。</p>
+</div>
+</fieldset><div class="form-element button-wrapper OK">
+<input class="form-button" type="submit" name="OK" value="OK">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

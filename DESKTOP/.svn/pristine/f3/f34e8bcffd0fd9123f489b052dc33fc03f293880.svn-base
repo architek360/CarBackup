@@ -1,0 +1,157 @@
+/*------------------------------------*\
+    SET FOR YOU-HEADER -- Desktop CSS
+\*------------------------------------*/
+
+/**
+ * MODULE CONTAINER.... (.sfy-result)
+ * SFY RESULTS INFO   (.sfy-result__infos, etc.)
+ * SFY RESULTS TABLE (.sfy-result__table, etc)
+ * SFY RESULT CONTACT (.sfy-result__contact)
+ * SFY RESULT CAPTION (.sfy-caption) 
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+	
+.sfy-result {	
+	.stepOneBlockOne {
+		width: 275px;
+	}
+	.stepThreeSlider {
+		width: 400px;
+	}
+	.stepThreeBlockOne{
+		width: 300px;
+	}
+	@include rem(margin, 80px 0px);
+	@include font-color($primary-2);
+	letter-spacing: .1em;
+	.sfy-result__infos {
+		text-align: center;
+		@include proxi-font;
+		.model__summary {
+			@include rem(padding-top, 0px);
+			@include main-font;
+		}
+		.model__name,.model__description,.model__reference {
+			text-align: left;
+		}
+		.model__description {
+			@include main-font;
+			@include rem("padding",10px 0 10px 0);
+		}
+		.model__reference {
+			text-transform: uppercase;
+			@include f(12);
+			font-weight: bold;
+			@include rem("padding-bottom",10px);
+			display:block;
+			font-weight:bold;
+			span{
+				font-weight:bold;
+			}
+		}
+	}
+	.stepOneBlockOne{
+
+		.sfy-result__infos {
+			text-align: left;
+		}
+
+	}
+
+	h5 {
+		border-bottom: 1px solid #dedede;
+		@include rem(margin, 0 40px);
+		@include rem(padding-bottom, 10px);
+		text-align: center;
+		@include main-font;
+		letter-spacing: .1em;
+		span {
+			display: block;
+			@include f(12);
+			font-style: italic;
+			&.value {
+				@include f(20);
+				font-weight: bold;
+				@include rem(margin-bottom, 5px);
+			}
+		}
+	}
+	.sfy-result__table {
+		width: 99%;
+		@include proxi-font;
+		text-transform: uppercase;
+		@include f(12);
+		border-spacing: 9px;
+		border-collapse: separate;
+		@include rem(margin, 10px 0);
+		.checkbox {
+			border-bottom: none;
+		}
+		th ,th h2{
+			@include f(10);
+			font-weight: bold;
+		}
+		th {
+			@include rem(padding-bottom, 5px);
+			border-bottom: 1px solid #c9c9c9;
+		}
+	
+		.radio {
+			vertical-align: middle;
+			height: 15px;
+			width: 15px;
+			span {
+				background-position: -267px -435px;
+				@include rem(margin-top, 0px);
+				height: 15px;
+				&.checked {
+					background-position: -247px -435px;
+				}
+			}
+
+		}
+	}
+
+
+
+	.bold {
+		@include font-color($primary-66);
+	}
+
+	.sfy-result__contact {
+		background: url($path-images +'icons/sprites_ui.png') no-repeat center -30px;
+		border-top: 1px solid #dedede;
+		@include f(10);
+		@include rem(margin, 30px 40px 0 40px);
+		@include rem(padding-top, 50px);
+		text-align: center;
+		text-transform: uppercase;
+	
+		 a {
+		 	text-align:left;
+		 	display:block;
+			@include proxi-font;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			@include f(10);
+			font-weight: bold;
+			font-weight: normal;
+			background: url($path-images +'icons/arrows-red.png') no-repeat left 3px;
+			@include rem(padding-left, 10px);
+			&:hover {
+				@include font-color($primary-8);
+			}
+		}
+	}
+}
+
+.sfy-caption {
+	@include f(12);
+	@include rem(margin, 15px 140px 20px);
+	text-align: center;
+	@include font-color($primary-2);
+	@include main-font;
+}

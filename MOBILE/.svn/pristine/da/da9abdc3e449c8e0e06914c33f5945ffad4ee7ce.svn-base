@@ -1,0 +1,18 @@
+<!--Html for collection list -->
+<div class="product-listing">
+	<a href="#" class="tappable"> </a>
+	<a href="<!--#echo var="links-to" -->" class="<!--#echo var="class-name" -->">
+		<img data-linksrc="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="img-src" -->" src="" class="loading js-lazy-load"/>
+	</a>
+	<div class="product-listing_desc js-product-listing_desc">
+			<h3 class="heading3 js-heading3"><!--#echo var="product-title" --></h3>
+			<div class="ellipsis">
+		<h4 class="heading4 js-heading4"><!--#echo var="product-color" --></h4>	
+		
+	</div>
+         
+	</div>
+
+</div>
+
+<!--Html for collection list-->

@@ -1,0 +1,27 @@
+/*------------------------------------*\
+ STATIC TEXT BOX COMPONENT  -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.static-text-box)
+ * MAIN HEADING (.static-text-box .heading2)
+ * SUB HEADING (.static-text-box .heading3)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.static-text-box{
+	width: 100%;
+	clear:both;
+
+	.heading2--32f {
+		@include f(30);
+		@include rem('letter-spacing', 3px);
+		@include rem('padding', 0px 0 0);
+		text-align: center;
+		border: none;
+	}
+}
+
+

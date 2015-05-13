@@ -1,0 +1,859 @@
+/*------------------------------------*\
+   WISHLIST -- Desktop CSS
+/*------------------------------------*\
+    WISHLIST -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.wishlist)
+ * HEADING MODULE... For heading i.e.. h2, h3 (.wishlist__title)
+ * PRODUCT DETAIL ROW...... price detail row(.product-detail)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.main-container.wishlist-container {
+    max-width: none;
+    min-height: 633px;
+    min-width: 980px !important;
+    width:auto;
+}
+
+
+.js-productListing {
+    display: inline-block;
+    margin-top: 80px;
+}
+
+
+.wishlist {
+	position: relative;
+ 	width:100%;
+ 	margin:0 auto;
+ 	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	@include rem(padding, 39px 0 0 0);
+	text-align:center;
+
+	.js-request-price {
+		display:inline-block;
+
+		.input-arrow{
+			margin-left:10px;
+			margin-right:5px;
+		}
+		.cta-button__input{
+			float:left;
+		}
+
+
+	}
+	.cta--red-width-30.js-request-price{
+		width:auto;
+	}
+
+	.cta--red-pad-30 {
+				@include rem('padding' ,9px 14px 9px 21px);
+				width:auto;
+			}
+		/*------------------------------------*\
+		    $HEADING CONTAINER
+		\*------------------------------------*/	
+		.wishlist__title {
+			display:block;
+			border: none;
+			@include rem(padding, 0px);
+			@include rem(margin, 0 0 18px 0);
+
+			.heading4 {
+				@include f(24);
+				@include rem(padding, 0px);
+			}
+
+			.heading2 {
+				@include f(30);
+				@include rem(padding, 0px);
+				border: none;
+				@include rem('letter-spacing', 1px);
+				font-weight:normal;
+				text-transform:uppercase;
+			}
+	
+		}
+
+		.wishlist__select {
+
+			.overlap {
+				padding:25px 21%;
+				border-top: 1px solid $primary-17;
+				border-bottom: 1px solid $primary-17;
+				text-align: center;
+				left: -15%;
+			    margin: 20px auto;
+			    min-width: 940px;
+			    overflow-x: hidden;
+			    padding: 25px 3%;
+			    position: absolute;
+			    text-align: center;
+			    width: 1200px;
+
+			}
+
+			.center-align {
+				display: inline-block;
+			}
+
+			.select-label {
+				@include f(11);
+				text-transform: uppercase;
+				@include rem(padding, 0px);
+				@include proxiBold-font();
+				letter-spacing: 0.1em;
+				@include rem(margin, 10px 10px 0px 0px);
+				display: inline-block;
+				float: left;
+			}
+
+			.selector {
+				width: 210px !important;
+				float: left;
+				background-position: -430px -672px;
+				display: inline-block;
+				float: left;
+				height: 28px;
+				line-height: 28px;
+				overflow: hidden;
+				@include rem('padding', 0 0 0 8px);
+				position: relative;
+
+					span {
+	                    background-position: right -573px;
+	                    cursor: pointer;
+	                    display: block;
+	                    @include f(13);
+	                    height: 28px;
+	                    line-height: 28px;
+	                    overflow: hidden;
+	                    @include rem('padding', 1px 0 1px 5px);
+	                    text-align: left;
+	                    text-overflow: ellipsis;
+	                    white-space: nowrap;
+	                    width: 210px !important;
+					}
+
+					select {
+						option {
+							font-size: 13px;
+	    					padding: 0.1rem 0 0.1rem 0.5rem;
+						}
+					}
+
+					.select-1{
+						background: none;
+						border: medium none;
+						display: inline-block;
+						@include f(13);
+						height: 25px;
+						left: 0;
+						opacity: 0;
+						filter: alpha(opacity=0);
+						position: absolute;
+						top: 2px;
+						width: 100%;
+						@include main-font;
+					}
+			}
+
+			.form-select {
+				@include main-font;
+			}
+
+			.label-name {
+				@include proxi-font;
+				display: inline-block;
+				text-align: right;
+				text-transform: uppercase;
+				@include f(13);
+				font-weight: bold;
+			}
+			
+			.edit-field {
+				@include rem(margin, 10px 0px);
+
+				.list-name{
+					@include main-font;
+					display: inline-block;
+					text-align: center;
+					text-transform: capitalize;
+					@include f(13);
+					font-style: italic;
+					@include font-color($primary-10);
+				}
+
+				.edit-title{
+					@include font-color($primary-2);
+					font-style: normal;
+				}
+
+				.form-input{
+					width: 238px;
+					display: inline-block;
+					height: 28px;
+					font-style: normal;
+					color: $primary-2;
+					@include f(11);
+					@include rem('padding', 0 0 0 5px);
+					vertical-align: middle;
+				}
+
+				.form-label{
+					@include brand-font;
+				}
+
+				span.error{
+					text-align: center;
+				}
+
+				.cta--red-width-auto-pad-20 {
+					background: none;
+				}
+			}
+
+			.overlap {
+				.cta--red-width-auto-pad-20 {
+					vertical-align: top;
+					margin: 5px 0px 0px 10px;
+				}
+
+				.delete-list{
+					display: inline-block;
+    				margin: 10px;
+    				vertical-align: top;
+
+	    			.more-button{
+	    				display:table-cell;
+						@include rem('padding' ,0px);
+						font-style: normal;
+						@include proxi-font;
+						text-transform: uppercase;
+						letter-spacing: 0.1em;
+						font-weight: bold;
+						color: $primary-2;
+
+						.arrow-show {
+							@include rem('margin-right', 0px);
+							background-position: -124px -45px;
+    						height: 13px;
+						}
+					}
+    			}
+			}
+
+			.delete-message{
+				@include rem('padding', 9px);
+				@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+				border:1px solid red;
+				text-align:left;
+				@include main-font;
+				@include f(13);
+				width: 980px;
+				margin: 0 auto;
+			}
+
+			.loaderImage{
+				@include rem('margin-top', -43px);
+			}
+			
+			.edit-icon {
+	         	@include setSprite(27px, 29px, -730px, -134px);         
+				display: inline-block;
+				@include rem('height', 15px);
+				@include rem(margin, 0 0 0 5px);
+				border-left:1px solid $primary-8;
+				position:relative;
+				top:-1px;
+	        }
+
+	        .delete-icon {
+	       		@include setSprite(27px, 29px, -623px, -135px);           
+				display: inline-block;
+				@include rem('height', 15px);
+				@include rem(margin, 0 0 0 5px);
+				border-left:1px solid $primary-8;
+				position:relative;
+				top:-1px;
+
+	         }
+
+	        .address-button {
+            	display: table;
+            	height: auto;
+            	width: 50%;
+            	border-bottom:none;
+            	border-top:none;
+            	@include rem(margin, 0px 0 0 20px);
+            	@include rem('padding', 0px);
+            	float: left;
+
+            	.more-button{
+					vertical-align:middle;
+					display:table-cell;
+					@include rem('padding' ,0px);
+					font-style: normal;
+					@include proxi-font;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+					font-weight: bold;
+					color: $primary-2;
+
+					.arrow-show {
+						@include rem('margin-right', 0px);
+					}
+				}
+
+				.col {
+	        		width:auto;
+	        		@include f(20);
+	        		@include proxi-font;
+	        		text-transform: uppercase;
+	        		display: inline-block;
+	        		float: left;
+	        		@include box-sizing(border-box);
+
+	        		.cta-button{
+	        			margin: 0px auto 20px;
+	        		}
+	            }
+
+	        	.col--left{
+	        		text-align: left;
+	        		@include rem('padding-top', 5px);
+
+	        		.cta-button{
+		        		.input-arrow {
+		        			background-position: -124px -44px;
+		        		}
+		        	}
+	        	}
+
+	        	.col--right{
+	        		text-align:right;
+	        		@include rem('margin-left', 10px);
+	        		@include rem('padding-top', 10px);
+	        	}
+			}
+
+			.wishlist-button-print {
+	            color: #A0A0A0;
+	            @include main-font;
+	            @include f(11);
+	            font-style: italic;
+	            font-weight: normal;
+	            letter-spacing: 0.1em;
+	            @include rem(margin, 20px 15px 0 0);
+	            text-transform: none;
+			}
+
+        	.wishlist-button-action {
+                background-position: left 5px;
+                border: 0 none;
+                color: #FFFFFF;
+                display: inline-block;
+                line-height: 1.4;
+                margin-right: 5px;
+                padding-bottom: 0;
+                vertical-align: middle;
+            }
+
+            .wishlist-uppercase {
+                background: url($path-images +'icons/arrows-white.png') no-repeat scroll left 4px transparent;
+                color: $primary-3;
+                letter-spacing: 0.1em;
+                padding-left: 10px;
+            }
+
+            .edit-wrapper {
+            	display:table;
+            	height:107px;
+            	width:100%;
+            	border-bottom:1px solid $primary-2;
+            	@include rem(margin, 0 0 51px 0);
+
+            	.one-half {
+            		width:50%;
+            		@include f(20);
+            		@include bold-font;
+            		text-transform:uppercase;
+            		display: table-cell;
+					vertical-align: middle;
+            	}
+            	.grid--left {
+            		text-align:left;
+            	}
+            }
+		}
+
+
+		/*------------------------------------*\
+	    PRODUCT DETAIL CONTAINER
+
+
+	\*------------------------------------*/
+		.product-wrapper{
+			position: relative;
+			 margin: 60px auto 50px;
+	         width: 980px;
+		}
+
+		.product-detail {
+			display:block;
+			@include f(22);
+			@include main-font;
+			@include rem('padding-top', 18px);
+			@include font-color($primary-2);
+			background: $primary-1; 
+			text-align:center;
+			margin: 0 auto;
+			border: none;
+			@include rem('padding', 18px 0 0);
+			width: 309px;
+			vertical-align: top;
+			display: table-cell;
+
+			.field-content {
+			    text-align: left;
+			}
+
+			h3{
+				@include rem('padding', 0px);
+				@include rem('margin', 0px);
+				@include f(16);
+				font-weight: bold;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				@include proxi-font;
+			}
+
+			.product-detail__variant{
+				display:block;
+				@include f(13);
+				@include main-font;
+				font-style:italic;
+				font-weight:normal;
+				@include rem('margin-bottom', 8px);
+				letter-spacing: 0.1em;
+				line-height: 18px;
+				text-align: left;
+				width: 270px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				padding-right: 10px;
+				margin-right: 23px;
+			}
+			.product-detail__size{
+				display:inline-block;
+				@include f(13);
+				text-transform:uppercase;
+				font-weight:normal;
+				@include rem('margin', 6px 0);
+				@include rem('line-height', 15px);
+				color:$primary-10;
+			}
+			.product-detail__ref{
+				@include f(12);
+				text-transform: uppercase;
+				font-weight: normal;
+				letter-spacing: 0.1em;
+				@include rem('margin-top', 15px)
+			}
+
+			.filter-wrapper{
+				@include rem('margin', 0px);
+				display: block;
+				width: auto;
+				clear: both;
+
+				.selector {
+					float: left;
+					background-position: -430px -672px;
+					display: inline-block;
+					float: left;
+					height: 28px;
+					line-height: 28px;
+					overflow: hidden;
+					@include rem('padding', 0 0 0 8px);
+					position: relative;
+					width: 115px !important;
+
+					span {
+	                    background-position: right -573px;
+	                    cursor: pointer;
+	                    display: block;
+	                    @include f(13);
+	                    height: 28px;
+	                    line-height: 28px;
+	                    overflow: hidden;
+	                    @include rem('padding', 1px 0 1px 5px);
+	                    text-align: left;
+	                    text-overflow: ellipsis;
+	                    white-space: nowrap;
+	                    width: 115px !important;
+					}
+
+					select {
+						option {
+							@include f(13);
+						}
+					}
+				}
+
+				.more-button{
+					display:inline-block;
+					width:auto;
+					@include rem(margin, 0px 45px 0px 0px);
+					text-transform:uppercase;
+					@include f(13);
+				}
+
+				.arrow-show{
+					top:0px;
+				}
+
+				.select-1{
+					background: none repeat scroll 0 0 transparent;
+					border: medium none;
+					display: inline-block;
+					@include f(13);
+					height: 25px;
+					left: 0;
+					opacity: 0;
+					filter: alpha(opacity=0);
+					position: absolute;
+					top: 2px;
+					width: 100%;
+				}
+			}
+
+			.button-wrapper{
+				float: left;
+				text-align: left;
+				@include rem('padding', 11px 0 18px);
+				@include rem('margin', 0px);
+
+				.cta--red-pad-30 {
+					@include rem('margin', 0px);
+				}
+
+				.cta--grey-pad-30 {
+					@include rem('padding', 9px 14px 9px 0px)
+				}
+			}
+
+
+		/*------------------------------------*\
+		    $PRODUCT CONTAINER
+		\*------------------------------------*/
+			.product {
+				display:block;
+				@include rem('padding', 0px);
+				@include rem('margin', 0px);
+				.product__image{
+					display: inline-block;	
+					width:55%;
+					height:220px;
+
+					.image{
+						max-height: 245px;
+	    				max-width: 300px;
+					}
+				}
+
+				.product__price{
+					@include rem('margin', 0px);
+					@include rem('padding', 0px);
+					@include f(14);
+					font-weight: normal;
+					text-transform: uppercase;
+					text-align: center;
+					letter-spacing: 0.1em;
+					display: block;
+					vertical-align: top;
+					text-align: left;
+					width: auto;
+
+					.number-items {
+						display: block;
+						@include f(24);
+					}
+
+					.price-text {
+						display: block;
+						@include rem('margin', 5px 0);
+					}
+
+					.note{
+						@include font-color($primary-10);
+						font-style:italic;
+						@include main-font;
+						@include f(11);
+						text-transform:capitalize;
+						display: block;
+						@include rem('padding' , 0px);
+						@include rem('margin' , 0px 0px 8px 0px); 
+					}
+
+				}
+
+			}
+
+			.more-button {
+				width:15%;
+				vertical-align:middle;
+				display:table-cell;
+				@include rem('padding' ,0px);
+				font-style: normal;
+				@include proxi-font;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+
+				.arrow-show {
+					@include rem('margin-right', 0px);
+				}
+			}
+		}
+
+		.wishlist__separator{
+			height:1px;
+			@include rem('margin', 39px 0 0);
+			background:$primary-2;
+		}
+
+		.wishlist__info-notice {
+			@include rem('padding-bottom', 30px);
+		}
+
+		.button-wrapper {
+			@include rem('padding', 0px);
+
+			.cta--red-pad-30 {
+				@include rem('padding' ,9px 14px 9px 21px);
+				width:auto;
+			}
+
+			.cta--grey-pad-30 {
+				background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				@include rem('padding' ,9px 14px 9px 21px);
+				width:auto;
+			}
+
+			.more-button {
+				font-weight: bold;
+				font-style: normal;
+				@include rem('padding-top', 12px);
+				@include proxi-font;
+			}
+		}
+
+		.message-wrapper {
+			text-align:left;
+			@include rem('padding', 18px 0 0 0);
+			background: none;
+			border: none;
+
+			.form-label {
+				@include f(12);
+				text-transform:uppercase;
+				@include rem('padding' ,0 0 5px);
+				font-weight: bold;
+				@include rem('letter-spacing', 1px);
+				@include rem('margin' ,0px);
+			}
+
+			.form-textarea {
+				background: $primary-16;
+				resize: none;
+				height: 180px;
+				@include f(11);
+				@include rem('padding', 0px);
+				@include font-color($primary-2);
+				width: 100%;
+			}
+		}
+
+		.cta--red-width-auto-pad-20{
+    		@include rem(padding, 2px 5px);
+		}
+
+		.wishlist-close {
+			@include setSprite(30px, 30px, -629px, -123px);           
+			@include font-color($primary-2);
+			display : block;
+			position: absolute;
+			right: 0;
+			cursor: pointer;
+		}
+
+	.wishlist-product-line {
+		
+	    background: linear-gradient(315deg, #000000 73%, #010000 0%, #460000 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	    border: 1px solid $primary-11;
+	    @include font-color($primary-2);
+	    display: block;
+	    @include main-font();
+	    @include f(22);
+	    margin: 0 auto;
+	    text-align: center;
+	    cursor: move;
+
+	    .wishlist-move {
+	        height: 17px;
+	        left: 5px;
+	        position: absolute;
+	        top: 5px;
+	        width: 17px;
+	    }
+
+	    .wishlist-col-1 {
+	        margin-right: 20px;
+	        width: 640px;
+	        float: left;
+	        border-right: 1px dotted $primary-40;
+	        min-height: 269px;
+	    }
+
+	    .wishlist-product-image {
+	        text-align: center;
+	        width: 330px;
+	       /* “ DATE 01-10-2014 | image stretching issue | BRANCH Develop”  
+		 `	START 
+		   */
+			
+
+	        vertical-align:middle;
+	      /*  END */
+	        display:table-cell;
+
+
+	        img.image{
+	            @include box-sizing(border-box);
+			    height: auto;
+			    
+			    @include rem('padding', 10px);
+			    text-align: center;
+			    width: auto;
+			    /* “ DATE 01-10-2014 | image stretching issue | BRANCH Develop”  
+		 			START 
+		  		*/
+			    @include rem('max-width',278px);
+			    @include rem('max-height',252px);
+			    /*END*/
+	        }
+		}
+
+		.wishlist-col-2 {
+	 		text-align: center;
+	    	width: 299px;
+	    	float:left;
+
+	        .button-wrapper{
+	    		margin-top: 0px;
+	    		.loaderImage {
+	    			@include rem('margin-left',33px);
+	    		}
+	    		.show-text {
+	    			@include f(12);
+	    			@include rem('margin-left',65px);
+	    		}
+	    	}
+		}
+
+		.heading3{
+			@include f(16);
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: $primary-3;
+		}
+	}
+
+	.item-list {
+		@include rem('margin-bottom', 15px);
+		.account-links {
+			li {
+			    border: 0 none;
+			    color: $primary-2;
+			    font-size: 11px;
+			    font-weight: bold;
+			    letter-spacing: 0.1em;
+			    list-style-image: none;
+			    list-style-type: none;
+			    margin: 0;
+			    padding-top: 10px;
+			    text-align: center;
+			    text-transform: none;
+
+			    a:link, a:visited {
+		    		color: #a0a0a0;
+		    		text-decoration: none;
+			    }
+
+			    a:hover, a:active {
+ 				   color: #ffffff;
+    			   text-decoration: none;
+				}				
+		    }
+		}
+	}
+
+	.edit-wishlist-name-anonymous{
+		padding: 15px 0;
+		width: 980px;
+		text-align: left;
+		margin: 0 auto;
+
+		.delete-wishlist{
+			display: inline-block;
+
+			a.more-button {
+				color: $primary-2;
+				font-style: normal;
+				font-weight: bold;
+				text-transform: uppercase;
+				@include f(11);
+				@include proxi-font;
+				font-weight: bold;
+				letter-spacing: 0.1em;
+
+				span.arrow-show{
+					width: 10px;
+					background-position: -124px -45px;
+    				height: 13px;
+				}
+			}
+		}
+	}
+
+	.zero-items-error{
+		margin: 15px auto;
+    	text-align: left;
+    	width: 980px;
+    	letter-spacing: 0.1em;
+    	text-transform: uppercase;
+    	@include proxiBold-font;
+    	@include f(16);
+	}
+
+	.copy-to-wishlist {
+		.single-line {
+			.cta-button {
+				right: 85px;
+			}
+		}
+	}
+
+}
+
+
+

@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    BILLING ADDRESS -- Desktop CSS
+\*------------------------------------*/
+
+.my-billing-address-content-wrapper,.my-shipping-address-content-wrapper{
+
+	.main-content{
+		.heading__desc{
+			border:none;
+			@include rem('padding-bottom', 20px);
+		}
+
+		.conf{
+			text-align:center;
+			@include rem(margin-top,15px);
+				.edit-footer {
+					background: none;
+					border:none;
+					margin : 0 auto;
+					width : 84.5%;
+					.edit-footer__address {
+						 @include proxi-font();
+						 margin: 0px;
+						 @include f(12);
+						 .billing-address-heading {
+						 	 @include f(12);
+						 	font-weight: bold;
+						 	@include rem('margin-bottom',10px);
+						 	text-transform: uppercase;
+						 	@include rem('letter-spacing',2px);
+						 	@include rem('line-height',17px);
+
+						 }
+					.address {
+						font-style: normal;
+						display : block;
+						 @include f(12);
+						 @include rem('line-height', 20px);
+						 @include main-font;
+						span {
+							@include f(12);
+							@include proxi-font;
+							text-transform: uppercase;
+							@include rem('margin', 0px);
+							@include rem('padding', 0px);
+							@include rem('padding-bottom', 5px);
+						}
+					}
+				}
+		}
+		}
+
+		.edit-footer__edit{
+			@include proxi-font();
+			padding: 0px;
+			color: #a0a0a0;
+			font-size: 11px;
+			width: 100%;
+			margin: 0 auto;
+			border-top: 1px solid #83464b;
+			letter-spacing: .1em;
+			@include rem('line-height',30px);
+			.replace-link{
+			text-transform:  uppercase;
+			}
+
+			.edit-link{
+				text-transform:  uppercase;
+			}
+			a {
+				float: left;
+			}
+			.edit-icon {
+				display: inline-block;
+			}
+			.replace-icon {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.my-billing-address-content-wrapper{
+
+	border-bottom:1px solid $primary-79;	
+	@include rem('padding-bottom', 30px);
+
+	.main-content{
+		border-bottom:1px sloid white;
+	}
+}

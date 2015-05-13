@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    MY ORDERS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..... main container(.my-orders)
+ * ORDER DETAIL BLOCK..... order detail block(.my-orders__detail)
+ * BREADCRUMB..... breadcrumb block(.breadcrumb)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.my-orders{
+	display: block;
+	margin: 0 auto; 
+	width: 81.25%;
+	@include font-color($primary-2);
+	border-bottom:1px solid $primary-2;	
+	.heading2{
+		@include f(28);
+		@include rem(padding, 20px 0 23px);
+	}
+	.heading3{
+		@include medium-font;
+		@include f(28);
+		@include rem(padding, 26px 0 46px);
+	}
+
+	/*------------------------------------*\
+    	$ORDER DETAIL BLOCK
+	\*------------------------------------*/
+
+	.my-orders__detail{
+		@include rem('margin', 0 0 30px 0);
+		width:100%;
+		.order-block{
+			display:block;
+			@include f(20);
+			@include main-font;
+			@include font-color($primary-2);
+			border: 1px solid $primary-11;
+			background: $primary-1; /* Old browsers */
+			text-align:center;
+			@include rem('padding', 25px 30px);
+			@include linear-gradient(-45deg, #000000 60%, #010000 0%, #460000 100%);
+			@include font-color($primary-3);
+			.order-block__details{
+				@include bold-font;
+				text-transform:uppercase;
+				@include font-color($primary-2);
+				@include rem('padding', 0 0 33px 0);
+				text-align:center;
+			}
+
+			h3{
+				@include f(20);
+			}
+
+			.order-block__more{
+				@include rem('padding', 32px 0 0 0);
+				text-align:left;
+				@include font-color($primary-3);
+				.more-button{
+					text-transform:uppercase;
+					@include bold-font;
+					@include f(18);
+					@include rem('padding', 0px);
+				}
+				.arrow-show{
+					top:0;
+					margin-right: 1.2rem;
+				}
+			}
+			.listing{
+				@include set-ulFix;
+				li{
+					text-align:left;
+					@include f(18);
+					text-transform:capitalize;
+					line-height:24px;
+				}
+			}
+		}
+	}
+	.grid__item{
+		@include rem('padding', 0px);
+	}
+}
+
+/*------------------------------------*\
+    	$BREADCRUMB
+\*------------------------------------*/
+
+/*.breadcrumb{
+	border-top:1px solid $primary-2;
+	.heading3{
+		@include f(18);
+	}
+	li{
+		@include rem(padding,36px 0 43px);
+		span{
+			bottom:-1px;
+			left:49%;
+		}
+	}
+}*/
+

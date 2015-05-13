@@ -1,0 +1,19 @@
+<!-- Redirection Starts Here-->
+<div class="redirection">
+	<div class="content">
+		  <a class="cross-button js-redirection-close">close</a>
+		  <p>You are currently on the <a href="http://www.cartier.com">http://www.cartier.com</a> international site.</p>
+		  <p>YOur browser settings indicate that you are in France. Do you wish to be redirected to <a href="http://www.cartier.fr">http://www.cartier.fr</a> ? </p>
+		  <div class="action-button">
+				<!--#set var="arrow-class" value="arrow-show" -->
+				<!--#set var="more-text" value="yes" -->
+				<!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+				<!--#set var="arrow-class" value="arrow-show" -->
+				<!--#set var="cta-class" value="js-redirection-close" -->
+				<!--#set var="more-text" value="no" -->
+				<!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+		  </div>
+	</div>
+</div>
+
+<!-- Redirection  Ends Here-->

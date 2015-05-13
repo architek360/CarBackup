@@ -1,0 +1,33 @@
+<div class="main-container">
+
+	<!--#if expr="${COMP_1}" -->
+	<!--#include virtual="../includes/components/${COMP_1}/html.shtml" -->
+	<!--#endif -->
+
+
+	<!--#if expr="${COMP_2}" -->
+		<!--#include virtual="../includes/components/${COMP_2}/html.shtml" -->
+	<!--#endif -->
+	
+	<!--#if expr="${COMP_4}" -->
+			<!--#include virtual="../includes/components/${COMP_4}/html.shtml" -->
+	<!--#endif -->
+
+	<!--#if expr="${VIEWS_1}" -->
+		<!--#if expr="${DEVICE} = 'mobile'"  -->
+			<!--#include virtual="../includes/views/${VIEWS_1}/html.shtml" -->
+		<!--#else-->
+			<!--#include virtual="../includes/views/${VIEWS_1}/desktop.shtml" -->
+		<!--#endif -->
+	<!--#endif -->
+
+	
+
+	<!--#if expr="${VIEWS_2}" -->
+			<!--#include virtual="../includes/views/${VIEWS_2}/html.shtml" -->
+	<!--#endif -->
+	
+	<!--#if expr="${COMP_3}" -->
+			<!--#include virtual="../includes/components/${COMP_3}/html.shtml" -->
+	<!--#endif -->
+</div>

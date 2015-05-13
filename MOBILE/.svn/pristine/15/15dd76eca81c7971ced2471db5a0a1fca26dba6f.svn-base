@@ -1,0 +1,22 @@
+<div class="tooltip-div js-tool-tip">
+	<a href="<!--#echo var="links-to" -->" class="tooltip">
+		<img src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var="img-src" -->"/>
+
+
+	
+		<div class='js-tool-tip-detail tool-tip-details-wrapper'>
+			<img class="callout" alt="CSS Tooltip callout" src="<!--#echo var="ICON_IMG_PATH" -->bottom-arrow.png">
+			
+			<div class="tool-tip-details">
+				<p>
+				The repair number must be seven characters with no spaces.
+				Please refer to your receipt or to the Service Order email your
+				received.
+				</p>
+				<p>Tel: +852 8105 5008</p>
+				<p>Email : repairservice.us@cartier.com</p>
+
+			</div>
+		</div>
+	</a>
+</div>

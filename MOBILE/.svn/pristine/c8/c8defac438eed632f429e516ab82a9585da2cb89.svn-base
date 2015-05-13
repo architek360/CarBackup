@@ -1,0 +1,43 @@
+<!-- Billing Payment Block Starts Here-->
+<div class="billing-wrapper js-form-validator">
+
+    <!-- Billing Payment Text-->
+    <div class="billing-payment js-billing">
+      <h1 class="heading2">proceed to payment</h1>
+        <p class="billing-payment__desc">Please note that person who submits the order must be the cardholder whose  name appears on the credit card.
+        </p>
+
+        <p class="billing-payment__desc top-margin full-width">This is a secure 128-bit SSL, encrypted payment. 128-bit SSL encrypted payment.<br/><br/> Cartier does not save your payment details for future orders.
+        </p>
+
+        <div class="billing-payment__total ">
+            <span class="total">total</span>
+            <span class="price">$ 5,540.00</span>
+        </div>
+    </div>
+    <form >
+        <input name="radio-tab" value="" type="hidden" class="radiotab-hidden">
+        <input name="guest-create" value="false" type="hidden" class="js-guest-create">
+        <input type='hidden' name='billingCheckInvoice' value='' class='js-billing-checkinvoice'>
+
+        <!-- Tab Container-->
+        <!--#set var="input-name" value="fn_cardpayment" -->
+        <!--#set var="head-label-name" value="" -->
+        <!--#set var="radio-text1" value="card" -->
+        <!--#set var="radio-value1" value="js-card" -->
+        <!--#set var="radio-tab-text1" value="Card Payment" -->
+        <!--#set var="radio-text2" value="bank" -->
+        <!--#set var="radio-value2" value="js-bank" -->
+        <!--#set var="radio-tab-text2" value="Bank Transfer" -->
+        <!--#set var="radio-text3" value="cash" -->
+        <!--#set var="radio-value3" value="js-cash" -->
+        <!--#set var="radio-tab-text3" value="Cash On Delivery" -->
+
+
+        <!--#set var="tab_content_1" value="tab_card_payment" --> 
+        <!--#set var="tab_content_2" value="tab_bank_transfer" --> 
+        <!--#set var="tab_content_3" value="tab_cash_on_delivery" --> 
+        <!--#include virtual="../../components/tabs2/html.shtml" -->
+    </form>
+</div>
+ <!-- Billing Payment Block Ends Here-->

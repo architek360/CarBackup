@@ -1,0 +1,17 @@
+<input 
+
+type="<!--#echo var="input-type" -->" 
+name="<!--#echo var="input-name" -->" 
+class="<!--#echo var="input-prop" --> "
+
+"<!--#if expr="${input-placeholder}" -->"
+
+	placeholder="<!--#echo var="input-placeholder" -->"
+
+"<!--#endif -->"
+
+  />
+
+
+
+

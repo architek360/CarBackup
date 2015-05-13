@@ -1,0 +1,120 @@
+  <!-- Review Order  Starts Here-->
+
+    <!--#include virtual="../../components/progress_bar/desktop.shtml" -->
+    <div class="grid__item three-quarters">
+        <div class="order-review-section-left">
+            <h1 class="order-review__title">
+               Verify your order
+            </h1>
+            <p class="heading__desc">Please verify your order information before proceeding to payment</p>
+            
+            <div class="separator_line"></div>
+
+
+            <!--#set var="product_size" value="on" -->
+            
+            <!--Product Detail Box For Review Order Starts Here-->
+            <div class="product-detail grid clearfix">
+                <div class="product__image one-quarter">
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->W69011Z4_0_cartier_watches.png" class="image" alt=""/>
+                </div>
+                <div class="product-description one-quarter">
+                    <h3 class="heading3">panthere ring</h3>
+                    <span class="product-detail__variant">Yellow gold, tsavorite, lacquer</span>
+                    <span class="product-detail__size">ref: HPI00480 </br> 
+                        <!--#if expr="${product_size}=on" -->
+                    SIZE: 47
+                    <!--#endif -->
+                    </span>
+                </div>
+                <div class="product__price one-quarter">
+                    <p>
+                        <span class="grey-text">1 x $ 5,540</span>
+                        <span class="price-text">$ 5,540</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="separator_line"></div>
+
+            <!-- Product Detail Box For Review Order Ends Here-->
+
+            <div class="order-review-price-detail grid clearfix">
+                <!--#set var="sales_tax" value="on" -->
+                <!--#set var="subtotal" value="cartier_desktop" -->
+                <!--#include virtual="../../views/price_details/desktop.shtml" -->
+
+                <div class="separator_line grid clearfix"></div>
+
+                <div class="guest-verify grid clearfix">
+                   <h3 class="heading3">
+                      Light Account Creation
+                   </h3>
+                   <p class="message">
+                      I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address. I do not want to receive an invoice to the billing address.
+                   </p>
+                   <div class="form-element checkbox-wrapper termsCondition">
+                      
+                      <!--#set var="checkbox-value" value="value" -->
+                      <!--#set var="checkbox-label-name" value="I do not want to receive an invoice to the billing address." -->
+                      <!--#set var="checkbox-name" value="fn_chkinvoice" -->
+
+                      <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+                      
+                   </div>
+                </div>
+
+                <div class="order-review__confirm clearfix">
+                    <!--#set var="text-detail" value="confirm and place order" -->
+                    <!--#set var="cta--varaint" value="cta--red js-orderack-confirm" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__item one-quarter shopping-bag-rt-col">
+        <div class="order-review-section-right">
+            <div class="billing-address">    
+                <div class="address-button">
+                    <span>billing address</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/billing_address/desktop.shtml" -->
+
+            <div class="shipping-address">    
+                <div class="address-button">
+                    <span>shipping address</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/shipping_address/desktop.shtml" -->
+
+            
+            <div class="shipping-address">    
+                <div class="address-button">
+                    <span>Boutique Pickup</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/boutique_pickup_address/desktop.shtml" -->
+
+
+            <div class="delivery-method">    
+                <div class="address-button">
+                    <span>delivery method</span>
+                   <a href="#" class="edit-link">edit <span class="edit-icon"></span></a>
+                   <a href="#" class="replace-link">replace <span class="replace-icon"></span> </a>
+                </div>
+            </div> 
+            <!--#include virtual="../../components/delivery_method/desktop.shtml" -->
+        </div>
+    </div>
+    <div class="order-review__info-notice clearfix">
+        <p>Please note that engraved Cartier products cannot be returned to Cartier for exchange or refund.</p>
+    </div>
+
+ <!-- review order Ends Here-->

@@ -1,0 +1,5 @@
+<div class="column <!--#echo var="colclass" --> grid__item">
+    <!--#if expr="${content}" -->
+        <!--#include virtual="${content}" -->
+    <!--#endif -->
+</div>

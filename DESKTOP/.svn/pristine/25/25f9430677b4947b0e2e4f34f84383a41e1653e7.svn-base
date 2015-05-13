@@ -1,0 +1,15 @@
+<!--Html for collection list -->
+			
+		<div class="product-push">
+			<a href="#" class="tappable"> </a>
+			<a href="<!--#echo var="links-to" -->" class="<!--#echo var="class-name" -->">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="img-src" -->"/>
+			</a>
+			<div class="product-push__desc ">
+					<h3 class="heading3"><!--#echo var="product-title" --></h3>
+		            <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+			</div>
+		
+		</div>
+
+<!--Html for collection list-->

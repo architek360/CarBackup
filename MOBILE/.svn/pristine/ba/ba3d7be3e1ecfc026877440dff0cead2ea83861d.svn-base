@@ -1,0 +1,60 @@
+<!-- bridal view  Starts Here-->
+<div class="bridal-home">
+    <img  class="bridal-home__bg-image" src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_bg.png">
+    <div class="comp-rich-text">
+
+        <div class="bridal-home__desc clearfix ">
+           
+                <div class="bridal-home__desc__img">
+                    <img   src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_home_heading.png">
+                </div>
+                <p class="bridal-home__desc_text"> 
+                    In the great jewellery tradition, Cartier offers a service that can meet your dreams.
+                </p>
+                <p class="bridal-home__desc_text">
+                   Choose the design of ring you want and the diamond to illuminate it. 
+                    
+                </p>
+                
+                <p class="bridal-home__desc_text">
+                    Let this exclusive service guide you as you move towards a uniquely emotional moment.
+                </p>
+                <h3 class="bridal-home__desc_heading">create your very own  cartier solitaire </h3>
+           
+                <div class="bridal-home__desc__link">
+                           <!--#set var="text-detail" value="proceed to checkout checkoutcheckoutcheckout" -->
+        <!--#set var="cta--varaint" value="cta--red-width-auto" -->
+        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+          
+            
+        </div>
+
+        <!--<h2 class="bridal-home__qa">Quick Access</h2> -->
+    </div>
+    <div class="bridal-expertise">
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_expertise.jpg">
+            <div class="bridal-expertise__desc">
+                <h1 class="heading2">Expertise</h1>
+                <!--#set var="arrow-class" value="arrow-show" -->
+                <!--#set var="more-text" value="know more" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </div>
+    </div>   
+    
+    <li class="grid__item one-whole palm--one-whole">
+<div class="welcome-pushes">
+    <div class="grid push-block clearfix">
+      <div class="grid__item two-thirds palm--two-thirds push-col">
+       
+             <img src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_expertise.jpg">
+      </div>
+      <div class="grid__item one-third palm--one-third push-col">
+        <a class="text-link" href="/en-us/testbridal/1.html">1</a>
+      </div>
+    </div>
+</div></li>  
+ 
+</div>
+        
+<!-- bridal vien Ends Here-->

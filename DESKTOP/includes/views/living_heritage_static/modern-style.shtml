@@ -1,0 +1,138 @@
+<div class="row grid pb164">
+    <div class="column grid__item two-fifths">
+        <div class="row grid">
+            <div class="column grid__item one-whole nomargin">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}modern_style_head.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole nomargin">
+                <p class="border-wrapped bold">
+                At the start of the 20th century, the success of the Garland style did not stop Louis Cartier and his designers from taking their first steps into the unknown – geometric styling. Together with daring color combinations, such as blue and green, it made him a forerunner of the Art Deco movement.
+                With his talent for clean lines, Cartier soon stepped across the divide between styling and purely abstract geometry. In the following decades, he led people away from figurative jewelry to pieces that were pure architecture.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="column grid__item three-fifths ">
+        <div class="row grid firstrow">
+            <div class="column grid__item one-whole nomargin image">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}brooch.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole nomargin align-right">
+                <h2>BROOCH</h2>
+                <h3>CARTIER PARIS, 1908</h3>
+                <p>
+                Platinum, single-cut diamonds, faceted and calibré-cut<br/> sapphires, natural pearls.
+                </p>
+                <p class="productdata">
+                Diameter: 5.33 cm
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row grid row2 pb59">
+    <div class="column grid__item one-half ">
+        <div class="column grid__item one-half text ">
+            <h2>BROOCH</h2>
+            <h3>CARTIER PARIS, 1913</h3>
+            <p>
+            Platinum, round old-cut diamonds, one triangular beveled 11.90 carat emerald, emerald cabochons and drop-shaped emeralds, natural pearls, onyx.<br><br>This brooch was exhibited in the <i>Collection of Jewels Created by Messrs Cartier from the Hindoo, Persian, Arab, Russian and Chinese</i> at Cartier New York in November 1913.
+            </p>
+            <p class="productdata">
+            9.7 x 3.6 cm
+            </p>
+        </div>
+        <div class="column grid__item one-half ">
+            <!--#set var="imgclass" value="right margin20" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}brooch2.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+    <div class="column grid__item one-half">
+        <div class="column grid__item one-half text text2">
+            <h2>FRUIT BOWL BROOCH</h2>
+            <h3>CARTIER PARIS, 1925</h3>
+            <p>
+            Platinum, yellow gold, pear-, lozenge-shaped and square single- and baguette-cut diamonds, one emerald cabochon and two ruby cabochons, onyx, black enamel.<br><br>Sold to Mrs. William K. Vanderbilt.
+            </p>
+            <p class="productdata">
+            5.21 x 3.40 x 1.0 cm
+            </p>
+        </div>
+        <div class="column grid__item one-half ">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}fruit_bowl.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+</div>
+<div class="row grid pb89">
+    <div class="column grid__item one-half w489 fleft">
+        <div class="column grid__item one-half w210">
+            <h2>BRACELET</h2>
+            <h3>CARTIER PARIS, 1930</h3>
+            <p>
+            Platinum, baguette-, round old- and single-cut diamonds, thirty rock crystal half-disks and sixty rock crystal beads.<br><br>Sold to Gloria Swanson (1897-1983), American actress. The flexible and dazzling bracelets that she bought from Cartier are not only part of the history of jewelry but also part of the history of the movies, since she wore them in at least two films: <i>Perfect Understanding</i> (1932) and <i>Sunset Boulevard</i> (1950).
+            </p>
+            <p class="productdata">
+            Diameter: 7.85 cm
+            </p>
+        </div>
+        <div class="column grid__item one-half w260 fright">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}bracelet.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+    <div class="column grid__item one-half w440 fright ">
+        <div class="column grid__item one-half w183">
+            <h2>BRACELET</h2>
+            <h3>CARTIER PARIS, 1930</h3>
+            <p>
+            Platinum, round old- and single-cut diamonds, forty-seven rock crystal half-disks<br><br>Sold to Gloria Swanson (1897-1983), American actress.
+            </p>
+            <p class="productdata">
+            Diameter: 7.05 cm
+        </p>        </div>
+        <div class="column grid__item one-half w252 fright">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}bracelet2.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+</div>
+<div class="row grid">
+    <div class="column grid__item one-half ">
+        <div class="column grid__item one-whole nomargin">
+            <h2>TIARA</h2>
+            <h3>CARTIER PARIS, 1937</h3>
+            <p>
+            Yellow gold, platinum, round old- and baguette-cut diamonds, one large octagonal emerald-cut 62.35 carat dark citrine, calibré- and baguette-cut citrines, one hexagonal citrine.<br><br>The central motif can be detached from the tiara and worn as a brooch, pointing downward.
+            </p>
+            <p class="productdata">
+                Diameter 17.0 cm; clip-brooch 5.8 x 4.7 cm
+            </p>
+        </div>
+        <div class="column grid__item one-whole nomargin">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}tiara.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+    <div class="column grid__item one-half mr21 w422 fright">
+        <div class="column grid__item one-whole nomargin">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}gloria_swanson.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+        <div class="column grid__item one-whole nomargin">
+            <p>
+            Gloria Swanson wearing her two diamond and rock crystal bracelets created by Cartier Paris in 1930.<br><br>Cartier Archives © Cartier
+            </p>
+        </div>
+    </div>
+</div>

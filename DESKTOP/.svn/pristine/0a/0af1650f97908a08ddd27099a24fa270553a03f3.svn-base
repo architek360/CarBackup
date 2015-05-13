@@ -1,0 +1,23 @@
+ <!--Billing FORM Block Starts Here-->
+<div class="billing-form-japan grid js-form-validator js-billing js-data-formdisplay" data-formdisplay="false">
+
+    <div class="grid__item three-quarters">
+        <div class="billing-address-form-japan">
+          <form>
+            <!--#include virtual="../../components/billing_form_japan/desktop.shtml" -->
+
+            <div class='js-billing-section-two display-none'>
+                <!--#include virtual="../../components/billing_confirmation/desktop.shtml" -->
+            </div>
+
+          </form>
+        </div>
+    </div>
+    <div class="grid__item one-quarter shopping-bag-rt-col"> 
+        <div class="price-details-bg">
+            <!--#include virtual="../../views/price_details/desktop.shtml" -->    
+        </div>
+        <!--#include virtual="../../views/return-exchange/desktop.shtml" --> 
+    </div>
+</div>
+ <!-- Billing FORM Block Ends Here-->

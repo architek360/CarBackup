@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/** 
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*$primary-88     : #472021;*/
+/*$primary-89		: #6D3536;*/
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/* line 54, ../../../../../../includes/components/message_card_desc/_desktop.scss */
+/* line 26, ../../../../../../sass/country_specific/eu.scss */
+.shopping_bag .personal-card .logo_section {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/cartier-preview-card.jpg") no-repeat 0 0;
+  height: 249px;
+  width: 320px;
+  padding: 54px 36px;
+}
+
+/* line 34, ../../../../../../sass/country_specific/eu.scss */
+.shopping_bag .personal-card .logo_section .preview {
+  font-family: Kuenstler Script W01 Medium,sans-serif;
+}
+
+/* line 38, ../../../../../../sass/country_specific/eu.scss */
+.shopping_bag .personal-card .logo_section .preview.cursive-class {
+  font-family: Corsiva W01,sans-serif;
+}

@@ -1,0 +1,35 @@
+<div class="do-you-own">
+	<!--#set var="input-name" value="fn_productline" -->
+	<!--#set var="select-label-name" value="Product Line" -->
+	<!--#set var="option-component" value="expert_section_option" -->
+
+	<!--#include virtual="../../components/form_elements/desktop_select.shtml" -->
+
+	<!--#set var="input-name" value="fn_collection" -->
+	<!--#set var="select-label-name" value="Collection" -->
+	<!--#set var="option-component" value="expert_section_option" -->
+
+	<!--#include virtual="../../components/form_elements/desktop_select.shtml" -->
+
+
+	<!--#set var="input-name" value="fn_locofpurc" -->
+	<!--#set var="select-label-name" value="Location of Purchase" -->
+	<!--#set var="option-component" value="expert_section_option" -->
+
+	<!--#include virtual="../../components/form_elements/desktop_select.shtml" -->
+
+	<div class="add-button">
+		<a href="#">Add this creation</a>
+	</div>
+	<label for="fn_grpdoyouown" class="form-label">My cartier creations</label>
+	<div class="add-creation">
+		<div class="added-creation__name"> love3</div>
+		<span class="cross-button"> <input type="hidden" value="jewelry3,love,retailer " name="fn_doyouownproducts"></span>
+	</div>
+	<div class="add-creation">
+		<div class="added-creation__name"> love3</div>
+		<span class="cross-button"> <input type="hidden" value="jewelry3,love,retailer " name="fn_doyouownproducts"></span>
+	</div>
+</div>
+
+

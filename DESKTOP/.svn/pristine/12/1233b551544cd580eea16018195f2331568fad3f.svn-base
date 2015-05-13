@@ -1,0 +1,206 @@
+/*------------------------------------*\
+    Boutique-List with map -- Desktop CSS
+\*------------------------------------*/
+ /*           &:nth-child(n+99){
+                font-size: 11px;
+            } */
+.js-boutique-map .main-container{
+    @include rem(min-height, 400px);
+}
+.boutique-list-wrapper.boutique-map{
+    counter-reset: store;
+    .store-list__retailer{
+        display: block;
+    }
+    .store-locator__view-more{
+        z-index: 999;
+        position:absolute;
+        bottom: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        .bg{
+            background:$primary-1;
+            margin: 0 auto;
+            height: 25px;
+            display: block;
+            width: 100px;
+            position: absolute;
+            left: 146px;
+            top: -6px;
+            &:after{
+                @include setSpriteDesktop(13px, 13px, -25px, -370px, transparent);
+            }
+        }
+        .down-arrow{
+            @include setSpriteDesktop(13px, 13px, -26px, -370px, transparent);
+            position: absolute;
+            display: block;
+            left: 191px;
+            top: 8px;
+        }
+    }
+    .list{
+        position:relative;
+        z-index: 0;
+    }
+    .google_maps_wrapper, .js-map{
+        @include rem(height, 595px);
+        width: 100%;
+    }
+    .boutique-list-detail-wrapper{
+        overflow: visible;
+        @include rem(height, 595px);
+        @include rem(font-size, 12px);
+        background:  $primary-1;
+        color:$primary-48;
+    }
+    .js-store-list{
+        @include rem(padding-top, 15px);
+    }
+    .store-detail.js-store-detail{
+        padding: 0;
+        border: none;
+    }
+    .retailerHeading{
+        display: none;
+        @include rem(font-size, 12px);
+        @include rem(margin, 0 0 40px 0);
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
+    .boutique{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    .store-detail{
+        position: relative;
+        @include rem(margin-left, 16px);
+    }
+
+   .more-link a.show-map{
+        font-weight: 900;
+        color: $primary-1;
+        text-align: center;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: $primary-font-2;
+        background: url($path-images + 'icons/marker.png') no-repeat left top;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 36px;
+        width: 26px;
+    }
+    .store-detail__title, .image-text img{
+        margin: 0;
+        @include rem(margin-left, 41px);
+    }
+    .store-detail__title{
+        @include rem(margin-bottom , 17px);
+        padding: 0;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-size: 12px !important;
+        font-weight: bold;
+        font-style: normal;
+        color: $primary-2;
+        width: 40%;
+        display: inline-block;
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+    .image-text__details{
+         @include rem(padding-left , 16px);
+         line-height: 1.2em;
+         display: inline-block;
+         @include rem('width', 200px);
+         min-height: 70px;
+    }
+    .boutique_details__con .arrow-red{
+        display: none;
+    }
+    .more-link{
+        font-style: italic;
+        text-align: left;
+        color: $primary-3;
+        @include  transition-full(color, 0.2s, ease-in-out);
+        @include rem('padding',2px 10px 2px 0px );
+        &:hover{
+            color: $primary-2;
+        }
+        .read-more{
+            padding-left: 1px;
+			@include main-font;
+        }
+        .arrow-red{
+            top:0;
+            position:static;
+            width: auto;
+            height: auto;
+            display: inline;
+            @include setSpriteDesktop(10px, 5px, -431px, -62px, transparent)
+        }
+    }
+    .show-map {
+        counter-increment: store;      /* Increment the section counter */
+        &:after{
+            content: counter(store) " "; /* Display the counter */
+        }
+        &:nth-child(n+99){
+            font-size: 11px;
+        }
+        .arrow-red{
+            display: none;
+        }
+    }
+    .store-list__retailer{
+        .more-link a.show-map{
+            background-position:left bottom;
+        }
+        .image-text,  .service-detail{
+            float: left;
+            width: 50%;
+            padding-left: 7%;
+        }
+        .service-detail{
+            color: $primary-6;
+            letter-spacing: 0.2em;
+            width: 30%;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding-left: 3%;
+            @include rem(font-size, 9px);
+            @include proxi-font;
+            @include rem(line-height, 14px);
+            float: right;
+            width: 34%;
+            margin-top: -34px;
+            color: #7F7F7F;
+        }
+        .store-detail_bold{
+            font-weight: bold;
+            @include rem(font-size, 10px);
+            letter-spacing: 0.2em;
+        }
+
+        .store-detail__title {
+            width: 54%;
+        }
+    }
+    .store-list__boutique {
+         .store-detail__title {
+            width: 90%;
+        }
+    }
+}

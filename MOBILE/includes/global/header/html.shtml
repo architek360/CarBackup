@@ -1,0 +1,91 @@
+<!-- Top Navigation Starts Here-->
+<!--#include virtual="../../components/redirection/desktop.shtml" -->
+<header class="top-nav clearfix">
+
+    <!--#if expr="${form_type}=billing-address"-->
+        <div class="billing-header">
+            <ul class="top-icons">
+                <li class="back-icon">
+                    <a href="../index.html" title="Site Logo">
+                        <img src="<!--#echo var="ICON_IMG_PATH" -->carticon.png" >
+                    </a>
+                </li>
+                <li>
+                    <!--#if expr="${THEME_1}=/main_theme/" -->
+                     <!--#set var="logo" value="logo.png" -->
+                                   
+                    <!--#else-->
+                            <!--#set var="logo" 
+                            value="logo_red.png" -->
+                    <!--#endif -->
+                    <a href="../index.html" class="top-nav__logo" title="Site Logo"><img 
+                        src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var="logo" -->"></a>
+                </li>
+            </ul>
+        </div>
+
+    <!--#else -->
+    <div class="top-nav__menu">
+      <button class="toggleMenu">Menu</button>
+    </div> 
+    <!--#if expr="${THEME_1}=/main_theme/" -->
+                             <!--#set var="logo" value="logo.png" -->
+                   
+    <!--#else-->
+            <!--#set var="logo" 
+            value="logo_red.png" -->
+    <!--#endif -->
+    <a href="../index.html" class="top-nav__logo" title="Site Logo"><img 
+        src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var="logo" -->" alt="logo"></a>
+
+      
+    <nav class="top-nav__main-nav" role="navigation">
+        <ul class="top-nav_main-nav__list">
+
+            <li>
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="" -->
+                    <!--#set var="img-alt" value="Call Us" -->
+                    <!--#if expr="${THEME_1}=/main_theme/" -->
+                             <!--#set var="img-src" 
+                             value="../etc/designs/dmp/clientlibs_base/images/icons/phone-icon.png" -->
+                   
+                    <!--#else-->
+                            <!--#set var="img-src" 
+                            value="../etc/designs/dmp/clientlibs_base/images/icons/phone_bridal_icon.png" -->
+                    <!--#endif -->
+                   
+                    <!--#include virtual="../../components/nav_icon/top_nav_icon.shtml" -->
+            </li>
+
+            <li>
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="" -->
+                    <!--#set var="img-alt" value="Locate Us" -->
+                    <!--#if expr="${THEME_1}=/main_theme/" -->
+                             <!--#set var="img-src" 
+                             value="../etc/designs/dmp/clientlibs_base/images/icons/location-icon.png" -->
+                    
+                    <!--#else-->
+                            <!--#set var="img-src" 
+                            value="../etc/designs/dmp/clientlibs_base/images/icons/location_bridal_icon.png" -->
+                    <!--#endif -->
+                    <!--#include virtual="../../components/nav_icon/top_nav_icon.shtml" -->
+            </li>
+
+
+            <li>
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="" -->
+                    <!--#set var="img-alt" value="Shopping Cart" -->
+                    <!--#set var="img-src" value="../etc/designs/dmp/clientlibs_base/images/icons/carticon.png" -->
+                    <!--#set var="things-in-cart" value="3" -->
+                    <!--#include virtual="../../components/nav_icon/cart_icon.shtml" -->
+            </li>
+
+        </ul>
+    </nav>
+     <!--#endif -->
+</header>
+
+<!-- Top Navigation Ends Here-->

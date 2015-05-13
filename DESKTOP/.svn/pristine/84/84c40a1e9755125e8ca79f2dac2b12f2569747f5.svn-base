@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    store locater -- Desktop CSS
+\*------------------------------------*/
+$store-locator-search-height:  32px;
+$store-locator-search-width:  300px;
+$store-locator-search-search-button-margin:  20px;
+$store-locator-search-search-button-height:  12px;
+
+
+
+
+.store-locator-wrapper-map{
+    @include rem(margin-top, 60px);
+    margin: 40px 0 20px 0;
+    margin-bottom: 1rem;
+    .store-search-wrapper {
+        .store-locater__search{
+            .store-locater__find-button{
+                font-size: 12px;
+                font-weight: bold;
+                display: inline-block;
+                color: $primary-2;
+                position:relative;
+                @include rem (right, -($store-locator-search-width + $store-locator-search-search-button-margin));
+                @include rem (top, -(($store-locator-search-height/2)+($store-locator-search-search-button-height/2)));
+                .more-button{
+                    color: $primary-2;
+                    @include proxi-font;
+                    font-weight: bold;
+                    font-style: normal;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.back-button-wrapper .back-button {
+    padding: 1rem 0px 0px;
+}
+

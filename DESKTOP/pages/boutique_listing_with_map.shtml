@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+    <!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+    <!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+
+<!--#set var="VIEWS_1" value="store_locater_1" -->
+
+<!--#set var="VIEWS_2" value="boutique_list_with_map" -->
+
+<!--#set var="MODULE" value="boutique-map" -->
+
+
+<!--#if expr="${DEVICE} = 'desktop'"  -->
+    <!--#set var="COMP_3" value="breadcrumb" -->
+<!--#endif -->
+<!--#include virtual="../templates/base.shtml" -->

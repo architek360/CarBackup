@@ -1,0 +1,34 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+		"subTotal": "5300.15",
+		"currencySymbol": "$",
+		"subTotalInfo": "excl. sales tax",
+		"deliveryCharge": "200",
+		"deliveryChargeInfo": "offered on order over $500",
+		"total": "5300.15",
+		"totalInfo": "excl. sales tax",
+		"teaserArray": [{
+			"productTitle": "décor double c sunlenses",
+			"productDesc": "Yellow gold, tsavorite, lacquer",
+			"refId": "HP100480",
+			"sizeValue": "47.15",
+			"imageURL": "../etc/designs/dmp/clientlibs_base/images/content/panthere_ring.png",
+			"currencySymbol": "$",
+			"productPrice": "540.15",
+			"selectedQuantity": "2",
+			"totalPrice": "5540.15",
+		}, {
+			"productTitle": "décor double c sunlenses",
+			"productDesc": "Yellow gold, tsavorite, lacquer",
+			"refId": "HP100480",
+			"sizeValue": "47.15",
+			"imageURL": "../etc/designs/dmp/clientlibs_base/images/content/panthere_ring.png",
+			"currencySymbol": "$",
+			"productPrice": "540.15",
+			"selectedQuantity": "2",
+			"totalPrice": "5540.15",
+		}]
+	}
+}

@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    ASSISTANCE -- Desktop CSS
+\*------------------------------------*/
+
+/*.assist-wrapper{ 
+	float: right;
+	text-align: right;
+	@include rem(margin-top, 10px);
+	min-width: 242px;
+	min-height: 35px;*/
+/*
+	.assistance{
+	@include proxiBold-font;
+	@include rem(letter-spacing, 1px);
+	text-transform: uppercase;
+	font-size: 11px;
+	@include setSpriteDesktop(auto, auto ,-118px ,-114px, transparent);
+	padding: 4px 0 0 30px;
+	height: 31px;
+	display: block;
+	margin: 0;
+	color:$primary-2;
+	width: auto;
+
+		.red{
+			color: $primary-51;
+			@include proxiBold-font;
+			display: table;
+			text-align: center;
+			@include rem(letter-spacing, 1px);
+			margin: 0 auto;
+		}
+	}*/
+/*
+	.assistance{
+        @include proxiBold-font;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        @include f(11);
+        @include setSpriteDesktop(100%, auto ,-118px ,-114px, transparent); 
+        vertical-align: middle;
+        @include rem(width, 264px);
+        height: auto;
+        @include rem(padding, 4px 0 0 30px);
+        @include rem(height, 31px);
+        display: block;
+        @include rem(margin, 0px);
+        color: $primary-2;
+
+        .red{
+            color: $primary-5;
+            @include proxi-font;
+        }
+    }
+}*/
+
+.assist-wrapper{
+    float: right;
+    text-align: right;
+    min-width: 225px;
+	min-height: 35px;
+	@include rem(margin-top, 10px);
+	
+    .assistance{
+        @include proxi-font;
+        font-weight: bold;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        @include f(11);
+        @include setSpriteDesktop(100%, auto ,-118px ,-114px, transparent); 
+        vertical-align: middle;
+        width:auto;
+        height: auto;
+        @include rem(padding, 4px 0 0 30px);
+        @include rem(height, 31px);
+        display: block;
+        @include rem(margin, 0px);
+        color: $primary-2;
+
+        .red{
+            color: $primary-5;
+            @include proxi-font;
+            font-weight: bold;
+            text-align: center;
+			clear: both;
+			display: table;
+        }
+    }
+
+}

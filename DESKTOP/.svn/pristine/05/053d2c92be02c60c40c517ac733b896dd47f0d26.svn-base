@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "../_theme_vars"; 
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+ 
+ 
+.js-reg-step-3 .fn_addrname .form-input{
+	width:100%;
+}
+.js-reg-step-3 {
+	.fn_addrname{
+		width:44%;
+		float:left;
+	}
+	.fn_strname{
+		clear:left;
+	}
+	.fn_state {
+		width:47% !important;
+	}
+	.fn_addrinfo{
+		width:44%;
+	}
+	.fn_phno {
+		clear:none !important;
+	}
+	.regstep3-col4{
+		float:left;
+	}
+	#fn_zip {
+		width:189px !important;
+	}
+	.fn_city{
+		margin-left: 14px;
+	}
+}

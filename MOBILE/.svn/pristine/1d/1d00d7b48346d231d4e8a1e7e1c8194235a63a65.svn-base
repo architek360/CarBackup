@@ -1,0 +1,3 @@
+<div class="main-container">
+	<!--#include virtual="../includes/views/collection_list/html.shtml" -->
+</div>

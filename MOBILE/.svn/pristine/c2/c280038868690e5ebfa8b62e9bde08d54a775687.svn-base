@@ -1,0 +1,61 @@
+.js-ecs-payment-form{
+.form{
+	ul{
+		display: inline-block;
+		width: 100%;
+		li{
+			background-color: $primary-16;
+		    border: 1px solid $light_grey;
+		    float: left;
+		    @include rem('padding', 14px 0);
+		    width: 49.8%;
+		    span{
+		    	@include f(10);
+			    @include rem('margin-left', 81px);
+			    width: 7.7rem;
+		    }
+		    label{
+		    	display: inline-block;
+			    left: 15%;
+			    @include rem('padding', 10px 0 0);
+			    position: relative;
+			    top: 2px;
+		    }
+		}
+	}
+}
+.form-element.input-wrapper {
+	    display: table;
+	    width: 100%;
+	}
+.form-element label{
+		color: $primary-2;
+		@include font-weight(bold);
+	    @include rem('margin', 45px 0 0);
+	    @include rem('padding', 0 0 5px);
+	    display: block;
+	}
+.form-element.select-wrapper{
+		width: 47%;
+		float: left;
+	}
+.form-element.select-wrapper.payment_card_year {
+	    float: right;
+	}
+.form-element.button-wrapper{
+		background-color: $primary-52;
+	    margin: 20px auto;
+	    @include rem('padding', 15px 0);
+	    text-align: center;
+	    width: 73%;
+	    .form-button{
+	    	background-color: transparent;
+		    border: 0 none;
+		    color: $primary-2;
+		    @include brand-font;
+		    @include f(20);
+		    @include font-weight(bold);
+		    text-transform: uppercase;
+	    }
+	}
+}

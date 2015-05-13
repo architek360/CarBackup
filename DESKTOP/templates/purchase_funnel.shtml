@@ -1,0 +1,20 @@
+<div class="main-container">
+
+	<!--#if expr="${COMP_1}" -->
+	<!--#include virtual="../includes/components/${COMP_1}/desktop.shtml" -->
+	<!--#endif -->
+
+	<!--#if expr="${VIEW_1}" -->
+		<!--#include virtual="../includes/views/${VIEW_1}/desktop.shtml" -->
+	<!--#endif -->
+
+	<!--#if expr="${COMP_2}" -->
+		<!--#include virtual="../includes/components/${COMP_2}/desktop.shtml" -->
+	<!--#endif -->
+
+	<!--#if expr="${VIEW_2}" -->
+			<!--#include virtual="../includes/views/${VIEW_2}/desktop.shtml" -->
+	<!--#endif -->
+	
+	
+</div>

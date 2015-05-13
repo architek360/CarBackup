@@ -1,0 +1,157 @@
+/*------------------------------------*\
+    RTE -- Mobile CSS
+\*------------------------------------*/
+/**
+ * RICH TEXT COMPONENT....main container (.comp-rich-text)
+ * DOWNLOAD-RTE.......rte__download (.rte__download)
+ * THEME BLUE RICH TEXT.......rich text component style for theme blue (.theme--blue .comp-rich-text)
+ */
+/*------------------------------------*\
+    $RICH TEXT COMPONENT
+\*------------------------------------*/
+.comp-rich-text {
+		color:$white;
+		display: table;
+		@include main-font;
+		h3{
+			
+			text-align: center;
+			text-transform: uppercase;
+			a{
+
+			}
+		}
+		
+		p{
+
+			b {
+				font-weight: bold;
+			}
+
+
+		}
+		ul {
+			list-style-type: disc;
+			
+			font-size: inherit;
+			
+			
+			li{
+				
+				line-height: 30px;
+				list-style-position: inside;
+			}
+		}
+
+		ol {
+			list-style-type: decimal ;
+			
+			list-style-position: inside;
+		
+			li{
+				
+				list-style-position: inside;
+			}
+		}
+		dl {
+			
+			@include rem('line-height',30px);
+			dt {
+				
+				width :95%;
+				
+			}
+
+		}
+		a{
+			font-weight: bold;
+			border-bottom: solid 2px $primary-2;
+			margin-bottom: -2px;
+		}
+
+		table{
+			@include f(15);
+			border: 1px solid $primary-3;
+			border-collapse: initial;
+			padding: 10px;
+			tr:first-child{
+				border-bottom: 1px solid $primary-3;
+				padding-bottom:10px;
+				margin:0 5px 0 5px;
+				color : $primary-2;
+			}
+			th{
+				font-weight: bold;
+				border-bottom: 1px solid $primary-3;
+				color : $primary-2;
+			}
+			th,td{
+				text-align: left;
+				padding: 10px;
+				color : $primary-2;
+			}
+		}
+
+		.content-medias-right{
+			float:right;
+			@include rem('margin-left',30px);
+			@include rem('margin-bottom',30px);
+	    	max-width: 98%;
+	    	border: 1px solid $primary-17;
+		}
+
+		.content-medias-left{
+			float:left;
+			@include rem('margin-right',30px);
+			@include rem('margin-left',0px);
+			@include rem('margin-bottom',30px);
+			max-width: 98%;
+			border: 1px solid $primary-17;
+		}
+
+		img{
+			max-width: 100%;
+		}
+
+		h2, h3,h4,h5,h6{
+			@include rem('padding',25px 0);
+			
+			b {
+				font-weight: bold;
+			}
+		}
+
+		.text-wrapper {
+			overflow: hidden;
+		}
+
+		img.image-left {
+			float: left;
+			@include rem('margin-right',30px);
+			padding: 0;
+			margin-left: 0;
+		}
+
+		img.image-right {
+			float: right;
+			@include rem('margin-left',30px);
+			padding: 0;
+			margin-right: 0;
+		}
+
+}
+
+                
+.display-userguide {
+	margin: 0 auto;     
+	width:81.25%;     
+	img { 
+		display: inherit;
+		margin: 0 auto;
+	}                                      
+}
+
+.exhibitions{
+	width:81.25%;
+	margin: 0 auto;    
+}

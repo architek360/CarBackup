@@ -1,0 +1,4 @@
+<div class="form-element textarea-wrapper">
+	<label for="<!--#echo var="input-name" -->" class="form-label"><!--#echo var="textarea-label-name" --></label>
+	<textarea name="<!--#echo var="input-name" -->" placeholder="<!--#echo var="textarea-name" -->" id="textarea" class="form-textarea"></textarea>
+</div>

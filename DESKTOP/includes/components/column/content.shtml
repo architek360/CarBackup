@@ -1,0 +1,16 @@
+<!--#if expr="${headline}" -->
+    <!--#echo var="headline" -->
+<!--#endif -->
+<!--#if expr="${subheadline}" -->
+    <!--#echo var="subheadline" -->
+<!--#endif -->
+<!--#if expr="${text}" -->
+    <!--#echo var="text" -->
+<!--#endif -->
+<!--#if expr="${image}" -->
+    <img src="<!--#echo var="image" --> " <!--#if expr="${imgclass}" --> class="image-<!--#echo var="imgclass" -->"<!--#endif -->
+ />
+<!--#endif -->
+<!--#if expr="${productdata}" -->
+    <!--#echo var="productdata" -->
+<!--#endif -->

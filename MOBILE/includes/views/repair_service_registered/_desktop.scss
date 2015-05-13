@@ -1,0 +1,60 @@
+.repair-service-registration{
+	display: block;
+	.main-div{
+		
+
+		.heading{
+			padding: 40px;
+			text-align: center;
+			h4{
+				@include f(15);
+				padding-top: 5px;
+				padding-bottom: 10px;
+			}
+			h5{
+				padding-bottom: 5px;
+				@include f(12);
+			}
+		}
+
+		.left-div{
+	
+			padding-left: 10px;
+			padding-top: 20px;
+			width: 48%;
+			
+			float: left;
+			h4{
+				@include f(12);
+				color:red;
+			}
+			.leftdiv__desc{
+				width: 91%;
+				font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+				@include f(11);
+				letter-spacing: .1em;
+				font-style: normal;
+				text-align: left;
+				line-height: 1.4rem;
+
+			}
+		}
+
+		.side-image{
+			
+			margin-left: 15px;
+			width: 48%;
+			float: left;
+			
+			a img {
+				margin-top: 10px;
+				border: none;
+				width: 100%;
+			}
+		}
+	}
+} 
+
+ 
+
+

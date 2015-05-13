@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    EXPERT COLLECTION LIST -- MOBILE CSS
+\*------------------------------------*/
+/**
+	* collection template css
+	* SELECT CONTAINER....select container(.expert-guide-select)
+	* LIST CONTAINER....list container(.expert-collection-list)
+*/
+
+/*------------------------------------*\
+    $SELECT CONTAINER
+\*------------------------------------*/
+
+.expert-guide-select {
+	margin: 0 auto;
+	.expert-guide-select__heading {
+		@include rem('padding-top', 50px );
+		@include rem('padding-bottom', 30px );
+		@include f(34);
+		@include brand-font;
+		text-align: center;
+		color: $primary-2;
+		text-transform: uppercase;
+		border-bottom: 1px solid $primary-2;
+	}
+	.expert-guide-select__theme {
+		@include rem('margin-top',50px);
+		label {
+			color: $white;
+			font-family: georgia;
+			@include f(24);
+			@include rem('padding-bottom',17px);
+		}
+	}
+}
+
+/*------------------------------------*\
+    $LIST CONTAINER
+\*------------------------------------*/
+
+.expert-collection-list {
+    display:block;
+    background:$black;
+    width:81.25%;
+	margin: 0 auto;
+    .collection-list__bg {
+		img {
+			width:100%;
+		}
+	}
+	.expert-collection-list__title {
+		color: $primary-2;
+		text-align: center;
+		h2 {
+			@include f(24);
+			@include rem('margin-bottom',50px);
+			text-transform: uppercase;
+		}
+		h4 {
+			@include f(16);
+			text-transform: uppercase;
+		}
+	}
+	.expert-collection-list__expert-listing {
+		ul {
+			.grid__item {
+				padding-left: 0;
+			}
+			li {
+				border: 1px solid $primary-10;
+				@include rem('margin-top',30px);
+				img {			
+					text-align: right;
+					display: inline-block;
+				}
+				.product-push {
+					height: 167px;
+					border: none;
+					background: $primary-1;
+					margin: 0;
+					display: table;
+					.product-push__desc{
+						width:50%;
+						@include rem(padding, 0 18px);
+						.heading3{
+							@include f(24);
+							word-break: break-word;
+						}
+						.more-button{
+							padding:0;
+							text-transform:capitalize;
+						}
+					}
+					.product-push_img {
+						border-right: 1px solid $primary-6;
+					    display: table-cell;
+					    vertical-align: middle;
+						text-align: center;
+						@include rem('height',167px);
+						max-width: 100%;
+						img{
+							max-height:100%;
+							max-width:100%;
+						}
+					}
+				}
+			}
+		}
+		ul:last-child{
+			@include rem('margin-bottom',67px);
+		}
+	}
+}
+
+
+

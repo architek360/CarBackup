@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    ECS REPAIR ORDER ACKNOWLEDGEMENT -- DESKTOP CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ecs-review-repair-order)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.ecs-review-repair-order{
+	.order-header{
+		@include rem('padding', 40px 10px 5px);
+		h2{
+			text-align: center;
+			@include f(15);
+			@include rem('padding-right', 100px);
+		}
+		.order-date{
+		    float: left;
+		    @include f(11);
+		    letter-spacing: 0.1rem;
+		    @include rem('padding-left', 10px);
+		    text-transform: capitalize;
+		    color: $primary-92;
+		    @include rem('line-height', 20px);
+		}
+	}
+}

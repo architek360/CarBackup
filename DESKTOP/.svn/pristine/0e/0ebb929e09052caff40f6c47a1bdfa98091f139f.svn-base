@@ -1,0 +1,154 @@
+/*------------------------------------*\
+    HEADER -- DESKTOP CSS
+\*------------------------------------*/
+/**
+	* MAIN CONTAINER .header--desktop used as main outer container for Header.
+*/
+
+/*------------------------------------*\
+    $HEADER MAIN CONTAINER
+\*------------------------------------*/
+
+.boutique-left {
+	background-color: $primary-82;
+    @include rem('padding-bottom', 25px);
+
+	.heading1{
+		@include f(26);
+		height: auto;
+	}
+
+	.tab-header {
+    	position: relative;
+    	width: auto;
+    	height: 33px;
+    }
+
+    .heading2 {
+    	@include f(20);
+    	@include rem('letter-spacing', 1px);
+	}
+
+    .heading__desc {
+	    @include rem('padding', 0px);
+	    text-align: center;
+	    border-bottom: none;
+	    font-weight: bold;
+	}
+
+	.select-wrapper {
+		text-align: center;
+		float: none;
+
+		label{
+			display: inline-block;
+		    @include rem('margin-bottom', 14px);
+		    @include f(11);
+		    vertical-align: middle;
+		    width: auto;
+		}
+		
+		.selector {
+    		width: 184px !important;
+
+    		span{
+				width: 184px !important;    			
+    		}
+		}
+	}
+	
+
+	.boutique-item {
+    	border-bottom: 1px solid $primary-84;
+    	border-top: 1px solid $primary-84;
+    	text-align: center;
+    	display: block;
+		@include rem('padding', 15px 0 15px 20px);
+		margin: 0 auto;
+    	width: 50%;
+
+    	.heading3 {
+		    letter-spacing: 1px;
+		    @include rem('margin', 0px);
+		    @include rem('padding', 0px);
+		    text-align: center;
+		    width: auto;
+		}
+
+		p {
+		    @include proxiBold-font;
+		    @include f(15);
+		    @include rem('margin', 5px 0px 0px 0px);
+		    @include rem('padding', 0px);
+		    text-align: center;
+		    text-transform: uppercase;
+		}
+		.js-boutique-name-img {
+		    display: inline-block;
+		    max-width: 191px;
+		    width: 100%;
+		}
+	}
+
+	.next-btn {
+		.button-wrapper {
+    		@include rem('margin', 0px);
+    		@include rem('padding', 25px 0 0);
+    	}
+    	.cta-button{
+    		width: auto;
+    	}
+	}
+
+	.tabs {
+    	background: none;
+    	@include rem('padding', 0px);
+
+    	.tabs__content {
+    		background: none;
+    		@include rem('margin', 0px);
+    	}
+
+    	.tab-header {
+    		ul.tabs__nav {
+    			li {
+    				background-color: $primary-85;
+    				width: 19rem;
+    			}
+    			.tab-active {
+    				background-color: $primary-85;
+    				&:hover{
+    					background-color: $primary-85;
+    				}
+    			}
+    		}
+    	}
+   	}
+}
+.js-ga-login-page{
+	.select-wrapper {
+		label{
+		 display: block;
+        width: 100%;
+        @include proxi-font;
+        font-weight: bold;
+        @include f(10);
+        @include rem(letter-spacing, 1px);
+        @include rem(margin-bottom, 5px);
+        text-transform: uppercase;
+        text-align:left;
+        color: $primary-2;
+        padding: 0;
+		}
+		.selector{
+			width:100% !important;
+			span{width:99% !important;}
+		}
+	}
+}
+.boutique-right {
+	.price-detail {
+    	background-color: $primary-82;
+	}
+}
+

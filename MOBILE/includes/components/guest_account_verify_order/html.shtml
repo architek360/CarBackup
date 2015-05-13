@@ -1,0 +1,9 @@
+<!-- GUEST ACCOUNT VERIFY ORDER Component  -->
+<div class="guest-verify js-guest-verify">
+	<h3 class="heading3">Join mycartier</h3>
+    <p class="message">By checking this box, you'll use your order informations to create a MyCartier account. You'll have an enhanced shopping experience with faster checkout, access to status of your orders, and more.</p>
+    <!--#set var="checkbox-value" value="value" -->
+	<!--#set var="checkbox-label-name" value="Use my order information to create MyCartier Account" -->
+    <!--#set var="checkbox-name" value="fn_chkinvoice" -->
+	<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+</div>

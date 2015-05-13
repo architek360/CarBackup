@@ -1,0 +1,475 @@
+    
+    <div style="display:none" name="formAjaxResponse" id="formAjaxResponse"></div>
+<div style="color:red;" class="error_message"></div>
+
+<div class="form-layout js-jp-reg-step-3">
+    <form enctype="multipart/form-data" name="js-reg-step-3" id="js-reg-step-3" action="/content/car/us/usa/en/services/my-cartier/registrationstep3.desktop.html" method="POST"><input type="hidden" value="js-reg-step-3" name=":formid"><input type="hidden" value="/content/car/us/usa/en/services/my-cartier/registrationstep3/jcr:content/navigationBlock/formbuilder/start" name=":formstart"><input type="hidden" value="UTF-8" name="_charset_"><input type="hidden" value="/content/car/us/usa/en/services/my-cartier/welcometext.html" name=":redirect"><div class="form"><fieldset>
+	<div class="txt clearfix">
+
+            <ul>
+<li><span class="title">1</span>Between Cartier and you</li>
+<li><span class="title">2</span>Your Personal Information</li>
+</ul>
+<div><a target="_blank" href="/content/car/global/langmaster/en/collections.html" adhocenable="false">Skip this item and go directly to my cartier</a></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created </span></div>
+</div>            
+ <div class="heading-wrapper">
+
+<h3 class="heading3"> Your personal information</h3>
+
+        </div>
+
+
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><hr>
+<p>Because we care for your precious moments...</p>
+
+
+
+<div class="txt clearfix">
+
+            <label>YOUR BIRTHDAY</label></div>            
+ <div class="data-picker-wrapper">
+
+
+    <label class="form-label"></label>
+     <div data-endyear="2014" data-startyear="1990" data-disbalepastdate="future" data-noofdisableday="0" class="js-date-picker">
+  	
+	
+			<div class="form-element select-wrapper fn_bdmonth">
+     <select id="fn_bdmonth" class="" name="fn_bdmonth">
+            <option value="-1">
+					Month </option>
+			<option value="0">
+					Jan </option>
+			<option value="1">
+					Feb </option>
+			<option value="2">
+					Mar </option>
+			<option value="3">
+					Apr </option>
+			<option value="4">
+					May </option>
+			<option value="5">
+					Jun </option>
+			<option value="6">
+					Jul </option>
+			<option value="7">
+					Aug </option>
+			<option value="8">
+					Sep </option>
+			<option value="9">
+					Oct </option>
+			<option value="10">
+					Nov </option>
+			<option value="11">
+					Dec </option>
+			</select>
+	</div><div class="form-element select-wrapper fn_bddate">
+     <select id="fn_bddate" class="" name="fn_bddate">
+            <option value="-1">
+					Day </option>
+			<option value="1">
+					1 </option>
+			<option value="2">
+					2 </option>
+			<option value="3">
+					3 </option>
+			<option value="4">
+					4 </option>
+			<option value="5">
+					5 </option>
+			<option value="6">
+					6 </option>
+			<option value="7">
+					7 </option>
+			<option value="8">
+					8 </option>
+			<option value="9">
+					9 </option>
+			<option value="10">
+					10 </option>
+			<option value="11">
+					11 </option>
+			<option value="12">
+					12 </option>
+			<option value="13">
+					13 </option>
+			<option value="14">
+					14 </option>
+			<option value="15">
+					15 </option>
+			<option value="16">
+					16 </option>
+			<option value="17">
+					17 </option>
+			<option value="18">
+					18 </option>
+			<option value="19">
+					19 </option>
+			<option value="20">
+					20 </option>
+			<option value="21">
+					21 </option>
+			<option value="22">
+					22 </option>
+			<option value="23">
+					23 </option>
+			<option value="24">
+					24 </option>
+			<option value="25">
+					25 </option>
+			<option value="26">
+					26 </option>
+			<option value="27">
+					27 </option>
+			<option value="28">
+					28 </option>
+			<option value="29">
+					29 </option>
+			<option value="30">
+					30 </option>
+			<option value="31">
+					31 </option>
+			</select>
+	</div><div class="form-element select-wrapper fn_bdyear">
+     <select id="fn_bdyear" class="" name="fn_bdyear">
+            <option value="-1">
+					Year </option>
+			<option value="1999">
+					1999 </option>
+			<option value="2000">
+					2000 </option>
+			<option value="2001">
+					2001 </option>
+			<option value="2002">
+					2002 </option>
+			<option value="2003">
+					2003 </option>
+			<option value="2004">
+					2004 </option>
+			<option value="2005">
+					2005 </option>
+			<option value="2006">
+					2006 </option>
+			<option value="2007">
+					2007 </option>
+			<option value="2008">
+					2008 </option>
+			<option value="2009">
+					2009 </option>
+			<option value="2010">
+					2010 </option>
+			<option value="2011">
+					2011 </option>
+			<option value="2012">
+					2012 </option>
+			<option value="2013">
+					2013 </option>
+			<option value="2014">
+					2014 </option>
+			<option value="2015">
+					2015 </option>
+			<option value="2016">
+					2016 </option>
+			<option value="2017">
+					2017 </option>
+			<option value="2018">
+					2018 </option>
+			<option value="2019">
+					2019 </option>
+			</select>
+	</div></div>
+
+</div>   
+
+
+<div class="txt clearfix">
+
+            <label>DATE OF MARRIAGE</label></div>            
+ <div class="data-picker-wrapper">
+
+
+    <label class="form-label"></label>
+     <div data-endyear="2014" data-startyear="1990" data-disbalepastdate="future" data-noofdisableday="0" class="js-date-picker">
+  	
+	
+			<div class="form-element select-wrapper fn_mrmonth">
+     <select id="fn_mrmonth" class="" name="fn_mrmonth">
+            <option value="-1">
+					Month </option>
+			<option value="0">
+					Jan </option>
+			<option value="1">
+					Feb </option>
+			<option value="2">
+					Mar </option>
+			<option value="3">
+					Apr </option>
+			<option value="4">
+					May </option>
+			<option value="5">
+					Jun </option>
+			<option value="6">
+					Jul </option>
+			<option value="7">
+					Aug </option>
+			<option value="8">
+					Sep </option>
+			<option value="9">
+					Oct </option>
+			<option value="10">
+					Nov </option>
+			<option value="11">
+					Dec </option>
+			</select>
+	</div><div class="form-element select-wrapper fn_mrdate">
+     <select id="fn_mrdate" class="" name="fn_mrdate">
+            <option value="-1">
+					Day </option>
+			<option value="1">
+					1 </option>
+			<option value="2">
+					2 </option>
+			<option value="3">
+					3 </option>
+			<option value="4">
+					4 </option>
+			<option value="5">
+					5 </option>
+			<option value="6">
+					6 </option>
+			<option value="7">
+					7 </option>
+			<option value="8">
+					8 </option>
+			<option value="9">
+					9 </option>
+			<option value="10">
+					10 </option>
+			<option value="11">
+					11 </option>
+			<option value="12">
+					12 </option>
+			<option value="13">
+					13 </option>
+			<option value="14">
+					14 </option>
+			<option value="15">
+					15 </option>
+			<option value="16">
+					16 </option>
+			<option value="17">
+					17 </option>
+			<option value="18">
+					18 </option>
+			<option value="19">
+					19 </option>
+			<option value="20">
+					20 </option>
+			<option value="21">
+					21 </option>
+			<option value="22">
+					22 </option>
+			<option value="23">
+					23 </option>
+			<option value="24">
+					24 </option>
+			<option value="25">
+					25 </option>
+			<option value="26">
+					26 </option>
+			<option value="27">
+					27 </option>
+			<option value="28">
+					28 </option>
+			<option value="29">
+					29 </option>
+			<option value="30">
+					30 </option>
+			<option value="31">
+					31 </option>
+			</select>
+	</div><div class="form-element select-wrapper fn_mryear">
+     <select id="fn_mryear" class="" name="fn_mryear">
+            <option value="-1">
+					Year </option>
+			<option value="1999">
+					1999 </option>
+			<option value="2000">
+					2000 </option>
+			<option value="2001">
+					2001 </option>
+			<option value="2002">
+					2002 </option>
+			<option value="2003">
+					2003 </option>
+			<option value="2004">
+					2004 </option>
+			<option value="2005">
+					2005 </option>
+			<option value="2006">
+					2006 </option>
+			<option value="2007">
+					2007 </option>
+			<option value="2008">
+					2008 </option>
+			<option value="2009">
+					2009 </option>
+			<option value="2010">
+					2010 </option>
+			<option value="2011">
+					2011 </option>
+			<option value="2012">
+					2012 </option>
+			<option value="2013">
+					2013 </option>
+			<option value="2014">
+					2014 </option>
+			<option value="2015">
+					2015 </option>
+			<option value="2016">
+					2016 </option>
+			<option value="2017">
+					2017 </option>
+			<option value="2018">
+					2018 </option>
+			<option value="2019">
+					2019 </option>
+			</select>
+	</div></div>
+
+</div>   
+
+
+<hr></div>
+
+<div class="parsys_column cq-colctrl-lt0-c1"><hr><div class="form-element input-wrapper fn_addrname">
+        <label><font><font>Save this address</font></font></label>
+<input id="fn_addrname" type="text" name="fn_addrname" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_addrname"></div></div>
+    <div class="form-element input-wrapper addressform_zip1">
+        <label><font><font>Postal code (three-digit top-byte numbers)</font></font></label>
+<input id="addressform_zip1" type="text" name="addressform_zip1" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-addressform_zip1"></div></div>
+    <div class="form-element input-wrapper addressform_zip2">
+        <label><font><font>Postal Code (four digits byte numbers)</font></font></label>
+<input id="addressform_zip2" type="text" name="addressform_zip2" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-addressform_zip2"></div></div>
+    
+<script type="text/javascript">	
+$(document).ready(function(){
+    $('#find_addressjapan').click(function (event) 
+    { 	
+        var addressform_zip1 = $("input[name='addressform_zip1']").val();
+        var addressform_zip2 = $("input[name='addressform_zip2']").val();
+        var addressform_zip = $("input[name='addressform_zip']").val();
+   		var addressform_country = $("input[name='addressform_country']").val();		
+        resourcePath = $("#resourcePath").val();
+        event.preventDefault();
+		$.ajax({
+                url: '/cms-base/richemont/form/actionController?actionName=find_address&currentPagePath='+resourcePath, 
+                type: "POST",
+                data: {
+           		 addressform_zip1:addressform_zip1,addressform_zip2:addressform_zip2,addressform_zip:addressform_zip,addressform_country:addressform_country
+                      },
+               dataType :  "json",
+                success: function (data) {
+
+						_sendPostCodeOKCallBack(data.content);
+                       },
+          		error: function (data) {
+                    	alert("Failure");
+                    //location.reload();
+                       }
+               })
+    });
+
+
+
+    _sendPostCodeOKCallBack = function(data) {
+            $('.error-div').remove();
+
+            if (data.isSubmitSuccess === false) {
+                var errorMsg = '<div class="error-div">' + data.errorMessage + '</div>';
+
+
+
+
+                    $('.js-address-form-jp').before(errorMsg);
+
+
+                $('.error-div').ScrollTo({
+                    duration: 800,
+                    offsetTop: 140
+                });
+                // reset specific input filed
+                $('.js-reset').find('input').val("");
+
+            } else {
+                $('.error-div').remove();
+                // set json  value in input filed 
+                $('.addressform_address9').find('input').val(data.state);
+                 $('.addressform_address1').find('input').val(data.town);
+                $('.addressform_address7').find('input').val(data.region);
+
+            }
+ 		};
+    });
+</script>
+
+<input type="hidden" name="resourcePath" id="resourcePath" value="/content/car/jp/japan/ja/services/my-cartier/registrationstep3">
+<div class="form-element button-wrapper show-button">
+  		 <font><font><input type="button" value="OK" name="OK" class="form-button " id="find_addressjapan"></font></font>
+	</div>
+<div class="form-element input-wrapper addressform_address9">
+        <label><font><font>State</font></font></label>
+<input id="addressform_address9" type="text" name="addressform_address9" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-addressform_address9"></div></div>
+    <div class="form-element input-wrapper addressform_address7">
+        <label><font><font>City or county towns and villages</font></font></label>
+<input id="addressform_address7" type="text" name="addressform_address7" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-addressform_address7"></div></div>
+    
+<div class="form-element input-wrapper fn_addrnames">
+        <label><font><font>Address</font></font></label>
+<input id="fn_addrnames" type="text" name="fn_addrnames" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_addrnames"></div></div>
+    <div class="form-element input-wrapper fn_phno">
+        <label><font><font>Phone number</font></font></label>
+<input id="fn_phno" type="text" name="fn_phno" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_phno"></div></div>
+    <div class="form-element input-wrapper fn_mobileno">
+        <label><font><font class="">Mobile phone number</font></font></label>
+<input id="fn_mobileno" type="text" name="fn_mobileno" placeholder="" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_mobileno"></div></div>
+    <div class="comp-rich-text">
+      <p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;"><font><font>To your registration of your address, you must you fill in all fields on this page. &nbsp;</font></font><br><font><font>
+If you are not the registered address of the customer, leave it blank all fields, please click the below the "OK" button. &nbsp;</font></font></p>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font><font>
+      To your registration of your address, you must you fill in all fields on this page.          </font></font></span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font><font>
+      To your registration of your address, you must you fill in all fields on this page.          </font></font></span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font><font>
+      To your registration of your address, you must you fill in all fields on this page.          </font></font></span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font><font>
+      To your registration of your address, you must you fill in all fields on this page.          </font></font></span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font><font>
+      To your registration of your address, you must you fill in all fields on this page.          </font></font></span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);"><font><font>
+            If you are not the registered address of the customer, leave it blank all fields, please click the below the "OK" button.  </font></font></span></div>
+</div><hr></div>
+
+
+</div><div style="clear:both"></div>
+</fieldset><div class="form-element button-wrapper Submit">
+<input type="submit" value="Submit" name="Submit" class="form-button">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

@@ -1,0 +1,16 @@
+<div class="my-boutique-detail-wrapper clearfix">
+    <!--#set var= "cta-class"  value= "arrow-red" -->
+    <!--#if expr="${hasresults}" -->
+        <!--#include virtual="../../views/my_boutique/boutique.shtml" -->
+        <!--#include virtual="../../views/my_boutique/boutique.shtml" -->
+        <!--#include virtual="../../views/my_boutique/boutique.shtml" -->
+        <!--#include virtual="../../views/my_boutique/boutique.shtml" -->
+    <!--#else -->
+        <!--#include virtual="../../views/my_boutique/no-result.shtml" -->
+    <!--#endif -->
+    <div class="add-boutique">
+        <!--#set var= "arrow-class"  value= "arrow-show" -->
+        <!--#set var="more-text" value="add a cartier boutique" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+    </div>
+</div>

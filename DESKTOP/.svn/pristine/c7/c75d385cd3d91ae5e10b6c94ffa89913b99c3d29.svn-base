@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  RADIO button -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+.radio-btn{
+	li{
+		@include rem('margin',0 10px 0 0);
+		@include brand-font;
+		display : inline-block;
+	}
+}
+
+
+    

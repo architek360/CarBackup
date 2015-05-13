@@ -1,0 +1,44 @@
+
+<div class="multiple-video  js-multiple-video">
+
+	<div class="nested-carousel-wrapper sfy ">
+		<div class="carousel">
+			<ul class="bxslider js-slider">
+	    		<li>
+	        		<iframe width="100%" height="100%" src="http://www.youtube.com/embed/geTgZcHrXTc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+	        	</li>
+				<li>
+					<iframe width="100%" height="100%" src="http://www.parisnouvellevague.cartier.us/" frameborder="0" allowfullscreen></iframe>
+				</li>
+	   			<li>
+	   				<iframe width="100%" height="100%" src="//www.youtube.com/embed/8x2DFwMrpUQ&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+	   			</li>
+	 			<li>
+	 				<iframe width="100%" height="100%" src="//www.youtube.com/embed/8x2DFwMrpUQ&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+	 			</li>
+	  			<li>
+	  				<iframe width="100%" height="100%" src="//www.youtube.com/embed/8x2DFwMrpUQ&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+	  			</li>
+			</ul>
+		</div>
+	</div>
+	<div class="thumbnail-wrapper">
+		<div class="field-item js-toggle">View the films by Luca Guadagnino</div>
+		<div class="carousel-wrapper multiple_video_wrapper">
+			<div class="carousel">
+				<ul class="bxslider js-preview-slider">
+				  <li class="active">
+				  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+				  </li>
+				  <li>
+				  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+				  </li>
+				  <li>
+				  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+				  </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+ </div>

@@ -1,0 +1,7 @@
+<div class="slide_switch">
+    <input type="radio" class="<!--#echo var="class-first" -->"  id="<!--#echo var="label-first" -->" name="<!--#echo var="radio-name" -->" value="true" checked>
+    <label for="<!--#echo var="label-first" -->" class="<!--#echo var="label-class-first" -->"><!--#echo var="label-first" --></label>
+    <input type="radio" class="<!--#echo var="class-second" -->"  id="<!--#echo var="label-second" -->" name="<!--#echo var="radio-name" -->" value="false">
+    <label for="<!--#echo var="label-second" -->" class="<!--#echo var="label-class-second" -->"><!--#echo var="label-second" --></label>
+</div>
+

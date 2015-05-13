@@ -1,0 +1,182 @@
+<!-- Billing Confirmation Block Starts Here-->
+<div class="ecs-payment-wrapper">
+   <div class="left-payment-sec grid__item three-quarters my-billing-address-content-wrapper">
+      <div class="billing-payment-option">
+         <div style="display:none;" class="error_message_ecs-payment-page"></div>
+         <div class="form-layout ecs-payment-page">
+            <form enctype="multipart/form-data" name="ecs-payment-page" id="ecs-payment-page" action="/en-us/services/my-cartier/repair-service-config/ecs-payment0.desktop.payment-summary.html" method="POST" novalidate="novalidate">
+               <input type="hidden" value="ecs-payment-page" name=":formid"><input type="hidden" value="/content/car/us/usa/en_us/services/my-cartier/repair-service-config/ecs-payment0/jcr:content/paymentsummary_par/formbuilder/start" name=":formstart"><input type="hidden" value="UTF-8" name="_charset_"><input type="hidden" value="/content/car/langmaster/global/en/services/my-cartier/repair-service-config/ecs-payment.order-confirmation.html" name=":redirect">
+               <div class="form">
+                  <fieldset>
+                     <div class="comp-rich-text rte-wrapper">
+                        <h2 style="text-align: center;">PROCEED TO SECURE PAYMENT</h2>
+                        <p style="text-align: center;">please notice the person holding the card must be member xyz</p>
+                     </div>
+                     <div class="comp-rich-text rte-wrapper">
+                        <p style="text-align: center;">This is secure 128 bit SSLencripted payment.</p>
+                        <p style="text-align: center;">For your security cartier does not stock your credit car information.</p>
+                     </div>
+                     <p class="card_type">CARD TYPE</p>
+                     <ul>
+                        <li>
+                           <div class="radio" id="uniform-fn_cclabel0"><span><input type="radio" id="fn_cclabel0" name="payment_card_type" value="AMEX" class="radio-input" data-cardname="AMEX"></span></div>
+                           <label for="fn_cclabel0" class="radio-title"></label>
+                           <span class="american_express_card"></span>
+                        </li>
+                        <li>
+                           <div class="radio" id="uniform-fn_cclabel1"><span><input type="radio" id="fn_cclabel1" name="payment_card_type" value="DC" class="radio-input" data-cardname="discover"></span></div>
+                           <label for="fn_cclabel1" class="radio-title"></label>
+                           <span class="discover_network_card"></span>
+                        </li>
+                        <li>
+                           <div class="radio" id="uniform-fn_cclabel2"><span><input type="radio" id="fn_cclabel2" name="payment_card_type" value="MAST" class="radio-input" data-cardname="mastercard"></span></div>
+                           <label for="fn_cclabel2" class="radio-title"></label>
+                           <span class="mastercard"></span>
+                        </li>
+                        <li>
+                           <div class="radio" id="uniform-fn_cclabel3"><span><input type="radio" id="fn_cclabel3" name="payment_card_type" value="VISA" class="radio-input" data-cardname="VISA"></span></div>
+                           <label for="fn_cclabel3" class="radio-title"></label>
+                           <span class="visa_card"></span>
+                        </li>
+                     </ul>
+                     <div class="non-mandatory form-element input-wrapper payment_card_number">
+                        <label class="label_payment_card_number" for="Card Number">Card Number<span class="form-mandatory"></span></label>
+                        <input type="text" value="" class="form-input" placeholder="" name="payment_card_number" id="payment_card_number">
+                        <div id="errormessage-payment_card_number" class="errormessage"></div>
+                     </div>
+                     <div class="non-mandatory form-element select-wrapper payment_card_month">
+                        <label class="label_payment_card_month" for="Expiration Month">Expiration Month<span class="form-mandatory"></span></label>
+                        <div class="selector" id="uniform-payment_card_month" style="width: 78px;">
+                           <span style="width: 78px; -moz-user-select: none;">
+                           Jan </span>
+                           <select id="payment_card_month" class=" form-select" name="payment_card_month">
+                              <option value="01">
+                                 Jan 
+                              </option>
+                              <option value="02">
+                                 Feb 
+                              </option>
+                           </select>
+                        </div>
+                        <div id="errormessage-payment_card_month" class="errormessage"></div>
+                     </div>
+                     <div class="non-mandatory form-element select-wrapper payment_card_year">
+                        <label class="label_payment_card_year" for="Expiration Year">Expiration Year<span class="form-mandatory"></span></label>
+                        <div class="selector" id="uniform-payment_card_year" style="width: 87px;">
+                           <span style="width: 87px; -moz-user-select: none;">
+                           2015 </span>
+                           <select id="payment_card_year" class=" form-select" name="payment_card_year">
+                              <option value="2015">
+                                 2015 
+                              </option>
+                              <option value="2016">
+                                 2016 
+                              </option>
+                           </select>
+                        </div>
+                        <div id="errormessage-payment_card_year" class="errormessage"></div>
+                     </div>
+
+                     <div class="non-mandatory form-element input-wrapper ecs-payment-dummy-password">
+<input id="ecs-payment-dummy-password" type="password" name="ecs-payment-dummy-password" 
+    placeholder="" class=" form-input"
+    autocomplete="off">
+   <div class="tooltip_ecs-payment-dummy-password field-tooltip">
+        <div class="tooltip-icon">
+            </div>   
+        <div class="tooltip-details" style="display:none;">                                  
+            this is tool tip&#x21;</div>   
+    </div>   
+<div class="errormessage" id="errormessage-ecs-payment-dummy-password"></div></div>
+                     <div class="non-mandatory form-element input-wrapper payment_card_cvv">
+                        <label class="label_payment_card_cvv" for="CVV Number">CVV Number<span class="form-mandatory"></span></label>
+                        <input type="password" class=" form-input" placeholder="" name="payment_card_cvv" id="payment_card_cvv">
+                        <div class="tooltip_payment_card_cvv field-tooltip" style="display: block; left: 95px;">
+                           <div class="tooltip-icon">
+                           </div>
+                           <div style="display: none;" class="tooltip-details">                                  
+                              this is tool tip!
+                           </div>
+                        </div>
+                        <div id="errormessage-payment_card_cvv" class="errormessage"></div>
+                     </div>
+
+<div class="non-mandatory form-element input-wrapper ecs-payment-dummy-username">
+        <input id="ecs-payment-dummy-username" type="text" name="ecs-payment-dummy-username"
+            placeholder=""
+         class="form-input" value="" autocomplete="off"/>
+     <div class="errormessage" id="errormessage-ecs-payment-dummy-username"></div></div>
+
+                     
+                     <div class="non-mandatory form-element input-wrapper payment_card_name">
+                        <label class="label_payment_card_name" for="Card Name">Card Name<span class="form-mandatory"></span></label>
+                        <input type="text" value="" class="form-input" placeholder="" name="payment_card_name" id="payment_card_name">
+                        <div id="errormessage-payment_card_name" class="errormessage"></div>
+                     </div>
+                    <div class="heading-wrapper">
+                      <p class="heading-white-line"> </p>
+                      <h4 class="heading4 "> Your credit card won't be charged until order dispatch </h4>
+                    </div>
+                    <div class="non-mandatory group-wrapper">
+                      <div class="form-element checkbox-wrapper fn_chktnc">
+                        <input id="001" name="fn_chktnc" value="001" class="form-checkbox" type="checkbox">
+                        <label for="001" class=" form-checkbox-label">I agree to the <a href="http://google.com">term and condition</a> of the site.
+                        </label>
+                      </div>
+                        <div class="errormessage" id="errormessage-fn_chktnc"></div>
+                    </div>
+                  </fieldset>
+                  <div class="form-element button-wrapper ">
+                     <input type="submit" value="Confirm and Place Order" name="" class="form-button">
+                  </div>
+                  <div class="form_row">
+                     <div class="form_leftcol"></div>
+                     <div class="form_rightcol"></div>
+                  </div>
+                  <div class="form_row_description"></div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <div class="right-payment-sec">
+      <div class="grid__item one-quarter shopping-bag-rt-col">
+         <div class="price-details-bg">
+            <!--Price Detail Box Starts Here-->
+            <div class="price-detail clearfix grid">
+               <h2>Your order summary</h2>
+               <div class="price-detail__row">
+                  <span class="grid__item  three-fifths  price-detail__col">subtotal <span class="price-detail--note js-subtotal-info">excl.sales tax</span> </span>
+                  <span class="grid__item grid--right two-fifths price-detail__col-right font32 right-zero js-subtotal" data-subtotal="400">111 com.richemont.cms.car.ecs.dto.ROSavDTO@4522f324</span>
+               </div>
+               <div class="price-detail__row">
+                  <span class="grid__item three-fifths  price-detail__col">delivery </span>
+                  <span class="grid__item grid--right two-fifths price-detail__col-right right-zero bold-font js-deliverycharge">free</span>
+               </div>
+               <div class="price-detail__row">
+                  <span class="grid__item  three-fifths  price-detail__col">sales taxes</span>
+                  <span class="grid__item grid--right two-fifths price-detail__col-right font32 right-zero js-subtotal" data-subtotal="400">$ 363.88</span>
+               </div>
+               <div class="price-detail__row line">
+                  <span class="grid__item three-fifths  price-detail__col right-zero">total<span class="price-detail--note js-totalprice-info">excl.sales tax</span> </span>
+                  <span class="grid__item grid--right two-fifths  price-detail__col-right font39 right-zero js-totalprice">$ 5,540.00</span>
+               </div>
+            </div>
+            <!-- Price Detail Box Ends Here-->
+         </div>
+         <div class="return-exchange">
+            <ul>
+               <li>
+                  <a href="#" class="more-button"><span class="arrow-show"></span>easy return and exchange</a>
+               </li>
+               <li>
+                  <a href="#" class="more-button"><span class="arrow-show"></span>all transaction are safe and secure</a>
+               </li>
+               <div class="norton-icon"></div>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Billing Confirmation Block Ends Here-->
+<!-- tab_billing_address Block Ends Here-->

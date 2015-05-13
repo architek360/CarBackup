@@ -1,0 +1,26 @@
+  <!-- Services Block Starts Here-->
+<div class="quick-links clearfix">
+
+<div class="quick-link-wrapper">
+
+  <ul class="grid">
+      <!--#set var="TITLE" value="find a cartier boutique" -->
+        <!--#set var="TEXT" value="the easy way to find your nearest cartier boutique" -->
+        <!--#set var="IMG" value="push_services_boutique.png" -->
+        <!--#include virtual="../../components/quick_link_push/html.shtml" -->
+        
+        <!--#set var="TITLE" value="find a cartier boutique" -->
+        <!--#set var="TEXT" value="the easy way to find your nearest cartier boutique" -->
+        <!--#set var="IMG" value="push_services_boutique.png" -->
+        <!--#include virtual="../../components/quick_link_push/html.shtml" -->
+
+        <!--#set var="TITLE" value="find a cartier boutique" -->
+        <!--#set var="TEXT" value="the easy way to find your nearest cartier boutique" -->
+        <!--#set var="IMG" value="push_services_boutique.png" -->
+        <!--#include virtual="../../components/quick_link_push/html.shtml" -->
+    </ul>
+
+</div>
+
+</div>
+ <!-- Services Block Ends Here-->

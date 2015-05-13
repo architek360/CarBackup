@@ -1,0 +1,37 @@
+<!-- site map Block Starts Here-->
+
+
+  	<h1 class="heading2">sitemap</h1>
+    
+
+
+<!--#set var="input-name" value="fn_sitemap" -->
+<!--#set var="head-label-name" value="" -->
+<!--#set var="radio-text1" value="collection" -->
+<!--#set var="radio-value1" value="js-collection" -->
+<!--#set var="radio-tab-text1" value="collection" -->
+<!--#set var="radio-text2" value="services" -->
+<!--#set var="radio-value2" value="js-services" -->
+<!--#set var="radio-tab-text2" value="services" -->
+
+<!--#if expr="${DEVICE} = 'mobile'"  -->
+    <!--#set var="tab_content_1" value="site_map_collection" --> 
+    <!--#set var="tab_content_2" value="site_map_service" --> 
+    <!--#endif -->
+ <!--#if expr="${DEVICE} = 'desktop'"  -->
+ 
+ 	<!--#set var="tab_1" value="collection" -->
+    <!--#set var="tab_2" value="Services " -->
+    <!--#set var="tab_content_1" value="site_map_collection_desktop" -->
+    <!--#set var="tab_content_2" value="site_map_service_desktop" -->
+
+ 
+      <!--#endif -->	
+
+    <!--#include virtual="../../components/tabs/html.shtml" -->
+
+
+
+
+
+ <!-- site map Block Ends Here-->

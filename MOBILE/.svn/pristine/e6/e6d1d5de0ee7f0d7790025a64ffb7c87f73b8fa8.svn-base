@@ -1,0 +1,83 @@
+<div class="form-layout js-forgotpassword">
+    <script type="text/javascript" src="/etc/clientlibs/foundation/form.min.1388724975204.js"></script>
+<script type="text/javascript">
+  function cq5forms_preCheck_js_forgotpassword(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/ja/services/forgotpassword-registration.html" id="js-forgotpassword" name="js-forgotpassword" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-forgotpassword"><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/forgotpassword-registration/jcr:content/par/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><div class="form"><script type="text/javascript">
+var rulesObjects = {};
+var messagesObjects = {};
+<h1>Resource dumped by HtmlRendererServlet</h1>
+<p>Resource path: <b>/content/car/jp/japan/ja/services/forgotpassword-registration/jcr:content/par/formbuilder/fieldset/fields/textbox</b></p>
+<p>Resource metadata: <b>{sling.modificationTime=1403592014012, sling.resolutionPath=/content/car/jp/japan/ja/services/forgotpassword-registration/jcr:content/par/formbuilder/fieldset/fields/textbox}</b></p>
+<p>Resource type: <b>richemont-base/forms/components/genericform/constraints/requiredvalidation</b></p>
+<p>Resource super type: <b>foundation/components/form/defaults/constraint</b></p>
+<h2>Resource properties</h2>
+<p>
+jcr:lastModifiedBy: <b>admin</b><br />
+name: <b>email</b><br />
+tooltip: <b>This is a Tip tool</b><br />
+sling:resourceType: <b>richemont-base/forms/components/genericform/textbox</b><br />
+label: <b>Email</b><br />
+jcr:createdBy: <b>admin</b><br />
+sling:resourceSuperType: <b>foundation/components/form/abstractformfield</b><br />
+jcr:created: <b>java.util.GregorianCalendar[time=1401868173121,areFieldsSet=true,areAllFieldsSet=true,lenient=false,zone=sun.util.calendar.ZoneInfo[id="GMT+05:30",offset=19800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2014,MONTH=5,WEEK_OF_YEAR=23,WEEK_OF_MONTH=1,DAY_OF_MONTH=4,DAY_OF_YEAR=155,DAY_OF_WEEK=4,DAY_OF_WEEK_IN_MONTH=1,AM_PM=1,HOUR=1,HOUR_OF_DAY=13,MINUTE=19,SECOND=33,MILLISECOND=121,ZONE_OFFSET=19800000,DST_OFFSET=0]</b><br />
+jcr:lastModified: <b>java.util.GregorianCalendar[time=1403592014012,areFieldsSet=true,areAllFieldsSet=true,lenient=false,zone=sun.util.calendar.ZoneInfo[id="GMT+05:30",offset=19800000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2014,MONTH=5,WEEK_OF_YEAR=26,WEEK_OF_MONTH=4,DAY_OF_MONTH=24,DAY_OF_YEAR=175,DAY_OF_WEEK=3,DAY_OF_WEEK_IN_MONTH=4,AM_PM=1,HOUR=0,HOUR_OF_DAY=12,MINUTE=10,SECOND=14,MILLISECOND=12,ZONE_OFFSET=19800000,DST_OFFSET=0]</b><br />
+jcr:primaryType: <b>nt:unstructured</b><br />
+</p>
+
+    $(document).ready(function(){
+    $("#js-forgotpassword").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+      });
+    });
+</script>
+<fieldset>
+  <div class="heading-wrapper">
+
+<h3 class="heading3"> FORGOT YOUR PASSWORD</h3>
+
+        </div>
+
+
+
+<p><i>To receive your password, please enter the e-mail address associated to your cartier account. Your password will be sent to you by e-mail.<br>
+ Thank you.</i></p>
+
+
+
+<div class="form-element input-wrapper email">
+        <label>Email</label>
+<input id="email" type="text" name="email" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-email"></div></div>
+    <a href="/ja/services/my-cartier/RegistrationStep1.html" style="color: #7f7f7f; font-family: arial, verdana, sans-serif; font-size: 11px; text-decoration: underline">
+          Cancel</a>
+      <input id="loginPath" type="hidden" name="loginPath" value="/content/car/jp/japan/ja/services/my-cartier/RegistrationStep1.html">    
+    
+
+<a href="/ja/services/my-cartier/RegistrationStep1.html" class="cross-button"></a>
+</fieldset><div class="form-element button-wrapper Send">
+<input class="form-button" type="submit" name="Send" value="Send">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+<script type="text/javascript">
+      RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : 'formType',
+                'actionName' : "ForgotPasswordAction",
+                'currentPagePath' : "/content/car/jp/japan/ja/services/forgotpassword-registration",
+                'elementId' : "js-forgotpassword",
+                'eventName' : 'submit'
+              });
+    </script>
+
+  </div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

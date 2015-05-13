@@ -1,0 +1,775 @@
+/*------------------------------------*\
+    shopping bag-- Desktop CSS
+\*------------------------------------*/
+
+
+.shopping_bag {
+      @include rem('padding-left', 0px);
+    position: relative;
+     .priceBlock {
+        float: left;
+        margin-top: 20px;
+    }
+    .price-detail .price-detail__row .js-totalprice-info{
+        float:none;
+    }
+    .price-detail .total-row{
+        border-top:none;
+        margin-top:0px;
+    }
+    .loadernode{
+        width:100%;
+        height:200px;
+        background: $primary-78 ;
+        border: 1px solid $primary-79;
+        @include rem('margin-bottom', 20px);
+        position: relative;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 140px;
+        line-height: 20px;
+        .loaderImage {
+            display:block;
+            margin: auto;
+            position: relative;
+            background:url($path-images+"/icons/throbber.gif") no-repeat;
+        }
+    }
+    .crossbutton{ 
+        float: right;
+        border-left: solid 1px #58000c;
+        margin-left: 10px;
+        @include setSprite(30px, 15px, -620px, -135px);   
+        cursor: pointer;
+    }
+    .js-adjust-wrapper {
+        display: none!important;
+    }
+        .title-line {
+            border-top:1px solid #724d54;
+            span {
+                background:#330007;
+                @include proxi-font;
+                font-weight: bold;
+            }
+        }
+        .engraving , .adjust-size {
+            ul {
+                li{
+                     .engraving__line {
+                       .form-input {
+                background:#402c2f;
+                border:1px solid #724d54;
+            } 
+                     }
+                }
+            }
+            
+         }
+
+ .details_disc {
+        @include f(14);
+        font-weight: bold;
+        text-transform: uppercase;
+        @include rem('padding-top', 25px);
+    }
+
+    .shopping_img_block {
+        @include rem('max-height', 200px);
+        @include rem('line-height', 200px);
+        @include rem('padding-left', 0px);
+        float: left;
+        text-align: center;
+
+        .js-pdpUrl_image,  .js-pdpUrl_image > div{
+            display: block;
+            height: 180px;
+            line-height: 180px;
+            @include rem('padding', 10px);
+        }
+        
+        .image{
+            max-height: 100%;
+            max-width: 100%;
+            @include rem('padding', 10px);
+            vertical-align: middle;
+            height: auto;
+        }
+    }
+
+
+
+    .shopping_details   {
+        float: left;
+        @include rem('padding-right', 20px);
+        @include rem('min-height', 200px);
+        color: $primary-2;
+
+        .shopping_details_top {
+            border-bottom: 1px solid $primary-79;
+            @include rem('padding-bottom', 2px);
+            @include proxi-font();
+
+            .model_name {
+                font-style: italic;
+                @include rem('padding-top', 0px);
+                 @include f(14);
+                 @include main-font;
+            }
+            span.model_ref {
+                font-weight: bold;
+                float: left;
+                @include rem('padding-top', 5px);
+                @include f(11);
+                @include rem('line-height', 17px);
+            }
+        }
+
+    .shopping_quantity {
+        color: $primary-80;
+        float: right;
+        width: auto;
+        @include rem('min-width', 250px);
+
+            label {
+                margin-left: -15px;
+                width: auto;
+                color: $primary-80;
+                @include f(16);
+                float: left;
+                @include rem('padding-top', 10px);
+                @include rem('padding-right', 10px);
+                padding-bottom: 0;
+                margin-bottom: 0;
+
+            }
+            span {
+            float: right;
+            background-position: right -536px;
+            @include rem('line-height', 14px);
+            }
+
+        }
+    .select-wrapper {
+        @include rem('margin', 0px);
+        padding-right: 20px;
+        float: left;
+
+        .selector {
+            width: 60px !important;
+
+            background-position: -430px -635px;
+
+            span {
+                width: 60px !important;
+                color: $primary-2;
+                @include rem(' padding-top', 6px);
+            }
+        }
+
+
+    }
+.shopping_details_bottom
+     {
+        @include rem('padding-top', 30px);
+        @include rem('letter-spacing', 2px);
+
+        .block_left {
+            float:left;
+            @include rem('padding-left', 0px);
+            @include rem('padding-right', 10px);
+            width: 45%;
+        }
+
+        .block_right {
+        float: right;
+        width: 55%;
+        @include rem('padding-left', 0px);
+            a {
+                text-align: left;
+                display: block;
+                width: 98%;
+            }
+
+        }
+
+        a.more-button {
+            text-align: center;
+            @include f(10);
+            @include proxi-font();
+            font-style:normal;
+        }
+
+        .js-add-selection {
+            padding-bottom: 20px
+        }
+      
+    
+}
+    .shopping_tax_info {
+       
+        text-align: right;
+        color: $primary-80;
+         @include f(15);
+        letter-spacing: 1.5px;
+
+          
+        }
+        .exsale_Tax {
+            @include rem('padding-top', 5px);
+             @include f(11);
+            @include main-font();
+
+             letter-spacing: 1.5px;
+              text-transform: uppercase;
+              font-style: italic;
+              display: inline-block;
+              clear: both;
+
+        }
+    }
+    .product-features {
+            display: block;
+            @include rem('padding-bottom', 20px);
+
+       
+
+        a {
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $primary-3;
+            @include f(11);
+            cursor: text;
+            
+
+            .edit-icon {
+                float: right;
+                opacity: 1!important;
+                cursor: pointer;
+            }
+
+            .checked-icon{
+                @include setSpriteDesktop(20px, 16px, -38px, -1140px, transparent);
+                @include rem('margin-left', 10px);
+            }
+
+            .msg-icon {
+                @include setSprite(26px, 20px, right, top); 
+                @include rem('margin', -3px 10px 0px 0px);
+                float: left;
+            }
+
+            .msg-icon.msg-icon-active{
+                @include setSpriteDesktop(32px, 25px, -1px, -1136px, transparent); 
+                @include rem('margin-top', -8px);
+            }
+        }
+    }
+
+
+    .delete-icon {
+        @include setSprite(20px, 20px, -634px, -136px); 
+        position: absolute;
+        @include rem('right', 0px);
+        @include rem('top', 5px);
+        cursor: pointer;
+    } 
+    .product-inbag {
+        background: $primary-78 ;
+        border: 1px solid $primary-79;
+        @include rem('margin-bottom', 20px);
+        position: relative;
+
+        .engraving  , .adjust-size{
+            background:none;
+        }
+         .engravingSection , .adjust_bracelet_sizeSection , .messageSection{
+            background: none;
+            border:none;
+        }
+
+        .adjust-size__line {
+            .form-label{
+                right: -65px;
+                top: 5px;
+                width: 50px;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .product-features.sizing-show {
+        position: relative;
+
+        > a{
+            bottom: 9px;
+            display: inline;
+            margin-right: 5px;
+            position: relative;
+        }
+
+        .selector{
+            background-position: -430px -635px;
+            width: 130px !important;
+
+            > span{
+                background-position: right -536px;
+                width: 130px !important;
+            }
+        }
+
+        a.more-button{
+            letter-spacing: 0.1em;
+            margin-left: 10px;
+        }
+    }
+
+    .adjust-size {
+        .col-form{
+            .slide_switch{
+                .radio{
+                    @include rem('margin-top', 0px);
+                }
+            }
+        }
+        .col-image{
+            text-align: center;
+
+            img{
+                max-height: 218px;
+                width: auto;
+                height: auto;
+                padding: 10px;
+                @include box-sizing(border-box);
+            }
+        }
+
+        ul {
+            li {
+                .adjust-size__line{
+                    position: relative;
+                    width: 55%;
+                }
+            }
+        }
+    } 
+
+    .engraving {
+        .col-form{
+            .slide_switch{
+                .radio{
+                    @include rem('margin-top', 0px);
+                }
+            }
+        }
+        .col-image{
+            text-align: center;
+
+            img{
+                max-height: 218px;
+                width: auto;
+                height: auto;
+                padding: 10px;
+                @include box-sizing(border-box);
+            }
+        }
+
+        ul {
+            li {
+                .engraving__line{
+                    .form-label{
+                        width: 50px;
+                        margin-right: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+
+/*------------------------------------*\
+    $shopping bag checkout details start here
+\*------------------------------------*/
+.checkout_details {
+    border-top: 1px solid #79484c;
+    @include rem(margin, 50px 0px);
+    @include rem(margin-bottom, 10px 0px);
+    
+    .grid__item {
+        @include rem(padding-left, 0px);
+
+        .cta-button{
+            width: auto;
+            @include rem('padding', 9px 14px 9px 21px);
+        }
+    } 
+    .price-detail{
+        color: $primary-81;
+
+        .subtotal__row{
+            @include f(17);
+            @include proxiBold-font;
+            @include rem(padding, 10px 0 0);
+            color: $primary-81;
+
+            .price-detail--note{
+                @include f(11);
+                color: $primary-2;
+                @include rem(padding-top, 2px);
+                color: $primary-81;
+            }
+
+            .price-detail__col-right{
+                @include proxi-font;
+                @include f(17);
+                color: $primary-2;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .gift-wrapper {
+        margin: 30px 0;
+        @include rem(margin, 60px 0);
+        width: 100%;
+        float: left;
+        background: $primary-15;
+        p {
+            @include rem(padding-left, 15px);
+            font-size: 14px;
+            width: 71%;
+        }
+
+    }
+
+}
+
+/*------------------------------------*\
+   shopping bag Guest checkout Button CSS
+\*------------------------------------*/
+
+.guest-checkout-wrapper{
+    .cta-button{
+        @include rem('padding', 10px 0px);
+        width: 100%;
+        display: inline-block;
+        .input-arrow{
+            @include rem('top', 0px);
+            @include rem('left', 10px);
+            float: left;
+        }
+    }
+}
+
+/*------------------------------------*\
+    $shopping bag checkout details end here
+\*------------------------------------*/
+
+.clearfix {
+    clear: both
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+/*------------------------------------*\
+    $shopping bag assist-wrapper  start here
+\*------------------------------------*/
+.assist-wrapper-shopping{
+    float: right;
+    text-align: right;
+    width: 240px;
+    .assistance{
+        @include proxiBold-font;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        @include f(11);
+        @include setSpriteDesktop(100%, auto ,-118px ,-114px, transparent); 
+        vertical-align: middle;
+        height: auto;
+        @include rem(padding, 4px 0 0 30px);
+        @include rem(height, 31px);
+        display: block;
+        @include rem(margin, 0px);
+        color: $primary-2;
+
+        .red{
+            color: $primary-5;
+            @include proxiBold-font;
+            display: block;
+            text-align: center;
+            @include f(12);
+        }
+    }
+}
+
+/*------------------------------------*\
+    $shopping bag assist-wrapper  end here
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    $shopping bag check  start here
+\*------------------------------------*/
+.check_details {
+
+    .gift-wrapper {
+    height: auto;
+    text-align: center;
+        img {
+            position: static;
+        }
+        p {
+        @include proxi-font();
+        text-align: center;
+        padding-left: 0;
+        margin: 0 auto;
+        font-weight: bold;
+        letter-spacing: .1em;
+
+        }
+    }
+}
+
+
+
+.shopping_bag_unauthorised {
+
+  
+
+    .engraving , .adjust-size {
+        width:100%;
+        .col-image {
+            width:35%;
+            img {
+                max-height: 218px;
+                width: auto;
+                height: auto;
+                padding: 10px;
+                @include box-sizing(border-box);
+            }
+        }
+
+        .two-thirds {
+            width:65%;
+            padding: 0 30px;
+        }
+
+    
+        ul {
+            li {
+                .engraving__line , .adjust-size__line {
+                    text-align:center;
+                    span.error {
+                    display:block!important;
+                    
+                    }
+            
+        }
+
+        .adjust-size__heading {
+            background:#330007;
+        }
+            }
+        }
+        .col-form {
+            hr {
+            border-bottom:1px solid #724d54;    
+            }
+        }
+    }
+    .shopping_details_bottom  {
+  
+        .block_left , .block_right{
+            width: 100%!important;
+            padding:0;
+       
+    }
+    a.more-button {
+        text-align: left!important;
+        font-weight: bold;
+        font-size: 12px;
+         
+    }
+        .js-add-selection {
+            padding-bottom: 20px
+        }
+    }
+}
+
+/*------------------------------------*\
+    $shopping bag check  end here
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+   Empty_shopping bag-- Desktop CSS
+\*------------------------------------*/
+
+
+.empty_shopping_bag {
+    
+    @include rem('margin-top', 10px);
+    display:block;
+    @include rem('padding-left', 0px);
+    position: relative;
+    @include rem('margin-bottom', 10px);
+
+
+    .heading3{
+        font-weight:bold;
+    }
+}
+
+.shopping_options{
+    border-bottom: 1px solid $primary-84;
+    border-top: 1px solid $primary-84;
+    @include rem('margin-top', 20px);
+
+    ul{
+        @include rem('padding',  20px 100px);
+        li{
+            @include rem('padding', 0px 15px);
+            display:inline-block;
+
+            a{
+                    text-transform:uppercase;
+                    @include proxi-font();
+                    font-weight:bold;
+                    color:$primary-2;
+                    font-style:normal;
+            }
+        }
+    }
+}
+
+.wishlist_button{
+    width:auto;
+    text-align: center;
+    @include rem('padding',  20px 0px 80px);
+    margin:0 auto;
+}
+
+div.shopping-bag__confirm.clearfix {
+    float: right;
+    padding-right: 117px;
+    display: inline-block;
+    margin: 0px 0 75px;
+
+    .cta-button .cta-button__input{
+        vertical-align: sub;
+    }
+}
+
+.js-shoppingbag .error-zone-sb {
+    @include rem('padding', 10px);
+    margin-bottom:10px;
+    @include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+    border:1px solid red;
+    text-align: center;
+    @include main-font;
+    @include f(12);
+    width:98%;
+    top: 10px;
+    color: $primary-2;
+    font-weight: normal;
+    display: block;
+    margin-left:0px;
+
+}
+
+
+.reservation-div{
+    background-color: #330008;
+    border: 0;
+    color: #ffffff;
+    margin-bottom: 16px;
+    padding: 0;
+    p{
+        text-align: center;
+        font-style: italic;
+        margin: 0 auto 0px auto;
+        text-align: center;
+        width: 660px;
+    }
+
+    .sub-alert{
+        letter-spacing: .1em;
+        font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+        font-size: 12px;
+        color: #a0a0a0;
+        padding-bottom: 0px;
+    }
+
+    .title-alert{
+        font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        color: #a0a0a0;
+        span{
+            color: #b10000;
+        }
+    }
+}
+
+.js-shoppingbag{
+    #modalWindow{
+        border: 1px solid #595959;
+
+        .js-login-form{
+            margin-top: -20px;
+            width: 283px;
+            padding: 0 15px;
+            margin-bottom: -8px;
+
+            .txt p:first-child, .comp-rich-text p:first-child{
+                font-style:normal;
+                padding: 0;
+                font-family: proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-weight: bold;
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+
+            .comp-rich-text p{
+                font-style:italic; 
+                letter-spacing:1px
+            }
+
+            hr{
+                display:none;
+            }
+
+            a{
+                background: none;
+                float: left;
+                font-style: italic;
+                padding: 0;
+                color: #a0a0a0 !important;
+                text-decoration: underline !important;
+                margin-top:10px;
+            }
+
+            .input-wrapper{
+                padding-bottom: 0;
+            }
+        }
+
+        .system_form_submit{
+            padding-top: 20px;
+        }
+        .cross-button{
+            background-position: -620px -382px;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+<label for="<!--#echo var="input-name" -->" class="form-label"><!--#echo var="label-name" --></label>
+<!--#if expr="${mandatory} = 'yes'" -->
+	<span class="mandatory">*</span>
+<!--#endif -->
+

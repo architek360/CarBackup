@@ -1,0 +1,179 @@
+/*------------------------------------*\
+    SET FOR YOU-HEADER -- Desktop CSS
+\*------------------------------------*/
+
+/**
+ * SFY LOGO.... (.sfy-logo)
+ * SFY PROGRESS TAB    (.sfy-progress_tab, etc.)
+ * SFY HEADING (.sfy-heading)
+ * SFY BACK (.sfy-back)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.sfy {
+    .heightZero {
+        height: 0px !important;
+        overflow: hidden !important;
+        min-height: 0px !important;
+    }
+    width: 100%;
+    .more {
+        background: url($path-images + "icons/arrows-dark-red.png") no-repeat left 3px;
+        @include rem(padding-left, 10px);
+        @include rem(padding-top, 0px);
+        display: inline-block;
+        font-style: italic;
+        @include main-font;
+        @include f(12);
+        text-align: left;
+        &:hover {
+            @include font-color($primary-8);
+        }
+        &.more-price {
+            font-style: normal;
+            @include proxi-font;
+            text-align: center;
+            text-transform: uppercase;
+            @include f(10);
+            @include rem(margin-bottom, 15px);
+        }
+    }
+    .collection-push {
+        border-color: #dedede;
+        .collection-push-content {
+            /*background: url($path-images +'content/bridal_product_list_bg.jpg') repeat;*/
+            background-size: 100% 100%;
+        }
+    }
+    .collection-pushes-wrapper {
+        h3 {
+            display: none;
+        }
+        ul {
+            li {
+                background: none;
+            }
+        }
+    }
+    .nested-carousel-wrapper {
+        .multiple-video {
+            .gift-for-you-heading {
+                display: none;
+            }
+        }
+    }
+    .preview-box {
+        background: #fafafa;
+        border: 1px solid #dedede;
+        padding: 20px 20px 10px 20px;
+        width: 280px;
+        h3,h4 {
+            color: #a0a0a0;
+        }
+        h3 {
+            @include f(14);
+            @include rem("line-height", 20px);
+            @include rem("margin-bottom", 5px);
+            font-weight: bold;
+            text-align: left;
+        }
+        h4 {
+            @include f(13);
+            font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+            font-size: 13px;
+            font-style: italic;
+            letter-spacing: .1em;
+            font-weight: normal;
+            line-height: 18px;
+            margin-bottom: 8px;
+            text-transform: none;
+        }
+    }
+}
+
+.sfy-logo {
+    @include rem(margin-top, 50px);
+    text-align: center;
+}
+
+.sfy-progress_tab {
+    .visited {
+        cursor: pointer;
+        color: #810026;
+    }
+    @include proxi-font;
+    @include rem(margin-bottom, 50px);
+    text-align: center;
+    border-bottom: 1px solid #c6c6c6;
+    height: 22px;
+    li {
+        @include f(21);
+        @include rem(margin, 0 45px);
+        @include font-color($primary-2);
+        display: inline-block;
+        background-image: url($path-images + "icons/sfy-bg.jpg");
+        font-style: italic;
+        padding-right: 4px;
+        vertical-align: middle;
+        &.active span {
+            @include font-color($primary-66);
+            @include f(44);
+        }
+    }
+}
+
+.sfy-heading {
+    @include f(16);
+    @include rem(margin, 1px);
+    @include font-color($primary-2);
+    @include proxi-font;
+    text-align: center;
+    padding: 0 0 0.5em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.sfy-back {
+    @include f(10);
+    @include rem("line-height", 22px);
+    @include rem(padding-left, 16px);
+    background: url($path-images + "icons/arrows-light.png") no-repeat left -90px;
+    float: left;
+}
+
+.sfy-back:hover {
+    color: #000;
+}
+
+.sfy-backtoTop {
+    @include f(10);
+    @include rem("line-height", 22px);
+    @include rem(padding-left, 16px);
+    @include main-font;
+    background: url($path-images + "icons/arrows-light.png") no-repeat right -141px;
+    @include rem(margin-right, 15px);
+    border-bottom: 1px solid $primary-111;
+    @include rem(margin-top, 10px);
+    padding-bottom: 12px;
+    text-align: right;
+    a {
+        color: $primary-25;
+        @include rem(padding-right, 15px);
+    }
+    a:hover {
+        color: #000;
+    }
+}
+
+#tab2 {
+    a.tabTwolink {
+        @include rem(padding-top, 0px);
+        background: url($path-images + "icons/arrows-dark-red.png") no-repeat left 6px;
+    }
+    .sfy-caption {
+        text-align: center;
+    }
+}

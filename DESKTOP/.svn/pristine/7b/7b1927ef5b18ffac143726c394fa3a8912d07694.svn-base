@@ -1,0 +1,15 @@
+.my-shipping-address-content-wrapper{
+
+	.address-selector{
+		text-align: center;
+	}
+	
+	.selector{
+		width: 263px !important;
+		background-position: -430px -635px;
+		span{
+			width: 263px !important;
+			background-position: right -536px;
+		}
+	}
+}

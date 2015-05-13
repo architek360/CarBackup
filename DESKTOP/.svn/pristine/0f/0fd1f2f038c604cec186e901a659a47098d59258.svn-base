@@ -1,0 +1,108 @@
+/*
+ * cartier.boutiqueDispatch.js
+ * This file contains functionalities handling the Storelocator and Boutique Pages
+ *
+ * @project   Cartier Desktop 
+ * @date      2014-01-03
+ * @author    Sapient
+ * @licensor  Cartier Desktop 
+ * @site      Cartier Desktop
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+
+
+;
+(function(win, $, boutiqueDispatch, undefined) {
+    //this will cause the browser to check for errors more aggressively
+    'use strict';
+
+    //check if jquery is defined, else return
+    if (typeof $ === 'undefined') {
+        console.log('jQuery not found');
+        return false;
+    }
+
+    /*
+    private variables
+    */
+
+    var
+        _cache = {},
+        _templates,
+        _productPerPage,
+        _objPropertiesMsg,
+        _objPropertiesPth,
+        _isDesktopFullView = false,
+
+
+
+        //--------------------------------------------------------------------------------------------------------
+        //         Caching jQuery object
+        //--------------------------------------------------------------------------------------------------------
+
+        /*
+          @private method : caching jquery objects
+          @param : none
+        */
+        _cacheObjects = function() {
+
+            _cache = {
+                $boutique: $('.js-boutique'),
+                $accordionObject: $('.js-accordion'),
+                $boutiqueDispatchPage: $('.js-country-list-wrapper'),
+                $boutiqueListPagePath: $('.js-boutique-listing-page-path').val()
+
+            };
+
+        },
+
+        //--------------------------------------------------------------------------------------------------------
+        //          EVENT Bindings
+        //--------------------------------------------------------------------------------------------------------
+
+        /*
+          @private method : bind events
+          @param : none
+        */
+        _bindEvents = function() {
+
+            $('.js-dispatchsearch-but').on('click', _countryButtonHandler);
+
+        },
+
+
+        _countryButtonHandler = function(e) {
+            e.preventDefault();
+            var storeSearchpagepath = _cache.$boutiqueListPagePath,
+                searchCountry = $(this).data('countryname');
+            win.location = storeSearchpagepath + '.html?geoCity=' + encodeURIComponent(searchCountry);
+
+        };
+
+
+
+
+
+
+    //--------------------------------------------------------------------------------------------------------
+    //          Public functions
+    //--------------------------------------------------------------------------------------------------------
+
+
+
+    /*
+    @pubic method : initailize the module
+    */
+    boutiqueDispatch.init = function() {
+        _objPropertiesPth = cartier.properties.paths;
+        _objPropertiesMsg = cartier.properties.messages;
+        _cacheObjects();
+        _bindEvents();
+    };
+
+}(window, jQuery, cartier.boutiqueDispatch));

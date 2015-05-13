@@ -1,0 +1,60 @@
+ <div class="home-image-wrapper">
+ 	<div class="home-image">
+		<img src="<!--#echo var="CONTENT_IMG_PATH" -->carousel-new-1.jpg" alt="" class="bg-image"/>
+		<div class="text-wrapper">
+			<div class="text-inner">
+				<div class="text center">
+				<h2>
+                    <img src="<!--#echo var="ICON_IMG_PATH" -->hp_time-art-logo-350_chs.png" alt="Cartier Time Art"/>
+                </h2>
+				<p>12 days 19 to 10 July "Cartier Time Art" Exhibition 2014</p>
+				<a href="#"><span></span>view the film</a>
+				</div>
+				<div class="text left">
+					<h2>STORY AND HISTORY</h2>
+					<p><span class="subtitle-page">india</span></p>
+					<a href="#"><span></span>I see the details</a>
+				</div>
+				<div class="text right">
+					<h2>
+                        <img src="<!--#echo var="ICON_IMG_PATH" -->jp_hp_savoir-faire_0.png" alt="Cartier Time Art"/>
+                    </h2>
+					<a href="#"><span></span>view the film</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="push-blocks clearfix grid home-push">
+    <ul class="pushes-wrapper">
+        <!--#set var="more-text" value="View the film" -->
+        <li class="grid__item one-quarter" >
+        <!--#set var="pushes-img-src" value="pushes-1.jpg" -->
+        <!--#set var="pushes-title" value="Spirit of the Maison" -->
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history" -->
+        <!--#set var="no-read-more" value="no" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter" >
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history" -->
+        <!--#set var="pushes-img-src" value="pushes-2.jpg" -->
+
+        <!--#set var="pushes-title" value="Cartier, Jeweler to Kings" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter" >
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history Delve into the heart" -->
+        <!--#set var="pushes-img-src" value="pushes-3.jpg" -->
+        <!--#set var="pushes-title" value="The Panther" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter" >
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history" -->
+        <!--#set var="pushes-img-src" value="pushes-4.jpg" -->
+        <!--#set var="pushes-title" value="Flora" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+                
+    </ul>
+</div>

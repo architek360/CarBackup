@@ -1,0 +1,136 @@
+/**************************************************
+	
+	Styling for highlight and product listing pushes overlay
+	
+****************************************************/
+
+
+
+.push-col_title{
+
+	display:inline-block;
+	@include rem('margin-top', 10px);
+
+	.text-link {
+		margin-top: 30px;
+	    @include f(10);
+	    font-weight: normal;
+	    letter-spacing: 0.1em;
+	    text-transform: uppercase;
+	    vertical-align: middle;
+		color: $primary-127;
+		@include rem('line-height', 13px);
+	}
+
+	.text-link:hover {
+		color: $primary-92;
+	}
+}
+
+
+
+
+.push-over {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include rem('height', 115px);
+	vertical-align: middle;
+    display: block;
+    overflow: hidden;
+    display: none;
+    text-align: center;
+    z-index: 2;
+
+    .more {
+    	@include rem('height', 15px);
+    	  text-align:left;
+
+    }
+
+    .more-button{
+		padding: 0;
+		@include rem('margin-top', 25px);
+	}
+			
+}
+
+.product_listing{
+	padding-top: 20px;
+	@include rem('height', 240px);
+
+	span{
+		display: block;
+	}
+
+	.push-col_title{
+		
+		border-bottom: 1px solid $primary-17 ;
+		border-top: 1px solid $primary-17;
+		@include rem('margin', 23px 15px 10px 15px);
+
+
+		.text-link{
+			margin:0;
+			@include proxi-font;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			font-size: 11px;
+			font-weight: bold;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 100%;
+
+			span.lovefont{
+				font-size: 11px !important;
+			}
+
+		}
+
+	}
+
+	
+
+	.push-text{
+		color: $primary-3;
+		@include main-font;
+		font-size: 12px;
+		font-style: italic;
+		margin-bottom: 10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+		font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+		/* &:hover{
+			color:$primary-117;
+		} */
+	}
+
+	.price{
+		font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+		font-size: 15px;
+		font-style: normal;
+		color: $primary-127;
+		margin-bottom: 2px;
+		line-height: 20px;
+	}
+	
+
+	.more-button{
+		@include proxi-font;
+		font-weight: bold;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-style: normal;
+		&:hover{
+			color:$primary-117;
+		}
+	}
+
+	.product-link{
+		display: block;
+		@include rem('margin-top', 20px);
+	}
+}

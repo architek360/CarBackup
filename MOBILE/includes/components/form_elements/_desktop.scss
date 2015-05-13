@@ -1,0 +1,30 @@
+/*------------------------------------*\
+     Form Elements- Mobile CSS - Desktop CSS
+\*------------------------------------*/
+
+
+/**
+ * Non JS mode related styles
+ */
+
+.no-js{
+	/*TO BE IMPLEMENTED*/
+}
+
+.grid__item .comp-rich-text p {
+  line-height: 1.3em;
+}
+/*
+.desk--two-thirds {
+	width: 63.166%;
+}
+
+.desk--one-third {
+	width: 36.833%;
+	padding-left: 2.392em !important;
+}
+*/
+
+.grid-bg {
+	background: url("../../etc/designs/dmp/clientlibs_rbs_desktop/images/grid-layout.jpg") repeat-y 31px 0;
+}

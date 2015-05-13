@@ -1,0 +1,354 @@
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+
+.order-reconfirm{
+	margin-bottom:30px;
+	width:100%;
+	.heading1{
+		width:70%;
+		margin:0 auto;
+	}
+
+	.heading__desc{
+		width:70%;
+		margin: 0 auto;
+		border:none;
+	}
+	.assist-wrapper{
+		float: right;
+		text-align: right;
+		@include rem(margin, 0px 0px 25px);
+
+		.assistance{
+		@include proxiBold-font;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		font-size: 11px;
+		@include setSpriteDesktop(100%, auto ,-118px ,-119px, transparent);
+		@include rem(padding, 4px 0px 0px 30px);
+		height: 31px;
+		display: block;
+		@include rem(margin, 0px);
+
+			.red{
+				color: $primary-5;
+				@include proxi-font;
+				display:inline;
+			}
+		}
+	}
+
+	@mixin order-common-prop(){
+		@include rem(padding, 10px);
+		@include rem(margin, 0 0 15px 10px);
+		text-align: center;
+		@include main-font;
+	}
+	.address-block{
+		@include order-common-prop();
+		background-color: $primary-82;
+		.title-block{
+			@include proxi-font;
+			text-transform: uppercase;
+			@include rem(padding-bottom, 10px);
+			@include f(12);
+			@include rem(letter-spacing, 1px);
+			border-bottom: 1px solid $primary-84;
+			text-align:left;
+		}
+
+		.address-box__name{
+			@include proxi-font;
+			@include rem(padding, 10px 0 15px);
+			text-transform: uppercase;
+			@include f(15);
+		}
+
+		p{
+			@include rem(padding, 1px 0);
+			@include rem(padding-top, 10px);
+			text-align: center;
+			@include f(13);
+			@include rem(letter-spacing, 0px);
+		}
+
+		.billing-mention{
+			color: $primary-59;
+			@include f(11);
+			font-style: italic;
+			@include rem(line-height, 15px);
+		}
+
+		.delivery-number-days{
+			@include proxiBold-font();
+			text-transform: uppercase;
+			@include f(13);
+			@include rem(letter-spacing, 1px);
+			@include rem(padding-bottom, 30px);
+		}
+	}
+
+
+	.grid__item{
+		padding: 0;
+	}
+
+	.order-products{
+		@include rem(padding, 0px);
+		display: inline-block;
+		border-bottom: 1px solid $primary-84;
+		width: 100%;
+
+		.order-header{
+			border-bottom: 1px solid $primary-84;
+			@include rem(padding, 10px 0px);
+			border-top: 1px solid $primary-84;
+
+			.order-date{
+				@include proxi-font;
+				@include rem(letter-spacing, 1px);
+				text-transform: capitalize;
+				@include rem(padding-left, 10px);
+				@include f(13);
+				color: $primary-2;
+				float: left;
+			}
+
+			.print{
+				@include main-font;
+				@include f(13);
+				font-style: italic;
+				@include rem(letter-spacing, 1px);
+				float: right;
+				letter-spacing: normal;
+				@include rem(padding, 0px 10px 0px 12px);
+				@include rem(margin-left, 15px);
+				@include setSpriteDesktop(50px, 24px ,-431px ,-59px, transparent);
+				color:$primary-3;
+			}
+
+			.order-number {
+				@include proxi-font;
+				@include rem(letter-spacing, 1px);
+				text-transform: uppercase;
+				@include f(17);
+				color:$primary-2;
+				@include rem(margin, 0px);
+				text-align: center;
+			}
+		}
+
+		ul.product-filter {
+			display: block;
+			width: 65%;
+			float: right;
+			@include rem('margin-bottom', 10px);
+
+			li{
+				@include rem('margin-top', 17px);
+			}
+
+			.product-filter__left{
+				font-weight:bold;
+			}
+			.product-filter__right{
+				margin-top:5px;
+			}
+		}
+
+		span.product-filter__left {
+			@include f(15);
+			@include proxiBold-font;
+			@include rem('line-height', 21px);
+			text-align: left;
+		}
+
+		span.product-filter__right {
+			@include f(11);
+			@include proxi-font;
+			display: block;
+			@include rem('line-height', 21px);
+		}
+	}
+
+	.product-wrapper{
+		display: block;
+
+		ul{
+			li{
+				.product-detail{
+					background: none;
+					border:none;
+					@include rem(padding, 0px);
+
+					.col1{
+						width: 35%;
+						float: left;
+						@include rem(margin, 5px 0);
+						text-align: center; 
+						@include rem('max-height', 218px);
+						@include rem('height', 218px);
+						
+						img{
+							max-height: 100%;
+							max-width: 100%;
+							@include box-sizing(border-box);
+							@include rem('padding', 10px);
+							vertical-align: middle;
+						}
+					}
+
+					.field-content, .field-content> div {
+						display: block;
+						@include rem('max-height', 218px);
+						@include rem('height', 218px);
+						@include rem('line-height', 218px);
+						max-width: 100%;
+						text-align: center;
+					}
+
+					.col2{
+						width: 65%;
+						float: left;
+						@include rem(margin, 25px 0);
+						@include f(15);
+						@include proxiBold-font;
+						text-align: left;
+
+						.price-container{
+							@include proxi-font;
+							text-align: center;
+							@include rem(letter-spacing, 1px);
+
+							.unit-price, .quantity, .price{
+								display: inline-block;
+							}
+						}
+
+						.heading3 {
+							@include proxiBold-font;
+							@include rem(letter-spacing, 1px);
+							@include f(14);
+							@include rem(margin, 0px);
+							text-align: left;
+						}
+
+						.material{
+							display: block;
+							color: $primary-3;
+							@include main-font;
+							font-style: italic;
+							@include f(15);
+							@include rem(padding, 5px 0px 15px);
+						}
+						.ref-no, .size{
+							text-transform: uppercase;
+							@include f(11);
+							display: block;
+							@include rem(letter-spacing, 1px);
+							@include rem(line-height, 15px);
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	.price-detail{
+		width: 60%;
+		float: right;
+		@include rem(padding, 20px 10px 5px);
+		color: $primary-3;
+
+		p{
+			display:none;
+		}
+		.more-button{
+			display:none;
+		}
+
+		.price-detail__row{
+			@include f(13);
+			@include proxiBold-font;
+			@include rem(padding, 8px 0 8px);
+
+
+			.price-detail--note{
+				@include f(11);
+				@include rem(padding, 1px 0 0);
+
+			}
+
+			.price-detail__col-right{
+				@include f(13);
+				@include proxi-font;
+			}
+		}
+
+		.price-detail__row:nth-child(5){
+			border-top: 1px solid $primary-92;
+		}
+
+		.subtotal__row{
+			@include f(17);
+			@include proxiBold-font;
+			border-top:1px solid $primary-3;
+			@include rem(padding, 10px 0 0);
+			color: $primary-2;
+
+			.price-detail--note{
+				@include f(11);
+				color: $primary-2;
+				@include rem(padding-top, 2px);
+			}
+
+			.price-detail__col-right{
+				@include proxi-font;
+				@include f(17);
+			}
+		}
+		.grid__item{
+			@include rem(padding, 0 0 10px 0);
+		}
+
+		.price-detail__col{
+			@include rem(padding, 5px 0 0);
+		}
+
+		.right-zero{
+			@include f(15);
+		}
+	}
+
+	.grid{
+		@include rem(margin-left, 0px);
+		@include rem(padding-left, 33px);
+	}
+
+	.three-quarters{
+		background-color: $primary-82;
+		.order-reconfirm__date{
+			width:40%;
+		}
+		.order-reconfirm__number{
+			width:40%;
+		}
+	}
+}
+
+
+.address-block .address-box .boutique-image > img {
+    box-sizing: border-box;
+    height: auto;
+    max-height:200px;
+    max-width:100%;
+    padding: 1rem;
+    width:auto;
+}
+
+.address-block > img {
+    height: 144px;
+    margin: 10px auto;
+    width:80%;
+}

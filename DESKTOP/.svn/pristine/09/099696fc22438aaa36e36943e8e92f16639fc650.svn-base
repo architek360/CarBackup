@@ -1,0 +1,58 @@
+
+.guest_checkout_details_bg {
+	.guest-checkout-wrapper {
+		background: $primary-82;
+			text-align: center;
+			padding: 15px 10px;
+		.guest-checkout {
+			border-bottom: 1px solid #724d54;
+			border-top:  1px solid #724d54;
+			margin:15px 0;
+		}
+
+
+			.heading3 {
+				font-size: 11px;
+				font-weight: bold;
+				letter-spacing: 0px;
+
+			}
+
+			.message {
+				font-size: 12px;
+				font-weight: normal;
+				letter-spacing: 0px;
+				text-align: center;
+				padding: 0px;
+				@include main-font();
+
+
+			}
+
+			.price-detail__row{
+				color: #c4b8b9;
+				.price-detail__col {
+					text-transform: uppercase;
+					text-align: left;
+					padding-left: 0px;
+					font-size: 14px;
+					font-weight: 400;
+					.price-detail--note {
+					@include main-font;
+					display: block;
+					text-transform: lowercase;
+					font-size: 11px;
+					font-style: italic;
+			}
+				}
+				.price-detail__col-right {
+					padding-left: 10px;
+					text-align: left;
+					font-size: 11px;
+				    right: 0px;
+                	position: absolute;
+				}
+			
+		}
+ }
+}

@@ -1,0 +1,9 @@
+<!-- SEARCH CONTAINER -->
+            <form class="search-form search-wrapper" method="get" action="#">
+                  <fieldset>
+                    <legend class="display-none">Search with in the catalogue...</legend>
+                    <label class="search__label" for="search">Search</label>
+                    <input type="text" class="search__term" placeholder="Search with in the catalogue..." name="search" id="search" />
+                    <input type="submit" class="search__button"/>
+                  </fieldset>     
+           </form>   

@@ -1,0 +1,45 @@
+<!-- Expert Guide View Starts Here-->
+	<!--#if expr="${expert_list} != 'yes'"-->
+		<!--#include virtual="../../components/social_share/html.shtml" -->
+	<!--#endif-->
+
+	<!--#if expr="${expert_list} = 'yes'"-->
+		<h3 class="heading3">expertise guides care recommendations</h3>
+		<h2 class="heading2">jewelry</h2>
+		<!--#endif-->
+		<!--#if expr="${expert_list} = 'no'"-->
+
+	<!--#endif-->
+	<div class="expert-guide grid">
+	    <div class="grid__item one-quarter">
+	    	<ul class="item-list">
+	    		<li class="active"><h2><a href="#" title="Jewelry">Jewelry</a></h2></li>
+				<li><h2><a href="#" title="Watches">Watches</a></h2></li>
+				<li><h2><a href="#" title="Leather Goods">Leather Goods</a></h2></li>
+				<li><h2><a href="#" title="Lighters">Lighters</a></h2></li>
+				<li><h2><a href="#" title="Writing Instruments">Writing Instruments</a></h2></li>
+			</ul>
+		</div>
+
+	    <div class="grid__item three-quarters">
+		    <article>
+		    	<!--#if expr="${expert_list} = 'yes'"-->
+		    	<!--#include virtual="../../views/faq/html.shtml" -->
+		    	<!--#else-->
+				<div class="comp-rich-text">
+					<h3>WHY CREATE AN ACCOUNT?</h3>
+					<img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="content-medias" alt=""/>
+					<p>Opening an account will allow you to make purchases through the Cartier e-boutique.Once registered, you will not have to re-enter your personal information, and ensures a quicker checkout process.</p>
+					<p>Ability to track your orders quickly and easily online, at any time</p>
+					<p>Privileged access to exclusive content and special previews of the latest Cartier creations in the My Cartier section of our website.</p>
+					<p>Save your favourite Cartier creations to your personal Wish Lists and share them with your family and friends.</p>
+					<p>Sign up for our member e-newsletter, to keep you up to date on everything Cartier.</p>
+					<a href="//assets.cartier.com/sites/assets/files/cms/files/leaflet_trinity_0.pdf" target="_blank" class="download-link">Download the .pdf</a>
+				</div>
+				<!--#endif-->
+			</article>
+		</div>
+		
+	</div>
+
+<!-- Expert Guide View Ends Here-->

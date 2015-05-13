@@ -1,0 +1,266 @@
+/*------------------------------------*\
+    Contact Us -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.contact)
+ * SERVICE CONTAINER......contact information (.contact__service_cont)
+ * BOUTIQUE BLOCK......Find a boutique block (.contact__push_block)
+ * COUNTRY LABEL...... Country select list (.contact__country_label)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.contact {
+	@include font-color($primary-2);
+	@include rem('margin', 0px);
+	
+	.contact__contact-cont{
+		width: 100%;
+		display: inline-block;
+
+		.heading2{
+			border-bottom: none;
+			text-align: center;
+		}
+
+/*------------------------------------*\
+    $SERVICE CONTAINER
+\*------------------------------------*/
+
+
+		.contact__service-cont{
+			position: relative;
+			@include rem('margin', 30px 0 0);
+			border:1px solid $primary-17;
+			text-align: center;
+			
+			> div {
+				width: 100%;
+				height: 299px;
+				line-height: 299px;
+			}
+
+			.service-image{
+				max-width:100%;
+				max-height: 100%;
+				vertical-align: middle;
+			}
+
+			.heading3{
+				@include f(12);
+				text-align:center;
+				position: absolute;
+				width:100%;
+				@include rem('letter-spacing', 1px);
+				@include rem('margin-top',17px);
+				@include rem('margin-bottom',5px);
+			}
+			
+			.contact__service-cont__number{
+				width: 100%;
+				@include f(24);	
+				@include rem('letter-spacing', 1px);
+				text-transform: uppercase;
+				@include rem('margin', 20px 0 0);
+
+				.underline-text{
+					text-decoration: none;
+				}
+			}
+
+			.contact__service-cont__timimgs{
+				text-align:center;
+				width: 100%;
+				position: absolute; 
+				top:50px;
+				@include f(13);
+				@include rem('letter-spacing', 0px);
+
+				.js-weekdays, .js-weekends, .js-title-address, js-address{
+					display: block;				
+				}
+
+				.js-weekdays{
+					@include rem('margin', 20px 0 0);
+				}
+				span{
+					display: inline-block;
+				}
+
+				.js-address{
+					margin-bottom: 25px;
+    				width: 100%;
+    			}
+
+				.cta-button{
+					display: table;
+					margin:0 auto 25px;
+					width: auto;
+					padding: 8px 10px;
+					
+					.input-arrow{
+						@include rem('padding-right', 3px);
+						top: -2px;
+					}
+					.cta-button__input{
+						@include proxiBold-font();
+					}
+				}
+			}
+
+
+	
+		}
+
+		.grey-text{
+			  @include f(12);
+			  @include font-color($primary-2);
+ 			  text-align: center;
+ 			  @include rem('letter-spacing', 0px);
+  			  line-height: auto;
+  			  padding : 0;
+		}
+		
+
+
+
+		/*------------------------------------*\
+		    $BOUTIQUE BLOCK
+		\*------------------------------------*/
+
+
+		.contact_push-block{
+			display:inline-block;
+			@include rem('margin', 18px 0 0 0);
+			width: 478px;
+			height: 134px;	
+			vertical-align: top;
+			position: relative;
+			border:1px solid $primary-17;
+
+
+			.heading3{
+				color:$primary-2;
+				@include f(14);
+				@include rem(padding, 0 0 20px 0);
+				@include proxiBold-font;
+				width:80%;
+				font-weight:bold;
+				 @include rem('letter-spacing', 1px);
+			}
+
+			.cta-button{
+				display: static;
+			}
+		}
+		
+		.action-button{
+			position: absolute;
+			bottom: 15px;
+			margin: 0 auto;
+			width: 100%;
+		}
+	/*------------------------------------*\
+		    $COUNTRY LABEL
+	\*------------------------------------*/
+	
+		.contact__country-label{
+			text-align: center;
+
+			.form-select{
+				width: 330px;
+				@include f(12);
+				font-style: normal;
+			}
+
+			.select-wrapper{
+				.selector{
+					 width:331px !important;
+					 padding-left: 7px;
+
+					 span{
+					 	width:330px !important;
+					 }
+				}
+			}
+		}
+	}
+	
+}
+
+.contact-joining-cartier{
+	border:1px solid $primary-17;
+	@include rem('margin', 18px 0 0 12px);
+	@include rem('padding', 30px 0);
+	display:inline-block;
+	text-align:center;
+	width: 483px;
+	height: 194px;
+	vertical-align: top;
+	text-transform:uppercase;
+	position: relative;
+
+	.heading3{
+		color:$primary-2;
+		@include f(14);
+		margin: 0 auto;
+		@include rem(padding, 0 0 20px 0);
+		font-weight: bold;
+		width:80%;
+		font-weight:bold;
+		@include rem('letter-spacing', 1px);
+	}
+
+	.joining-description{
+		@include f(12);
+		text-transform: none;
+		@include rem('letter-spacing', 0px);
+		padding: 0;
+		text-align: center;
+		width: 75%;
+		margin: 0 auto;
+	}
+
+	.cta--red{
+		width: auto;
+		padding: 8px 10px;
+	}
+
+}
+
+.joining-wrapper{
+	margin-left: -1.693em !important;
+	display: inline-block;
+	@include rem(margin-bottom, 20px);
+
+		.action-button{
+			position: absolute;
+			bottom: 15px;
+			margin: 0 auto;
+			width: 100%;
+			line-height: 40px;
+
+			a{
+				@include f(12);
+			}
+
+			.cta-button {
+				.input-arrow{
+					top: -2px;
+				}
+
+				.cta-button__input{
+					@include proxiBold-font();
+				}
+			}
+		}
+}
+/* code to fix CARE-5464 */
+.js-ga-contact-page {
+	.heading-wrapper {
+		.heading-white-line{
+			border-bottom: 0 none;
+		}
+	}
+}

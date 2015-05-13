@@ -1,0 +1,73 @@
+/*------------------------------------------------------------------------------------*\
+    ECS REVIEW REPAIR ORDER -- Desktop CSS
+\*------------------------------------------------------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ecs-review-repair-order)
+ * PRODUCT CONTAINER.........(.product-detail)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.ecs-review-repair-order{
+	@include rem('margin-top', 9px);
+	.order-review__title{
+		@include f(18);
+	}
+	.heading__desc{
+		@include rem('padding', 0 0 10px);
+	}
+	.info{
+		@include f(11);
+		font-style: italic;
+		@include rem('padding-bottom', 30px);
+		.telno{
+			color: $primary-76;
+		}
+	}
+
+	/*------------------------------------*\
+	    $PRODUCT CONTAINER
+	\*------------------------------------*/
+
+	.product-detail{
+		.price-detail.clearfix.grid{
+			width: 95%;
+			.price-detail__row{
+				.price-detail__col{
+					@include f(14);
+					@include font-weight(bold);
+					.price-detail--note{
+						@include f(14);
+						font-style: normal;
+						@include proxi-font;
+						color: $primary-92;
+						text-transform: uppercase;
+					}
+				}
+				.right-zero{
+					@include f(16);
+				}
+				.price-detail--note.js-subtotal-info{
+					display: inline-block;
+				}
+			}
+			.product-info{
+				@include rem('padding-bottom', 60px);
+				.price-detail__col{
+					@include f(11);
+					.price-detail--note{
+						@include f(12);
+						@include main-font;
+						font-style: italic;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+	.cta-button{
+		@include rem('margin-bottom', 60px);
+	}
+}

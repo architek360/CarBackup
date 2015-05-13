@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "_theme_vars";
+@import "../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+
+
+.body-wrapper .header .left-nav .left-nav__list li .nav-link {
+    font-family: proximanova,sans-serif;
+    font-size: 12px;
+}
+.body-wrapper .header .right-nav .right-nav__list li .nav-link {
+    font-family: proximanova,sans-serif;
+    font-size: 12px;
+}
+.primary-nav-container .first-level-nav .first-level-nav__title {
+    font-family: proximanova,sans-serif;
+    font-size: 12px;
+}
+
+.primary-nav-container .first-level-nav .nav-show .secondary-nav a.sec-nav-link {
+    font-family: proximanova,sans-serif;
+    font-size: 11px;
+}

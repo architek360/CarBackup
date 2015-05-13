@@ -1,0 +1,68 @@
+/*------------------------------------*\
+   Radio tab Box -- Mobile CSS
+\*------------------------------------*/
+/**
+ * Main CONTAINER.... Wrapper for Tabs (.radio-tabs)
+ * Heading Block for Tab .... Wrapper for Tabs Heading (.tabs__title)
+ * Content CONTAINER for Tab .... Wrapper for Tabs content (.tabs__content)
+ */
+
+/*------------------------------------*\
+    $tabs CONTAINER
+\*------------------------------------*/
+
+
+.js-radio-tabs{
+.radio-btn {
+    @include bold-font;
+    @include font-color($primary-2);  
+    display: block;
+    background: $primary-1; 
+    /*width: 81.25%;*/
+    margin: 0 auto;  
+    border: 1px solid $primary-17;
+    border-bottom: none;
+
+   .radio-btn-li{
+        border-right:1px solid $primary-17;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center; 
+        display: inline-block;
+        vertical-align: top;
+        margin:0;
+
+            .radio-title {
+                @include bold-font;
+                display: block;
+                @include rem(padding, 16px 16px 0);
+            }
+            .radio-title:after {
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                bottom:15%;
+            }
+        
+    }
+    
+    .radio-btn-li:last-child{
+        border:none;
+    }
+    .tabs__content {
+        margin: 0;
+        padding: 0;
+        background: none repeat scroll 0% 0% $primary-1;
+        @include rem('left', 0px);
+        @include rem('top', 80px);
+        @include rem('bottom', 0px);
+        @include rem('right', 0px);            
+        display: none;
+    }
+    .content-active {
+        display: block;
+    }       
+}
+}

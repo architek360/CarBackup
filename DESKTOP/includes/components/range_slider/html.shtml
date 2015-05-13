@@ -1,0 +1,9 @@
+<!-- Range Slider Component  -->
+<div class="range-slider__wrapper">
+	<div class="range-slider"></div>
+	<div class="range-info">
+		<span class="range-text-1"></span>
+		<span class="divider"> - </span>
+		<span class="range-text-2"></span>
+	</div>
+</div>

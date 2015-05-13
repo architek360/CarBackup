@@ -1,0 +1,100 @@
+  <!-- ORDER RECONFIRMATION  Starts Here-->
+
+<div class="order-reconfirm clearfix">
+    <h1 class="heading2">
+       order acknowledgement
+    </h1>
+    <div class="shopping-bag__info">
+        <div class="info-icon"></div>
+        <p>for additional information<a href="tel:3174562564" alt="Click to call">cal 1800-111-111</a></p>
+    </div>
+    <p class="order-reconfirm__text">Dear Jean Dupont, Thank you for your order. A confirmation e-mail has ben sent to you along with instructions on how to follow the progress of the order.</p>
+    <div class="order-reconfirm__date">November 24th 2013</div>
+    <h2 class="order-reconfirm__number">ORDER No 115780</h2>
+
+
+
+
+
+    <ul class="js-products-orderconfirm" data-transactionid="transactionId" data-transactioncurrency="transactionCurrency" data-transactiontotal="transactionTotal" data-transactiontax="transactionTax" data-transactionshipping="transactionShipping" data-transactionshippingmethod="transactionShippingMethod" data-transactionpaymenttype="transactionPaymentType">
+
+        <li class="js-products-orderconfirm-li" data-productid="productid" data-productname="productName" data-productline="productLine" data-productcollection="productCollection" data-price="price" data-quantity="quantity">
+            <!-- PRODUCT DETAIL INFO-->
+            <div class="product-detail grid clearfix">
+                <h3 class="heading3">panthere ring</h3>
+                <span class="product-detail__variant">Yellow gold, tsavorite, lacquer</span>
+                <span class="product-detail__size">ref: HPI00480</span>
+                <div class="product grid__item one-whole">
+                    <div class="product__image"><img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="image" alt=""/></div>
+                    <p class="product__price">
+                        <span class="calculation">1 x $ 5,540</span>
+                        <span class="price-text">$ 5,540</span>
+                    </p>
+                </div>
+            </div>
+            <ul class="product-filter">
+                <li>
+                    <span class="product-filter__left">Engraving </span>
+                    <span class="product-filter__right">Helen Baker</span>
+                </li>
+                <li>
+                    <span class="product-filter__left"> a message card with your gift </span>
+                    <span class="product-filter__right">For my love Helen Baker</span>            
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+
+
+
+    <!--#set var="sales_tax" value="on" -->
+
+    <!--#include virtual="../../views/price_details/html.shtml" -->
+
+    <!-- ACCORDION  PRODUCT INFO-->
+
+    <div class="reconfirm-accordion clearfix">
+        <div class="js-accordion reconfirm-accordion__wrapper">
+             <div class="js-accordion__node reconfirm-accordion__node">
+                <div class="js-accordion_node__title reconfirm-accordion_node__title heading3">
+                    <span class="off"></span>
+                    <div class="reconfirm-accordion_node_title__ques">
+                        <h3>Billing Address</h3>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc reconfirm-accordion_node__desc">
+                    <p>Billing Address</p>
+                </div>
+            </div>
+
+             <div class="js-accordion__node reconfirm-accordion__node">
+                <div class="js-accordion_node__title reconfirm-accordion_node__title heading3">
+                    <span class="off"></span>
+                    <div class="reconfirm-accordion_node_title__ques">
+                        <h3>Shipping Address</h3>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc reconfirm-accordion_node__desc">
+                    <p>Shipping Address</p>
+                </div>
+            </div>
+            <div class="js-accordion__node reconfirm-accordion__node">
+                <div class="js-accordion_node__title reconfirm-accordion_node__title heading3">
+                  <span class="off"></span>
+                    <div class="reconfirm-accordion_node_title__ques">
+                        <h3>Delivery Method</h3>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc reconfirm-accordion_node__desc">
+                    <p>Delivery Method</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+ <!-- ORDER RECONFIRMATION Ends Here-->

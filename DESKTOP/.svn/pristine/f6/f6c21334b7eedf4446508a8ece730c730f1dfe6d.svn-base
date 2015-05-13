@@ -1,0 +1,193 @@
+   
+    <div style="display:none" name="formAjaxResponse" id="formAjaxResponse"></div>
+<div style="color:red;" class="error_message"></div>
+
+<div id="js-reg-step-2" class="form-layout js-reg-step-2">
+    <form enctype="multipart/form-data" name="js-reg-step-2" id="js-reg-step-2" action="/content/car/us/usa/en/services/my-cartier/registrationstep20.desktop.html" method="POST"><input type="hidden" value="js-reg-step-2" name=":formid"><input type="hidden" value="/content/car/us/usa/en/services/my-cartier/registrationstep20/jcr:content/navigationBlock/formbuilder/start" name=":formstart"><input type="hidden" value="UTF-8" name="_charset_"><input type="hidden" value="/content/car/langmaster/global/en/services/my-cartier/registrationstep3.html" name=":redirect"><div class="form"><fieldset>
+    <div class="txt clearfix">
+
+            <h2 style="text-align: center;">Thank You, Your account was successfully created</h2>
+<p style="text-align: center;"><i>We suggest you complete your profile in two minutes, so you can benefit from personalized information and privileges.</i></p>
+<ul>
+<li><span class="title">1</span>Between Cartier and you</li>
+<li><span class="title">2</span>Your Personal Information</li>
+</ul>
+<div><a adhocenable="false" href="/content/car/global/langmaster/en/collections.html" target="_blank">Skip this item and go directly to my cartier</a></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created </span></div>
+</div>            
+ <div class="heading-wrapper">
+
+<h3 class="heading3"> Between Cartier and you</h3>
+
+        </div>
+
+
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><hr><div class="heading-wrapper">
+
+<h5 class="heading5"> Do you own a cartier creation ?</h5>
+
+        </div>
+
+
+<div class="form-element checkbox-wrapper fn_grpdoyouown">
+                    <label class="checkbox  form-radio-label" for="no">
+                         <input type="radio" class="form-radio" value="no" name="fn_grpdoyouown" id="no" checked="">
+                        <span class="radio-name">NO
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpdoyouown">
+                    <label class="checkbox  form-radio-label" for="yes">
+                         <input type="radio" class="form-radio" value="yes" name="fn_grpdoyouown" id="yes">
+                        <span class="radio-name">YES
+</span>
+                    </label>
+                 </div>
+                    <hr><br>
+<div style="display:none" name="ajaxResponse" id="ajaxResponse"></div>
+<script>
+  makeAjaxCall("fieldType","","/content/car/us/usa/en/services/my-cartier/registrationstep20","",""); 
+</script>
+<br></div><div class="parsys_column cq-colctrl-lt0-c1"><hr>
+<div class="interest-product-line" >
+<div class="heading-wrapper">
+
+
+<h5 class="heading5"> Which product lines are you intersted in ?</h5>
+
+        </div>
+
+
+<div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="jewellery">
+                         <input type="checkbox" class="form-checkbox" value="jewellery" name="fn_grpinterdin" id="jewellery">
+                        <span class="checkbox-name">jewellery
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="bridal">
+                         <input type="checkbox" class="form-checkbox" value="bridal" name="fn_grpinterdin" id="bridal">
+                        <span class="checkbox-name">bridal
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="trinity">
+                         <input type="checkbox" class="form-checkbox" value="trinity" name="fn_grpinterdin" id="trinity">
+                        <span class="checkbox-name">trinity
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="accessories">
+                         <input type="checkbox" class="form-checkbox" value="accessories" name="fn_grpinterdin" id="accessories">
+                        <span class="checkbox-name">accessories
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="timepieces">
+                         <input type="checkbox" class="form-checkbox" value="timepieces" name="fn_grpinterdin" id="timepieces">
+                        <span class="checkbox-name">timepieces <br>
+
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="love">
+                         <input type="checkbox" class="form-checkbox" value="love" name="fn_grpinterdin" id="love">
+                        <span class="checkbox-name">love
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdin">
+                    <label class="checkbox  form-checkbox-label" for="fragrance">
+                         <input type="checkbox" class="form-checkbox" value="fragrance" name="fn_grpinterdin" id="fragrance">
+                        <span class="checkbox-name">fragrance
+</span>
+                    </label>
+                 </div>
+                    <div class="heading-wrapper">
+
+<h5 class="heading5"> Accessories</h5>
+
+        </div>
+
+
+<div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                    <label class="checkbox  form-checkbox-label" for="handbag">
+                         <input type="checkbox" class="form-checkbox" value="handbag" name="fn_grpinterdinacc" id="handbag">
+                        <span class="checkbox-name">Handbag
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                    <label class="checkbox  form-checkbox-label" for="belt">
+                         <input type="checkbox" class="form-checkbox" value="belt" name="fn_grpinterdinacc" id="belt">
+                        <span class="checkbox-name">belt
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                    <label class="checkbox  form-checkbox-label" for="sunglasses">
+                         <input type="checkbox" class="form-checkbox" value="sunglasses" name="fn_grpinterdinacc" id="sunglasses">
+                        <span class="checkbox-name">sunglasses
+</span>
+                    </label>
+                 </div>
+</div>
+
+
+<div class="own-smartphone">
+                    <hr><div class="heading-wrapper">
+
+<h5 class="heading5"> Do you own a smartphone / tablet ?</h5>
+
+        </div>
+
+
+<div class="form-element checkbox-wrapper fn_grpownsp">
+                    <label class="checkbox  form-checkbox-label" for="iphone">
+                         <input type="checkbox" class="form-checkbox" value="iphone" name="fn_grpownsp" id="iphone">
+                        <span class="checkbox-name">IPHONE
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpownsp">
+                    <label class="checkbox  form-checkbox-label" for="ipad">
+                         <input type="checkbox" class="form-checkbox" value="ipad" name="fn_grpownsp" id="ipad">
+                        <span class="checkbox-name">IPAD
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpownsp">
+                    <label class="checkbox  form-checkbox-label" for="Other smartphone">
+                         <input type="checkbox" class="form-checkbox" value="Other smartphone" name="fn_grpownsp" id="Other smartphone">
+                        <span class="checkbox-name">Other smartphone
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper fn_grpownsp">
+                    <label class="checkbox  form-checkbox-label" for="Other smartphone2">
+                         <input type="checkbox" class="form-checkbox" value="Other smartphone2" name="fn_grpownsp" id="Other smartphone2">
+                        <span class="checkbox-name">Other smartphone2
+</span>
+                    </label>
+                 </div>
+
+                    <hr></div></div>
+</div>
+                    <div style="clear:both"></div>
+</fieldset><div class="form-element button-wrapper submit">
+<input type="submit" value="PROCEED TO STEP 2/2" name="submit" class="form-button">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

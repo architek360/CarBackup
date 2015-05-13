@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    Boutique Scrollable -- Desktop CSS
+\*------------------------------------*/
+.loadingindicator{
+    width:16px;
+    height:16px;
+    background: url($path-images + 'icons/throbber.gif') no-repeat left top transparent;
+    margin: 0 auto;
+    display: block;
+    @include rem(margin-top, 50px);
+}
+.boutique.scrollable{
+    @include rem(height, 595px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin:0;
+    .no-result-msg{
+        display: none;
+        @include rem(font-size, 13px);
+        letter-spacing: normal;
+        text-align: center;
+    }
+    .jspDrag {
+        background: #a0a0a0;
+        position: relative;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+    /*
+     * CSS Styles that are needed by jScrollPane for it to operate correctly.
+     *
+    */
+    .jspContainer{
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        background: url($path-images + 'content/bg-grey.png') no-repeat left top;
+    }
+
+    .jspPane{
+        position: absolute;
+    }
+
+    .jspVerticalBar{
+        position: absolute;
+        top: 0;
+        @include rem(right, 5px);
+        @include rem(width, 6px);
+        height: 100%;
+    }
+
+    .jspHorizontalBar{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @include rem(height, 16px);
+    }
+
+    .jspCap{
+        display: none;
+    }
+
+    .jspHorizontalBar .jspCap{
+        float: left;
+    }
+
+    .jspTrack{
+        background: $primary-1;
+        position: relative;
+    }
+
+    .jspDrag{
+        background: $primary-10;
+        position: relative;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .jspHorizontalBar .jspTrack,
+    .jspHorizontalBar .jspDrag{
+        float: left;
+        height: 100%;
+    }
+
+    .jspArrow{
+        text-indent: -20000px;
+        display: block;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+    }
+
+    .jspArrow.jspDisabled{
+        cursor: default;
+        background: $primary-1;
+    }
+
+    .jspVerticalBar .jspArrow{
+        @include rem(height, 16px);
+
+    }
+
+    .jspHorizontalBar .jspArrow{
+        @include rem(width, 16px);
+        float: left;
+        height: 100%;
+    }
+
+    .jspArrowUp {
+        background: url($path-images + 'icons/top-arrow.png') no-repeat;
+        width: 7px;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+    .jspArrowDown {
+         background: url($path-images + 'icons/bottom-arrow.png') no-repeat ;
+        width: 7px;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .jspVerticalBar .jspArrow:focus{
+        outline: none;
+    }
+    .jspHorizontalBar{
+        display: none;
+    }
+
+}

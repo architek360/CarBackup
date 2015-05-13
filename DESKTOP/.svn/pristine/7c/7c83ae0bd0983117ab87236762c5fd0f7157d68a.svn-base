@@ -1,0 +1,190 @@
+/*!
+ * overlay.js
+ * This file contains application namespace and initializing the other modules
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-21
+ * @author    SapientNitro
+ * @licensor  Cartier Desktop
+ * @site      Cartier Desktop
+ *
+ * USAGE :
+ *
+ * Initialize overlay Plugin with pluginName "openOverlay" to The div that has class "js-zoom"
+ *       initializeOverlay = function() {
+ *          $(".js-zoom").openOverlay({
+ *         callback: initializingImageInOverLay
+ *    });
+ *
+ *  When click on 'js-zoom' button. One overlay open with zoomed image and If user want to exit from the
+ *  overlay view then, user will click on cross button to exit from it.
+ *
+ */
+
+
+;
+(function($, window, document, undefined) {
+	'use strict';
+
+	//check if jquery is defined, else retun
+	if ($ === undefined) {
+		console.log("jQuery not found");
+		return false;
+	}
+
+	var pluginName = "openOverlay",
+		defaults = {
+
+			ovelayInitializeClass: 'js-zoom',
+			hiddenOvelayClass: 'js-overlay',
+			callback: function() {}
+
+		},
+		$this;
+
+	function Plugin(element, options) {
+
+
+		this.element = element;
+		this.$elem = $(this.element);
+		this.options = $.extend({}, defaults, options);
+		this.init();
+
+		$this = this;
+	}
+
+	Plugin.prototype = {
+		/*@Static  method   :   init function
+          @param            :   None
+        */
+
+		init: function() {
+
+
+
+			this.setOverLay(this.options.ovelayInitializeClass, this.options.hiddenOvelayClass, this.options.callback);
+
+
+
+		},
+
+		/*
+		 *@private method : Function to initialize the Overlay
+		 *@param : ovelayInitializeClass :- class name on which click event binded to open overlay
+		 *          hiddenOvelayClass :- calss name of  hidden ovelay  element in dom
+		 *          callback : -add functionatilty in overlay
+		 */
+		setOverLay: function(ovelayInitializeClass, hiddenOvelayClass, callback) {
+
+			setTimeout(function() {
+
+				var
+				docHeight = $(document).height();
+
+
+				$("." + ovelayInitializeClass).on('click', function(e) {
+
+					if ($('.360-image').hasClass('display-block')) {
+						// Do nothing for 360
+                        e.preventDefault();
+                        
+					} else {
+						$("." + hiddenOvelayClass).show().height(docHeight);
+
+						callback(this);
+
+						$(".js-close-button").unbind('click');
+						$(".js-close-button").on('click', function(e) {
+
+							$('.' + hiddenOvelayClass).hide();
+							if ($(this).attr('href') === '#') e.preventDefault();
+
+						});
+
+						$(".toggleMenu").on('click', function(e) {
+							$(".js-overlay").addClass("body-push").css('position', 'fixed');
+
+						});
+					}
+				});
+
+				$(".main-container,footer").click(function() {
+
+					if ($(".js-overlay").hasClass("body-push")) {
+						$(".js-overlay").removeClass("body-push");
+					}
+				});
+
+
+				$('.img-container').mousemove(function(e) {
+					$this.updateOnMove(e);
+				});
+
+				$('.img-container').click(function(e) {
+					e.preventDefault();
+					$this.close();
+				});
+
+			}, 3);
+
+
+
+		},
+		//Keep the image in the center.
+		updateOnResize: function() {
+
+			var wHeight = $(window).height(),
+				wWidth = $(window).width(),
+				originTop = (wHeight / 2) - 1000,
+				originLeft = (wWidth / 2) - 500;
+
+			$('.img-container').css({
+				'top': originTop,
+				'left': originLeft,
+				'height': wHeight
+			});
+			$('.img-container img').css({
+				'top': originTop
+			});
+
+		},
+
+		//Move the image to see more, when the window is too small.
+
+		updateOnMove: function(e) {
+			var wHeight = window.innerHeight,
+
+				h = $('.js-overlay .img-container img').height(),
+				topHeight = (wHeight - h),
+
+				mouseY = e.pageY - $(window).scrollTop(),
+				posY = (Math.round((mouseY / wHeight) * 100) / 100) * (1000 - wHeight);
+
+			mouseY = -(mouseY - wHeight / 2) / 4;
+
+			$('.img-container').css({
+				'top': '' + (mouseY) + 'px'
+			});
+		},
+
+		// Close function.
+		close: function() {
+			$('.js-overlay').fadeOut();
+		}
+	};
+
+
+
+	$.fn[pluginName] = function(options) {
+
+		return this.each(function() {
+
+			if (!$.data(this, "plugin_" + pluginName)) {
+
+				$.data(this, "plugin_" + pluginName,
+					new Plugin(this, options));
+			}
+		});
+	};
+
+})(jQuery, window, document);

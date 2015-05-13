@@ -1,0 +1,25 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": [{
+		"noProduct": false,
+		"productArray": [{
+			"productLink" : "/",
+			"productImageLink" : "/",
+			"productTitle" : " Hi ",
+			"productDesc" : " Desc ",
+			"productPrice" : " $1200 ",
+			"productPriceInfo" : " exc. sale tax ",
+			"productAlttext" : "vaibhav"
+		}, {
+			"productLink" : "/",
+			"productImageLink" : "/",
+			"productTitle" : " Hi1 ",
+			"productDesc" : " Desc1 ",
+			"productPrice" : " $12001 ",
+			"productPriceInfo" : " exc. sale tax1 ",
+			"productAlttext" : "vaibhav"
+
+		}]
+	}]
+}

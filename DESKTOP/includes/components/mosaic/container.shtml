@@ -1,0 +1,16 @@
+<div class="mosaic-container-<!--#echo var="containerClass" -->">
+
+  <!--#if expr="${image}" -->
+    <!--#set var="imagenum" value="first clearfix" -->
+    <!--#include virtual="../../components/mosaic/image.shtml" -->
+  <!--#endif -->
+
+  <!--#if expr="${image2}" -->
+    <!--#set var="hoverImage" value="${hoverImage2}" -->
+    <!--#set var="imagenum" value="second clearfix" -->
+    <!--#set var="imagetext" value="${imagetext2}" -->
+    <!--#set var="image" value="${image2}" -->
+    <!--#set var="imagealt" value="${imagealt2}" -->
+    <!--#include virtual="../../components/mosaic/image.shtml" -->
+  <!--#endif -->
+</div>

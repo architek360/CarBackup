@@ -1,0 +1,411 @@
+<!--Contact Ambassador Block Starts Here-->
+<!--#set var="back-static-text" value="Back to Panthère de Cartier" -->
+<!--#include virtual="../../components/back_button/html.shtml" -->
+<div id="player"></div>
+<div class="ambassador-cont grid js-product js-product-pdp">
+    <hr/>
+    <!--#include virtual="../../components/carousel/product_carousel.shtml" -->
+    <!-- PRODUCT PRICE DETAIL-->
+    <div class="ambassador-cont__price-detail">
+        <span class="product-price js-product-price">$11,200</span>
+        <span class="product-taxes">Excl. Sales Tax</span>
+    </div>
+    <input type="hidden" class="createAccountPath" value='/cartier/pages/login_page.shtml'>
+    <div class="js-form-validator">
+        <form>
+            <!-- PRODUCT ATTRIBUTES LIKE SIZE , SIZING GUIDE-->
+            <fieldset class="js-form-validator-fieldset">
+                <div class="ambassador-cont__attributes">
+                    <div class="attributes-size">
+                        <!--#set var="input-name" value="fn_size" -->
+                        <!--#set var="style-name" value="select-2 js-inputfield js-sizeselector display-none" -->
+                        <!--#set var="option-component" value="size_option" -->
+                        <!--#include virtual="../../components/form_elements/select.shtml" -->
+                    </div>
+                    <input type="hidden" name="fn_pid" value= 'sdfjnsd' id="productid"/>
+                    <input type="hidden" name="fn_qty" value= "1"/>
+                    <input type="hidden" name="pdp_pagepath" value= "hello" id="pagePath"/>
+
+
+                    
+                    <!--Other hidden inputs-->
+                    <div class="attributes-sizing-guide">
+                        <!--#set var="more-text" value="sizing guide" -->
+                        <!--#set var="arrow-class" value="arrow-show" -->  
+                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </div>
+
+                </div>
+            </fieldset>
+            <!-- ACCORDION  ATTRIBUTES-->
+            <div class="att-accordion clearfix">
+                <div class="js-accordion att-accordion__wrapper">
+                    <div class="js-accordion__node att-accordion__node">
+                        <div class="js-accordion_node__title att-accordion_node__title heading3">
+                            <span class=""></span>
+                            <div class="att-accordion_node_title__ques">
+                                <p>engraving</p>
+                            </div>
+                        </div>
+                        <div class="js-accordion_node__desc att-accordion_node__desc">
+                            <fieldset data-confirm-flag='false'>
+                            <!--#include virtual="../../views/engraving/html.shtml" -->
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="js-accordion__node att-accordion__node">
+                        <div class="js-accordion_node__title att-accordion_node__title heading3">
+                            <span class=""></span>
+                            <div class="att-accordion_node_title__ques">
+                                <p>adjust your bracelet</p>
+                            </div>
+                        </div>
+                        <div class="js-accordion_node__desc att-accordion_node__desc">
+                            <fieldset data-confirm-flag='false'>
+                            <!--#include virtual="../../views/adjust_bracelet_size/html.shtml" -->
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            <!-- ACTION BUTTON ELEMENTS-->
+            <div class="ambassador-cont__action-button">
+
+                <!--#set var="text-detail" value="add to shopping bag" -->
+                <!--#set var="cta--varaint" value="cta--red-width-30 js-addtoshopping" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+
+
+
+
+                <!-- Request price Box Starts Here-->
+                <div class="js-accordion display-none">
+                    <div class="js-accordion__node js-req-price">
+                        <div class="js-accordion_node__title">
+                                <!--#set var="text-detail" value="Request Price" -->
+                                <!--#set var="cta--varaint" value="cta--red-width-30" -->
+                                <!--#include virtual="../../components/form_elements/button.shtml" -->  
+                        </div>
+                        <div class="js-accordion_node__desc js-form-validator">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Request price Box Ends Here-->
+
+
+
+
+
+                <p class="phone-detail">to order by phone call<span class="phone-detail__number">1-800-227-8437</span></p>
+                <div class="js-guest-account">
+                    <input type="hidden" class="js-wishlist_pagepath" name="wishlist_pagepath" value="wishlistPath"/>
+                    <input type="hidden" class="js-pagepath" name="pagepath" value="pagepath"/> 
+                    <input type="hidden" id="wishlist_varient_refrence" name="wishlist_varient_refrence" value="pid">
+
+                    <div class="js-accordion-x">
+                        <div class="js-accordion__node">
+                            <div class="js-accordion_node__title">
+                                
+                                
+                                
+                    <!--#set var="text-detail" value="add selection to wishlist" -->
+                    <!--#set var="cta--varaint" value="cta--grey-pad-30 js-add-selection" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                            </div>
+                            <div class="js-accordion_node__desc js-add_wishlist_accordion" style="display: none;">
+                                <div class="copy-to-wishlist">
+                                    <div class="input-field">
+                                        
+                                        
+                                        
+                                        <label class="form-label" for="fn_copywishlistname">add to my wish list</label>
+                                        <div class="single-line">
+                                            
+                                            
+                                            <!-- Select Box Starts Here-->
+                                            <select name="fn_copywishlistname" class="form-select select-1 js-select-addtomywishlist">
+                                                <option data-wishlistno="123" value="watches">Watches</option>
+                                                <option data-wishlistno="234" value="rings">Rings</option>
+                                            </select>
+                                            <!-- Select Box Ends Here-->
+                                            
+                                            
+                                            <button class="cta-button cta-button__inner cta--red-width-auto-pad-20 js-addtomywishlist-ok" type="submit">
+                                            <span class="input-arrow"></span>
+                                            <span class="cta-button__input">ok</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        
+                                        
+                                        
+                                        <label class="form-label" for="fn_newwishlistname">create a new wishlist occasion</label>
+                                        <div class="single-line">
+                                            <form class="js-form-validator createwishlistform">                                           
+                                            <input type="text" ""="" class="form-input js-newwishlistname" name="fn_createnewwishlistpdp">
+                                            <button class="cta-button cta-button__inner cta--red-width-auto-pad-20 js-createnewwishlist-ok" type="submit">
+                                            <span class="input-arrow"></span>
+                                            <span class="cta-button__input">ok</span>
+                                            </button>
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+    </div>
+
+
+    <!-- CONTACT TAB -->
+    <div class="js-accordion ambassador-cont__contact-tab">
+        <div class="info-icon"></div>
+        <div class="js-accordion__node js-request-info">
+            <div class="js-accordion_node__title contact-tab__title">
+                <span class="off"></span>
+                <p class="att-accordion_node_title__ques">request information</p>
+            </div>
+            <div class="js-accordion_node__desc js-form-validator">
+            </div>
+        </div>
+        <div class="js-accordion__node js-contact-ambas">
+            <div class="js-accordion_node__title contact-tab__title">
+                <span class="off"></span>
+                <p class="att-accordion_node_title__ques">contact ambassador</p>
+            </div>
+            <div class="js-accordion_node__desc js-form-validator">
+            </div>
+        </div>
+    </div>
+    <!-- ACCORDION PRODUCT INFO-->
+    <div class="js-product-info att-accordion clearfix">
+        <div class="js-accordion att-accordion__wrapper">
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques" data-gtm="Details">
+                        <h2>details</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc">
+                    <h2>details</h2>
+                </div>
+            </div>
+            <div class="js-accordion__node att-accordion__node" >
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques" data-gtm="description">
+                        <h2>description</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc js-share-desc">
+                    <h2>description</h2>
+                </div>
+            </div>
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques" data-gtm="other suggestions">
+                        <h2>other suggestions</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc">
+                    
+                        <!--#include virtual="../../components/carousel/suggestion_carousel.shtml" -->
+                   
+                </div>
+            </div>
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques" data-gtm="history and stories">
+                        <h2>history and stories: cartier, a pioneer in modern watchmaking</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc history-carousel">
+                    <div class="carousel">
+                        <ul class=" bxslider js-slider-history">
+                            <li>
+                                <div class="videocontainer js-video" style="position:relative; display:block; height: 600px;">
+                                    
+                                    <img class="video-poster js-video-poster" src="../etc/designs/dmp/clientlibs_base/images/content/video-poster.jpg"  height="278" width="510" style="position:absolute;"/>
+                                    <img class="video-play-icon js-video-icon" src="../etc/designs/dmp/clientlibs_base/images/content/video-play-icon.png"  height="278" width="510" style="position:absolute;"/>
+                                </div>
+                               <!--  <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/yaBNjTtCxd4?autoplay=1&origin=http://cartier.com" 
+                                data-source="youtube"></span> -->
+                                <!-- <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/qtngzm0T1yI?autoplay=1&origin=http://cartier.com" 
+                                data-source="youtube"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span> -->
+
+                                 <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/hqiNL4Hn04A?origin=http://cartier.com" 
+                                data-source="youtube"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span>
+
+                            
+                              <!--   <span class="video-url js-video-url" 
+                                data-id="XMzYwNjE4MDQ4" data-source="youku"
+                                data-url="http://player.youku.com/player.php/sid/XMzYwNjE4MDQ4/v.swf"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span>  -->
+
+
+
+                                
+                               
+                               <!-- <span class="js-video-url" 
+                                data-id="XMzU5MjI0NDI4" data-source="youku"
+                                data-width="510"></span> -->
+                            </li>   
+
+                            <li>
+                                <div class="videocontainer js-video" style="position:relative; display:block; height: 600px;">
+                                    
+                                    <img class="video-poster js-video-poster" src="../etc/designs/dmp/clientlibs_base/images/content/video-poster.jpg"  height="278" width="510" style="position:absolute;"/>
+                                    <img class="video-play-icon js-video-icon" src="../etc/designs/dmp/clientlibs_base/images/content/video-play-icon.png"  height="278" width="510" style="position:absolute;"/>
+                                </div>
+                               <!--  <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/yaBNjTtCxd4?autoplay=1&origin=http://cartier.com" 
+                                data-source="youtube"></span> -->
+                                <!-- <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/qtngzm0T1yI?autoplay=1&origin=http://cartier.com" 
+                                data-source="youtube"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span> -->
+
+                                 <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/hqiNL4Hn04A?origin=http://cartier.com" 
+                                data-source="youtube"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span>
+
+                            
+                              <!--   <span class="video-url js-video-url" 
+                                data-id="XMzYwNjE4MDQ4" data-source="youku"
+                                data-url="http://player.youku.com/player.php/sid/XMzYwNjE4MDQ4/v.swf"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span>  -->
+
+
+
+                                
+                               
+                               <!-- <span class="js-video-url" 
+                                data-id="XMzU5MjI0NDI4" data-source="youku"
+                                data-width="510"></span> -->
+                            </li>   
+                            <li>
+                                <div class="videocontainer js-video" style="position:relative; display:block; height: 600px;">
+                                    
+                                    <img class="video-poster js-video-poster" src="../etc/designs/dmp/clientlibs_base/images/content/video-poster.jpg"  height="278" width="510" style="position:absolute;"/>
+                                    <img class="video-play-icon js-video-icon" src="../etc/designs/dmp/clientlibs_base/images/content/video-play-icon.png"  height="278" width="510" style="position:absolute;"/>
+                                </div>
+                               <!--  <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/yaBNjTtCxd4?autoplay=1&origin=http://cartier.com" 
+                                data-source="youtube"></span> -->
+                                <!-- <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/qtngzm0T1yI?autoplay=1&origin=http://cartier.com" 
+                                data-source="youtube"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span> -->
+
+                                 <span class="video-url js-video-url" 
+                                data-url="http://www.youtube.com/embed/hqiNL4Hn04A?origin=http://cartier.com" 
+                                data-source="youtube"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span>
+
+                            
+                              <!--   <span class="video-url js-video-url" 
+                                data-id="XMzYwNjE4MDQ4" data-source="youku"
+                                data-url="http://player.youku.com/player.php/sid/XMzYwNjE4MDQ4/v.swf"
+                                data-lang-pref="fr"
+                                data-load-policy="1"></span>  -->
+
+
+
+                                
+                               
+                               <!-- <span class="js-video-url" 
+                                data-id="XMzU5MjI0NDI4" data-source="youku"
+                                data-width="510"></span> -->
+                            </li>   
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques" data-gtm="famous diamond">
+                        <h2>the famous diamond</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc ">
+                    <div class="carousel" >
+                        <ul class=" bxslider js-slider-framous">
+                            <li >
+                                <p>
+                                    <!--#include virtual="../../components/famous_diamond/html.shtml" -->
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <!--#include virtual="../../components/famous_diamond/html.shtml" -->
+                                </p>
+                            </li>
+                            <li >
+                                <p>
+                                    <!--#include virtual="../../components/famous_diamond/html.shtml" -->
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF ACCORDION PRODUCT INFO-->
+</div>
+<!--#include virtual="../../components/social_share/html.shtml" -->
+<div class="ambassador--quick-links">
+    <!--#include virtual="../../views/quick_links/html.shtml" -->
+</div>
+
+
+<div class='js-overlay'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class="img-container">
+        <img src="" alt="Overlay image" class="image">     
+    </div>
+</div>
+
+<div class='js-overlay-zoom'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class='degree360-icon-cont'>
+        <a class="degree360-icon js-degree360" href="#"></a>
+    </div>
+
+    <div class="image-tab 360-image clearfix">
+        <img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_images/W1556242_360_0_9459.png" id="my-image-360" height="420" width="420">
+    </div>
+
+</div>
+
+
+
+<!-- Contact Ambassador Block Ends Here -->

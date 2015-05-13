@@ -1,0 +1,13 @@
+<!-- breadcrumb Starts Here-->
+<div class="grid breadcrumb clearfix">
+	<h3 class="heading3">you are here:</h3>
+	<ul>
+		<li class="one-quarter  palm--one-whole heading3"><span></span>ipsum</li>
+		<li class="one-quarter  palm--one-whole heading3"><span></span>ipsum</li>
+		<li class="one-quarter  palm--one-whole heading3"><span></span>ipsum</li>
+		<li class="one-quarter  palm--one-whole heading3"><span></span>ipsum</li>
+		<li class="one-quarter  palm--one-whole heading3"><span></span>ipsum</li>
+	</ul>
+</div>
+
+<!-- breadcrumb Ends Here-->

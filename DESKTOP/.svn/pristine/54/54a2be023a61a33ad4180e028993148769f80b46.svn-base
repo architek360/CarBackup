@@ -1,0 +1,600 @@
+
+<!-- Top Navigation Ends Here-->
+
+<header class="header">
+
+        <nav class="left-nav">
+            <ul class="left-nav__list">
+                <li>
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="nav-link" -->
+                    <!--#set var="link-name" value="Contact Us" -->
+                    <!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+                </li>
+                
+                <li>
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="nav-link" -->
+                    <!--#set var="link-name" value="Find A Boutique" -->
+                    <!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+                </li>
+
+            </ul>
+        </nav>
+        <nav class="right-nav">
+
+            <ul class="right-nav__list">
+                <li>
+                  <ul><li class="connection">
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="nav-link" -->
+                    <!--#set var="link-name" value="Connection" -->
+                    <!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+                </li>
+
+                <li class="display-none mycartier">
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="nav-link" -->
+                    <!--#set var="link-name" value="my cartier" -->
+                    <!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+                </li></ul>
+                </li>
+
+                <li>
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="nav-link" -->
+                    <!--#set var="link-name" value="Wishlist" -->
+                    <!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+                </li>
+                <li class="shopping-bag js-shopping-bag">
+                  <a href="#" class="nav-link" title="shopping bag">
+                      <span class="cart-icon"></span> shopping bag
+                  </a>
+                   <!--#include virtual="../../components/Shopping_bag_pop_up/desktop.shtml" -->
+                </li>
+        
+            </ul> 
+
+                   <!-- SEARCH CONTAINER -->
+
+                   <!--#include virtual="../../components/search_box/desktop.shtml" -->
+              
+
+        </nav>
+        <h1 class="site-logo">
+            <!--#if expr="${THEME_1}=/main_theme/" -->
+              <!--#if expr="${MODULE}=/living-heritage/" -->
+              <!--#set var="ICON_IMG_PATH_LOGO" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bridal-theme-logo/" -->
+                <!--#set var="logo" value="Cartier_jeweller-watchmaker-leather-goods.png" -->
+              <!--#else-->
+              <!--#set var="ICON_IMG_PATH_LOGO" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/main-theme-logo/" -->
+                <!--#set var="logo" value="Cartier_jeweller-watchmaker-leather-goods.png" -->
+              <!--#endif -->           
+            <!--#else-->
+                          <!--#set var="ICON_IMG_PATH_LOGO" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bridal-theme-logo/" -->
+              <!--#set var="logo" value="Cartier_jeweller-watchmaker-leather-goods.png" -->
+            <!--#endif -->
+            <a href="../index.html" class="top-nav__logo" title="Cartier – jeweler, watchmaker, leather goods"><img src="<!--#echo var="ICON_IMG_PATH_LOGO" --><!--#echo var="logo" -->" alt="Cartier – jeweler, watchmaker, leather goods">
+            </a>
+            
+        </h1>
+
+
+</header>
+<div class="primary-nav-container">
+  <!-- MAIN NAVIGATION STARTS HERE-->
+  <ul class="first-level-nav-container">
+
+    <li class="first-level-nav">
+      <!--NAVIGATION LEVEL ONE-->
+     <a class="first-level-nav__title active" href="#" title="Collections"> <h2>Collections</h2></a>
+      <!--NAVIGATION LEVEL TWO-->
+      <ul class="nav nav-show">
+        <li class="test secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav" title="JEWELLRY">JEWWLRY</a>
+          
+          <!-- MEGA MENU STARTS HERE -->
+          <ul class="mega-menu" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg_cartier_collections_jewelry.jpg') -110px no-repeat;">
+            
+            <!-- COLOUMN STARTS -->
+            <li class="col">
+              <a href="#" class="category-title" title="JEWELLRY">Exceptional Creation </a>
+              <ul>
+                <li><a href="#" title="High Jewelry">High Jewelry</a></li>
+                <li><a href="#" title="Fine Watchmaking">Fine Watchmaking</a></li>
+                <li><a href="#" title="Cartier Dart">Cartier Dart</a></li>
+              </ul>
+            </li>
+            <!-- COLOUMN ENDS -->
+
+            <!-- COLOUMN STARTS -->
+            <li class="col">
+             <a href="#" class="category-title" title="Collections">Collections</a>
+              <ul>
+                <li><a href="#" title="Loafers">Loafers</a> </li>
+                <li><a href="#" title="Sneakers">Sneakers</a></li>
+                <li><a href="#" title="Formal">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+            <!-- COLOUMN ENDS -->
+
+            <!-- COLOUMN STARTS -->
+            <li class="col">
+              <a href="#" class="category-title" title="Collections">Collections</a>
+              <ul>
+                <li><a href="#" title="Loafers" >Loafers</a> </li>
+                <li><a href="#" title="Sneakers">Sneakers</a></li>
+                <li><a href="#" title="Formal">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+            <!-- COLOUMN ENDS -->
+
+            <!-- COLOUMN STARTS -->
+             <li class="col last-col">
+              <a href="#" class="category-title" title="Collections">Collections</a>
+              <ul>
+                <li><a href="#" title="Loafers" >Loafers</a> </li>
+                <li><a href="#" title="Sneakers">Sneakers</a></li>
+                <li><a href="#" title="Formal">Formal</a></li>
+              </ul>
+            </li>
+            <!-- COLOUMN ENDS -->
+          </ul>
+          <!-- MEGA MENU ENDS HERE -->
+        </li>
+
+
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav" title="TIMEPIECES">TIMEPIECES</a>
+           <!-- MEGA MENU STARTS HERE -->
+          <ul class="mega-menu maison-menu" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//content/bg_cartier_maison_patrimoine_0.jpg') -110px no-repeat;">
+            <!-- COLOUMN STARTS -->
+            <li class="col">
+              <ul>
+                <li><a href="#" title="Loafers">Loafers</a> </li>
+                <li><a href="#" title="Loafers">Sneakers</a></li>
+                <li><a href="#" title="Salon International de la Haute Horlogerie 2014">Salon International de </a></li>
+                <li><a href="#" title="Salon International de la Haute Horlogerie 2014">Cartier Collection </a></li>
+              </ul>
+            </li>
+            <!-- COLOUMN ENDS -->
+
+          </ul>
+          <!-- MEGA MENU ENDS HERE -->
+        </li>
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav" title="Loafers">BRIDAL</a>
+          <ul class="mega-menu" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg_cartier_collections_jewelry.jpg') -110px no-repeat;">
+            <!-- <img src="../etc/designs/dmp/clientlibs_base/images/content/bg_cartier_collections_jewelry.jpg" alt="background image not available"/> -->
+            <li class="col">
+              <a href="#" class="category-title">Exceptional Creation </a>
+              <ul>
+                <li><a href="#" title="Loafers">High Jewelry</a></li>
+                <li><a href="#" title="Loafers">Fine Watchmaking</a></li>
+                <li><a href="#" title="Loafers">Cartier Dart</a></li>
+                
+              </ul>
+            </li>
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+             <li class="col last-col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav active">ACCESSORIES</a>
+          <ul class="mega-menu" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg_cartier_collections_jewelry.jpg') -110px no-repeat;">
+            <!-- <img src="../etc/designs/dmp/clientlibs_base/images/content/bg_cartier_collections_jewelry.jpg" alt="background image not available"/> -->
+            <li class="col">
+              <a href="#" class="category-title">Exceptional Creation </a>
+              <ul>
+                <li><a href="#">High Jewelry</a></li>
+                <li><a href="#">Fine Watchmaking</a></li>
+                <li><a href="#">Cartier Dart</a></li>
+                
+              </ul>
+            </li>
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+             <li class="col last-col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav">FRAGRANCES</a>
+          <ul class="mega-menu" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg_cartier_collections_jewelry.jpg') -110px no-repeat;">
+            <!-- <img src="../etc/designs/dmp/clientlibs_base/images/content/bg_cartier_collections_jewelry.jpg" alt="background image not available"/> -->
+            <li class="col">
+              <a href="#" class="category-title">Exceptional Creation </a>
+              <ul>
+                <li><a href="#">High Jewelry</a></li>
+                <li><a href="#">Fine Watchmaking</a></li>
+                <li><a href="#">Cartier Dart</a></li>
+                
+              </ul>
+            </li>
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+             <li class="col last-col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav">GIFTS</a>
+          <ul class="mega-menu " style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg_cartier_collections_jewelry.jpg') -110px no-repeat;">
+            <!-- <img src="../etc/designs/dmp/clientlibs_base/images/content/bg_cartier_collections_jewelry.jpg" alt="background image not available"/> -->
+            <li class="col">
+              <a href="#" class="category-title">Exceptional Creation </a>
+              <ul>
+                <li><a href="#">High Jewelry</a></li>
+                <li><a href="#">Fine Watchmaking</a></li>
+                <li><a href="#">Cartier Dart</a></li>
+                
+              </ul>
+            </li>
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+             <li class="col last-col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+       
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav">Outerwear</a>
+          <ul class="mega-menu" style="background: url('../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg_cartier_collections_jewelry.jpg') -110px no-repeat;">
+            <!-- <img src="../etc/designs/dmp/clientlibs_base/images/content/bg_cartier_collections_jewelry.jpg" alt="background image not available"/> -->
+            <li class="col">
+              <a href="#" class="category-title">Exceptional Creation </a>
+              <ul>
+                <li><a href="#">High Jewelry</a></li>
+                <li><a href="#">Fine Watchmaking</a></li>
+                <li><a href="#">Cartier Dart</a></li>
+                
+              </ul>
+            </li>
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Panthère de Cartier</a> </li>
+                <li><a href="#">LOVE</a></li>
+                <li><a href="#">Amulette de Cartier</a></li>
+                <li><a href="#">Panthère de Cartier</a> </li>
+                <li><a href="#">Amulette de Cartier</a></li>
+                <li><a href="#">Panthère de Cartier</a> </li>
+                <li><a href="#">Paris Nouvelle Vague</a> </li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+            <li class="col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+                <li><a href="#" title="View All" class="view-all-arrow" >View All</a></li>
+              </ul>
+            </li>
+
+             <li class="col last-col">
+              <a href="#" class="category-title">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+        <li class="secondary-nav">
+          <a href="#" class="sec-nav-link js-sec-nav">Shipping Info</a>
+          <ul class="mega-menu service__mycartier" style="background-color: white">
+            <li class="col">
+              <a href="#" class="category-title">My oders</a>
+              <ul>
+                <li><a href="#">My orders</a></li>
+              </ul>
+            </li>
+            <li class="col">
+              <a href="#" class="category-title">My services</a>
+              <ul>
+                <li><a href="#">My repair service</a> </li>
+              </ul>
+            </li>
+
+            <li class="col">
+              <a href="#" class="category-title">My preferences</a>
+              <ul>
+                <li><a href="#">My personal information</a> </li>
+                <li><a href="#">My addresses</a></li>
+                <li><a href="#">My subscriptions</a></li>
+                <li><a href="#">My wishlists</a></li>
+              </ul>
+            </li>
+
+             <li class="col last-col">
+              <a href="#" class="category-title">FAQ</a>
+              <ul>
+                
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+      </ul>
+  </li>
+
+   <li class="first-level-nav">
+      <a class="first-level-nav__title" href="#"><h2>collections</h2></a>
+      <ul class="nav">
+        <li class="test">
+          <a href="#">JEWWLRY</a>
+          <ul>
+            <li>
+              <a href="#">Exceptional Creation </a>
+              <ul>
+                <li><a href="#">High Jewelry</a></li>
+                <li><a href="#">Fine Watchmaking</a></li>
+                <li><a href="#">Cartier Dart</a></li>
+                
+              </ul>
+            </li>
+            <li>
+              <a href="#">Collections</a>
+              <ul>
+                <li><a href="#">Loafers</a> </li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Formal</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">TIMEPIECES</a>
+          <ul>
+            <li>
+              <a href="#">Mens</a>
+              <ul>
+                <li><a href="#">TIMEPIECES1</a></li>
+                <li><a href="#">TIMEPIECES2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Womens</a>
+              <ul>
+                  <li><a href="#">TIMEPIECES1</a></li>
+                <li><a href="#">TIMEPIECES2</a></li>
+             </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">BRIDAL</a>
+          <ul>
+            <li>
+              <a href="#">Mens</a>
+            </li>
+            <li>
+              <a href="#">Womens</a>
+              <ul>
+                <li><a href="#">BRIDAL1</a></li>
+                <li><a href="#">BRIDAL2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">ACCESSORIES</a>
+          <ul>
+            <li>
+              <a href="#">Long</a>
+              <ul>
+                <li><a href="#">Belts</a></li>
+                <li><a href="#">Bags</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Short</a>
+              <ul>
+              <li><a href="#">Belts</a></li>
+                <li><a href="#">Bags</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="#">Mini</a>
+              <ul>
+            <li><a href="#">Belts</a></li>
+                <li><a href="#">Bags</a></li>
+                  </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">FRAGRANCES</a>
+          <ul>
+            <li>
+              <a href="#">Casual</a>
+            </li>
+            <li>
+              <a href="#">Formal</a>
+              <ul>
+                <li><a href="#">Wedding</a></li>
+                <li><a href="#">Party</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </li>
+        <li>
+          <a href="#">GIFTS</a>
+          <ul>
+            <li>
+              <a href="#">Mens</a>
+              <ul>
+                <li><a href="#">Wool</a></li>
+                <li><a href="#">Knitwear</a></li>
+                <li><a href="#">Light Sweaters</a></li>
+                <li><a href="#">Cardigans</a></li>
+                <li><a href="#">Hoodies</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Womens</a>
+              <ul>
+                <li><a href="#">Wool</a></li>
+                <li><a href="#">Knitwear</a></li>
+                <li><a href="#">Light Sweaters</a></li>
+                <li><a href="#">Cardigans</a></li>
+                <li><a href="#">Hoodies</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+       
+        <li>
+          <a href="#">Outerwear</a>
+          <ul>
+            <li>
+              <a href="#">Womens</a>
+              <ul>
+                <li><a href="#">Winter</a></li>
+                <li><a href="#">Spring/Fall</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Mens</a>
+              <ul>
+                <li><a href="#">Winter</a></li>
+                <li><a href="#">Spring/Fall</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Shipping Info</a>
+        </li>
+      </ul>
+  </li>
+  
+  <li class="first-level-nav">
+    <a class="first-level-nav__title" href="#"><h2>services</h2> </a>
+        <ul class="nav">
+        <li><a href="#">my account</a></li>
+        <li><a href="#">expertise guide</a></li>
+        <li><a href="#">wishlist</a></li>
+        <li><a href="#">youtube channel</a></li>
+
+    </ul>
+  </li>
+</ul>
+</div>
+    

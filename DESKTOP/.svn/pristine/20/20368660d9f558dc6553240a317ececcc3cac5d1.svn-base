@@ -1,0 +1,26 @@
+
+<div class="wrapper-sub-menu va-accordion">
+  <div class="va-nav"> <span class="js-less-arrow less-arrow">Previous</span> <span class="js-more-arrow more-arrow">Next</span> </div>
+  <ul class="sub-menu">
+    <li class="first"><a href="#" title="Australia">Australia</a></li>
+    <li><a href="#" title="Brazil">Brazil</a></li>
+    <li><a href="#" title="中国">中国</a></li>
+    <li><a href="#" title="Deutschland">Deutschland</a></li>
+    <li><a href="#" title="España">España</a></li>
+    <li><a href="#" title="France">France</a></li>
+    <li><a href="#" title="香港">香港</a></li>
+    <li><a href="#" title="Italia">Italia</a></li>
+    <li><a href="#" title="日本">日本</a></li>
+    <li><a href="#" title="한국">한국</a></li>
+    <li><a href="#" title="Mexico">Mexico</a></li>
+    <li><a href="#" title="РОССИЯ">РОССИЯ</a></li>
+    <li><a href="#" title="Singapore">Singapore</a></li>
+    <li><a href="#" title="新加坡">新加坡</a></li>
+    <li><a href="#" title="Suisse">Suisse</a></li>
+    <li><a href="#" title="Schweiz">Schweiz</a></li>
+    <li><a href="#" title="Svizzera">Svizzera</a></li>
+    <li><a href="#" title="台灣">台灣</a></li>
+    <li><a href="#" title="United Kingdom">United Kingdom</a></li>
+    <li><a href="#" title="United States">United States</a></li>
+  </ul>
+</div>

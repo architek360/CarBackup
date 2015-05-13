@@ -1,0 +1,445 @@
+/*------------------------------------*\
+    SUBSCRIPTION AND INTRESTS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.subscription)
+ * RECEIVE CARTIER NEWS BLOCK....personal details (.receive-news)
+ * PRODUCT INTRESTED BLOCK....birthday details (.product-int)
+
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+@mixin common-style(){
+	border: none;
+
+	@include f(12);
+	@include rem('padding',0px);
+	@include proxiBold-font();
+}
+
+@mixin sub-form(){
+	@include main-font;
+	@include f(12);
+	text-transform: none;
+}
+.subscription{
+	@include proxi-font;
+	width: 100%;
+
+	.heading1{
+		@include f(30);
+		@include proxi-font;
+		@include rem(letter-spacing, 3px);
+		border-bottom:none;
+		@include rem(padding, 25px 0 32px 0);
+	}
+
+	.subscription__welcome-image{
+ 		height: 231px;
+ 		@include rem(margin, 10px 0 10px);
+  		background:url($path-images+"/content/push_nav_subsciprions_100.jpg") no-repeat;
+	}
+
+	.subscription__content{
+		border:1px solid $primary-17;
+		@include rem(padding, 25px);
+		@include rem(margin-bottom, 25px);
+
+		.inner-content{
+			border-bottom:1px solid $primary-17;
+			display: inline-block;
+			min-height: 190px;
+		}
+	}
+	.grid__item{
+			@include bold-font;
+			@include rem('padding',0px);
+			label{
+				@include brand-font;
+			}
+
+			&:last-child{
+				padding:0;
+			}
+	}
+
+	.grid__item--row{
+
+		@include rem('min-height',120px);
+
+		input + span {
+			height: 35px
+		}
+	}
+	
+	.grid__item--pad{
+		@include rem('padding',0 0 30px 0);
+	}
+	
+	/*------------------------------------*\
+	    $RECEIVE CARTIER NEWS BLOCK
+	\*------------------------------------*/
+
+	.receive-news{
+		background: $primary-1;
+		@include common-style;
+		@include rem(margin, 5px 0 10px);
+
+		.receive-news__list{
+			@include set-ulFix;
+			@include rem(padding, 10px 0 0);
+
+			li{
+				display:inline-block;
+				vertical-align: top;
+				line-height:22px;
+				width: 100%;
+
+				.form-check{
+					@include sub-form;
+				}
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $RODUCT INTRESTED BLOCK
+	\*------------------------------------*/
+
+	.product-int{
+		background: $primary-1;
+		@include common-style;
+		@include rem(margin, 5px 0 10px);
+
+		.product-int__list{
+			@include set-ulFix;
+			@include rem(padding, 14px 0 0);
+
+			.checkbox-wrapper{
+				display: inline-block;
+				height: 30px;
+				@include rem(margin, 0 0 5px 0);
+				width: 180px;
+			}
+			.checkbox-name{
+				width: 86%;
+			}
+		}
+
+		.accessories__list{
+			@include set-ulFix;
+			@include rem(padding, 14px 0 0);
+
+			.checkbox-wrapper{
+				display: inline-block;
+				height: 30px;
+				@include rem(margin, 0 0 5px 0);
+				width: 140px;
+			}
+			.checkbox-name{
+				width: 80%;
+			}
+		}
+	}
+
+	.form-check-label{
+		@include rem(padding-top, 2px);
+	}
+	.button-wrapper{
+		text-align:center;
+		clear:both;
+		.cta-button{
+			margin: 10px auto;
+		}
+
+		.cta--red-width-auto-pad-20 {
+			@include rem(padding, 9px 14px 9px);
+		}
+	}
+
+	.one-half:first-child{
+		border-right:1px dotted $primary-17;
+		padding-right: 46px;
+		width: 465px;
+	}
+	.one-half:first-child + .one-half{
+		width: 458px;
+		padding-left: 26px;
+	}
+
+	.checkbox-wrapper{
+		@include rem(padding, 5px 0);
+	}
+
+}
+
+
+.js-subscription-and-interest-form {
+
+	.form{
+		position: relative;
+
+		.button-wrapper{
+			position: absolute;
+			bottom: 46px;
+		}
+	}
+
+	.cq-colctrl-lt0 {
+
+		padding-top: 25px;
+
+		.cq-colctrl-lt0-c0, .cq-colctrl-lt0-c1 {
+		  
+		    margin-bottom: 60px;
+		    margin-top: 0;
+		}
+	}
+
+	.button-wrapper {
+		margin-top: -110px;
+	}
+
+	.heading4 {
+		@include f(12);
+		text-transform: uppercase;
+		margin-top: 0px;
+		@include rem('letter-spacing',1.3px);
+		@include rem('line-height',18.2px);
+		float: left;
+		width: 100%;
+		text-align: left;
+		padding: 0 0 5px;
+	}
+
+
+
+	.fn_newsletter.checkbox-wrapper {
+		margin-bottom: 0px;
+	}
+
+	.fn_grpinterdin.checkbox-wrapper, .fn_grpownsp.checkbox-wrapper {
+		display: block;
+		float: left;
+		@include rem('margin',10px 40px 10px 0px);
+	    width: 50%;
+	    
+
+
+	    .checker {
+	    	float: left;
+	    }
+	    .checkbox-name {
+	    	text-transform: none;
+	    	@include main-font;
+	    	@include f(12);
+	    	@include rem('line-height',14px);
+	    	@include rem('margin-top',2px);
+	    	width:90%;
+	    	text-align: left;
+	    	float: left;
+	    }
+	}
+
+
+	.fn_grpinterdinacc{
+		height: 35px;
+	}
+
+	.fn_grpinterdinacc.checkbox-wrapper {
+		display: block;
+		float: left;
+		@include rem('margin',10px 30px 10px 10px);
+	    width: 33%;
+	    display: none;
+
+	    label.form-checkbox-label {
+	     	width: 380px;
+	    }
+
+
+	    .checker {
+	    	float: left;
+	    }
+	    .checkbox-name {
+	    	text-transform: none;
+	    	@include main-font;
+	    	@include f(12);
+	    	@include rem('letter-spacing',0px);
+	    	@include rem('line-height',14px);
+	    	@include rem('margin-top',2px);
+	    	@include rem('width',110px);
+	    	text-align: left;
+	    	float: left;
+	    }
+	}
+
+
+}
+
+/**********REQUEST INFO STYLING ****************/
+.requestInformation_checkbox_val{
+	@include rem(padding, 0px);
+}
+
+.js-request-info-form .checkbox-wrapper .form-checkbox-label .checkbox-name{
+	width: 95%;
+	font-style: normal;
+	margin-top: 1px;
+	line-height: 17px;
+}
+
+.js-request-info-form .cq-colctrl-lt0-c0 .group-wrapper{
+	display: inline-block;
+	margin-top: 0px;
+}
+
+/**********ASK FOR AN APPOINTMENT STYLING ****************/
+.js-ask-appointment-form{
+	width:100%;
+	hr{
+		position: static;
+		width: 50%;
+		float: none;
+		display: block;
+		margin: 15px auto 5px;
+	}
+    .select-wrapper{
+    	display: block;
+    	text-align: left;
+    	padding-top: 7px;
+
+    	label{
+    		width: 100%;
+    		@include f(10);
+    		margin-bottom: 5px;
+    	}
+
+    	.selector {
+			width: 402px !important;
+
+			span{
+				width: 402px !important;
+			}
+		}
+    }
+
+    .group-wrapper{
+		display: inline-block;
+		margin-top: 0px;
+		width: 100%;
+
+		.checkbox-wrapper{
+			 .form-checkbox-label{ 
+			 	color: $primary-2;
+				 	.checkbox-name{
+					width: 85%;
+					font-style: normal;
+					margin-top:2px;
+					line-height: 14px;		
+				}
+			}
+		}
+	}
+
+	.appointment_boutique_location{
+		margin:0;
+		padding: 0;
+	}
+
+	.js-date-picker{
+		.select-wrapper{
+			margin: 0 15px 0 0;
+			padding: 0;
+			width: 71px;
+			display: inline-block;
+
+				.selector {
+				width: 71px !important;
+
+				span{
+					width: 71px !important;
+				}
+			}
+		}
+	}
+
+	.appointment_time{
+		float: right;
+		width: 100%;
+		display: inline-block;
+		padding: 5px 0 0;
+		text-align: right;
+
+		.selector {
+				width: 400px !important;
+
+				span{
+					width: 400px !important;
+				}
+	}
+}
+	.data-picker-wrapper{
+		width: 68%;
+		display: inline-block;
+		label{
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+	}
+
+	.cq-colctrl-lt0{
+		border: none;
+		padding: 0;
+  margin: 10px 0 0;
+	}
+
+	.heading2{
+		@include proxiBold-font();
+		@include f(12);
+	}
+
+	.button-wrapper{
+		padding-top: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.comp-rich-text{
+		width: 260px;
+		p{
+			padding:0;
+			letter-spacing: normal;
+			@include f(12);
+		}
+	}
+}
+
+/**********SEND EMAIL STYLING ****************/
+.send_email{
+	width:100%;
+	background-color: transparent;
+
+	.form{
+		padding:inherit;
+	}
+
+	.checkbox-wrapper{
+		.form-checkbox-label{
+			color: $primary-2;
+			font-style: normal;
+			@include main-font();
+			@include f(12);
+			@include rem('margin-top',3px);
+
+		}
+	}
+}
+
+.js-subscription-and-interest-form .cq-colctrl-lt0-c1 .group-wrapper + .heading-wrapper {
+	display: none;
+}

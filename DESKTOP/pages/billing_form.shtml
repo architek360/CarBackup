@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+
+
+<!--#set var="form_type" value="billing-address" -->
+<!--#set var="COMP_1" value="progress_bar" -->
+<!--#set var="VIEW_1" value="billing_form" -->
+
+
+<!--#set var="MODULE" value="billing js-checkout" -->
+<!--#set var="TEMPLATE" value="purchase_funnel" -->
+<!--#include virtual="../templates/base.shtml" -->

@@ -1,0 +1,131 @@
+/*------------------------------------*\
+    Refin Selection [ For Collection View all Tabs] -- Desktop CSS
+\*------------------------------------*/
+
+.collection__refine-selection {
+	width: 100%;
+	display: inline-block;
+	top: 0;
+	@include rem('margin-top', 40px);
+
+
+	.collection__refine-selection__radio-tabs {
+
+		@include main-font;
+		@include f(13);
+		color:$primary-2;
+		@include rem('line-height', 18.2px);
+		border-bottom: 1px solid $primary-17;
+		@include rem('padding-bottom', 5px);
+		display: inline-block;
+  		width: 100%;
+
+		.radio-buttons__list {
+			margin: 0;
+    		padding: 0;
+    		display: block;
+    		
+    		@include rem('height', 18px);
+
+    		li {
+    			float:left;
+			    @include proxi-font;
+			    @include f(11);
+			    font-weight: bold;
+			    @include rem('line-height', 18.2px);
+			    list-style: none outside none;
+			    @include rem('margin', 0px 15px 0px 0px);
+			    text-transform: uppercase;
+			    a,label {
+			    	color: $primary-3;
+			    	@include proxi-font;
+				    @include f(11);
+				    @include rem('line-height', 15.4px);
+				    font-weight: bold;
+				    @include rem('letter-spacing', 1.1px);
+				    text-transform: uppercase;
+				    transition: color 0.2s ease-in-out 0s;
+
+				    &:hover {
+				    	color: $primary-2;
+				    }
+			    }
+				       
+				    input {
+			    		background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+					    display: inline-block;
+					    opacity: 0;
+					    vertical-align: top;	
+			/*		    @include rem('height', 12px);
+					    @include rem('width', 14px);	*/			
+			    	}
+
+
+			    .js-refine-radio{
+			    	/*span.checked{
+			    		@include setSpriteDesktop(20px,20px, -81px, -432px, transparent);   
+			    	}*/
+
+			    	label{
+			    		margin-left: -3px;
+			    	}
+			    }
+			    
+    		}
+    		.sort{
+			    	float:right;
+			    	span{
+			    		background: none;
+			    		width:auto;
+			    	}
+			    }
+
+
+    		li .js-refine-radio span.checked{
+    			a,label {
+    				color: $primary-2;
+    			}
+				span {
+    			 	@include setSpriteDesktop(20px,20px, -81px, -432px, transparent);   
+    			} 
+	    	}
+		}
+
+		.remove-criteria {
+			display: inline-block;
+			@include rem('margin-left', 520px);
+			@include setSpriteDesktop(20px,20px, -192px, -452px, transparent); 
+			@include rem('width', 220px);
+			text-align: right;
+			a {
+				  
+				@include proxi-font;
+			    @include f(10);
+			    font-weight: bold;
+			    @include rem('letter-spacing', 1.1px);
+			    @include rem('padding-right', 15px);
+			    text-transform: uppercase;
+
+			    &:hover {
+				    	color: $primary-2;
+				    }
+			}
+		}
+
+	}
+	.collection__refine-selection__category {
+		width: 100%;
+		display: inline-block;
+		@include rem('height', 40px);
+		position: relative;
+	}
+}
+
+.is-fixed {
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	width: 69%;
+}
+
+

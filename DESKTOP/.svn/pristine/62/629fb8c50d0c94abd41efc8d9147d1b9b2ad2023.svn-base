@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "serverMessage": "Some Server Message",
+    "content": {
+        "wishlistName" : "Sapient",
+        "wishlistNumber" : 1984
+    }
+}

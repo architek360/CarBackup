@@ -1,0 +1,467 @@
+/*------------------------------------*\
+    store locater -- Mobile CSS
+\*------------------------------------*/
+/**
+ * $MAIN CONTAINER (.store-locator-wrapper)
+ * $SEARCH MODULE CONTAINER (.store-search-wrapper)
+ * $STORE LIST MODULE CONTAINER (.store-list )
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.store-locator-wrapper {
+	.button-arrow{
+	    display:inline;
+	    @include setSprite(22px, 15px, -663px, -214px);
+		position: relative;
+		@include rem('top', -1px);
+		@include rem('margin-right', 5px);
+	}
+	/*------------------------------------------*\
+		.store-search-wrapper 
+	\*------------------------------------------*/
+
+	.store-search-wrapper {
+
+		.store-locater {
+			width: 81.25%;
+			margin: 0 auto;
+			.heading2 {
+				color: $primary-2;
+				color: white;
+				@include rem('line-height',39px);
+				@include rem('padding',48px 0 12px 7px);
+				border-bottom: 1px solid $primary-2;
+			}
+			.change-loc__search {
+				.cta {
+					@include rem('margin',32px 0px);
+					margin-left: auto;
+					margin-right: auto;
+					width: 80%;
+					height: 26px;
+					text-align: center;
+					.location {
+						@include setSprite(25px, 37px, -187px, -20px);
+						@include rem('margin', -7px 20px 0 10px);
+						text-transform: uppercase; 
+					}
+				}
+				.store-locater__search {
+					@include rem('height',90px);
+					position: relative;
+					label {
+						@include f(16);
+						color: $primary-2;
+						@include brand-font;
+						@include rem('padding-bottom',11px);
+					}
+					input {
+						background-color: $primary-16;
+						@include rem('margin-left',3px);
+						@include rem('padding-right',44px);
+					}
+					.store-locater__search__bg {
+						@include setSprite(32px, 31px, -402px, -20px);
+						position: absolute;
+						@include rem('right',5px);
+						@include rem('top',45px);
+					}
+					.store-locater__search-message {
+						color: $primary-2;
+						display: block;
+						@include brand-font;
+						@include f(16);
+						@include rem('padding',12px 0 12px 0);
+					}
+				}
+
+				.js-search-but-1 {
+					cursor: pointer;
+				}
+			}
+		}
+		.store-locater__img {
+				@include rem('margin-bottom',-20px);
+				@include rem('max-height',300px);
+				width: 100%;
+		}
+	}
+
+
+/*------------------------------------------------------------------------*/
+	
+	/*------------------------------------------*\
+		.store-list  |  to display store lists 
+	\*------------------------------------------*/
+
+	.store-list 
+	{
+		display: none;
+		width: 81.25%;
+		margin:0 auto;
+		@include rem('padding',39px 0);
+	    background: $primary-1;
+		background-size:100%;
+		.store-list__title {
+			text-transform:uppercase;
+			@include rem('letter-spacing',2px);
+			@include brand-font;
+			border-bottom:solid 1px $primary-2;
+			.heading2{
+				@include rem('padding-top',10px);
+			}
+		}
+		.change-loc__search {
+			display: none;
+			.cta {
+				@include rem('margin',32px 0px);
+				margin-left: auto;
+				margin-right: auto;
+				width: 80%;
+				@include rem('height',26px);
+				text-align: center;
+				.location {
+					@include setSprite(25px, 37px, -187px, -20px);
+					@include rem('margin', -7px 20px 0 10px);
+					text-transform: uppercase; 
+				}
+			}
+			.store-locater__search {
+				@include rem('height',90px);
+				position: relative;
+				label {
+					@include f(16);
+					@include font-color($primary-2);
+					@include brand-font;
+					@include rem('padding-bottom',11px);
+				}
+				input {
+					background-color: $primary-16;
+					@include rem('margin-left',3px);
+					@include rem('padding-right',44px);
+					
+				}
+				.store-locater__search__bg {
+					@include setSprite(32px, 31px, -402px, -20px);
+					position: absolute;
+					@include rem('right',5px);
+					@include rem('top',45px);
+				}
+
+				.store-locater__search-message {
+					color: $primary-2;
+					display: block;
+					@include brand-font;
+					@include f(16);
+					@include rem('padding',12px 0 12px 0);
+				}
+			}
+			
+
+			.js-search-but-2 {
+				cursor: pointer;
+			}
+		}
+		.store-list__change-loc{
+			color:$primary-3;
+			text-align:center;
+			display:block;
+			@include f(19);
+			@include main-font;
+			text-decoration:underline;
+			@include rem('margin-top', 15px);
+			.arrow-show{
+				    margin-right: 14px;
+    				margin-top: 4px;
+			}
+		}
+
+
+	 	.boutique_filter_detail{
+	 		@include rem('margin-top', 28px);
+	 		@include font-color($primary-3);
+	 		
+	 		.boutique_filter_detail__node{
+				background:$primary-23;			
+			}
+
+			.boutique_filter_detail_node__title{
+				border-top:2px solid $primary-1;
+				@include rem('padding', 22px 45px);
+				text-align:left;
+				position:relative;
+
+				.boutique_filter_detail_node_title__ques{
+					@include rem('padding-right', 30px);
+					display: table;
+					p{
+						@include rem('padding', 0px);
+						display: table-cell;
+			    		vertical-align: middle;
+				 	 	@include f(22);
+				 	 	@include bold-font;
+					}
+				}
+				
+					
+				span{
+					position:absolute;
+					@include rem('right', 25px);
+					top:30%;
+					@include setSprite(22px, 30px, -363px, -20px);
+				}
+
+				.on{
+					@include rotate(90deg);
+					@include transition(0.2s);
+					transition-timing-function:linear;
+					-webkit-transition-timing-function:linear;
+				}
+
+				.off{
+					@include rotate(0deg);
+					@include transition(0.2s);
+					transition-timing-function:linear;
+					-webkit-transition-timing-function:linear;
+				}
+				
+			}
+			.boutique_filter_detail_node__desc {
+
+				.category-wrapper{
+					@include font-color($primary-2);
+					display:block;
+					@include f(22);		
+
+					li{
+						border-top:3px solid #000;
+						@include rem(padding, 30px 44px 30px 78px);
+
+						label{
+							@include brand-font;
+
+
+							.disabledCheck {
+
+							}
+						}
+						.cta-button {
+							width: 100%;
+						}
+					}	
+				}
+			}
+	 	} /* END of boutique_filter_detail container*/
+
+		.store-list__boutique, .store-list__retailer{
+			
+			.store-detail{
+				background:$primary-1 url($path-images + 'content/boutique_texture.jpg') no-repeat bottom right 0 ;
+				background-size:100%;
+				@include rem('padding', 22px 18px);
+				position:relative;
+				@include rem('margin-top',50px);
+				@include font-color($primary-2);
+				text-transform:uppercase;
+				@include f(18);
+				@include brand-font;
+				.store-detail__title{
+					text-align:center;
+				}
+				.store-detail_bold{
+					@include bold-font;
+				}
+			}
+			.js-hide-content {
+			    display: none;
+			}
+			.image-text{
+				@include rem('margin-top',30px);
+				img{
+					display:inline;
+					width:42%;
+					height: auto;
+				}
+
+				.image-text__details{
+					display:inline;
+					float:right;
+					width:53%;
+					text-transform:none;
+					text-align:center;
+
+					&.auth-dealer{
+					width:100%;
+					}
+				}
+				.boutique_details__add{
+					@include brand-font;
+					@include font-color($primary-2);
+					@include f(17);
+					@include rem('line-height',25px);
+				}
+
+				.boutique_details__con{
+					@include rem('margin-top',10px);
+					@include main-font;
+					@include f(19);
+					@include font-color($primary-3);
+					@include rem('line-height',32px);
+					.arrow-red{
+						  	margin-left: -16px;
+    						margin-right: 10px;
+					}
+					a{
+						border-bottom:solid 1px;	
+					}
+				}
+				.service-detail{
+					@include rem('margin-top',35px);
+					@include rem('margin-bottom',30px);
+					@include f(15);
+					@include font-color($primary-3);
+				}
+			}
+			.more-link{
+				@include rem('margin-top',45px);
+				display:block;
+				clear:both;
+				.show-map{
+					position:absolute;
+					@include rem('right',27px);
+				}
+				text-transform:none;
+			}
+		}
+
+	 	.arrow-red{
+			@include setSprite(10px, 15px, -577px, -20px);
+		 	position: relative;
+		 	@include rem('margin-left', 10px);
+		 	@include rem('margin-right', 8px);
+		 	@include rem('left',-10px);
+		}
+
+		.js-heading3{
+			text-align:left;
+			@include f(25);
+			@include rem('padding-bottom',0px);
+			display: none;
+		}
+		.no-result-msg {
+			display: none;
+			text-transform:uppercase;
+			@include font-color($primary-2);
+			text-align: center;
+			@include bold-font;
+			@include rem('margin-top', 150px);
+			@include rem('margin-bottom',50px);
+		}
+
+	}
+
+
+
+	.store-locater__find-button {
+		.cta {
+			@include rem('margin-top',40px);
+			@include rem('margin-bottom',13px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+
+	.js-store-locator_error-msg-1 {
+		display: none;
+		@include font-color($primary-20);
+		@include main-font;
+		font-style:italic;
+		text-transform:none;
+		@include rem('font-size', 24px);
+
+		@include rem('padding-top', 5px);
+	}
+	.js-store-locator_error-msg-2, .js-store-locator_error-msg-3 {
+		color: $primary-2;
+		display: none;
+		@include brand-font;
+		@include f(16);
+		@include rem('padding',12px 0 12px 0);
+	}
+	.js-store-locater__error-suggest {
+		display: none;
+		text-align:left;
+
+		li{
+			@include rem('padding', 17px 0);
+			@include f(19.5);
+			@include brand-font;
+			@include font-color($primary-2);
+			display: block; 
+			list-style: none;		
+		}
+
+		li:before{
+			content:'';
+			@include setSprite(11px, 15px, -577px, -20px);
+			position: relative;
+			@include rem('top', 0px);
+		}
+	}
+	/*------------------------------------*\
+            VIEW MORE AREA
+	\*------------------------------------*/
+	.store-locator__view-more{
+		width: 100%;
+		cursor: pointer;
+		@include f(22);
+		@include rem('margin', 45px 0 55px 0);
+		text-align: center;
+		display: inline-block;
+		text-transform: uppercase;
+		@include font-color($primary-31);
+		position:relative;
+		display: none;
+
+		.down-arrow{
+			position:absolute;
+			@include rem('bottom', -18px);
+			left: 48%;
+			@include setSprite(15px, 10px, -666px, -20px);
+		}
+	}
+
+	.js-hide-content {
+    	display: none;
+	}
+
+	.js-no-display {
+		display: none;
+	}
+
+	.loaderImage {
+		text-align: center;
+		@include rem('left',250px);
+		position: relative;
+		display: block;
+	}
+	.js-geolocate-error {
+		text-align: center;
+		display: none;
+		@include rem('margin',102px 0px -40px);
+		@include font-color($primary-2);
+		@include f(20);
+
+
+	}
+}
+
+	
+	
+
+
+

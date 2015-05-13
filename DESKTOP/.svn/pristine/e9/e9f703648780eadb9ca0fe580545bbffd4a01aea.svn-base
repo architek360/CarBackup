@@ -1,0 +1,9 @@
+<!-- Select Box Starts Here-->
+
+	<div class="form-element select-wrapper">
+		<label for="country" class="form-label"><!--#echo var="select-label-name" --></label>
+		<select class="form-select-box js-quantityselect" name="<!--#echo var="input-name" -->" id="country">
+		    <!--#include virtual="../form_elements/${option-component}.shtml" -->
+	    </select>
+    </div>
+<!-- Select Box Ends Here-->

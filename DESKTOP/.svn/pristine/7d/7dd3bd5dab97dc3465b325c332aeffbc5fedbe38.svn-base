@@ -1,0 +1,9 @@
+<div class="main-container">
+	<div class="grid one-half palm--one-whole">
+		<!--#set var="back-static-text" value="Back" -->
+		<!--#if expr="${COMP_1}" -->
+				<!--#include virtual="../includes/components/${COMP_1}/html.shtml" -->
+		<!--#endif -->
+	</div>
+	
+</div>

@@ -1,0 +1,78 @@
+<!-- Contact Us Box Starts Here-->
+<div class="contact clearfix">
+    <div class="contact__contact-cont">
+
+        <h1 class="heading2">contact us</h1>
+        <p class="grey-text">To contact us please select your country of residence</p>
+        <!-- COUNTRY LABEL -->
+        <div class="contact__country-label">
+            <!--#set var="label-name" value="your country" -->
+            <!--#set var="mandatory" value="no"-->
+            <!--#set var="input-name" value="form-select" -->
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#set var="input-name" value="fn_country" -->
+            <!--#set var="style-name" value="select-1 js-country" -->
+            <!--#set var="option-component" value="state_option" -->
+            <!--#include virtual="../../components/form_elements/select.shtml" -->
+        </div>
+
+        <!-- SERVICE CONTAINER -->
+        <div class="contact__service-cont contact-normal js-country-detail">
+            <h3 class="heading3">Customer service center</h3>   
+            <a class="contact__service-cont__number" href="tel:1-800-227-8437" title="Telephone number"><span class="icon-phone"></span> : <span class="underline-text js-phone">TEST</span></a>
+            <p class="contact__service-cont__timimgs">
+                <span class="js-weekdays">TEST</span>
+                <span class="js-address">TEST</span>
+            </p>
+
+        </div>
+        <div class="ambassador-cont-contact-us">
+            <div class="js-accordion ambassador-cont__contact-tab js-product">
+                <div class="js-accordion__node js-contact-ambas">
+                    <div class="js-accordion_node__title contact-tab__title">
+                        <button class="cta-button cta-button__inner cta--red">
+                            <span class="input-arrow"></span>
+                            <span class="cta-button__input">contact us</span>
+                        </button>
+                    </div>
+                    <div class="js-accordion_node__desc js-form-validator">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact__service-cont display-none contact-bridal js-country-detail-bridal">
+            <h3 class="heading3">Customer service center</h3> 
+            <a class="contact__service-cont__number" href="tel:1-800-227-8437" title="Telephone number"><span class="icon-phone"></span> : <span class="underline-text js-phone">TEST</span></a>
+            <p class="contact__service-cont__timimgs">
+                <span class="js-weekdays">TEST</span>
+                <span class="js-address">TEST</span>
+            </p>
+        </div>
+
+        <div class="ambassador-cont-contact-us js-country-detail-bridal display-none">
+            <div class="js-accordion ambassador-cont__contact-tab js-product">
+                <div class="js-accordion__node js-contact-ambas">
+                    <div class="js-accordion_node__title contact-tab__title">
+                        <button class="cta-button cta-button__inner cta--red">
+                            <span class="input-arrow"></span>
+                            <span class="cta-button__input">contact us</span>
+                        </button>
+                    </div>
+                    <div class="js-accordion_node__desc js-form-validator">
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- BOUTIQUE BLOCK -->
+
+<div class="contact_push-block">
+    <h3 class="heading3">Find a cartier boutique or a retailer</h3>
+    <!--#set var="text-detail" value="find a boutique" -->
+    <!--#set var="cta--varaint" value="cta--red" -->
+    <!--#include virtual="../../components/form_elements/button.shtml" -->
+</div>
+
+
+<!-- Contact Us Box Ends Here-->

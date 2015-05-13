@@ -1,0 +1,21 @@
+<!-- Guest Checkout Component  -->
+<div class="guest-checkout-wrapper">
+<div class="price-detail__row clearfix">
+        <span class="grid__item three-fifths  price-detail__col right-zero">total<span class="price-detail--note js-totalprice-info">excl.sales tax</span> </span>
+        <span class="grid__item grid--right two-fifths  price-detail__col-right font39 right-zero js-totalprice">$ 5,540.00</span>
+    </div>
+    <div class="guest-checkout clearfix">
+    	<h3 class="heading3">Guest Checkout</h3>
+        <p class="message">Finalize your order. If you wish,</br> you may create your account at the end.</p>
+        <!--#set var="text-detail" value="checkout" -->
+        <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20" -->
+        <!--#include virtual="../../components/form_elements/button.shtml" -->
+    </div>
+    <div class="registered-checkout">
+    	<h3 class="heading3">Already registered</h3>
+        <p class="message">If you already have a MyCartier account, please sign in here.</p>
+        <!--#set var="text-detail" value="sign in & checkout" -->
+        <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-login-checkout-cta" -->
+        <!--#include virtual="../../components/form_elements/button.shtml" -->
+    </div>
+</div>

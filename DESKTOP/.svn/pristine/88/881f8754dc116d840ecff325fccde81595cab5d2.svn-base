@@ -1,0 +1,28 @@
+<div style="border:1px solid #f2f2f2; margin-bottom:10px;">
+<h1 class="title-one-1">Title 1 - Heading 1</h1>
+</div>
+<div style="border:1px solid #f2f2f2; margin-bottom:10px;">
+<h1 class="title-one-2">Title 1 - Heading 2</h1>
+<h2 class="title-two-2 bold-text">Title 2 - Heading 2</h2>
+<h2 class="title-three-2 georgia-text">Title 3 - Heading 2</h2>
+</div>
+<div style="border:1px solid #f2f2f2; margin-bottom:10px;">
+<h1 class="title-one-3">Title 1 - Heading 3</h1>
+<h3 class="title-two-3">Title 2 - Heading 3</h3>
+<h3 class="title-three-3">Title 3 - Heading 3</h3>
+</div>
+<div style="border:1px solid #f2f2f2; margin-bottom:10px;">
+<h1 class="title-one-4">Title 1 - Heading 4</h1>
+<h4 class="title-two-4">Title 2 - Heading 4</h4>
+<h4 class="title-three-4">Title 3 - Heading 4</h4>
+</div>
+<div style="border:1px solid #f2f2f2; margin-bottom:10px;">
+<h1 class="title-one-5">Title 1 - Heading 5</h1>
+<h5 class="title-two-5">Title 2 - Heading 6</h5>
+<h5 class="title-three-5">Title 3 - Heading 6</h5>
+</div>
+<div style="border:1px solid #f2f2f2; margin-bottom:10px;">
+<h1 class="title-one-6">Title 1 - Heading 6</h1>
+<h6 class="title-two-6">Title 2 - Heading 6</h6>
+<h6 class="title-three-6">Title 3 - Heading 6</h6>
+</div>

@@ -1,0 +1,25 @@
+<!-- Cartier Women's Initiative Awards Block Starts Here-->
+<div class="women-award-teaser">
+
+             <!-- Heading -->
+   <h1 class="heading1">CARTIER WOMEN'S INITIATIVE AWARDS</h1>
+
+  <!-- Image Wrapper -->
+  <img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_women_initiative_award.jpg" class="image" alt="Ring"/>
+
+       <!-- Description -->
+  <div class="content">
+    <p>Call for Applicants</p>
+
+		<p>The Cartier Women's Initiative Awards are aimed at women entrepreneurs whose projects have a significant growth potential, a strong social impact, and embody an innovative idea.</p>
+
+		<p>Each year, the Cartier Women's Initiative Awards are presented to six female entrepreneurs. Selected by an independent jury from more than 1,000 applicants worldwide, the Laureates receive one year of personal coaching, access to a broad business network, considerable media exposure, $20,000 in financing, and a Cartier trophy.</p>
+
+		<p>To particpate in the 2014 edition, visit: http://www.cartierwomensinitiative.com from November 5th.</p>
+  </div>
+
+</div>
+
+
+<!-- Cartier Women's Initiative Awards  Block Ends Here-->
+	

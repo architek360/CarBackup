@@ -1,0 +1,210 @@
+/*------------------------------------*\
+    COUNTRY SWITCHER -- MOBILE CSS
+\*------------------------------------*/
+/**
+* WRAPPER BLOCK.... (.country-switcher)
+* HEADING AREA BLOCK ....(.country-switcher__title)
+* COUNTRY SWITCHER FILTER AREA BLOCK....(.country-switcher__filter)
+* COUNTRY-CHILD CONTAINER FOR THIRD LEVEL OF ACCORDIAN BLOCK ...(.country-child)
+* LANG-CHILD CONTAINER FOR THIRD LEVEL OF ACCORDIAN BLOCK ...(.lang-child)
+*/
+
+/*------------------------------------*\
+    WRAPPER BLOCK
+\*------------------------------------*/
+.country-switcher {	
+	@include brand-font;
+	@include font-color($primary-2);  
+	@include rem('padding', 34px 0px 20px);  
+	background: $primary-1; 
+	display: block;
+	margin: 0 auto; 
+	width: 81.25%;
+
+	/*------------------------------------*\
+            	HEADING AREA BLOCK
+	\*------------------------------------*/
+	
+	.country-switcher__title {
+		display:block;
+		@include rem(padding, 27px 0);
+		background: transparent;
+		.heading4{
+			text-align: left;
+			@include font-color($primary-32); 
+			@include rem('padding', 0px 20px 0px);
+			display: table-cell;
+    		vertical-align: middle;
+    		@include f(20);
+	 	 	@include main-font;
+	 	 	 font-style: italic;
+		}
+	}
+}
+
+/*------------------------------------*\
+    COUNTRY SWITCHER FILTER AREA BLOCK
+\*------------------------------------*/
+.country-switcher__filter{
+	@include rem('padding', 0px 0 50px);
+	margin:0 auto;
+	width:100%;
+	.country-switcher__filter__wrapper{
+		border-top:solid 2px $primary-33;
+	}
+	.country-switcher__filter__node {
+		border-bottom:solid 2px $primary-33;
+		background-color: $primary-8;
+	}
+	.country-switcher__filter_node__title {
+		@include rem('padding', 15px 0px 15px);
+		position:relative;
+		text-align:left;
+		border-top:solid 1px $primary-8;
+		.country-switcher__filter_node_title__ques{
+			@include rem('min-height', 50px);
+			@include rem('padding-right', 30px);
+			display: table;
+		}
+		p{
+			@include rem('padding', 0px 20px 0px);
+			display: table-cell;
+    		vertical-align: middle;
+	 	 	@include font-color($primary-32); 
+	 	 	@include bold-font;
+	 	 	@include f(20);
+		}
+	}
+	.country-switcher__filter_node__desc{
+	 	@include f(26);
+	 	@include main-font;
+	 	@include font-color(#d4d4d4);
+		/*--------------------------------------------------------------------*\
+				COUNTRY-CHILD CONTAINER FOR THIRD LEVEL OF ACCORDIAN BLOCK
+		\*--------------------------------------------------------------------*/		 	
+		.country-child{
+			@include rem('padding', 0px 0 0px);
+			margin:0 auto;
+			width:100%;
+			.country-child__wrapper{
+				border-top:solid 1px $primary-11;
+			}
+			.country-child__node {
+				border-bottom:solid 1px $primary-11;
+				overflow:hidden;
+				background: $primary-14;
+			}
+			.country-child__node:first-child {
+				border-top:solid 2px $primary-39;
+			}
+			.country-child_node__title {
+				@include rem('padding', 15px 0px 15px);
+				position:relative;
+				text-align:left;
+				border-bottom:solid 1px $primary-11;
+				.country-child_node_title__ques{
+					@include rem('min-height', 50px);
+					@include rem('padding-right', 30px);
+					display: table;
+				}
+				p{
+					@include rem('padding', 0px 40px);
+					display: table-cell;
+		    		vertical-align: middle;
+			 	 	@include font-color($primary-32);
+			 	 	@include bold-font;
+			 	 	@include f(20);
+				}
+				span{
+					position:absolute;
+					right:0;
+					top:30%;
+					@include setSprite(32px, 32px, -969px, -20px);
+				}
+				span.on{
+					@include setSprite(32px, 32px, -1009px, -20px);
+				}
+				span.off{
+					@include setSprite(32px, 32px, -969px, -20px);
+				}
+			}
+			.country-child_node__desc{
+			 	@include f(20);
+			 	@include main-font;
+			 	@include font-color($primary-32 );
+
+				/*------------------------------------------------------------------------*\
+				    	LANG-CHILD CONTAINER FOR THIRD LEVEL OF ACCORDIAN BLOCK
+				\*------------------------------------------------------------------------*/
+
+				.lang-child{
+					@include rem('padding', 5px 0 0px);
+					margin:0 auto;
+					/*width:100%;*/
+					@include f(20);
+					li {
+						display: block;
+						vertical-align: middle;
+						text-transform: uppercase;
+						@include font-color($primary-32);
+						@include bold-font;
+						@include f(20);
+						@include rem('padding', 15px 60px);
+						@include rem('line-height', 30px);
+						@include rem('padding-right', 30px);
+						border-bottom: 1px solid $primary-11;
+						overflow: hidden;
+						background: none repeat scroll 0% 0% $primary-14;
+						@include rem('padding', 15px 60px);
+						position: relative;
+						text-align: left;
+						/*width: 100%;*/
+						a {
+							display: block;
+							@include f(20);
+						}
+					}							
+				}
+			}
+			.lang-child{
+				@include rem('padding', 5px 0 0px);
+				margin:0 auto;
+				/*width:100%;*/
+				@include f(20);
+				li {
+					display: block;
+					vertical-align: middle;
+					text-transform: uppercase;
+					@include font-color($primary-32);
+					@include bold-font;
+					@include f(20);
+					@include rem('padding', 15px 60px);
+					@include rem('line-height', 30px);
+					@include rem('padding-right', 30px);
+					border-bottom: 1px solid $primary-11;
+					overflow: hidden;
+					background: none repeat scroll 0% 0% $primary-14;
+					@include rem('padding', 15px 60px);
+					position: relative;
+					text-align: left;
+					/*width: 100%;*/
+					a {
+						display: block;
+						@include f(20);
+					}
+				}							
+			}
+		}
+	}
+	.text-wrapper{
+		@include rem(padding,0 30px 30px 45px);
+		@include font-color($primary-1);
+		@include bold-font;
+		@include f(22);
+	}
+	.country-switcher__filter__wrapper:last-child {
+		@include rem('padding-bottom', 10px);
+	}
+}
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+
+<!--#set var="back-static-text" value="Back" -->
+
+	<!--#set var="COMP_1" value="back_button" -->
+	<!--#set var="COMP_2" value="social_share" -->
+
+
+
+
+
+<!--#set var="MODULE" value="others" -->
+
+
+<!--#set var="VIEWS_1" value="faq" -->
+<!--#if expr="${DEVICE} = 'desktop'"  -->
+<!--#set var="COMP_3" value="breadcrumb" -->
+<!--#endif -->
+<!--#include virtual="../templates/base.shtml" -->

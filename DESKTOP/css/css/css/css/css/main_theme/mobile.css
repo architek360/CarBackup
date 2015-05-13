@@ -1,0 +1,864 @@
+/*------------------------------------*\
+    $MAIN THEME - Mobile CSS
+\*------------------------------------*/
+/**
+ * IMPORT VENDOR  LIBS....................get all compass vendor libs
+ * IMPORT BASE STYLES & MIXINS ...........CSS Wizardy Grid System, Base, Helper(mixins)
+ * IMPORT THEMES..........................get all themes Styles
+ * IMPORT BASE MOBILE STYLES..............get default base mobile Style
+ * HEADER & FOOTER........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles 
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Vendor Libs
+\*------------------------------------*/
+/* line 17, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*----------------------------------------------------------*\
+    $IMPORT - CSS Wizardy Grid System, Base, Helper(mixins)
+\*----------------------------------------------------------*/
+/*------------------------------------*\
+    Global -- BASE CSS
+\*------------------------------------*/
+/**
+ * BASIC FRAMEWORK STYLES
+ */
+/* 
+ * DEFAULT FONT FAMILY FOR ALL PAGES
+ */
+/*
+ * DEFAULT FONT FAMILY FOR NAVIGATION LINKS
+ */
+/*//For desktop.css*/
+/*$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+ */
+/*
+$path-images : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/'; 
+*/
+/*
+
+Settings FOR DEV TEAM
+====DO NOT DELETE OR UNCOMMENT====
+
+
+.top-nav{
+	position:static !important;
+}
+
+.main-container{
+	background-color:black !important;
+	margin-top:0px !important;
+}
+
+*/
+/* line 54, ../../../../../../sass/_base.scss */
+html, body {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+  /*font-size: 100%;*/
+  -webkit-font-smoothing: antialiased;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+/* line 61, ../../../../../../sass/_base.scss */
+div {
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 63, ../../../../../../sass/_base.scss */
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 70, ../../../../../../sass/_base.scss */
+h1, h2, h3 {
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 74, ../../../../../../sass/_base.scss */
+h1 {
+  font-size: 30px;
+}
+
+/* line 75, ../../../../../../sass/_base.scss */
+h2 {
+  font-size: 26px;
+}
+
+/* line 76, ../../../../../../sass/_base.scss */
+h3 {
+  font-size: 20px;
+}
+
+/* line 78, ../../../../../../sass/_base.scss */
+html, button, input, select, textarea {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 95, ../../../../../../sass/_base.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 100, ../../../../../../sass/_base.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 109, ../../../../../../sass/_base.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 113, ../../../../../../sass/_base.scss */
+.f-left {
+  float: left;
+}
+
+/* line 117, ../../../../../../sass/_base.scss */
+.f-right {
+  float: right;
+}
+
+/* line 120, ../../../../../../sass/_base.scss */
+.f-none {
+  float: none;
+}
+
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*$primary-88     : #472021;*/
+/*$primary-89		: #6D3536;*/
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'CarteirRegular';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Book.otf");
+}
+
+@font-face {
+  font-family: 'CarteirBold';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Bold_0.otf");
+}
+
+@font-face {
+  font-family: 'CarteirMedium';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Medium.otf");
+}
+
+@font-face {
+  font-family: 'proximanovaBold';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont.eot");
+  src: local("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont.eot");
+  src: local("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/EBGaramond-webfont.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'didotromanitalic';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/didotromanitalic.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'didotroman';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/didotroman.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'mb-script';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/mb_script_rund.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'CartierLoveTM';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.eot");
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.woff") format("woff"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'CartierLoveTM';
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.eot");
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.woff") format("woff"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Corsiva W01";
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.eot");
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.eot?#iefix") format("embedded-opentype"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.svg#Corsiva W01") format("svg"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.woff") format("woff"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kuenstler Script W01 Medium";
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.eot");
+  src: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.eot?#iefix") format("embedded-opentype"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.svg#Kuenstler Script W01 Medium") format("svg"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.woff") format("woff"), url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------------------*\
+    $HEADER COMMON STYLING
+\*------------------------------------*/
+/* line 318, ../../../../../../sass/main_theme/_theme.scss */
+.text-link {
+  color: #b3b3b3;
+}
+
+/* line 323, ../../../../../../sass/main_theme/_theme.scss */
+.top-nav .top-nav__menu {
+  float: left;
+  padding: 18px 26px;
+  margin-top: 10px;
+}
+/* line 328, ../../../../../../sass/main_theme/_theme.scss */
+.top-nav .top-nav__menu button {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -452px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 36px;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/*------------------------------------*\
+    $COLLECTION COMMON STYLING
+\*------------------------------------*/
+/* line 343, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .collection-image {
+  padding-top: 20px;
+}
+/* line 347, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .collection-image {
+  display: block;
+}
+/* line 351, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .collection-image img {
+  max-height: 400px;
+  width: 100%;
+  /*@include rem('max-height',370px);
+  @include rem('max-width',640px);*/
+}
+/* line 365, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .heading7 {
+  color: white;
+  width: 81.25%;
+  margin: 0 auto;
+  /*margin-bottom: 0;
+  @include rem('margin-top', 38px);*/
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 25px 0px 23px;
+  font-family: "CarteirRegular", sans-serif;
+  font-weight: normal;
+  line-height: 27px;
+  /*line-height:1.4em;*/
+}
+/* line 381, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .heading6 {
+  font-family: "CarteirRegular", sans-serif;
+  color: white;
+  width: 81.25%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  padding: 0px;
+  padding-bottom: 26px;
+  /*line-height:1.4em;*/
+}
+
+/* line 399, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: white;
+}
+/* line 403, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper p {
+  color: white;
+}
+/* line 407, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper label {
+  color: white;
+}
+
+/* line 414, ../../../../../../sass/main_theme/_theme.scss */
+.collection .collection__title {
+  display: block;
+}
+/* line 417, ../../../../../../sass/main_theme/_theme.scss */
+.collection .collection__title .heading4 {
+  padding-top: 65px;
+  padding-bottom: 22px;
+  font-size: 24px;
+}
+/* line 422, ../../../../../../sass/main_theme/_theme.scss */
+.collection .collection__title .heading2 {
+  padding: 0 0 41px 0;
+  border-bottom: 1px solid white;
+}
+
+/*------------------------------------*\
+    $LEFT NAV  COMMON STYLING
+\*------------------------------------*/
+/* line 446, ../../../../../../sass/main_theme/_theme.scss */
+.nav {
+  color: white;
+}
+
+/* line 450, ../../../../../../sass/main_theme/_theme.scss */
+.nav ul li .nav-arrow {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/right-icon.png") no-repeat 97% 49%;
+}
+
+/* line 454, ../../../../../../sass/main_theme/_theme.scss */
+.nav ul li .nav-arrow-down {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/down-icon.png") no-repeat 98% 49%;
+}
+
+/* line 459, ../../../../../../sass/main_theme/_theme.scss */
+#mobile-nav-search {
+  background-color: white;
+}
+
+/* line 462, ../../../../../../sass/main_theme/_theme.scss */
+.product-listing {
+  background: black url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/product_list_bg.jpg") no-repeat bottom right 0;
+}
+
+/* line 468, ../../../../../../sass/main_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+/* line 474, ../../../../../../sass/main_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span.on {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -784px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+/* line 478, ../../../../../../sass/main_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span.off {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+
+/* line 484, ../../../../../../sass/main_theme/_theme.scss */
+.select-2 {
+  /*@include setSprite(27px, 29px, -669px, -60px);*/
+  background: #a0a0a0 url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/select_arrow.png") no-repeat right 0;
+}
+
+/* line 489, ../../../../../../sass/main_theme/_theme.scss */
+.degree360-icon {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -99px -984px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+  height: 23px;
+}
+
+/* line 493, ../../../../../../sass/main_theme/_theme.scss */
+.carousel .prev span {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -19px -285px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 497, ../../../../../../sass/main_theme/_theme.scss */
+.carousel .next span {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -72px -285px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 504, ../../../../../../sass/main_theme/_theme.scss */
+.ambassador-cont .att-accordion .js-accordion_node__title > span {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+/* line 507, ../../../../../../sass/main_theme/_theme.scss */
+.ambassador-cont .att-accordion .js-accordion_node__title span.on {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -784px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+/* line 511, ../../../../../../sass/main_theme/_theme.scss */
+.ambassador-cont .att-accordion .js-accordion_node__title span.off {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+
+/* line 521, ../../../../../../sass/main_theme/_theme.scss */
+.form-check input:checked + span.form-check__icon {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -702px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+/* line 528, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper.shoppingBagBg {
+  background: #59010d url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//icons/bg-shoppingbag.png") repeat 0px 0px;
+}
+
+/* line 532, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper.login-bg-image {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//icons/bg-user.png") no-repeat;
+}
+
+/* line 536, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//icons/bg.jpg") no-repeat;
+}
+/* line 539, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper .header {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 546, ../../../../../../sass/main_theme/_theme.scss */
+.nav-heading-cont .nav-show {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 552, ../../../../../../sass/main_theme/_theme.scss */
+.foundation .nav-link {
+  background-image: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/foundation-logo.png");
+  background-repeat: no-repeat;
+}
+
+/* line 560, ../../../../../../sass/main_theme/_theme.scss */
+.search-form .search__term {
+  background: transparent;
+}
+
+/* line 564, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push {
+  border: 1px solid #4d4d4d;
+}
+/* line 566, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push .push-hover {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie.png");
+}
+/* line 571, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push .push-col_title {
+  color: #A0A0A0;
+}
+/* line 574, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push .text-link:hover {
+  color: black;
+}
+
+/* line 578, ../../../../../../sass/main_theme/_theme.scss */
+.listGradient {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg-grey.png") no-repeat left top;
+}
+
+/* line 582, ../../../../../../sass/main_theme/_theme.scss */
+.product_listing_class {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/listing-models.jpg") no-repeat left bottom;
+}
+
+/* line 586, ../../../../../../sass/main_theme/_theme.scss */
+.push-over {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie.png");
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+/*.select-wrapper{
+ 	}
+	.selector {
+		background-position: -430px -672px;
+	    span {
+	    	background-position: right -573px;
+		}
+
+		    option {
+			    background-color: $primary-70;
+			    color: $primary-71;
+			}
+		}
+	}
+}*/
+/* line 611, ../../../../../../sass/main_theme/_theme.scss */
+#modalWindow {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/popin-bg.png") no-repeat left top black;
+}
+
+/* line 618, ../../../../../../sass/main_theme/_theme.scss */
+strong {
+  font-weight: bold;
+}
+
+/*------------------------------------*\
+    LIVING HERITAGE SEARCH BOX CHANGES
+\*------------------------------------*/
+/* line 631, ../../../../../../sass/main_theme/_theme.scss */
+.living-heritage-bg .search-form .search__term {
+  background: white;
+}
+/* line 636, ../../../../../../sass/main_theme/_theme.scss */
+.living-heritage-bg .search-wrapper .search__button {
+  background-position: -57px -847px;
+}
+
+/*------------------------------------*\
+    REFINE SELECTOR BOX CHANGES
+\*------------------------------------*/
+/* line 650, ../../../../../../sass/main_theme/_theme.scss */
+.refine-selector .refine-selector__content ul .js-refine-checkbox span {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -30px -415px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 14px;
+}
+
+/*------------------------------------*\
+    $MOBILE SELECT ELEMENTS
+\*------------------------------------*/
+/* line 662, ../../../../../../sass/main_theme/_theme.scss */
+.selector {
+  background-position: -430px -672px;
+}
+/* line 665, ../../../../../../sass/main_theme/_theme.scss */
+.selector span {
+  background-position: right -573px;
+}
+/* line 668, ../../../../../../sass/main_theme/_theme.scss */
+.selector option {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+/* line 677, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper {
+  color: white;
+}
+/* line 681, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper label {
+  color: white;
+}
+/* line 684, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector {
+  background-position: -430px -672px;
+}
+/* line 687, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector span {
+  background-position: right -573px;
+  color: white;
+  font-style: normal;
+}
+/* line 692, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector option {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}
+
+/* line 699, ../../../../../../sass/main_theme/_theme.scss */
+.collection-push {
+  border: 1px solid #262628;
+}
+/* line 701, ../../../../../../sass/main_theme/_theme.scss */
+.collection-push .collection-overlay {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/listing-categories.jpg") no-repeat right top;
+  background-size: 309px 309px;
+  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 711, ../../../../../../sass/main_theme/_theme.scss */
+.primary-nav-container {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.6.png");
+}
+
+/* line 715, ../../../../../../sass/main_theme/_theme.scss */
+.primary-nav-container {
+  /* background-color: $primary-1;
+  -ms-filter: "alpha(opacity=40)"; */
+  /*background:url($path-images+'icons/ie_0.6.png');*/
+}
+/* line 720, ../../../../../../sass/main_theme/_theme.scss */
+.primary-nav-container .first-level-nav .nav-show {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.6.png");
+}
+
+/* line 726, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper.living-heritage-bg .header {
+  background: white;
+}
+
+/* line 730, ../../../../../../sass/main_theme/_theme.scss */
+.header .right-nav .right-nav__list li.mycartier .nav-link {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -232px -1160px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 58px;
+  height: 15px;
+}
+
+/* line 736, ../../../../../../sass/main_theme/_theme.scss */
+#confirmBox {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/popin-bg.png") no-repeat left top black;
+}
+
+/* line 741, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector.formerror {
+  background-position: -427px -955px;
+}
+/* line 744, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector.formerror span {
+  background-position: right -913px;
+}
+/* line 747, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector.formerror option {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}

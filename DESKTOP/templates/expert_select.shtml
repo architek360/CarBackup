@@ -1,0 +1,12 @@
+<div class="main-container">
+	
+    
+    <!--#if expr="${VIEWS_1}" -->
+    	<!--#if expr="${DEVICE} = 'mobile'"  -->
+			<!--#include virtual="../includes/views/${VIEWS_1}/html.shtml" -->
+		<!--#else-->
+			<!--#include virtual="../includes/views/${VIEWS_1}/desktop.shtml" -->
+		<!--#endif -->
+	<!--#endif -->
+	
+</div>

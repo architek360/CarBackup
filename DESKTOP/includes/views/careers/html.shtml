@@ -1,0 +1,16 @@
+<!-- careers Starts Here-->
+<div class="careers comp-rich-text">
+	<h1 class="heading2">careers</h1>
+
+	<div class="careers__image">
+		<img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_careers.jpg" alt="cartier careers">
+	</div>
+	<div class="careers__content">
+		<h4 class="heading4">CARTIER, THE CREATOR OF PASSIONS.</h4>
+		<p>World renowned in jewelry and prestige watchmaking, Cartier has combined expertise and excellence since 1847.</p>
+		<p>Cartier has made its creations into legends, with a team of men and women who make their passion their career.</p>
+		<p>If you would like to live your passion as part of Cartier, please see the career opportunities we offer <a href="#" target="_blank">here</a>.</p>
+		<p>If you already have an online profile, please click <a href="#" target="_blank">here</a> to sign in</p>
+	</div>
+</div>
+<!-- careers Ends Here-->

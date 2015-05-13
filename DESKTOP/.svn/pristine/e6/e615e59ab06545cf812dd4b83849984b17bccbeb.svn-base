@@ -1,0 +1,28 @@
+<!--date picker start here -->
+	<div class=" js-date-picker date-picker js-myaccount">
+	                
+	                	<!--#set var="input-name" value="${input-name-dp1}" -->
+	                    <!--#set var="style-name" value="select-1" -->
+						<!--#set var="option-component" value="month_option" -->
+						<!--#set var="select-label-name" value="" -->
+						<!--#include virtual="../../components/form_elements/desktop_select.shtml" -->
+	                
+	                
+	                	<!--#set var="input-name" value="${input-name-dp2}" -->
+	                    <!--#set var="style-name" value="select-1" -->
+						<!--#set var="option-component" value="date_option" -->
+						<!--#set var="select-label-name" value="" -->
+						<!--#include virtual="../../components/form_elements/desktop_select.shtml" -->
+	                
+	                
+	                	<!--#set var="input-name" value="${input-name-dp3}" -->
+	                    <!--#set var="style-name" value="select-1" -->
+						<!--#set var="option-component" value="year_option" -->
+						<!--#set var="select-label-name" value="" -->
+						<!--#include virtual="../../components/form_elements/desktop_select.shtml" -->
+	                
+
+	               
+	</div>
+
+<!--date picker end here -->

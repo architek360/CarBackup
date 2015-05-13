@@ -1,0 +1,248 @@
+/*-------------------------------------------*\
+    Sub Collection Landing Page -- Desktop CSS
+\*-------------------------------------------*/
+
+ /* MODULE CONTAINER....main container (.carousel__slider)
+ * IMAGE CONTAINER......image wrapper (.image-wrapper.)
+ * CONTENT CONTAINER......content wrapper (.content-wrapper)
+ * NAVIGATION LINKS......navigation link block(.line_links)
+ */ 
+
+
+/*-------------------------------------------*\
+   		MODULE CONTAINER
+\*-------------------------------------------*/
+.sub-collection-teaser{
+	height: 640px;
+
+	.heading1 {
+		@include f(38);
+		@include rem('margin-bottom',5px);
+	}
+
+	.content-wrapper{
+		display: block;
+	}
+ .line_links__wrapper {
+ 	width: 200px;
+ }
+
+	/*-------------------------------------------*\
+   		IMAGE CONTAINER
+	\*-------------------------------------------*/
+	.image-wrapper{
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0;
+		border-bottom: 1px solid $primary-3;
+		height: 802px;
+		
+
+		img{
+			width: 100%;
+			min-height: 100%;
+		}
+
+		.content{
+			width: 340px;
+			position: relative;
+
+		}
+	}
+
+	/*-------------------------------------------*\
+   		CONTENT CONTAINER
+	\*-------------------------------------------*/
+
+	.content-wrapper{
+	position: absolute;
+	text-align: left;
+	top: 180px;
+	width: 980px;
+	color:$primary-1;
+
+
+		/*-------------------------------------------*\
+   					HEADING
+		\*-------------------------------------------*/
+		.heading1{
+			font-family: "EBGaramond",Garamond,Georgia,serif;
+			@include rem(letter-spacing, 3px);
+			text-align: left;
+			color: $primary-2;
+		}
+
+
+		/*-------------------------------------------*\
+   				DESCRIPTION
+		\*-------------------------------------------*/
+		p{
+			letter-spacing: normal;
+			color: $primary-3;
+			@include f(13);
+			width: 340px;
+			@include rem(padding-top, 0px);
+		}
+	}
+
+	/*-------------------------------------------*\
+   				NAVIGATION LINKS
+	\*-------------------------------------------*/
+	.line_links{
+	width: 340px;
+	color: $primary-3;
+
+		.heading3{
+			@include proxi-font();
+			font-weight: bold;
+			@include rem(letter-spacing, 1px);
+			text-transform: uppercase;
+			@include f(22);
+			font-weight: normal;
+		}
+
+		/*------------------------------------*\
+   			 			TITLE
+		\*------------------------------------*/
+
+		.line_links_node__title{
+			@include rem('padding', 0px);
+			text-align:left;
+			position:relative;
+			@include main-font;
+			@include rem('letter-spacing', 1px);
+			text-transform: none;
+			cursor: pointer;
+			display: inline-block;
+
+
+			.line_links_node_title__ques{
+				@include rem('min-height', 20px);
+				float: left;
+				width: 200px;
+
+				p, h2 {
+					color: $primary-3;
+					font-weight: bold;
+					text-transform: uppercase;
+					@include f(11);
+					@include rem('letter-spacing', 1px);
+					@include rem('padding', 15px 0);
+					border-bottom: 1px solid $primary-17;
+				}
+
+			}
+			
+			p{
+				@include rem('padding', 0 0 0 15px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include f(13);
+		 	 	
+			}
+
+			/*------------------------------------*\
+   					 ARROW BLOCK 
+			\*------------------------------------*/
+
+			span{
+				@include setSpriteDesktop(9px, 15px ,-428px ,-311px, transparent);
+				float: right;
+				@include rem('margin', 14px 0 0 -13px);
+			}
+
+			p:hover{
+				color: $primary-119;
+			}
+
+			span.off{
+				@include setSpriteDesktop(9px, 15px ,-428px ,-311px, transparent);
+				float: right;
+				@include rem('margin', 14px 0 0 -13px);
+			}
+		}
+
+	}	
+
+	.wrapper-links {
+		    display: block;
+		    margin: 0;
+		    overflow: hidden;
+		    @include rem('padding', 0 0 10px);
+		    position: relative;
+		    z-index: 5;
+		    height: 126px;
+		    margin-top: 10px;
+		}
+
+		.more-arrow {
+			@include setSpriteDesktop(170px, 7px ,69px,-90px, transparent);
+		    color:  $primary-1;
+		    cursor: pointer;
+		    display: inline-block;
+		    bottom: -8px;
+		    @include rem('padding', 5px 0 15px);
+		    position: absolute;
+		    text-align: left;
+		    width: 100%;
+		    z-index: 2;
+			text-indent: -9999px;
+		    
+		}
+
+		.less-arrow {
+		    @include setSpriteDesktop(170px, 7px ,69px,-67px, transparent);
+		    cursor: pointer;
+		    display: none;
+		    color:  $primary-1;
+		    left: 0;
+		    @include rem('padding', 15px 0 5px);
+		    position: absolute;
+		    text-align: left;
+		    top: -8px;
+		    width: 100%;
+		    z-index: 2;
+			text-indent: -9999px;
+		}
+
+		.sub-menu {
+		    background:none;
+		    margin: 0;
+		    @include rem('padding', 0 10px 0 0);
+		    position: absolute;
+		    width: 140px;
+			overflow: hidden;
+			height: 128px;
+
+		    li {
+		    	
+			    margin: 0;
+			    color: $primary-3;
+			    @include rem('padding', 0 0);
+			    width: 120%;
+			    @include f(12);
+			    position:absolute;
+				border:none;
+				text-transform: none;
+
+			    &:hover{
+					color: $primary-119;
+				}
+				a{
+					@include main-font();
+				}
+			}
+
+
+
+			.first{
+				border-top: none;
+			}
+		}
+	
+}
+
+.highlight-pushes{
+	padding-top: 0px;
+}

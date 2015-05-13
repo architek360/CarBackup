@@ -1,0 +1,190 @@
+.shopping_bag {
+	.personal-card{
+		padding: 35px;
+		.heading3 {
+			margin:0 auto;
+			width: 45%;
+			letter-spacing: 0;
+			font-weight: bold;
+		}
+		.radio-btn {
+			
+			margin: 0 auto;
+			background: #250007;
+			padding: 5px 0 8px;
+			text-align: center;
+
+			li.radio-btn-li {
+				width: 36%;
+				padding: 8px 0;
+				.radio {
+					@include rem('margin', 0px);
+
+				}
+				.radio-title {
+					font-size: 11px;
+					font-weight: bold;
+					text-transform: uppercase;
+					padding-left: 18px;
+					text-align: left;
+					padding-top: 3px;
+				}
+			}
+		}
+		.personal-card__message {
+			@include main-font;
+			display: block;
+			text-align: center;
+			font-style: italic;
+			font-size: 11px;
+			color: #85666b;
+			padding-top: 25px;
+			padding-bottom: 35px;
+		}
+
+		.personal-card-blank__message{
+			display: block;
+			text-align: center;
+			font-style: italic;
+			font-size: 12px;
+			color: #FFF;
+			@include main-font;
+			@include rem('padding', 25px 0px 35px 0px);
+		}
+
+
+		.logo_section {
+			background: url($path-images + 'icons/cartier-preview.png') no-repeat 0 0;
+			height: 236px;
+			width: 356px;
+			padding: 80px 0 0;
+
+			.logo_section_content{
+				height: 155px;
+    			overflow: auto;
+    			padding: 0 25px;
+			}
+
+			.preview {
+				color: #333;
+				font-family: Arial,Helvetica,sans-serif;
+				font-size: 16px;
+				text-align: center;
+				font-style: normal;
+    			letter-spacing: normal;
+    			text-transform: none;
+    			display: block;
+    			word-wrap: break-word;
+    			line-height: 21px;
+    		}
+
+			.preview.cursive-class{
+				color: #333;
+    			@include mb-script-font();
+    			font-size: 16px;
+    			font-style: italic;
+    			font-weight: normal;
+    			line-height: 21px;
+			}
+		}
+		.message_section {
+			width: 60%;
+	
+		.button-wrapper {
+			.cta--red , .cta--grey{
+				width: auto;
+				margin-left: 10px;
+			}
+		}
+		.message-wrapper {
+			textarea {
+				font-size: 11px;
+				font-style: italic;
+				background-color: #3c1d22;
+				border: 1px solid #85666b;
+				color: white;
+				margin: 0 auto;
+				min-height: 90px;
+				padding: 5px;
+				resize: none;
+				width: 354px;
+			}
+		}
+
+		.personal-card__compose {
+			position: relative;
+			border-top: 1px solid #51262f;
+			border-bottom: 1px solid #51262f;
+			padding-bottom: 20px;
+			.heading3 {
+				background-color: #330008;
+				font-weight: bold;
+				font-size: 11px;
+				letter-spacing: 0;
+				position: relative;
+				top: -5px;
+				padding: 0px;
+			}
+
+			
+			.message-limit {
+				@include main-font();
+				color: #85666b;
+				display: block;
+				font-size: 12px;
+				font-style: italic;
+				text-align: center;
+				padding: 10px 0px;
+				
+			}
+		}
+		.choosefont-section
+			{
+				background:#330007;
+				position: relative;
+				top: -17px;
+				width: 25%;
+				font-size: 11px;
+			}
+
+			.slide_switch {
+				text-align: center;
+				label {
+					font-size: 13px;
+					padding-right: 10px;
+					letter-spacing: 2px;
+				}
+				label.js-cursive-class {
+					font-style: italic;
+					@include main-font();
+				}
+			}
+		}
+	}
+}
+
+/* CSS overidding for Unauthorisec user view for message card section*/
+
+.shopping_bag_unauthorised {
+	.personal-card {
+		.message_section {
+			width: 303px;
+
+			.personal-card__compose {
+				.heading3 {
+					width: 85%;
+				}
+			}
+
+			.message-wrapper {
+				textarea{
+					width: 100%;
+				}
+			}
+
+			.choosefont-section{
+				width: 55%;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<!--boutique container starts here -->
+<div class="grid">
+	<div class="grid__item three-quarters">
+		<div class="boutique-left billing-address-content-wrapper">
+			<h1 class="heading1"> I choose the destination, the delivery method</h1>
+			<!-- INCLUDING TABS COMPONENT-->
+			<div class="tabs-container">
+				<!--#set var="tab_1" value="Delivery to the same address and billing" -->
+				<!--#set var="tab_2" value="Delivery to a different address" -->
+			    <!--#set var="tab_3" value="Receive Boutique" -->
+			    <!--#set var="tab_content_1" value="billing_address" -->
+			    <!--#set var="tab_content_2" value="shipping_address_jp" -->
+			    <!--#set var="tab_content_3" value="receive_boutique" -->
+	    		<!--#include virtual="../../components/tabs/desktop.shtml" -->
+			</div>
+			<!-- END OF TABS COMPONENT-->
+		</div>
+	</div>
+	<div class="grid__item one-quarter shopping-bag-rt-col">
+		<div class="boutique-right">
+			<!--#include virtual="../../views/price_details/desktop.shtml" -->
+			<!--#include virtual="../../views/return-exchange/desktop.shtml" -->
+		</div>
+	</div>
+</div>

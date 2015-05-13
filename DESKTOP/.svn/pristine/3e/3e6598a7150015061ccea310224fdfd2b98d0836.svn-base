@@ -1,0 +1,115 @@
+$width-left : 315px;
+$width-right : 663px;
+$half-width-left : $width-left/2;
+$height :392px;
+
+.boutique-detail-wrapper{
+    background-color:$primary-1;
+    line-height:1.4;
+    width: 100%;
+    overflow: hidden;
+    color: $primary-2;
+    display: inline-block;
+    margin-top: 10px;
+
+    h1, h2{
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        @include rem(font-size, 13px);
+        @include rem(padding, 16px 0 15px 16px);
+        font-weight: bold;
+    }
+    h2{
+        @include rem(font-size, 15px);
+        @include rem(margin, 0 0 15px 0);
+        padding: 0;
+        font-weight: normal;
+        text-align: left;
+        letter-spacing: 1.5px;
+    }
+    .grid{
+        padding: 0;
+        margin: 0;
+    }
+    .store-services-wrapper{
+        @include rem(margin, 40px 0 60px);
+    }
+    .border{
+        overflow: hidden;
+        border: 1px solid $primary-61;
+    }
+    .boutique-detail-inner-wrapper{
+        border-bottom: 1px solid $primary-61;
+        @include rem(width, $width-left );
+        @include rem(height, 277px);
+    }
+    .two-fifths{
+        padding: 0;
+        @include rem(width, $width-left );
+        .fixed-height{
+            @include rem(height, $height);
+        }
+    }
+    .three-fifths{
+        @include rem(height, $height);
+        @include rem(width, $width-right);
+        padding: 0;
+        float: right;
+        border-left: 1px solid $primary-61;
+    }
+    .boutique__details{
+        padding: 16px 0 0 16px;
+        @include rem(font-size, 12px);
+    }
+    .boutique_details__add, .boutique_details__con{
+        @include rem(margin-bottom, 14px);
+        letter-spacing: 0;
+        @include main-font;
+    }
+    .social-share{
+        margin: 0;
+        bottom:0;
+        @include rem(width, $width-left );
+        ul{
+            @include rem(width, $width-left - 1px);
+            @include rem(padding, 10px 0 15px 0);
+            li{
+                @include rem(padding, 0 0 0 12px);
+            }
+
+        }
+        .share-link-container{
+            width: $half-width-left - 1px;
+        }
+    }
+    .store-services{
+        @include rem(margin, 0 16px 0 0);
+        border-top: 1px solid $primary-61;
+        p{
+            @include main-font;
+            @include rem(margin, 0 0 12px 0);
+            @include rem(font-size, 12px);
+            padding: 0;
+            font-style: italic;
+            letter-spacing: 0;
+            line-height: 1.4;
+        }
+        li{
+            float: left;
+            width: 50%;
+        }
+        .arrow-show{
+            @include main-font;
+            @include rem(font-size, 12px);
+            @include rem(padding, 0 0 0 10px);
+            @include rem(width, $half-width-left - 10px );
+            margin: 0;
+            background-position: -431px -154px;
+            height: auto;
+            font-style: italic;
+            letter-spacing: .1em;
+            letter-spacing: 0;
+            top:0;
+        }
+    }
+}

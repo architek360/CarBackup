@@ -1,0 +1,67 @@
+/*------------------------------------*\
+   QUICK LINKS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....(.quick-links)
+ * QUICK LINKS LISTING... (ul)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.quick-links{
+	h3{
+		color:$primary-2;
+		@include rem('margin-top' , 50px);
+		@include f(22);
+	}
+
+	/*------------------------------------*\
+	    $QUICK LINKS LISTING
+	\*------------------------------------*/
+	ul{
+		@include set-ulFix;
+		width:81.25%;
+		margin: 0 auto;
+		border: solid 1px $primary-18;
+		text-transform: uppercase;
+
+		li{
+			border-bottom: solid 1px $primary-18;
+			text-align: left;
+			line-height: 30px;
+			
+			@include bold-font;
+			@include f(20);
+			
+
+			a{	
+				@include bold-font;
+				display:block;
+				@include font-color($primary-7);
+				text-decoration:none;
+				 position: relative;
+				 @include rem('padding' ,30px 23px 30px 83px);
+				 word-wrap: break-word;
+
+				&:hover{
+				 	text-decoration:none;
+				}
+
+				img{
+					@include rem('margin-left', 29px);
+					@include rem('padding-right', 16px);
+					width:41px;
+					height:41px;
+					vertical-align:middle;
+					position: absolute;
+					@include rem('top' , 25px);
+					@include rem('left' ,1px);
+				}
+			}
+			&:last-child{
+				border:none;
+			}
+		}	
+	}
+}

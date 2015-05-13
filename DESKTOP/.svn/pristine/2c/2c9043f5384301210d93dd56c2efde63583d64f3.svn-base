@@ -1,0 +1,4 @@
+<ul class="desktop-progressbar">
+		<li><a class="progressbar__circle-on" href="#"><span>1</span><p>Between Cartier and You</p></a></li>
+		<li><a class="progressbar__circle-off" href="#"><span>2</span><p>Your personal Information</p></a></li>
+</ul>

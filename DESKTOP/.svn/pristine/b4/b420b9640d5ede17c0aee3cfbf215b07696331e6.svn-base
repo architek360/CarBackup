@@ -1,0 +1,201 @@
+<!-- PERSONAL INFO -->
+<div class="personal-info grid js-form-validator">
+	<h1 class="heading2">my cartier</h1>
+	<span class="profile-message">your profile has been updated</span>
+	<h3 class="personal-info__heading">my personal information</h3>
+	<div class="personal-info__welcome-image">
+	</div>
+
+	<form>
+		<!-- PERSONAL DETAILS -->
+		<div class="personal-details grid__item palm--one-whole one-half">
+	    	<div class="grid__item grid__item--pad one-whole">
+	    			<!--#set var="input-name" value="fn_grptitle" -->
+		    		<!--#include virtual="../../components/radio_buttons_group/html.shtml" -->
+			</div>
+
+
+
+	    	<div class="grid__item grid__item--row one-whole">
+	    		<!--#set var="label-name" value="country" -->
+	            <!--#set var="mandatory" value="no"-->
+	            <!--#set var="input-name" value="country" -->
+	    		<!--#include virtual="../../components/form_elements/label.shtml" -->
+	    		<!--#set var="input-name" value="fn_country" -->
+	    		<!--#set var="style-name" value="select-1" -->
+				<!--#set var="option-component" value="state_option" -->
+				<!--#include virtual="../../components/form_elements/select.shtml" -->
+	
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole ">
+	    		<!--#set var="label-name" value="first name" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_fname" -->
+	    		<!--#include virtual="../../components/form_elements/label.shtml" -->
+	    		<!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="text" -->
+	    		<!--#include virtual="../../components/form_elements/input.shtml" -->
+	   
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole ">
+	            <!--#set var="label-name" value="last name" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_lname" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="text" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	         
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole">
+	            <!--#set var="label-name" value="e-mail address" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="j_username" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="email" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	        
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole">
+	            <!--#set var="label-name" value="e-mail confirmation" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_emailcon" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="email" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	         
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole two-row-line">
+	            <!--#set var="label-name" value="Password" -->
+	            <!--#set var="mandatory" value="yes"-->
+				<!--#set var="input-name" value="j_password" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input forgot-pass" -->    
+	            <!--#set var="input-type" value="password" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	         
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole newpass">
+	           <!--#set var="label-name" value="New Password" -->
+	            <!--#set var="mandatory" value="yes"-->
+				<!--#set var="input-name" value="j_password" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="password" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	         
+	    	</div>
+
+	    	<div class="grid__item grid__item--row one-whole newpass">
+	            <!--#set var="label-name" value="Confirm New Password" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_passcon" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="password" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+		</div>
+
+
+
+		<!-- BIRTHDAY DETAILS -->
+		<div class="birthday-details grid__item palm--one-whole one-half">
+			<p class="birthday-details__heading">Because we care for your precious moments...</p>
+			<div class="grid__item grid__item--pad one-whole js-birthday">
+	            <!--#set var="label-name" value="your birthday" -->
+	            <!--#set var="mandatory" value="no"-->
+	            <!--#set var="input-name-dp1" value="fn_bdmonth" -->
+	            <!--#set var="input-name-dp2" value="fn_bddate" -->
+	            <!--#set var="input-name-dp3" value="fn_bdyear" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#include virtual="../../components/date_picker/html.shtml" -->
+	    	</div>
+
+	    	<div class="grid__item one-whole">
+	            <!--#set var="label-name" value="marraige" -->
+	            <!--#set var="mandatory" value="no"-->
+	            <!--#set var="input-name-dp1" value="fn_mrmonth" -->
+	            <!--#set var="input-name-dp2" value="fn_mrdate" -->
+	            <!--#set var="input-name-dp3" value="fn_mryear" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#include virtual="../../components/date_picker/html.shtml" -->
+	    	</div>
+		</div>
+
+
+
+		<!-- MOBILE DEVICES DETAILS -->
+		<div class="mobile-device grid__item palm--one-whole one-half">
+			<div class="grid__item one-whole">do you own a smartphone / a tablet?</div>
+			<div class="grid__item one-whole">
+	            
+	            <ul class="mobile-device__list">
+	                <li>
+	                	<!--#set var="checkbox-value" value="value" -->
+	                    <!--#set var="checkbox-name" value="fn_grpownsp" -->
+						<!--#set var="checkbox-label-name" value="iphone" -->
+						<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	                </li>
+	                <li>
+	                	<!--#set var="checkbox-value" value="value" -->
+	                    <!--#set var="checkbox-name" value="fn_grpownsp" -->
+						<!--#set var="checkbox-label-name" value="other smart phone" -->
+						<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	                </li>
+	                <li>
+	                	<!--#set var="checkbox-value" value="value" -->
+	                    <!--#set var="checkbox-name" value="fn_grpownsp" -->
+						<!--#set var="checkbox-label-name" value="ipad" -->
+						<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	                </li>
+	                <li>
+	                	<!--#set var="checkbox-value" value="value" -->
+	                    <!--#set var="checkbox-name" value="fn_grpownsp" -->
+						<!--#set var="checkbox-label-name" value="other touch screen tablet" -->
+						<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	                </li>
+	            </ul>
+
+
+	    	</div>
+		</div>	
+
+		<!-- OWNED CREATIONS WRAPPER -->
+		<div class="owned-creations grid__item palm--one-whole one-half js-radiobox">
+                    <!--#set var="input-name" value="fn_grpdoyouown" -->
+                    <!--#set var="head-label-name" value="do you own a cartier creation?" -->
+                    <!--#set var="radio-text1" value="no" -->
+                    <!--#set var="radio-value1" value="no" -->
+
+                    <!--#set var="radio-text2" value="yes" -->
+                    <!--#set var="radio-value2" value="yes" -->
+
+          
+
+                    <!--#include virtual="../../components/radio_buttons_group4_slider/html.shtml" -->
+                    <!--#include virtual="../../views/do_you_own/html.shtml" -->
+
+
+		</div>
+
+
+		<!-- SUBMIT BUTTON -->
+		<div class="action-button">
+			<!--#set var="text-detail" value="submit" -->
+	    	<!--#set var="cta--varaint" value="cta--red-width-auto-pad-20" -->
+	    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+		</div>	
+	</form>	
+
+	<!--#include virtual="../../components/breadcrumb/html.shtml" -->
+</div>
+

@@ -1,0 +1,40 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+		"isSubmitSuccess": false,
+		"errorMessage": "Zip code not valid",
+		"redirecturl":"/sdf/sdf/sdf",
+		"bobjAddressList" : [
+			{	
+				"streetNumber" : "250",
+				"streetName" : "Street name",
+				"poboxNumber" : "PO Box number",
+				"city" : "New York",
+				"state" : "NY",
+				"additionalInfo" : "Go home cartier",
+				"zip" : "1234234"
+			},
+			{	
+				"streetNumber" : "25011111",
+				"streetName" : "Street name11111",
+				"poboxNumber" : "PO Box number11111",
+				"city" : "New York11111",
+				"state" : "AZ",
+				"additionalInfo" : "Go home cartier",
+				"zip" : "123423411111"
+			},
+			{	
+				"streetNumber" : "25022222",
+				"streetName" : "Street name22222",
+				"poboxNumber" : "PO Box number22222",
+				"city" : "New York22222",
+				"state" : "DC",
+				"additionalInfo" : "Go home cartier",
+				"zip" : "123423422222"
+			}
+		]
+	}
+}
+
+

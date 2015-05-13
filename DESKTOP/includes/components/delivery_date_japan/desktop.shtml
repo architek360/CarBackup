@@ -1,0 +1,106 @@
+
+<div class="delivery-days">
+  <ul class="delivery-days__list js-delivery-days" data-isjapan='true'>
+    <li > 
+      <!--#set var="radio-text" value="" --> 
+      <!--#set var="radio-value" value="standard-button" --> 
+      <!--#set var="radio-name" value="del_address" --> 
+      
+      <!--#include virtual="../../components/form_elements/desktop_radio.shtml" -->
+      <div class="delivery-wrapper">
+        <div class="delivery-days__desc">
+          <p class="delivery-days__desc__title"> ご希望の配送日時をご指定いただけます。
+          </p>
+          
+        </div>
+        <div class="delivery-days__amt">$ 00.00</div>
+        
+        <div class="delivery-day__japan js-delivery-day__japan display-none"> 
+          
+          <ul>
+            <li class="date-options">
+              <select  name="" class="form-select select-1">
+                <option value="" data-attr='default'>-Select-</option>
+                <option value="">Monday,December 05,2011 </option>
+                <option value="">Tuesday,December 06,2011</option>
+                <option value="">Tuesday,December 06,2011</option>
+                <option value="">Tuesday,December 06,2011</option>
+                <option value="">Tuesday,December 06,2011</option>
+              </select>
+              <!--#set var="label-name" value="Standard Flights" --> 
+              <!--#set var="mandatory" value="no"--> 
+          
+              <!--#include virtual="../../components/form_elements/label.shtml" -->
+
+              <!--#set var="links-to" --" value="#" --> 
+              <!--#set var="img-src" value= "tooltip_icon.png" --> 
+              <!--#include virtual="../../components/tool_tip/html.shtml" -->
+            </li>
+            <li class="time-options">
+              <select  name="" class="form-select select-1">
+                <option value="">ANY TIME </option>
+                <option value="">12:00 - 14:00</option>
+                <option value="">14:00 - 16:00</option>
+                <option value="">16:00 - 18:00</option>
+                <option value="">18:00 - 21:00</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="delivery-days__desc below_desc_container">
+          <p class="delivery-days__desc__detail"> And if you order today, we will be able to deliver the goods by the date of the next: -02 days-July 2014 </p>
+        </div>
+    </div>
+    </li>
+    <li > 
+      <!--#set var="radio-text" value="" --> 
+      <!--#set var="radio-value" value="standard-button1" --> 
+      <!--#set var="radio-name" value="del_address" --> 
+      
+      <!--#include virtual="../../components/form_elements/desktop_radio.shtml" -->
+      <div class="delivery-wrapper">
+        <div class="delivery-days__desc">
+          <p class="delivery-days__desc__title"> ご希望の配送日時をご指定いただけます。
+          </p>
+          
+        </div>
+        <div class="delivery-days__amt">$ 00.00</div>
+        
+        <div class="delivery-day__japan js-delivery-day__japan display-none"> 
+          
+          <ul>
+            <li class="date-options">
+              <select  name="" class="form-select select-1">
+                <option value="">Monday,December 05,2011 </option>
+                <option value="">Tuesday,December 06,2011</option>
+                <option value="">Tuesday,December 06,2011</option>
+                <option value="">Tuesday,December 06,2011</option>
+                <option value="">Tuesday,December 06,2011</option>
+              </select>
+              <!--#set var="label-name" value="Standard Flights" --> 
+              <!--#set var="mandatory" value="no"--> 
+          
+              <!--#include virtual="../../components/form_elements/label.shtml" -->
+
+              <!--#set var="links-to" --" value="#" --> 
+              <!--#set var="img-src" value= "tooltip_icon.png" --> 
+              <!--#include virtual="../../components/tool_tip/html.shtml" -->
+            </li>
+            <li class="time-options" data-show="true">
+              <select  name="" class="form-select select-1">
+                <option value="">ANY TIME </option>
+                <option value="">12:00 - 14:00</option>
+                <option value="">14:00 - 16:00</option>
+                <option value="">16:00 - 18:00</option>
+                <option value="">18:00 - 21:00</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="delivery-days__desc below_desc_container">
+          <p class="delivery-days__desc__detail"> And if you order today, we will be able to deliver the goods by the date of the next: -02 days-July 2014 </p>
+        </div>
+    </div>
+    </li>
+  </ul>
+</div>

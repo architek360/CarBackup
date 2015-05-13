@@ -1,0 +1,83 @@
+
+  <!-- MY CARTIER Block Starts Here-->
+
+    <h1 class="heading1">my cartier</h1>
+    <p class="welcome-message">Dear <span>Pierre-Eric Boulland</span>, welcome to your personal account </p>
+    <a href="#" class="logout-button">Log out<span class="logout-icon"></span></a>
+
+
+      <!-- MY LAST ORDER BLOCK-->
+      <div class="clearfix my-account__orders">
+        <!--#set var="title-line" value="my last orders" -->
+
+        <!--#include virtual="../../components/heading_line/html.shtml" -->
+               <div class="grid my-orders clearfix"> dfdfdfdfdf
+          <div class="heading-wrapper"></div>
+          <div class="heading-wrapper"></div>
+          <div class="error-page">
+            <p class="error-page__msg">djdhfj djfdhj jdhjdhjh jhjhjd</p>
+          </div>
+          </div>
+       <!--#include virtual="../../views/my_orders/desktop.shtml" -->
+
+
+
+        <!-- SHOW ALL YOUR ORDERS BLOCK-->
+        <div class="call-all">
+           <!--#set var="arrow-class" value="arrow-show" -->
+           <!--#set var="more-text" value="all your orders" -->
+          <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+        </div>
+      </div>
+
+      <!-- MY CARTIER SERVICE BLOCK-->
+      <div class="clearfix my-account__services">
+          <!--#set var="title-line" value="my services" -->
+          <!--#include virtual="../../components/heading_line/html.shtml" -->
+          
+          <!-- SHOW ALL YOUR ORDERS BLOCK-->
+          <div class="call-all">
+             <div class="more-link"><a href="#">FOLLOW YOUR REPAIR SERVICE</a></div>
+
+          </div>
+      </div>
+
+     <!-- MY CARTIER PUSHES BLOCK-->
+      <div class="my-account__push clearfix">
+          <!--#set var="title-line" value="settings and preferences" -->
+          <!--#include virtual="../../components/heading_line/html.shtml" -->
+           <div class="services-pushes clearfix">
+            <ul class="pushes-wrapper grid">
+                <li class="grid__item one-third" >
+                <!--#set var="pushes-title" value="My Personal Information" -->
+                <!--#set var="pushes-description" value="" -->
+                <!--#set var="pushes-img-src" value="push_nav_personalinformations_33.jpg" -->
+                <!--#set var="more-text" value="Learn more" -->
+                <!--#include virtual="../../components/service_push/html.shtml" -->
+                </li>
+                <li class="grid__item one-third" >
+                <!--#set var="pushes-title" value="My Addresses" -->
+                <!--#set var="pushes-description" value="" -->
+                <!--#set var="more-text" value="Read more" -->
+                <!--#set var="pushes-img-src" value="push_nav_addresses_33.jpg" -->
+                <!--#include virtual="../../components/service_push/html.shtml" -->
+                </li>
+                <li class="grid__item one-third" >
+                <!--#set var="pushes-title" value="My Subscriptions and Interests" -->
+                <!--#set var="pushes-description" value="" -->
+                <!--#set var="more-text" value="Learn more" -->
+                <!--#set var="pushes-img-src" value="push_nav_subsciprions_33.jpg" -->
+                <!--#include virtual="../../components/service_push/html.shtml" -->
+                </li>
+                <li class="grid__item one-whole" >
+                <!--#set var="pushes-title" value="My Wishlists" -->
+                <!--#set var="pushes-description" value="" -->
+                <!--#set var="more-text" value="Read more" -->
+                <!--#set var="pushes-img-src" value="myaccount_wishlist.jpg" -->
+                <!--#include virtual="../../components/service_push/html.shtml" -->
+                </li>
+            </ul>
+        </div>
+      </div>
+
+ <!-- MY CARTIER Block Ends Here-->

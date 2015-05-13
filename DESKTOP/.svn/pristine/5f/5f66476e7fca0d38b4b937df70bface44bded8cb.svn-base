@@ -1,0 +1,241 @@
+
+<!--#set var="back-static-text" value="Back" -->
+<!--#include virtual="../../components/back_button/html.shtml" -->
+<div itemscope itemtype="http://schema.org/Product">
+<div class="heading-wrapper">
+	<h1 class="heading1">Collection Premiere Cartier</h1>
+</div>
+
+<!--Product Detail Page Block Starts Here-->
+
+<div class="page-product grid js-product-pdp">
+	<div class="grid__item one-third column-description">
+		<h2 class="heading2 js-share-title"><span itemprop="name">BALLON BLEU DE CARTIER WATCH, 42 MM</span></h2>
+        <span class="product-description js-share-desc">Self-winding mechanical movement, stainless steel, leather strap</span>
+      <span itemprop="productID" class="product-reference">ref: HPI00480</span>
+        <p><span itemprop="description">Light like a balloon, as hard as sapphire crystal, Ballon Bleu de Cartier watch extremely elegant, unisex. Inlaid sapphire cabochon crown surrounded by precious metal ring protection and lead to dial Roman numerals orbit is slightly deformed. Convex case, machine engraved guilloche dial, sword-shaped hands, polished or matte crawler strap ...... many of Cartier watches, Ballon Bleu de Cartier watch with style and delicate, elegant style known.</span></p>
+        <a href="#details" class="more-button js-internal-link"><span class="more-button-arrow"></span>Details</a>
+
+		<!--#include virtual="../../components/social_share/html.shtml" -->
+	</div>
+	<div class="grid__item one-third column-images">
+		<!--#include virtual="../../components/carousel/pdp_carousel.shtml" -->
+        <ul class="thumbnail-list">
+            <li class="thumbnail first"><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/thumbnail.48.48.png"/></li>
+            <li class="thumbnail"><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/thumbnail.48.48.png"/></li>
+            <li class="thumbnail"><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/thumbnail.48.48.png"/></li>
+            <li class="thumbnail">
+            <a class="degree360-icon js-degree360" href="#"></a></li>
+        </ul>
+	</div>
+	<div class="grid__item one-third column-cart">
+		<div class="price-wrapper">
+			<div class="product-price js-product-price"> <span itemprop="price">€ 4,550.00</span></div>
+			<div class="product-taxes">incl.</div>
+			<div class="edit-shipping">
+				<p>Based on a ship in <strong>Germany</strong></p>
+				<div class="product-shipping">We deliver to 14 European  <!--#set var="links-to value="#" -->
+			    	<!--#set var="img-src" value= "tooltip_icon.png" -->
+			    	<!--#include virtual="../../components/tool_tip/html.shtml" --></div>
+
+			</div>
+
+		</div>
+		<div class="js-form-validator">
+		<form>
+
+            <div id="modalOverlay-features" class="positionChange js-modal-features">
+                <div id="modalWindow-features" class="js-window-features">
+                    <div class="cross-button close js-close"></div>
+                    <!--#include virtual="../../components/personalise_features/html.shtml" -->
+                </div>
+            </div>
+
+			<fieldset class="js-form-validator-fieldset">
+			<div class="product-features">
+                <div class="tooltip-engraving">
+    				<a class="js-engraving">Engraving <span class="edit-icon"></span></a>
+                    <div class="js-tool-tip-detail tool-tip-details-wrapper" style="display: none;">
+                        <img class="callout" alt="CSS Tooltip callout" src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bottom-arrow.png">
+                        <div class="tool-tip-details">
+                            <p>You must select a size before</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tooltip-adjustment">
+                   <a class="js-adjustment">Adjust Braclet <span class="edit-icon"></span></a>
+                    <div class="js-tool-tip-detail tool-tip-details-wrapper" style="display: none;">
+                        <img class="callout" alt="CSS Tooltip callout" src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bottom-arrow.png">
+                        <div class="tool-tip-details">
+                            <p>You must select a size before</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="sizing-wrapper">
+					 <!--#set var="input-name" value="fn_refid" -->
+                        <!--#set var="style-name" value="select-2 js-sizeselector display-none" -->
+                        <!--#set var="option-component" value="size_option" -->
+                        <!--#include virtual="../../components/form_elements/select.shtml" -->
+
+	                    <input type="hidden" name="fn_pid" value= 'sdfjnsd' id="productid"/>
+	                    <input type="hidden" name="fn_qty" value= "1"/>
+	                    <input type="hidden" name="pdp_pagepath" value= "hello" id="pagePath"/>
+
+                    <!--#set var="arrow-class" value="more-button-arrow " -->
+					<!--#set var="more-text" value="sizing guide" -->
+		        	<!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+				</div>
+			</div>
+                <div class="tooltip-shoppingbag">
+    			    <!--#set var="text-detail" value="add to shopping bag" -->
+                    <!--#set var="cta--varaint" value="cta--red-width-30 js-addtoshopping tooltip" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+
+                    <div class="js-tool-tip-detail tool-tip-details-wrapper" style="display: none;">
+                        <img class="callout" alt="CSS Tooltip callout" src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bottom-arrow.png">
+                        <div class="tool-tip-details">
+                        <p>You must select a size before</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="cta-button cta-button__inner cta--red-width-30 js-request-price display-none">
+                    <span class="input-arrow"></span>
+                    <span class="cta-button__input">Request Price</span>
+                </a>
+
+	        <div class="product-phone">Per Telefon bestellen<br><strong>+49 (0)89 559 84 221</strong></div>
+	    	</fieldset>
+    	</form>
+
+			                <div class="js-guest-account">
+                    <input type="hidden" class="js-wishlist_pagepath" name="wishlist_pagepath" value="wishlistPath"/>
+                    <input type="hidden" class="js-pagepath" name="pagepath" value="pagepath"/> 
+
+                    <div class="js-accordion-x">
+                        <div class="js-accordion__node">
+                            <div class="js-accordion_node__title">
+                                
+                                
+                                
+                    <!--#set var="text-detail" value="add selection to wishlist" -->
+                    <!--#set var="cta--varaint" value="cta--grey-pad-30 js-add-selection" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                            </div>
+                            <div class="js-accordion_node__desc js-add_wishlist_accordion" style="display: none;">
+                                <div class="copy-to-wishlist">
+                                    <div class="input-field">
+                                        
+                                        
+                                        
+                                        <label class="form-label" for="fn_copywishlistname">add to my wish list</label>
+                                        <div class="single-line">
+                                            
+                                            
+                                            <!-- Select Box Starts Here-->
+                                            <select name="fn_copywishlistname" class="form-select js-select-addtomywishlist">
+                                                <option data-wishlistno="123" value="watches">Watches</option>
+                                                <option data-wishlistno="234" value="rings">Rings</option>
+                                                <option data-wishlistno="123" value="watches">Watches</option>
+                                                <option data-wishlistno="234" value="rings">Rings</option>
+                                            </select>
+                                            <!-- Select Box Ends Here-->
+                                            
+                                            
+                                            <button class="cta-button cta-button__inner cta--red-width-auto-pad-20 js-addtomywishlist-ok" type="submit">
+                                            <span class="cta-button__input">ok</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="input-field">
+                                        
+                                        
+                                        
+                                        <label class="form-label" for="fn_newwishlistname">create a new wishlist occasion</label>
+                                        <div class="single-line">
+                                            
+                                            
+                                            
+                                            <input type="text" ""="" class="form-input js-newwishlistname" name="fn_size">
+                                            
+                                            <button class="cta-button cta-button__inner cta--red-width-auto-pad-20 js-createnewwishlist-ok" type="submit">
+                                            <span class="cta-button__input">ok</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+			<div class="help">
+				<div class="info-icon"></div>
+				
+				<!--#set var="cta-class" value="js-contam-popup" -->
+                <!--#set var="cta-href" value="#" -->
+				<!--#set var="arrow-class" value="more-button-arrow " -->
+				<!--#set var="more-text" value="contact ambassador" -->
+
+				<!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                
+				<!--#set var="cta-href" value="http://localhost/desktop-svn/pages/my_orders.shtml" -->
+                <!--#set var="cta-class" value="js-request-popup" -->
+		        <!--#set var="more-text" value="Request Info" -->
+		        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+	    	</div>
+
+    	</div>
+	</div>
+</div>
+</div>
+
+
+
+<!-- INCLUDING LINK TO TOP COMPONENT-->
+
+<!--#set var="link-text" value="Top" -->
+<!--#set var="link-class" value="" -->
+<!--#include virtual="../../components/link_to_top/html.shtml" -->
+
+<!-- END OF TOP COMPONENT-->
+
+<!-- INCLUDING TABS COMPONENT-->
+
+    <!--#set var="tab_1" value="Similar products" -->
+    <!--#set var="tab_2" value="suggestions" -->
+    <!--#set var="tab_content_1" value="tab_pdp_suggestion" -->
+    <!--#set var="tab_content_2" value="tab_pdp_suggestion" -->
+    <!--#include virtual="../../components/tabs/html.shtml" -->
+
+<!-- END OF TABS COMPONENT-->
+
+<div class="history-stories">
+	<h2 class="heading2">HISTORY AND STORIES: CARTIER, A PIONEER IN MODERN WATCHMAKING</h2>
+	<!--#include virtual="../../components/carousel/pdp_video_carousel.shtml" -->
+</div>
+<!--#include virtual="../../components/details_content/html.shtml" -->
+<!--#if expr="${THEME_1} = 'bridal_theme'"  -->
+<!--#include virtual="../../components/carousel/famous_diamond_carousel.shtml" -->
+<!--#endif-->
+<!--Product Detail Page Block Starts Here-->
+
+
+
+<div class='js-overlay'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class="img-container">
+        <img src="" alt="Overlay image" class="image">     
+    </div>
+</div>
+
+
+    <div id="modalOverlay" class="positionChange js-modal-overlay">
+                <div id="modalWindow" class="js-modal-window">
+                   
+                </div>
+            </div>      

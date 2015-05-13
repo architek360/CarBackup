@@ -1,0 +1,90 @@
+<div class="nested-carousel-wrapper sfy">
+    <div class="carousel">
+        <ul class="bxslider js-nested-slider">
+            <li>
+                <div class="info__desc col_1-4">
+                    <h2 class="product-name">Cartier Destinée solitaire</h2>
+                    <h2 class="product-description">Platinum, diamonds</h2>
+                    <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                    <div class="sfy_check sfy_checkPlatinum">
+                        <!--#set var="radio-value" value="PLATINUM" -->
+                        <!--#set var="radio-name" value="goldPlatinum_video" -->
+                        <!--#set var="radio-text" value="PLATINUM" -->
+                        <!--#set var="attr-value" value="" -->
+                        <!--#include virtual="../../components/form_elements/radio.shtml" -->
+                        <div class="platinum"></div>
+                    </div>
+                    <div class="sfy_check sfy_checkGold clearfix">
+                        <!--#set var="radio-value" value="YELLOW GOLD" -->
+                        <!--#set var="radio-name" value="goldPlatinum_video" -->
+                        <!--#set var="radio-text" value="YELLOW GOLD" -->
+                        <!--#set var="attr-value" value="" -->
+                        <!--#include virtual="../../components/form_elements/radio.shtml" -->
+                        <div class="gold"></div>
+                    </div>
+                    <!--#set var="cta--varaint" value="cta--red" -->
+                    <!--#set var="text-detail" value="SELECT" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+                <div class="info__pic col_3-4">
+                    <div class="product-carousel__wrapper platinum-1">
+                        <ul class="bxslider js-product-img-slider">
+                            <li>
+                                <!--#include virtual="../../components/carousel/single_video_carousel.shtml" -->
+                            </li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4163600_0.png" alt="" class="image"></li>
+                        </ul>
+                    </div>
+                    <div class="product-carousel__wrapper goldBlock-1">
+                        <ul class="bxslider js-product-img-slider">
+                            <li>
+                                <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image">
+                            </li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info__desc col_1-4">
+                    <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                    <h2 class="product-description">Platinum, diamonds</h2>
+                    <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                    <!--#set var="cta--varaint" value="cta--red" -->
+                    <!--#set var="text-detail" value="SELECT" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+                <div class="info__pic col_3-4">
+                    <div class="product-carousel__wrapper platinum-1">
+                        <ul class="bxslider js-product-img-slider">
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="info__desc col_1-4">
+                    <h2 class="product-name">Cartier Destinée solitaire</h2>
+                    <h2 class="product-description">Platinum, diamonds</h2>
+                    <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                    <!--#set var="cta--varaint" value="cta--red" -->
+                    <!--#set var="text-detail" value="SELECT" -->
+                    <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+                <div class="info__pic col_3-4">
+                    <div class="product-carousel__wrapper platinum-1">
+                        <ul class="bxslider js-product-img-slider">
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                            <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

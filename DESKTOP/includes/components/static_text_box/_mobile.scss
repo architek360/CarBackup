@@ -1,0 +1,41 @@
+/*------------------------------------*\
+ STATIC TEXT BOX COMPONENT  -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.static-text-box)
+ * MAIN HEADING (.static-text-box .heading2)
+ * SUB HEADING (.static-text-box .heading3)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.static-text-box{
+	width: 81.25%;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding-top', 38px);
+	color: $primary-2;
+
+	.heading3{
+		@include f(24);
+		@include rem('padding', 25px 0px 23px);
+		border-top: 1px solid $primary-2;
+		font-weight:normal;
+		line-height:27px;
+	}
+	.heading2{
+		@include f(32);
+		@include rem('padding', 0px);
+		@include rem('padding-bottom', 26px);
+		border-bottom: 1px solid $primary-2;
+	}
+	.heading2--32f {
+		@include f(34);
+		@include rem('padding', 0px);
+		@include rem('padding-bottom', 50px);
+		border-bottom: 1px solid $primary-2;
+	}
+}

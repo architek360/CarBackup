@@ -1,0 +1,185 @@
+/*------------------------------------*\
+    Login -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.login-box)
+ * HEADING BLOCK .... (.login-box__title, .login-box__desc)
+ * SHOW PASSWORD BUTTON .... (.show_password)
+ * EXTRA SUBMIT BUTTON STYLE .... (.login-box__list li .cta--red )
+ * CREATE NEW ACCOUNT BUTTON STYLE .... (.cta--red )
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.forgot {
+
+	display: block;
+	margin: 30px auto;
+	text-align: center;
+	@include brand-font;
+	@include font-color($primary-2);
+
+	.forgot__title{
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		@include rem('padding', 30px 0px);
+		@include rem('margin', 0 0 60px 0);
+		display:block;
+
+		.heading2{
+			@include rem('padding', 0px 0px);
+			border:none;
+		}
+		.heading3{
+			@include rem('padding', 0 0 20px 0);
+		}
+	}
+
+	.forgot-box {
+		position:relative;
+		background: $primary-1; 
+		@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+		border: 1px solid #464646;
+		@include rem('padding', 20px 0px);
+					
+		.forgot-box__title {
+			@include rem('font-size', 20px);
+			font-weight: bold;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		.forgot-box__desc {
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: inline-block; 
+			text-align: center;
+			width: 90%;
+			font-style:italic;
+			@include rem('padding', 30px 0px 15px);
+		}	
+		.forgot-box__list {  
+			
+		    @include set-ulFix;	/* For normalizing margins, padding*/
+			span.error{
+				float:left;
+			}
+		    a{
+		    	font-size: 2rem;
+		    	text-transform:uppercase;
+		    	@include brand-font;
+
+		    }
+		    li {  
+				margin: 0px auto;
+			    clear: both;
+			    display: inline-block; 
+			    width: 91.19%;
+			    
+				
+				/* For Styling Submit Button */ 
+				.cta--red {
+					margin: 0 auto;
+					@include rem('margin-top', 40px);
+					@include rem('margin-bottom', 10px);
+					width: 25%;
+					text-align: center;
+				}
+
+				/* For Styling Labels/title for input buttons*/
+			    label {  
+				    @include brand-font;
+				   
+				    @include rem('margin', 30px 0px 0px);
+				    color: $white;
+				    display: inline-block;  
+				    
+				    text-align: left;
+				    text-transform: uppercase;
+			    	@include f(20);
+				}
+
+
+
+				/* For Styling Show Password Button*/
+				
+				.show-password {
+				    @include f(20);
+				    @include rem('margin', -39px -12px -12px 0px);
+				    @include rem('padding', 15px);
+				    @include rem('padding-left', 30px);
+				     @include rem('padding-right', 23px);
+				    @include rem('width', 60px);
+				    background: $primary-3 url($path-images + 'icons/white_arrow.png') no-repeat 14px 18px;	
+				    border: none;
+				    @include font-color($primary-2); 
+				    @include brand-font;
+				    cursor: pointer;
+				    float: right;
+				    overflow: visible;
+				    position: relative;
+				    text-transform: uppercase;
+				    font-style:normal;
+				}  
+
+				/* For Styling Forgot Password*/
+				.forgot-box__forgot-password {
+
+					margin: 0.6em 0;
+					@include f(22);
+				    @include main-font;
+				    color: $light_grey;
+				    display: block; 
+				    float: right;
+				    text-decoration: underline;
+				}
+
+				/* For Styling A block that contains Password-input and show_password button*/
+				> .form-input {
+					display: none;
+					float: left;
+					display: block;
+				}
+				/* For Password Box in hidden and shown states */ 
+				 .password-input {  
+					@include rem('padding', 0px);
+				    @include rem('margin', 0px);
+				    border: none;
+				    width: 75%;
+				}
+			} /* END OF li*/
+
+			li:first-child {
+				text-align: left;
+			}
+
+		} 	/* END OF .login-box__list*/
+		.cross-button{
+		position:absolute;
+		top:7px;
+		right:7px;
+		width:20px;
+		height:20px;
+		@include setSprite(27px, 29px, -630px, -128px );  
+		background-repeat: no-repeat;
+
+	}
+
+	}	/* END OF .login-box*/ 
+
+	hr {
+
+		margin: 0 auto;
+		@include rem('margin-top', 60px);
+		@include rem('margin-bottom', 50px);
+	}
+
+	.cta--red {
+		width: 100%;
+		text-align: center;
+	}
+
+
+
+} /* END OF .login */ 

@@ -1,0 +1,123 @@
+/*------------------------------------*\
+    Global -- BASE CSS
+\*------------------------------------*/
+/**
+ * BASIC FRAMEWORK STYLES
+ */
+
+/* 
+ * DEFAULT FONT FAMILY FOR ALL PAGES
+ */
+
+$font-family-default: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+
+
+/*
+ * DEFAULT FONT FAMILY FOR NAVIGATION LINKS
+ */
+
+$font-family-nav: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+/*//For desktop.css*/
+ 
+$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+ 
+ 
+  
+ 
+//For bridal.css
+
+/*
+$path-images : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/'; 
+*/
+
+/*
+
+Settings FOR DEV TEAM
+====DO NOT DELETE OR UNCOMMENT====
+
+
+.top-nav{
+	position:static !important;
+}
+
+.main-container{
+	background-color:black !important;
+	margin-top:0px !important;
+}
+
+*/
+
+
+html, body {
+	 font-size: 62.5%; /* Sets up the Base 10 stuff */
+    /*font-size: 100%;*/
+	-webkit-font-smoothing: antialiased;
+	font-family: $font-family-default;
+}
+
+div{ font-family: $font-family-nav;}
+
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+  font-family: $font-family-nav;
+}
+
+h1, h2, h3 {
+  font-family: $font-family-nav;
+}
+
+h1 { font-size: 30px;}
+h2 { font-size: 26px;}
+h3 { font-size: 20px;}
+
+html, button, input, select, textarea {
+  font-family: $font-family-default;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+.f-left{
+	float:left;
+}
+
+.f-right{
+	float:right;
+}
+.f-none{
+	float:none;
+}
+

@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    Expiration Date -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.expiration-date)
+ * TITLE BLOCK......HEADING (.expiration-date__title)
+ * DROPDOWN STYLING......SELECT BOX styling (.styled-select)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+
+.expiration-date {
+
+	@include brand-font;
+	@include font-color($primary-2);	
+	display: block;
+	background: $primary-1; 
+	margin: 0 auto;	
+	@include rem('margin-bottom', 20px);	
+
+	.expiration-date__title {
+		text-align: left;
+		text-transform: uppercase;
+		@include bold-font;
+		@include rem('margin-bottom', 10px);
+		@include f(22);
+	}
+	ul {
+		@include set-ulFix;
+		overflow:auto;
+		
+		li {
+					width: 47%;
+					float:left;
+					margin: 0;
+					display: inline-block;
+					border: none;
+					@include rem('height', 58px);
+
+			}
+		li:last-child {
+			margin-left:2%;
+			float:right;
+
+		}
+	}
+
+	.form-select {
+		@include main-font;
+		font-style: italic;
+	}
+}

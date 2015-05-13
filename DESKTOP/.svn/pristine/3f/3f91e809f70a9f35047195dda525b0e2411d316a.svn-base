@@ -1,0 +1,398 @@
+/*------------------------------------*\
+    Welcome -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..    (.my-account)
+ * ORDER DETAIL BLOCK    (.my-account__orders)
+ * MY SERVICES BLOCK     (.my-account__services)
+ * MY ACCOUNT PUSHS BLOCK(.my-account__push)
+
+ */
+
+/*------------------------------------*\
+    $MY ACCOUNT BLOCK
+\*------------------------------------*/
+
+/*
+.heading1{
+	border:none;
+	@include rem('letter-spacing', 1px);
+	@include proxi-font();
+	@include f(30);
+	text-align: center;
+}*/
+
+.main-container{
+	.welcome-message {
+	@include f(13);
+	@include main-font;
+	@include rem('padding', 35px 0 35px 0);
+	@include font-color($primary-3);
+	text-align:center;
+	@include rem('letter-spacing', 0px);
+
+		span{
+			font-weight:bold;
+		}
+	}
+
+}
+
+.logout-button{
+	@include f(10);
+	@include font-color($primary-3);
+	@include proxi-font;
+	font-weight: bold;
+	width:auto;
+	text-transform:uppercase;
+	@include rem('padding', 0px);
+	margin:0 auto;
+	display:table;
+	position: relative;
+	top: -80px;
+	right: 0;
+	font-weight: normal;
+	@include rem('letter-spacing', 1px);
+	float: right;
+
+
+	&:hover{
+		@include font-color($primary-2);
+	}
+
+	.logout-icon{
+		@include rem(margin,0 0 0 8px);
+	}
+}
+
+
+
+.title-line{
+	span{
+		@include f(11);
+		@include proxiBold-font();
+	}
+}
+
+.more-button{
+	@include rem(padding, 0px);
+
+}
+
+.my-orders{
+	@include rem('padding', 20px 0 0);
+
+	.my-orders__detail{
+		@include rem('margin-bottom', 0px);
+	}
+}
+/*------------------------------------*\
+	$ORDER DETAIL BLOCK
+\*------------------------------------*/
+.my-account__orders{
+	@include rem('margin', 0 0 30px 0);
+
+	.order-block{
+		display:block;
+		@include f(22);
+		@include main-font;
+		@include font-color($primary-2);
+		border: 1px solid $primary-11;
+		background: $primary-1; /* Old browsers */
+		text-align:center;
+		margin: 15px auto;
+		@include rem('padding', 25px);
+		background: $primary-1  url($path-images + 'icons/gradient-bot-right-bg.png') no-repeat bottom right;
+		@include font-color($primary-3);
+
+		p{
+			@include rem(padding, 0px);
+			@include f(18);
+			text-transform:capitalize;
+
+		}
+		.order-block__details{
+			@include bold-font;
+			text-transform:uppercase;
+			@include font-color($primary-2);
+		}
+
+		.order-block__more{
+			font-style:italic;
+			@include rem('padding', 64px 0 0 0);
+			text-transform:capitalize;
+			text-align:left;
+
+		}
+	}
+}
+
+/*------------------------------------*\
+	$MY SERVICES BLOCK
+\*------------------------------------*/
+.my-account__services{
+	@include rem('margin', 0 0 40px 0);
+
+	.form-element{
+		width:60%; 
+		margin:0 auto;
+	}
+
+	.noti-number-cont{
+		height: 150px;
+	}
+	.services__message{
+		@include font-color($primary-6);
+		@include f(22);
+		@include main-font;
+		text-align:center;
+	}
+
+	.form-input{
+		background:$primary-1;
+		border:1px solid $primary-6;
+		@include rem('height', 56px);
+		width:100%;
+		@include rem('margin', 15px 0);
+		@include font-color($primary-2);
+		@include f(22);
+		outline:none;
+
+	}
+}
+
+
+
+/* TEMP STYLE FOR MY CARTIER*/
+.my-account .my-account__services {
+	color: #a0a0a0 !important;
+	 font-family: proximanovaBold,sans-serif !important;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 11px !important;
+}
+
+.my-account .my-account__orders .order-block__allorders{
+				@include font-color($primary-3);
+				margin:0 auto;
+				text-align:center;
+
+			.more-button {
+				font-family: proximanovaBold, sans-serif !important;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				font-style: normal !important;
+				letter-spacing: 1.3px;
+			}
+			.more-button:hover {
+  				color: white !important;
+			}
+
+}
+
+
+.my-account .my-account__services a {
+
+	
+	font-style: normal;
+	letter-spacing: 2px;
+	display: inline-block;
+
+
+   	background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") no-repeat scroll -431px -156px #000000;
+    bottom: 0.2rem;
+    color: #A0A0A0 !important;
+    display: inline-block;
+   
+    font-family: proximanovaBold,sans-serif !important;
+    font-size: 13px !important;
+    height: 10px;
+    letter-spacing: 0.13rem;
+    line-height: 1.4rem;
+    margin-right: 0.9rem;
+    padding-left: 10px;
+    position: relative;
+   
+    text-decoration: none !important;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: auto;
+
+    margin: 0px 0 40px;
+
+
+
+
+
+}
+
+.my-account .my-account__services a:hover {
+  color: white !important;
+}
+
+
+
+
+.my-account .logout-button {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: medium none;
+  color: #A0A0A0 !important;
+  display: table;
+  font-family: "proximanova",sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  letter-spacing: 1.3px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+  width: 150px !important;
+  border: none !important;
+  background: transparent !important;
+
+  	&:hover{
+		@include font-color($primary-2);
+		color: white !important;
+	}
+
+	.logout-icon{
+		@include rem(margin,-4px 0 0 8px);
+
+	}
+}
+
+
+/* TEMP STYLE FOR MY CARTIER ENDS HERE */
+
+
+/*------------------------------------*\
+	$MY ACCOUNT PUSHS BLOCK
+\*------------------------------------*/
+.my-account__push{
+	display:block;
+	 padding-left: 0;
+
+	.push-wrapper{
+		@include font-color($primary-2);
+		text-align: center;
+		@include set-ulFix;
+		@include rem('padding', 20px 0);
+		display:inline-block;
+		width:100%;
+
+		li{
+			@include rem('margin', 15px 0 10px);
+			display:inline-block;
+		}
+	}
+}
+
+.call-all{
+	@include font-color($primary-3);
+	margin:0 auto;
+	@include rem('padding-top', 10px);
+	text-align:center;
+
+	.more-button{
+		text-transform:uppercase;
+		@include f(13);
+		@include proxi-font();
+		font-weight: bold;
+		font-style: normal;
+		@include rem('letter-spacing', 2px);
+
+		&:hover{
+			@include font-color($primary-2);
+		}
+	}
+
+	.more-link a{
+		text-transform:uppercase;
+		@include f(13);
+		font-weight: bold;
+		font-style: normal;
+		@include rem('letter-spacing', 2px);
+		@include setSpriteDesktop(auto, 10px ,-431px ,-155px, transparent);
+		@include rem('padding-left', 15px);
+
+	}
+	.more-link a:hover{
+			@include font-color($primary-2);
+	}
+}
+
+.more{
+	@include rem('padding', 10px 0 0 10px);
+}
+
+/* service pushes css are already there in service push component and should not written here 
+.services-pushes{
+
+	.grid{
+		@include rem('margin-left', 0px);
+	}
+
+	.one-third{
+		@include rem('margin-right', 15px);
+		width: 32.3%;
+	}
+
+	.pushes-wrapper {
+		li{
+			@include rem('margin-bottom', 15px);
+		}
+	}
+}
+.pushes-wrapper-service-push{
+	.push-col{
+	height: 230px;
+	display: block;
+	}
+}
+*/
+
+
+.logout-wrapper .logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+	display: inline;
+	width: auto;
+	margin: 2px 0;
+	padding: 2px 0;
+	background: black;
+}
+
+.logout-wrapper .logout input.form-button {
+	@include setSpriteDesktop(auto, 25px, right, -1113px, transparent);
+	@include f(11);
+	letter-spacing: 0.1em;
+	line-height: 12px;
+	color: #a0a0a0;
+	@include rem('padding', 0 22px);
+}
+
+.logout-wrapper .logout input.form-button:hover {
+	color: $primary-2;
+}
+.my-orders .error-page {
+    z-index: -1;
+    min-height: inherit;
+}
+.my-account{
+	width:100%;
+
+	.my-orders{
+		.error-page{
+			display:none;
+		}
+	}
+}
+
+.my-orders .error-page .error-page__msg {
+	position: static;
+	margin: 0;
+	width: 100%;
+	margin-top: -50px;
+}

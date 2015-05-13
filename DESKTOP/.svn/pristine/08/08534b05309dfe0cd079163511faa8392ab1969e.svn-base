@@ -1,0 +1,62 @@
+/*------------------------------------*\
+   event article -- MOBILE CSS
+\*------------------------------------*/
+/**
+	* event article template css
+
+*/
+.event-article {
+	width: 81.25%;
+	margin: 0 auto;
+	@include main-font;
+	@include f(26);
+
+	.heading2 {
+		@include rem('padding-top',0px);
+		@include rem('padding-bottom',30px);
+		@include rem('margin-bottom',44px);
+
+	}
+	.heading3 {
+		@include rem('padding-top',60px);
+		@include rem('padding-bottom',28px);
+
+	}
+	p {
+		padding-bottom: 0;	
+	}
+	.event-article__img {
+		@include rem('margin-top',47px);
+		@include rem('margin-bottom',34px);
+
+		position: relative;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		height: 100%;
+		
+		.event-article__img__title {
+			position: absolute;
+			@include rem('left',200px);
+			@include rem('top',30px);
+			@include main-font;
+			@include f(34);
+			text-align: center;
+		}
+		.event-article__img__info {
+			@include rem('left',200px);
+			@include rem('top',100px);
+			@include f(34);
+			position: absolute;
+			display: table-cell;
+			vertical-align: middle;
+			color: $primary-20;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+
+		}
+	}
+}

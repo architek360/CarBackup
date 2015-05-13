@@ -1,0 +1,14 @@
+<div id="modalOverlay" class="positionChange js-modal-overlay <!--#if expr="${modal-class}" --> <!--#echo var="modal-class" -->  <!--#endif -->">
+    <div id="modalWindow" class="js-modal-window" >
+        <div class="cross-button close js-close"></div>
+        <!--#if expr="${COMP1}" -->
+            <!--#include virtual="../../../includes/components/${COMP1}/desktop.shtml" -->
+        <!--#endif -->
+        <!--#if expr="${COMP2}" -->
+            <!--#include virtual="../includes/components/${COMP2}/desktop.shtml" -->
+        <!--#endif -->
+        <!--#if expr="${COMP3}" -->
+            <!--#include virtual="../includes/components/${COMP3}/desktop.shtml" -->
+        <!--#endif -->
+    </div>
+</div>

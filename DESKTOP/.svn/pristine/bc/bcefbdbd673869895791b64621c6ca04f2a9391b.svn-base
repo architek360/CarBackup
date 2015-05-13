@@ -1,0 +1,3 @@
+<textarea class="form-textarea" placeholder="<!--#echo var="textarea-name" -->" name="<!--#echo var="input-name" -->"></textarea>
+
+

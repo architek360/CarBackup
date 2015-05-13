@@ -1,0 +1,7 @@
+<!-- back button Starts Here-->
+<div class="back-button">
+	<a href="#"><!--#echo var="back-static-text" --></a> 
+
+</div>
+
+<!-- back Button  Ends Here-->

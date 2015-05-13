@@ -1,0 +1,12 @@
+<!-- My Cartier Pushes Component  -->
+<div class="welcome-pushes">
+	<div class="grid push-block clearfix">
+	  <div class="grid__item two-thirds palm--two-thirds push-col">
+	   
+             <img src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="pushes-img-src"-->"  alt="store locator">
+	  </div>
+	  <div class="grid__item one-third palm--one-third push-col">
+	    <a href="#" class="text-link"><!--#echo var="pushes-title" --></a>
+	  </div>
+	</div>
+</div>

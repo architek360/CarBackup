@@ -1,0 +1,120 @@
+/*------------------------------------*\
+    ADJUST BRACELET SIZE -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.adjust-size)
+ * SUBMIT BUTTON STYLING.... submit button styling (.cta--red, .cta--grey)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.adjust-size{
+	display:block;
+	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	background: $primary-46;
+	text-align:center;
+	margin: 0 auto;
+	@include rem('padding', 0px 0px 25px);
+	ul {
+		@include set-ulFix;
+		@include rem('margin-right', 24px);
+		li {
+			display: block;
+			@include rem('margin', 0px 0px 30px);
+			.js-bold-class {
+				@include bold-font;
+			}
+			.js-cursive-class {
+				@include main-font;
+				font-style: italic;				
+			}
+			.adjust-size__heading {
+				@include rem('padding', 0px 30px);
+				@include rem('margin', 30px 0px);
+				text-transform:uppercase;
+				@include brand-font;
+				text-align: left;
+				letter-spacing: 2px;
+				@include font-color($primary-26);
+			}
+			.adjust-size__line {
+				display: block;
+				text-align: left;
+				@include rem('padding', 0px 20px 30px);
+				position: relative;
+				span {
+					margin-left: 2%;
+				}
+				.form-label {
+					position: absolute;
+					right: -15px;
+					@include rem('top',13px);
+					width: 18%;
+				}
+				.adjust-size_link {
+					@include main-font;
+					@include f(20);
+					display: block;
+				}
+				.more-button {
+					@include rem('padding', 20px 20px 0px);
+					.arrow-show{
+						@include setSprite(14px, 15px, -577px, -20px);
+						margin-left: 0;
+						margin-right: 12px;
+						margin-top: 4px;
+					}
+				}
+			}
+			label {
+				@include bold-font;
+				display: inline-block;
+				text-transform:uppercase;
+			}
+			.form-input{
+				width: 80%;
+				display: inline-block;
+				margin-left: 20px;
+				@include main-font;
+				background: ($primary-30);
+			}
+			.slide_switch  {
+				label {
+					width: auto;
+					text-transform: none;
+				}
+			}
+		}
+		.adjust-size__desc {
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: inline-block; 
+			text-align: center;
+			width: 81.25%;
+			@include rem('padding', 30px 0px 15px);
+		}
+
+		/*------------------------------------*\
+		    $SUBMIT BUTTON STYLING
+		\*------------------------------------*/	
+
+		.cta--red, .cta--grey {
+			width: 30%;
+			margin: 0 auto;
+			text-align: center;
+			@include rem('margin', 40px 10px 10px);
+			display: inline-block;
+			vertical-align: top;
+			@include rem('padding', 15px 0px);
+		}
+		.cta--grey {
+			background: $primary-33;
+		}
+	}
+
+}

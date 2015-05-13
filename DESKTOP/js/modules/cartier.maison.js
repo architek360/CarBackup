@@ -1,0 +1,362 @@
+/*!
+ * cartier.maison.js
+ * This file contains functionality handling the maison
+ *
+ * @project   cartier desktop
+ * @date      2014-01-03
+ * @author    Sapient
+ * @licensor  cartier desktop
+ * @site      cartier desktop
+   @dependency cartier.core.js
+ * @ NOTE:
+ */
+
+
+
+;
+(function(win, $, ns, undefined) {
+	'use strict'; //this will cause the browser to check for errors more aggressively
+
+	if (typeof $ === "undefined") {
+		cartier.log("jQuery not found");
+		return false;
+	}
+
+	var _cache = {},
+		$el,
+		_listingLeftStart = 0,
+		_listingOffsetTop = 0,
+		_lisitngPageSize = 623,
+		_lisitngRow = [];
+
+	//--------------------------------------------------------------------------------------------------------
+	//         Caching jQuery object
+	//--------------------------------------------------------------------------------------------------------
+
+	/*
+      @private method : caching jquery objects
+      @param : none
+    */
+	var _cacheObjects = function() {
+
+		_cache = {
+			$moreButton: $el.find('.js-hide-toggle'),
+			$hideable: $el.find('.hideable'),
+			$hoverableImages: $el.find('[data-hover-image]'),
+			$mosaic: $el.find('.collection-mosaic'),
+			$collectionListing: $el.find('.collection-listing'),
+			$coloumnWrapper: $el.find('.coloumn-wrapper')
+		};
+	},
+
+
+		//--------------------------------------------------------------------------------------------------------
+		//          EVENT Bindings
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+          @private method : bind events
+          @param : none
+        */
+
+		_bindEvents = function() {
+			_cache.$moreButton.on('click', _toggleMoreContent);
+			$el
+			_cache.$hoverableImages.hover(
+				function() {
+					//mouseenter change src to data attribute
+					var $me = $(this);
+					var $img = $me.find('img').first();
+					$me.data('imageBack', $img.attr('src'));
+					$img.attr('src', $me.data('hoverImage'));
+				},
+				function() {
+					//mouseleave
+					//mouseenter change src back
+					var $me = $(this);
+					var $img = $me.find('img').first();
+					$img.attr('src', $me.data('imageBack'));
+				}
+			);
+		},
+
+		//--------------------------------------------------------------------------------------------------------
+		//          Public functions
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+          @private method :Back to top link binding
+          @param : None
+        */
+		_addBacktoTopLink = function() {
+			var wWidth = $(win).width(),
+				mainWidth = $('.main-container').width(),
+				gutter = (wWidth - mainWidth) / 2,
+				rightPos = mainWidth + gutter;
+			$('.js-link-to-top a').css('left', rightPos + 'px');
+
+			// Scroll to top when your click on link.
+
+			$('.js-link-to-top a').on('click', function(event) {
+				event.preventDefault();
+				$('.main-container').ScrollTo({
+					top: 0,
+					duration: 800,
+					offsetTop: 140
+				});
+			});
+
+
+			// Function to show and hide the top link when you scroll.
+			if ($('.main-container').length > 0) {
+				$(win).scroll(function() {
+					var wScrollTop = $(this).scrollTop(),
+						tOffsetTop = $('.main-container').offset().top;
+					if (wScrollTop >= (tOffsetTop + 100)) {
+						$('.js-link-to-top a').addClass('is-fixed').fadeIn(100);
+					} else {
+						$('.js-link-to-top a').fadeOut(300, function() {
+							$(this).removeClass('is-fixed');
+						});
+					}
+				});
+			}
+
+		},
+
+		/*
+          @private method : Calculate row top difference 
+          @param : left, top, width, row, topRow
+        */
+		_calculateRowDiffTop = function(left, top, width, row, topRow) {
+			var topRowBottom = topRow.height + topRow.top;
+			var shiftCorrection = 0;
+			var tmpShiftcorrection = Infinity;
+			$.each(topRow.elements, function(i, el) {
+				var space = 0;
+				var $el = $(el);
+				var imgTop = $el.position().top;
+				var imgLeft = $el.position().left;
+				var imgW = $el.width();
+				var imgRight = imgLeft + imgW;
+				var imgHeight = $el.height();
+				var right = left + width;
+				if ((imgRight <= left && right <= imgRight) || (imgLeft <= right && imgRight >= right)) {
+					if (imgTop < topRow.top) {
+						shiftCorrection = topRow.top - imgTop;
+					}
+					var imageBottom = imgTop + imgHeight - shiftCorrection;
+					shiftCorrection = imageBottom - topRowBottom;
+					// possibile space detected
+					if (tmpShiftcorrection > shiftCorrection) {
+						tmpShiftcorrection = shiftCorrection;
+					}
+				}
+			});
+			if (tmpShiftcorrection === Infinity) {
+				return 0;
+			}
+			return tmpShiftcorrection;
+		},
+
+		/*
+          @private method : Collection rows and their respective styling
+          @param : index, isLast
+        */
+		_drawRow = function(index, isLast) {
+			var lastrow = false;
+			var row = _lisitngRow[index];
+			var topShift = 0;
+			var count = row.elements.length;
+			var heightModifier = 0;
+			var zIndex = count + 1;
+			if (index > 0) {
+				lastrow = _lisitngRow[index - 1];
+			}
+			_listingLeftStart = (_lisitngPageSize - row.width) / 2;
+			$.each(row.elements, function(i, el) {
+				topShift = 0;
+				$el = $(el);
+				if ($el.height() > row.height) {
+					row.height = $el.height();
+					row.hasdifferentHeights = true;
+				}
+				if (lastrow !== false) {
+					topShift = _calculateRowDiffTop(_listingLeftStart, _listingOffsetTop, $el.width(), row, lastrow);
+					if (topShift !== 0) {
+						if (topShift > heightModifier) {
+							heightModifier = topShift;
+						}
+						row.hasdifferentHeights = true;
+					}
+				}
+
+				$el.css({
+					'left': _listingLeftStart + 'px',
+					'top': _listingOffsetTop + (topShift) + 'px',
+					'position': 'absolute',
+					'z-index': zIndex--
+				});
+				if (count - 1 === i) {
+					$el.addClass('lastinrow');
+				}
+				if (isLast === true) {
+					$el.addClass('lastrow');
+				}
+				_listingLeftStart += $el.width();
+			});
+			row.height = row.height - (heightModifier);
+			_listingOffsetTop += row.height;
+		},
+
+		/*
+          @private method : Intialise collections
+          @param : None
+        */
+		_initCollection = function() {
+			$(win).load(function() {
+				_lisitngPageSize = _cache.$collectionListing.find('.row').first().width();
+				$.each(_cache.$collectionListing, function(i, el) {
+					_lisitngRow = [];
+					_listingOffsetTop = 0;
+					var rowCounter = 0;
+					var $el = $(el);
+					var images = $el.find('.mosaic-image-wrapper');
+					var imageW = 0;
+					var imageH = 0;
+					var count = images.length;
+					$.each(images, function(i, el) {
+						var $el = $(el);
+						if (!_lisitngRow[rowCounter]) {
+							_lisitngRow[rowCounter] = {
+								'width': 0,
+								'elements': [],
+								'height': 0,
+								'hasdifferentHeights': true
+							};
+						}
+						imageW = $el.width();
+						imageH = $el.height();
+						if (i === count - 1) {
+							_lisitngRow[rowCounter].width += imageW;
+							_lisitngRow[rowCounter].elements.push(el);
+							_lisitngRow[rowCounter].top = _listingOffsetTop;
+							_drawRow(rowCounter, true);
+							return;
+						}
+						if (_lisitngRow[rowCounter].width + imageW > _lisitngPageSize) {
+							// row is full - draw and continue next row
+							_lisitngRow[rowCounter].top = _listingOffsetTop;
+							_drawRow(rowCounter);
+							rowCounter++;
+							_lisitngRow[rowCounter] = {
+								'width': imageW,
+								'elements': [el],
+								'height': imageH,
+								'hasdifferentHeights': true
+
+							};
+						} else {
+							_lisitngRow[rowCounter].width += imageW;
+							_lisitngRow[rowCounter].elements.push(el);
+						}
+					});
+					$el.css('height', _listingOffsetTop).find('.row').css('width', _lisitngPageSize + 'px');
+				});
+			});
+		},
+
+		/*
+          @private method : Initialise column wrapper
+          @param : None
+        */
+		_initColoumnWrapper = function() {
+			_cache.$coloumnWrapper.each(function(i, row) {
+				var height = 0;
+				$(row).find('.img-bottom-align .one-third').each(function(i, col) {
+					var cols = [];
+					$(this).find('.comp-rich-text:first-child').each(function(i, item) {
+						if ($(item).find('img')) {
+							cols.push(item);
+							if ($(this).height() > height) {
+								height = $(this).height();
+							}
+						}
+					});
+					$.each(cols, function(i, col) {
+						$(col).css({
+							'height': height + 'px',
+							'display': 'table-cell',
+							'vertical-align': 'bottom',
+							'float': 'none'
+						});
+					});
+				});
+			});
+		},
+
+
+		/*
+        @private method : More button bind event for show and hide content
+        @param : None
+    */
+		_toggleMoreContent = function() {
+			_cache.$hideable.stop(true, true).slideToggle(500);
+			if (_cache.$moreButton.hasClass('active')) {
+				_cache.$moreButton.removeClass('active');
+				_cache.$hideable.css('display', 'none');
+			} else {
+				_cache.$moreButton.addClass('active');
+				_cache.$hideable.css('display', 'block');
+			}
+		};
+
+	/*
+	    @pubic method : initailize the module
+	*/
+
+	ns.init = function() {
+		cartier.log('JS-LOG:Mansion Init Called');
+		$el = $('.main-container');
+		$('html, body').animate({
+			scrollTop: $el.first().offset().top
+		}, 1000);
+
+		// caching the jquery objects
+		_cacheObjects();
+		_bindEvents();
+
+		// TO initialize Back to Top feature on Maison pages
+		if ($('.js-link-to-top').length > 0)
+			_addBacktoTopLink();
+
+		if (_cache.$collectionListing.length) {
+			_initCollection();
+		}
+		if (_cache.$coloumnWrapper.length) {
+			$(win).load(function() {
+				_initColoumnWrapper();
+			});
+			try {
+				_initColoumnWrapper();
+			} catch (e) {
+				// just eat all errors it when fired by window.load it will work
+			}
+		}
+		// Bibliography View
+		var maxHeight = 0;
+
+		setTimeout(function() {
+
+			$(".js-living-heritage .product_image_text").each(function() {
+				//Store the highest value
+				if ($(this).height() > maxHeight) {
+					maxHeight = $(this).height();
+				}
+				$(this).height(maxHeight);
+			});
+		}, 100);
+
+	};
+
+}(window, jQuery, cartier.maison));

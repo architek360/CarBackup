@@ -1,0 +1,19 @@
+<!-- Login Box Starts Here-->
+<div class="repair-service js-repair-service  ">
+	<div class="title">	
+		<h3 class="heading2">MY REPAIR SERVICE</h2>
+	</div>
+	<!--#include virtual="../../components/time_line/html.shtml" -->
+	<div class="cost-estimate  js-form-validator">
+	    <h4>COST ESTIMATE AVAILABLE.</h4>
+	    <h4>PENDING APPROVAL</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat.</p>
+			<!--#include virtual="../../components/pending_estimateList/html.shtml" -->
+
+	</div>
+	
+
+	<!--#include virtual="../../components/blank_overlay/html.shtml" -->
+</div> 
+

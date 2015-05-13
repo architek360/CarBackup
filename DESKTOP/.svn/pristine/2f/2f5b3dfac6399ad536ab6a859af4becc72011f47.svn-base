@@ -1,0 +1,140 @@
+/***********************************************************
+
+PUSHES COMPONENT FOR HIGHLIGHT AND PRODUCT LISTING COMPONENT
+
+************************************************************/
+
+.pushes-wrapper_push {
+	border:1px solid $primary-17;
+	position: relative;
+
+	img {
+		max-width: 100%;
+		max-height: 235px;
+		vertical-align: middle;
+		padding: 7%;
+		@include box-sizing(border-box);	
+	}
+
+	.defualt_vertical{
+		img{
+			padding:7% 0;
+		}
+	}
+
+	.defualt_horizontal{
+		img{
+			padding:0 7%;
+		}
+	}
+
+	.rings_vertical{
+		img{
+			padding:15% 0;
+		}
+	}
+
+
+	.rings_horizontal{
+		img{
+			padding:0 15%;
+		}
+	}
+
+	.fragrances_img_30_60{
+		img{
+			padding:50% 25%;
+			vertical-align: bottom;
+		}
+	}
+
+	.fragrances_img_60_90{
+		img{
+			padding:40% 20%;
+			vertical-align: bottom;
+		}
+	}
+
+	.fragrances_img_91_150{
+		img{
+			padding:30% 15%;
+			vertical-align: bottom;
+		}
+	}
+
+	.fragrances_img_151_200{
+		img{
+			padding:8%;
+			vertical-align: bottom;
+		}
+	}
+
+	.necklaces_vertical{
+		img{
+			padding:7% 0;
+			vertical-align: top;
+		}
+	}
+
+	.necklaces_horizontal{
+		img{
+			padding:0 7%;
+			vertical-align: top;
+		}
+	}
+}
+
+.product_listing_class{
+		border: 1px solid $primary-116;
+		box-sizing: content-box;
+		cursor: pointer;
+		float: left;
+		height: 235px;
+		@include rem('margin', 0 17px 10px 0);
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		vertical-align: top;
+		width: 180px;
+		.pushes-wrapper_push{
+			border:none;
+			position:static;
+			margin-top: 0;
+			height: 235px;
+
+			.more-button{
+				.more-button-arrow{
+					width: 6px;
+				}
+			}		
+		}
+		.push-col{
+			height: 235px;
+			line-height: 235px;		
+		}
+}
+
+.highlight_class{
+	width: 231px;
+	cursor: pointer;
+	display: inline-block;
+	float: none;
+	@include rem('height',118px);
+	@include rem('margin-right',10px);
+	vertical-align: top;
+	position: relative;
+
+
+	.pushes-wrapper_push {
+		img {
+			@include rem('height',115px);		
+		}
+
+		.push-over{
+			.more{
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+}

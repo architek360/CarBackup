@@ -1,0 +1,33 @@
+.search-wrapper{
+	display:block !important;
+	width:300px;
+	clear: both;
+
+	@include rem('margin-top', 10px);
+	.search__label {
+		text-indent: -9999px;
+		opacity: 0;
+		display: inline-block;
+		overflow: hidden;
+	}
+	.search__term{
+		border: solid 1px $primary-17;
+		@include rem('padding', 7px);
+		@include main-font;
+		font-style:italic;
+		color:$primary-3;
+		@include f(12);
+		width:241px;
+		float: left;
+	
+			
+	}
+	
+	.search__button{
+		@include setSpriteDesktop(30px, 32px ,2px ,-115px, transparent);
+		border: none;
+		float: left;
+		text-indent: -120px;
+		cursor: pointer;
+	}
+}

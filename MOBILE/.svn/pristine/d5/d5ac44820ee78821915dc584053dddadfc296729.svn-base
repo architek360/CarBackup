@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="form_type" value="reg_step3" -->
+<!--#set var="back-static-text" value="Back" -->
+<!--#set var="COMP_1" value="back_button" -->
+
+<!--#set var="VIEW_1" value="reg_step3" -->
+
+<!--#set var="COMP_2" value="breadcrumb" -->
+
+<!--#set var="TEMPLATE" value="my_account" -->
+<!--#set var="MODULE" value="myaccount" -->
+
+<!--#include virtual="../templates/base.shtml" -->

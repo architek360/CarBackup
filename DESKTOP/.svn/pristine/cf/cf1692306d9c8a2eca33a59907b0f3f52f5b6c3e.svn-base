@@ -1,0 +1,205 @@
+/*------------------------------------*\
+   Tabs Box -- Desktop CSS
+\*------------------------------------*/
+/**
+ * Main CONTAINER.... Wrapper for Tabs (.tabs)
+ * Heading Block for Tab .... Wrapper for Tabs Heading (.tabs__title)
+ * Content CONTAINER for Tab .... Wrapper for Tabs content (.tabs__content)
+ */
+
+/*------------------------------------*\
+    $tabs CONTAINER
+\*------------------------------------*/
+
+
+.tabs {
+
+    @include proxi-font;
+    @include font-color($primary-2);  
+    display: block;
+    background: none; 
+    /*width: 81.25%;*/
+    margin: 0 auto; 
+    @include rem('padding', 20px 0px);  
+
+
+
+    .tab-header {
+        border-bottom: 1px solid $primary-17;
+        @include rem('height', 30px);  
+        left: 0;
+        padding-left: 0;
+        position: absolute;
+        width: 100%;
+        margin: 0px auto;
+        @include rem('margin-top', 0px); 
+        @include rem('margin-bottom', 30px); 
+
+
+        ul.tabs__nav {
+            @include font-color($primary-2);  
+            @include proxi-font;
+            position: static;
+            width: auto;
+            display: table;
+            margin: 0px auto;
+            @include rem('margin-top', -3px); 
+            @include rem('margin-bottom', -3px); 
+
+            li {
+                position: relative;
+                text-align: center; 
+                display: inline-block;
+                margin:0;
+                background-color:$primary-88;
+                border: 1px solid $primary-89;
+                color: #5C5C5C;
+                @include f(12);
+                @include rem('letter-spacing', 1.2px);
+                text-transform: uppercase;
+                vertical-align: middle;
+                @include rem('width', 233px);
+                @include rem('padding', 7px 0px);
+                @include rem('height', 18px);
+                @include rem ('margin-right', -3px);
+
+                .tab__title-wrapper{
+                    width: 100%;
+                    max-width: none;
+                    display: inline-block;
+                    vertical-align:middle;
+                    @include f(12);
+                    display: block;
+                    @include font-color($primary-3);
+					h2 {
+						@include f(12);
+					}
+
+                }
+
+                &:hover .tab__title-wrapper{
+                    @include font-color($primary-90);
+                }
+            }
+            li:hover {
+                @include font-color($primary-90);
+                background-color:$primary-88;
+                border: 1px solid $primary-89;
+            }
+            .tab-active, .tab-active:hover {
+                
+                @include font-color($primary-2);
+                border-bottom: none;
+                background: $primary-1;
+                padding: 0;
+                @include rem('padding', 7px 0px 8px);
+                @include f(12);
+                border-bottom: none;
+                @include rem ('margin-right', -6px);
+
+                .tab__title-wrapper {
+                    @include font-color($primary-3);
+                }
+            }
+
+            .tab-active {
+                display: inline-block;
+                .tab__title-wrapper {
+                     @include font-color($primary-2);
+					  width: 100%;
+                    @include rem('max-width', 227px); 
+                }
+                .tab__title-wrapper:after {
+                    @include setSpriteDesktop(8px, 15px ,-164px, -1091px, transparent);
+                    content: "";
+                    display: block;
+                    @include rem('height', 4px);
+                    @include rem('width', 7px);
+                    margin: 0 auto 0;
+                    @include rem('margin-top', 6px);
+
+                }
+            }     
+        }
+    }
+    /* End of Tabs_header Wrapper*/
+    
+    .tabs__content {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            @include rem('left', 0px);
+            @include rem('top', 80px);
+            @include rem('bottom', 0px);
+            @include rem('right', 0px);            
+            display: none;
+            @include rem('margin', 70px 0 0);
+            opacity: 0;
+        }
+        .content-active {
+            display: block;
+            opacity: 1.0;
+    }
+}
+
+
+
+/*------------------------------------*\
+    CHOOSE ADDRESS -- Desktop CSS
+\*------------------------------------*/
+
+.billing-address-content-wrapper{
+    background: $primary-82;
+    width: 100%;
+    @include rem('padding', 0px);
+    float: left;
+    @include rem('margin', 0 0 30px 0);
+    
+    .heading1{
+        letter-spacing:.23rem;
+    }
+
+    .choose-tab{
+
+        .tabs{
+            background-color: $primary-82;
+
+            .tab-header{
+                width:100%;
+                position:relative;
+                @include rem('margin-top', 0px);
+                @include rem('padding-bottom', 3px);
+
+                    ul.tabs__nav {
+
+                        .tabs__title{
+                            background-color:$primary-85;
+                            cursor: pointer;
+                        }
+                        .tab-active {
+                            background-color:#490305;
+                        }
+
+                        
+                    }
+            }
+
+            .tabs__content{
+                background-color: $primary-82;
+                @include rem('margin-top', 0px);
+            }
+        }
+    }
+
+    .checkout-button{
+        width:100%;
+        text-align: center;
+        margin:0 auto;
+        @include rem('margin-bottom', 20px);
+    }
+
+    .cta-button{
+        margin:0 auto;
+    }
+
+}

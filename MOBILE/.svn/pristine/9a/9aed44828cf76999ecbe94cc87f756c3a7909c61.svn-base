@@ -1,0 +1,75 @@
+<!-- Sub collection Starts Here-->
+
+<!--#set var="back-static-text" value="Back to Men's watches" -->
+<!--#include virtual="../../components/back_button/html.shtml" -->
+<div class="collection js-subcollection-list">
+
+    <!--#if expr="${COMP_4}" -->
+                    <!--#set var="Expert-guide-title" value="timepieces" -->
+                    <!--#set var="Expert-guide-selected" value="exceptional creation" -->
+                     
+                     <!--#set var="expert-content" value="faq" -->
+                    
+                    <!--#include virtual="../../components/${COMP_4}/html.shtml" -->
+    <!--#endif -->
+    <p class="subcollection__desc comp-rich-text">Contemporary and refined, the Calibre de Cartier watch reinterprets the round form in watchmaking with character and style. Equipped with the new Manufacture Cartier movement, the 1904 MC, this new timepiece is a combination of sporty masculinity and exceptional expertise.</p>
+    <a class="subcollection__show-product js-show-all">
+        show all products<div class="more-button"><span class="arrow-show"></span><span class="js-totalcount">18</span><span </span class="js-totalmodels"> models</span></div>
+    </a>
+
+
+    <ul class="collection__listing grid clearfix ">
+        <li class="grid__item one-half palm--one-whole sddd">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="/listing-collection.jpg" -->
+            <!--#set var="more-text" value="8 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="CALIBRE DE CARTIER" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half palm--one-whole sdsdsdds">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="/listing-collection.jpg" -->
+            <!--#set var="more-text" value="12 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="Ballon bleu" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="/listing-collection.jpg" -->
+            <!--#set var="more-text" value="3 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="roadster" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="/listing-collection.jpg" -->
+            <!--#set var="more-text" value="12 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="tank" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+         <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="/listing-collection.jpg" -->
+            <!--#set var="more-text" value="6 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="santos" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+    </ul>       
+
+</div>
+<!-- sub collection Ends Here-->

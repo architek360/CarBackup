@@ -1,0 +1,3 @@
+<div class="store-locator-wrapper-map js-location">
+    <!--#include virtual="../../components/autosuggest/desktop.shtml" -->
+</div>

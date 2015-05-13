@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    condtion of sale -- DESKTOP CSS
+\*------------------------------------*/
+/**
+* MAIN CONTAINER ..... main conatiner for privacy notice(.term-of-sale)
+* HEADING BLOCK .....  for heading tags(.heading2)
+* TEXT BLOCK.......... for paragraphs (p)
+*/
+
+/*------------------------------------*\
+    MAIN CONTAINER
+\*------------------------------------*/
+
+
+.term-of-sale {
+	width: 100%;
+	margin: 0 auto;
+	display: inline-block;
+	@include rem('padding-bottom',30px);
+
+	/*------------------------------------*\
+	    HEADING BLOCK
+	\*------------------------------------*/
+	.heading2 {
+		@include rem('padding-bottom',0px);
+		border-bottom:none;
+		@include rem('margin-bottom',20px);
+	}
+	h2 {
+		@include rem('margin-bottom',10px);
+		padding: 0;
+		@include f(11);
+		color:$primary-3;
+		@include main-font;
+		@include rem('letter-spacing', 1px);
+		text-align: left;
+		font-weight: bold;
+		text-transform: inherit;
+	}
+
+	/*------------------------------------*\
+	    TEXT BLOCK
+	\*------------------------------------*/
+	p {
+		@include rem('margin-bottom',38px);
+		padding: 0;
+		color:$primary-3;
+		@include f(11);
+	}
+
+	p:last-child{
+		@include rem('margin-bottom',0px);
+	}
+}

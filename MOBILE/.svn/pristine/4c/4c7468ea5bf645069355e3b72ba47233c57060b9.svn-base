@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    DO YOU OWN -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER (.owned-creations-label)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.owned-creations-label{
+	@include bold-font;
+}

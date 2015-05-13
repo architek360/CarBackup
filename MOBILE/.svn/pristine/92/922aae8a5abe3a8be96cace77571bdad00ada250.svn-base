@@ -1,0 +1,64 @@
+<!-- CARD DETAILS -->
+<div class="card-type">
+<h4 class="card-type__title">CARD TYPE<span class="mandatory">  *</span></h4>
+
+ <ul class="cc-name-selector js-cc-name-selector">  
+        <li>
+        	<!--#set var="radio-value" value="fn_cclabel1" -->
+			<!--#set var="radio-name" value="payment_card_type" -->
+            <!--#set var="radio-text" value=" " -->     
+			<!--#set var="attr-value" value="mastercard" -->		
+    		<!--#include virtual="../../components/form_elements/radio_cc.shtml" -->
+    		<span class="mastercard"></span>
+
+        	
+        </li>
+        <li>
+        	<!--#set var="radio-value" value="fn_cclabel2" -->
+			<!--#set var="radio-name" value="payment_card_type" -->
+			<!--#set var="radio-text" value=" " -->		
+			<!--#set var="attr-value" value="visa" -->      
+            <!--#include virtual="../../components/form_elements/radio_cc.shtml" -->
+    		<span class="visa_card"></span>
+        	
+        </li>
+        <li>
+        	<!--#set var="radio-value" value="fn_cclabel3" -->
+			<!--#set var="radio-name" value="payment_card_type" -->
+			<!--#set var="radio-text" value=" " -->		
+			<!--#set var="attr-value" value="discover" -->      
+            <!--#include virtual="../../components/form_elements/radio_cc.shtml" -->
+    		<span class="discover_network_card"></span>
+        	
+        </li>
+        <li>
+        	<!--#set var="radio-value" value="fn_cclabel4" -->
+			<!--#set var="radio-name" value="payment_card_type" -->
+			<!--#set var="radio-text" value=" " -->		
+			<!--#set var="attr-value" value="jcb" -->      
+            <!--#include virtual="../../components/form_elements/radio_cc.shtml" -->
+    		<span class="jsb_card"></span>
+        	
+        </li>
+        <li>
+        	<!--#set var="radio-value" value="fn_cclabel5" -->
+			<!--#set var="radio-name" value="payment_card_type" -->
+			<!--#set var="radio-text" value=" " -->		
+			<!--#set var="attr-value" value="amex" -->      
+            <!--#include virtual="../../components/form_elements/radio_cc.shtml" -->
+    		<span class="american_express_card"></span>
+        	
+        </li>
+        <li>
+        	<!--#set var="radio-value" value="fn_cclabel6" -->
+			<!--#set var="radio-name" value="payment_card_type" -->
+			<!--#set var="radio-text" value=" " -->		
+			<!--#set var="attr-value" value="diners_club_international" -->      
+            <!--#include virtual="../../components/form_elements/radio_cc.shtml" -->
+    		<span class="diners_club_card"></span>
+        	
+        </li>
+
+    </ul>  
+
+</div>

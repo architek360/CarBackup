@@ -1,0 +1,17 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+		"wishlistDropDown": [{
+			"value": "1",
+			"display": "wishlist1"
+		}, {
+			"value": "2",
+			"display": "wishlist2"
+		}, {
+			"value": "3",
+			"display": "wishlist3"
+		}]
+
+	}
+}

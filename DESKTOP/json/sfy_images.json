@@ -1,0 +1,40 @@
+{
+    "success": true,
+    "serverMessage": "success",
+    "content": [{
+        "typeofProduct": "platinum",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_1.png"
+    },
+    {
+        "typeofProduct": "platinum",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_1.png"
+    },
+    {
+        "typeofProduct": "yellow gold",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_0.png"
+    },
+    {
+        "typeofProduct": "platinum",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_1.png"
+    },
+    {
+        "typeofProduct": "yellow gold",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_0.png"
+    },
+    {
+        "typeofProduct": "platinum",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_1.png"
+    },
+    {
+        "typeofProduct": "white gold",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_1.png"
+    },
+    {
+        "typeofProduct": "pink gold",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_1.png"
+    },
+    {
+        "typeofProduct": "pink gold",
+        "imgsrc": "../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4250600_0.png"
+    }]
+}

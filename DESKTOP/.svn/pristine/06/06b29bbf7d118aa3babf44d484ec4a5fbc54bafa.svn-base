@@ -1,0 +1,109 @@
+/*.grid__item{
+float:none !important;
+}*/
+
+.cq-editbar-placeholder{float:left !important;}
+/* Below RULE is for controlling the double login class problem in author instance*/
+/*div.login{width:99% !important;}*/
+
+.welcome-pushes .grid__item{
+                float: none;
+}
+ul,li{
+    list-style:disc;
+}
+li{
+    display:list-item;
+}
+
+.parbase .home-carousel .carousel-wrapper .carousel{
+    position:relative;
+    clear:both;
+}
+
+.parbase .home-carousel .carousel-wrapper .carousel .author-slider li{
+    height: 700px;
+}
+.parbase .home-carousel .carousel-wrapper .bx-controls-direction-left a span{
+    background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") no-repeat scroll -10px -280px rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 10px;
+    top: 44%;
+    display: inline-block;
+    height: 27px;
+    left: 10px;
+}
+.parbase .home-carousel .carousel-wrapper .bx-controls-direction-right a span{
+    background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") no-repeat scroll -24px -280px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 27px;
+    left: 22px;
+    position: absolute;
+    top: 44%;
+    vertical-align: middle;
+    width: 14px;
+}
+
+fieldset {
+    clear:both;
+}
+
+.home-carousel .bxslider .textimage .image{
+    height:525px !important;
+                }
+
+.input-wrapper, .checkbox-wrapper {
+     float:none !important;
+}
+
+
+.input-wrapper {
+    width:100% !important;
+    margin-left:0 !important;
+}
+
+.checkbox-wrapper {
+   display: block;
+}
+
+.js-login-form a {
+    float:left;
+}
+
+.cq-colctrl-lt0 {
+    position: relative;
+}
+.cq-colctrl-lt0-c1 {
+    position: relative;
+    }
+.cq-colctrl-lt0-c0 > .cq-colctrl-lt0-c1{
+
+    float:left;
+    width:430px;
+     margin-left: 30px;
+}
+
+.cq-colctrl-lt0-c0.cq-element-navigationBlock, .cq-colctrl-lt0-c0.cq-element-par {
+    width:100%;
+    }
+
+.cq-colctrl-lt0-c0.cq-element-navigationBlock .system_formbuilder.section, .cq-colctrl-lt0-c0.cq-element-par .system_formbuilder.section {
+    float:left;
+    width:430px;
+}
+.js-reg-step-3 .cq-colctrl-lt0 {
+    float: left;  
+}
+
+.line.section {
+    clear: both;
+}
+
+
+.group-wrapper {
+    min-height: 40px;
+}
+.overlay-form {
+    position: relative;
+    left: 34%;
+}

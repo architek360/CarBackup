@@ -1,0 +1,241 @@
+/*------------------------------------*\
+    ORDER RECONFIRMATION -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..... main container (.order-reconfirm)
+ * PRODUCT DETAIL CONTAINER..... product detail block(.product-detail)
+ * PRODUCT CONTAINER..... product info block(.price-detail__row)
+ * ACCORDION CONTAINER...... order accordian block(.reconfirm-accordion)
+ * ACCORDION WRAPPER .......Accordion Wrapper (.att-accordion)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.order-reconfirm{
+ 	width:81.25%;
+ 	margin:0 auto;
+ 	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	text-align:center;
+
+	.shopping-bag__info{
+ 		@include rem('margin-bottom', 25px);
+ 		@include bold-font;
+
+ 		.info-icon{
+ 			@include setSprite(40px, 47px, -251px, -135px);
+ 		}
+
+ 		p{
+ 			@include f(15);
+ 			@include rem('padding', 12px 0 4px);
+ 			@include rem('line-height', 20px);
+ 			text-align:center;
+ 			text-transform: uppercase;
+ 			a{
+ 				display: block;
+ 				@include font-color($bridal_red);
+ 				text-decoration: none;
+ 			}
+ 		}
+ 	}
+
+	.heading2{
+		@include rem(padding, 21px 24px 30px);
+		line-height:40px;
+		@include bold-font;
+		border:none;
+	}
+	.order-reconfirm__text{
+		text-align: center;
+		@include f(20);
+		@include rem(padding, 5px 0 46px);
+		line-height:25px;
+	}
+	.order-reconfirm__date{
+		@include font-color($primary-3);
+		@include f(23);
+		@include rem(padding, 0 0 13px 0);
+		font-style:italic;
+	}
+	.order-reconfirm__number{
+		@include f(34);
+		@include rem(padding, 0 0 12px 0);
+		@include bold-font;
+	}
+
+	/*------------------------------------*\
+	    $PRODUCT DETAIL CONTAINER
+	\*------------------------------------*/
+
+	.product-detail{
+		display:block;
+		@include f(22);
+		@include main-font;
+		@include font-color($primary-2);
+		border: 1px solid $primary-11;
+		background: $primary-1; /* Old browsers */
+		text-align:center;
+		margin: 0 auto;
+		@include rem('padding', 6px 0);
+		@include linear-gradient(-45deg, #000000 73%, #010000 0%, #460000 100%);
+		.heading3{
+			@include f(28);
+			@include rem('padding',13px 0);
+		}
+		.product-detail__variant{
+			display:block;
+			@include f(29);
+			@include main-font;
+			font-style:italic;
+			font-weight:normal;
+			@include rem('margin', -3px 0);
+		}
+		.product-detail__size{
+			display:block;
+			@include f(19);
+			@include bold-font;
+			text-transform:uppercase;
+			font-weight:bold;
+			@include rem('margin', 6px 0);
+			@include rem('line-height', 20px);
+		}
+
+		/*------------------------------------*\
+		    $PRODUCT CONTAINER
+		\*------------------------------------*/
+
+		.price-detail__row {
+			@include f(22);
+		}
+		.product{
+			display:block;
+			padding: 0;
+			.product__image{
+				float: left;
+				width: 47%;
+				@include rem('margin', 40px 0 20px 20px);
+				line-height: 200px;
+				.image{
+					background-size: cover;
+					max-width: 100%;
+					max-height: 200px;
+					vertical-align: middle;
+				}
+			}
+			.product__price{
+				@include rem('margin', 34px 0);
+				@include f(40);
+				font-weight: 300;
+				text-transform: uppercase;
+				text-align: center;
+				width: 43%;
+				display: inline-block;
+				vertical-align: top;
+				.price-text {
+					@include rem('margin-top' ,15px);
+					display: block;
+				}
+				.calculation{
+					@include f(24);
+				}
+			}
+			.total-price-text {
+				@include rem('margin-top', 50px);
+				display: inline-block;
+				@include f(50);
+				@include main-font;
+				width: 100%
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $ACCORDION CONTAINER
+	\*------------------------------------*/
+
+	.reconfirm-accordion{
+		@include rem('padding', 20px 0 70px 0);
+		width:100%;
+		margin:0 auto;
+		.reconfirm-accordion__wrapper{
+			border-top:solid 1px $primary-6;
+		}
+		.reconfirm-accordion__node{
+			border-bottom:solid 1px $primary-6; 
+		}
+		.reconfirm-accordion_node__title{
+			@include rem('padding', 13px 0px);
+			text-align:left;
+			position:relative;
+			.heading3 {
+				@include f(20);
+			}
+			.reconfirm-accordion_node_title__ques{
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table;
+				@include bold-font;
+				p, h3{
+					@include f(20);
+				}
+			}
+			p, h3{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+	    		@include f(20);
+		 	 	@include font-color($primary-2);
+			}
+			span{
+				position:absolute;
+				right:0px;
+				top:30%;
+			}
+			.on{
+				@include setSprite(22px, 30px, -784px, -20px);
+				
+			}
+			.off{
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+		}
+		.reconfirm-accordion_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color(#d4d4d4);
+		}
+	}
+	.product-filter{
+ 		@include set-ulFix;
+ 		li{
+ 			@include f(22);
+ 			border: 1px solid $primary-11;
+ 			border-top: none;
+ 			@include rem('padding', 38px 25px);
+ 			text-align:left;
+ 			.product-filter__left{
+ 				@include bold-font;
+ 				width:50%;
+ 				display:inline-block;
+ 				text-transform:uppercase;
+ 			}
+ 			.product-filter__right{
+ 				@include main-font;
+ 				@include f(22);
+ 				width:40%;
+ 				float:right;
+ 				text-align:right;
+ 				display:inline-block;	
+ 				font-style:italic;
+ 				@include font-color($primary-3);
+ 				word-break:break-word;
+ 				height:25px;
+ 				@include ellipsis;	
+ 			}
+ 		}
+ 	}
+}

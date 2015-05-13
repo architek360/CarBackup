@@ -1,0 +1,75 @@
+<!-- tab PDP Suggestion Block Starts Here-->
+<div class="gallery">
+      <input type="hidden" name="fn_similar_products" value="ss" id="js-similar-products"/>
+	<div class="carousel-wrapper">
+	<div class="carousel product-list-wrapper">
+		<ul class="bxslider js-slider-gallery product-list">
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		  <li class="one-product">
+		  	<!--#set var="IMG_PATH" value="W69011Z4_0_cartier_watches.png" -->
+            <!--#set var="ALT_TEXT" value="product_listing images" -->
+            <!--#set var="PUSH_TYPE" value="product_listing" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Ballon Bleu de Cartier watch, medium model" -->
+            <!--#set var="PRODUCT_DESC" value="Quartz, steel" -->
+            <!--#set var="PRICE" value="$ 1,150" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+		  </li>
+		</ul>
+	</div>
+</div>
+
+</div>
+<!-- tab PDP Suggestion Block Ends Here-->

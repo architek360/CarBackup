@@ -1,0 +1,6 @@
+<div class="conf">
+    <span class="conf-title">Cartier Nagoya</span>
+    <div class="boutique-image">
+		<img src="<!--#echo var="CONTENT_IMG_PATH" -->/boutique_small.jpg" alt=""/>
+    </div>
+</div>

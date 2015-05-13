@@ -1,0 +1,25 @@
+<div class='tabs'>
+	<div class="tab-header">
+		<ul class="tabs__nav">
+			<!--#if expr="${tab_1}" -->
+			<li class="tabs__title <!--#echo var="active1" -->" ><h2 class="tab__title-wrapper"><!--#echo var="tab_1" --></h2></li>
+			<!--#endif -->
+			<!--#if expr="${tab_2}" -->
+			<li class="tabs__title <!--#echo var="active2" -->" ><h2 class="tab__title-wrapper"><!--#echo var="tab_2" --></h2></li>
+			<!--#endif -->
+			<!--#if expr="${tab_3}" -->
+			<li class="tabs__title <!--#echo var="active3" -->" ><h2 class="tab__title-wrapper"><!--#echo var="tab_3" --></h2></li>
+			<!--#endif -->
+			<!--#if expr="${tab_4}" -->
+			<li class="tabs__title <!--#echo var="active4" -->" ><h2 class="tab__title-wrapper"><!--#echo var="tab_4" --></h2></li>
+			<!--#endif -->
+		</ul>
+	</div>
+
+		<!--#if expr="${tab_content_1}" -->
+		<div class="tabs__content content-active">
+				<!--#include virtual="../../views/${tab_content_1}/desktop.shtml" -->
+		</div>
+		<!--#endif -->
+		
+</div>

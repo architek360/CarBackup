@@ -1,0 +1,8 @@
+<div class="column <!--#if expr="${colclass}" --><!--#echo var="colclass" --><!--#endif --> grid__item one-half">
+    <!--#if expr="${col50Comp1}" -->
+        <!--#include virtual="../../components/column/${col50Comp1}.shtml" -->
+    <!--#else -->
+    <!--#if expr="${col50Comp2}" -->
+        <!--#include virtual="../../components/column/${col50Comp2}.shtml" -->
+    <!--#else -->
+</div>

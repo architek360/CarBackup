@@ -1,0 +1,30 @@
+
+<!-- tab_boutique  Block Starts Here-->
+<div class="tab_boutique_select js-boutique-list-container" data-addr-available="false">
+		
+		<p class="tab_boutique_select__heading top-margin full-width"> i choose the cartier boutique</p>
+		<span class="tab_boutique_select__desc">Please select a cartier boutique in to receivethe goods </span>
+
+		<!--#set var="label-name" value="country" -->
+        <!--#set var="mandatory" value="no"-->
+        <!--#set var="input-name" value="Boutique" -->
+		<!--#include virtual="../../components/form_elements/label.shtml" -->
+
+		<!--#set var="input-name" value="fn_boutique" -->
+		<!--#set var="style-name" value="select-1" -->
+		<!--#set var="option-component" value="state_option" -->
+		<!--#include virtual="../../components/form_elements/select.shtml" -->
+
+		<div class="tab_boutique_select__boutiqueinfo">
+			<h4 class="heading4"> cartier boutique</h4>
+			<h3 class="heading3 js-boutique-name">test boutique </h3>
+			<img src="<!--#echo var="ICON_IMG_PATH" -->contactus.jpg" >
+		</div>
+
+		<div class="next-step-cta clearfix">
+				<!--#set var="text-detail" value="continue to next step" -->
+		    	<!--#set var="cta--varaint" value="cta--red js-boutique-pickup" -->
+		    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+		</div>
+</div> <!-- tab_boutique Block Ends Here-->
+

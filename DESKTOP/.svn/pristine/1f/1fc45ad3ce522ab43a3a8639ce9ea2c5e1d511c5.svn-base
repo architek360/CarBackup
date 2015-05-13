@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+
+.tab-collection-view-all {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+

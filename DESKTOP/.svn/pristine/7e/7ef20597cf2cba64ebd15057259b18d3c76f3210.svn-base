@@ -1,0 +1,220 @@
+.sfy{
+
+
+	.radio input { 
+		height: 15px;
+		width: 15px;
+		margin-left: -1px;
+		margin-top: -2px;
+
+	}
+		#tab1 .radio input{
+			margin-top: 0px;
+		}
+
+	.button-wrapper .form-button{
+		color: #fff;
+	}
+	.previewBlockSection{
+		@include rem('padding',23px);
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		.selection-list{
+			.selection-criteria{
+				@include rem("height",95px);
+				.heading-container{
+					display: block;
+					.help{
+						width: 20px;
+						height:20px;
+						background:url($path-images+'icons/sprite-desktop.png') -382px -1075px  no-repeat ;
+						display: inline-block;
+						margin-left: 5px;
+						margin-bottom: -5px;
+					}
+					.sfy-heading4{
+						color: $primary-66;
+						font-weight: bold;
+						@include f(14);
+						@include rem('line-height',14px);
+						text-transform: uppercase;
+						display: inline-block;
+						width: auto;
+						@include rem("margin-bottom",10px);
+					}
+				}
+				
+				.checkbox-wrpper{
+					display: inline-block;
+					margin-top: 15px;
+					width: 19%;
+					label{
+						font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+						letter-spacing: .1em;
+						text-transform: uppercase;
+						font-size: 0.9em;
+						font-weight: bold;
+						color: #a0a0a0;
+						display: block;
+						margin-top: 24px;
+						font-size: 10px;
+						text-align: left;
+						margin-left: 5px;
+					}
+				}
+				.quick-links {
+					a{
+						background: url($path-images + 'icon/sprites_ui.png') no-repeat 10px top;
+					}
+				}
+
+				.checker{
+					
+					span{
+						background-position: -228px -417px;
+						height: 15px;
+					}
+
+					
+					.checked {
+		   				background-position: -206px -417px;
+		   			}
+				}
+
+				.checker.disabled span{
+					background-position: -248px -417px !important;
+				}
+			}
+		}
+		#pricemin,#caratmin{
+			position: relative;
+			top: 20px;
+		}
+		#pricemax,#caratmax{
+			position: relative;
+			top: 20px;
+		}
+		#pricemax{
+			left: 80%;
+		}
+		#caratmax{
+			left: 87%;
+		}
+		#Price-slider,#carat-slider{
+			.ui-slider-handle{
+				outline: none;
+				span{
+					font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+					letter-spacing: .1em;
+					text-transform: uppercase;
+					font-size: 2em;
+					font-weight: bold;
+					font-weight: normal;
+					top: 20px;
+					position: relative;
+					color: #a0a0a0;
+				}
+				.tool-tip-details-wrapper{
+					z-index: 10;
+					display: none;
+					background: white;
+					padding: 0px 10px;
+					padding: 0px 1rem;
+					border: 1px solid #666666;
+					margin: 0;
+					line-height: 15px;
+					line-height: 1.5rem;
+					position: absolute;
+					top: -38px;
+					left: -97px;
+					text-align: center;
+					width:180px;
+					opacity: 0.8;
+
+					img{
+						bottom: -4px;
+  						position: absolute;
+					}
+					.tool-tip-details{
+						p{
+							padding: 5px 0px;
+							padding: 0.5rem 0px;
+							color: #555555;
+							font-style: normal;
+							font-size: 10px;
+							font-size: 1rem;
+							line-height: 1.2rem;
+							font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  							text-align:center;
+						}
+					}
+				}
+			}
+		}
+
+
+		.side-text{
+			color:  $primary-3;
+			@include proxi-font;
+			@include rem('letter-spacing',1px);
+			text-transform: uppercase;
+			@include f(11);
+			font-weight: bold;
+		}
+	}
+
+	#tab2{
+		.previewSlider{
+			@include rem('padding',15px);
+			.product-name{
+				font-size: 14px;
+			    line-height: 20px;
+			    margin-bottom: 5px;
+			    font-weight: bold;
+			}
+			.material-name{
+				font-size: 13px;
+				font-style: italic;
+			    font-weight: normal;
+			    letter-spacing: 0.1em;
+			    line-height: 18px;
+			    margin-bottom: 8px;
+			    text-transform: none;
+			    @include main-font;
+			}
+			.sfy-calc-preview{
+				color: #a0a0a0;
+			}
+		}
+
+
+	}
+
+
+
+}
+
+.sfy .nested-exceptional-creation .carousel .info__pic .product-carousel__wrapper .zoom-trigger-link  {
+bottom:0;
+}
+
+.esfy-terms{
+	p{
+		color: #656565;
+		font-size: 10px;
+		font-style: italic;
+		margin: 10px 0;
+		
+		a{
+			color: #a0a0a0;
+			text-decoration: none;
+		}
+		a:hover{
+			color: #656565;
+		}
+	}
+}

@@ -1,0 +1,174 @@
+/*------------------------------------*\
+    Login view -- Desktop CSS
+\*------------------------------------*/
+
+.cq-colctrl-lt0-forlogin{
+	position:relative;
+	background: #000;
+	/*margin-top: 48px;*/
+	.error-div,.error_message_js-reg-step-1{
+		position:absolute;
+		top: -48px;
+		left:0px;
+		width:98%;
+	}
+	.error_message_js-reg-step-1{
+	top: -30px;
+	}
+
+	.comp-rich-text{
+		margin:0;
+
+		p{
+			padding-top: 10px;
+		}
+
+		h2 {
+		 	font-family: proximanova,sans-serif;
+		    font-size: 1.5rem;
+		    font-weight: normal;
+		    letter-spacing: 0.1rem;
+		    margin-bottom: 0;
+		    text-transform: uppercase;
+		    text-align: center;
+		    padding: 0;
+		}
+	}
+}
+
+.js-login-form {
+	border:none;
+	background: none;
+	padding: 0;
+	width: 100%;
+	margin:0;
+	
+	hr {
+		@include rem('margin',17px 0px);
+		 position: relative;
+	}
+	.txt, .comp-rich-text {
+		p {
+			@include main-font;
+			@include f(12);
+			letter-spacing: normal;
+			text-align: center;
+			line-height: 16px;
+			width: 100%;
+			color: #FFFFFF !important;
+			padding-bottom: 10px;
+		}
+		label {
+			color: #FFFFFF;
+		    display: block;
+		    font-family: proximanovaBold,sans-serif;
+		    font-size: 1rem;
+		    letter-spacing: 0.1rem;
+		    margin-bottom: 0.5rem;
+		    text-align: left;
+		    text-transform: uppercase;
+		    width: 100%;
+		}
+	}
+	.heading4 {
+	 	font-family: proximanova,sans-serif;
+	    font-size: 1.5rem;
+	    font-weight: normal;
+	    letter-spacing: 0.1rem;
+	    margin-bottom: 0;
+	    text-transform: uppercase;
+	    text-align: center;
+	    text-align: center;
+	}
+
+	.heading6 {
+	    font-size: 1rem;
+	    letter-spacing: 0.12rem;
+	    margin-bottom: 1rem;
+	    padding: 0rem;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+
+	a {
+		background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") no-repeat scroll -431px -156px #000000;
+	    bottom: 8px;
+	    color: #FFF !important;
+	    display: inline-block;
+	    float: right;
+	    font-family: georgia !important;
+	    font-size: 12px !important;
+	    height: 10px;
+	    letter-spacing: 0rem;
+	    line-height: 1.4rem;
+	    margin-right: 0.9rem;
+	    padding-left: 10px;
+	    position: relative;
+	    text-align: right;
+	    text-decoration: none !important;
+	    text-transform: none;
+	    vertical-align: middle;
+	    width: auto;
+	    margin-bottom: -10px;
+	}
+
+	hr {
+		margin: 13px 0 20px;
+	}
+
+	.button-wrapper {
+		margin-top: -1.5rem;
+	}
+}
+
+.js-reg-step-1{
+	border: none;
+	@include rem('padding',0px);
+	width: 100%;
+	margin:0;
+	
+	.captcha{
+/*		.js-audio-captcha{
+			margin-top:2rem;
+		}*/
+		.verify-audio-text{
+			font-size: 14px;
+			position: relative;
+			top: -17px;
+			left: 10px;
+			color:$primary-2;
+			.js-verify-using-audio{
+				color:$primary-3;
+			}
+
+		}
+		.captcha__description{
+			@include f(12);
+		}
+
+		.captcha__image__container{
+			width: 100%;
+
+			.img{
+				position: static;
+			}
+		}
+	}
+	.captcha__input{
+	    @include f(12);
+	    padding: 5px;
+	}
+
+	hr{
+		display: block;
+	}
+
+	.fn_chkonlinecom, .fn_chkprivnotc{
+		@include rem('padding',0px);
+		width: 100%;
+	}
+}
+
+.mobile-create-btn{
+    display:none;
+}

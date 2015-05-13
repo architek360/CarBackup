@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    REGISTER STEP 1 -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.regform-step1)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.regform-step1 
+{
+	@include rem(padding, 20px 0);
+	.heading2{
+		border-bottom:none;
+	}
+	p.form-label{
+		@include rem(padding,0px);
+		@include f(22);
+	}
+	& > div 
+	{
+		text-align: center;
+		color: $white;
+	}
+	.regform-step1__regbox{
+		border:solid 1px $dark_grey;
+		overflow:auto;
+		@include rem(padding,0 30px);
+		overflow:hidden;
+		form{
+			text-align:left;
+		}
+	}
+	.grid__item{
+		@include rem('padding',0px);
+	}
+	.form-label{
+		text-transform: uppercase;
+		@include rem(margin-top,45px);
+		@include rem(margin-bottom,10px);
+		@include bold-font;
+	}
+	.form-check{
+		width:100%;
+	}
+	.regform-step1__account-status {
+		text-transform:uppercase;
+		@include rem(letter-spacing,4px);
+		.regform-step1__account-status__title {
+			@include rem('margin-top',28px);
+			font-size: 2.4rem;
+			color: $primary-2;
+			border: none;
+			padding: 0;
+		}
+		.regform-step1__account-status__status {
+			font-size: 3.4rem;
+			color: $primary-2;
+			border: none;
+			padding: 2rem 0;
+		}
+	}
+	.communi-check,.privacy-check{
+		@include rem('margin-top',20px);
+		a{
+			text-decoration: none;
+			border-bottom: 1px solid $primary-2;
+		}
+		.form-check-label{
+			width:98%;
+			@include f(19);
+			@include rem('margin-right',-50px);
+		}
+	}
+	.privacy-check {
+		@include rem(margin-left, -5px);
+	}
+	.submitbutton{
+		text-align: center;
+		display:inline-block;
+		width:100%;
+		@include rem('margin',40px 0);
+	}
+	.captcha{
+		@include rem(padding-top,0px);
+		@include rem(margin-top,-20px);
+	}
+	.userinfo{
+		font-style: italic;
+		font-size: 2.4rem;
+		text-transform: none;
+		@include main-font;
+		text-align: left;
+		@include rem(letter-spacing,0px);
+	}
+	.radio-title{
+		@include bold-font;
+	}
+}
+.cq-colctrl-lt0-forlogin{
+	@include rem(margin-top,50px);
+}

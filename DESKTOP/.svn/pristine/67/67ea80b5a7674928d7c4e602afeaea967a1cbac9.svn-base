@@ -1,0 +1,96 @@
+<!-- Login Box Starts Here-->
+<div class="login">
+	<!--#if expr="${DEVICE} = 'desktop'"  -->
+	    <div class="loginInner">
+	    <!--#endif -->
+	<div class="login__title">
+		<h3 class="heading3">my account</h3>
+		<h1 class="heading2">connection</h1>
+	</div>
+	<div class="login-box  js-form-validator js-login js-login-box" data-com="true">
+	    <form name="login" >  
+		    <h3 class="login-box__title">Already Registered?</h3>
+		    <p class="login-box__desc">If your already registered with cartier, login here:</p>
+
+		    <label for="form-select" class="form-label">COUNTRY OF RESIDENCE</label>
+			<!--#set var="style-name" value="country-selector_select" -->
+            <!--#set var="option-component" value="country_option" -->
+			<!--#include virtual="../../components/form_elements/select.shtml" -->
+
+
+
+		    <ul class="login-box__list js-login-box__list">  
+		        <li>
+		        	<!--#set var="label-name" value="E-MAIL ADDRESS" -->
+		        	<!--#set var="input-name" value="j_username" -->        	
+		        	<!--#include virtual="../../components/form_elements/label.shtml" -->
+		        	<span class="mandatory">*</span>
+		        	<!--#set var="input-type" value="email" -->
+		        	<!--#set var="input-prop" value="form-input" -->
+	        		<!--#include virtual="../../components/form_elements/input.shtml" -->
+		        </li>  
+		        <li>
+
+		        	<!--#set var="label-name" value="PASSWORD" -->
+		        	<!--#set var="input-name" value="j_password" -->
+		        	<!--#include virtual="../../components/form_elements/label.shtml" -->
+		        	<span class="mandatory">*</span>
+		        	<!--#set var="input-type" value="password" -->
+		        	<!--#set var="input-prop" value="form-input js-password-input" -->      	
+		    		<!--#include virtual="../../components/form_elements/input.shtml" -->	 
+				</li>
+
+
+		        <li>
+		        	<a href="#" class="login-box__forgot-password js-forgotpass-link">Forgot Our Password?</a>
+		        </li> 
+
+		        <li>  
+		        	<!--#set var="cta--varaint" value="cta--red" -->
+	            	<!--#set var="text-detail" value="connection" -->
+	            	<!--#include virtual="../../components/form_elements/button.shtml" -->
+	            	
+		    	</li> 
+
+		    </ul>
+		    
+		</form>  
+	</div>
+	
+	<!-- Login Box Ends Here-->
+	
+
+	<!--#include virtual="../../views/forgot_password/html.shtml" -->
+	
+
+	<!--#include virtual="../../views/forgot_password_emailsent/html.shtml" -->
+<!--#if expr="${DEVICE} = 'desktop'"  -->
+	    </div>
+	    <!--#endif -->
+<!--#if expr="${DEVICE} = 'mobile'"  -->
+	<div class="js-accordion">
+		<div class="js-accordion__node">
+			<div class="js-accordion_node__title">
+				<!--#set var="cta--varaint" value="cta--red" -->
+		        <!--#set var="text-detail" value="create your account" -->
+		        <!--#include virtual="../../components/form_elements/button.shtml" -->  
+			</div>
+			<div class="js-accordion_node__desc">
+	        	<!--#include virtual="../../views/reg_step1/html.shtml" -->
+			</div>
+		</div>
+	</div>  
+<!--#else -->
+ <!--#include virtual="../../views/reg_step1/html.shtml" -->
+	<!--#endif --> 
+		        
+<div id="modal_container">
+  	<div id="modal_window"> 
+  		<a href="#" class="close">Close it</a> 
+
+	</div>
+	<div id="modal_overlay"></div>
+</div>
+
+</div> 
+<!-- Login Ends Here-->

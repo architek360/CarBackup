@@ -1,0 +1,72 @@
+.my-billing-address-content-wrapper {
+.billing-payment-option {
+	.tab_content{
+	.bank-transfer {
+			span.error {
+				margin-top:15px !important;
+			}
+			.message-box{
+			background: none;
+			border:none;	
+
+				.message {
+					
+						@include rem('padding',0 50px 30px);
+						font-style: italic;
+						@include main-font;
+						text-align: center;
+				}
+			}
+
+			hr {
+				border-bottom:1px solid $primary-84;
+				background: none;
+			}
+
+			.confirm-btn{
+				.cta--red{
+					width: auto;
+					margin: 15px auto;
+					display: block;
+				}
+			}
+		}
+		.terms-condition {
+			.checker {
+				margin-left: 50px;
+			}
+			@include rem('width', 400px);
+			margin: 0 auto;
+			float: left;
+			display: block;
+			span {
+				@include rem('margin', 0px);
+			}
+			span.error{
+				width: auto;
+				background: none;
+				position: absolute;
+			}
+			label {
+				
+				@include rem('width', 300px);
+				float: 	left;
+				@include rem('padding', 0px);
+				margin-top: 2px;
+				font-size: 1.2rem;
+				font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+			}
+		}
+
+
+
+
+
+	}
+}
+
+
+
+
+
+}

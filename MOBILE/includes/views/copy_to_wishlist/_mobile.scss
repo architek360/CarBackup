@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    COPY TO WISHLIST -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.copy-to-wishlist)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.copy-to-wishlist{
+	border:1px solid $primary-17;
+	text-align:left;
+	@include rem('padding',10px 24px 30px 24px);
+	.form-input,.select-1{
+		width:65%;
+		display:inline;
+	}
+	.single-line{
+		display:block;
+		position:relative;
+		.cta-button{
+			position:absolute;
+			top:0;
+			right:0;
+			margin:0;
+		}
+	}
+	.input-field{
+		@include rem('padding-top',20px);
+		display:block;
+	}
+	.select-1{
+		@include rem('margin-top',5px);
+	}
+	.form-label{
+		text-transform:uppercase;
+		max-width:65%;
+		margin-bottom:5px;
+	}
+}

@@ -1,0 +1,97 @@
+.my-boutique-detail-wrapper {
+    h1, h2, .add-boutique .more-button{
+        @include proxiBold-font;
+        @include rem(font-size, 13px);
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: bold;
+    }
+    h2{
+        @include proxi-font;
+        @include rem(font-size, 15px);
+        padding: 0;
+        text-align: left;
+        letter-spacing: 1.5px;
+        color:$primary-2;
+    }
+    .border-bottom{
+        border-bottom: 1px solid $primary-61;
+    }
+    .row{
+        @include rem(padding, 16px);
+        @include rem(margin-top, 30px);
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid $primary-61;
+        .close{
+            position: absolute;
+            @include rem(font-size, 16px);
+            @include rem(right, 20px);
+            @include rem(top, 20px);
+        }
+    }
+    .boutique__image{
+        @include rem(width, 383px);
+        @include rem(margin, 0 20px 0 0);
+        float: left;
+        img{
+            width: 100%;
+        }
+    }
+    .boutique-detail{
+        @include rem(font-size, 12px);
+        @include main-font;
+        @include rem(width, 220px);
+        @include rem(padding, 0 0 0 16px);
+        color: $primary-3;
+        line-height:1.4;
+        float: left;
+    }
+    .boutique__detail{
+        @include rem(padding, 0 20px 20px 0);
+        &.border-bottom{
+            @include rem(padding, 0 20px 10px 0);
+            @include rem(margin, 0 20px 10px 0);
+        }
+        .more-button{
+            font-style: normal;
+        }
+        &:last-child{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .social-share{
+        @include rem(width, 293px);
+        @include rem(margin-top, 80px);
+        float: right;
+        border-top: 1px solid $primary-61;
+        .social-share__favorite{
+            display: none;
+        }
+    }
+    .add-boutique{
+        @include rem(margin, 40px);
+        text-align: center;
+        .more-button{
+           @include rem(font-size, 15px);
+            font-style: normal;
+        }
+    }
+    .no-result-msg{
+        text-align: center;
+        border: none;
+        p{
+            text-align: center;
+        }
+    }
+}
+
+.boutique-detail-wrapper .boutique__image{
+    img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+ <!--MANUAL PRODUCT LIST START HERE-->
+<div class="manual-product">
+    <h3 class="heading3">timepieces</h3>
+    <h1 class="heading2">exceptional creations</h1>
+
+     <!--IMAGE TEASER-->
+    <div class="teaser clearfix">
+        <img src="<!--#echo var="CONTENT_IMG_PATH"-->product_manual_bg.png" alt="">
+        <div class="teaser-desc">
+            <p class="teaser-desc__title">the hour of exceptional jewelry</p>
+            <ul class="teaser-desc__listing">
+                <li> <a href="#"> High jewelry watches </a> </li>
+                <li> <a href="#"> bestiaire watches </a> </li>
+                <li> <a href="#"> feminine complications </a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--DESCRIPTION-->
+    <p class="manual-product__content">
+        The coming together of two domains of exceptional expertise within the Maison Cartier gives life to creative pieces, uniting stones and precious metals. True jewelry masterpieces, these wristwatches showcase the expertise of Cartier’s master watchmakers and jewelers.
+    </p>
+</div>
+
+ <!--MANUAL PRODUCT LIST START HERE-->

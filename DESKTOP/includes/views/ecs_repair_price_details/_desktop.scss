@@ -1,0 +1,31 @@
+/*---------------------------------------------------*\
+    ECS REPAIR PRICE DETAILS -- Desktop CSS
+\*---------------------------------------------------*/
+/**
+ * PRICE DETAIL CONTAINER..... main block (.order-review-price-detail)
+ */
+
+/*------------------------------------*\
+    $PRICE DETAIL CONTAINER
+\*------------------------------------*/
+
+.order-review-price-detail .price-detail{
+	.price-detail__row{
+		.price-detail__col{
+			@include f(12);
+		}
+		.right-zero{
+			font-weight: bold;
+		}
+		&:nth-child(4){
+			border-top: 1px solid $primary-92;
+		}
+		.js-totalprice{
+			@include f(21);
+			font-weight: normal;
+		}
+		.final-total {
+			border-top: 1px solid $primary-92;
+		}
+	}
+}

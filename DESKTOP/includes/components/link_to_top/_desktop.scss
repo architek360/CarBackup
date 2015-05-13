@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    Link To top -- Desktop CSS
+\*------------------------------------*/
+
+
+
+.link-to-top a.is-fixed {
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+}
+.link-to-top a {
+	@include setSpriteDesktop(8px, 15px ,-335px, -48px, transparent);
+    display: none;
+	@include f(10);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-left: 10px;
+    padding-left: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include font-color($primary-3);
+     &:hover {
+        @include setSpriteDesktop(8px, 15px ,-264px, -48px, transparent);
+		@include font-color($primary-2);
+	}
+
+}

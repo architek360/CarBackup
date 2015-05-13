@@ -1,0 +1,23 @@
+{
+	"success": true,
+	"serverMessage": "Correct Country",
+	"content": {
+		"phone": "+7 495 937 90 40",
+		"openingTime": "Monday - Saturday (12 a.m. - 9 p.m.), Sunday (12 a.m. - 7 p.m.)",
+		"address": "Cartier Client Relations",
+		"phoneBridal": "+7 495 662 31 00",
+		"scheduleBridal": "",
+		"addressBridal": "",
+		"countryName": "Turkmenistan",
+		"addressDetails": {
+			"phone": "+7 495 937 90 40",
+			"openingTime": "Monday - Saturday (12 a.m. - 9 p.m.), Sunday (12 a.m. - 7 p.m.)",
+			"address": "Cartier Client Relations"
+		},
+		"addressDetailsBridal": {
+			"phone": "+7 495 937 90 40",
+			"openingTime": "Monday - Saturday (12 a.m. - 9 p.m.), Sunday (12 a.m. - 7 p.m.)",
+			"address": "Cartier Client Relations"
+		}
+	}
+}

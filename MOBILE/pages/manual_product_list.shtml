@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#set var="VIEWS_1" value="manual_product_list" -->
+<!--#set var="COMP_4" value="static_text_box" -->
+<!--#set var="MODULE" value="product" -->
+
+<!--#include virtual="../templates/base.shtml" -->

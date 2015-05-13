@@ -1,0 +1,17 @@
+  <!-- VIDEO CAROUSEL CAROUSEL-->
+  <div class="carousel-product">
+        <div class="carousel">
+            <ul class="bxslider js-video-slider">
+                <li class="clearfix">
+                 <iframe src="//www.youtube.com/embed/3vuXXVwXYp4" height="100%" width="100%" frameborder="0" allowfullscreen></iframe>
+                
+                </li>
+
+                <li class="clearfix">
+                    <iframe src="//www.youtube.com/embed/yaBNjTtCxd4" height="100%" width="100%" frameborder="0" allowfullscreen></iframe>
+                
+                </li>
+           </ul>
+        </div>
+  </div>
+

@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    footer social share-- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container 
+
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.footer_social__icon{
+	display: inline-block;
+	height: 70px;
+	padding: 15px 10px 0;
+	width: 60px;
+	border-top:none;
+	a {
+		height:60%;
+	}
+
+	.footer-facebook{
+		@include setSprite(60px, 60px, -20px, -135px);
+	}
+
+	.footer-twitter{
+		@include setSprite(58px, 60px, -174px, -135px);
+	}
+
+	.footer-pinit{
+		@include setSprite(60px, 60px, -97px, -135px);
+	}
+
+	.footer-instagram{
+		@include setSprite(60px, 60px, -477px, -334px);
+	}
+
+	.footer-youtube{
+		@include setSprite(60px, 60px, -549px, -334px);
+	}
+
+	.footer-youku{
+		@include setSprite(60px, 60px, -622px, -334px);
+	}
+
+	.footer-weibo{
+		@include setSprite(60px, 60px, -694px, -334px);
+	}
+
+	.footer-renren{
+		@include setSprite(60px, 60px, -392px, -334px);
+	}
+}

@@ -1,0 +1,156 @@
+/*------------------------------------*\
+    AMBASAADOR FORM -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ambassador-form)
+ * Contact Ambassador Form  .....(js-contact-ambassador-form)
+
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.ambassador-form{
+	border:1px solid $primary-17;
+	@include f(20);
+	@include rem('padding',30px 24px 20px 24px);
+	@include rem('margin',20px 0 52px 0);
+	@include font-color($primary-2);
+	display:inline-block;
+	text-transform:uppercase;
+	text-align: left;
+	width: 100%;
+	 -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background:$primary-1;
+	
+	.arrow-show {
+		margin-top:0px;
+	}
+	.grid__item{
+		@include rem('padding',0px);
+		@include rem('margin-top',-2px);
+
+		label{
+			@include bold-font;
+			@include f(22);
+		}
+
+		.form-check{
+			margin-left: 18px;
+			width:105%;
+			@include main-font;
+			font-style:italic;
+			.form-check-label{
+				width:80%;
+			}
+		}
+
+		&:last-child{
+			padding:0;
+		}
+		.radio-btn{
+			@include rem('padding',0 0 33px);
+			@include rem('margin',15px 0 0px);
+		}
+		.radio-btn + span {
+			@include rem('margin',-29px 0 0px);
+		}
+	}
+
+	.grid__item--row{
+
+		@include rem('min-height',120px);
+
+		input + span {
+			height: 35px
+		}
+	}
+	
+	.grid__item--pad{
+		@include rem('padding',0 0 30px 0);
+	}
+	.grid__item--pad20{
+		@include rem('padding',0 0 20px 0);
+	}
+
+	.mandatory{
+		color:$primary-2;
+	}
+
+	/* captcha div css override*/
+	.captchaDiv {
+		.captcha {
+			padding :0;
+		}
+		.img {
+			float: none;
+		}
+	}
+
+}
+
+.privacy-check{
+	text-transform:none;
+	@include rem(margin-left, -25px);
+
+}
+
+.privacy-check__label{
+	display:block;
+	width:90%;
+	label{
+		@include main-font;
+	}
+
+}
+
+/*------------------------------------*\
+  contact ambassador form CSS
+\*------------------------------------*/
+
+#js-contact-ambassador-form{
+	border:1px solid $primary-17;
+	@include f(20);
+	@include rem('padding',30px 24px 20px 24px);
+	@include rem('margin',20px 0 52px 0);
+	@include font-color($primary-2);
+	display:inline-block;
+	text-transform:uppercase;
+	text-align: left;
+	width: 100%;
+	 -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background:$primary-1;
+
+	.heading-wrapper{
+		display: none;
+	}
+
+	p{
+		text-transform:none;
+		color: $primary-3;
+		@include f(22);
+	}
+	.button-wrapper{
+		@include rem('margin-bottom',30px);
+	}
+
+	.comp-rich-text{
+		clear: both;
+	}
+
+	.select-wrapper{
+		@include rem('margin-top',25px);
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+#js-contact-ambassador-form .checkbox-wrapper .form-checkbox-label {
+	font-family: Georgia, sans-serif !important;
+	text-transform: none;
+	font-style: italic;
+	color: white;
+	padding-top: 3px;
+}

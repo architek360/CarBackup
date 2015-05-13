@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    PROGRESS BAR -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..(.progressbar, etc)
+ */
+
+/*------------------------------------*\
+   Module Container -- Desktop CSS
+\*------------------------------------*/
+
+.progressbar {
+	@include rem('padding', 17px 50px 17px 90px);
+	width: 85.2%;
+	text-align: center;
+	margin: 0;
+	background: rgba(0,0,0,0.35);
+		li {
+		width: 24.5%;
+		display : inline-table;
+		a {
+			letter-spacing: .1em;
+			@include f(12);
+			font-weight: bold;
+			color: #bfb1b3;
+			float: left; 
+			width: 100%;
+		}
+		span {
+			line-height: 25px;
+			border-radius: 50%;
+			float: left;
+			width: 25px;
+			height: 25px;
+			@include rem('margin', 0px);
+			@include f(14);
+			text-align: center;
+			color : $primary-1 ;
+		}
+		p {
+			margin-left: 10px;
+			float: left;
+			width: 80%;
+			@include f(10);
+			@include rem('padding', 6px 0px);
+			font-weight: normal;
+			text-align: left;
+			height: auto;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			vertical-align: middle;
+			background: none;
+			line-height: inherit;
+
+		}
+	}
+}

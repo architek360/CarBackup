@@ -1,0 +1,194 @@
+.contact-ambassador{
+	margin-left:0;
+	color: $primary-2;
+	width:440px !important;
+	form{
+		.radio-wrapper{
+			display: inline;
+		}
+		.select-wrapper{
+			margin-top: 0;
+			@include rem('margin-bottom', 30px);
+		}
+
+		.select-wrapper{
+			.selector{
+				width:430px !important;
+				span{
+					width:430px !important;
+				}
+			}
+		}
+
+		.checkbox-wrapper{
+			@include rem('margin-top', 10px);
+		}
+	}
+
+}
+
+.ambassador-form{
+	@include rem('margin', 0px);
+	color: $primary-2;
+	width:440px !important;
+	border: none;
+	padding: 0;
+	background: none;
+
+	.heading2{
+		@include f(12);
+		@include proxi-font();
+		font-weight: bold;
+	}
+	.grid__item{
+		@include rem('padding',0px);
+		@include rem('margin-top',-2px);
+
+		label{
+			@include f(10);
+			display: inline;
+		}
+	}
+
+	.mandatory{
+		@include font-color($primary-20);
+	}
+
+	.grid__item--row{
+		min-height: 70px;
+	}
+
+	.grid__item{
+		label{
+			@include f(10);
+		}
+
+		.form-check{
+			margin-left: 2px;
+			width:auto;
+			font-style:normal;
+			@include f(12);
+		}
+	}
+
+	.next-step-cta{
+			display: block;
+			text-align: center;
+		}
+}
+
+.js-request-price-form{
+	width:430px;
+	.heading3{
+		@include proxi-font();
+		font-weight: bold;
+		@include f(12);
+	}
+
+	.group-wrapper{
+		 @include rem('margin-top',15px);
+		 clear: both;
+		 display: inline-block;
+		 width: 100%;
+
+		 label{
+		 	@include proxi-font();
+			font-weight: bold;
+		 	display: inline-block;
+		 }
+
+		 .radio-wrapper{
+		 	@include rem('padding-top',10px);
+		 }
+		 .checkbox-wrapper{
+		 	&.requestPrice_checkbox_val{
+		 		.form-checkbox-label{
+			 		max-width: 95%;
+			 		font-weight: normal;
+			 		@include f(12);
+			 		@include main-font();
+			 	}
+		 	}
+		 }
+	}
+	.radio-wrapper{
+		width: auto;
+		display: inline-block;
+		@include rem('padding-right',10px);
+
+		.radio-name{
+			width: auto;
+		}
+	}
+
+	.requestPrice_mainMessage{
+		@include rem('margin',2px 0 0);
+
+		label{
+			display: block;
+			@include rem('margin-bottom',4px);
+		}
+
+		.selector{
+			width: 423px !important;
+
+			span{
+				width: 423px !important;
+				text-transform: none;
+			}
+		}
+	}
+
+	.checkbox-name{
+		letter-spacing: 0px;
+	}
+
+	.comp-rich-text{
+		p{
+			color: $primary-2;
+			@include rem('padding',5px);
+		}
+		&.rte-wrapper{
+			>p{
+				color: $primary-65 !important;
+				@include f(12);
+				a{
+					@include f(12);
+					@include main-font();
+				}
+			}
+		}
+
+		a{
+			color: $primary-3;
+			text-decoration: none;
+			font-weight: normal;
+		}
+	}
+	.button-wrapper{
+		@include rem('padding-top',0px);
+	}
+
+	.display-block{
+		display: block !important;
+	}
+}
+
+.requestPrice_message{
+	display:none;
+}
+
+.requestPrice_mainMessage{
+  display:none;
+}
+
+.checkbox-wrapper.ambassador_checkbox_val .form-checkbox-label{
+	text-transform: none;
+	@include f(12);
+	@include main-font();
+	line-height: 17px;
+	margin-top: 0;
+	max-width: 100%;
+	width: 420px;
+	float: none;
+}

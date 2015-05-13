@@ -1,0 +1,412 @@
+/*------------------------------------*\
+    Reg Step 2 -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.pushs)
+ * INNER BLOCK......inner items (ul, etc.)
+ * HEADING BLOCK...... headings styling (.pushs__title)
+ * DESCRIPTION BLOCK...... DESCRIPTION styling (.pushs__desc)
+ * NORTON SECURED BLOCK ..... FOR NORTON SECURED ICON (.pushs__norton-secured)
+ * NORTON ICON ..... ('.norton-icon' FROM /sass/_mobile.scss)
+ * CREDIT CARD ICON ..... (E.G '.mastercard' FROM /sass/_mobile.scss)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+
+
+.js-reg-step-2 {
+	.txt, .comp-rich-text {
+		h2 {
+			border: medium none;
+		    color: #FFFFFF;
+		    font-size: 2.6rem;
+		    letter-spacing: 0.26rem;
+		    line-height: 3.64rem;
+		    padding-bottom: 1.3rem;
+		    margin-top: 15px;
+		    text-transform: uppercase;
+		    position: relative;
+
+		}
+		p {
+			 color: #FFFFFF;
+			 @include main-font;
+			 padding: 0.5rem 0;
+			 font-size: 1.3rem;
+			 font-style: italic;
+			 text-align: center;
+		}
+
+		div {
+			display: inline-block;
+			float: right;
+   			margin-top: 26px;
+   			
+			a {
+			  	color: #A0A0A0;
+			     @include proxi-font;
+			    font-size: 1rem;
+			    letter-spacing: 0.1rem;
+			    line-height: 1.4rem;
+			    text-decoration: none;
+			    text-transform: uppercase;
+			}
+		}
+	}
+	.owned-creations{
+		.select-wrapper{
+			text-align:left;
+			margin-top: 0;
+		}
+
+		.group-wrapper{
+			.radio-wrapper{
+				padding-bottom: 10px;
+			}
+		}
+		
+		.more-button{
+			@include f(14);
+			margin-bottom: 10px;
+			margin-top: 15px;
+			color: $primary-2;
+			font-style: normal;
+		}
+		.owned-creations-label{
+			@include f(12); 
+		}
+		.added-creation {
+			background: #1a1a1a;
+			height:38px;
+			position:relative;
+			.added-creation__name{
+				line-height: 38px;
+				padding-left: 15px;
+				font-size: 11px;
+				@include proxiBold-font;
+				
+			}
+			.delete-icon{
+				position: absolute;
+				@include setSprite(20px, 20px, -633px, -134px);
+				right: 10px;
+				top: 10px;
+			}
+
+		}
+
+		.js-owncreation-container{
+			label{
+				display: block;
+				@include rem('margin-bottom',5px);
+				@include f(10);
+			}
+		}
+	}
+
+	.heading3 {
+		 border: medium none;
+	    display: inline-block;
+	    @include proxi-font;
+	    font-size: 1.5rem;
+	    letter-spacing: 0.3rem;
+	    padding-bottom: 1.5rem;
+	    text-align: center;
+	    width: 100%;
+	    margin-bottom: -7.5rem;
+    	margin-top: 1rem;
+
+
+	}
+
+	.heading5 {
+		@include f(13);
+		@include proxiBold-font;
+		text-transform: uppercase;
+		margin-top: 10px;
+		@include rem('letter-spacing',1.3px);
+		@include rem('line-height',18.2px);
+		float: left;
+		 width: 100%;
+		 text-align: left;
+		  padding: 1rem 0;
+	}
+
+	ul{
+		color: white;
+		width: auto;
+		display: inline-block;
+		@include set-ulFix;
+		margin:0 auto 10rem;
+		/*height: 260px;*/
+		text-transform:uppercase;
+		@include f(10);
+		@include rem(padding-top,15px);
+		@include rem('margin-bottom',15px);
+		text-align: center;
+		float: left;
+	    min-width: 570px;
+	    text-align: left;
+	    width: auto;
+		
+			
+			li{
+		
+			 	background: none;
+			    color: #6F4E53;
+			    cursor: pointer;
+			    display: inline-block;
+			    float: left;
+			   @include proxi-font;
+			    @include f(10);
+			    font-weight: bold;
+			    height: 16px;
+			    letter-spacing: 1px;
+			    line-height: 26px;
+			   /* margin-left: 8px;*/
+			    margin-right: 25px;
+			    padding-bottom: 0;
+			   /* padding-left: 10px;*/
+			    padding-right: 0;
+			    padding-top: 3px;
+			    text-align: center;
+			    vertical-align: middle;
+			    width: auto;
+
+
+					span{
+						@include rem(width,25px);
+						@include rem(height,25px);
+						line-height: 25px;
+						border-radius: 50%;
+						display: inline-block;
+						text-align: center;
+						@include rem('margin-bottom',25px);
+						@include proxiBold-font;
+						@include f(14);
+					    color: $primary-2;
+					    display: inline-block;
+					    float: left;
+						margin-right: 8px;
+					}
+
+					 p{
+						vertical-align:middle;
+						height: 45px;
+						@include proxi-font;
+						font-weight:bold;
+						letter-spacing:1px;
+						background: none;
+						text-align: center;
+						@include f(10);
+						color: $primary-75;
+					    float: left;	
+					    height: 16px;
+					    margin-left: 8px;
+					    padding: 3px 0 0;
+					}
+				
+			}
+
+			li:nth-child(1) {
+				color: $primary-74;
+				span {
+					background-color: $primary-2;
+					color: $primary-75;
+
+				}
+				p {
+					color: $primary-74;
+
+				}
+			}
+			li:nth-child(2) {
+				color: $primary-75;
+				span {
+					background-color: $primary-75;
+					color: $primary-1;
+
+				}
+				p {
+					color: $primary-75;
+
+				}
+			}
+		}
+
+		.fn_grpdoyouown {
+			margin-right: 10px;
+		}
+
+
+		.cq-colctrl-lt0 {
+
+			margin-bottom: -60px;
+			margin-top: -37.5px;
+			width: 100%;
+			.cq-colctrl-lt0-c0{
+				width: 430px;
+			}
+			.cq-colctrl-lt0-c0, .cq-colctrl-lt0-c1 {
+				margin-top: 4rem;
+				margin-bottom: 80px;
+	   			padding: 1.5rem auto 8rem;
+	   			border:none;
+				.heading-wrapper {
+					width: 100%;
+				}
+
+				hr {
+				    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				    border-bottom: 1px solid #595959;
+				    display: block;
+				    float: left;
+				    height: 2px;
+				    width: 100%;
+				    margin: 20px 0 0;
+				    position: relative;
+
+
+				}
+
+				hr:first-child {
+					margin: 0;
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+		.fn_grpinterdin.checkbox-wrapper, .fn_grpownsp.checkbox-wrapper {
+			display: block;
+			float: left;
+			@include rem('margin',10px 10px 10px 50px);
+		    width: 31%;
+		    
+
+
+		    .checker {
+		    	float: left;
+		    }
+		    .checkbox-name {
+		    	text-transform: uppercase;
+		    	@include proxiBold-font;
+		    	@include f(10);
+		    	@include rem('letter-spacing',1px);
+		    	@include rem('line-height',14px);
+		    	@include rem('margin-top',1px);
+		    	@include rem('width',110px);
+		    	text-align: left;
+		    	float: left;
+		    }
+		}
+
+		.group-wrapper + .heading-wrapper {
+			display: none;
+		}
+
+		.fn_grpinterdinacc.checkbox-wrapper {
+			display: block;
+			float: left;
+			@include rem('margin',10px 10px 10px 50px);
+		    width: 100%;
+		     display: none;
+		    
+
+
+		    .checker {
+		    	float: left;
+		    }
+		    .checkbox-name {
+		    	text-transform: uppercase;
+		    	@include proxiBold-font;
+		    	@include f(10);
+		    	@include rem('letter-spacing',1px);
+		    	@include rem('line-height',14px);
+		    	@include rem('margin-top',1px);
+		    	@include rem('width',110px);
+		    	text-align: left;
+		    	float: left;
+		    }
+		}
+
+
+
+
+
+
+
+}
+
+
+.js-reg-step-2 {
+
+	.heading4 {
+		padding: 0;
+
+	}
+
+	.txt, .comp-rich-text {
+		width: 100%;
+		height: 130px;
+		div {
+			a {
+				background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") no-repeat scroll -431px -156px #000000;
+			    bottom: 0.2rem;
+			    color: #A0A0A0 !important;
+			    display: inline-block;
+			    float: right;
+			    font-size: 10px !important;
+			    height: 10px;
+			    letter-spacing: 0.1rem;
+			    line-height: 1.4rem;
+			    margin-right: 0.9rem;
+			    padding-left: 10px;
+			    position: relative;
+			    text-align: right;
+			    text-decoration: none !important;
+			    text-transform: uppercase;
+			    vertical-align: middle;
+			    width: auto;
+			    top: 0px;
+			    left: 0px;
+			}
+		}
+	}
+
+
+	.button-wrapper {
+
+		margin-bottom: 6rem;
+		margin-top: -12rem;
+	}
+					
+}
+
+
+
+.js-reg-step-2 .cq-colctrl-lt0 {
+	.interest-product-line,.own-smartphone{
+		background:none;
+		border:none;
+		margin:0;
+		padding:0;
+		display:inline-block;
+		.checkbox-wrapper{
+			width: 30%;
+		}
+	}
+	.cq-colctrl-lt0-c1{
+		width:430px;
+	}
+}

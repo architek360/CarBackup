@@ -1,0 +1,21 @@
+<!-- tab_billing_address Block Starts Here-->
+<div class="tab_billing_address">
+	
+	<p class="tab_billing_address__desc top-margin full-width">	
+	Please note that Cartier does not ship 
+	orders to P.O Boxes.
+	</p>
+
+	<form>
+		<!--#include virtual="../../components/edit_footer/html.shtml" -->
+
+		<!--#include virtual="../../components/delivery_date/html.shtml" -->
+
+		<div class="next-step-cta clearfix">
+			<!--#set var="text-detail" value="continue to next step" -->
+	    	<!--#set var="cta--varaint" value="cta--red js-shipping-billing" -->
+	    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+		</div>
+	</form>
+</div>
+ <!-- tab_billing_address Block Ends Here-->

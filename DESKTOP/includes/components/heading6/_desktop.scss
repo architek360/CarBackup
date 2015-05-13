@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    My Cartier heading Component -- Desktop CSS
+\*------------------------------------*/
+.heading6{
+	@include brand-font;
+	@include f(24);
+	text-align:center;
+	text-transform:uppercase;
+	@include rem('padding', 30px 0);
+	color:$primary-2;	
+}

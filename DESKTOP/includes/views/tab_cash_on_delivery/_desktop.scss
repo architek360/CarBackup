@@ -1,0 +1,150 @@
+.cash-delivery{
+	display: block;
+	@include font-color($primary-2);
+
+
+	/*------------------------------------*\
+    		$MESSAGE AREA
+	\*------------------------------------*/
+	.message-box{
+		@include rem(margin, 30px 0 10px);
+		/*border-bottom:1px solid $primary-17;
+*/
+		.heading3{
+			/*@include rem(margin, 30px 0);*/
+		}
+
+		.message{
+			@include rem(padding, 0 50px 30px);
+			font-style: italic;
+			@include main-font;
+			text-align: center;
+		}
+
+		hr{
+			background: $primary-17;
+			@include rem(margin, 5px 0 30px);
+		}
+	}
+		.terms-condition{
+			span.error {
+				margin-top:15px !important;
+			}
+		}
+
+	
+
+		.cash-delivery-accordion{
+
+
+		@include rem('padding', 14px 0);
+		width:100%;
+		margin:0 auto;
+
+		.cash-delivery-accordion__wrapper{
+			border-top:solid 1px $primary-6;
+		}
+
+		.cash-delivery-accordion__node{
+			border-bottom:solid 1px $primary-6; 
+		}
+
+		.cash-delivery-accordion_node__title{
+			@include rem('padding', 11px 0px);
+			text-align:left;
+			position:relative;
+			.cash-delivery-accordion_node_title__ques{
+				@include bold-font;
+				@include rem('min-height', 50px);
+				display: table;
+			}
+			
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+		 				
+			}
+
+		
+
+			span{
+				position:absolute;
+				right:0;
+				top:30%;
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+			span.on{
+				@include setSprite(22px, 30px, -784px, -20px);
+				
+			}
+			span.off{
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+		}
+
+		.cash-delivery-accordion_node__desc{
+		 		vertical-align: middle;
+				text-align: center;
+				line-height: 30px;
+				@include f(24);
+				@include main-font;
+				@include rem(padding, 10px 0 17px);
+				
+				.address{
+					vertical-align: middle;
+					text-align: center;
+					font-style: italic;
+					line-height: 30px;
+					@include f(24);
+					@include main-font;
+					@include rem(padding, 10px 0 17px);
+
+					.address__uppercase{
+						text-transform: uppercase;;
+					}
+				}
+
+			.address-button{
+						 @include proxi-font();
+					padding: 0px;
+					color: #a0a0a0;
+					font-size: 11px;
+					width: 100%;
+					margin: 0 auto;
+					border-top: 1px solid #83464b;
+					letter-spacing: .1em;
+					@include rem('line-height',30px);
+					.replace-link{
+						display:none;
+					}
+
+					.edit-link{
+						text-transform:  uppercase;
+					}
+					a {
+						float: left;
+					}
+					.edit-icon {
+						display: inline-block;
+					}
+			}
+		}
+
+	}
+
+	/*------------------------------------*\
+    		$ACTION BUTTON
+	\*------------------------------------*/
+	.placeorder-btn{
+		text-align:center;
+		clear:both;
+		@include rem('padding',5px 0);
+		@include rem('margin-top',20px);
+
+		.cta--red{
+			width:auto;
+		}
+	}
+}

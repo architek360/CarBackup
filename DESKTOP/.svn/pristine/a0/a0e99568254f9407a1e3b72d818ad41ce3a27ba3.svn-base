@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  Error page  COMPONENT  -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.error-page)
+ * main message ....(.error-page__msg)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.error-page {
+	width: 81.25%;
+	margin: 0 auto;
+
+	.error-page__msg {
+		text-transform:uppercase;
+		@include font-color($primary-2);
+		text-align: center;
+		@include bold-font;
+		@include rem('margin', 1px);
+	}
+}
+
+/* error page css end here */

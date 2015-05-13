@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    tab_shipping_address -- Mobile CSS
+\*------------------------------------*/
+/**
+ * tab_shipping_address CONFIRMATION
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.tab_shipping_address{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+
+	.top-margin{
+		border-top:solid 1px $primary-26;
+
+	}
+	.full-width{
+		width:100%;
+	}
+
+	.tab_shipping_address__desc {
+		@include main-font;
+		letter-spacing:2px;
+		display: inline-block;
+		text-align: center;
+		@include f(26);
+		@include rem('padding', 50px 0px);
+
+	}
+	
+	.billing-form {
+		margin: 0 auto;
+		width:100%;
+		text-align: left;
+		
+	}
+	.cta--red {
+		width: 70%;	
+		@include rem('margin-top', 30px);
+		@include rem('margin-bottom', 30px);
+	}
+	
+}
+

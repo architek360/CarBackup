@@ -1,0 +1,125 @@
+
+<div class="cross-button close"></div> 
+
+<div class="OverlayBoxContent">
+
+<h3>Estimate Partial Agreement- RO number 123456789</h3>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+		<div id="mandatory-services">
+			<h4>Mandatory services</h4>
+			
+			<!--#set var="ICON_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/" -->
+			 <!--#set var="links-to" --" value="#" -->
+			    	<!--#set var="img-src" value= "tooltip_icon.png" -->
+			    	<!--#include virtual="../../components/tool_tip/html.shtml" -->
+			<table>
+				<tr>
+				  <th class="col1">Service</th>
+				  <th class="col2">Quantity</th> 
+				  <th class="col3">Amount</th>
+				  <th class="col4">Amount incl. taxes</th>
+				  <th class="col5"></th>
+				</tr>
+				<tr>
+				  <td>Complete service</td>
+				  <td>1</td> 
+				  <td>€ 272.00</td>
+				  <td class="price">€ 94</td>
+				  <td><!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-name" value="fn_add" -->
+                <!--#set var="checkbox-label-name" value="" -->
+                <!--#set var="checkbox-class" value="check" -->  
+                <!--#set var="default" value="checked disabled" -->
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" --></td>
+				</tr>
+			</table>
+
+		</div>
+		<div id="optional-services">
+			<h4>Optional services</h4>
+				 <!--#set var="links-to" --" value="#" -->
+			    	<!--#set var="img-src" value= "tooltip_icon.png" -->
+			    	<!--#include virtual="../../components/tool_tip/html.shtml" -->
+			<table>
+				<tr>
+				  <th>Service</th>
+				  <th>Quantity</th> 
+				  <th>Amount</th>
+				  <th>Amount incl. taxes</th>
+				  <th></th>
+				</tr>
+				<tr>
+				  <td>Eve</td>
+				  <td>Jackson</td> 
+				  <td>€ 94</td>
+				  <td class="price">€ 340.00</td>
+				  <td><!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-name" value="fn_add" -->
+                <!--#set var="checkbox-label-name" value="" -->
+                <!--#set var="checkbox-class" value="check" --> 
+                <!--#set var="default" value="" --> 
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" --></td>
+				</tr>
+				<tr>
+				  <td>Eve</td>
+				  <td>Jackson</td> 
+				  <td>€ 94</td>
+				  <td class="price">€ 94</td>
+				  <td><!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-name" value="fn_add" -->
+                <!--#set var="checkbox-label-name" value="" -->
+                <!--#set var="checkbox-class" value="check" --> 
+                <!--#set var="default" value="" -->  
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" --></td>
+				</tr>
+				<tr>
+				  <td>Eve</td>
+				  <td>Jackson</td> 
+				  <td>€ 94</td>
+				  <td class="price">€ 94</td>
+				  <td><!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-name" value="fn_add" -->
+                <!--#set var="checkbox-label-name" value="" -->
+                <!--#set var="checkbox-class" value="check" --> 
+                <!--#set var="default" value="" -->  
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" --></td>
+				</tr>
+				<tr>
+				  <td>Eve</td>
+				  <td>Jackson</td> 
+				  <td>€ 94</td>
+				  <td class="price">€ 94</td>
+				  <td><!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-name" value="fn_add" -->
+                <!--#set var="checkbox-label-name" value="" -->
+                <!--#set var="checkbox-class" value="check" --> 
+                <!--#set var="default" value="" -->  
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" --></td>
+				</tr>
+				<tr>
+				  <td>Eve</td>
+				  <td>Jackson</td> 
+				  <td>€ 94</td>
+				  <td class="price">€ 94</td>
+				  <td><!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-name" value="fn_add" -->
+                <!--#set var="checkbox-label-name" value="" -->
+                <!--#set var="checkbox-class" value="check" --> 
+                <!--#set var="default" value="" -->  
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" --></td>
+				</tr>
+			</table>
+		</div>
+		<div id="amount">
+			<p><span>Total Amount</span><span id="total"></span></p>
+		</div>
+		<div class="buttonRight">
+					<button type="submit" class="cta-button cta-button__inner cta--grey-pad-30"><span class="input-arrow"></span>
+					<span class="cta-button__input">Reject</span></button>
+					<button type="submit" id="approve" class="cta-button cta-button__inner cta--red"><span class="input-arrow"></span>
+					<span class="cta-button__input">Approve</span></button>
+					<button type="submit" class="cta-button cta-button__inner cta--grey-pad-30 close"><span class="input-arrow"></span>
+					<span class="cta-button__input">close</span></button>
+				</div>
+</div>
+		

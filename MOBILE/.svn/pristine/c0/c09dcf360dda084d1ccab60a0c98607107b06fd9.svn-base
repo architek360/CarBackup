@@ -1,0 +1,123 @@
+/*------------------------------------*\
+    collection box  -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....Cost Estimation (.OverlayBoxContent)
+  
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.OverlayBoxContent{
+		width:100%;
+		margin-top:20px;
+		@include f(20); 
+		text-align:left;
+		font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+	.image{
+		width:80%;
+		margin:10px 8% 0 8%;
+		img{ width:100%;
+		display:none;
+	}
+	}
+
+	h3{
+		@include f(24);
+		@include bold-font;
+	}
+	h4{
+		@include f(22);
+		@include bold-font;
+		text-align:left;
+		display:inline;
+		
+	}
+	p{
+		@include f(20);
+		line-height:16px;
+		padding-top:10px;
+		text-align:center;
+		font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+	}
+	table {
+	  	width: 100%;
+	  	text-align: left;
+	  	border-collapse: collapse;
+	  	@include rem('margin', 10px 0 20px 0);
+	  	caption-side: top;
+		
+		caption, td, th {
+		  padding: 0.2rem;
+		  vertical-align:middle;
+		  text-align:left;
+		}
+		
+		th, td {
+		border:none;
+		  height:15px;
+		  color:#fff;
+		  @include f(20);
+		  white-space:nowrap
+
+		  .form-check{
+		  	@include f(20);
+		  	@include rem('margin', 5px 0 0 0);
+		  	width:100%;
+
+		  }
+		}
+
+		th {
+		 @include f(20);
+		  font-weight:bold;
+		  height:30px;
+			display:none;		  
+		  
+		}
+
+		.form-check{
+
+			margin:0
+		}
+
+	}
+
+	.cta-button , .cta-button.cta--red{
+		/*width:25%;*/
+		@include rem('padding', 20px 0);
+		.cta-button__input{
+		@include f(20);
+		letter-spacing:1px;
+
+		}
+
+	}
+	.cta-button__inner.cta--grey{
+			background:$primary-33;
+	}
+
+	#amount p{ 
+		text-align:center; 
+		font-weight:bold;
+		@include f(20);
+		font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+	} 
+
+	.buttonRight {
+		text-align:center;
+	}
+	td{
+		.input-arrow {
+			display:inline;
+			@include setSprite(17px, 16px, -663px, -214px);
+			position: relative;
+			@include rem('top', -4px);
+			@include rem('margin-right', 5px);
+		}
+	}
+
+}
+

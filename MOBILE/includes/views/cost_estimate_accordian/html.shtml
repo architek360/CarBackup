@@ -1,0 +1,79 @@
+<!-- Back Button Starts Here-->
+    <!--#set var="back-static-text" value="Back to Home"-->
+    <!--#include virtual="../../components/back_button/html.shtml" -->
+<!-- Back Button ENDs Here-->
+
+ <!-- Ecs Mobile wrapper-->
+    
+<div class="cost-estimate clearfix">
+
+    <!-- START OF COUNTRY SWITCHER FILTER AREA-->
+    <div class="cost-estimate__filter clearfix">
+        <div class="cost-estimate__filter__wrapper">
+            <div class="cost-estimate__filter__node inactive">
+                <div class=" cost-estimate__filter_node__title heading3">
+                     <span class="off">1</span>
+                    <div class="cost-estimate__filter_node_title__ques">
+                        <p>Registration</p>
+                    </div>
+                </div>
+                <div class=" cost-estimate__filter_node__desc">
+                    <div class="clearfix my-orders__detail grid__item palm--one-whole">
+                        <!--#include virtual="../../views/repair_service_registrated/html.shtml" -->
+                    </div>
+                    
+
+                 </div>
+            </div>
+            <div class="cost-estimate__filter__node ">
+                <div class="cost-estimate__filter_node__title heading3 ">
+                     <span class="on">2</span>
+                    <div class="cost-estimate__filter_node_title__ques">
+                        <p>cost estimate</p>
+                    </div>
+                </div>
+                <div class=" cost-estimate__filter_node__desc">
+                        <!--#include virtual="../../components/pending_estimateList/html.shtml" -->
+
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum erat nec est feugiat blandit. Nam non nisl accumsan, convallis massa ut, tempus nisl. Sed augue lorem, vehicula eget tortor in, molestie varius neque.Morbi a elementum justo. Aenean venenatis sapien id congue malesuada. Sed tempus, lectus vel sodales hendrerit, metus elit interdum tellus, vel accumsan quam dui at risus.</p>
+
+                        <!--#include virtual="../../components/cost_estimate_cta/html.shtml" -->
+                        <!--#include virtual="../../components/cost_estimate_cta_confirm/html.shtml" --> 
+
+                 </div>
+            </div>
+            <div class="cost-estimate__filter__node inactive">
+                <div class="cost-estimate__filter_node__title heading3">
+                     <span class="off">3</span>
+                    <div class="cost-estimate__filter_node_title__ques">
+                        <p>Repair service</p>
+                    </div>
+                </div>
+                <div class="cost-estimate__filter_node__desc">
+
+                 </div>
+            </div>
+            <div class=" cost-estimate__filter__node inactive">
+                <div class=" cost-estimate__filter_node__title heading3 ">
+                     <span class="off">4</span>
+                    <div class="cost-estimate__filter_node_title__ques">
+                        <p>collection</p>
+                    </div>
+                </div>
+                <div class="cost-estimate__filter_node__desc">
+
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF COUNTRY SWITCHER FILTER AREA-->
+   
+
+    
+
+</div>
+<!-- cost-estimate Ends Here-->
+
+
+
+

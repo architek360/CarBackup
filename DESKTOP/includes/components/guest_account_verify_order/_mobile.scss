@@ -1,0 +1,36 @@
+/*------------------------------------*\
+   GUEST ACCOUNT VERIFY ORDER Component -- Mobile CSS
+\*------------------------------------*/
+.guest-verify{
+	display: inline-block;
+	border:1px solid $primary-11;
+	@include linear-gradient(315deg, #000000 0%, #010000 73%, #460000 100%);
+	@include rem(padding, 20px);
+
+	.heading3{
+		@include bold-font;
+		@include f(22);
+		@include rem(padding, 20px 0);
+		text-align: left;
+	}
+
+	.message{
+		@include f(24);
+		@include font-color($primary-2);
+		@include main-font;
+		@include rem(padding, 10px 0 25px);
+	}
+
+	.form-check{
+		width:100%;
+		line-height: 30px;
+		@include rem(padding, 0 0 20px);
+		@include rem(margin-left, -20px);
+
+	}
+	.form-check-label{
+		text-align: left;
+		
+		@include f(22);
+	}
+}

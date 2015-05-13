@@ -1,0 +1,535 @@
+<div class="product-filter  js-product-filter clearfix">
+  <!-- Selection Slider -->
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="slide_switch">
+    <input type="radio" class=""  id="ALL PRODUCTS" name="fn_radiocategory" value="all" checked>
+          <label for="ALL PRODUCTS" class="(none)">
+            ALL PRODUCTS
+          </label>
+          <input type="radio" class=""  id="SOLD ONLINE" name="fn_radiocategory" value="sellableonline">
+          <label for="SOLD ONLINE" class="(none)">
+            SOLD ONLINE
+          </label>
+  </div>
+  
+  
+  
+  <!-- END OF SELECTION SLIDER -->
+  
+  <!-- REFINE MODULE AREA-->
+  <div class="js-accordion product-filter__wrapper">
+    <div class="js-accordion__node product-filter__node">
+      <div class="js-accordion_node__title product-filter_node__title heading3">
+        <span class="off">
+        </span>
+        <div class="product-filter_node_title__ques">
+          <p>
+            refine selection
+          </p>
+        </div>
+      </div>
+      <div class="js-accordion_node__desc product-filter_node__desc">
+        
+        <div class="filter_detail">
+          <div class="js-accordion__node filter_detail__node">
+            <div class="js-accordion_node__title filter_detail_node__title heading3">
+              <span class="off">
+              </span>
+              <div class="filter_detail_node_title__ques">
+                <p>
+                  selection
+                </p>
+              </div>
+            </div>
+            <div class="js-accordion_node__desc filter_detail_node__desc">
+              <p class="text-wrapper">
+                selection
+              </p>
+            </div>
+          </div>
+          
+          <div class="js-accordion__node filter_detail__node">
+            <div class="js-accordion_node__title filter_detail_node__title heading3">
+              <span class="off">
+              </span>
+              <div class="filter_detail_node_title__ques">
+                <p class="text-wrapper">
+                  categorization
+                </p>
+              </div>
+            </div>
+            <div class="js-accordion_node__desc filter_detail_node__desc">
+              <!-- REFINE MODULE CATEGORISATION AREA-->
+              <ul class="category-wrapper">
+                <li>
+                  
+                  
+                  
+                  
+                  <label class="form-check-2">
+                    red
+                    <input type="checkbox" 
+                    ""
+                    class="rings"
+                    "" 
+                    "" 
+                    
+                    name = "fn_category" 
+                    value ="js-cartier-color-red"/>
+                    <span class="form-check__icon">
+                    </span>
+                  </label>
+                  
+                  
+                  
+                </li>
+                
+                <li>
+                  
+                  
+                  
+                  
+                  <label class="form-check-2">
+                    brown
+                    <input type="checkbox" 
+                    ""
+                    class="bracelet"
+                    "" 
+                    "" 
+                    
+                    name = "fn_category" 
+                    value ="js-cartier-color-brown"/>
+                    <span class="form-check__icon">
+                    </span>
+                  </label>
+                  
+                  
+                  
+                </li>
+                
+                <li>
+                  
+                  
+                  
+                  
+                  <label class="form-check-2">
+                    golden
+                    <input type="checkbox" 
+                    ""
+                    class="necklaces"
+                    "" 
+                    "" 
+                    
+                    name = "fn_category" 
+                    value ="js-cartier-color-golden"/>
+                    <span class="form-check__icon">
+                    </span>
+                  </label>
+                  
+                  
+                  
+                </li>
+                
+                <li>
+                  
+                  
+                  
+                  
+                  <label class="form-check-2">
+                    earrings
+                    <input type="checkbox" 
+                    ""
+                    class="earrings"
+                    "" 
+                    "" 
+                    
+                    name = "fn_category" 
+                    value ="earrings"/>
+                    <span class="form-check__icon">
+                    </span>
+                  </label>
+                  
+                  
+                  
+                </li>
+                
+                <li>
+                  
+                  
+                  
+                  
+                  <label class="form-check-2">
+                    broches
+                    <input type="checkbox" 
+                    ""
+                    class="broches"
+                    "" 
+                    "" 
+                    
+                    name = "fn_category" 
+                    value ="broches"/>
+                    <span class="form-check__icon">
+                    </span>
+                  </label>
+                  
+                  
+                  
+                </li>
+                
+                <li>
+                  
+                  
+                  <button type="submit" class="cta-button cta-button__inner cta--grey">
+                    <span class="cta-button__input">
+                      cancel
+                    </span>
+                  </button>
+                  
+                  
+                  <button type="submit" class="cta-button cta-button__inner cta--red">
+                    <span class="cta-button__input">
+                      confirm
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="js-accordion__node filter_detail__node">
+            <div class="js-accordion_node__title filter_detail_node__title heading3">
+              <span class="off">
+              </span>
+              <div class="filter_detail_node_title__ques">
+                <p>
+                  metals
+                </p>
+              </div>
+            </div>
+            <div class="js-accordion_node__desc filter_detail_node__desc">
+              <p class="text-wrapper">
+                metals
+              </p>
+            </div>
+          </div>
+          
+          <div class="js-accordion__node filter_detail__node">
+            <div class="js-accordion_node__title filter_detail_node__title heading3">
+              <span class="off">
+              </span>
+              <div class="filter_detail_node_title__ques">
+                <p>
+                  stones
+                </p>
+              </div>
+            </div>
+            <div class="js-accordion_node__desc filter_detail_node__desc">
+              <p class="text-wrapper">
+                stones
+              </p>
+            </div>
+          </div>
+          
+          <div class="js-accordion__node filter_detail__node">
+            <div class="js-accordion_node__title filter_detail_node__title heading3">
+              <span class="off">
+              </span>
+              <div class="filter_detail_node_title__ques">
+                <p>
+                  price
+                </p>
+              </div>
+            </div>
+            <div class="js-accordion_node__desc filter_detail_node__desc">
+              <!-- REFINE MODULE PRICE AREA-->
+              <div class="price-wrapper js-form-validator">
+                <form>
+                  <ul>
+                    <li>
+                      
+                      
+                      
+                      <label for="minimum" class="form-label">
+                        minimum
+                      </label>
+                      
+                      
+                      
+                      
+                      
+                      
+                      <!-- Select Box Starts Here-->
+                      <select class="form-select select-2" name="fn_min" data-selecteddate='12'>
+
+                      </select>
+                      <!-- Select Box Ends Here-->
+                      
+                    </li>
+                    
+                    <li>
+                      
+                      
+                      
+                      <label for="minimum" class="form-label">
+                        maximum
+                      </label>
+                      
+                      
+                      
+                      
+                      
+                      
+                      <!-- Select Box Starts Here-->
+                      <select class="form-select select-2" name="fn_max" data-selecteddate='12'>
+                        [an error occurred while processing this directive]
+                      </select>
+                      <!-- Select Box Ends Here-->
+                      
+                    </li>
+                    <li>
+                      
+                      
+                      <button type="submit" class="cta-button cta-button__inner cta--grey">
+                        <span class="cta-button__input">
+                          cancel
+                        </span>
+                      </button>
+                      
+                      
+                      <button type="submit" class="cta-button cta-button__inner cta--red">
+                        <span class="cta-button__input">
+                          confirm
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                  
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- NUMBER OF SELECTIONS AREA -->
+<div class="product-list__selection-num js-product-list__selection-num">
+  74 Selections
+</div>
+
+
+<!-- PRODUCT LIST AREA -->
+<ul class="product-list__listing js-product-list__listing grid js-view-wrapper" data-maxlimit="2">
+  <li class="grid__item one-half palm--one-whole js-all js-cartier-color-red js-cartier-color-golden js-not-in-result" data-price="200,300,500,600">
+    
+    
+    
+    
+    
+    
+    <!--Html for collection list -->
+    <div class="product-listing">
+      <a href="#" class="product-listing_img js-product-listing_img">
+        <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+  </a>
+  <div class="product-listing_desc js-product-listing_desc">
+    <h3 class="heading3 js-heading3">
+      White gold mechanic steel bracelet
+    </h3>
+    <h4 class="heading4 js-heading4">
+      Yellow gold tsavorite lacquer
+    </h4>
+  </div>
+          </div>
+          
+          <!--Html for collection list-->
+          
+      </li>
+      <li class="grid__item one-half palm--one-whole js-all js-cartier-color-brown js-not-in-result"
+      data-price="200,300,500,600">
+        
+        
+        
+        
+        
+        
+        <!--Html for collection list -->
+        <div class="product-listing">
+          <a href="#" class="product-listing_img">
+            <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+          </a>
+          <div class="product-listing_desc js-product-listing_desc">
+            <h3 class="heading3 js-heading3">
+              White gold mechanic steel bracelet
+      </h3>
+      <h4 class="heading4 js-heading4">
+        Yellow gold tsavorite lacquer
+      </h4>
+  </div>
+          </div>
+          
+          <!--Html for collection list-->
+          
+          
+      </li>
+      <li class="grid__item one-half palm--one-whole js-all js-hide-content js-cartier-color-red js-not-in-result"
+      data-price="200,300,500,600">
+        
+        
+        
+        
+        
+        
+        <!--Html for collection list -->
+        <div class="product-listing">
+          <a href="#" class="product-listing_img js-hide-content">
+            <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+          </a>
+          <div class="product-listing_desc js-product-listing_desc">
+            <h3 class="heading3 js-heading3">
+              White gold mechanic steel bracelet
+      </h3>
+      <h4 class="heading4 js-heading4">
+        Yellow gold tsavorite lacquer
+      </h4>
+  </div>
+          </div>
+          
+          <!--Html for collection list-->
+          
+          
+      </li>
+      
+      
+      <li class="grid__item one-half palm--one-whole  js-all js-hide-content js-cartier-color-brown js-cartier-color-red js-not-in-result"
+      data-price="200,300,500,600">
+        
+        
+        
+        
+        
+        
+        <!--Html for collection list -->
+        <div class="product-listing">
+          <a href="#" class="product-listing_img">
+            <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+          </a>
+          <div class="product-listing_desc js-product-listing_desc">
+            <h3 class="heading3 js-heading3">
+              White gold mechanic steel bracelet
+      </h3>
+      <h4 class="heading4 js-heading4">
+        Yellow gold tsavorite lacquer
+      </h4>
+  </div>
+          </div>
+          
+          <!--Html for collection list-->
+          
+          
+      </li>
+      <li class="grid__item one-half palm--one-whole js-hide-content js-cartier-color-red  js-cartier-color-brown js-not-in-result " 
+      data-price="200,300,500,600">
+        
+        
+        
+        
+        
+        
+        <!--Html for collection list -->
+        <div class="product-listing">
+          <a href="#" class="product-listing_img">
+            <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+          </a>
+          <div class="product-listing_desc js-product-listing_desc">
+            <h3 class="heading3 js-heading3">
+              White gold mechanic steel bracelet
+      </h3>
+      <h4 class="heading4 js-heading4">
+        Yellow gold tsavorite lacquer
+      </h4>
+  </div>
+          </div>
+          
+          <!--Html for collection list-->
+          
+          
+      </li>
+      
+      <li class="grid__item one-half palm--one-whole js-hide-content js-not-in-result "
+      data-price="200,300,500,600">
+        
+        
+        
+        
+        
+        
+        <!--Html for collection list -->
+        <div class="product-listing">
+          <a href="#" class="product-listing_img">
+            <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+          </a>
+          <div class="product-listing_desc js-product-listing_desc">
+            <h3 class="heading3 js-heading3">
+              White gold mechanic steel bracelet
+      </h3>
+      <h4 class="heading4 js-heading4">
+        Yellow gold tsavorite lacquer
+      </h4>
+  </div>
+          </div>
+          
+          <!--Html for collection list-->
+          
+          
+      </li>
+      <li class="grid__item one-half palm--one-whole js-hide-content js-not-in-result"
+      data-price="200,300,500,600">
+        
+        
+        
+        
+        
+        
+        <!--Html for collection list -->
+        <div class="product-listing">
+          <a href="#" class="product-listing_img">
+            <img data-linksrc="../etc/designs/dmp/clientlibs_base/images/content//watch-white.png" src="" class="loading js-lazy-load"/>
+          </a>
+          <div class="product-listing_desc js-product-listing_desc">
+            <h3 class="heading3 js-heading3">
+              White gold mechanic steel bracelet
+            </h3>
+            <h4 class="heading4 js-heading4">
+              Yellow gold tsavorite lacquer
+            </h4>
+          </div>
+        </div>
+        
+        <!--Html for collection list-->
+        
+        
+      </li>
+</ul>
+
+<!-- VIEW MORE LINK -->
+<div class="product-list__view-more js-view-button">
+  <span class="down-arrow">
+  </span>
+  View more selections
+</div>
+
+</div>
+<!-- product-list Ends Here-->

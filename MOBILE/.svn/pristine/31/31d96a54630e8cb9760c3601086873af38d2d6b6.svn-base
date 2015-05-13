@@ -1,0 +1,545 @@
+/*------------------------------------*\
+    Shopping Bag -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.shopping-bag)
+ * PRODUCT FILTER CONTAINER (.product-filter)
+ * PRODUCT DETAIL (.product-detail)
+ * SHOPPING BAG CONTAINER (.shopping-bag__confirm)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+ .shopping-bag{
+	@include brand-font;
+	@include font-color($primary-2);
+	width: 81.25%;
+ 	margin: 0 auto; 
+ 	text-align: center;
+	.adjust-size ul{
+		@include rem(margin-right, 0px);			
+	}
+
+	.slide_switch{
+		display:block;
+		@include rem(margin-left, 50px);			
+		@include rem(margin, 0px);			
+		text-align:center;
+	}
+	.engraving ul li label{
+		width: 25%;
+	}
+
+ 	.close-button{
+ 		@include setSprite(30px, 30px, -629px, -123px);           
+		@include font-color($primary-2);
+		display : block;
+		position: absolute;
+		right: 0;
+		top: 0;
+ 	}
+
+ 	.error-zone{
+ 		width : initial;
+ 	}
+
+
+	.heading2{
+		@include rem('padding', 47px 0 26px);
+		border-bottom: 1px solid $primary-2;
+	}
+
+ 	.shopping-bag__info{
+ 		@include rem('margin-top', 25px);
+ 		@include bold-font;
+
+ 		.info-icon{
+ 			@include setSprite(40px, 47px, -251px, -135px);
+ 		}
+
+ 		p{
+ 			@include f(15);
+ 			@include rem('padding', 12px 0 4px);
+ 			@include rem('line-height', 20px);
+ 			text-align:center;
+ 			text-transform: uppercase;
+ 			a{
+ 				display: block;
+ 				@include font-color($bridal_red);
+ 				text-decoration: none;
+ 			}
+ 		}
+ 	}
+
+
+/*------------------------------------*\
+    $PRODUCT FILTER CONTAINER
+\*------------------------------------*/
+ 	.product-filter{
+ 		@include set-ulFix;
+ 		.adjust-size,.engraving{
+
+ 		border: 1px solid $primary-11;
+		}
+
+
+		.js-engravingrow,.js-braceletrow{
+			padding:0;
+			div.js-accordion_node__title{
+	 			@include rem('padding', 34px 68px 43px 25px);
+	 			word-break: break-all;
+			}
+
+			div.js-accordion_node__desc{
+				@include rem('padding', 0 30px);
+				@include rem('padding-bottom',30px);
+			}
+		}
+ 		li{
+ 			@include f(22);
+ 			@include rem('padding', 34px 68px 43px 25px);
+ 			border-top: none;
+ 			border: 1px solid $primary-11;
+ 			text-align:left;
+ 			text-transform:uppercase;
+ 			@include bold-font;
+ 			word-break: break-word;
+
+ 			a{
+ 				display:block;
+ 				width:100%;
+ 			}
+
+ 			
+			.select-1 {
+			    float: right;
+			    @include rem('margin-right', -1px);
+				@include rem('margin', -14px -4px);
+			    width: 58%;
+			    @include main-font;
+			}
+			
+ 			.message-icon{
+ 				@include rem(margin, 5px 0 0 2px);
+ 				@include setSprite(42px, 28px, -816px, -20px);
+ 				vertical-align:top;
+ 			}
+
+ 			.edit-icon{
+ 				@include setSprite(27px, 29px, -730px, -134px);      
+ 				vertical-align:top;
+ 				float:right;
+ 			}
+
+ 			.message-text{
+ 				@include f(22);
+ 				@include rem('padding', 8px 25px 0);
+ 				display:inline-block;
+				@include rem('line-height', 22px);				
+ 				width:55%;
+ 			}
+
+ 			.js-message-text-saved{
+ 				line-height: 25px;
+ 				color:#a0a0a0;
+ 				width:27%;
+ 				display: inline;
+                right: 0px;
+                position: absolute;
+                @include main-font;
+                @include f(22);
+               	font-style:italic;
+               	text-transform:none;
+               	height:52px;
+               	@include ellipsis;
+               
+ 			}
+ 		}
+
+ 		.product-filter__message{
+ 			padding:0;
+ 		}
+
+
+
+
+
+
+
+		.js-accordion_node__title{
+		position:relative;
+	 		span{
+				position:absolute;
+				right:15px;
+				top:28px;
+				@include setSprite(27px, 29px, -730px, -123px);      
+			}
+			span.on{
+				background:none;
+				
+			}
+			span.off{
+				@include setSprite(27px, 29px, -730px, -123px);      
+			}
+			.crossbutton.off,.crossbutton {
+				right:40px;
+				@include setSprite(38px, 39px, -620px, -123px);   
+				border-right: solid 1px $primary-4 ; 
+
+			}
+			.crossbutton.on {
+				border-right: none;
+			}
+		}
+	}
+	/*------------------------------------*\
+	    PRODUCT DETAIL
+	\*------------------------------------*/
+
+	.product-detail{
+		@include f(22);
+		@include font-color($primary-2);
+		background: $primary-1; /* Old browsers */
+		@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+		@include main-font;
+		@include rem('padding', 19px 0 39px 0);
+		position:relative;
+		border: 1px solid $primary-11;
+		display:block;
+		margin: 0 auto;
+		@include rem('margin-top', 24px);
+		//@include rem('margin-bottom', 12px);	
+		text-align:center;
+
+		h3, h2{
+			@include rem('padding', 2px 0 0 0);
+			@include rem('margin', 6px 0);
+		}
+
+		.product-detail__variant{
+			@include f(24);
+			@include main-font;
+			@include rem('margin', 6px 0);
+			display:block;
+			font-style:italic;
+			font-weight:normal;
+		}
+		.product-detail__size{
+			@include bold-font;
+			@include f(16);
+			@include rem('line-height', 30px);
+			@include rem('margin', 6px 0);
+			display:block;
+
+			text-transform:uppercase;
+		}
+		.product{
+			display:block;
+			.product__image{
+				float: left;
+				width: 47%;
+				@include rem('margin', 40px 0 0 20px);
+				line-height: 240px;
+				
+				.image{
+					background-size: cover;
+					max-width: 100%;
+					max-height: 240px;
+					vertical-align: middle;
+				}
+			}
+			.product__price{
+				@include f(32);
+				@include rem('margin', 17px 0);
+				float: left;
+				text-align: center;
+				text-transform: uppercase;
+				width: 45%;
+
+				.price-text {
+					@include rem('margin-top' ,30px);
+					display: block;
+				}
+
+				.select-2 {
+				    @include rem('margin' ,40px 0px 0px);
+				    width: 54%;
+				}
+
+			}
+			.total-price-text {
+				@include f(50);
+				@include main-font;
+				@include rem('margin-top', 30px);
+				display: inline-block;
+				width: 100%
+
+			}
+		}
+	}
+
+	.personal-card{
+		border-top:1px solid $primary-26;
+		display:block;
+		background:$primary-29;
+		@include rem('margin', 10px 0 0);
+		@include rem('padding', 0 30px);
+
+		.heading3{
+			@include f(24);
+			@include bold-font;
+			text-align:left;
+			letter-spacing:2px;
+			@include font-color($primary-26);
+
+		}
+
+		.radio-btn{
+			margin: 0 auto;
+   			text-align: center;
+			.radio-btn-li{
+				border:none;
+				@include rem(padding, 0 0 20px 0);
+			}
+
+			.radio-title{
+				@include main-font;
+				text-transform:none;
+				@include font-color($primary-26);
+			}
+		}
+
+		.personal-card__message{
+			display:block;
+			font-style:italic;
+			@include f(22);
+		    text-align: center;
+		    text-transform: none;
+		    @include rem(padding, 20px 0);
+		    @include main-font;
+		}
+
+		.personal-card__compose{
+			@include rem(margin, 10px 0);
+			@include rem(padding, 20px 0);
+			border-top:1px solid $primary-26;
+
+			.heading3{
+				@include f(24);
+				@include rem(padding, 10px 0);
+			}
+
+			.message-limit{
+				display:block;
+				font-style:italic;
+				@include f(22);
+			    text-align: center;
+			    text-transform: none;
+			    @include rem(padding, 20px 0);
+			    @include main-font;
+			}
+
+			.message-wrapper{
+				margin:0;
+			}
+		}
+
+		.heading4{
+			text-align:center;
+			@include f(24);
+			@include bold-font;
+		}
+
+		.slide_switch{
+			display:block;
+			@include rem(margin-left, 50px);			
+			text-align:center;
+		}
+
+		.js-bold-class {
+			@include bold-font;
+			font-style: normal;
+			text-transform: none;
+		}
+
+		.js-cursive-class {
+			@include main-font;
+			font-style: italic;	
+			text-transform: none;			
+		}
+
+		.button-wrapper{
+			margin:0 auto;
+			display:block;
+			text-align:center;
+			 @include rem(padding, 20px 0 30px);
+
+			/* For Styling Submit Buttons */ 
+			.cta--red, .cta--grey {
+				width: 30%;
+				margin: 0 auto;
+				text-align: center;
+				@include bold-font;
+				@include rem('margin', 40px 10px 10px);
+				display: inline-block;
+				vertical-align: top;
+				@include rem('padding', 15px 0px);
+			}
+			.cta--grey {
+				background: $primary-33;
+			}
+		}
+	}
+
+
+}
+
+ /*------------------------------------*\
+    $SHOPPING BAG CONTAINER
+\*------------------------------------*/
+
+ 
+.shopping-bag__confirm {
+	text-align: center;
+	@include rem('margin-top', 36px);
+}
+.gift-wrapper{
+	@include font-color($primary-2);
+	display:block;
+	@include rem('margin', 81px  0);
+	position:relative;
+	background:$primary-15;
+	@include rem('height', 70px);
+
+
+	p{
+		@include f(15);
+		@include brand-font;
+		text-transform:uppercase;
+		@include rem('padding', 15px 20px);
+		@include rem('line-height', 19px);
+		width:60%;	
+	}
+
+	img {
+		position:absolute;
+		@include rem('right', -4px);
+		@include rem('top', -25px);
+		@include rem('height', 121px);
+		@include rem('width', 180px);
+	}
+
+	.slide_switch {
+	    clear: both;
+	    @include rem('margin', 60px 0 20px);
+	    text-align: center;
+	    border-bottom:solid 2px $primary-1;
+		background:$primary-23;
+		@include bold-font;
+		@include rem(padding, 15px 0);
+
+		input + label::after {
+			//@include rem(margin-right, 6px);
+		}
+	}
+}
+.slide_switch label {
+		/*@include rem(padding-top, 8px);
+		@include rem(padding-bottom, 8px);*/
+		@include rem('padding-top', 0px);
+	    @include rem('padding-bottom', 10px);
+	}
+.message-card{
+	padding:0;
+	margin:0 auto;
+	width:100%;
+
+	.att-accordion__wrapper{
+		border-top:none;
+	}
+
+	.att-accordion__node {
+		border-bottom:none;
+		overflow:hidden;
+	}
+
+	.att-accordion_node__title {
+		padding:0;
+		position:relative;
+		text-align:left;
+
+		.att-accordion_node_title__ques{
+			@include rem('min-height', 33px);
+			display: block;
+			@include rem('padding', 34px 18px 43px 25px);
+
+		}
+		
+		p{
+			@include rem('padding', 0px);
+			display: table-cell;
+    		vertical-align: middle;
+	 	 	@include font-color($primary-2);
+	 	 	@include bold-font;
+	 	 	@include f(22);
+		}
+	}
+
+	.att-accordion_node__desc{
+	 	@include f(26);
+	 	@include main-font;
+	 	@include font-color(#d4d4d4);
+	}
+}
+
+.device-s4 {
+	.radio-title:after {  
+		    content: "";  
+		    display: inline-block;  
+		    width: 18px;  
+		    height:18px;
+		    @include rem(line-height, 20px);        
+		    background-color: $primary-45; 
+		    @include rem(margin, 0 0 0 18px);
+		    padding:2px;
+		    @include border-radius(12px); 
+			border: 1px solid $primary-35;
+			vertical-align:bottom;
+	}  
+}
+
+
+.reservation-div{
+    color: #ffffff;
+    margin-bottom: 16px;
+    padding: 20px;
+    border: 1px solid #464646;
+    margin-top:20px;
+    p{
+        text-align: center;
+        font-style: italic;
+        margin: 0 auto 0px auto;
+        text-align: center;
+    }
+
+    .sub-alert{
+        letter-spacing: .1em;
+        font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+        font-size: 21px;
+        color: #a0a0a0;
+        padding-bottom: 0px;
+    }
+
+    .title-alert{
+        font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+        color: #a0a0a0;
+        span{
+            color: #b10000;
+        }
+    }
+}

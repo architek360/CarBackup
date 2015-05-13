@@ -1,0 +1,55 @@
+<!--Product Detail Box For Shopping Bag Starts Here-->
+<!--#set var="CONTENT_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/" -->
+<div class="adjust-size clearfix grid">
+        <div class="grid__item one-third col-image"><img src="<!--#echo var="CONTENT_IMG_PATH" -->W51002Q3_0_cartier_watches.png" class="image" alt="image"/></div>
+        <div class="grid__item two-thirds col-form">
+        <ul >
+
+                <li>
+                   
+                           <h4 class="adjust-size__heading">Enter your wrist size in centimeters</h4>
+                                                     <div class="adjust-size__line">
+                                
+
+                                <!--#set var="input-type" value="text" -->
+                                <!--#set var="input-prop" value="form-input js-line-3 js-sizefield" -->
+                                <!--#set var="input-name" value="fn_wristsize" -->      
+                                <!--#include virtual="../../components/form_elements/input.shtml" -->
+
+                                <!--#set var="label-name" value="CM" -->
+                                      
+                                <!--#include virtual="../../components/form_elements/label.shtml" -->
+
+                                <!--#set var="arrow-class" value="arrow-show" -->
+                                <!--#set var="more-text" value="HOW TO MEASURE YOUR WRIST " -->
+                                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+
+                               <!--  <p class="adjust-size_link"><span class="arrow-class"></span>HOW TO MEASURE YOUR WRIST</p> -->
+                            </div>
+
+
+                </li>
+                <li>
+                    <!--#set var="title-line" value="select a type of fit" -->
+                    <!--#include virtual="../../components/heading_line/html.shtml" -->
+
+                   
+                    <!--#set var="label-first" value="Loose" -->
+                    <!--#set var="class-first" value="js-loose" -->
+                    <!--#set var="label-class-first" value="js-loose" -->
+                    <!--#set var="label-second" value="Exact_size" -->
+                    <!--#set var="class-second" value="js-exact-size" -->
+                    <!--#set var="label-class-second" value="js-exact-size" -->
+                    <!--#set var="radio-name" value="fn_grptypefit"-->
+                    <!--#include virtual="../../components/form_elements/slide_switch.shtml" -->
+                    <hr>
+
+
+                </li>
+            </ul>
+        </div>
+    
+    
+</div>
+
+<!-- Product Detail Box For Shopping Bag Ends Here-->

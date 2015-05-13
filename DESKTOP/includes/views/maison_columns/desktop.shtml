@@ -1,0 +1,14 @@
+<div class="coloumn-wrapper clearfix">
+    <!--#if expr="$coltype = 5050" -->
+        <!--#include virtual="../../views/maison_columns/col-50-50.shtml" -->
+    <!--#endif -->
+    <!--#if expr="$coltype = 303030" -->
+        <!--#include virtual="../../views/maison_columns/col-30-30-30.shtml" -->
+    <!--#endif -->
+    <!--#if expr="$coltype = 4060" -->
+        <!--#include virtual="../../views/maison_columns/col-40-60.shtml" -->
+    <!--#endif -->
+    <!--#if expr="$coltype = 6040" -->
+        <!--#include virtual="../../views/maison_columns/col-60-40.shtml" -->
+    <!--#endif -->
+</div>

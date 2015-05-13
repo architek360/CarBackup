@@ -1,0 +1,6 @@
+<!--Html for navigation icon-->
+<a href="<!--#echo var="links-to" -->" class="<!--#echo var="class-name" -->" data-gtm="dns">
+	<img src="<!--#echo var="img-src" -->" alt="<!--#echo var="img-alt" -->"/>
+</a>
+
+<!--Html for navigation icon-->

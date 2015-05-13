@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    details section -- Mobile CSS
+
+\*------------------------------------*/
+
+/**
+ * details section CONTAINER.... Wrapper for details-section (.details-section)
+ */
+
+/*------------------------------------*\
+    $details-section CONTAINER
+\*------------------------------------*/
+
+.ecs-video-component{
+	display: block;
+	border: 1px solid $primary-17;
+	@include rem('padding', 45px 25px);
+	@include rem('margin-bottom', 30px);
+	
+	.videocontainer{
+
+		@include rem('height', 255px);
+		@include rem('margin-top', 40px);
+	}
+	.heading2{
+		@include f(12);
+		font-weight:bold;
+	}
+
+	p{
+		color:$primary-2;
+		letter-spacing: 0px;
+	}
+
+	.comp-rich-text{
+	width: 100%;
+		.content-medias{
+			max-width: 30%;
+		}
+	}
+}

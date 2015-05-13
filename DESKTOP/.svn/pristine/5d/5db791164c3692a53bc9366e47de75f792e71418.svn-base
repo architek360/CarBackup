@@ -1,0 +1,96 @@
+/*------------------------------------*\
+    FAQ VIEW  -- Mobile CSS
+\*------------------------------------*/
+
+/**
+* MAIN CONTAINER.... (.faq-view)
+* HEADING BLOCK ....(.faq-view_node__title)
+* DESCRIPTION BLOCK ....(.faq-view_node__desc)
+* ARROW BLOCK i.e. expand and collapse of the accordion (.on, .off) 
+*/
+
+
+.faq-view{
+	width: 81.25%;
+	margin: 0 auto;
+	
+	@include rem('margin-top', 24px);
+	
+	.faq-view__wrapper{
+		border-top:solid 1px $primary-6;
+
+		.faq-view__node{
+			border-bottom:solid 1px $primary-6; 
+		}
+		/*------------------------------------*\
+   			 HEADING BLOCK 
+		\*------------------------------------*/
+		.faq-view_node__title{
+			@include rem('padding', 20px 0px);
+			text-align:left;
+			position:relative;
+			@include bold-font;
+			.faq-view_node_title__ques{
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table;
+			}
+			
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+			}
+
+			/*------------------------------------*\
+   					 ARROW BLOCK 
+			\*------------------------------------*/
+			span{
+				position:absolute;
+				right:0px;
+				top:30%;
+				@include setSprite(22px, 30px, -324px, -20px);
+			}
+
+			.on{
+				@include rotate(90deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+
+			.off{
+				@include rotate(0deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+		}
+
+		/*------------------------------------*\
+   			 DESCRIPTION BLOCK
+		\*------------------------------------*/
+		.faq-view_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color(#d4d4d4);
+		 	
+		 	p,ul,ol {
+		 		@include rem(padding, 0px 0 35px);
+		 	}
+		 	ul,ol {
+		 		/*@include rem(margin-top, -30px);*/
+		 		line-height: 32px;
+		 	}
+		 	li {
+		 		@include rem(padding-left, 15px);
+		 	}
+
+		}
+	}
+	.faq-view__wrapper:last-child {
+			@include rem('padding-bottom', 56px);
+	}
+}
+

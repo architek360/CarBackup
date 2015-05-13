@@ -1,0 +1,839 @@
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS, MIXINS
+ * MOBILE & SHARED STYLES
+ * DESKTOP STYLES
+ * THEMES
+*/
+
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+
+$primary-1: white;
+
+//Black /* consult*/ || white in bridal
+$primary-2: #a0a0a0;
+
+//White || grey in bridal
+$primary-3: #6e6e6e;
+
+//Text Grey
+$primary-4: #a09997;
+
+//Border Grey
+$primary-5: #8d0115;
+
+//Red
+$primary-6: #b3b3b3;
+$primary-7: #9f9f9f;
+
+//Grey
+$primary-8: #202020;
+
+//Dark Grey (Left Navigation background color) || shade of white in bridal
+$primary-9: #353e55;
+
+// Carousel font color
+$primary-10: #a0a0a0;
+
+// Light Grey (Price Detail Text Color)
+$primary-11: #464646;
+
+// Border grey (Product Box Border)
+$primary-12: #eeeeee;
+
+// grey (Product Box Text )
+$primary-13: #191919;
+
+// Grey Button color
+$primary-14: #565656;
+
+// Border grey (Left Navigation)
+$primary-15: #330008;
+
+// Red (Gift Wrapper Box background color)
+$primary-16: #1d1d1d;
+
+// Grey ( Input box background color)
+$primary-17: #bdbdbd;
+
+// Border Grey
+$primary-18: #908988;
+
+// Border Grey(for quick links)
+$primary-20: #8f141a;
+
+// Red ( Mandatory Field)
+$primary-21: #1c1e1d;
+
+// Grey
+$primary-22: #f3f3f3;
+
+// Grey (Radio Button)
+$primary-23: #eeeeee;
+
+// Medium Grey (Product Selector)
+$primary-24: #b80d1d;
+
+// Red (Phone number color)
+$primary-25: #a0a0a0;
+
+// Grey Border (Collection Product Block Border) || grey in bridal
+$primary-26: gray;
+
+// grey border
+$primary-27: #cccccc;
+
+// shade red || Grey in briday
+$primary-28: white;
+
+// shade mid red || white in bridal
+$primary-29: #161616;
+
+// shade mid gray (EnGRAVING BOX)
+$primary-30: #dadada;
+
+// light grey for engraving input
+$primary-31: #969595;
+
+// Accordion text Color for product list page
+$primary-32: #9f9e9e;
+
+// Product list product color
+$primary-33: #393939;
+
+// light grey for engraving CAncel button
+$primary-34: #929292;
+
+// Checkbox background
+$primary-35: #bdbdbd;
+
+// Radio Button Border Grey
+$primary-36: #969797;
+
+// Top Navigation (Icon right border)
+$primary-37: #a09f9f;
+
+// Grey Text Contact Us
+$primary-38: #c7c7c7;
+
+// Grey Background Navigation
+$primary-39: #6c6969;
+$primary-40: white;
+$primary-41: #6e6b6b;
+$primary-42: #eeeeee;
+$primary-43: lightgrey;
+$primary-44: #a0a0a0;
+$primary-45: #f0f0f5;
+
+// bridal theme form element background color
+$primary-46: #f2f2f2;
+
+// new color for $primary-29 for bridal theme
+$primary-47: #bdbdbd;
+
+// radio button select color
+$primary-48: #4d4d4d;
+
+// input filed color text light gray
+$primary-49: white;
+
+// white
+$primary-50: #a09997;
+
+//  white | gray in bridal
+$primary-51: #f7f7f7;
+
+//  light grey | in bridal
+$primary-111: #dedede;
+$primary-100: #c4c4c4;
+
+//  in bridal mosaic border
+$primary-300: #1f1f1f;
+$primary-301: #a3a3a3;
+$primary-118: #f0f0f0;
+
+/* DESKTOP VARIABLES */
+$primary-51: #b10000;
+$primary-52: #1a1a1a;
+$primary-53: #676767;
+$primary-54: #717171;
+$primary-55: #cacaca;
+$primary-56: #626262;
+$primary-57: gray;
+$primary-58: #1e1e1e;
+$primary-59: #bbbbbb;
+$primary-60: #ab999c;
+$primary-61: #595959;
+$primary-62: black;
+$primary-63: lightgrey;
+$primary-64: #a0a0a0;
+$primary-65: black;
+$primary-66: #810026;
+$primary-67: black;
+$primary-68: #a0a0a0;
+$primary-69: #666676;
+$primary-70: #1c1c1c;
+$primary-71: #d6d6d6;
+$primary-72: #454545;
+$primary-73: #cccccc;
+$primary-74: #bfb1b3;
+$primary-75: #6f4e53;
+$primary-76: #8d0115;
+$primary-77: #2a2a2a;
+$primary-78: #330007;
+$primary-79: #724d54;
+$primary-80: #c899a3;
+$primary-81: #c4b8b9;
+$primary-82: #450408;
+$primary-83: #262626;
+$primary-84: #83464b;
+$primary-85: #330008;
+$primary-86: gainsboro;
+$primary-87: #2a2a2a;
+$primary-88: #eaeaea;
+$primary-89: #c6c6c6;
+$primary-90: black;
+$primary-91: #472021;
+$primary-92: #333333;
+$primary-94: gainsboro;
+$primary-95: #2a2a2a;
+$primary-96: #b2b2b2;
+$primary-97: #dfdfdf;
+$primary-98: #a8a8a8;
+$primary-99: #7f7f7f;
+$primary-100: lightgrey;
+$primary-101: #bdbdbd;
+$primary-102: #eeeeee;
+$primary-103: #bdbdbd;
+$primary-104: #250007;
+
+// message card for shopping bag - SR
+$primary-105: #461f22;
+$primary-106: #232323;
+$primary-107: #a6a6a6;
+$primary-108: #fbfbfb;
+$primary-109: #a7a7a7;
+$primary-110: #dedede;
+$primary-112: #f2f2f2;
+$primary-113: #f2f2f2;
+$primary-114: #999999;
+$primary-115: #999999;
+$primary-116: #d8d8d8;
+$primary-117: #6e6e6e;
+$primary-119: #333333;
+$primary-120: white;
+$primary-121: #bdbdbd;
+$primary-122: #eeeeee;
+$primary-123: #810026;
+$primary-124: #8f010f;
+$primary-125: #59010d;
+$primary-126: lightgrey;
+
+$primary-127    : #454545;
+
+
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+
+$primary-font-1: "CarteirRegular";
+$primary-font-2: "Georgia";
+
+$black: #eeeeee;
+
+/* change consulte*/
+$white: $primary-2;
+$border_grey: #a09997;
+$button_red: #88131d;
+$text_grey: #a09f9f;
+$dark_grey: #454545;
+$light_black: #1d1d1d;
+$bridal_topnav: #eeeeee;
+$bridal_red: #88131d;
+
+$viewLink: #353e55;
+$red: #b01e23;
+$light_grey: #b3b3b3;
+$footerItemColor: #b3b3b3;
+$select_bg: #1d1d1d;
+
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@font-face {
+    font-family: 'CarteirRegular';
+    src: url($path-font + "Gotham-Book.otf");
+}
+
+
+@font-face {
+    font-family: 'CarteirBold';
+    src: url($path-font + "Gotham-Bold_0.otf");
+}
+
+
+@font-face {
+    font-family: 'CarteirMedium';
+    src: url($path-font + "Gotham-Medium.otf");
+}
+
+
+@font-face {
+    font-family: 'proximanovaBold';
+    src: url($path-font + "proximanova-bold-webfont.eot");
+    src: local($path-font + "proximanova-bold-webfont"), url($path-font + "proximanova-bold-webfont.ttf") format("opentype");
+}
+
+
+@font-face {
+    font-family: 'proximanova';
+    src: url($path-font + "proximanova-reg-webfont.eot");
+    src: local($path-font + "proximanova-reg-webfont"), url($path-font + "proximanova-reg-webfont.ttf") format("opentype");
+}
+
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url($path-font + "EBGaramond-webfont.woff");
+    /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+
+@font-face {
+    font-family: 'didotromanitalic';
+    src: url($path-font + "didotromanitalic.woff");
+    /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+
+@font-face {
+    font-family: 'didotroman';
+    src: url($path-font + "didotroman.woff");
+    /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+
+@font-face {
+    font-family: 'mb-script';
+    src: url($path-font + "mb_script_rund.woff");
+    /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+
+@font-face {
+    font-family: 'CartierLoveTM';
+    src: url($path-font + "cartier-tm-love-webfont.eot");
+    src: url($path-font + "cartier-tm-love-webfont.woff") format("woff"), url($path-font + "cartier-tm-love-webfont.ttf") format("truetype");
+}
+
+
+//font faces
+@mixin brand-font {
+    font-family: "CarteirRegular", sans-serif;
+}
+
+@mixin bold-font {
+    font-family: "CarteirBold", sans-serif;
+}
+
+@mixin medium-font {
+    font-family: "CarteirMedium", sans-serif;
+}
+
+@mixin main-font {
+    font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+}
+
+@mixin proxi-font {
+    font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+@mixin proxiBold-font {
+    font-family: proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+@mixin EB-font {
+    font-family: EBGaramond, sans-serif;
+}
+
+@mixin didotroman-font {
+    font-family: didotroman, sans-serif;
+}
+
+@mixin didotromanIt-font {
+    font-family: didotromanitalic, sans-serif;
+}
+
+@mixin mb-script-font {
+    font-family: mb-script, sans-serif;
+}
+
+.body-wrapper {
+    background: url($path-images + "/content/bridal-light.jpg");
+}
+
+.text-link {
+    /*color: $light_grey;*/
+}
+
+.top-nav {
+    .top-nav__menu {
+        float: left;
+        @include rem("padding", 18px 26px);
+        @include rem("margin-top", 10px);
+        button {
+            @include setSprite(42px, 36px, -516px, -20px);
+            border: none;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+    }
+}
+
+#mobile-nav-search {
+    color: black;
+}
+
+/* bridal collection list title css strat here*/
+.collection-image {
+    display: block;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.collection {
+    .collection__title {
+        display: block;
+        @include rem("margin-top", 27px);
+        .heading4 {
+            @include f(34);
+            @include bold-font;
+            border-top: 1px solid $primary-2;
+            @include rem(padding-top, 50px);
+            @include rem(padding-bottom, 10px);
+        }
+        .heading2 {
+            @include f(34);
+            @include bold-font;
+            @include rem(padding, 0 0 45px 0);
+        }
+    }
+    .collection__listing {
+        .product-push {
+            @include rem("margin-bottom", 29px);
+            @include rem("margin-top", 0px);
+            height: 230px;
+            .product-push__desc
+            .more-button {
+                @include f(24);
+            }
+        }
+    }
+}
+
+.main-container {
+    .heading7 {
+        color: $primary-2;
+        width: 81.25%;
+        margin: 0 auto;
+        /*margin-bottom: 0;
+        @include rem('margin-top', 38px);*/
+        text-align: center;
+        text-transform: uppercase;
+        @include f(24);
+        @include rem("padding", 25px 0px 23px);
+        @include brand-font;
+        font-weight: normal;
+        line-height: 27px;
+        /*line-height:1.4em;*/
+    }
+    .heading6 {
+        @include brand-font;
+        color: $primary-2;
+        width: 81.25%;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        @include f(32);
+        @include rem("padding", 0px);
+        @include rem("padding-bottom", 26px);
+        /*line-height:1.4em;*/
+    }
+}
+
+/* bridal collection list title css strat here*/
+/*------------------------------------*\
+    $LEFT NAV  COMMON STYLING
+\*------------------------------------*/
+// .nav{
+// 	@include linear-gradient(180deg, #0e0e0e -4%,  $primary-38 5%);
+// 	color:$primary-33;
+// 	ul {
+// 	 	@include linear-gradient(180deg, #0e0e0e -4%,  $primary-1  5%);
+// 	 	li a{
+// 	 		color:$primary-33;
+// 	 	}
+// 	 }
+
+// 	li a:first-child {
+// 		border-bottom:1px solid $primary-3;
+// 	}
+
+// }
+// .nav ul li .nav-arrow {
+//     background: url($path-images + 'icons/sub-right-icon.png') no-repeat 97% 49%;
+// }
+
+// .nav ul li .nav-arrow-down {
+// 	background: url($path-images + 'icons/sub-down-icon.png') no-repeat 98% 49%;
+// }
+.nav {
+    @include font-color($primary-1);
+}
+
+.cta--red {
+    @include font-color($primary-1);
+}
+
+.nav ul li .nav-arrow {
+    background: url($path-images + "icons/right-icon.png") no-repeat 97% 49%;
+}
+
+.nav ul li .nav-arrow-down {
+    background: url($path-images + "icons/down-icon.png") no-repeat 98% 49%;
+}
+
+#mobile-nav-search {
+    background-color: $primary-1;
+}
+
+.product-listing {
+    background: $primary-1 url($path-images + "content/bridal_product_list_bg.jpg") no-repeat bottom right 0;
+}
+
+.country-switcher__filter {
+    .country-switcher__filter_node__title {
+        span {
+            position: absolute;
+            right: 0;
+            top: 30%;
+            @include setSprite(32px, 32px, -969px, -20px);
+        }
+        span.on {
+            @include setSprite(32px, 32px, -1009px, -20px);
+        }
+        span.off {
+            @include setSprite(32px, 32px, -969px, -20px);
+        }
+    }
+}
+
+.select-2 {
+    /*@include setSprite(27px, 29px, -669px, -60px);*/
+    background: $primary-48 url($path-images + "icons/select_arrow_bridal.png") no-repeat right 0;
+}
+
+.degree360-icon {
+    @include setSpriteDesktop(64px, 23px, -99px, -961px, transparent);
+}
+
+.carousel .prev span {
+    @include setSprite(35px, 100px, -821px, -294px);
+}
+
+.carousel .next span {
+    @include setSprite(35px, 100px, -874px, -293px);
+}
+
+.ambassador-cont {
+    .att-accordion {
+        span {
+            @include setSprite(22px, 30px, -968px, -20px);
+        }
+        span.on {
+            @include setSprite(22px, 30px, -1009px, -20px);
+        }
+        span.off {
+            @include setSprite(22px, 30px, -968px, -20px);
+        }
+    }
+}
+
+.form-check {
+    input {
+        &:checked + span.form-check__icon {
+            @include setSprite(22px, 22px, -702px, -50px);
+            vertical-align: top;
+        }
+    }
+}
+
+.body-wrapper {
+    max-width: 1600px;
+    margin: auto;
+    position: relative;
+    .header {
+        background: rgba(240, 240, 240, 0.8);
+    }
+}
+
+.nav-heading-cont {
+    .nav-show {
+        background: #EEEEEE;
+    }
+}
+
+.foundation {
+    .nav-link {
+        background-image: url($path-images + "icons/foundation-logo-bridal.png");
+    }
+}
+
+.search-form {
+    .search__term {
+        background: $primary-1;
+    }
+}
+
+.search-wrapper {
+    .search__button {
+        background-position: -57px -847px;
+    }
+}
+
+.main-container  .collection-pushes-wrapper h3 {
+    @include f(16);
+    color: #a0a0a0;
+    font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+}
+
+.pushes-wrapper-service-push {
+    border: none;
+    .push-hover {
+        background: url($path-images + "icons/bridal_ie_0.8.png");
+        .more a {
+            color: #fff;
+        }
+    }
+    .push-col_title {
+        color: #797878;
+        .text-link {
+            color: white;
+        }
+    }
+    .text-link:hover {
+        color: #797878;
+    }
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+.select-wrapper {
+    color: $primary-2;
+    label {
+        color: $primary-2;
+    }
+    .selector {
+        background-position: -427px -815px;
+        span {
+            background-position: right -774px;
+        }
+    }
+}
+
+.form-select-box {
+    option {
+        background-color: $primary-42;
+        color: $primary-2;
+    }
+}
+
+.product_listing_class {
+    background: url($path-images + "icons/bridal-listing-models.png") no-repeat left bottom;
+}
+
+.push-over {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#modalWindow {
+    background: $primary-1;
+}
+
+/*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+
+.input-wrapper {
+    .form-input {
+        color: $primary-48;
+        background-color: $primary-12;
+        border: 1px solid $primary-17;
+    }
+}
+
+/*------------------------------------*\
+    	$RADIO ELEMENTS
+\*------------------------------------*/
+
+.radio {
+    span {
+        background-position: -85px -460px;
+    }
+    .checked {
+        background-position: -100px -460px;
+    }
+}
+
+.group-wrapper {
+    .radio {
+        span {
+            background-position: -85px -460px;
+        }
+        .checked {
+            background-position: -100px -460px;
+        }
+    }
+}
+
+.checkbox-wrapper {
+    .form-checkbox-label {
+        .checker {
+            span {
+                background-position: -14px -482px;
+            }
+            .checked {
+                background-position: -34px -482px;
+            }
+        }
+    }
+}
+
+.checkbox-wrapper {
+    #uniform-termsCondition {
+        span {
+            background-position: -13px -482px;
+        }
+        span.checked {
+            background-position: -89px -482px;
+        }
+    }
+}
+
+.textarea-wrapper {
+    .form-textarea {
+        background-color: $primary-12;
+        border: 1px solid $primary-17;
+    }
+}
+
+/*------------------------------------*\
+    $MOBILE SELECT ELEMENTS
+\*------------------------------------*/
+.selector {
+    background-position: -427px -815px;
+    span {
+        background-position: right -774px;
+    }
+    option {
+        background-color: #ececec;
+        color: #333333;
+    }
+}
+
+.checker {
+    span {
+        background-position: -14px -482px;
+    }
+    .checked {
+        background-position: -34px -482px;
+    }
+}
+
+.footer {
+    .language-select {
+        .wrapper-sub-menu {
+            .va-nav {
+                .less-arrow {
+                    @include setSpriteDesktop(170px, 7px, -203px, -225px, $primary-113);
+                    color: $primary-113;
+                }
+                .more-arrow {
+                    @include setSpriteDesktop(170px, 7px, -203px, -250px, $primary-113);
+                    color: $primary-113;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------*\
+    HEADER OPACITY CHANGES
+\*------------------------------------*/
+/*.primary-nav-container{
+	opacity: 0.8;
+}
+*/
+/*------------------------------------*\
+  BRIDAL MULTILPE VIDEO PLAYER CHANGES
+\*------------------------------------*/
+.multiple-video {
+    .multiple_video_wrapper {
+        .carousel {
+            background: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.collection-push {
+    border: 1px solid #dedede;
+    background: url($path-images + "icons/listings-collection-bridal.png") no-repeat right bottom;
+}
+
+.primary-nav-container {
+    background: rgba(240,240,240,0.8);
+}
+
+.primary-nav-container {
+
+    .first-level-nav {
+        .nav-show {
+            background: rgba(240,240,240,0.8);
+        }
+    }
+}
+
+.header .right-nav .right-nav__list li.mycartier .nav-link {
+    @include setSpriteDesktop(58px, 15px, -232px, -1179px, transparent);
+}
+
+.servicegrid .services_block__text a p {
+    color: #a0a0a0;
+}
+
+.sfy-help-carousel .carousel .bx-wrapper li .sfy_content > h2, .bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content > h2 {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.sfy-help-carousel .carousel .bx-wrapper li .sfy_content > div, .bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content > div {
+    margin-top: 55px;
+}
+
+#confirmBox {
+    background: $primary-1;
+}

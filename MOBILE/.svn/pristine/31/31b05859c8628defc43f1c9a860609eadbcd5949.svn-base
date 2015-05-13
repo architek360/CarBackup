@@ -1,0 +1,1 @@
+<input type="<!--#echo var="input-type" -->" class="cta <!--#echo var="cta--varaint" -->" value="<!--#echo var="text-detail" -->"></input>

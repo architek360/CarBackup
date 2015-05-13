@@ -1,0 +1,49 @@
+<!-- Shopping bag authorised starts here-->
+
+<div class="grid shopping_bag clearfix">
+  <h1 class="heading1">Shopping Bag</h1>
+  
+  <!-- Shopping bag Info Wrapper--> 
+  <!--#set var="back-static-text" value="Continue shopping"--> 
+  <!--#include virtual="../../components/back_button/html.shtml" -->
+  
+
+  <!-- Gift Wrapper--> 
+  
+</div>
+<div class="empty_shopping_bag">
+  <h3 class="heading3">YOUR CART IS CURRENTLY EMPTY</h3>
+
+  <div class="shopping_options">
+      <ul>
+        <li><!--#set var="arrow-class" value="more-button-arrow " -->
+        <!--#set var="more-text" value="shop jewelry" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" --></li>
+        <li><!--#set var="arrow-class" value="more-button-arrow " -->
+        <!--#set var="more-text" value="shop timepieces" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" --></li>
+        <li><!--#set var="arrow-class" value="more-button-arrow " -->
+        <!--#set var="more-text" value="shop bridal" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" --></li>
+        <li><!--#set var="arrow-class" value="more-button-arrow " -->
+        <!--#set var="more-text" value="shop accessories" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" --></li>
+        <li><!--#set var="arrow-class" value="more-button-arrow " -->
+        <!--#set var="more-text" value="shop fragnance" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" --></li>
+      </ul>
+  </div>
+  <div class="wishlist_button clearfix">
+    <a  class="cta-button cta-button__inner cta--red view-wishlist" href="#">
+      <span class="input-arrow"></span>
+      <span class="cta-button__input">view your wishlist</span>
+    </a>
+  </div>
+</div>
+<!-- Shopping bag unauthorised ends here--> 
+
+<!-- Shopping bag authorised ends here-->
+
+<!--#include virtual="../../views/pushs/desktop.shtml" --> 
+
+<!-- Shopping bag authorised ends here--> 

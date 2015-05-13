@@ -1,0 +1,345 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*$primary-88     : #472021;*/
+/*$primary-89		: #6D3536;*/
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    MY ADDRESS FORM
+\*------------------------------------*/
+/*  uk form css start here */
+/* line 233, ../../../../../../sass/main_theme/temp.scss */
+/* line 40, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper {
+  height: 50px;
+}
+/* line 41, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_country {
+  display: inline-block;
+  margin: 10px auto;
+  width: 313px;
+  color: white;
+  text-align: center;
+  float: left;
+  height: 60px;
+}
+/* line 49, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_country .selector {
+  width: 201px !important;
+}
+/* line 51, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_country .selector span {
+  width: 201px !important;
+}
+/* line 58, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressLabel {
+  width: 49%;
+  clear: both;
+}
+/* line 61, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressLabel .form-input {
+  width: 96%;
+}
+/* line 65, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_phone {
+  margin-left: 0;
+  clear: left;
+}
+/* line 68, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_phone ~ .addressform_phone {
+  margin-left: 0;
+  clear: none;
+}
+/* line 73, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_zip, .js-address-form-uk .addressform_address7 {
+  clear: both;
+}
+/* line 76, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_zip {
+  clear: left;
+}
+/* line 79, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_address2 {
+  margin-right: 0;
+  width: 49%;
+  display: block;
+  clear: left;
+}
+/* line 85, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_address9 {
+  width: 49%;
+  margin-left: 0.8rem;
+}
+/* line 89, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .findaddress, .js-address-form-uk .reset {
+  float: left;
+  left: 20px;
+  left: 2rem;
+  position: relative;
+  text-decoration: underline;
+  top: 39px;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: #a0a0a0;
+  font-style: italic;
+}
+/* line 102, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .findaddress:hover {
+  text-decoration: none;
+}
+/* line 105, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .reset {
+  left: 35px;
+  left: 3.5rem;
+}
+/* line 106, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .reset:hover {
+  text-decoration: none;
+}
+/* line 112, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .group-wrapper {
+  margin: 2.5rem 0rem 1rem 0;
+}
+/* line 114, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .group-wrapper > label {
+  display: block;
+  width: 100%;
+  font-family: proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+/* line 127, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .group-wrapper .radio-wrapper {
+  margin: 0.5rem 1rem 1rem 0;
+}
+/* line 132, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address5, .js-address-form-uk .select-wrapper.addressform_address2 {
+  width: 208px;
+}
+/* line 135, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address5 .selector, .js-address-form-uk .select-wrapper.addressform_address2 .selector, .js-address-form-uk .select-wrapper.addressform_address5 .selector span {
+  width: 200px !important;
+}
+/* line 138, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address2 {
+  margin-left: 0.8rem;
+  clear: none;
+}
+/* line 139, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address2 .selector span {
+  width: 200px !important;
+}
+/* line 145, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address4 {
+  width: 427px;
+}
+/* line 147, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address4 .selector {
+  width: 416px !important;
+}
+/* line 149, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .select-wrapper.addressform_address4 .selector span {
+  width: 416px !important;
+}
+/* line 155, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_address2 ~ .addressform_address2 {
+  margin-right: 0;
+  width: 49%;
+  display: block;
+  clear: left;
+}
+/* line 161, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_address7 {
+  clear: left;
+}
+/* line 163, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_address7 ~ .addressform_address7 {
+  clear: none;
+}
+/* line 167, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_phone ~ .addressform_phone {
+  clear: none;
+}
+/* line 170, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk .addressform_address9 ~ .addressform_address9 {
+  margin-left: 0;
+  clear: left;
+}
+/* line 174, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-address-form-uk div.errormessage {
+  color: #8F141A !important;
+  display: block;
+  font-family: Georgia,sans-serif !important;
+  font-size: 12px !important;
+  font-style: italic !important;
+  letter-spacing: 0 !important;
+  padding-top: 0.5rem;
+  text-align: left;
+  text-transform: none !important;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 195, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-1 .label_fn_country {
+  display: block;
+}
+/* line 199, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-1 #uniform-fn_country {
+  width: 421px !important;
+}
+/* line 201, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-1 #uniform-fn_country span {
+  width: 425px !important;
+}
+
+/* line 209, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-3 {
+  /* line 201, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+}
+/* line 210, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-3 #uniform-fn_country {
+  width: 321px !important;
+}
+/* line 214, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-3 #uniform-fn_country span {
+  width: 185px !important;
+}
+/* line 217, ../../../../../../../sass/country_specific/Clientlibs_desktop_britain/desktop.scss */
+.js-reg-step-3 .label_fn_country {
+  float: left;
+  margin-left: 28px;
+}

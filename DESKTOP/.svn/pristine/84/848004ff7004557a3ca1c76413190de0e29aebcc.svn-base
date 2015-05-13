@@ -1,0 +1,103 @@
+<!-- Billing Confirmation Block Starts Here-->
+<div class="grid js-form-validator _content_car_langmaster_global_en_services_my-cartier_repair-service-config_payment-page_jcr_content_par_formbuilder_start">
+  <div class="grid__item three-quarters my-billing-address-content-wrapper ecs-payment-page">
+    <div class="billing-payment-option main-content ">
+      <h1 class="heading1">PROCEED TO PAYMENT</h1>
+      <p class="heading__desc">
+        Please note that person who submits the order must be the cardholder whose name appears on the credit card
+      </p>
+      <p class="billing-payment__desc top-margin full-width">
+        This is a secure 128-bit SSL, encrypted payment. 128-bit SSL encrypted payment.<br><br>
+        Cartier does not save your payment details for future orders.
+      </p>
+
+      <form method="POST" action="/content/car/langmaster/global/en/services/my-cartier/repair-service-config/payment-page.html" id="_content_car_langmaster_global_en_services_my-cartier_repair-service-config_payment-page_jcr_content_par_formbuilder_start" name="_content_car_langmaster_global_en_services_my-cartier_repair-service-config_payment-page_jcr_content_par_formbuilder_start" enctype="multipart/form-data"><input type="hidden" name=":formid" value="_content_car_langmaster_global_en_services_my-cartier_repair-service-config_payment-page_jcr_content_par_formbuilder_start"/><input type="hidden" name=":formstart" value="/content/car/langmaster/global/en/services/my-cartier/repair-service-config/payment-page/jcr:content/par/formbuilder/start"/><input type="hidden" name="_charset_" value="UTF-8"/>
+        <div class="form">
+          <fieldset>
+            <ul>
+              <li>
+                <input type="radio" data-cardname="AMEX" class="radio-input" value="AMEX" name="payment_card_type" id="fn_cclabel0">
+                <label class="radio-title" for="fn_cclabel0"></label>
+                <span class="american_express_card"></span>
+              </li>
+              <li>
+                <input type="radio" data-cardname="discover" class="radio-input" value="DC" name="payment_card_type" id="fn_cclabel1">
+                <label class="radio-title" for="fn_cclabel1"></label>
+                <span class="discover_network_card"></span>
+              </li>
+              <li>
+                <input type="radio" data-cardname="mastercard" class="radio-input" value="MAST" name="payment_card_type" id="fn_cclabel2">
+                <label class="radio-title" for="fn_cclabel2"></label>
+                <span class="mastercard"></span>
+              </li>
+              <li>
+                <input type="radio" data-cardname="VISA" class="radio-input" value="VISA" name="payment_card_type" id="fn_cclabel3">
+                <label class="radio-title" for="fn_cclabel3"></label>
+                <span class="visa_card"></span>
+              </li>
+              <li>
+                <input type="radio" data-cardname="VISA" class="radio-input" value="VISA" name="payment_card_type" id="fn_cclabel3">
+                <label class="radio-title" for="fn_cclabel3"></label>
+                <span class="visa_card"></span>
+              </li>
+            </ul>
+
+            <div class="form-element input-wrapper payment_card_number">
+              <label>Card Number</label>
+              <input id="payment_card_number" type="text" name="payment_card_number" placeholder="" class=" form-input" value="">
+              <div class="errormessage" id="errormessage-payment_card_number"></div>
+            </div>
+
+            <div class="form-element select-wrapper payment_card_month">
+              <label>Expiration Month</label>
+              <select name="payment_card_month" class=" form-select" id="payment_card_month">
+                <option value="01"> Jan </option>
+                <option value="02"> Feb </option>
+              </select>
+              <div class="errormessage" id="errormessage-payment_card_month"></div>
+            </div>
+
+            <div class="form-element select-wrapper payment_card_year">
+              <label>Expiration Year</label>
+              <select name="payment_card_year" class=" form-select" id="payment_card_year">
+                <option value="2015"> 2015 </option>
+                <option value="2016"> 2016 </option>
+              </select>
+              <div class="errormessage" id="errormessage-payment_card_year"></div>
+            </div>
+
+            <div class="form-element input-wrapper payment_card_cvv">
+              <label>CVV Number</label>
+              <input id="_content_car_langmaster_global_en_services_my-cartier_repair-service-config_payment-page_jcr_content_par_formbuilder_start_payment_card_cvv" type="password" name="payment_card_cvv" placeholder="" title="" class=" form-input">
+              <div class="errormessage" id="errormessage-payment_card_cvv"></div>
+            </div>
+
+            <div class="form-element input-wrapper payment_card_name">
+              <label>Card Name</label>
+              <input id="payment_card_name" type="text" name="payment_card_name" placeholder="" class=" form-input" value="">
+              <div class="errormessage" id="errormessage-payment_card_name"></div>
+            </div>
+
+            <label for="blank">
+                <div class="checker"><span><input type="checkbox" value="blank"></span></div>
+                <span>Please configure the checkbox / radio field</span>
+            </label>
+            <p class="instruction-text">I agree the terms and condition</p>
+
+          </fieldset>
+          <div class="form-element button-wrapper ">
+            <input class="form-button" type="submit" name="" value="Confirm and Place Order" >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="grid__item one-quarter shopping-bag-rt-col">
+    <div class="price-details-bg">
+      <!--#include virtual="../../views/price_details/desktop.shtml" -->
+    </div>
+    <!--#include virtual="../../views/return-exchange/desktop.shtml" -->
+  </div>
+</div>
+<!-- Billing Confirmation Block Ends Here-->
+<!-- tab_billing_address Block Ends Here-->

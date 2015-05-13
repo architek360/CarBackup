@@ -1,0 +1,391 @@
+/*------------------------------------*\
+    Billing FORM -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER (.billing-form)
+ * HEADING CONTAINER (.heading2)
+ * PERSONAL DETAILS (.personal-details)
+ * ADDRESS DETAILS (.address-details)
+ * ACTION BUTTON (.next-step-cta)
+  
+  */
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.billing-form {
+    @include proxi-font;
+    @include font-color($primary-2);
+    display: block;
+    @include rem('margin', 0px);
+    float: left;
+    width: 100%;
+    .billing-address-form {
+        background: none repeat scroll 0 0 #450408;
+        color: #FFFFFF;
+        display: block;
+        margin: 0 auto 25px;
+        padding: 0 5%;
+        vertical-align: top;
+        overflow: hidden;
+        .personal-details {
+            .js-statename {
+                .selector {
+                    background-position: -430px -635px;
+                    span {
+                        background-position: right -536px;
+                        width: 100%!important;
+                    }
+                    &.formerror {
+                        background-position: -426px -1325px;
+                        span {
+                            background-position: right -1283px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .heading1 {
+        background: url($path-images + 'icons/lock-big.png') no-repeat scroll 84px 22px transparent;
+    }
+    .heading2 {
+        border: none;
+        @include rem('padding-top', 24px);
+        @include rem('padding-bottom', 35px);
+        @include rem('line-height', 38px);
+    }
+    /*------------------------------------*\
+    	$PERSONAL DETAILS
+	\*------------------------------------*/
+    
+    .personal-details {
+        background: none;
+        border: none;
+        @include f(20);
+        @include rem('padding', 0px);
+        margin: 20px auto 0;
+        display: block;
+        text-transform: uppercase;
+        width: 440px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+        .width-one {
+            width: 100%;
+        }
+        .form-label {
+            color: #FFFFFF;
+            display: inline-block;
+            @include f(10);
+            @include rem('letter-spacing', 1px);
+            @include rem('margin', 0px);
+            text-align: left;
+            text-transform: uppercase;
+            width: auto;
+            float: left;
+        }
+        .mandatory {
+            @include f(14);
+            font-weight: bold;
+            position: relative;
+        }
+        .radio {
+            display: inline-block;
+        }
+        .radio-title {
+            display: inline;
+        }
+        .js-fname, .js-lname, .addr-name {
+            width: 48%;
+        }
+        .js-lname {
+            float: right;
+        }
+        .email-field {
+            width: 100%;
+        }
+        .addr-name {
+            margin-bottom: 0px !important;
+        }
+        .js-lname {
+            @include rem('margin-left', 8px);
+        }
+        .grid__item {
+            @include rem('padding', 0px);
+            &:last-child {
+                padding: 0;
+            }
+            .radio-btn {
+                @include rem('padding', 0 0 20px);
+                @include rem('margin', 15px 0 0);
+            }
+            .radio-btn + span {
+                @include rem('margin', -19px 0 0px);
+            }
+        }
+        .grid__item--row {
+            min-height: 75px;
+            input + span {
+                height: auto;
+            }
+        }
+        .grid__item--pad {
+            @include rem('padding', 0px);
+        }
+        span {
+            background-position: -10px -434px;
+        }
+        span.checked {
+            background-position: -81px -434px;
+        }
+    }
+    .form-input {
+        background: #461F22;
+        border: 1px solid $primary-79;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        font-style: normal;
+        display: block;
+        @include f(11);
+        height: 28px;
+        @include rem('padding', 0px 0px 0px 3px);
+        width: 100%;
+    }
+    /*------------------------------------*\
+    	$ADDRESS DETAILS
+	\*------------------------------------*/
+    
+    .address-details {
+        background: none;
+        @extend .personal-details;
+        width: 440px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        @include rem('padding', 0px);
+        @include rem('margin', 0px);
+    }
+    .phone-details {
+        background: none;
+        border: none;
+        @extend .personal-details;
+        @include rem('padding', 0px);
+        @include rem('margin-top', 0px);
+        .js-cityname, .js-zipcode, .js-phonenumber {
+            width: 48%;
+        }
+        .grid__item {
+            float: none;
+        }
+        .js-statename .select-wrapper {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .js-phonenumber {
+            .error {
+                line-height: 22px;
+            }
+        }
+    }
+    .confirmation {
+        display: block;
+        color: $primary-6;
+        @include rem('padding', 6px 0 10px 0);
+        @include main-font;
+        #uniform-checbox {
+            span {
+                background-position: -13px -415px;
+            }
+        }
+        #uniform-checbox {
+            span.checked {
+                background-position: -89px -415px;
+            }
+        }
+        .form-check {
+            line-height: 7px;
+            width: auto;
+            @include rem('padding', 4px 0 0 0);
+            @include rem('margin', 0px);
+            @include main-font;
+            @include f(12);
+        }
+        hr {
+            border-bottom: 1px solid $primary-84;
+            margin: 20px auto;
+            position: relative;
+        }
+    }
+    .tabs__nav {
+        @include bold-font;
+        li {
+            width: 50%;
+        }
+    }
+    /*------------------------------------*\
+    	$ACTION BUTTON
+	\*------------------------------------*/
+    
+    .next-step-cta {
+        text-align: center;
+        clear: both;
+        .cta {
+            @include bold-font;
+        }
+        .cta--red {
+            width: auto;
+            @include rem('margin', 20px 0px);
+        }
+    }
+    .tabs__nav {
+        @include bold-font;
+        li {
+            width: 50%;
+        }
+    }
+    .radio-tabs {
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        .radio-btn {
+            position: absolute;
+            left: 32px;
+            @include rem('margin', 0px);
+            top: 73px;
+            .radio-btn-li {
+                display: block;
+                width: 18%;
+                @include rem('margin-bottom', 74px);
+                .radio-title {
+                    height: 72px;
+                    display: none;
+                }
+                .radio-input[type="radio"] {
+                    left: -6px;
+                }
+            }
+            span {
+                background-position: -195px -432px;
+                width: 20px;
+                height: 20px;
+            }
+            span.checked {
+                background-position: -218px -432px;
+            }
+        }
+        /*
+    	#homeaddress.tab_content {
+    		@include rem('margin-top', 20px);
+    	}*/
+        
+        .js-streetnumber {
+            width: 30%;
+        }
+        .js-streetname {
+            width: 48%;
+            float: right;
+        }
+        .js-poboxnumber {
+            width: 30%;
+        }
+        .form-address-selector__bracket {
+            border: 1px solid $primary-79;
+            border-right: none;
+            height: 94px;
+            width: 10px;
+            left: 32px;
+            top: -45px;
+            position: absolute;
+        }
+        .radio-tab_container {
+            margin: 0 auto;
+            width: 440px;
+        }
+    }
+    .termsCondition {
+        float: none;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 40rem;
+        display: block;
+    }
+    #uniform-country.selector {
+        background-position: -430px -635px;
+        width: 100% !important;
+        @include rem('padding', 0px);
+        span {
+            background-position: right -536px;
+            width: 100% !important;
+        }
+    }
+    /* Billing confirmation component CSS overriding */
+    
+    .billing-confirmation {
+        @include rem('padding', 0px);
+        width: 100%;
+        .heading1 {
+            background-position: 64px 22px;
+        }
+        .js-billing-invoice-checkbox label.form-check {
+            width: auto;
+            @include rem('padding', 5px 0px 0px 5px);
+            margin: 0;
+            @include f(12);
+            @include main-font();
+        }
+        .form-checkbox-label {
+            span {
+                background-position: -13px -415px;
+                width: auto;
+            }
+            span.checked {
+                background-position: -89px -415px;
+            }
+            .checker {
+                @include rem('margin-top', 0px);
+            }
+        }
+    }
+    span.error {
+        width: 190px;
+    }
+    .form-input.error {
+        border: 1px solid #B10000;
+    }
+    /* CSS changes for Tool Tip*/
+    
+    .js-lname, .js-phonenumber, .js-mobileno {
+        position: relative;
+    }
+    .tooltip-div {
+        position: absolute;
+        top: 0;
+        right: 107px;
+        margin: 0;
+    }
+    .js-phonenumber, .js-mobileno {
+        .tooltip-div {
+            right: 83px;
+            .tooltip {
+                .tooltip-img {
+                    background: url($path-images +"/icons/tooltip_icon.png") no-repeat;
+                    display: inline-block;
+                    @include rem('width', 16px);
+                    @include rem('height', 16px);
+                }
+            }
+        }
+    }
+}
+/*server side error mgs width issue foxed */
+
+.shoppingBagBg {
+    .error-zone {
+        width: 95.6%;
+        @include rem('margin-left', 20px);
+    }
+}
+.js-shipping-section-one .error-div {
+    width: 88%;
+    margin: 0 auto;
+}

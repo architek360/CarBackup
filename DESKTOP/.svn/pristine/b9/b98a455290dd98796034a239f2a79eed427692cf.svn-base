@@ -1,0 +1,194 @@
+/*!
+* cartier.pendingestimatelist.js
+* This file contains functionalities handling the others module
+*
+* @project   cartier mobile
+* @date      2014-05-14
+* @author    SapientNitro 
+ * @licensor  cartier Desktop
+* @site      cartier Desktop
+   @dependency cartier.core.js
+* @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+*/
+
+;
+(function(window, $, pendingestimatelist, undefined) {
+    //this will cause the browser to check for errors more aggressively
+    'use strict';
+
+    //check if jquery is defined, else retun
+    if ($ === undefined) {
+        console.log("jQuery not found");
+        return false;
+    }
+
+    /*
+        private variables
+        */
+
+    var _cache = {},
+        _objPropertiesMsg,
+
+        /*
+          @private method : caching jquery objects 
+          @param : none 
+        */
+        _cacheObjects = function() {
+
+            _cache = {
+                $ctaPopupButton: $(".js-cta-popup"),
+            };
+
+        },
+
+
+        /*
+          @private method : bind events
+          @param : none
+        */
+
+        _bindEvent = function() {
+
+            // onclick event bind on accessories check box
+            _cache.$ctaPopupButton.on('click', _showPopUpBoxHandler);
+        },
+
+        /*
+         @private  method    : get total of all items in table
+         @param   none
+         */
+        _getTotalAmount= function(){
+            var arr=$('.check');
+            var i=0, sum=0;
+            for(i=0;i<arr.length;i++){
+                if(arr[i].checked){
+                sum+= parseInt($(arr[i]).closest('td').prev('td').html().split(" ")[1]);
+            }
+            }
+            $('#total').html(sum);
+        },
+        getSelectedServices = function(){
+         var selectedLineNumbers = $("input[name=costEstimateID]").val()+"|";
+        $(".check:checked").each(function(index){
+            selectedLineNumbers += $(this).attr("data-lineNumber")
+            selectedLineNumbers += index+1 == $(".check:checked").size() ? "" : ",";
+        })
+        return selectedLineNumbers;
+                },
+
+        /*
+         @private  method    :tasks to be done after result come from first Ajax call on page
+         @param   result data loaded from Ajax
+         */
+        _postAjaxEvents= function(result){
+            $("#modalWindow").empty();
+            $("#modalWindow").html(result);
+            setTimeout(function(){$(this).modalWindow();},20);
+            $(".close").on("click", function(){
+                            $("#modalWindow").empty();
+                            $("#modalWindow").addAjaxLoader();
+                            $("#modalOverlay").hide();
+                            })
+            $(".check").on("change",function(){
+                                _getTotalAmount();
+             })
+
+            $('#approve, #reject').on("click",function(){
+                var data_url=getSelectedServices();
+                $("#modalWindow").empty();
+                $("#modalWindow").addAjaxLoader();
+                _dataLoad($("input[name=step3Path]").val() + "/jcr:content/ecsparsys/costestimatedetailss.html", _postAjaxConfirmEvents,{savNumber: $("input[name=savNumber]").val(), data: data_url, customerSWSEId : $("input[name=customerSWSEId]").val(),action: $(this).attr("id")  });
+
+            })
+             _getTotalAmount();
+
+            /*
+             @private  method    :tooltip for mobile
+             */
+            if($('.OverlayBoxContent .js-tool-tip').length){ 
+                                                                $('.js-tool-tip').on('mouseenter', function() {
+                    $(this).find('.js-tool-tip-detail').fadeIn(200);
+                })
+                .on('mouseleave', function() {
+                    $(this).find('.js-tool-tip-detail').fadeOut(200);
+                    console.log('leave');
+
+                })
+            }
+
+
+        },
+
+         /*
+         @private  method    :tasks to be done after result come from second Ajax call on page
+         @param   result data loaded from Ajax
+         */
+        _postAjaxConfirmEvents = function(result){
+            $("#modalWindow").html(result);
+            setTimeout(function(){$(this).modalWindow();},20);
+
+                                $("#approve-btn").on("click", function(){
+                                var params = {
+                                    savNumber: $("input[name=savNumber]").val(),
+                                    data: $("input[name=data]").val(),
+                                    customerSWSEId: $("input[name=customerSWSEId]").val()
+                                }
+                                var pagePath =$("input[name=estimateUpdatePath]").val() +"." +  $("input[name=action]").val()+ ".html";
+                                window.open(pagePath+"?"+$.param(params),"_self")
+                            })
+
+            $(".js-close").on("click", function(){
+                            $("#modalWindow").empty();
+                            $("#modalWindow").addAjaxLoader();
+                            $("#modalOverlay").hide();
+                            })
+
+        },
+
+        /*
+         @private  method    :Load Ajax from ajax
+         @param  url and post loading function
+         */
+        _dataLoad= function(url,action,dataattr){
+
+            var objXHR = cartier.ajaxWrapper.getXhrObj({
+                type: 'GET',
+                url: url,
+                dataType: 'html',
+                contentType: "application/x-www-form-urlencoded",
+                data: dataattr
+            })
+            if (objXHR){
+                objXHR.done(function(data){
+                    action(data);
+                })
+            }
+        },
+
+        /*
+         @private  method    :Shows popup box 
+         @param 
+         */
+        _showPopUpBoxHandler= function(){
+            $(this).modalWindow();
+            _dataLoad($("input[name=step2Path]").val() + "/jcr:content/ecsparsys/costestimatedetailss.desktop.html", _postAjaxEvents,{savNumber: $("input[name=savNumber]").val(), customerSWSEId : $("input[name=customerSWSEId]").val(), costEstimateID: $(this).closest('tr').attr('data-costestimateid')});
+        };
+
+
+    /*
+        @public method : To initialize pending.js
+        @param : none
+    */
+
+        pendingestimatelist.init = function() {
+        // caching the jquery objects
+        _cacheObjects();
+        _bindEvent();
+    };
+
+
+}(window, jQuery, cartier.pendingestimatelist));

@@ -1,0 +1,176 @@
+<div class="regform-step3">
+	<div class="account-status">
+		<h1 class="heading2">my account</h1>
+		<p class="account-status__message">
+			Thanks you, <br/>your account was successfully created
+		</p>
+		<p class="account-status__suggestion-to-user">
+			We suggest you complete your profile in two minutes,so you can benefit from personalized information and privileges.
+		</p>
+	</div>
+
+
+	<div class="regform-step3__form js-custom-validation js-form-validator">
+		<a href="#" class="skip-this-step"><span></span>Skip this step</a>
+		<h2 class="heading2">your personal information</h2>
+		<div class="address-error"></div>
+		<form>
+			<input type="hidden" name="isAddressFilled" class="isAddressFilled" value="false">
+			<!-- BIRTHDAY DETAILS -->
+			<div class="birthday-details">
+				<p class="birthday-details__heading">Because we care for your precious moments...</p>
+				<div class="grid__item one-whole js-birthday">
+		            <!--#set var="label-name" value="your birthday" -->
+		            <!--#set var="mandatory" value="no"-->
+		            <!--#set var="input-name" value="your-birthday" -->
+		            <!--#set var="input-name-dp1" value="fn_bdmonth" -->
+	            	<!--#set var="input-name-dp2" value="fn_bddate" -->
+	            	<!--#set var="input-name-dp3" value="fn_bdyear" -->
+		            <!--#include virtual="../../components/form_elements/label.shtml" -->
+		            <!--#include virtual="../../components/date_picker/html.shtml" -->
+		    	</div>
+
+		    	<div class="grid__item one-whole">
+		            <!--#set var="label-name" value="date of marraige" -->
+		            <!--#set var="mandatory" value="no"-->
+		            <!--#set var="input-name" value="marraige" -->
+	            	<!--#set var="input-name-dp1" value="fn_mrmonth" -->
+	            	<!--#set var="input-name-dp2" value="fn_mrdate" -->
+	            	<!--#set var="input-name-dp3" value="fn_mryear" -->
+		            <!--#include virtual="../../components/form_elements/label.shtml" -->
+		            <!--#include virtual="../../components/date_picker/html.shtml" -->
+		    	</div>
+			</div>
+			<div class="my-address-section-one">
+                <input type="hidden" class="js-isBobjValid" value="false" name="bobjValid">
+
+				<div class="personal-details one-whole palm--one-whole ">
+			    	<div class="grid__item grid__item--pad one-whole">
+			    		<!--#set var="input-name" value="fn_grptitle" -->
+			    		<!--#include virtual="../../components/radio_buttons_group/html.shtml" -->
+			    	</div>
+
+
+			    	<div class="grid__item grid__item--row one-whole">
+			            <!--#set var="label-name" value="save this address as" -->
+			            <!--#set var="mandatory" value="yes"-->
+			            <!--#set var="input-name" value="fn_addrname" -->
+			            <!--#include virtual="../../components/form_elements/label.shtml" -->
+			            <!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="text" -->
+			            <!--#include virtual="../../components/form_elements/input.shtml" -->
+			    	</div>
+
+			    	<div class="grid__item grid__item--row one-whole js-fname">
+			    		<!--#set var="label-name" value="first name" -->
+			            <!--#set var="mandatory" value="yes"-->
+			            <!--#set var="input-name" value="fn_fname" -->
+			    		<!--#include virtual="../../components/form_elements/label.shtml" -->
+			    		<!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="text" -->
+			    		<!--#include virtual="../../components/form_elements/input.shtml" -->
+			    	</div>
+
+			    	<div class="grid__item grid__item--row one-whole js-lname">
+			            <!--#set var="label-name" value="last name" -->
+			            <!--#set var="mandatory" value="yes"-->
+			            <!--#set var="input-name" value="fn_lname" -->
+			            <!--#include virtual="../../components/form_elements/label.shtml" -->
+			            <!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="text" -->
+			            <!--#include virtual="../../components/form_elements/input.shtml" -->
+			    	</div>
+				</div>
+
+				<!--#if expr="${form_type}=reg_step3" -->
+
+				<!--****-->
+
+				<!--#set var="input-name" value="fn_grpaddr" -->
+				<!--#set var="head-label-name" value="" -->
+				<!--#set var="radio-text1" value="homeaddress" -->
+				<!--#set var="radio-value1" value="home" -->
+				<!--#set var="radio-tab-text1" value="home address" -->
+				<!--#set var="radio-text2" value="poboxaddress" -->
+				<!--#set var="radio-value2" value="pobox" -->
+				<!--#set var="radio-tab-text2" value="postal office box" -->
+
+				<!--#set var="tab_content_1" value="tab_home_address_wrapper" --> 
+				<!--#set var="tab_content_2" value="tab_pobox_address_wrapper" --> 
+
+
+				<input name="tabs" value="true" type="hidden" class="tab-hidden-counter">
+
+				<!--#include virtual="../../components/tabs2/html.shtml" -->
+
+
+				<!--****-->
+
+				<!--#endif -->
+
+
+
+				<div class="personal-details bottom-grad one-whole palm--one-whole ">
+
+			    	<div class="grid__item grid__item--row one-whole js-city">
+			            <!--#set var="label-name" value="city" -->
+			            <!--#set var="mandatory" value="yes"-->
+			            <!--#set var="input-name" value="fn_city" -->
+			            <!--#include virtual="../../components/form_elements/label.shtml" -->
+			            <!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="text" -->
+			            <!--#include virtual="../../components/form_elements/input.shtml" -->
+			    	</div>
+
+			    	<div class="grid__item grid__item--row one-whole js-state">
+                    	<!--#set var="label-name" value="state" -->
+                    	<!--#set var="mandatory" value="no"-->
+                    	<!--#set var="input-name" value="fn_state" -->
+                    	<!--#include virtual="../../components/form_elements/label.shtml" -->
+                    	<!--#set var="style-name" value="select-1" -->
+                    	<!--#set var="option-component" value="state_option" -->
+                    	<!--#include virtual="../../components/form_elements/select.shtml" -->
+			    	</div>
+
+			    	<div class="grid__item grid__item--row one-whole js-zip">
+			            <!--#set var="label-name" value="zip / area / post code" -->
+			            <!--#set var="mandatory" value="yes"-->
+			            <!--#set var="input-name" value="fn_zip" -->
+			            <!--#include virtual="../../components/form_elements/label.shtml" -->
+			            <!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="text" -->
+			            <!--#include virtual="../../components/form_elements/input.shtml" -->
+			    	</div>
+			     	<div class="grid__item grid__item--row one-whole">
+			            <!--#set var="label-name" value="phone number" -->
+			            <!--#set var="mandatory" value="yes"-->
+			            <!--#set var="input-name" value="fn_phno" -->
+			            <!--#include virtual="../../components/form_elements/label.shtml" -->
+			            <!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="text" -->
+			            <!--#include virtual="../../components/form_elements/input.shtml" -->
+			    	</div>
+				</div>
+
+
+		    	<div class="grid__item invoice-check">
+		    		<!--#set var="checkbox-value" value="value" -->
+	                <!--#set var="checkbox-name" value="fn_chkinvoice" -->
+	                <!--#set var="checkbox-value" value="yes" -->
+	                <!--#set var="checkbox-label-name" value="I do not want to receive an invoice to the billing address" -->   
+	                <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	            </div>
+
+				<div class="submitbutton">
+					<!--#set var="text-detail" value="submit" -->
+	                <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-address-submit-reg" -->
+	                <!--#include virtual="../../components/form_elements/button.shtml" -->
+				</div>
+			</div>
+			<div class="my-address-section-two display-none">
+		            <!--#include virtual="../../components/address_bobj/html.shtml" -->
+		    </div>
+		</form>
+	</div>
+</div>
+

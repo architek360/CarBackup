@@ -1,0 +1,86 @@
+<!-- Contact Us Box Starts Here-->
+<div class="contact clearfix">
+    <div class="contact__contact-cont">
+
+        <h1 class="heading2">contact us</h1>
+        <p class="grey-text">To contact us please select your country of residence</p>
+        <!-- COUNTRY LABEL -->
+        <div class="contact__country-label">
+            <div class="form-element select-wrapper">
+                <!--#if expr="${DEVICE} = 'mobile'"  -->
+                <!--#set var="label-name" value="your country" -->
+                <!--#set var="mandatory" value="no"-->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#endif -->
+                <!--#set var="input-name" value="form-select" -->
+                <!--#set var="input-name" value="fn_country" -->
+            	<!--#set var="style-name" value="select-1 js-country" -->
+                <!--#set var="option-component" value="state_option" -->
+                <!--#include virtual="../../components/form_elements/select.shtml" -->
+            </div>
+        </div>
+
+        <!-- SERVICE CONTAINER -->
+        <div class="contact__service-cont js-country-detail">
+        	<h3 class="heading3">Customer service center</h3>
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->contact_services.jpg" alt="Customer service center" class="service-image">
+            <p class="contact__service-cont__timimgs">
+                <a class="contact__service-cont__number" title="Telephone number">tel. <span class="underline-text js-phone">1-800-227-8437</span></a>
+                <span class="js-weekdays">9AM - 10PM EST ,</span>
+                <span class="js-weekends">12PM - 7PM EST</span>
+                <span class="js-title-address">Client Relations Center</span>
+                <span class="js-address">Client Relations Center</span>
+            <!--     <span class="js-city">653 Fifth Avenue</span>
+                <span class="js-country">New York, NY. 10022</span>
+                <span class="js-countryName">United States</span> -->
+            <!--#if expr="${DEVICE} = 'desktop'"  -->
+            <!--#set var="text-detail" value="contact by email" -->
+            <!--#set var="cta--varaint" value="cta--red" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+            <!--#endif -->
+            </p>
+
+        </div>
+
+       <!--  <ul id="sortable">
+    <li class="ui-state-default">Item 1</li>
+    <li class="ui-state-default">Item 2</li>
+    <li class="ui-state-default">Item 3</li>
+    <li class="ui-state-default">Item 4</li>
+    <li class="ui-state-default">Item 5</li>
+    <li class="ui-state-default">Item 6</li>
+    <li class="ui-state-default">Item 7</li>
+</ul> -->
+
+
+    
+    </div>
+    
+</div>
+        <!-- JOINING CARTIER -->
+        <div class="grid joining-wrapper">
+            <!--#if expr="${DEVICE} = 'desktop'"  -->
+            <div class="contact-joining-cartier grid__item one-half">
+                <h3 class="heading3">Joining Cartier</h3>
+                <p class="joining-description">To become a part of Cartier's legendary story and join our staff, contact our Human Resources department.</p>
+                <div class="action-button">
+                <a href="/content/car/langmaster/global/en/career.html" class="cta-button cta-button__inner cta--red">
+                    <span class="input-arrow"></span>
+                    <span class="cta-button__input">CONTACT US</span>
+                </a>
+                </div>
+            </div>
+            <!--#endif -->
+
+            <!-- BOUTIQUE BLOCK -->
+             <div class="contact-joining-cartier grid__item one-half">
+                <h3 class="heading3">Find a cartier boutique or a retailer</h3>
+                <div class="action-button">
+                  <a href="/content/car/langmaster/global/en/career.html" class="cta-button cta-button__inner cta--red">
+                    <span class="input-arrow"></span>
+                    <span class="cta-button__input">Find a boutique</span>
+                  </a>
+                </div>
+            </div>
+        </div>
+<!-- Contact Us Box Ends Here-->

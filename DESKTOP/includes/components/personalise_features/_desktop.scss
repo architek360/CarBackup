@@ -1,0 +1,95 @@
+/*------------------------------------*\
+   PERSONALISE FOOTER -- Desktop CSS
+\*------------------------------------*/
+/**
+ * Main container.... Wrapper for footer bottom (.footer__bottom)
+ * Listing .......... First level listing (.menu)
+				      Second level listing (.sub-menu) 
+ */
+
+/*------------------------------------*\
+    $MAIN CONTAINER
+\*------------------------------------*/
+.js-clone{
+	width: 938px;
+}
+.personalise-features{
+	
+	margin: -20px;
+	background: $primary-1;
+	@include rem(padding-top, 35px);
+	width: 938px;
+	
+
+	.att-accordion{
+		width: 978px;
+
+		.heading3{
+			background:$primary-83;
+			@include proxiBold-font();
+			@include rem(letter-spacing, 1px);
+			text-transform: uppercase;
+			@include f(11);
+			display: inline-block;
+			@include rem(padding, 7px 0);
+			width: 100%;
+		}
+		.att-accordion_node__title{
+			.att-accordion_node_title__ques{
+				p{
+					padding:0;
+					text-align: center;
+					color: $primary-3;
+					@include proxi-font();
+					font-weight: bold;
+					@include f(12);
+					@include rem(letter-spacing, 1px);
+
+
+					&:hover{
+						color:$primary-2;
+					}
+				}
+			}
+
+
+			/*------------------------------------*\
+   					 ARROW BLOCK 
+			\*------------------------------------*/
+
+			span{
+				float: right;
+				@include setSpriteDesktop(15px, 15px ,-194px ,-43px, transparent);
+			}
+
+			span.on{
+				float: right;
+				@include setSpriteDesktop(15px, 15px ,-194px ,-43px, transparent);
+				@include rotate(0deg);
+				color: white;
+				
+			}
+
+			span.off{
+				@include setSpriteDesktop(15px, 15px ,-429px ,-30px, transparent);
+			}
+		}
+
+
+	}
+
+	.action-button{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		@include rem(padding-bottom, 25px);
+		@include rem(padding-top, 15px);
+
+		.cta--red{
+			width: auto;
+			@include rem(margin-right, 6px);
+		}
+	}
+
+}
+

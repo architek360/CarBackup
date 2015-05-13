@@ -1,0 +1,16 @@
+<!-- captcha Box Starts Here-->
+<div class="captcha">
+	<div class="captcha__image__container">
+		<input autocomplete="off" class="captcha__input" type="text" name="fn_wordvef" value="" size="10"/>
+		<input type="hidden" id="url" name="url" class="js-captcha-url" value=""/>
+		<input type="hidden" id="id" name="id" class="js-captcha-id" value=""/>
+		<span class="img">
+			<img src="<!--#echo var="CONTENT_IMG_PATH" -->captcha.jpg" alt="Type the characters you see in this picture." />
+		</span>
+	</div>
+	<div class="captcha__description userinfo">
+		Type the characters you see in the picture above; if you can't read them, submit the form and a new image will be generated. Not case sensitive.
+	</div>
+</div>
+
+<!-- captcha Box Ends Here-->

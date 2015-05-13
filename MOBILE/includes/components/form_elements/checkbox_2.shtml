@@ -1,0 +1,16 @@
+<label class="form-check-2">
+	<!--#echo var="checkbox-label-name" -->
+	<input type="checkbox" 
+	"<!--#if expr="${checkbox-class}" -->"
+		class="<!--#echo var="checkbox-class" -->"
+	"<!--#endif -->" 
+	"<!--#if expr="${checkbox-filter}" -->"
+		data-filter="<!--#echo var="checkbox-filter" -->"
+	"<!--#endif -->" 
+	
+	name = "<!--#echo var="checkbox-name" -->" 
+	value ="<!--#echo var="checkbox-value" -->"/>
+	<span class="form-check__icon"></span>
+</label>
+
+

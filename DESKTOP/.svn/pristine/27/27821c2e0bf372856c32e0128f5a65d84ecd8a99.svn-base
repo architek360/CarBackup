@@ -1,0 +1,1625 @@
+/*------------------------------------*\
+     Form Elements- Desktop CSS
+\*------------------------------------*/
+.no-js{
+    /*TO BE IMPLEMENTED*/
+}
+
+.grid-bg {
+    background: url("../../etc/designs/dmp/clientlibs_rbs_desktop/images/grid-layout.jpg") repeat-y 31px 0;
+}
+
+/** Button Styling **/
+.red-more-button {
+    padding-left: 1.0rem !important;
+    display: inline-block;
+    @include setSpriteDesktop(10px, 7px ,-431px ,-157px, transparent);
+}
+
+.cta--red-width-30{
+    background:$primary-5;
+    @include rem('padding', 15px 0);
+    width:100%;
+}
+
+.cta--grey-pad-30 {
+  background:$primary-13;
+  @include rem('padding', 15px 0);
+  width: 100%;
+  text-align: center;
+}
+
+.more-button {
+    @include main-font();
+    display: block;
+    width: 100%;
+    @include rem('padding', 5px 10px);
+    color:$primary-3;
+    font-style: italic;
+    @include f(12);
+    letter-spacing: 0;
+
+    .more-button-arrow{
+        display: inline-block;
+        @include setSpriteDesktop(10px, 7px ,-431px ,-159px, transparent);
+    }
+}
+
+.arrow-show {
+    @include setSpriteDesktop(10px, 6px ,-431px ,-158px, transparent);
+    position: relative;
+    @include rem('top', -2px);
+    @include rem('margin-right', 5px);
+}
+
+.arrow-hide{
+    @include setSprite(15px, 15px, -633px, -20px);
+    position: relative;
+    @include rem('top', 2px);
+    @include rem('margin-right', 5px);
+}
+
+
+/** Form elements Styling **/
+.form-select {
+    background: transparent;
+    @include rem('padding', 5px);
+    @include f(13);
+    outline: none;
+    border: 0;
+    width: 100%;
+    color:$primary-3;
+    @include rem('height', 56px);
+    clear: both;
+    overflow: hidden;
+    @include setSpriteDesktop(auto, 56px, 288px, -358px, $primary-42);
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    font-style: normal;
+    height: 28px;
+    color:$primary-2;
+
+    option{
+        background:none;
+        @include rem('font-size', 13px);
+        @include rem('padding', 3px 5px);
+        color:$primary-2;
+   }
+}
+
+/*------------------------------------*\
+    $LABEL  ELEMENTS
+\*------------------------------------*/
+
+.form-label {
+    display: block;
+    width: 100%;
+    @include bold-font;
+    @include f(10);
+    letter-spacing: 1px;
+    @include rem('padding', 0 0 5px 0);
+    @include rem('margin', 0 0 5px 0);
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 20px;
+}
+
+.group-wrapper {
+    
+    > label {
+        display: block;
+        width: 100%;
+        @include proxiBold-font();
+        @include f(10);
+        @include rem(letter-spacing, 1px);
+        @include rem(margin-bottom, 5px);
+        text-transform: uppercase;
+        text-align:left;
+    }
+}
+
+.cta-button {
+    margin: 10px auto;
+    cursor: pointer;  
+    vertical-align: middle;   
+    border: 0px none;   
+    text-align: center;
+
+    .input-arrow {
+        display:inline;
+        @include setSpriteDesktop(3px, 13px, -124px, -45px, transparent);
+        position: relative;
+        @include rem('top', -2px);
+        @include rem('margin-right', 2px);
+    }
+    .cta-button__input {
+        display:inline;
+        border:none;
+        background:none;
+        @include f(12);
+        font-family: proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+        color: #fff;
+        @include rem('letter-spacing', 1px);
+        text-decoration: none;
+        text-transform: uppercase; 
+        padding: 0;       
+    } 
+
+    &:hover{
+        background:$primary-51;
+    }
+}
+
+.cta--red {
+    width: auto;
+    background:$primary-5;
+    @include rem('padding', 9px); 
+}
+
+.cta--red-width-auto-pad-20 {
+     background:$primary-5;
+}
+
+.cta--grey {
+    background:$primary-13;
+    @include rem('padding', 9px);
+
+    &:hover{
+        background:$primary-95;
+
+    }
+}
+
+
+.form-check {
+    float: left;
+    width: 50%;
+    @include f(12);
+    @include rem(margin, 12px 0 12px 0px);
+    text-indent: 0px;
+
+    .form-check__icon{
+        position:relative;
+        left:6px;
+        width: 22px;
+        @include rem(height, 20px); 
+        display:inline-block;
+        z-index:10;
+        vertical-align:top;
+    }
+
+    input[type=checkbox] {  
+        opacity:0;
+        height:1px;
+        width:1px;
+        display:inline-block;
+        filter:alpha(opacity=0); /* For IE8 and earlier */
+        position: absolute;
+    }
+
+    input 
+    {
+        &:checked + span.form-check__icon
+        {
+            @include setSprite(22px, 20px, -746px, -46px);
+            vertical-align: top;
+
+        }
+    }
+
+    .form-check__wrapper {  
+        position:relative;
+        left:-20px;
+        width: 20px;
+        @include rem(height, 20px); 
+        display: inline-block;
+        background-color: $primary-34;
+        border:solid 1px $primary-12;
+        vertical-align:top;
+    }
+
+    .form-check-label{
+        display:inline-block;
+        width:83%;
+    } 
+}
+
+.form-check-2 {
+    display: block;
+    @include f(22);
+    @include brand-font;
+    text-transform: uppercase;
+    line-height: 31px;
+    vertical-align: middle;
+
+    .form-check__icon{
+        position:relative;
+        left:6px;
+        width: 32px;
+        @include rem(height, 32px); 
+        display:inline-block;
+        z-index:10;
+        vertical-align:top;
+        background-color: $primary-34;
+        border:solid 1px $primary-12;
+        float:right;
+    }
+
+    input[type=checkbox] {  
+        display: none;  
+    }
+
+    input 
+    {
+        &:checked + span.form-check__icon
+        {
+            @include setSprite(32px, 32px, -457px, -83px);
+            background-color: $primary-34;
+            border:solid 1px $primary-12;
+        }
+    }
+}
+
+/* UNIFORM JAVASCRIPT */
+
+/*------------------------------------*\
+    $COMMON PROPERTIES FOR SPRITE
+\*------------------------------------*/
+
+.selector, .selector span, .checker span, .radio span, .uploader, .uploader span.action{
+    background-image: url($path-images+'icons/sprite-desktop.png');
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+}
+
+.checkbox-wrapper{
+    display: block;
+    float: left;
+    @include rem(margin, 5px 0); 
+
+    .form-checkbox-label {
+        @include rem('width', 400px); 
+        display: block;
+        float: left;
+        color: $primary-2;
+        text-transform: uppercase;
+        max-width: 85%;
+        margin-top: 5px;
+
+        .checker{
+            float:left;
+
+            span{
+                @include rem('width', 20px); 
+                @include rem('height', 13px); 
+                display: inline-block;
+                @include rem(margin-top, 2px); 
+                zoom: 1;
+                text-align: center;
+                vertical-align: top;
+            }
+/*          .checked {
+                background-position: -34px -460px;
+            }*/
+            input{
+                display: inline-block;
+                @include rem(margin-top, 2px); 
+                opacity: 0;
+                filter: alpha(opacity=0);
+                -moz-opacity: 0;
+                border: none;
+                background: none;
+                display: inline-block;
+                zoom: 1;
+            }
+
+            .wrapper-error{
+                border: 1px solid #8f141a!important;
+                background: #3b1112!important;
+                height: 10px;
+                width: 10px;
+                @include rem(margin-right, 8px); 
+            } 
+
+        }
+        .checkbox-name{
+            @include main-font;
+            @include f(12);
+            @include rem('line-height', 16.8px);
+            @include rem('margin-top', 1px);
+            width: auto;
+            text-align: left;
+            float: left;
+            margin-left: 0;
+            text-transform: none;
+        }
+    }
+
+    .form-radio-label {
+        margin-right: 0;
+        text-transform: uppercase;
+
+        .radio-name {
+            text-transform: uppercase;
+            @include rem('margin-top',-0.5px);
+            color: $primary-2;
+            text-transform: uppercase;
+            background:none;
+            margin-right:10px;
+            @include f(10);
+        }
+        .form-radio {
+            @include rem('margin-top',-3px);
+        }
+    }   
+}
+
+.group-wrapper .radio, .radio {
+    display: inline-block;
+    position: static;
+    right: auto;
+    margin-top: -3px;
+
+    span{
+        width: 15px;
+        height: 10px;
+        display: inline-block;
+        color: $primary-2;
+        @include proxi-font();
+        @include f(10);
+        display: inline-block;
+        margin-top: 2px;
+        text-align: center;
+        background-position:-54px -460px;
+    }
+
+    input{
+        width: 10px;
+        height: 10px;
+        margin-top: 2px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        border: none;
+        background: none;
+        display: inline-block;
+        zoom: 1;
+        text-align: center;
+        float: left;
+    }
+}
+
+.radio-title{
+    @include rem(letter-spacing, 1px);
+    @include rem(margin-left, -18px);
+    @include rem(padding-left, 18px); 
+}
+
+/*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+
+.input-wrapper{
+ @include rem(padding-bottom, 10px);
+ @include rem(margin, 15px 0 0);
+ float: left;
+ width: 100%;
+ min-height: inherit;
+
+    label {
+        display: block;
+        width: 100%;
+        @include proxi-font;
+        font-weight: bold;
+        @include f(10);
+        @include rem(letter-spacing, 1px);
+        @include rem(margin-bottom, 5px);
+        text-transform: uppercase;
+        text-align:left;
+        color: $primary-2;
+        padding: 0;
+    }
+
+    .form-input{
+        display:block;
+        @include box-sizing(border-box);
+        @include f(11);
+        @include rem(padding, 0 0 0 3px);
+        width: 100%;
+        height: 28px;
+        color : $primary-2;
+        font-style: normal;
+        background-color: $primary-16;
+        border: 1px solid $primary-61;
+
+    }
+
+}
+.textarea-wrapper {
+        label {
+            display: block;
+            width: 100%;
+            @include proxiBold-font;
+            @include f(10);
+            @include rem(letter-spacing, 1px);
+            @include rem(margin-bottom, 5px);
+            text-transform: uppercase;
+            text-align:left;
+            color: $primary-2;
+        }
+        .form-textarea {
+            @include rem('height',105px);
+            @include f(10);
+            @include rem(padding, 0px);
+            font-style: normal;
+            @include f(11);
+            color: $primary-2;
+        }
+}
+
+/*------------------------------------*\
+    $BUTTON ELEMENTS
+\*------------------------------------*/
+.button-wrapper{
+    display: inline-block;
+    margin-top: 20px!important;
+    text-align: center;
+    width: 100%;
+
+    .form-button{
+        @include setSpriteDesktop(auto, auto ,-404px ,-482px, #8F010F);
+        color: $primary-2;
+        @include proxi-font();
+        @include f(12);
+        font-weight: bold;
+        text-transform: uppercase;
+        @include rem('letter-spacing', 1px);
+        @include rem('padding', 9px 36px 9px 42px);
+        border: none;
+        cursor: pointer;
+
+        &:hover{
+            @include setSpriteDesktop(auto, auto ,-404px ,-482px, $primary-51);
+            vertical-align: middle;
+        }
+    }
+}
+
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+.select-wrapper{
+    @include rem(margin, 15px 0 10px);
+    color: $primary-2;
+    clear: both;
+    padding-top: 12px;
+
+
+    label {
+        display: block;
+        width: 100%;
+        @include proxiBold-font();
+        @include f(10);
+        @include rem(letter-spacing, 1px);
+        @include rem(margin-bottom, 5px);
+        text-transform: uppercase;
+        text-align:left;
+        color: $primary-2;
+    }
+    .selector {
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        @include rem(padding, 0 0 0 8px);
+        position: relative;
+        width: 421px !important;
+        display: inline-block;
+
+        span {
+           cursor: pointer;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    width: 421px !important;
+    font-size: 13px;
+    font-size: 1.3rem;
+    @include main-font;
+    padding:0px 27px 0px 2px;
+    text-transform: none;
+    color: $primary-3;
+    font-style: normal;
+    float: left;
+     @include box-sizing(border-box);
+        }
+
+        select{
+            background: rgba(0, 0, 0, 0);
+            border: none;
+            height: 25px;
+            @include f(13);
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 2px;
+            width: 100%;
+            filter: alpha(opacity=0);
+
+            option {
+                @include rem(padding, 1px 0 1px 5px);
+                @include f(13);
+            }
+        }
+    }
+}
+
+
+.select-wrapper.piform_prodline, .select-wrapper.piform_productCategory, .select-wrapper.piform_clientOwnFrom {
+	text-align:left;
+}
+
+.js-personal-info-form .owned-creations .select-wrapper.piform_prodline .selector, .js-personal-info-form .owned-creations .select-wrapper.piform_productCategory .selector, .js-personal-info-form .owned-creations .select-wrapper.piform_clientOwnFrom .selector, .js-personal-info-form .owned-creations .select-wrapper.piform_prodline .selector span, .js-personal-info-form .owned-creations .select-wrapper.piform_productCategory .selector span, .js-personal-info-form .owned-creations .select-wrapper.piform_clientOwnFrom .selector span {
+	width: 220px!important;
+}
+
+.radio-wrapper {
+    float: none;
+    display: table-cell;
+    width: auto;
+    padding-right: 10px;
+
+    .radio-name {
+        text-transform: uppercase;
+        @include rem(margin-top, -0.5px);
+        color: $primary-2;
+        text-transform: uppercase;
+        margin-left: 0;
+        margin-right: 10px;
+    } 
+
+    .form-radio {
+        @include rem(margin-top, -3px);
+    }  
+}
+
+.group-wrapper{
+    .radio-wrapper {
+        position: static;
+        @include rem(padding, 8px 15px 0 0);
+    }
+
+    .form-radio-label {
+        margin-right: auto;
+        text-transform: uppercase;
+        color: $primary-2;
+    }
+}
+
+.form-select-box {
+    background: rgba(0,0,0,0);
+    border: none;
+    height: 25px;
+    @include main-font();
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    filter: alpha(opacity=0);
+
+    option{
+        @include rem(padding, 1px 0 1px 5px);
+        @include f(13);
+    }
+}
+
+.form-label {
+    display: block;
+    width: 100%;
+    @include proxi-font;
+    @include f(10);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/*------------------------------------*\
+    $COLUMN CONTROLLER CSS
+\*------------------------------------*/
+
+.cq-colctrl-lt0 {
+    border: 1px solid $primary-61;
+    display: inline-block;
+    width: 100%;
+    @include rem(padding, 15px 0 30px);
+    margin: 20px auto;
+
+    hr {
+        background: none repeat scroll 0 0 rgba(0,0,0,0);
+        border: none;
+        border-bottom: 1px solid $primary-61;
+        display: block;
+        float: left;
+        height: 2px;
+        width: 100%;
+        @include rem(margin, 20px 0);
+        position: relative;
+    }
+}
+
+.cq-colctrl-lt0-c1 {
+    border-left: 1px dotted $primary-61;
+}
+
+.cq-colctrl-lt0-c0, .cq-colctrl-lt0-c1 {
+    float: left;
+    width: 430px;
+    @include rem(padding, 0 29px);
+    margin-top: 0;
+    background: none;
+    color: $primary-2;
+}
+
+.cq-colctrl-lt0-c0 #modalWindow, .cq-colctrl-lt0-c1 #modalWindow {
+    border: 1px solid $primary-61;
+}
+
+fieldset {
+    clear: both;
+}
+
+
+/*------------------------------------*\
+    $LIGHT ACCOUNT CSS
+\*------------------------------------*/
+
+.js-light-account-form {
+    border: 1px solid $primary-61;
+    margin: 5px auto 30px !important;
+    @include rem(padding, 10px 29px 22px);
+    width: 43%;
+
+    .fn_grptitle{
+        width: auto;
+    }
+
+    .fn_fname1, .fn_fname{
+        margin-left: 0;
+    }
+
+    .fn_lname{
+        margin-left: 2%;
+        clear:none;
+    }
+
+    .fn_lname2{
+        width: 49%;
+    }
+
+    .captcha .captcha__image__container span.img img{
+        @include rem(margin-top, 40px);
+    }
+
+    .comp-rich-text{
+        p{
+            padding-top: 0;
+            letter-spacing: 0;
+            @include f(12);
+            text-align: center;
+            color: $primary-2 !important;
+        }
+
+        a{
+            @include main-font();
+            @include f(12);
+            color:$primary-3;
+
+            &:hover{
+                color:$primary-2;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 12px !important;
+        color: $primary-2;
+        text-align: center;
+        line-height: 15px;
+        @include rem(padding, 5px 0 10px 0);
+        text-align: left;
+        letter-spacing: 0 !important;
+        font-family: Georgia,sans-serif !important;
+    }
+
+    .txt {
+        color: $primary-2;
+
+        p{
+           text-align: center;
+           @include main-font();
+           @include f(13);
+        }
+
+        label {
+            color: $primary-2;
+            display: block;
+            @include proxiBold-font();
+            @include f(10);
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            text-transform: uppercase;
+            width: 100%;
+        }
+    }
+
+    .select-wrapper {
+        width: 100%;
+        text-align: left;
+
+        .selector {
+            width: 421px !important;
+
+            span {
+                width: 421px !important;
+            }
+        }
+    }
+
+    .captcha {
+        .captcha__description{
+            @include rem(margin-bottom, 10px);
+        }
+    }
+
+    .heading4 {
+        color: $primary-2;
+        @include proxiBold-font();
+        @include f(11);
+        letter-spacing: 0.12rem;
+        @include rem(margin-bottom, 10px);
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .heading5 {
+        float: left;
+        @include proxiBold-font();
+        @include f(13);
+        letter-spacing: 0.13rem;
+        line-height: 1.82rem;
+        @include rem(margin-top, 10px);
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    hr {
+        background: none repeat scroll 0 0 rgba(0,0,0,0);
+        border: none;
+        border-bottom: 1px solid $primary-61;
+        display: block;
+        float: left;
+        height: 2px;
+        width: 100%;
+        @include rem(margin, 0 0 15px);
+        position: relative;
+    }
+
+    .button-wrapper {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .heading-wrapper .heading2{
+        display:none;                                                                                                        
+    }
+
+}
+
+.contactambassador_title, .fn_grptitle, .piform_owncreation, .addressform_address2, .addressform_address12 {
+    float: none;
+    display: table-cell;
+    width: 29%;
+}
+
+.fn_fname, .addressform_firstName1, .addressLabel, .addressform_address7, .addressform_zip, .addressform_zip1 {
+    width: 49%;
+    clear: left;
+}
+
+.fn_lname, .addressform_lastName1, .addressform_phone, .addressform_zip2, .addressform_mobile {
+    width: 49%;
+    @include rem(margin-left, 8px);
+    /*margin-top: 0px;*/
+}
+
+.js-address-form .addressform_address5 {
+    margin-top: 0px;
+}
+
+.piform_owncreation_productLine, .piform_owncreation_collection, .piform_owncreation_orderLocation {
+    @include rem(margin, 20px 0px 10px);
+    display: inline-block;
+}
+
+hr {
+    background: none repeat scroll 0 0 rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px solid $primary-61;
+    float: left;
+    height: 2px;
+    width: 100%;
+    margin: 15px auto;
+    position: absolute;
+    height: 0;
+    left: 0;
+    display: inline-block;
+    clear: both;
+}
+
+form-input.error {
+    background-color: $primary-122;
+    border: 1px solid $primary-51;
+}
+
+.grid.my-account, .my-account.grid--rev, .my-account.grid--full, .my-account.grid--right, .my-account.grid--center {
+    @include f(20);
+    @include rem(margin-top, 100px);
+}
+
+.grid.my-account{
+    margin-top: 0;
+    position: relative;
+}
+/*------------------------------------*\
+    $ERROR MESSAGE
+\*------------------------------------*/
+span.error, label.error, div.errormessage {
+    color: #8F141A !important;
+    display: block;
+    @include main-font;
+    font-size: 12px !important;
+    font-style: italic !important;
+    letter-spacing: 0 !important;
+    @include rem(padding-top, 5px);
+    text-align: left;
+    text-transform: none !important;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.captcha__input.input-wrapper {
+    width: 32%;
+    @include rem(margin-right, 15px);
+}
+
+.captcha__input {
+    background: none repeat scroll 0 0 #1D1D1D;
+    border: 1px solid $primary-12;
+    @include box-sizing(border-box);
+    clear: both;
+    color: $primary-64;
+    display: block;
+    @include main-font();
+    @include f(6);
+    font-style: italic;
+    padding: 1.1rem;
+    width: 100%;
+    width: 32%;
+    @include rem(margin-right, 15px);
+}
+
+span.img img {
+    @include rem(margin-top, 20px);
+}
+
+.group-wrapper .radio span {
+  background-position:-54px -460px;
+}
+.group-wrapper .radio span.formerror,  .radio span.formerror{
+  background-position: -332px -434px !important;
+
+
+}
+.group-wrapper .radio .checked {
+    background-position:-70px -460px;
+}
+
+.logout-button {
+    background: none repeat scroll 0 0 rgba(0,0,0,0);
+    border: medium none;
+    color: #A0A0A0 !important;
+    display: table;
+    font-family: "proximanova",sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    letter-spacing: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-transform: uppercase;
+    width: 150px !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/*------------------------------------*\
+    $SHOPPING BAG
+\*------------------------------------*/
+.shoppingBagBg{
+
+    .termsCondition {
+        float: none;
+        margin: 0 auto;
+        width: 400px;
+        overflow: hidden;
+        @include rem(margin-bottom, 15px);
+    }
+
+    .form {
+        position: relative;
+        width: 440px;
+        margin: 0 auto;
+
+        input {
+            background: $primary-58;
+            border: 1px solid $primary-79;
+        }
+
+        .select-wrapper{
+            .selector {
+                background-position: -430px -635px;
+
+                span {
+                    background-position: right -536px;
+                }
+            }
+        }
+    }
+
+    .address2 input, .address12 input {
+        width: 100px;
+    }
+
+    .full-block {
+        width: 90.6%;
+    }
+
+    .address7, .zip, .phone {
+        clear: both;
+        width: 210px;
+    }
+
+    .state {
+        float: left;
+    }
+
+    .button-wrapper {
+        margin: 0 auto;
+
+        .form-button {
+            @include setSpriteDesktop(auto, auto ,-404px ,-482px, $primary-124);
+            color: $primary-2;
+            @include proxiBold-font();
+            @include f(12);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include rem(padding, 9px 36px 9px 42px);
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            @include setSpriteDesktop(auto, auto ,-404px ,-482px, $primary-51);
+        }
+    }
+
+    .js-billing-address-form{
+        .button{
+             @include rem(margin-bottom, 20px);
+
+             hr {
+                @include rem(margin, 20px 0);
+                border-top: 1px solid $primary-79;
+
+                background: none;
+                border-bottom: none;
+            }
+        }
+
+        .form-address-selector {
+            position: absolute;
+            left: -38px;
+            top: 135px;
+
+            .form-address-selector__bracket {
+                border: 1px solid $primary-79;
+                border-right: none;
+            }
+
+            .form-address-selector__radio {
+                width: 10px;
+                @include rem(margin-right, 15px);
+                @include rem(margin-top, 42px);
+                float: left;
+
+                .checkbox-wrapper {
+                    border: none;
+
+                    .js-first-radio {
+                          @include rem(margin-top, 80px);
+                    }
+
+                    .js-second-radio {
+                        margin-top: 0;
+                        @include rem(margin-bottom, 20px);
+                    }
+                }
+            }
+        }
+
+        .address20 {
+            width: auto;
+
+            span.checked {
+                background-position: -81px -434px;
+            }
+
+            span {
+                background-position: -10px -434px;
+            }
+        }
+    }
+}
+
+
+.cta-button {
+    @include rem(padding , 10px);
+}
+
+.cta--grey-pad-30 {
+   @include rem(padding , 10px);
+
+   .cta-button__input {
+        @include f(10);
+        letter-spacing: 1px;
+    }
+
+    &:hover{
+      background: $primary-95;  
+    }
+}
+
+.selector {
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    @include rem(padding , 0 0 0 8px);
+    position: relative;
+    width: 430px !important;
+    display: inline-block;
+
+    span {
+        cursor: pointer;
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        text-align: left;
+        width: 430px !important;
+        @include f(13);
+        @include main-font;
+        @include rem(padding, 0 25px 0 2px);
+        text-transform: none;
+        color: $primary-2;
+        font-style: normal;
+        float: left;
+        @include box-sizing(border-box);
+    }
+
+    select {
+        background: rgba(0,0,0,0);
+        border: none;
+        height: 25px;
+        @include f(13);
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 2px;
+        width: 100%;
+        filter: alpha(opacity=0);
+
+        option {
+            @include rem(padding , 1px 0 1px 5px);
+            @include f(13);
+
+        }
+    }
+
+}
+
+.form-input {
+    display: block;
+    @include box-sizing(border-box);
+    @include f(11);
+    @include rem(padding , 0 0 0 3px);
+    width: 100%;
+    height: 28px;
+    color: $primary-2;
+    background-color: $primary-16;
+    border: 1px solid $primary-61;
+}
+
+.mandatory {
+    color: $primary-20;
+    @include f(10);
+   /* @include rem(margin , 0 0 0 5px);*/
+}
+
+.checker {
+    float: left;
+    margin-top: 0;
+    margin-left: 0;
+
+    span {
+        width: 20px;
+        height: 13px;
+        display: inline-block;
+        @include rem(margin-top , 2px);
+        display: inline-block;
+        zoom: 1;
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    input {
+        display: inline-block;
+        @include rem(margin-top , 2px);
+        @include opacity(0);
+        border: none;
+        background: none;
+        display: inline-block;
+        zoom: 1;
+    }
+}
+
+
+.form-check {
+    @include main-font();
+    @include f(12);
+    @include rem(padding-top , 8px);
+}
+
+.form-textarea {
+    height: 105px;
+    @include f(11);
+    padding: 0;
+    font-style: normal;
+    color: $primary-2;
+    border: 1px solid $primary-61;
+    background: $primary-16;
+}
+
+.system_form_hidden {
+    @include f(12);
+    @include rem(padding , 10px 0);
+}
+
+.more-button-overlay {
+    @include main-font();
+    color: $primary-3;
+    @include f(12);
+    background: none !important;
+    padding: 0;
+    margin: 0 !important;
+
+    .cta-button__input {
+        @include main-font();
+        color: $primary-3;
+        @include f(12);
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+ /* STYLE FOR CONTACT AMBASSADOR FORM IN OVERLAY*/
+
+.js-contact-ambassador-form {
+    width: 440px;
+
+    .heading6{
+        text-align: center;
+        @include f(12);
+        @include rem(margin-bottom , 5px);
+        @include bold-font(); 
+        padding: 0;
+    }
+
+    .group-wrapper{
+        > label{
+            @include rem(margin-bottom , 20px);
+        }
+    }
+
+    .textarea-wrapper{
+        display: inline-block;
+        width: 100%;
+        @include rem('margin-top',10px);
+
+        .form-textarea{
+            width: 432px;
+            @include f(11);
+            @include rem('margin-bottom',5px);
+            height: 70px;
+        }
+    }
+
+    .button-wrapper{
+        margin-top: 0;
+    }
+
+    .heading2{
+        text-align: left;
+        @include f(12);
+        @include rem('margin-bottom',20px);
+        @include bold-font();
+    }
+
+    .comp-rich-text, .comp-rich-text p {
+        @include f(12);
+        color:#FFFFFF !important;
+        letter-spacing: normal;
+        padding-top: 2px;
+    }
+
+    .comp-rich-text p a {
+        color: $primary-3;
+        @include main-font();
+        font-weight: normal;
+        text-decoration: none;
+
+        &:hover{
+            color:$primary-2;
+        }
+    }
+
+    .select-wrapper label, .select-wrapper .selector {
+        display: block;
+    }
+
+    .select-wrapper.ambassador_country .selector , .select-wrapper.ambassador_country .selector span , .select-wrapper.ambassador_category .selector , .select-wrapper.ambassador_category .selector span{
+        width: 432px !important;
+    }
+}
+
+.group-wrapper .radio-wrapper .wrapper-error span {
+    background-position: -332px -435px;
+}
+
+.group-wrapper label{
+    color: $primary-2;
+}
+
+/*------------------------------------*\
+    $SUBSCRIPTION AND INTEREST
+\*------------------------------------*/
+
+.js-subscription-and-interest-form{
+    width: 100%;
+
+    .cq-colctrl-lt0-c0{
+        background:none;
+        border: none;
+        @include rem('padding',0 29px);
+        width: 428px;
+
+        .group-wrapper{
+            display: inline-block;
+            width: 100%
+        }
+
+        hr {
+            @include rem('margin',77px 0 10px);
+        }
+    }
+
+    .cq-colctrl-lt0-c1 {
+        width: 434px;
+        background:none;
+        border: none;
+        @include rem('padding',0 29px);
+        border-left: 1px dotted $primary-61;
+
+        .group-wrapper{
+            display: inline-block;
+            width: 100%;
+
+            .checkbox-wrapper{
+                @include rem('padding',5px 0);
+                display: inline-block;
+                margin: 0;
+            }
+        }
+
+        hr {
+            @include rem('margin',10px 0);
+        }
+    }
+
+    .cq-colctrl-lt0-c0 .heading-wrapper .heading4, .cq-colctrl-lt0-c1 .heading-wrapper .heading4{
+        @include f(11);
+        padding-bottom: 0;
+    }
+
+    .checkbox-wrapper{ 
+        padding:0;
+        width: 100%;
+
+        .form-checkbox-label{
+            max-width: 100%;
+        }
+
+         .checkbox-name{
+             @include f(12);
+             @include rem('margin-top',2px);
+             text-transform: none;  
+             width: 95%;
+        }
+    }
+    .fn_newsletter.checkbox-wrapper {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
+/*------------------------------------*\
+    $REGISTRATION STEP 1
+\*------------------------------------*/
+.js-reg-step-1{
+    /*.fn_fname{
+        clear:right;
+        @include rem('margin-left',8px);
+    }*/
+
+   /* .fn_lname{
+        margin-left:0;
+    }
+*/
+    .fn_chkprivnotc a{
+        background:none;
+        bottom:0;
+        display:inline;
+        float:none;
+        text-decoration:underline;
+        color:#a0a0a0!important;
+        @include main-font();
+
+        &:hover{
+           color: #fff !important;
+        }
+    }
+
+}
+
+
+.js-request-info-form, .js-request-info-form, #_content_car_global_langmaster_en_services_contactbyambasador_jcr_content_navigationBlock_formbuilder_start{
+     margin:0 auto;
+     border:none;
+     @include rem('padding',20px);
+}
+
+.ambassador_category label , .ambassador_country label{
+    text-align: left;
+    width: 100%;
+}
+
+.appointment_phone {
+    display: none;
+}
+
+.appointment_lastName1{
+    margin-left: 2%;
+    width: 49%;
+    clear: none;
+}
+
+.appointment_firstName1{
+    width: 49%;
+    clear: both;
+    margin-left: 0;
+}
+
+/*------------------------------------*\
+    $ASK FOR APPOINTMENT}
+\*------------------------------------*/
+
+.js-ask-appointment-form{
+    width:840px;
+    .cq-colctrl-lt0-c1 {
+        border-left: none;
+        padding-right: 0;
+        width: 407px;
+        padding-left: 0;
+    }
+
+    .cq-colctrl-lt0-c0{
+        width: 407px;
+        padding-left: 0;
+
+        hr {
+            left: 51%;
+        }
+    }
+
+    .appointment_appointment_reason {
+        @include rem('margin-top',116px);
+    }
+
+    .appointment_boutique_country, .appointment_boutique_location {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .appointment_email, .appointment_phone {
+        width: 70%;
+    }
+
+    .group-wrapper .checkbox-wrapper.appointment_policy{
+        .checker {
+            margin-top: -2px;
+        }
+
+        .form-checkbox-label{
+            @include main-font();
+            @include f(12);
+            text-transform: lowercase;
+            @include rem('margin-top',2px);
+
+            a{
+                color: $primary-3;
+                text-decoration: underline;
+                @include main-font();
+
+                &:hover{
+                    color:$primary-2;
+                }
+            }
+        }
+    }
+
+    .heading-wrapper .heading2 {
+        @include proxiBold-font;
+        text-align: center;
+        letter-spacing: 1.2000000476837158px;
+        @include f(12);
+    }
+
+    .appointment_country_select {
+        @include rem('margin-bottom',20px);
+       display: inline-block;
+    }
+
+    .appointment_time .selector span {
+        width: 106px !important;
+    }
+
+    .appointment_message textarea {
+        width: 99%;
+    }  
+
+    .appointment_phone {
+        margin-top: 50px;
+    } 
+
+    .appointment_boutique_country .selector optgroup {
+        background-color:$primary-1;
+        color: $primary-115;
+        font-weight: normal;
+    } 
+    .appointment_country_select {
+        @include rem('margin-bottom',20px);
+    }                                
+}
+
+.js-ask-appointment-form .select-wrapper .selector, .js-ask-appointment-form .select-wrapper .selector span,
+.js-ask-appointment-form .appointment_country_select .selector, .js-ask-appointment-form .appointment_country_select .selector span,
+.js-ask-appointment-form .appointment_boutique_location .select-wrapper .selector, .js-ask-appointment-form .appointment_boutique_location .select-wrapper .selector span,
+.js-ask-appointment-form .select-wrapper.appointment_appointment_reason .selector, .js-ask-appointment-form .select-wrapper.appointment_appointment_reason .selector span{
+    width: 360px !important;
+}                                                                   
+
+.js-ask-appointment-form .appointment_boutique_country .select-wrapper .selector, .js-ask-appointment-form .appointment_boutique_country .select-wrapper .selector span,
+.js-ask-appointment-form .appointment_country_select .select-wrapper .selector, .js-ask-appointment-form .appointment_country_select .select-wrapper .selector span {
+    width: 360px !important;
+}
+
+.piform_lname2, .piform_lname1{
+    width: 49%;
+    clear: both;
+    margin-left: 0;
+}
+
+/*.piform_fname2, .piform_fname1, .fn_fname1, .fn_fname {
+    margin-left: 2%;
+    width: 49%;
+    clear: none;
+}*/
+
+
+/*------------------------------------*\
+    $PERSONAL INFO
+\*------------------------------------*/
+.js-personal-info-form{
+    .cq-colctrl-lt0-c0{
+
+        .piform_countryName{
+            padding-top:30px !important;
+        }
+
+        .select-wrapper{
+            text-align: left;
+
+            label{
+                display: block;
+                margin-bottom: 0;
+            }
+            .selector{
+                width: 420px !important;
+
+                span{
+                    width: 420px !important;
+                }
+            }
+        }
+    }
+}
+
+.js-ask-appointment-form{
+    margin-top: -10px;
+
+    .heading2{
+        padding-top: 0;
+    }
+}
+
+#errormessage-confirm_new_password{clear:both;}
+
+.js-form-address-selector .checkbox-wrapper .form-radio-label , .js-form-address-selector .checkbox-wrapper .form-radio-label{
+    font-size: 0;
+}
+
+.js-address-form .addressform_address5{
+    margin-top: 15px;
+}
+
+.js-request-price-form label.form-checkbox-label {
+    font-family: georgia;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 12px;
+    margin-top: 0;
+    line-height: 17px;
+    float: none;
+    max-width: 100%;
+}

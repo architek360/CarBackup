@@ -1,0 +1,29 @@
+<div class="row grid">
+    <div class="column grid__item one-half top-120">
+        <div class="row grid">
+            <div class="column grid__item one-half">
+                <h2>TONNEAU WRISTWATCH</h2>
+                <h3>CARTIER PARIS, 1908</h3>
+                <p>Yellow gold, one sapphire cabochon, leather strap.<br><br>Round LeCoultre caliber 10HPVM movement, gold-plated, 18 jewels, Swiss lever escapement, bimetallic balance, flat balance spring.<br><br>Sold to Countess von Hohenfelsen, the morganatic wife of Grand Duke Paul of Russia, and one of Cartier’s most important clients.</p>
+                <p class="productdata">2.95 x 2.30 cm (case)</p>
+            </div>
+            <div class="column grid__item one-half">
+                <!--#set var="imgclass" value="right" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}collection-clock.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+        </div>
+    </div>
+    <div class="column grid__item one-half ">
+        <div class="grid nomargin">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}shaped-watches.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+        <div class="grid">
+            <p class="border-wrapped bold">
+            Louis Cartier was the first jeweler who set the design codes of modern watchmaking. Unlike his contemporaries, he believed the beauty of a watch was not just a matter of its decoration. Its size, shape and proportions, the look of the metal, the harmony between bracelet and case counted for just as much. He soon became interested in "Shaped watches" – those with a case that broke away from the traditional round design. "Tonneau" shaped watches in 1906, square cases from 1908, and "tortue" shapes in 1912 were the first examples of very beautiful watchmaking created by an innovative jeweler. Cartier never stopped conceiving new shapes,  sometimes eccentric, often very daring, but always refined.
+            </p>
+        </div>
+    </div>
+</div>

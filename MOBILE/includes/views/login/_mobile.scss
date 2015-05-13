@@ -1,0 +1,328 @@
+/*------------------------------------*\
+    LOGIN -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.login)
+ * ACCORDIAN STYLE SPECIFIC TO LOGIN PAGE.... (.js-accordion)
+ * CREATE NEW ACCOUNT BUTTON STYLE .... (.cta--red )
+ * LOGIN FORM......... (.js-login-form)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.login{
+	display: block;
+	margin: 0 auto;
+	@include rem('margin-top', 30px);
+	text-align: center;
+	width: 81.25%;	
+	@include brand-font;
+	@include font-color($primary-2);
+	.login__title{
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		@include rem('padding', 30px 0px);
+		@include rem('margin', 0 0 60px 0);
+		.heading2{
+			@include rem('padding', 0px 0px);
+			border:none;
+		}
+		.heading3{
+			@include rem('padding', 0 0 20px 0);
+		}
+	}
+	.login-box {
+		background: $primary-1; 
+		@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+		border: 1px solid $primary-11;
+		@include rem('padding', 20px 0px);
+		@include bold-font;
+		display: inline-block;
+		.login-box__title {
+			@include rem('font-size', 20px);
+			text-transform: uppercase;
+		}
+		.login-box__desc {
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: inline-block; 
+			text-align: center;
+			width: 60%;
+			font-style:italic;
+			@include rem('padding', 25px 0px 10px);
+		}	
+		.country-selector_select{
+			margin: 0 auto;
+			@include rem('margin-top',40px);
+			@include rem('margin-bottom',40px);
+			display: block;
+		    width: 91.19%;
+		    display: none;
+		}
+		.js-cor {
+			display: none;
+		}
+		.login-box__list {  
+		    @include set-ulFix;
+		    display: block;
+		    li {  
+				margin: 0 auto;
+			    display: block; 
+			    width: 91.19%;
+			    clear :both;
+			    @include rem('margin-bottom',20px);
+			    @include bold-font;
+				.cta--red {
+					width: 50%;
+					margin: 0 auto;
+					@include rem('margin-top', 30px);
+					@include rem('margin-bottom', 10px);
+				}
+				.grid__item {
+					padding-left: 0;
+				}
+			    label {  
+				    @include rem('min-width', 60px);
+				    @include rem('margin', 16px 0px 10px 0px);
+				    color: $white;
+				    display: block;  
+				    text-align: left;
+				    text-transform: uppercase;
+			    	@include f(20);
+			    	@include bold-font;
+			    	float: left;
+				}
+				.mandatory {
+					float: left;
+					margin-top: 1.6rem;
+				}				
+
+				.login-box__forgot-password {
+					@include f(22);
+				    @include main-font;
+				    @include font-color(light_grey); 
+				    display: inline-block; 
+				    border-bottom: 1px solid $primary-2;
+				    float: right;
+				    @include rem('margin-top',40px);
+				}
+				> .form-input { 
+					display: block;
+					@include rem('height',59px);
+				}
+				> div.form-input { 
+					display: block;
+					@include rem('height',59px);
+					@include rem('padding-top', 0px);
+				}
+				 .password-input {  
+					@include rem('padding', 10px);
+				    @include rem('margin', 0px 0px 14px -8px);
+				    border: none;
+				    width: 73%;
+				    display:inline;
+				    float:left;
+				}
+			}
+			li:nth-child(2) {
+				span.error {
+					position: absolute;
+					left: 12.7%;
+				}
+			}
+			span.error {
+				@include f(20);
+			}
+		}
+		.captcha{
+			background:none;
+			@include rem(padding, 0 0 10px);
+			float: left;
+		}
+		.userinfo{
+			@include f(24);
+			@include font-color($primary-2);
+			@include main-font;
+			font-style:italic;
+			text-align: center;
+		}
+		.captcha .captcha__image__container{
+			@include rem(margin-top, 0px);
+		}
+	}
+	
+	/*----------------------------------------*\
+    	ACCORDIAN STYLE SPECIFIC TO LOGIN PAGE
+	\*----------------------------------------*/
+
+	.js-accordion {
+		@include rem('margin-top', 60px);
+		@include rem('padding-top', 60px);
+		border-top: 1px solid $primary-2;
+		.cta-button{
+			margin: 20px auto 0;
+		}
+	}
+
+	/*----------------------------------------------------*\
+		CREATE YOU ACCOUNT STYLE SPECIFIC TO LOGIN PAGE
+	\*----------------------------------------------------*/
+
+	.cta--red {
+		width: 80%;
+		text-align: center;
+	}
+}
+
+/*----------------------------------------*\
+	LOGIN FORM
+\*----------------------------------------*/
+
+.js-login-form{
+	background: $primary-1; 
+	@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+	border: 1px solid $primary-11;
+	@include rem('padding',20px 30px);
+	margin: 0 auto;
+	width: 82.25%;
+	.heading4{
+		@include rem('font-size', 20px);
+		text-transform: uppercase;
+		@include bold-font;
+		padding: 0;
+	}
+	.txt{
+		p{
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: block; 
+			text-align: center;
+			width: 60%;
+			font-style:italic;
+			@include rem('padding', 25px 0px 10px);
+			margin:0 auto;
+		}
+	}
+	a{
+		color: $primary-2 !important;
+		float: right;
+		font-size: 22px !important;
+		font-family: georgia !important;
+	}
+	hr{
+		display: none;
+	}
+}
+.js-reg-step-1{
+	display: none;
+	background: $primary-1; 
+	border: 1px solid $primary-11;
+	@include rem('padding',20px 30px);
+	margin: 40px auto 0;
+	width: 82.25%;
+	.txt{
+		p{
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: block; 
+			text-align: center;
+			width: 60%;
+			font-style:italic;
+			@include rem('padding', 25px 0px 10px);
+			margin:0 auto;
+		}
+		label{
+			@include bold-font();
+			@include f(22);
+			@include rem('margin',30px 0);
+		}
+	}
+	.heading6{
+		@include f(28);
+		text-transform: uppercase;
+		@include brand-font;
+		@include rem('padding',30px 0);
+	}
+	.captcha__input{
+		padding: 0;
+		width: 150px;
+		background:$primary-45;
+		border:1px solid $primary-12;
+		@include font-color($primary-3);
+		@include main-font;
+	    @include f(24);
+		display:inline-block;
+	}
+	img{
+		display: inline-block;
+		@include rem('padding-left',10px);
+		vertical-align: bottom;
+	}
+	.captcha{
+		display: block;
+		.captcha__input{
+			padding: 0;
+			width: 150px;
+		}
+		.captcha__image__container{
+			display: inline-block;
+			width: auto;
+			position: relative;
+			height: auto;
+			.img{
+				position: absolute;
+				left: 155px;
+				top: 47px;
+			}
+		}
+		.captcha__description{
+			@include f(22);
+			font-style: italic;
+			text-align: center;
+			@include rem('padding',20px 0);
+			@include main-font();
+		}
+	}
+	hr {
+		display: none;
+	}
+	.fn_chkonlinecom, .fn_chkprivnotc{
+		width: 100%;
+		@include rem('padding',20px 0);
+		.form-checkbox-label{
+			width: auto;
+			color: $primary-2;
+		}
+	}
+	.button-wrapper{
+		@include rem('margin-bottom',20px);
+	}
+}
+#errormessage-fn_chkprivnotc .error{
+	display: inline-block;
+	@include rem('margin-top',-18px);
+}
+.mobile-create-btn{
+    display:block;
+}
+
+.js-login-form .comp-rich-text.rte-wrapper {
+	width: 99%;
+	text-align:center;
+	p{
+		text-align:center;
+	}
+}
+
+.js-reg-step-1 .heading-wrapper {
+width: 100%;
+}
+
+.js-reg-step-1 .rte-wrapper {
+width: 100%;
+}

@@ -1,0 +1,359 @@
+/*
+ * cartier.location.filter.js
+ * This file contains functionalities handling the Storelocator and Boutique Pages
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-03
+ * @author    Sapient 
+ * @licensor  cartier Desktop
+ * @site      cartier Desktop
+   @dependency cartier.core.js, cartier.location.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+;
+(function(win, $, ns, undefined) {
+    //this will cause the browser to check for errors more aggressively
+    // 'use strict';
+    //check if Jquery is defined, else return
+    if (typeof $ === 'undefined') {
+        console.log('jQuery not found');
+        return false;
+    }
+cartier.location.filter = function(element, options, ns, win, $, undefined) {
+    'use strict';
+    var _xhrData,
+        _dropdown = {},
+        $_elem,
+        _filterTags,
+        _showRetailer = true,
+        _filterSidRelation = {},
+        _options,
+        _cache = {},
+        _activeFilters = 0,
+        _filterActive = false,
+        _filterChanged = true,
+        defaults = {
+            height: 250,
+            scrollerHeight: 20
+        },
+
+        /*
+          @private method : caching jquery objects 
+          @param : none 
+        */
+        _cacheObjects = function() {
+            _cache = {
+                $dropdown: $_elem.find('ul'),
+                $root: $_elem.find('.js-dropdown'),
+                $filters: $_elem.find('.selectable'),
+                $checkBoxes: $_elem.find('.checkable'),
+                $arrows: $_elem.find('.arrow-up, .arrow-down'),
+                $arrowUp: $_elem.find('.arrow-up'),
+                $arrowDown: $_elem.find('.arrow-down'),
+                $dropdownTogggleTrigger: $_elem.find('.filter-headline'),
+                $scrollContainer: '', // is added to dom at runtime
+                $filterCheckbox: $_elem.find('.boutique-single-filter')
+
+            };
+
+        },
+
+        /*
+          @private method : bind events
+          @param : none
+        */
+        _bindEvents = function() {
+            // subscribe to filter event
+            ns.subscribe('beforeDataChanged', function(msg) {
+                _xhrData = msg.data;
+                if (typeof(msg.filterTags) !== 'undefined') {
+                    _filterTags = msg.filterTags;
+                    _xhrData = msg.data;
+                    _updateFilterSidRelation();
+                    _update();
+                }
+            });
+            _cache.$filterCheckbox.on('click', function() {
+                var $box = $(this);
+                if ($box.hasClass('active')) {
+                    $box.removeClass('active');
+                    _showRetailer = true;
+                } else {
+                    $box.addClass('active');
+                    _showRetailer = false;
+                }
+                _updateFilterSidRelation();
+            });
+            _cache.$checkBoxes.on('click', function(e) {
+                _handleCheckBoxClick(e, this);
+            });
+            _cache.$arrowUp.on('click', function() {
+                _scrollDown();
+            });
+            _cache.$arrowDown.on('click', function() {
+                _scrollUp();
+            });
+            _cache.$root.on('click', function() {
+                _cache.$root.toggleClass('open');
+                _cache.$scrollContainer.stop(true, true).slideToggle({
+                    complete: function() {
+                        if (_cache.$root.hasClass('open')) {
+                            $(document).on('click', _hideScrollContainer);
+                        }
+                    }
+                });
+            });
+            // prevent events from bubbling arround
+            _cache.$scrollContainer.on('click', function(e) {
+                e.stopPropagation();
+            });
+        },
+         /*
+          @private method : To Hide Scroll Container
+          @param : none
+        */  
+        _hideScrollContainer = function() {
+            $(document).off('click', _hideScrollContainer);
+            _cache.$root.trigger('click');
+        },
+
+         /*
+          @private method : Checkbox Click Handler
+          @param :event Object
+        */  
+        _handleCheckBoxClick = function(e) {
+            var $selected = $(e.target).closest('.selectable');
+
+            if ($selected.hasClass('selected')) {
+                _removeFilter($selected.removeClass('selected').data('filterId'));
+                
+            } else {
+                _addFilter($selected.addClass('selected').data('filterId'));
+            }
+            _updateFilterSidRelation();
+            
+            setTimeout(function(){ 
+                _cache.$root.trigger('click');
+            }, 500);
+        },
+         /*
+          @private method : To Remove filter Id to Filter store Id relation Object
+          @param :filterId
+        */  
+        _removeFilter = function(filterId) {
+            _activeFilters--;
+            delete _filterSidRelation[filterId];
+        },
+         /*
+          @private method : To add filter Id to Filter store Id relation Object
+          @param :filterId
+        */   
+        _addFilter = function(filterId) {
+            _activeFilters++;
+            _filterSidRelation[filterId] = true;
+        },
+
+        /*
+          @private method : scroll down
+          @param :
+        */
+        _scrollDown = function() {
+            _scrollTo(_dropdown.t += _dropdown.scrollerH);
+        },
+        /*
+          @private method : scroll up
+          @param :
+        */
+        _scrollUp = function() {
+            _scrollTo(_dropdown.t -= _dropdown.scrollerH);
+        },
+        /*
+          @private method : Scroll To for _scrollUp & _scrollDown
+          @param : scrollTo amount
+        */
+        _scrollTo = function(to) {
+            _showScrollUp();
+            _showScrollDown();
+            if (to >= 0) {
+                to = 0;
+                _hideScrollUp();
+            }
+            if (to < -_dropdown.viewportBound) {
+                to = -_dropdown.viewportBound;
+                _hideScrollDown();
+            }
+            _dropdown.t = to;
+            _cache.$dropdown.css('top', to);
+        },
+
+        /*
+          @private method : hide scroll up arrow
+          @param :
+        */
+
+        _hideScrollUp = function() {
+            _cache.$arrowUp.hide();
+        },
+        /*
+          @private method : show scroll up  arrow
+          @param :
+        */
+        _showScrollUp = function() {
+            _cache.$arrowUp.show();
+        },
+        /*
+          @private method : hide scroll down arrow
+          @param :
+        */
+        _hideScrollDown = function() {
+            _cache.$arrowDown.hide();
+        },
+        /*
+          @private method : show scroll down arrow
+          @param :
+        */
+        _showScrollDown = function() {
+            _cache.$arrowDown.show();
+        },
+        /*
+          @private method : manipulates the dom to show the dropdown
+          @param :
+        */
+        _initDropdown = function() {
+            // 'use strict';
+            // if dropdown markup is there
+            if (_cache.$dropdown.length) {
+                // first of all chache dimensions
+                _dropdown = _cache.$dropdown.position();
+                _dropdown.scrollerH = _options.scrollerHeight;
+                _dropdown.scrollerW = _cache.$filters.first().width();
+                _dropdown.singleH = _cache.$filters.first().height();
+                _dropdown.h = _cache.$dropdown.height();
+                _dropdown.w = _cache.$dropdown.width();
+                _dropdown.viewportBound = _dropdown.h - _options.height;
+                _dropdown.t = 0;
+                // wrap the ul and cut everything off wich is more than the defined height
+                _cache.$dropdown.wrapAll('<div class="scrollContainer" />');
+                _cache.$scrollContainer = $_elem.find('.scrollContainer');
+                _cache.$scrollContainer.css({
+                    'height': _options.height,
+                    'overflow': 'hidden',
+                    'position': 'absolute'
+                }).append(_cache.$arrowDown.remove()).append(_cache.$arrowUp.remove()).hide();
+                _cache.$dropdown.css({
+                    'height': _dropdown.h,
+                    'width': _dropdown.w,
+                    'top': 0
+                });
+                _cache.$arrows.css({
+                    'position': 'absolute',
+                    'width': _dropdown.scrollerW,
+                    'left': 0,
+                    'top': 0,
+                    'height': _dropdown.scrollerH
+                });
+                _cache.$arrowDown.css({
+                    'top': _options.height - _dropdown.scrollerH
+                });
+                _scrollTo(0);
+                _cache.$root.removeClass('open initial');
+            }
+            // show hidden filter headline
+            _cache.$root.css({
+                'left': 'auto',
+                'position': 'static'
+            });
+        },
+
+
+
+        /*
+          @private method : update Taglist
+          @param : null
+        */
+        _updateFilterSidRelation = function() {
+            var hidden = [];
+            var visibles = [];
+            var visibilityhelper;
+            var hasList = false;
+
+            $.each(_xhrData, function(i, store) {
+                var sid = store.sid;
+                hasList = false;
+                if (store.typeofstore === 'Retailer' && _showRetailer === false) {
+                    hidden.push(sid);
+                    hasList = true;
+                }
+                if (store.typeofstore === 'Retailer' && _showRetailer === true && _activeFilters < 1) {
+                    hasList = false;
+                } else {
+                    if (_activeFilters > 0) {
+                        visibilityhelper = false;
+                        $.each(_filterSidRelation, function(tag) {
+                            if ($.inArray(tag, store.tags) !== -1) {
+                                visibilityhelper = true;
+                            }
+                            else {
+                                visibilityhelper = false;
+                                return false;
+                            }
+                        });
+                    }
+                    // we compared the store tags to every active Filter, if we got a match the helper var will be true
+                    if (visibilityhelper === false) {
+                        hidden.push(sid);
+                        hasList = true;
+                    }
+                }
+                if (hasList === false) {
+                    visibles.push(sid);
+                }
+            });
+            _refreshView();
+            ns.publish('filterDataSet', {
+                'type': 'ugc',
+                'hidden': hidden,
+                'visibles': visibles
+            });
+
+        },
+
+        _refreshView = function() {
+            // disable all and remove selection, will be set after check
+            _cache.$filters.removeClass('selected');
+            $.each(_filterSidRelation, function(tag) {
+                $('[data-filter-id="' + tag + '"]').addClass('selected');
+            });
+        },
+        /*
+          @private method : update possible filters and Taglist
+          @param : null
+        */
+        _update = function() {
+
+            if (_filterActive !== true) {
+                return;
+            }
+            if (_filterChanged) {
+                _updateFilterSidRelation();
+                _refreshView();
+            }
+        },
+        /*
+        @private Method : initialize the module
+        */
+        _initialize = function() {
+            $_elem = $(element),
+            _options = $.extend({}, defaults, options);
+            _cacheObjects();
+            _initDropdown();
+            _bindEvents();
+        };
+        _initialize();
+    };
+
+}(window, jQuery, cartier.location));

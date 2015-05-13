@@ -1,0 +1,28 @@
+  <!-- Services Block Starts Here-->
+<div class="grid services clearfix">
+    <h3 class="heading3">Services</h3>
+
+     <div class="grid__item one-half palm--one-whole">
+        <div class="grid services__block clearfix image-right">
+          <div class="grid__item two-thirds palm--two-thirds services_block__image">
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->contactus.jpg"  alt="contact us"/>
+          </div>
+          <div class="grid__item one-third palm--one-third services_block__text">
+             <a href="#" class="text-link">Contact us</a>
+          </div>
+        </div>
+     </div>
+
+      <div class="grid__item one-half palm--one-whole">
+        <div class="grid services__block clearfix">
+          <div class="grid__item two-thirds palm--two-thirds services_block__image">
+             <img src="<!--#echo var="CONTENT_IMG_PATH" -->store_locator.jpg"  alt="store locator">
+          </div>
+          <div class="grid__item one-third palm--one-third services_block__text">
+              <a href="#" class="text-link">Store locator</a>
+          </div>
+        </div>
+      </div>
+
+</div>
+ <!-- Services Block Ends Here-->

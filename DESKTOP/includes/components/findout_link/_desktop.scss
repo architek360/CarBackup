@@ -1,0 +1,149 @@
+/*------------------------------------*\
+    FIND OUT LINK  -- Desktop CSS
+\*------------------------------------*/
+
+/**
+* MAIN CONTAINER.... (.know-more)
+* HEADING BLOCK ....(.know-more_node__title)
+* DESCRIPTION BLOCK ....(.know-more_node__desc)
+* ARROW BLOCK i.e. expand and collapse of the accordion (.on, .off) 
+*/
+
+
+
+.know-more{
+	display:block;
+	margin:0 auto;
+	border-top: 1px solid $primary-17;
+	width:586px;
+	clear:both;
+	@include rem('padding-bottom', 60px);
+	color:$primary-3;
+	@include main-font;
+
+	.know-more__wrapper{
+		border: none;
+		color: $primary-3;
+		@include rem('padding-top', 5px);
+
+		&:last-child{
+			@include rem('padding-bottom', 0px);
+		}
+		.know-more__node{
+			border: none;
+		}
+
+
+		/*------------------------------------*\
+   			 HEADING BLOCK 
+		\*------------------------------------*/
+
+		.know-more_node__title{
+			@include rem('padding', 0px);
+			text-align:left;
+			position:relative;
+			@include main-font;
+			@include rem('letter-spacing', 1px);
+			text-transform: none;
+			cursor: pointer;
+			width: 200px;
+			margin: 0 auto;
+			@include didotroman-font();
+
+
+
+			.know-more_node_title__ques{
+				@include rem('min-height', 30px);
+				@include rem('padding', 10px 30px 6px 0px);
+				display: block;
+				@include rem('margin-top', 15px);
+
+				p {
+					color: #7f7f7f;
+					@include f(18);
+				}
+
+
+
+			}
+			
+			p{
+				@include rem('padding', 0 0 0 15px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include f(13);
+		 	 	
+			}
+
+			/*------------------------------------*\
+   					 ARROW BLOCK 
+			\*------------------------------------*/
+
+			span{
+				position:absolute;
+				left:0px;
+				top:30%;
+				@include setSpriteDesktop(100%, 15px ,-1px ,-643px, transparent);
+			}
+
+			span.on{
+				@include setSpriteDesktop(100%, 15px ,-1px ,-692px, transparent);
+				@include rotate(0deg);
+				
+			}
+
+
+			span.off{
+				@include setSpriteDesktop(100%, 15px ,-1px ,-643px, transparent);
+			}
+		}
+
+		.know-more_node__title:hover p {
+			color: $primary-2;
+		}
+
+
+		/*------------------------------------*\
+   			 DESCRIPTION BLOCK
+		\*------------------------------------*/
+		.know-more_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color(#d4d4d4);
+		 	
+		 	p,ul,ol {
+		 		@include rem(padding, 0px 0 20px 15px);
+		 	}
+		 	ul,ol {
+		 		/*@include rem(margin-top, -30px);*/
+		 		line-height: 32px;
+		 	}
+		 	li {
+		 		@include rem(padding-left, 25px);
+		 	}
+
+		}
+	}
+
+	.content-more{
+
+		p{
+			margin-top: 21px;
+			padding-bottom: 37px;
+			text-align: left;
+		}
+
+		.font-diddot-it{
+			@include didotromanIt-font();
+			@include f(26);
+			line-height: 30px;
+			text-align: center;
+			color:#676767;
+		}
+
+		hr{
+			margin: 0px;
+		}
+	}
+}
+

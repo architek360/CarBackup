@@ -1,0 +1,266 @@
+    <div class="error_message_js-reg-step-2" style="display:none;"></div>
+<div class="form-layout js-reg-step-2">
+    <form method="POST" action="/ja/services/my-cartier/registrationstep2.mobile.desktop.html" id="js-reg-step-2" name="js-reg-step-2" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-reg-step-2"><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/my-cartier/registrationstep2/jcr:content/par/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><input type="hidden" name=":redirect" value="/ja/services/my-cartier/registrationstep3.html?abc=true"><div class="form"><fieldset>
+    <div class="comp-rich-text">
+      <h2 style="text-align: center;">ありがとうございました、アカウントの作成に成功しました</h2>
+<p style="text-align: center;"><i>私たちは、あなたが2分で自分のプロフィールを完成示唆するので、あなたは、パーソナライズされた情報と権限の恩恵を受けることができます</i></p>
+<ul>
+<li>カルティエとあなたとの間に </li>
+<li>個人情報</li>
+</ul>
+<p><a adhocenable="false" href="/ja/services/my-cartier.html">この項目をスキップして、私のカルティエに直接移動</a></p>
+</div><div class="heading-wrapper">
+
+<h3 class="heading3"> マイカルティエ</h3>
+
+        </div>
+
+
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><hr><div class="heading-wrapper">
+
+<h5 class="heading5"> カルティエ商品をお持ちですか？</h5>
+
+        </div>
+
+
+<div class="owned-creations js-radiobox"> 
+
+
+<div class="group-wrapper">
+                <div class="form-element radio-wrapper piform_owncreationcheck">   
+                                    <input type="radio" id="no" name="piform_owncreationcheck" value="no" class="form-radio">
+                                   <label for="no" class=" form-radio-label">NO
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper piform_owncreationcheck">   
+                                    <input type="radio" id="yes" name="piform_owncreationcheck" value="yes" class="form-radio">
+                                   <label for="yes" class=" form-radio-label">YES
+</label>                              
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-piform_owncreationcheck"></div><div class="js-owncreation-container display-none">
+    <div class="js-own-dropone">
+
+        <div class="form-element select-wrapper piform_prodline">
+     <select name="piform_prodline" class=" form-select" id="piform_prodline">
+            <option value="ZZJEWELRY">
+                    JEWELRY </option>
+            <option value="ZZFRAGRANCE">
+                    FRAGRANCE </option>
+            <option value="ZZBRIDAL">
+                    BRIDAL </option>
+            <option value="ZZTIMEPIECES">
+                    TIMEPIECES </option>
+            <option value="ZZACCESSORIES">
+                    ACCESSORIES </option>
+            </select>
+    <div class="errormessage" id="errormessage-piform_prodline"></div></div>
+</div>
+    <div class="js-own-droptwo display-none">
+
+        <div class="form-element select-wrapper piform_productCategory">
+     <select>
+           <option value="">Please configure dropdown</option>
+       </select>
+    <div class="errormessage" id="errormessage-piform_productCategory"></div></div>
+</div>
+    <div class="js-own-dropthree display-none">
+            <div class="form-element select-wrapper piform_clientOwnFrom">
+     <select name="piform_clientOwnFrom" class=" form-select" id="piform_clientOwnFrom">
+            <option value="BOUTIQUE">
+                    BOUTIQUE </option>
+            <option value="RETAILER">
+                    RETAILER </option>
+            <option value="GIFT">
+                    GIFT </option>
+            <option value="ONLINE">
+                    ONLINE </option>
+            </select>
+    <div class="errormessage" id="errormessage-piform_clientOwnFrom"></div></div>
+</div>  
+</div>
+
+
+
+
+
+
+</div>
+<br>
+<script>
+    RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : "fieldType",
+                'actionName' : "OwnCreationAction",
+                'currentPagePath' : "/content/car/jp/japan/ja/services/my-cartier/registrationstep2",
+                'elementId' : "yes",
+                'eventName' : "click",
+                'parameters' : ""
+              });
+</script>
+<br><hr></div><div class="parsys_column cq-colctrl-lt0-c1"><hr><div class="interest-product-line"><div class="heading-wrapper">
+
+<h5 class="heading5"> お好きな商品カテゴリー：</h5>
+
+        </div>
+
+
+<div class="group-wrapper">
+                <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="jewelry" name="fn_grpinterdin" value="jewelry" class="form-checkbox">
+                                    <label for="jewelry" class=" form-checkbox-label">ジュエリー 
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="timepieces" name="fn_grpinterdin" value="timepieces" class="form-checkbox">
+                                    <label for="timepieces" class=" form-checkbox-label">ウォッチ / オート オルロジュリー 
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="bridal" name="fn_grpinterdin" value="bridal" class="form-checkbox">
+                                    <label for="bridal" class=" form-checkbox-label">ブライダル 
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="love" name="fn_grpinterdin" value="love" class="form-checkbox">
+                                    <label for="love" class=" form-checkbox-label">LOVE
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="trinity" name="fn_grpinterdin" value="trinity" class="form-checkbox">
+                                    <label for="trinity" class=" form-checkbox-label">トリニティ 
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="fragrance" name="fn_grpinterdin" value="fragrance" class="form-checkbox">
+                                    <label for="fragrance" class=" form-checkbox-label">香水
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                                <input type="checkbox" id="accessories" name="fn_grpinterdin" value="accessories" class="form-checkbox">
+                                    <label for="accessories" class=" form-checkbox-label">レザーグッズ＆アクセサリー 
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_grpinterdin"></div><div class="heading-wrapper">
+
+<h5 class="heading5"> Accessories</h5>
+
+        </div>
+
+
+<div class="group-wrapper">
+                <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0001" name="fn_grpinterdinacc" value="0001" class="form-checkbox">
+                                    <label for="0001" class=" form-checkbox-label">Handbag
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0002" name="fn_grpinterdinacc" value="0002" class="form-checkbox">
+                                    <label for="0002" class=" form-checkbox-label">Small Leather Goods
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0003" name="fn_grpinterdinacc" value="0003" class="form-checkbox">
+                                    <label for="0003" class=" form-checkbox-label">Belt
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0004" name="fn_grpinterdinacc" value="0004" class="form-checkbox">
+                                    <label for="0004" class=" form-checkbox-label">Bags
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0005" name="fn_grpinterdinacc" value="0005" class="form-checkbox">
+                                    <label for="0005" class=" form-checkbox-label">Sunglasses
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0006" name="fn_grpinterdinacc" value="0006" class="form-checkbox">
+                                    <label for="0006" class=" form-checkbox-label">Prescription glasses
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0007" name="fn_grpinterdinacc" value="0007" class="form-checkbox">
+                                    <label for="0007" class=" form-checkbox-label">Pen
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0008" name="fn_grpinterdinacc" value="0008" class="form-checkbox">
+                                    <label for="0008" class=" form-checkbox-label">Scarf
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0009" name="fn_grpinterdinacc" value="0009" class="form-checkbox">
+                                    <label for="0009" class=" form-checkbox-label">Cufflinks
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0010" name="fn_grpinterdinacc" value="0010" class="form-checkbox">
+                                    <label for="0010" class=" form-checkbox-label">Lighter
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0011" name="fn_grpinterdinacc" value="0011" class="form-checkbox">
+                                    <label for="0011" class=" form-checkbox-label">Key Ring
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0012" name="fn_grpinterdinacc" value="0012" class="form-checkbox">
+                                    <label for="0012" class=" form-checkbox-label">Card holder
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0013" name="fn_grpinterdinacc" value="0013" class="form-checkbox">
+                                    <label for="0013" class=" form-checkbox-label">Money Clip
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0014" name="fn_grpinterdinacc" value="0014" class="form-checkbox">
+                                    <label for="0014" class=" form-checkbox-label">Clock
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc">
+                                <input type="checkbox" id="0000" name="fn_grpinterdinacc" value="0000" class="form-checkbox">
+                                    <label for="0000" class=" form-checkbox-label">Other
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_grpinterdinacc"></div></div><hr><div class="own-smartphone"><div class="heading-wrapper">
+
+<h5 class="heading5"> スマートフォン、またはタブレットコンピュータをお持ちですか？</h5>
+
+        </div>
+
+
+<div class="group-wrapper">
+                <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" id="IPHONE" name="fn_grpownsp" value="IPHONE" class="form-checkbox">
+                                    <label for="IPHONE" class=" form-checkbox-label">IPHONE
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" id="IPAD" name="fn_grpownsp" value="IPAD" class="form-checkbox">
+                                    <label for="IPAD" class=" form-checkbox-label">IPAD
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" id="OTHER SMARTPHONE" name="fn_grpownsp" value="OTHER SMARTPHONE" class="form-checkbox">
+                                    <label for="OTHER SMARTPHONE" class=" form-checkbox-label"><p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">その他スマートフォン
+
+                            </p></label></div>
+                        <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" id="OTHER TOUCHSCREEN TABLET" name="fn_grpownsp" value="OTHER TOUCHSCREEN TABLET" class="form-checkbox">
+                                    <label for="OTHER TOUCHSCREEN TABLET" class=" form-checkbox-label"><p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">その他タッチパネル式タブレット端末
+
+                            </p></label></div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_grpownsp"></div></div><hr></div></div><div style="clear:both"></div>
+</fieldset><div class="form-element button-wrapper submit">
+<input class="form-button" type="submit" name="submit" value="2月2日に進み">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

@@ -1,0 +1,25 @@
+/*------------------------------------*\
+   privacy notice -- MOBILE CSS
+\*------------------------------------*/
+/**
+	*  privacy notice css
+
+*/
+
+.privacy-notice {
+	width: 81.25%;
+	margin: 0 auto;
+	@include f(26);
+	.heading2 {
+		@include rem('padding-bottom',50px);
+		border-bottom: 1px solid $primary-3;
+		@include rem('margin-bottom',50px);
+	}
+	.heading4 {
+		@include rem('margin-bottom',20px);
+	}
+	.heading4 + p {
+		padding-top: 0;
+		
+	}
+}

@@ -1,0 +1,333 @@
+/*------------------------------------*\
+    WISHLIST -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.wishlist)
+ * HEADING MODULE... For heading i.e.. h2, h3 (.wishlist__title)
+ * PRODUCT DETAIL ROW...... price detail row(.product-detail)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.wishlist{
+	position: relative;
+ 	width:81.25%;
+ 	margin:20px auto;
+ 	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	padding : 0;
+	text-align:center;
+
+	/*------------------------------------*\
+	    $HEADING CONTAINER
+	\*------------------------------------*/	
+
+	.wishlist__title {
+		display:block;
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		@include rem(padding, 25px 0);
+		@include rem(margin, 0 0 38px 0);
+		.heading4{
+			@include f(24);
+			@include rem(padding, 0px);
+		}
+		.heading2{
+			@include f(34);
+			@include rem(padding, 22px 0 0 0);
+			border:none;
+		}
+	}
+
+	.wishlist__select{
+		.select-label{
+			@include f(28);
+			text-transform:uppercase;
+			@include rem(padding, 0 0 40px 0);
+			@include brand-font;
+			.zero-result-msg {
+				@include f(16);
+				@include rem(padding-top, 30px);
+				@include bold-font;
+			}
+		}
+		.form-select{
+			@include main-font;
+		}
+		.label-name{
+			@include bold-font;
+			display: inline-block;
+			text-align: right;
+			text-transform: uppercase;
+			@include f(21);
+		}
+			
+		.edit-field{
+			@include rem(margin, 20px 0 30px 0);
+			.list-name{
+				@include brand-font;
+				display: inline-block;
+				text-align: right;
+				text-transform: uppercase;
+				@include f(28);
+			}
+			.form-input{
+				width: 40%;
+				display: inline-block;
+			}
+			.form-label{
+				@include brand-font;
+			}
+		}
+		.delete-message{
+			@include rem('padding', 10px);
+			@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+			border:1px solid red;
+			text-align:left;
+			@include main-font;
+			@include f(18);
+		}
+		.loaderImage{
+			@include rem('margin-top', -43px);
+		}
+		.edit-icon {
+         	@include setSprite(27px, 29px, -730px, -134px);         
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			border-left:1px solid $primary-8;
+			position:relative;
+			@include rem('top', -1px);
+        }
+        .delete-icon {
+       		@include setSprite(27px, 29px, -623px, -135px);           
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			border-left:1px solid $primary-8;
+			position:relative;
+			@include rem('top', -1px);
+         }
+        .address-button{
+        	display:table;
+        	@include rem('height', 87px);
+        	width:100%;
+        	border-bottom:1px solid $primary-2;
+        	@include rem(margin, 20px 0 51px 0);
+			.col{
+        		width:49%;
+        		@include f(20);
+        		@include bold-font;
+        		text-transform:uppercase;
+        		display:inline-block;
+        		@include box-sizing(border-box);
+        		@include rem(padding, 20px 0 0);
+        		.cta-button{
+        			margin:0px auto 20px;
+        		}
+            }
+        	.col--left{
+        		text-align:left;
+        	}
+
+        	.col--right{
+        		text-align:right;
+        	}
+		}
+        .edit-wrapper{
+        	display:table;
+        	@include rem('height', 107px);
+        	width:100%;
+        	border-bottom:1px solid $primary-2;
+        	@include rem(margin, 0 0 51px 0);
+        	.one-half{
+        		width:50%;
+        		@include f(20);
+        		@include bold-font;
+        		text-transform:uppercase;
+        		display: table-cell;
+				vertical-align: middle;
+        	}
+        	.grid--left{
+        		text-align:left;
+        	}
+        }
+	}
+
+	/*------------------------------------*\
+	    $SELECT WISHLIST CONATINER
+	\*------------------------------------*/
+
+	.wishlist__separator{
+		@include rem('height', 1px);
+		@include rem('margin', 39px 0 0);
+		background:$primary-2;
+	}
+	.wishlist__info-notice{
+		@include rem('padding-bottom', 30px);
+	}
+
+	/*------------------------------------*\
+	    PRODUCT DETAIL CONTAINER
+	\*------------------------------------*/
+
+	.product-wrapper{
+		position: relative;
+	}
+	.product-detail{
+		display:block;
+		@include f(22);
+		@include main-font;
+		@include font-color($primary-2);
+		border: 1px solid $primary-11;
+		background: $primary-1; /* Old browsers */
+		text-align:center;
+		margin: 0 auto;
+		@include rem('padding', 18px 0 0);
+		@include linear-gradient(135deg, $primary-1 73%, $primary-28 0%, $primary-27 100%);
+		h3{
+			@include rem('padding', 2px 0 0 0);
+			@include rem('margin', 6px 0);
+			@include f(28);
+		}
+		.product-detail__variant{
+			display:block;
+			@include f(28);
+			@include main-font;
+			font-style:italic;
+			font-weight:normal;
+			@include rem('margin', 6px 0);
+		}
+		.product-detail__size{
+			display:inline-block;
+			@include f(16);
+			@include brand-font;
+			text-transform:uppercase;
+			font-weight:bold;
+			@include rem('margin', 6px 0);
+			@include rem('line-height', 15px);
+		}
+		.product-detail__ref{
+			@include f(16);
+			@include brand-font;
+			text-transform:uppercase;
+			font-weight:bold;
+		}
+		.filter-wrapper{
+			@include rem('margin', 10px 24px 30px);
+			display:inline-block;
+			width:94%;
+			clear: both;
+			.more-button{
+				display:inline-block;
+				width:33%;
+				@include rem(margin, 20px 0 0 0);
+				@include bold-font;
+				text-transform:uppercase;
+				@include f(18);
+			}
+			.arrow-show{
+				@include rem('top', 0px);
+				@include rem('margin-right', 12px);
+			}
+			.select-1{
+				width:50%;
+				display:inline-block;
+				@include main-font;
+			}
+		}
+
+	/*------------------------------------*\
+	    $PRODUCT CONTAINER
+	\*------------------------------------*/
+
+		.product{
+			display:block;
+			padding: 0;
+			.product__image{
+				display: inline-block;	
+				width:55%;
+				@include rem('height', 220px);
+				text-align: left;
+				padding: 10px 0;
+				.image{
+					max-height: 100%;
+					max-width: 100%;
+				}
+			}
+			.product__price{
+				@include rem('margin', 40px 0 0);
+				@include f(40);
+				font-weight: 300;
+				text-transform: uppercase;
+				text-align: center;
+				max-width: 43%;
+				display: inline-block;
+				vertical-align: top;
+				width: auto;
+				.number-items {
+					display: block;
+					@include f(24);
+				}
+				.price-text {
+					@include rem('margin-top' ,17px);
+					display: block;
+				}
+				.note{
+					@include font-color($primary-3);
+					font-style:italic;
+					@include f(23);
+					text-transform:none;
+					display: block;
+					@include rem('padding-top' ,13px);
+				}
+			}
+		}
+		.select-1{
+			width:81%;
+			float:left;
+			@include rem('margin' ,0 25px 0 0);
+		}
+		.more-button{
+			width:15%;
+			vertical-align:middle;
+			display:table-cell;
+			@include rem('padding' ,0px);
+		}
+	}
+	.button-wrapper{
+		@include rem('padding' ,28px 0 0 0);
+		.cta--red-pad-30{
+			@include rem('margin' ,0 0 30px 0);
+		}
+
+	}
+	.message-wrapper{
+		border:1px solid $primary-3;
+		@include rem('padding' ,30px 25px 36px);
+		text-align:left;
+		@include linear-gradient(-75deg, #000000 70%, #010000 0%, #460000 100%);
+		.form-label{
+			@include bold-font;
+			@include f(20);
+			text-transform:uppercase;
+			@include rem('padding' ,0 0 18px);
+		}
+		.form-textarea{
+			background: rgba(96, 96, 96, 0.3);
+		}
+	}
+}
+.breadcrumb{
+	border:none;
+}
+.wishlist-close{
+	@include setSprite(30px, 30px, -629px, -123px);           
+	@include font-color($primary-2);
+	display : block;
+	position: absolute;
+	right: 0;
+}

@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    Back button -- Desktop CSS
+\*------------------------------------*/
+/*
+* MODULE CONTAINER.... (.back-button)
+* ANCHOR STYLING...... (.back-button a)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.back-button{
+  left: 0;
+  position: relative;
+  top: 0;
+  width: auto;
+  float: left;
+  background:none;
+ 
+  a{
+      @include font-color($primary-3);  
+      @include rem('padding-left', 17px);  
+      @include main-font;
+      font-style: italic;
+      @include f(12);
+      @include setSpriteDesktop(100%, 24px, -424px, -5px, transparent);
+      cursor: pointer;
+
+  }
+
+  a:hover{
+		@include setSpriteDesktop(100%, 24px, -424px, -31px, transparent);
+		@include font-color($primary-2);  
+  }
+
+}

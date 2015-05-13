@@ -1,0 +1,55 @@
+.overlay-form-edit{
+	.addressform_lastName1, .js-address-form .addressform_address5{
+		@include rem('margin-top', 15px);
+	}
+	.js-address-form {
+		background: none;
+		border: 0 none;
+		@include rem('margin', 0 0 0 20px);
+		.label, .form-element.input-wrapper.firstname1, .form-element.input-wrapper.address7{
+			width: 46%;
+			clear: left;
+		}
+		.form-element.input-wrapper.lastname1{
+			width: 49%;
+			@include rem('margin-left', 8px);
+		}
+
+		.form-element.input-wrapper.address2{
+			float: left;
+			@include rem('margin-right', 117px);
+		    width: 23%;
+		}
+		.form-element.input-wrapper.address5{
+			width: 49%;
+		}
+		.form-element.input-wrapper.address12{
+			width: 21%;
+		}
+		.non-mandatory.form-element.input-wrapper.phone{
+			width: 46%;
+			@include rem('margin-left', 8px);
+		}
+		.form-element.input-wrapper.zip{
+			clear: left;
+			width: 49%;
+		}
+		.form-address-selector__radio{
+			@include rem('margin-top', 41px);
+		}
+		.form-address-selector__bracket{
+			@include rem('margin-top', 34px);
+		}
+		.radio{
+			span{
+				background-position: -54px -461px;
+			}
+			.checked{
+				background-position: -70px -460px;
+			}
+		}
+		.form-address-selector{
+			@include rem('height', 202px);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+    <div class="radio-main-label">
+    <!--#set var="label-name" value="${head-label-name}" -->
+    <!--#set var="mandatory" value="yes"-->
+    <!--#include virtual="../../components/form_elements/label.shtml" -->
+    </div>
+
+    <div class="slide_switch">
+        <input type="radio" id="<!--#echo var="radio-text1" -->" name="<!--#echo var="input-name" -->" value="<!--#echo var="radio-value1" -->" checked>
+        <label for="<!--#echo var="radio-text1" -->"><!--#echo var="radio-text1" --></label>
+        <input type="radio" id="<!--#echo var="radio-text2" -->" name="<!--#echo var="input-name" -->" value="<!--#echo var="radio-value2" -->">
+        <label for="<!--#echo var="radio-text2" -->"><!--#echo var="radio-text2" --></label>
+    </div>

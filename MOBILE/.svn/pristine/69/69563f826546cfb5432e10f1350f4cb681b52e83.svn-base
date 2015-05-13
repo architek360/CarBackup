@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    TAB BOUTIQUE SELECT  -- Mobile CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER....(.tab_boutique_select)
+* JAPAN BILLING SHIPPING ....(.japan-billing-shipping )
+* BOUTIQUE INFO ....(.tab_boutique_select__boutiqueinfo) 
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.tab_boutique_select{
+	border-top:solid 1px $primary-26;
+	.tab_boutique_select__heading {
+		@include rem('padding' , 50px  0px 0px  0px);
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.form-label {
+		width : 100%;
+		text-align: left;
+		@include rem('margin-bottom' , 10px);
+		text-transform:  uppercase;
+	}
+	.heading4{
+		@include f(20);
+		@include rem('padding',20px 0);
+	}
+	.heading3{
+		@include f(24);
+		@include rem('padding', 0 0  20px 0 );
+	}
+	.tab_boutique_select__desc {
+		@include f(16);
+		@include rem('padding' , 10px 0);
+		text-align: center;
+		display : block;
+	}
+	.tab_boutique_select__boutiqueinfo {
+		border-top:solid 1px $primary-26;
+		border-bottom:solid 1px $primary-26;
+		@include rem('margin-top' ,50px);
+		@include rem('padding-bottom',20px);
+	}
+}
+
+/*------------------------------------*\
+    $JAPAN BILLING SHIPPING CONTAINER
+\*------------------------------------*/
+
+.japan-billing-shipping {
+	/* over ride tab width for japan country*/
+	.js-radio-tabs{
+		.radio-btn{
+			.radio-btn-li{
+				width: 31%;
+			}
+		}
+	}	
+}
+
+/*------------------------------------*\
+    $BOUTIQUE INFO CONTAINER
+\*------------------------------------*/
+
+.tab_boutique_select__boutiqueinfo > img {
+    margin: 10px auto;
+    width: 80%;
+}

@@ -1,0 +1,1909 @@
+@charset "IBM437";
+/*------------------------------------*\
+    $MAIN THEME - Mobile CSS
+\*------------------------------------*/
+/**
+ * IMPORT VENDOR  LIBS....................get all compass vendor libs
+ * IMPORT BASE STYLES & MIXINS ...........CSS Wizardy Grid System, Base, Helper(mixins)
+ * IMPORT THEMES..........................get all themes Styles
+ * IMPORT BASE MOBILE STYLES..............get default base mobile Style
+ * HEADER & FOOTER........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles 
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Vendor Libs
+\*------------------------------------*/
+/* line 17, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*----------------------------------------------------------*\
+    $IMPORT - CSS Wizardy Grid System, Base, Helper(mixins)
+\*----------------------------------------------------------*/
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+/**
+ * Would you like push and pull classes enabled?
+ */
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+/* line 213, ../../../../../../sass/_csswizardry-grids.scss */
+.grid, .grid--rev, .grid--full, .grid--right, .grid--center {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: -3.693em;
+  /* [3] */
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+/* line 239, ../../../../../../sass/_csswizardry-grids.scss */
+.grid__item {
+  /* display:inline-block;  */
+  /* [1] */
+  float: left;
+  padding-left: 3.693em;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear.
+ */
+/* line 261, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--rev {
+  direction: rtl;
+  text-align: left;
+}
+/* line 266, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--rev > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ */
+/* line 276, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--full {
+  margin-left: 0;
+}
+/* line 280, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--full > .grid__item {
+  padding-left: 0;
+}
+
+/**
+ * Align the entire grid to the right.
+ */
+/* line 289, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--right {
+  text-align: right;
+}
+/* line 293, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--right > .grid__item {
+  text-align: left;
+}
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes.
+ */
+/* line 303, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--center {
+  text-align: center;
+}
+/* line 307, ../../../../../../sass/_csswizardry-grids.scss */
+.grid--center > .grid__item {
+  text-align: left;
+}
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+/**
+ * Our regular, non-responsive width classes.
+ */
+/**
+ * Whole
+ */
+/* line 329, ../../../../../../sass/_csswizardry-grids.scss */
+.one-whole {
+  width: 100%;
+}
+
+/**
+ * Halves
+ */
+/* line 335, ../../../../../../sass/_csswizardry-grids.scss */
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%;
+}
+
+/**
+ * Thirds
+ */
+/* line 341, ../../../../../../sass/_csswizardry-grids.scss */
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%;
+}
+
+/* line 342, ../../../../../../sass/_csswizardry-grids.scss */
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%;
+}
+
+/**
+ * Quarters
+ */
+/* line 348, ../../../../../../sass/_csswizardry-grids.scss */
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%;
+}
+
+/* line 350, ../../../../../../sass/_csswizardry-grids.scss */
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%;
+}
+
+/**
+ * Fifths
+ */
+/* line 356, ../../../../../../sass/_csswizardry-grids.scss */
+.one-fifth, .two-tenths {
+  width: 20%;
+}
+
+/* line 357, ../../../../../../sass/_csswizardry-grids.scss */
+.two-fifths, .four-tenths {
+  width: 40%;
+}
+
+/* line 358, ../../../../../../sass/_csswizardry-grids.scss */
+.three-fifths, .six-tenths {
+  width: 60%;
+}
+
+/* line 359, ../../../../../../sass/_csswizardry-grids.scss */
+.four-fifths, .eight-tenths {
+  width: 80%;
+}
+
+/**
+ * Sixths
+ */
+/* line 365, ../../../../../../sass/_csswizardry-grids.scss */
+.one-sixth, .two-twelfths {
+  width: 16.666%;
+}
+
+/* line 369, ../../../../../../sass/_csswizardry-grids.scss */
+.five-sixths, .ten-twelfths {
+  width: 83.333%;
+}
+
+/**
+ * Eighths
+ */
+/* line 375, ../../../../../../sass/_csswizardry-grids.scss */
+.one-eighth {
+  width: 12.5%;
+}
+
+/* line 377, ../../../../../../sass/_csswizardry-grids.scss */
+.three-eighths {
+  width: 37.5%;
+}
+
+/* line 379, ../../../../../../sass/_csswizardry-grids.scss */
+.five-eighths {
+  width: 62.5%;
+}
+
+/* line 381, ../../../../../../sass/_csswizardry-grids.scss */
+.seven-eighths {
+  width: 87.5%;
+}
+
+/**
+ * Tenths
+ */
+/* line 387, ../../../../../../sass/_csswizardry-grids.scss */
+.one-tenth {
+  width: 10%;
+}
+
+/* line 389, ../../../../../../sass/_csswizardry-grids.scss */
+.three-tenths {
+  width: 30%;
+}
+
+/* line 393, ../../../../../../sass/_csswizardry-grids.scss */
+.seven-tenths {
+  width: 70%;
+}
+
+/* line 395, ../../../../../../sass/_csswizardry-grids.scss */
+.nine-tenths {
+  width: 90%;
+}
+
+/**
+ * Twelfths
+ */
+/* line 401, ../../../../../../sass/_csswizardry-grids.scss */
+.one-twelfth {
+  width: 8.333%;
+}
+
+/* line 405, ../../../../../../sass/_csswizardry-grids.scss */
+.five-twelfths {
+  width: 41.666%;
+}
+
+/* line 407, ../../../../../../sass/_csswizardry-grids.scss */
+.seven-twelfths {
+  width: 58.333%;
+}
+
+/* line 411, ../../../../../../sass/_csswizardry-grids.scss */
+.eleven-twelfths {
+  width: 91.666%;
+}
+
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+@media only screen and (max-width: 700px) {
+  /**
+   * Whole
+   */
+  /* line 329, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 335, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-half, .palm--two-quarters, .palm--three-sixths, .palm--four-eighths, .palm--five-tenths, .palm--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 341, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-third, .palm--two-sixths, .palm--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 342, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--two-thirds, .palm--four-sixths, .palm--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 348, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-quarter, .palm--two-eighths, .palm--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 350, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--three-quarters, .palm--six-eighths, .palm--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 356, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-fifth, .palm--two-tenths {
+    width: 20%;
+  }
+
+  /* line 357, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--two-fifths, .palm--four-tenths {
+    width: 40%;
+  }
+
+  /* line 358, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--three-fifths, .palm--six-tenths {
+    width: 60%;
+  }
+
+  /* line 359, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--four-fifths, .palm--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 365, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-sixth, .palm--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 369, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--five-sixths, .palm--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 375, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 377, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 379, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 381, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 387, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-tenth {
+    width: 10%;
+  }
+
+  /* line 389, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--three-tenths {
+    width: 30%;
+  }
+
+  /* line 393, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 395, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 401, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 405, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 407, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 411, ../../../../../../sass/_csswizardry-grids.scss */
+  .palm--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 9999px) and (max-width: 9999px) {
+  /**
+   * Whole
+   */
+  /* line 329, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 335, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-half, .lap--two-quarters, .lap--three-sixths, .lap--four-eighths, .lap--five-tenths, .lap--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 341, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-third, .lap--two-sixths, .lap--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 342, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--two-thirds, .lap--four-sixths, .lap--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 348, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-quarter, .lap--two-eighths, .lap--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 350, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--three-quarters, .lap--six-eighths, .lap--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 356, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-fifth, .lap--two-tenths {
+    width: 20%;
+  }
+
+  /* line 357, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--two-fifths, .lap--four-tenths {
+    width: 40%;
+  }
+
+  /* line 358, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--three-fifths, .lap--six-tenths {
+    width: 60%;
+  }
+
+  /* line 359, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--four-fifths, .lap--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 365, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-sixth, .lap--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 369, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--five-sixths, .lap--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 375, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 377, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 379, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 381, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 387, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-tenth {
+    width: 10%;
+  }
+
+  /* line 389, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--three-tenths {
+    width: 30%;
+  }
+
+  /* line 393, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 395, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 401, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 405, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 407, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 411, ../../../../../../sass/_csswizardry-grids.scss */
+  .lap--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 9999px) and (max-width: 9999px) {
+  /**
+   * Whole
+   */
+  /* line 329, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 335, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-half, .portable--two-quarters, .portable--three-sixths, .portable--four-eighths, .portable--five-tenths, .portable--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 341, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-third, .portable--two-sixths, .portable--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 342, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--two-thirds, .portable--four-sixths, .portable--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 348, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-quarter, .portable--two-eighths, .portable--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 350, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--three-quarters, .portable--six-eighths, .portable--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 356, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-fifth, .portable--two-tenths {
+    width: 20%;
+  }
+
+  /* line 357, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--two-fifths, .portable--four-tenths {
+    width: 40%;
+  }
+
+  /* line 358, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--three-fifths, .portable--six-tenths {
+    width: 60%;
+  }
+
+  /* line 359, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--four-fifths, .portable--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 365, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-sixth, .portable--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 369, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--five-sixths, .portable--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 375, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 377, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 379, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 381, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 387, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-tenth {
+    width: 10%;
+  }
+
+  /* line 389, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--three-tenths {
+    width: 30%;
+  }
+
+  /* line 393, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 395, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 401, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 405, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 407, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 411, ../../../../../../sass/_csswizardry-grids.scss */
+  .portable--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  /**
+   * Whole
+   */
+  /* line 329, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-whole {
+    width: 100%;
+  }
+
+  /**
+   * Halves
+   */
+  /* line 335, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-half, .desk--two-quarters, .desk--three-sixths, .desk--four-eighths, .desk--five-tenths, .desk--six-twelfths {
+    width: 50%;
+  }
+
+  /**
+   * Thirds
+   */
+  /* line 341, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-third, .desk--two-sixths, .desk--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 342, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+   * Quarters
+   */
+  /* line 348, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-quarter, .desk--two-eighths, .desk--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 350, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--three-quarters, .desk--six-eighths, .desk--nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+   * Fifths
+   */
+  /* line 356, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-fifth, .desk--two-tenths {
+    width: 20%;
+  }
+
+  /* line 357, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--two-fifths, .desk--four-tenths {
+    width: 40%;
+  }
+
+  /* line 358, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--three-fifths, .desk--six-tenths {
+    width: 60%;
+  }
+
+  /* line 359, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--four-fifths, .desk--eight-tenths {
+    width: 80%;
+  }
+
+  /**
+   * Sixths
+   */
+  /* line 365, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-sixth, .desk--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 369, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--five-sixths, .desk--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+   * Eighths
+   */
+  /* line 375, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 377, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 379, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 381, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+   * Tenths
+   */
+  /* line 387, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-tenth {
+    width: 10%;
+  }
+
+  /* line 389, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--three-tenths {
+    width: 30%;
+  }
+
+  /* line 393, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 395, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--nine-tenths {
+    width: 90%;
+  }
+
+  /**
+   * Twelfths
+   */
+  /* line 401, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 405, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 407, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 411, ../../../../../../sass/_csswizardry-grids.scss */
+  .desk--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
+/*------------------------------------*\
+    Global -- BASE CSS
+\*------------------------------------*/
+/**
+ * BASIC FRAMEWORK STYLES
+ */
+/* 
+ * DEFAULT FONT FAMILY FOR ALL PAGES
+ */
+/*
+ * DEFAULT FONT FAMILY FOR NAVIGATION LINKS
+ */
+/*//For desktop.css*/
+/*$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+ */
+/*
+$path-images : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/'; 
+*/
+/*
+
+Settings FOR DEV TEAM
+====DO NOT DELETE OR UNCOMMENT====
+
+
+.top-nav{
+	position:static !important;
+}
+
+.main-container{
+	background-color:black !important;
+	margin-top:0px !important;
+}
+
+*/
+/* line 54, ../../../../../../sass/_base.scss */
+html, body {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+  /*font-size: 100%;*/
+  -webkit-font-smoothing: antialiased;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+/* line 61, ../../../../../../sass/_base.scss */
+div {
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 63, ../../../../../../sass/_base.scss */
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 70, ../../../../../../sass/_base.scss */
+h1, h2, h3 {
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 74, ../../../../../../sass/_base.scss */
+h1 {
+  font-size: 30px;
+}
+
+/* line 75, ../../../../../../sass/_base.scss */
+h2 {
+  font-size: 26px;
+}
+
+/* line 76, ../../../../../../sass/_base.scss */
+h3 {
+  font-size: 20px;
+}
+
+/* line 78, ../../../../../../sass/_base.scss */
+html, button, input, select, textarea {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 95, ../../../../../../sass/_base.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 100, ../../../../../../sass/_base.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 109, ../../../../../../sass/_base.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 113, ../../../../../../sass/_base.scss */
+.f-left {
+  float: left;
+}
+
+/* line 117, ../../../../../../sass/_base.scss */
+.f-right {
+  float: right;
+}
+
+/* line 120, ../../../../../../sass/_base.scss */
+.f-none {
+  float: none;
+}
+
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS, MIXINS
+ * MOBILE & SHARED STYLES
+ * DESKTOP STYLES
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/* change consulte*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'CarteirRegular';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Book.otf");
+}
+
+@font-face {
+  font-family: 'CarteirBold';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Bold_0.otf");
+}
+
+@font-face {
+  font-family: 'CarteirMedium';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Medium.otf");
+}
+
+@font-face {
+  font-family: 'proximanovaBold';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont.eot");
+  src: local("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont"), url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont.eot");
+  src: local("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont"), url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/EBGaramond-webfont.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'didotromanitalic';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/didotromanitalic.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'didotroman';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/didotroman.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'mb-script';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/mb_script_rund.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'CartierLoveTM';
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.eot");
+  src: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.woff") format("woff"), url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.ttf") format("truetype");
+}
+
+/* line 393, ../../../../../../sass/bridal_theme/_theme.scss */
+.body-wrapper {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//content/bridal-light.jpg");
+}
+
+/* line 397, ../../../../../../sass/bridal_theme/_theme.scss */
+.text-link {
+  /*color: $light_grey;*/
+}
+
+/* line 402, ../../../../../../sass/bridal_theme/_theme.scss */
+.top-nav .top-nav__menu {
+  float: left;
+  padding: 18px 26px;
+  margin-top: 10px;
+}
+/* line 406, ../../../../../../sass/bridal_theme/_theme.scss */
+.top-nav .top-nav__menu button {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -516px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 36px;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/* line 415, ../../../../../../sass/bridal_theme/_theme.scss */
+#mobile-nav-search {
+  color: black;
+}
+
+/* bridal collection list title css strat here*/
+/* line 420, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection-image {
+  display: block;
+}
+/* line 422, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection-image img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 429, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection .collection__title {
+  display: block;
+  margin-top: 27px;
+}
+/* line 432, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection .collection__title .heading4 {
+  font-size: 34px;
+  font-family: "CarteirBold", sans-serif;
+  border-top: 1px solid #a0a0a0;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+/* line 439, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection .collection__title .heading2 {
+  font-size: 34px;
+  font-family: "CarteirBold", sans-serif;
+  padding: 0 0 45px 0;
+}
+/* line 446, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection .collection__listing .product-push {
+  margin-bottom: 29px;
+  margin-top: 0px;
+  height: 230px;
+}
+/* line 451, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection .collection__listing .product-push .product-push__desc
+.more-button {
+  font-size: 24px;
+}
+
+/* line 459, ../../../../../../sass/bridal_theme/_theme.scss */
+.main-container .heading7 {
+  color: #a0a0a0;
+  width: 81.25%;
+  margin: 0 auto;
+  /*margin-bottom: 0;
+  @include rem('margin-top', 38px);*/
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 25px 0px 23px;
+  font-family: "CarteirRegular", sans-serif;
+  font-weight: normal;
+  line-height: 27px;
+  /*line-height:1.4em;*/
+}
+/* line 474, ../../../../../../sass/bridal_theme/_theme.scss */
+.main-container .heading6 {
+  font-family: "CarteirRegular", sans-serif;
+  color: #a0a0a0;
+  width: 81.25%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  padding: 0px;
+  padding-bottom: 26px;
+  /*line-height:1.4em;*/
+}
+
+/* bridal collection list title css strat here*/
+/*------------------------------------*\
+    $LEFT NAV  COMMON STYLING
+\*------------------------------------*/
+/* line 514, ../../../../../../sass/bridal_theme/_theme.scss */
+.nav {
+  color: white;
+}
+
+/* line 518, ../../../../../../sass/bridal_theme/_theme.scss */
+.cta--red {
+  color: white;
+}
+
+/* line 522, ../../../../../../sass/bridal_theme/_theme.scss */
+.nav ul li .nav-arrow {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/right-icon.png") no-repeat 97% 49%;
+}
+
+/* line 526, ../../../../../../sass/bridal_theme/_theme.scss */
+.nav ul li .nav-arrow-down {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/down-icon.png") no-repeat 98% 49%;
+}
+
+/* line 530, ../../../../../../sass/bridal_theme/_theme.scss */
+#mobile-nav-search {
+  background-color: white;
+}
+
+/* line 534, ../../../../../../sass/bridal_theme/_theme.scss */
+.product-listing {
+  background: white url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bridal_product_list_bg.jpg") no-repeat bottom right 0;
+}
+
+/* line 540, ../../../../../../sass/bridal_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -969px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+/* line 546, ../../../../../../sass/bridal_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span.on {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -1009px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+/* line 549, ../../../../../../sass/bridal_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span.off {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -969px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+
+/* line 555, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-2 {
+  /*@include setSprite(27px, 29px, -669px, -60px);*/
+  background: #4d4d4d url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/select_arrow_bridal.png") no-repeat right 0;
+}
+
+/* line 560, ../../../../../../sass/bridal_theme/_theme.scss */
+.degree360-icon {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -99px -961px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+  height: 23px;
+}
+
+/* line 564, ../../../../../../sass/bridal_theme/_theme.scss */
+.carousel .prev span {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -821px -294px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 568, ../../../../../../sass/bridal_theme/_theme.scss */
+.carousel .next span {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -874px -293px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 574, ../../../../../../sass/bridal_theme/_theme.scss */
+.ambassador-cont .att-accordion span {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -968px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+/* line 577, ../../../../../../sass/bridal_theme/_theme.scss */
+.ambassador-cont .att-accordion span.on {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -1009px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+/* line 580, ../../../../../../sass/bridal_theme/_theme.scss */
+.ambassador-cont .att-accordion span.off {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -968px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+
+/* line 588, ../../../../../../sass/bridal_theme/_theme.scss */
+.form-check input:checked + span.form-check__icon {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -702px -50px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+/* line 595, ../../../../../../sass/bridal_theme/_theme.scss */
+.body-wrapper {
+  max-width: 1600px;
+  margin: auto;
+  position: relative;
+}
+/* line 599, ../../../../../../sass/bridal_theme/_theme.scss */
+.body-wrapper .header {
+  background: rgba(240, 240, 240, 0.8);
+}
+
+/* line 605, ../../../../../../sass/bridal_theme/_theme.scss */
+.nav-heading-cont .nav-show {
+  background: #EEEEEE;
+}
+
+/* line 611, ../../../../../../sass/bridal_theme/_theme.scss */
+.foundation .nav-link {
+  background-image: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/foundation-logo-bridal.png");
+  background-repeat: no-repeat;
+}
+
+/* line 619, ../../../../../../sass/bridal_theme/_theme.scss */
+.search-form .search__term {
+  background: white;
+}
+
+/* line 625, ../../../../../../sass/bridal_theme/_theme.scss */
+.search-wrapper .search__button {
+  background-position: -57px -847px;
+}
+
+/* line 630, ../../../../../../sass/bridal_theme/_theme.scss */
+.main-container .collection-pushes-wrapper h3 {
+  font-size: 16px;
+  color: #a0a0a0;
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 637, ../../../../../../sass/bridal_theme/_theme.scss */
+.pushes-wrapper-service-push {
+  border: none;
+}
+/* line 639, ../../../../../../sass/bridal_theme/_theme.scss */
+.pushes-wrapper-service-push .push-hover {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bridal_ie_0.8.png");
+}
+/* line 641, ../../../../../../sass/bridal_theme/_theme.scss */
+.pushes-wrapper-service-push .push-hover .more a {
+  color: #fff;
+}
+/* line 645, ../../../../../../sass/bridal_theme/_theme.scss */
+.pushes-wrapper-service-push .push-col_title {
+  color: #797878;
+}
+/* line 647, ../../../../../../sass/bridal_theme/_theme.scss */
+.pushes-wrapper-service-push .push-col_title .text-link {
+  color: white;
+}
+/* line 651, ../../../../../../sass/bridal_theme/_theme.scss */
+.pushes-wrapper-service-push .text-link:hover {
+  color: #797878;
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+/* line 659, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-wrapper {
+  color: #a0a0a0;
+}
+/* line 661, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-wrapper label {
+  color: #a0a0a0;
+}
+/* line 664, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-wrapper .selector {
+  background-position: -427px -815px;
+}
+/* line 666, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-wrapper .selector span {
+  background-position: right -774px;
+}
+
+/* line 673, ../../../../../../sass/bridal_theme/_theme.scss */
+.form-select-box option {
+  background-color: #eeeeee;
+  color: #a0a0a0;
+}
+
+/* line 679, ../../../../../../sass/bridal_theme/_theme.scss */
+.product_listing_class {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bridal-listing-models.png") no-repeat left bottom;
+}
+
+/* line 683, ../../../../../../sass/bridal_theme/_theme.scss */
+.push-over {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 687, ../../../../../../sass/bridal_theme/_theme.scss */
+#modalWindow {
+  background: white;
+}
+
+/*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+/* line 696, ../../../../../../sass/bridal_theme/_theme.scss */
+.input-wrapper .form-input {
+  color: #4d4d4d;
+  background-color: #eeeeee;
+  border: 1px solid #bdbdbd;
+}
+
+/*------------------------------------*\
+    	$RADIO ELEMENTS
+\*------------------------------------*/
+/* line 708, ../../../../../../sass/bridal_theme/_theme.scss */
+.radio span {
+  background-position: -85px -460px;
+}
+/* line 711, ../../../../../../sass/bridal_theme/_theme.scss */
+.radio .checked {
+  background-position: -100px -460px;
+}
+
+/* line 718, ../../../../../../sass/bridal_theme/_theme.scss */
+.group-wrapper .radio span {
+  background-position: -85px -460px;
+}
+/* line 721, ../../../../../../sass/bridal_theme/_theme.scss */
+.group-wrapper .radio .checked {
+  background-position: -100px -460px;
+}
+
+/* line 730, ../../../../../../sass/bridal_theme/_theme.scss */
+.checkbox-wrapper .form-checkbox-label .checker span {
+  background-position: -14px -482px;
+}
+/* line 733, ../../../../../../sass/bridal_theme/_theme.scss */
+.checkbox-wrapper .form-checkbox-label .checker .checked {
+  background-position: -34px -482px;
+}
+
+/* line 742, ../../../../../../sass/bridal_theme/_theme.scss */
+.checkbox-wrapper #uniform-termsCondition span {
+  background-position: -13px -482px;
+}
+/* line 745, ../../../../../../sass/bridal_theme/_theme.scss */
+.checkbox-wrapper #uniform-termsCondition span.checked {
+  background-position: -89px -482px;
+}
+
+/* line 752, ../../../../../../sass/bridal_theme/_theme.scss */
+.textarea-wrapper .form-textarea {
+  background-color: #eeeeee;
+  border: 1px solid #bdbdbd;
+}
+
+/*------------------------------------*\
+    $MOBILE SELECT ELEMENTS
+\*------------------------------------*/
+/* line 761, ../../../../../../sass/bridal_theme/_theme.scss */
+.selector {
+  background-position: -427px -815px;
+}
+/* line 763, ../../../../../../sass/bridal_theme/_theme.scss */
+.selector span {
+  background-position: right -774px;
+}
+/* line 766, ../../../../../../sass/bridal_theme/_theme.scss */
+.selector option {
+  background-color: #ececec;
+  color: #333333;
+}
+
+/* line 773, ../../../../../../sass/bridal_theme/_theme.scss */
+.checker span {
+  background-position: -14px -482px;
+}
+/* line 776, ../../../../../../sass/bridal_theme/_theme.scss */
+.checker .checked {
+  background-position: -34px -482px;
+}
+
+/* line 785, ../../../../../../sass/bridal_theme/_theme.scss */
+.footer .language-select .wrapper-sub-menu .va-nav .less-arrow {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -203px -225px no-repeat #f2f2f2;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  height: 7px;
+  color: #f2f2f2;
+}
+/* line 789, ../../../../../../sass/bridal_theme/_theme.scss */
+.footer .language-select .wrapper-sub-menu .va-nav .more-arrow {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -203px -250px no-repeat #f2f2f2;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  height: 7px;
+  color: #f2f2f2;
+}
+
+/*------------------------------------*\
+    HEADER OPACITY CHANGES
+\*------------------------------------*/
+/*.primary-nav-container{
+	opacity: 0.8;
+}
+*/
+/*------------------------------------*\
+  BRIDAL MULTILPE VIDEO PLAYER CHANGES
+\*------------------------------------*/
+/* line 810, ../../../../../../sass/bridal_theme/_theme.scss */
+.multiple-video .multiple_video_wrapper .carousel {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* line 816, ../../../../../../sass/bridal_theme/_theme.scss */
+.collection-push {
+  border: 1px solid #dedede;
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/listings-collection-bridal.png") no-repeat right bottom;
+}
+
+/* line 821, ../../../../../../sass/bridal_theme/_theme.scss */
+.primary-nav-container {
+  background: rgba(240, 240, 240, 0.8);
+}
+
+/* line 828, ../../../../../../sass/bridal_theme/_theme.scss */
+.primary-nav-container .first-level-nav .nav-show {
+  background: rgba(240, 240, 240, 0.8);
+}
+
+/* line 834, ../../../../../../sass/bridal_theme/_theme.scss */
+.header .right-nav .right-nav__list li.mycartier .nav-link {
+  background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -232px -1179px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 58px;
+  height: 15px;
+}
+
+/* line 838, ../../../../../../sass/bridal_theme/_theme.scss */
+.servicegrid .services_block__text a p {
+  color: #a0a0a0;
+}
+
+/* line 842, ../../../../../../sass/bridal_theme/_theme.scss */
+.sfy-help-carousel .carousel .bx-wrapper li .sfy_content > h2, .bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content > h2 {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+/* line 850, ../../../../../../sass/bridal_theme/_theme.scss */
+.sfy-help-carousel .carousel .bx-wrapper li .sfy_content > div, .bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content > div {
+  margin-top: 55px;
+}
+
+/* line 854, ../../../../../../sass/bridal_theme/_theme.scss */
+#confirmBox {
+  background: white;
+}
+
+/* line 860, ../../../../../../sass/bridal_theme/_theme.scss */
+#pop-up-content-wrapper .price-details, #pop-up-content-wrapper .button-wrapper {
+  background-color: #ececec !important;
+}
+/* line 863, ../../../../../../sass/bridal_theme/_theme.scss */
+#pop-up-content-wrapper .less-arrow {
+  border-bottom-color: white !important;
+}
+/* line 866, ../../../../../../sass/bridal_theme/_theme.scss */
+#pop-up-content-wrapper .more-arrow {
+  border-top-color: white !important;
+}
+
+/* line 873, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-wrapper .selector.formerror {
+  background-position: -427px -1070px;
+}
+/* line 876, ../../../../../../sass/bridal_theme/_theme.scss */
+.select-wrapper .selector.formerror span {
+  background-position: right -1028px;
+}
+
+/*.sfy {
+    .carousel-product .bx-pager.bx-default-pager a,.nested-carousel-wrapper .carousel .info__pic .product-carousel__wrapper .bx-pager.bx-default-pager a {
+        @include setSpriteDesktop(10px, 10px, -378px, -956px, transparent);
+        margin: 0 5px;
+        &.active {
+            @include setSpriteDesktop(10px, 10px, -368px, -956px, transparent);
+        }
+    }
+}*/

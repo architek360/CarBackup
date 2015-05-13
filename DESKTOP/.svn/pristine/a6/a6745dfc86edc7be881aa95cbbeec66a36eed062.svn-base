@@ -1,0 +1,153 @@
+<div id="sfy-slideshow" class="content_carousel-wrapper">
+  <div class="sfy-slideshow__pane carousel">
+    <ul class="sfy-slideshow bxslider js-slider">
+      <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+            <form method="get" action="" autocomplete="off">
+              <input type="hidden" name="model" value="">
+              <ul class="model-type">
+                <li>
+                  <div class="model-type__platinum"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="platinum" checked="">
+                  </div>
+                  Platinum </li>
+                <li>
+                  <div class="model-type__yellow-gold"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="yellow-gold">
+                  </div>
+                  Yellow Gold </li>
+              </ul>
+              <a href="#" class="red-button">Select</a>
+            </form>
+          </div>
+          <div class="grid__item two-thirds info__pic">
+            <div class="face-image product-carousel__wrapper"> 
+              <ul class="bxslider js-product-img-slider">
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+       <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+            <form method="get" action="" autocomplete="off">
+              <input type="hidden" name="model" value="">
+              <ul class="model-type">
+                <li>
+                  <div class="model-type__platinum"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="platinum" checked="">
+                  </div>
+                  Platinum </li>
+                <li>
+                  <div class="model-type__yellow-gold"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="yellow-gold">
+                  </div>
+                  Yellow Gold </li>
+              </ul>
+              <a href="#" class="red-button">Select</a>
+            </form>
+          </div>
+          <div class="grid__item two-thirds info__pic">
+            <div class="face-image product-carousel__wrapper"> 
+              <ul class="bxslider js-product-img-slider">
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+
+      <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+            <form method="get" action="" autocomplete="off">
+              <input type="hidden" name="model" value="">
+              <ul class="model-type">
+                <li>
+                  <div class="model-type__platinum"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="platinum" checked="">
+                  </div>
+                  Platinum </li>
+                <li>
+                  <div class="model-type__yellow-gold"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="yellow-gold">
+                  </div>
+                  Yellow Gold </li>
+              </ul>
+              <a href="#" class="red-button">Select</a>
+            </form>
+          </div>
+          <div class="grid__item two-thirds info__pic">
+            <div class="face-image product-carousel__wrapper"> 
+              <ul class="bxslider js-product-img-slider">
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+      
+      <li class="sl">
+        <section class="model">
+          <div class="grid__item one-third">
+            <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+            <h3 class="model__description">Platinum, diamonds</h3>
+            <p class="model__summary">The iconic Trinity is re-interpreted as a bejeweled ribbon of platinum or yellow gold paved with diamonds that coils around the central diamond. A solitaire entwined by a swirl of love, the radiant Trinity Ruban celebrates the infinite connection of an eternal bond.</p>
+            <form method="get" action="" autocomplete="off">
+              <input type="hidden" name="model" value="">
+              <ul class="model-type">
+                <li>
+                  <div class="model-type__platinum"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="platinum" checked="">
+                  </div>
+                  Platinum </li>
+                <li>
+                  <div class="model-type__yellow-gold"></div>
+                  <div class="radio">
+                    <input type="radio" name="" value="yellow-gold">
+                  </div>
+                  Yellow Gold </li>
+              </ul>
+              <a href="#" class="red-button">Select</a>
+            </form>
+          </div>
+          <div class="grid__item two-thirds info__pic">
+            <div class="face-image product-carousel__wrapper"> 
+              <ul class="bxslider js-product-img-slider">
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </li>
+      
+    </ul>
+    </div>
+</div>

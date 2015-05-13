@@ -1,0 +1,169 @@
+/*------------------------------------*\
+    Filter -- Desktop CSS
+\*------------------------------------*/
+
+.boutique-filter-wrapper{
+    width: 100%;
+    z-index: 1; //navigation is at z-index: 10
+    @include rem(height, 46px);
+    @include rem(line-height, 46px);
+    position: relative;
+    border: 1px solid $primary-61;
+    border-right: none;
+    border-left: none;
+    .filter-headline, .boutique-single-filter{
+        @include rem(height, 28px);
+        @include rem(padding, 0 20px 0 3px);
+        @include rem(line-height, 28px);
+        position:relative;
+        &:after{
+            @include setSpriteDesktop(7px, 28px, -430px, -307px, transparent);
+            content: ' ';
+            position: absolute;
+            right: 5px;
+        }
+    }
+    .js-dropdown{
+        left: -10000px;
+        position: absolute;
+    }
+    .open{
+        .filter-headline, ul{
+            background-color: $light_black;
+            position: relative;
+            z-index: 9;
+
+        }
+        ul{
+            height: auto;
+        }
+    }
+    ul{
+        @include transition-full(height, 0.5s, linear);
+        @include rem(padding, 0 10px 0 10px);
+        display: inline-block;
+        height: 0;
+        overflow: hidden;
+        cursor: auto;
+        .initial{
+            position: absolute;
+            left: -1000px;
+        }
+    }
+
+
+    .boutique_filter_detail, .boutique-single-filter{
+        @include proxi-font;
+        font-weight: bold;
+        @include rem(padding, 7px 20px 7px 0px);
+        @include rem(font-size, 12px);
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        float: left;
+        background: transparent;
+    }
+    .boutique-single-filter, li{
+        color: $primary-48;
+    }
+    li,.arrow-down,.arrow-up{
+        outline:none;
+        @include rem(font-size, 10px);
+        @include rem(height, 14px);
+        background-color: $light_black;
+        width: 100%;
+        border-bottom: 1px solid #282828;
+        margin: 0;
+        padding: 10px 0;
+        padding: 10px 20px 10px 0;
+        color:$primary-86;
+        line-height: 17px;
+        color: $primary-68;
+
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: white;
+        }
+  
+        .checkable{
+            @include rem(margin, 2px 0 0 50px);
+            @include rem(width, 12px);
+            @include rem(height, 12px);
+            float: right;
+            cursor: pointer;
+            background : #585858;
+        }
+        &.selected{
+                .checkable{
+                    background : $primary-87;
+                    @include rem(height, 8px);
+                    @include rem(width, 8px);
+                    border:2px solid $primary-2;
+                }
+            }
+        &:nth-last-child(+2), .arrow-up, .arrow-down{
+            border:none;
+        }
+    }
+    .arrow-up, .arrow-down{
+        @include rem(padding, 0 10px 0 10px);
+        @include rem(height, 20px);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        z-index: 9;
+        cursor: pointer;
+        background-color: $light_black;
+        top:0;
+        &:after{
+            content: ' ';
+            @include setSpriteDesktop(13px, 13px, -10px, -73px, transparent);
+            display: block;
+            margin:0 auto;
+        }
+    }
+    .arrow-down{
+        bottom:0;
+        &:after{
+            background-position: -10px -94px;
+        }
+    }
+    .boutique-single-filter{
+        float:right;
+        color: #fff;
+        padding-left:30px;
+        &:after{
+           background-position: -13px -416px;
+            width: 16px;
+            height: 12px;
+            left: 0;
+            top: 15px;
+        }
+        &.active:after{
+            background-position: -89px -416px;
+        }
+    }
+}
+
+
+.js-boutique-map{
+    .back-button{
+        @include rem('padding',1px 0 0);
+    }
+}
+.boutique-filter-wrapper .boutique-single-filter {
+    color: #a0a0a0;
+
+}
+
+
+.boutique-filter-wrapper .boutique-single-filter:hover {
+    color: $primary-2;
+
+}
+
+
+

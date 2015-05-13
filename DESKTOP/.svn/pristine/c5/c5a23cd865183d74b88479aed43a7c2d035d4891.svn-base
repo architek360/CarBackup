@@ -1,0 +1,102 @@
+
+.living-heritage-bg{
+	.bibliography-wrapper, .expert-guide{
+		width:100%;
+		display: inline-block;
+		vertical-align: top;
+		clear:both;
+
+		.one-quarter{
+			margin-top: 0;
+		}
+
+		.three-quarters{
+			@include rem('padding', 0px);
+		}
+
+		.item-list{
+			li{
+				@include rem('padding', 15px 0 30px);
+				/*background: none;*/
+				border-bottom: 1px solid #4d4d4d;
+
+				a{
+					@include main-font();
+					text-transform: none;
+				}
+
+				h2{
+					padding-left: 10px;
+				}
+			}
+
+			li.active{
+				/*background: none;*/
+				a{
+					/*color: $primary-3;*/
+				}
+
+				&:hover{
+					/*color: $primary-3;*/
+				}
+			}
+
+			li:hover{
+				/*background: none;*/
+			}
+
+			li:first-child{
+				border-top: 1px solid #4d4d4d;
+			}
+		}
+			.product_image_text{
+				float:left;
+				width:31%;
+				@include rem('margin',0px 0px 20px);
+				@include rem('padding-right', 8px);
+
+				.image{
+					border:1px solid $primary-109;
+					@include rem('margin',0px 0px 10px);
+					/* “ DATE 01-10-2014 | image stretching issue | BRANCH Develop”  
+		 				START 
+		 			*/
+						max-width: 230px;
+						max-height: 240px;
+					/*END*/
+				}
+				img {
+					float: left;
+				}
+				.heading3{
+					
+					text-align:left;
+					@include rem('font-size', 13px);
+					font-weight: bold;
+					@include rem('line-height', 18px);
+					@include rem('padding-bottom', 30px);
+					@include rem('padding-left', 0px);
+					@include rem('width', 230px);
+					@include rem('letter-spacing', 2.5px);
+					color:$primary-48;
+					font-style: normal;
+					@include proxiBold-font();
+					/* “ DATE 01-10-2014 | image stretching issue | BRANCH Develop”  
+		 				START 
+		 			*/
+					clear : left;
+					/*END*/
+				}
+				a.more-button {
+					@include f(11);
+					@include rem('letter-spacing', 1px);
+					font-style: italic;
+					color:$primary-3;
+					
+					&:hover{
+						color:$primary-1;
+					}
+			}
+		}
+	}
+}

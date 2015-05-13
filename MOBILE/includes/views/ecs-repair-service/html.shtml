@@ -1,0 +1,37 @@
+<!--ECS Pre Registration Block Starts Here-->
+<div class="ambassador-cont grid js-ecs-repair-service js-myaccount">
+    <h2 class="heading2">MY REPAIR SERVICES</h2>
+    <p class="welcome-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non lectus ante. Quisque non malesuada nulla. Sed hendrerit erat et lacus imperdiet semper. Maecenas consequat sapien sed lorem vestibulum porta. Fusce ut erat metus. Donec vulputate, sapien eu blandit suscipit, sem nunc ultrices velit.</p>
+
+    <!-- ACCORDION  ATTRIBUTES-->
+    <div class="att-accordion clearfix">
+        <div class="js-accordion att-accordion__wrapper">
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques">
+                        <p>Send my creation to repair center</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc">
+                       <!--#include virtual="../../views/ecs_tab_send_creation/html.shtml" -->
+                </div>
+            </div>
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques">
+                        <p>entrust my creation in a boutique</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc">
+
+                    <!--#include virtual="../../views/ecs_tab_entrust_boutique/html.shtml" -->
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ECS Pre Registration Block Ends Here -->

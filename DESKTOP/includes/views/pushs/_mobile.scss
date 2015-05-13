@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    pushs -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.pushs)
+ * INNER BLOCK......inner items (ul, etc.)
+ * HEADING BLOCK...... headings styling (.pushs__title)
+ * DESCRIPTION BLOCK...... DESCRIPTION styling (.pushs__desc)
+ * NORTON SECURED BLOCK ..... FOR NORTON SECURED ICON (.pushs__norton-secured)
+ * NORTON ICON ..... ('.norton-icon' FROM /sass/_mobile.scss)
+ * CREDIT CARD ICON ..... (E.G '.mastercard' FROM /sass/_mobile.scss)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+.pushs{
+
+	@include brand-font;
+	@include font-color($primary-2);
+	border-top:1px solid $primary-17;
+	display: block;
+	@include rem('padding', 39px 0 20px 0);
+	width:81.25%;
+	margin:0 auto;
+	> ul {
+		@include set-ulFix;
+		text-align: center;
+		
+		> li {
+			width: 100%;
+			margin: 0;
+			display: inline-block;
+			border: none;
+			height: auto;
+			text-align: center;
+			@include rem('padding', 20px 0 0 0);
+
+			.pushs__title {
+				display: inline-block;
+				@include f(24);
+				@include rem('margin', 5px);
+				text-transform:uppercase;
+				line-height: 30px;
+				padding: 0;
+				width: 80%;
+			}
+			.pushs__desc {
+				display: inline-block;
+				text-align: center;
+				@include f(24);
+				@include main-font;
+				@include rem('margin', 11px 20px  10px 27px);
+				padding: 0;
+				width: 98%;
+				span{
+					font-style: italic;
+					display: block;
+					@include f(24);
+				}
+			}
+
+			.pushs__desc:last-child{
+				@include f(22);
+			}
+			.pushs__read-more {
+				display: block;
+				text-align: center;
+				@include f(24);
+				@include main-font;
+				font-style: italic;
+			}
+			.norton-icon{
+				@include rem(margin, 20px 0);
+			}			
+		}
+
+		li:nth-child(2){
+			.pushs__title {
+				width: 60%;
+			}
+
+			.pushs__desc{
+				width: 80%;
+			}
+		}
+	}
+	.pushs__credit-cards {
+		@include set-ulFix;
+		@include rem('margin', 25px 0 20px 0);
+
+		> li {
+			
+			@include rem(margin, 0 3px);
+			display: inline-block;
+			border: none;
+
+			text-indent: -999em;
+			overflow: hidden;			
+		}
+			
+	}
+}

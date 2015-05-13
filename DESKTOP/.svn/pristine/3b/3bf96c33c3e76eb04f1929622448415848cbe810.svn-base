@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#set var="VIEWS_1" value="contact_ambassador" -->
+<!--#set var="VIEWS_2" value="quick_links" -->
+<!--#set var="COMP_3" value="breadcrumb" -->
+<!--#set var="MODULE" value="product" -->
+
+<!--#include virtual="../templates/base.shtml" -->

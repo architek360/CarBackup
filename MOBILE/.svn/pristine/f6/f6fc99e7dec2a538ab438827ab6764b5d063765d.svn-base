@@ -1,0 +1,19 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+		"isSubmitSuccess": false,
+		"errorMessage": "",
+		"inLineMessage": {
+			"fn_fname": "Please enter a valid first name",
+
+			"fn_fname2": "nodeKey"
+
+
+		},
+		"captchaDetails": {
+			"imageUrl": "asdas",
+			"captchaId": "asdas"
+		}
+	}
+}

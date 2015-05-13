@@ -1,0 +1,75 @@
+/*------------------------------------*\
+REPAIR SERVICE REGISTRATION -- Mobile CSS
+\*------------------------------------*/
+
+/**
+* MODULE CONTAINER ..... (..repair-service-registration)
+* MAIN DIV ..... (.main-div)
+* LEFT DIV ..... (.left-div)
+* SIDE DIV ..... (.side-image)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+.repair-service-registration{
+	display: block;
+	color: $primary-92;
+
+	/*------------------------------------*\
+	    	$MAIN DIV
+	\*------------------------------------*/
+
+	.main-div{
+		.heading{
+			@include rem(padding, 40px);
+			text-align: center;
+			h4{
+				@include f(24);
+				@include rem(padding-top, 5px);
+				@include rem(padding-bottom, 10px);
+				border:none;
+			}
+			h5{
+				@include rem(padding-bottom, 5px);
+				@include f(12);
+			}
+		}
+
+		/*------------------------------------*\
+	    	$LEFT DIV
+		\*------------------------------------*/
+
+		.left-div{
+			@include rem(padding-left, 10px);
+			@include rem(padding-top, 20px);
+			width: 48%;
+			float: left;
+			h4{
+				@include f(12);
+				color:red;
+			}
+			.leftdiv__desc{
+				width: 91%;
+				@include f(12);
+			}
+		}
+
+		/*------------------------------------*\
+	    	$SIDE IMAGE
+		\*------------------------------------*/
+		.side-image{
+			@include rem(margin-left, 15px);
+			width: 48%;
+			float: left;
+			a img {
+				@include rem(margin-top, 10px);
+				border: none;
+				width: 100%;
+			}
+		}
+	}
+} 
+

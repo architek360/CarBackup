@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="expert_guide_faq" -->
+
+<!--#set var="back-static-text" value="Back" -->
+
+	<!--#set var="COMP_1" value="back_button" -->
+	<!--#set var="COMP_2" value="assistance" -->
+		<!--#set var="expert-content" value="expert_collection_list" -->
+		<!--#set var="COMP_4" value="static_text_box" -->
+
+<!--- FOR HEADING -->
+
+		<!--#set var="service_article" value="yes" -->
+		<!--#set var="service-article-title" value="AFTER-SALES SERVICE - JEWELRY" -->
+
+<!--  ENDS -->
+<!--#set var="expert_list" value="no" -->
+
+<!--  FOR SELECTING THE MAIN CONTENT FAQ or EXPERT COLLECTION BOX, ETC -->
+
+<!-- ENDS  -->
+
+
+<!--#set var="MODULE" value="others" -->
+
+
+<!--#set var="VIEWS_1" value="expert_guide" -->
+	<!--#if expr="${DEVICE} = 'desktop'"  -->
+		<!--#set var="COMP_3" value="breadcrumb" -->
+	<!--#endif -->
+<!--#include virtual="../templates/base.shtml" -->

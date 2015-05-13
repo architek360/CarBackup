@@ -1,0 +1,383 @@
+/*
+ * cartier.location.boutiquelist.js
+ * This file contains functionalities handling the Storelocator and Boutique Pages
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-03
+ * @author    Sapient 
+ * @licensor  cartier Desktop
+ * @site      cartier Desktop
+   @dependency cartier.core.js, cartier.location.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+;
+(function(win, $, ns, undefined) {
+	//this will cause the browser to check for errors more aggressively
+	//'use strict';
+	//check if Jquery is defined, else return
+	if (typeof $ === 'undefined') {
+		console.log("jQuery not found");
+		return false;
+	};
+	cartier.location.boutiquelist = function(element, options, ns, win, $, dataStore, undefined) {
+		'use strict';
+		var _xhrData,
+			that = this,
+			$_elem,
+			_tags = [],
+			_jspApi,
+			_element = element,
+			_map,
+			_order = [],
+			_options,
+			_templates,
+			_cache = {},
+			_globalorder = [],
+			defaults = {},
+			viewmoreVisible = 0,
+			viewmoreInVisible = 0,
+			_visibleRetailers = {
+				'boutique': {
+					'count': 1
+				},
+				'retailer': {
+					'count': 0
+				},
+				'total': 0
+			},
+
+
+			/*
+              @private method : caching jquery objects 
+              @param : none 
+            */
+			_cacheObjects = function() {
+				_cache = {
+					$noResultMsg: $_elem.find('.js-no-result-msg'),
+					$storeList: $('.js-store-list'),
+					$boutiqueUl: $('.js-boutique-list'),
+					$retailerUl: $('.js-retailer-list')
+				};
+			},
+
+			//--------------------------------------------------------------------------------------------------------
+			//          EVENT Bindings
+			//--------------------------------------------------------------------------------------------------------
+			/*
+          @private method : bind events
+          @param : none
+        */
+			_bindEvents = function() {
+				ns.subscribe('visibilityChanged', function(dataSet) {
+					_refreshView(dataSet.delta);
+				});
+				//subscribe to change message
+				ns.subscribe('dataChanged', function(dataSet) {
+					_redrawView(dataSet.data);
+				});
+
+
+				$('.js-view-button').on('click', _refreshViewMore);
+			},
+
+			/*
+          @private method : To Hide a particular Store
+          @param : Store Object
+        */
+			_hideStore = function(store) {
+				$('[data-sid="' + store.sid + '"]').hide(0);
+				_updateVisibleRetailersCount(store, false);
+			},
+			/*
+          @private method : To Show a particular Store
+          @param : Store Object
+        */
+			_showStore = function(store) {
+				_showStoreBySid(store.sid);
+				_updateVisibleRetailersCount(store, true);
+			},
+			/*
+          @private method : To Show a Store by its data-attr Store Id
+          @param : store id 
+        */
+			_showStoreBySid = function(sid) {
+				$('[data-sid="' + sid + '"]').show(0);
+			},
+
+			/*
+          @private method : To Update Visible Retailer Count
+          @param : store object and enabled
+        */
+			_updateVisibleRetailersCount = function(store, enabled) {
+				_visibleRetailers[store.type.toLowerCase()][store.sid] = enabled;
+			},
+
+			/*
+          @private method : To Refresh the Store View in List
+          @param : delta for Changed Stores
+        */
+			_refreshView = function(delta) {
+				$.each(delta, function(i, store) {
+					_updateVisibleRetailersCount(store, store.visible);
+					if (store.visible === true) {
+						_showStore(store);
+					} else {
+						_hideStore(store);
+					}
+				});
+				if (_jspApi) {
+					_jspApi.reinitialise();
+				}
+				_refreshVisiblesCount();
+				_refreshMessages();
+				_refreshOrder();
+			},
+
+			/*
+          @private method : To Refresh Visible Count for all Stores
+          @param : store object and enabled
+        */
+			_refreshVisiblesCount = function() {
+				_visibleRetailers.retailer.count = 0;
+				$.each(_visibleRetailers.retailer, function(i, isEnabled) {
+					if (isEnabled === true) {
+						_visibleRetailers.retailer.count++;
+					}
+				});
+				_visibleRetailers.boutique.count = 0;
+				$.each(_visibleRetailers.boutique, function(i, isEnabled) {
+					if (isEnabled === true) {
+						_visibleRetailers.boutique.count++;
+					}
+				});
+				// walk through all sid's
+			},
+
+			/*
+          @private method : To Add Stores in _order Object
+          @param : orderSid and storeList Object
+        */
+			_addOrderEntry = function(orderSid, storeList) {
+				if (typeof(storeList) === 'undefined') {
+					return false;
+				}
+				if (storeList[orderSid] === true) {
+					_order.push(orderSid);
+				}
+			},
+
+			/*
+          @private method : To Refresh Global Order
+          @param : none
+        */
+			_refreshOrder = function() {
+				_order = [];
+				$.each(_globalorder, function(i, sid) {
+					_addOrderEntry(sid, _visibleRetailers.boutique);
+					_addOrderEntry(sid, _visibleRetailers.retailer);
+				});
+				that.publish('orderChanged', {
+					'order': _order
+				});
+			},
+
+			/*
+          @private method : To Refresh Messages
+          @param : none
+        */
+			_refreshMessages = function() {
+				_cache.$noResultMsg.hide();
+
+				_visibleRetailers.total = _visibleRetailers.retailer.count + _visibleRetailers.boutique.count;
+				//viewmoreVisible = 0;
+				//viewmoreInVisible = 0;
+
+				if (_visibleRetailers.retailer.count === 0) {
+					_cache.$retailerUl.find('.js-heading3').hide();
+					//no retailers found so maybe the list is empty
+					if (_visibleRetailers.boutique.count === 0) {
+						_cache.$noResultMsg.show();
+					}
+				} else {
+					_cache.$retailerUl.find('.js-heading3').show();
+				}
+				//_refreshViewMore();
+			},
+
+			_refreshViewMore = function() {
+				viewmoreVisible = viewmoreVisible + 100;
+				viewmoreInVisible = _visibleRetailers.total - viewmoreVisible;
+
+				if (viewmoreInVisible > 0)
+					$('.js-view-button').show();
+				else
+					$('.js-view-button').hide();
+
+				$('.js-inview').each(function(index, el) {
+					if (index < viewmoreVisible)
+						$(el).removeClass('display-none');
+					else
+						$(el).addClass('display-none');
+				});
+
+				if (_jspApi) {
+					_jspApi.reinitialise();
+				}
+			},
+			/*
+          @private method : To Redraw Store List
+          @param : _xhrData from Ajax Response or redrawn data
+        */
+			_redrawView = function(_xhrData) {
+				_visibleRetailers = {
+					'boutique': {
+						'count': 0
+					},
+					'retailer': {
+						'count': 0
+					}
+				};
+				var orderBoutique = [],
+					orderRetailer = [],
+					globalOrderBoutique = [],
+					globalOrderRetailer = [];
+				// we will Remove All the Store Blocks ( <li class='store-detail'>) from previous Search
+				$_elem.find('.js-store-detail').remove();
+				// With Each New Search, To Hide the No result block
+				_cache.$noResultMsg.hide();
+				if (_xhrData.length === 0) {
+					// To Show the NO RESULTS MSG
+					_cache.$noResultMsg.show();
+					_cache.$boutiqueUl.removeLoader();
+					// To Hide the 'Authorizied Retailer' heading
+					_cache.$retailerUl.find('.heading3').hide();
+					return (null); // Jump out of the function
+				}
+				var boutiqueLi = '', // To store boutique entries to append later in Li
+					retailerLi = '', // To store Retailer entries to append later in Li
+					tCount = 0; // To store total count of stores
+
+				var showMoreCount = _cache.$storeList.data('show-more-count');
+				// To find how many stores are to be displayed, this comes from the JSON object (data.content)
+				tCount = _xhrData.length;
+				console.log("tCount" + tCount);
+				var maxTCount = tCount - 1;
+				// To supply FMT Based text for read more and Show Map
+				var readmore = _cache.$boutiqueUl.data('readmore');
+				var showmap = _cache.$boutiqueUl.data('showmap');
+				// To supply a default store image is The Store result JSON does not have store image
+				var defaultStoreImage = _cache.$boutiqueUl.data('default-store-image');
+				while (tCount--) {
+
+					var counter = maxTCount - tCount;
+
+					// To supply FMT Based text for read more and Show Map to each store entry
+					_xhrData[counter].readmore = readmore;
+					_xhrData[counter].showmap = showmap;
+					// here we add Default Store img to data content if  that store' imgsrc is missing
+					if (!_xhrData[counter].imgsrc) {
+						_xhrData[counter].imgsrc = defaultStoreImage;
+					}
+					_xhrData[counter].type = _xhrData[counter].typeofstore;
+					_updateVisibleRetailersCount(_xhrData[counter], _xhrData[counter].visible);
+
+					if (_xhrData[counter].typeofstore === 'Boutique') {
+						globalOrderBoutique.push(_xhrData[counter].sid);
+						if (_xhrData[counter].visible === true) {
+
+							boutiqueLi += cartier.template.BoutiqueTemplateFiller(_templates.boutique, _xhrData[counter]);
+							orderBoutique.push(_xhrData[counter].sid);
+						} else {
+
+
+							boutiqueLi += cartier.template.BoutiqueTemplateFiller(_templates.boutiqueHidden, _xhrData[counter]);
+						}
+					} else {
+						globalOrderRetailer.push(_xhrData[counter].sid);
+						if (_xhrData[counter].visible === true) {
+							console.log('Visible');
+
+							retailerLi += cartier.template.RetailerTemplateFiller(_templates.retailer, _xhrData[counter]);
+							orderRetailer.push(_xhrData[counter].sid);
+						} else {
+							console.log('In - Visible');
+
+							retailerLi += cartier.template.RetailerTemplateFiller(_templates.retailerHidden, _xhrData[counter]);
+						}
+
+					}
+
+				} // end while loop
+				var tmpOrder = [];
+				_globalorder = [];
+				_globalorder = _globalorder.concat(globalOrderBoutique, globalOrderRetailer);
+				that.publish('orderChanged', {
+					'order': tmpOrder.concat(orderBoutique, orderRetailer)
+				});
+				_refreshVisiblesCount();
+				_refreshMessages();
+
+				//append html to DOM
+				_cache.$boutiqueUl.append(boutiqueLi);
+				_cache.$retailerUl.append(retailerLi);
+				// Now if all the Retainers entries are empty, then Hide heading 'Authorized Retailers'
+
+				if (_cache.$boutiqueUl.data('scrollPane') === true || _cache.$boutiqueUl.data('scrollPane') == 'true') {
+					$('.scrollable').jScrollPane({
+						showArrows: true
+					});
+					_jspApi = $('.scrollable').data('jsp');
+				}
+
+				if (_cache.$boutiqueUl.data('scrollPane') === true || _cache.$boutiqueUl.data('scrollPane') == 'true') {
+					$('.scrollable').jScrollPane({
+						showArrows: true
+					});
+					_jspApi = $('.scrollable').data('jsp');
+				}
+				_refreshMessages();
+				_adjustMarkerSize();
+				cartier.location._bindClickEventToListMarker();
+			},
+
+			/*
+          @private method : To Adjust marker Size
+          @param : _none
+        */
+			_adjustMarkerSize = function() {
+				var $collection = $('.more-link a.show-map'),
+					len = $('.more-link a.show-map').length;
+				if (len > 99) {
+					while (len > 100) {
+						len--;
+						$($collection[len]).css('font-size', '11px;');
+					}
+				}
+			},
+
+
+			/*
+        @public Method : initailize the module
+        */
+			_initialize = function() {
+				$_elem = $(_element),
+				_options = $.extend({}, defaults, options);
+				_cacheObjects();
+				_templates = {
+					'boutique': cartier.template.type.BoutiqueTemplateDesktop,
+					'boutiqueHidden': cartier.template.type.BoutiqueTemplateDesktopHidden,
+					'retailer': cartier.template.type.RetailerTemplateDesktop,
+					'retailerHidden': cartier.template.type.RetailerTemplateDesktopHidden
+				};
+				_bindEvents();
+			};
+
+
+		_initialize();
+
+	};
+}(window, jQuery, cartier.location));

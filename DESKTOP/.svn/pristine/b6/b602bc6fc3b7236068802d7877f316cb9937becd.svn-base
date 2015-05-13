@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    MANUAL PRODUCT LIST -- MOBILE CSS
+\*------------------------------------*/
+/**
+	* MAIN CONTAINER - .manual-product
+	* IMAGE CONTAINER - .manual-product__teaser(it consists image , title and listing)
+	* IMAGE DESCRIPTION - .manual-product__content
+
+
+*/
+/*------------------------------------*\
+    MAIN CONTAINER
+\*------------------------------------*/
+.manual-product{
+	width:81.25%;
+	margin:0 auto;
+	@include rem(padding, 20px 0 12px);
+	@include font-color($primary-2);
+
+	.heading3{
+		@include rem(padding, 26px 0 20px);
+	}
+
+	.heading2{
+		@include rem(padding, 0 0 43px);
+		border:none;
+	}
+
+	/*------------------------------------*\
+    		IMAGE CONTAINER
+	\*------------------------------------*/
+	.teaser{
+		display:block;
+		position:relative;
+		text-align:right;
+		img{
+	 			max-width:100%;
+	 		}
+			.teaser-desc{
+	 	 	position:absolute;
+	 	 	@include rem('top',15px);
+	 	 	@include rem('left',26px);
+	 	 	text-transform: uppercase;
+	 	 	width:75%;
+	 	 	
+	 	 	/*------------------------------------*\
+			    TITLE
+			\*------------------------------------*/
+	 	 	.teaser-desc__title{
+	 	 		@include f(29);
+	 	 		@include font-color($primary-2);
+	 	 		@include main-font;
+	 	 		@include rem('padding', 10px 0px 13px);
+	 	 		@include rem('letter-spacing', 5px);
+	 	 		@include rem('line-height', 35px);
+
+	 		}
+
+	 		/*------------------------------------*\
+			   IMAGE LISTING
+			\*------------------------------------*/
+	 		.teaser-desc__listing{
+	 			display: block;
+	 			text-align:left;
+
+	 			li{
+	 				@include rem('padding', 20px 0);
+	 				@include f(22);
+	 				@include bold-font;
+	 				@include font-color($primary-2);
+					display: block; 
+					list-style: none;		
+	 			}
+
+	 			li:before{
+	 				content:'';
+	 				@include setSprite(11px, 15px, -577px, -20px);
+					position: relative;
+					@include rem('top', 0px);
+					margin-right: 10px;
+				}
+	 		}
+
+
+
+		}
+	}
+
+
+	/*------------------------------------*\
+			    IMAGE DESCRIPTION
+	\*------------------------------------*/
+
+	.manual-product__content {
+		color: $white;
+		@include f(26);
+		@include main-font;
+		@include rem('margin',25px 0);
+		@include rem('line-height',31px);
+	}
+}

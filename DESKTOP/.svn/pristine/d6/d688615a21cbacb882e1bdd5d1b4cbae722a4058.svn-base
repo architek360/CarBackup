@@ -1,0 +1,152 @@
+
+<div class="sfy js-ga-sfy-step-2"class="heightZero">
+  <!-- Set for you - sfy-header starts Here-->
+  <!--#include virtual="../../components/sfy-header/html.shtml" -->
+  <div id="tab1">
+    <h2 class="sfy-heading">Select your setting</h2>
+    <!--#include virtual="../../views/collection_pushes/desktop.shtml" -->
+    <div class="js-link-to-top sfy-backtoTop display-none">
+      <a href="#" title="Top" >BACK TO TOP</a>
+    </div>
+    <!-- removed hashtag, this is not included!!! -->
+    <!-- include virtual="../../components/carousel/content_carousel_sfy_step1.shtml" -->
+  </div>
+  <div id="tab2" >
+    <h2 class="sfy-heading"><a href="#" class="sfy-back">Back</a>SELECT YOUR DIAMOND</h2>
+    <p class="sfy-caption">All the center diamonds in Cartier rings are certified by the GIA and meet the most rigorous selection criteria. These are based on the 4Cs (carat, color, clarity and cut) and, together with the eye and experience of the Cartier diamond experts, they guarantee that every diamond is beautiful with harmonious proportions and incomparable charm.
+    <br><br><br>
+    <br> 	
+    <a href="#more" class="tabTwolink more">Find out more about how Cartier selects diamonds</a>
+    </p>
+
+<div class="grid__item three-quarters previewBlockSection">
+  <form>
+    <ul class="selection-list">
+      <li class="selection-criteria">
+         <div class="heading-container"><h4 class="sfy-heading4">Price range</h4></div>
+        <span id="pricemin" class="side-text"></span>
+        <span id="pricemax" class="side-text"></span>
+        <div id="Price-slider"></div>
+        <input type="hidden" name="sfy_from_price"></input>
+        <input type="hidden" name="sfy_to_price"></input>
+      </li>
+
+      <li class="selection-criteria">
+        <div class="heading-container"><h4 class="sfy-heading4">Carat</h4><a href="#slide-carat" class="help"></a></div>
+        <span id="caratmin" class="side-text"></span>
+        <span id="caratmax" class="side-text"></span>
+        <div id="carat-slider"></div>
+        <input type="hidden" name="sfy_from_carat"></input>
+        <input type="hidden" name="sfy_to_carat"></input>
+      </li>
+
+      <li class="selection-criteria">
+        <div class="heading-container"><h4 class="sfy-heading4">Color</h4> <a href="#slide-color" class="help"></a></div>
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="colors" value="E" checked="checked" class="uniform-processed"></input>
+          <label>E</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="colors" value="D" checked="checked" class="uniform-processed"></input>
+          <label>D</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="colors" value="F" checked="checked" class="uniform-processed"></input>
+          <label>F</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="colors" value="G" checked="checked" class="uniform-processed"></input>
+          <label>G</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="colors" value="H" checked="checked" class="uniform-processed"></input>
+          <label>H</label>
+        </div>
+
+      </li>
+
+      <li class="selection-criteria">
+        <div class="heading-container"><h4 class="sfy-heading4">Clarity</h4><a href="#slide-clarity" class="help"></a></div>
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="clarity" value="VVS1" checked="checked" class="uniform-processed1"></input>
+          <label>VVS1</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="clarity" value="VVS2" checked="checked" class="uniform-processed1"></input>
+          <label>VVS2</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="clarity" value="VS1" checked="checked" class="uniform-processed1"></input>
+          <label>VS1</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="clarity" value="VS2" checked="checked" class="uniform-processed1"></input>
+          <label>VS2</label>
+        </div>
+
+        <div class="checkbox-wrpper">
+          <input type="checkbox" name="clarity" value="IF" checked="checked" class="uniform-processed1"></input>
+          <label>IF</label>
+        </div>
+      </li>
+      <div class="form-element button-wrapper js-sfy-submit">
+        <a  class="form-button">submit</a>
+      </div>
+
+    
+  </form>
+</div>
+    
+
+<div class="grid__item one-quarter previewSlider">
+  <h2 class="sfy-calc-preview product-name">Solitaire 1895</h2>
+  <h2 class="sfy-calc-preview material-name">Platinum, diamonds</h2>
+  <div class="carousel-wrapper bridal-sfy-preview js-bridal-sfy-preview">
+  <div class="carousel">
+    <ul class="bxslider js-slider-bridal">
+      <li >
+        <img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+      </li>
+      <li>
+        <img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+      </li>
+     <li>
+        <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4245000_0_cartier_rings.png" alt="COMMITMENTS" class="image"/>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+</div>
+
+    <br>
+    <br>
+
+    <p class="esfy-terms clearfix">
+          Please note that images used are stock photographs and that colors and sizes may not exactly correspond to actual products.
+          See our <a href="#" target="_blank">Terms of use</a> for further information.</p>
+    <div class="sfyTabTwoCrousel">
+    	<div class="js-link-to-top sfy-backtoTop ">
+        <a href="#" title="Top" >BACK TO TOP</a>
+      </div>
+      <!--#include virtual="../../components/carousel/content_carousel_sfy.shtml" --></div>
+    </div>
+    <div id="tab3" class="">
+      <h2 class="sfy-heading"><a href="#" class="sfy-back">Back</a>YOUR SELECTION</h2>
+      <!--#include virtual="../../components/sfy-step3/html.shtml" -->
+      <div class="js-link-to-top sfy-backtoTop ">
+        <a href="#" title="Top" >BACK TO TOP</a>
+      </div>
+      <!-- <div class="sfyTabThreeCrousel">
+        #include virtual="../../components/carousel/content_carousel_sfy.shtml" 
+      </div> -->
+    </div>
+  </div>
+  <!-- Set for you Ends Here

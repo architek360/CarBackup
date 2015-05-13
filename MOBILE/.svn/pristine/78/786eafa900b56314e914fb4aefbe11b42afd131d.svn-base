@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  Back button -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... 
+ * back button container (back-button)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.back-button{
+ 
+  @include font-color($primary-2);  
+  display: block;
+  background: $primary-1; 
+  width: 82.25%;
+  margin: 0 auto; 
+  @include rem('padding-top', 40px);  
+ 
+  a{
+      @include font-color($primary-3);  
+      @include rem('padding-left', 17px);  
+      @include main-font;
+      font-style: italic;
+      @include f(24);
+      @include setSprite(100%, 24px, -1028px, -45px);
+
+  }
+
+}

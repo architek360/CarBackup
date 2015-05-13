@@ -1,0 +1,294 @@
+/*
+ * cartier.location.datastore.js
+ * This file contains functionalities handling the Storelocator and Boutique Pages
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-03
+ * @author    Sapient 
+ * @licensor  cartier Desktop
+ * @site      cartier Desktop
+   @dependency cartier.core.js, cartier.location.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+;
+(function(win, $, ns, undefined) {
+    //this will cause the browser to check for errors more aggressively
+    'use strict';
+    //check if Jquery is defined, else return
+    if (typeof $ === 'undefined') {
+        console.log('jQuery not found');
+        return false;
+    }
+    cartier.location.datastore = function(options, ns, win, $, undefined) {
+    // 'use strict';
+    var _xhrData = [],
+        that = this,
+        _delta,
+        _refreshCnt = 0,
+        _dataStoreUpdateInProgress = false,
+        _tagFilters = {},
+        _timeout = false,
+        _filters = {
+            map: {
+                visibles: [],
+                hidden: []
+            },
+            ugc: {
+                visibles: [],
+                hidden: []
+            }
+        },
+        _listofXhr = [],
+        _Gurl,
+        _options,
+        _hasmore = false,
+        _offset = 0,
+        _objPropertiesPth,
+        _cache = {},
+        defaults = {
+
+        },
+        /*
+          @private method : filters the Dataset and publishes to the mediator if something has changed
+          @param : filterConfig object {type: String, visibles: array, hidden: array}
+        */
+        _filter = function(filterConfig) {
+            var _delta = {};
+            // add the submited Config to the other rules, overwriting old rules
+            //if (filterConfig.visibles.length) {
+                _filters[filterConfig.type].visibles = filterConfig.visibles;
+            //}
+            //if (filterConfig.hidden.length) {
+                _filters[filterConfig.type].hidden = filterConfig.hidden;
+            //}
+
+            // do filter
+            $.each(_xhrData, function(i, store) {
+                // first set visible to true for all stores wich are visible on the map
+                if ($.inArray(store.sid, _filters.map.visibles) !== -1 && store.visible === false) {
+                    _xhrData[i].visible = true;
+                    _delta[store.sid] = {
+                        'sid': store.sid,
+                        'visible': true,
+                        type: store.typeofstore
+                    };
+                }
+                // hide all stores wich are filtered by the user
+                if ($.inArray(store.sid, _filters.ugc.hidden) !== -1 && store.visible === true) {
+                    _xhrData[i].visible = false;
+                    _delta[store.sid] = {
+                        'sid': store.sid,
+                        'visible': false,
+                        type: store.typeofstore
+                    };
+                }
+                // show all stores wich are not filtered by filters
+                if ($.inArray(store.sid, _filters.ugc.visibles) !== -1 && store.visible === false) {
+                    _xhrData[i].visible = true;
+                    _delta[store.sid] = {
+                        'sid': store.sid,
+                        'visible': true,
+                        type: store.typeofstore
+                    };
+                }
+                //hide all stores wich are off bounds
+                if ($.inArray(store.sid, _filters.map.hidden) !== -1 && store.visible === true) {
+                    _xhrData[i].visible = false;
+                    _delta[store.sid] = {
+                        'sid': store.sid,
+                        'visible': false,
+                        type: store.typeofstore
+                    };
+                }
+            });
+            var dublicateFreeDelta = [];
+            $.each(_delta, function(sid, data) {
+                if (data !== undefined) {
+                    dublicateFreeDelta.push(data);
+                }
+            });
+            // if the Datachanged pubish a redraw
+            if (dublicateFreeDelta.length) {
+                ns.publish('beforeDataChanged', {
+                    'data': _xhrData
+                });
+                ns.publish('visibilityChanged', {
+                    'data': _xhrData,
+                    'delta': dublicateFreeDelta
+                });
+
+            }
+        },
+        /*
+          @private method : parse Tags and return tag Array
+          @param : Object Store
+          @return : Array[String]
+        */
+        _getTagArray = function(store) {
+            return store.tags.split(' ');
+        },
+        /*
+          @private method : Set possible filters and Publish them
+          @param : filter comma seperated list
+        */
+        _setTagFilters = function(csl) {
+            var filters = {};
+            $.each(csl.split(','), function(i, value) {
+                var filterName = value.trim();
+                var filterId = filterName.toLowerCase().replace(' ', '-');
+                _tagFilters[filterId] = filterName;
+            });
+        },
+        /*
+          @private method : update with empty store
+          @param : null
+        */
+        _updateRefresh = function() {
+            _update(true);
+        },
+
+
+        /*
+          @private method : send ajax call and publish updated information
+          @param : Boolean indicating if data is added or replaced
+        */
+        _update = function(refresh) {
+            var _tCount = 0;
+            /* REAL Ajax caller : This is temp code need to be UUNCOMMENTED WHEN INTEGRATING */
+            if (!_Gurl) {
+                return
+            }
+            //make shure only one request is in progress at one time
+            if (_dataStoreUpdateInProgress === true) {
+                //return null;
+
+            }
+            for(var i=0; i<_listofXhr.length;i++){
+                _listofXhr[i].abort();
+            }
+            that.publish('loadstart', {});
+            $('.hideonload').addClass('display-none');
+            $('.loadingindicator').show();
+            /* REAL Ajax caller : This needs to be uncommented in for CQ  */
+            if($('.tab-entrust-boutique').length){
+                var baseUrl = '/bin/richemont/storelocator/search/result.getStore.json';
+                var objXHR = cartier.ajaxWrapper.getXhrObj({
+                    type: 'GET',
+                    url: baseUrl + _Gurl + '.json?storelocator='+storelocator,
+                    dataType: 'json',
+                });
+            }else{
+                var baseUrl = storelocator.pagePath + '/jcr:content.getStore.json';
+                var objXHR = cartier.ajaxWrapper.getXhrObj({
+                    type: 'GET',
+                    url: baseUrl + _Gurl + ".json",
+                    dataType: 'json',
+
+                });
+            }
+            _listofXhr.push(objXHR);
+            /* DUMMY Ajax caller : This is temp code need to be REMOVED  */
+/*
+            var objXHR = cartier.ajaxWrapper.getXhrObj({
+                type: 'GET',
+                url: _objPropertiesPth.storeListJson,
+                dataType: 'json'
+            });
+*/
+            if (objXHR) {
+                _dataStoreUpdateInProgress = true;
+                objXHR.always(function() {
+                    // throttle the requests
+                    if (_timeout === false) {
+                        _timeout = true;
+                        win.setTimeout(function() {
+                            _dataStoreUpdateInProgress = false;
+                            _timeout = false;
+                        }, 300);
+                    }
+
+                });
+                objXHR.done(function(data) {
+                    var parsedData;
+                    // handle failure
+                    if (typeof data.success !== 'undefined' && !data.success) {
+                        // handle redirectURL exist if the session expires
+                        //data.redirectURL ?  win.location.href = data.redirectURL : $form.find('.server_message').html(data.errorMessage);
+                    } else {
+                        parsedData = cartier.common.cartierJSONparser({
+                            json: data
+                        });
+                        if (parsedData !== false) {
+                            _hasmore = data.hasmore,
+                            _offset = data.offset + data.content.length,
+                            _setTagFilters(data.filters);
+                            $('.hideonload').removeClass('display-none');
+                            $('.loadingindicator').hide();
+                            // If the JSON Object for searched stores is empty, then jump out of the function
+                            _tCount = data.content.length;
+                            if (_tCount === 0) {
+                                ns.publish('emptyResult', {});
+                                return null;
+                            }
+                            if (refresh) {
+                                _xhrData = [];
+                            }
+                            $.each(parsedData, function(i, store) {
+                                parsedData[i].tags = _getTagArray(store);
+                                _xhrData.push(parsedData[i]);
+                            });
+                            // publish dataset to prototypal inherited var
+                            that.publish('beforeDataChanged', {
+                                data: parsedData,
+                                filterTags: _tagFilters
+                            });
+                            that.submitDataChange({
+                                data: _xhrData
+                            });
+                            if (_hasmore === true) {
+                                that.publish('hasmore', {});
+                            }
+                            _refreshCnt++;
+                        }
+                    }
+                });
+            }
+        },
+        /*
+            @public Method : initialize the module
+        */
+        _initialize = function() {
+            _options = $.extend({}, defaults, options);
+            _objPropertiesPth = cartier.properties.paths;
+            // subscribe to filter event
+            ns.subscribe('filterDataSet', function(visibles) {
+                _filter(visibles);
+            });
+            ns.subscribe('loadMore', function(visibles) {
+                _update();
+            });
+            _updateRefresh('outOfBounds', function(visibles) {
+                
+            });
+        },
+        _setGurl = function(Gurl) {
+            _Gurl = Gurl;
+        };
+        that.filter = function(filterConfig) {
+            _filter(filterConfig);
+        };
+        that.update = function(Gurl) {
+            _setGurl(Gurl);
+            _updateRefresh();
+        };
+        that.getData = function() {
+            return _xhrData;
+        };
+        _initialize();
+    };
+
+}(window, jQuery, cartier.location));

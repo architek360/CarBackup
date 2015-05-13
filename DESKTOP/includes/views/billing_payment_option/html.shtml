@@ -1,0 +1,21 @@
+<!-- Billing Confirmation Block Starts Here-->
+<div class="billing-confirmation grid js-billing">
+  <h1 class="heading2">confirm your billing address</h1>
+    <p class="billing-confirmation__desc">Our address verification system finds some matches with your information. Please confirm that it is yours.</p>
+    <div class="billing-confirmation__address grid__item one-whole palm--one-whole">
+    	<b>
+    		<span class="js-conf-name">JEAN DUPONT</span>
+    	</b></br>
+    	<span class="js-conf-address">250 Fifth Avenue</span></br>
+    	<span class="js-conf-city">New York</span></br>
+    	<span class="js-conf-state">NY</span></br>
+    	<span class="js-conf-zip">10179-0001</span></br>
+    	<span class="js-conf-phonenum">01111111</span>
+    </div>
+    
+    <!--#set var="text-detail" value="continue to next step" -->
+    <!--#set var="cta--varaint" value="cta--red js-confirm-shipping" -->
+    <!--#include virtual="../../components/form_elements/button.shtml" -->
+
+</div>
+ <!-- Billing Confirmation Block Ends Here-->

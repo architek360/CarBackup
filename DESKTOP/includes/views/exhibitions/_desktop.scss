@@ -1,0 +1,60 @@
+/*---------------------------------------*\
+    EXPERT GUIDE COMPONENT  -- Desktop CSS
+\*---------------------------------------*/
+
+/**
+* MAIN CONTAINER.... (.expert-guide)
+* HEADING BLOCK ....(.heading2, .heading3)
+* LISTING BLOCK..........(item-list)
+*/
+
+.exhibitions {
+	width:100%;
+	display: inline-block;
+	vertical-align: top;
+	clear:both;
+
+	.heading3 {
+		@include rem('padding', 10px 0 20px 242px);
+		text-align:left;
+		@include f(20);
+		
+	}
+
+	.heading2 {
+		@include rem('padding', 0 0 0 242px);
+		text-align:left;
+		@include f(18);
+	}
+
+
+
+	.expert-guide__description{
+		@include rem('width', 720px);
+		float: left;
+	}
+
+	.tab-header{
+		@include rem('margin', 10px 0 10px);
+	}
+
+	.tabs__content{
+		@include rem('margin', 50px 0 20px);
+	}
+
+	.grid__item{
+		@include rem('padding-left', 0px);
+	}
+
+	.one-quarter{
+		@include rem('margin-top',85px);
+	}
+
+	
+}
+article.exhibitions h1 {
+	margin-bottom: -15px;
+	padding-bottom: 0px;
+	font-size: 20px;
+	padding-top: 20px;
+}

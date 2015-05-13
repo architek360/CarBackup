@@ -1,0 +1,21 @@
+<!--HTML component for collection push-->
+
+<div class="collection-push ">
+	<div class="collection-push-content js-collection-push">	
+		<div class="image-div">
+			<a href="#">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="IMG_PATH" -->" alt="categorylisting image"/>
+			</a>
+		</div>
+
+		<a class="collection-link" href="#">
+			<span class="collection-title"><!--#echo var="COLLECTION_TITLE" --></span> 
+		</a>
+
+		<div>
+			<span class="model-count"><span class="js-count">8</span><span class="js-model">models</span></span>
+		</div>
+
+	</div>
+
+</div>

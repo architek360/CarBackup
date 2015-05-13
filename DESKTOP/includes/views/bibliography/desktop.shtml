@@ -1,0 +1,41 @@
+<div class="expert-guide grid">
+
+    <div class="grid__item one-quarter">
+        <ul class="item-list">
+            <li class="active"><h2><a href="#" title="The Cartier Collection">The Cartier Collection</a></h2></li>
+            <li><h2><a href="#" title="Exhibition catalogs">Exhibition catalogs</a></h2></li>
+            <li><h2><a href="#" title="Other Publications">Other Publications</a></h2></li><a href=""></a>
+        </ul>
+    </div>
+
+    <div class="grid__item three-quarters">
+        <article>
+            <div class="comp-rich-text">
+                <h3>BIBLIOGRAPHY THE CARTIER COLLECTION</h3>
+                <div class="product_image_text">
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->collection_cartier_vol3.jpg" class="image" alt="Ring"/>
+                    <h3 class="heading3">THE CARTIER COLLECTION. VOLUME 3, PRECIOUS OBJECTS</h3>
+                    <!--#set var="arrow-class" value="more-button-arrow " -->
+                    <!--#set var="more-text" value="Read More" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </div>
+
+                <div class="product_image_text">
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->collection_cartier_vol2.jpg" class="image" alt="Ring"/>
+                    <h3 class="heading3">THE CARTIER COLLECTION. VOLUME 3, PRECIOUS OBJECTS</h3>
+                    <!--#set var="arrow-class" value="more-button-arrow " -->
+                    <!--#set var="more-text" value="Read More" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </div>
+
+                <div class="product_image_text">
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->collection_cartier_vol1.jpg" class="image" alt="Ring"/>
+                    <h3 class="heading3">THE CARTIER COLLECTION. VOLUME 3, PRECIOUS OBJECTS</h3>
+                    <!--#set var="arrow-class" value="more-button-arrow " -->
+                    <!--#set var="more-text" value="Read More" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </div>
+            </div>
+        </article> 
+    </div>
+</div>

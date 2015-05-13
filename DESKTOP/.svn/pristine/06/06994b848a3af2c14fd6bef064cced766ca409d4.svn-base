@@ -1,0 +1,28 @@
+<!-- Accordion For boutique filter starts here-->
+<div class="boutique-filter-wrapper">
+    <div class="js-dropdown boutique_filter_detail initial open">
+        <div class="filter-headline">REFINE BY SERVICES AND PRODUCTS OFFERED:</div>
+        <ul>
+            <li class="selectable" data-filter-id = "fine-watchmaking">fine watchmaking<span class = "checkable"></span></li>
+            <li class="selectable enabled" data-filter-id = "repair-service">Repair Service<span class = "checkable"></span></li>
+            <li class="selectable selected enabled" data-filter-id = "vintage">vintage<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "set-for-your-cartier">set for your cartier<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "timepieces">timepieces<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "leather-goods">leather goods<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "bridal">bridal<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "accessories">accessories<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "eyewear">eyewear<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "fragance">fragance<span class = "checkable"></span></li>
+            <li class="selectable" data-filter-id = "jewellery">jewellery<span class = "checkable"></span></li>
+        </ul>
+        <span unselectable="on" class="arrow-up"></span>
+        <span unselectable="on" class="arrow-down"></span>
+    </div>
+    <div class="boutique-single-filter">
+        <span class="checked"> </span>
+        VIEW ONLY CARTIER BOUTIQUES
+    </div>
+</div>
+<!-- Accordion For boutique filter ends here-->
+
+

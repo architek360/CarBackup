@@ -1,0 +1,281 @@
+ <!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Cartier </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Cartier Mobile">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <style>
+        body {
+            font-size: 1.2em;
+            width: 90%;
+            margin: 20px auto;
+            color: #fff;
+            background: #000; /* Old browsers */
+            text-transform: uppercase;
+            padding-bottom: 600px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #8f141a;
+        }
+       .wrapper >ul {
+            font-family: calibri, verdana,arial;
+            font-size: 14px;
+        }
+        .wrapper > ul >li{
+            margin-top: 4px;
+            width: 20%;
+            display: block;
+            float: left;
+        }
+        .wrapper >ul li >ul{
+            display: inline-block;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        /*
+         * For IE 6/7 only
+         * Include this rule to trigger hasLayout and contain floats.
+         */
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Page layout starts here -->
+<div class="wrapper">
+<img src="etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/logo_red.png">
+
+<h3 style="margin: 30px auto;">Default/US</h3>
+    <hr/>
+
+
+<ul style= "display: inline-block;">
+    <li>
+        <h3>MAIN PAGES</h3>
+        <a href="pages/home.shtml">Home Page</a><br/>
+        <a href="pages/contact_us.shtml">Contact Us</a><br/>
+        <a href="pages/contact_us_bridal.shtml">Bridal Contact Us</a><br/>
+ <!--       <a href="pages/search_result.shtml">Search Result</a><br/>
+        <a href="pages/error.shtml">error page</a><br/>
+        <a href="pages/boutique.shtml">Boutique</a><br/>-->
+        <a href="pages/site_map_desktop.shtml">site map</a><br/>
+
+
+        <h3>FAQ PAGES</h3>
+        <a href="pages/expert.shtml">expert guide</a><br/>
+        <a href="pages/faq.shtml">FAQ</a><br/>
+        <a href="pages/client_services.shtml">Client Services</a><br/>
+        <a href="pages/secure_shopping.shtml">Secure Shopping</a><br/>
+        <a href="pages/service_article.shtml">Service Article</a><br/>
+        <!-- <a href="pages/expert_select.shtml">expert guide select</a><br/> -->
+        <!-- <a href="pages/condition_of_sale.shtml">Condition of Sale</a><br/> -->
+        <a href="pages/privacy_notice.shtml">Privacy Notice</a><br/>
+        <a href="pages/term_of_use.shtml">Terms of Use</a><br/>
+   
+    </li>
+    <li>
+        <h3>First Level Category</h3>
+        <a href="pages/bridal.shtml">Bridal</a><br/>
+        <a href="pages/collection.shtml">Collection</a><br/>
+        <a href="pages/categoryListing.shtml">Category Listing</a><br/>
+        <ul>
+            <li>
+                <a href="pages/collection_product_line.shtml">Product Line</a><br/>
+                <ul>
+                    <li><a href="pages/collection_listings.shtml">Collection listings</a><br/></li>
+                    <li><a href="pages/product_list.shtml">Product List</a><br/></li>
+                    <li><a href="pages/exceptions-creation-carousel.shtml">Exceptional Creations</a><br/></li>
+                    <li><a href="pages/gift_for_you.shtml">Gift for her</a><br/></li>
+                    <li><a href="pages/pdp.shtml">Product Detail Page</a><br/></li>
+                    <li><a href="pages/sizing_guide.shtml">Sizing Guide</a><br/></li>
+                </ul>
+            </li>
+        </ul><br/>
+        <a href="pages/Events.shtml">Events</a><br/>
+        <ul>
+            <li>
+                <a href="pages/cartier-collection-acquires-barbara-huttons-exquisite-jadeite-necklace.shtml">Cartier Collection acquires Barbara Hutton’s Exquisite Jadeite Necklace</a><br/>
+            </li>
+            <li>
+                <a href="pages/cartier_womens_initiative_awards.shtml">Cartier Women's Initiative Awards</a><br/>
+            </li>
+
+        </ul><br/>
+        
+        <a href="pages/maison.shtml">Services</a><br/>
+            <ul>
+                <li>
+                   <a href="pages/repair_service.shtml">MY REPAIR SERVICE</a><br/>
+                </li>
+                <li>
+                    <a href="pages/repair_service_registered.shtml">Repair service registered</a><br/>
+                </li>
+                <li>
+                    <a href="pages/pending_estimate_list.shtml">pending estimation list</a><br/>
+                </li>
+				<li>
+                    <a href="pages/ecs_review_repair_order.shtml">ECS review repair order</a><br/>
+                </li>
+				<li>
+                    <a href="pages/ecs_repair_order_acknowledgement.shtml">ECS repair order acknowledgement</a><br/>
+                </li>
+            </ul>
+    </li>
+    
+    <li>
+        <h3>MY ACCOUNT</h3>
+        <a href="pages/welcome.shtml">My Cartier</a><br/>
+        <a href="pages/personal_info.shtml">Personal info</a><br/> 
+        <a href="pages/login_page.shtml">Login Page</a><br/>
+        <a href="pages/login_page_forgot.shtml">Login Page With Forgot Password</a><br/>
+        <a href="pages/reg_step2.shtml">Reg step 2</a><br/>
+        <a href="pages/reg_step3.shtml">Reg step 3</a><br/>
+        <a href="pages/my_orders.shtml">My Orders</a><br/>
+        <a href="pages/order_detail.shtml">Order Detail</a><br/>
+        <a href="pages/subscription.shtml">My Subscription and Interest</a><br/>
+        <a href="pages/my_address.shtml">My address</a> <br/>
+        <a href="pages/wishlist.shtml">Wishlist</a> <br/>
+        <h3>Purchase Funnel</h3>
+        <a href="pages/review_order.shtml">Review Order</a> <br/>
+        <a href="pages/billing_form.shtml">Billing Form</a> <br/>
+        <a href="pages/shopping_bag.shtml">Shopping Bag</a><br/>
+        <a href="pages/choose_delivery_option.shtml">Choose Delivery Option</a><br/>
+        <a href="pages/order_reconfirmation.shtml">Order Acknowledgement</a><br/>
+        <a href="pages/billing_payment_option.shtml">Billing Payment</a><br/>
+        <a href="pages/empty_shopping_bag.shtml">Empty Shopping Bag</a><br/>
+        <a href="pages/billing_form_japan.shtml">Billing Form Japan</a> <br/>
+        <a href="pages/ecs_payment_page.shtml">ECS Payment Page</a> <br/>
+        <a href="pages/ecs_registration_page.shtml">ECS Registration Page</a> <br/>
+        <a href="pages/ecs_repair_service.shtml">ECS Repair Service</a> <br/>
+
+    </li>
+    <li>
+        <h3>Store Locator</h3>
+        <a href="pages/boutique_pickup.shtml">Boutique PickUp page</a><br/>
+        <a href="pages/dispatch_landing_page.shtml">Dispatch Landing page</a><br/>
+        <a href="pages/boutique_search.shtml">Boutique Search page</a><br/>
+        <a href="pages/boutique_list.shtml">List Of Boutique By Country</a><br/>
+        <a href="pages/boutique.shtml">Boutique Detail</a><br/>
+        <a href="pages/favorite-boutique.shtml">My Favorite Boutiques</a><br/>
+        <a href="pages/favorite-boutique-no-result.shtml">My Favorite Boutiques - no result</a><br/>
+        <a href="pages/boutique.shtml">Boutique Detail</a><br/>
+        <a href="pages/boutique_listing_with_map.shtml?geoCity=New%20York%2C%20NY%2C%20United%20States">Boutique List with map</a><br/>
+        <a href="pages/country_dispatch_page.shtml">Country Dispatch Page</a><br/>
+        <h3>Set For You</h3>
+        <a href="pages/sfy_step1.shtml">Set For You Step1</a><br/>
+        <a href="pages/sfy.shtml">Set For You</a><br/>
+        <h3>Search</h3>
+        <a href="pages/search_result_page.shtml">Search  Page</a><br/>
+        <h3>Error Page</h3>
+        <a href="pages/403_error.shtml">Error 403</a><br/>
+        <a href="pages/404_error.shtml">Error 404</a><br/>
+        
+    </li>
+    <li>
+        <h3>Maison</h3>
+        <a href="pages/maison.shtml">The Maison</a><br/>
+         <ul>
+                <li>
+                    <a href="pages/commitments.shtml">Commitment</a><br/>
+
+                </li>
+                <li>
+                    <a href="pages/cartier_and_corporate_social_responsibility.shtml">Cartier and Corporate Social Responsibility</a><br/>
+                </li>
+                <li>
+                    <a href="pages/collection_mosaic.shtml">Cartier Collection mosaic</a><br/>
+                </li>
+                <li>
+                    <a href="pages/maison_columns.shtml">Column 50 50</a><br/>
+                </li>
+                <li>
+                    <a href="pages/maison_columns30.shtml">Column 30 30 30</a><br/>
+                </li>
+                <li>
+                    <a href="pages/maison_columns60_40.shtml">Column 60 40</a><br/>
+                </li>
+                <li>
+                    <a href="pages/maison_columns40_60.shtml">Column 40 60</a><br/>
+                </li>
+                <li>
+                    <a href="pages/collection_listing_living_heritage.shtml">collection listing</a><br/>
+                </li>
+                <li>
+                    <a href="pages/collection_listing_living_heritage_timepieces.shtml">collection listing timepieces</a><br/>
+                </li>
+                </li>
+                <li>
+                    <a href="pages/collection_listing_living_heritage_jewelery.shtml">collection listing jewelery</a><br/>
+                </li>
+                <li>
+                    <a href="pages/living_heritage_modern_style.shtml">Hero Template - modern style</a><br/>
+                </li>
+                <li>
+                    <a href="pages/living_heritage_chimera.shtml">Hero Template - chimera</a><br/>
+                </li>
+                <li>
+                    <a href="pages/living_heritage_enameled_objects.shtml">Hero Template - Enameled Objects</a><br/>
+                </li>
+                <li>
+                    <a href="pages/living_heritage_bags_precious.shtml">Hero Template - Bags Precious</a><br/>
+                </li>
+                <li>
+                    <a href="pages/living_heritage.shtml">Living Heritage</a><br/>
+                </li>
+                <li>
+        <a href="pages/living_heritage_bibliography.shtml">bibliography</a><br/>
+                </li>
+
+        </ul>
+    </li>
+   <!--  <li>
+        <h3>Purchase Funnel</h3>
+        <a href="pages/billing_form.shtml">Billing form</a><br/>
+        <a href="pages/billing_confirmation.shtml">Billing Confirmation</a><br/>
+        <a href="pages/order_reconfirmation.shtml">Order Reconfirmation</a><br/>
+        <a href="pages/billing_payment.shtml">Billing Payment</a><br/>
+        <a href="pages/billing_shipping.shtml">Billing Shipping</a><br/>
+        <a href="pages/review_order.shtml">Review Order</a><br/>
+        <a href="pages/shopping_bag.shtml">Shopping Bag</a><br/>
+        <a href="pages/delivery.shtml">Edit footer</a><br/>
+    </li> -->
+
+
+ </ul>
+
+<h3 style="margin: 30px auto;">japan</h3>
+<hr/>
+
+
+<ul style= "display:block;">
+    <li>
+        <h3>MAIN PAGES</h3>
+ 
+        <a href="pages/reg_step3_jp.shtml?JP">Regestration Step 3</a><br/>
+        <a href="pages/billing_form_japan.shtml?JP">Billing Form</a><br/>
+        <a href="pages/choose_delivery_option_japan.shtml?JP">Delievery Options (Shipping Address form)</a><br/>
+        <a href="pages/my_address_japan.shtml?JP">My Address</a><br/>
+        <a href="pages/login_page_japan.shtml?JP">Login/Step1</a><br/>
+
+    </li>
+</ul>
+</div>
+</body>
+</html>

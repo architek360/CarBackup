@@ -1,0 +1,40 @@
+.menu {
+	@include brand-font;
+	text-align: left;
+
+	h3 {
+		text-align: left;
+		margin-bottom: 1em;
+		letter-spacing: .1em;
+		font-weight: normal;
+		text-transform: uppercase;
+		@include f(15);
+	}
+	li {
+		width: 100%;
+		float: left;
+		a {
+			@include rem('line-height', 18px);
+			display: block;
+			@include main-font;
+			&:link,&:visited {
+				color:$primary-3;	
+			}
+			&:hover,&:active {
+				color:$primary-2;	
+			}
+		}
+		&.menu-level-2 > a {
+			margin: 1em 0;
+			letter-spacing: .1em;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-bottom: 1px solid #aaa;
+		}
+		&.menu-level-3 {
+			width: 23%;
+			margin: 0 2% 2em 0;
+			@include f(13);
+		}
+	}
+}

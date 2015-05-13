@@ -1,0 +1,159 @@
+/*------------------------------------*\
+    Billing FORM -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER (.billing-form)
+ * HEADING CONTAINER (.heading2)
+ * PERSONAL DETAILS (.personal-details)
+ * ADDRESS DETAILS (.address-details)
+ * ACTION BUTTON (.next-step-cta)
+  
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.billing-form-japan{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	@include rem('margin', 0 62px);
+	@include rem('margin-bottom',62px);
+
+	.heading2{
+		border:none;
+		@include rem('padding-top',24px);
+		@include rem('padding-bottom',35px);
+		@include rem('line-height',38px);
+	}
+	.loaderDiv{
+		position: relative;
+		margin-left: 41%;
+		margin-top: -1px;
+		.loaderImage {
+			margin-top: 77px;
+		}
+	}
+	/*------------------------------------*\
+    	$PERSONAL DETAILS
+	\*------------------------------------*/
+	.personal-details{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		border:1px solid $primary-17;
+		@include f(20);
+		@include rem('padding',24px 24px 0);
+		@include rem('margin',0 0 25px 0);
+		display:inline-block;
+		text-transform:uppercase;
+		width: 100%;
+		 -moz-box-sizing: border-box;
+		box-sizing: border-box;
+		
+		.grid__item{
+			@include rem('padding',0px);
+
+			label{
+				@include bold-font;
+			}
+
+			&:last-child{
+				padding:0;
+				
+			}
+			.cta-button {
+				display :	block;
+			}
+			.radio-btn{
+				@include rem('padding',0 0 33px);
+				@include rem('margin',15px 0 0px);
+			}
+			.radio-btn + span {
+				@include rem('margin',-29px 0 0px);
+			}
+		}
+
+		.grid__item--row{
+
+			@include rem('min-height',120px);
+
+			input + span {
+				height: 35px
+			}
+		}
+	
+		.grid__item--pad{
+			@include rem('padding',0 0 30px 0);
+		}
+
+	}
+
+	/*------------------------------------*\
+    	$ADDRESS DETAILS
+	\*------------------------------------*/
+	.address-details{
+		background:$primary-1;
+		@extend .personal-details;
+		width: 100%;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		@include rem('padding-top', 48px);
+		@include rem('margin-bottom', 10px);
+		
+	}
+
+	.phone-details{
+		@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+		@extend .personal-details;
+		@include rem('padding', 24px 24px 0);
+	}
+
+	.confirmation{
+		display:block;
+		color:$primary-6;
+		@include rem('padding',6px 0 44px 0);
+		@include main-font;
+		.form-check{
+			width:100%;
+			line-height:25px;
+		}
+
+		.form-check-label{
+			width:82%;
+		}
+	}
+
+	/*------------------------------------*\
+    	$ACTION BUTTON
+	\*------------------------------------*/
+
+	.next-step-cta{
+		text-align:center;
+		clear:both;
+		.cta {
+			@include bold-font;
+		}
+		.cta--red{
+			width:68%;
+		}
+	}
+	.tabs__nav{
+		@include bold-font;
+		li{
+			width:50%;
+		}
+	}
+
+	.js-radio-tabs{
+		.radio-btn{
+			.radio-btn-li{
+			 width: 49%;
+
+			  .radio-title{
+				 	height: 72px;
+				 }
+			}
+		}
+	}
+
+}
+

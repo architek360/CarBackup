@@ -1,0 +1,110 @@
+<div class="clearfix grid palm--one-whole collection-pushes-wrapper ">
+	<h3> <span>3</span> collections </h3>
+<input type="hidden" name="secondPagePath" value="second page path">
+<input type="hidden" name="currentPagePath" value="page url"/>
+	<ul class=" js-collection-list__listing  js-view-wrapper" data-maxlimit="5" >
+		<li
+			data-sfy-headline="SOLITAIRE 1895"
+			data-sfy-subheadline="Platinum, diamonds"
+			data-sfy-text = "This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely."
+			data-sfy-video-platinum = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-white-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-pink-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-xhr-url = "xhrRequestUrl"
+			data-sfy-childpagepath="child page path"
+			data-sfy-childpagetitle="child page title"
+			>
+			<!--#set var="IMG_PATH" value="watchmaking_ballon_bleu_de_cartier_men.jpg" -->
+			<!--#set var="COLLECTION_TITLE" value="BALLONBLEUsssssssssssssssssssssssssssssssssssssssss DE CARTIER" -->
+			<!--#set var="MODEL_COUNT" value="18 models" -->
+			<!--#include virtual="../../components/collection_push/html.shtml" -->
+		</li>
+
+		<li
+			data-sfy-headline="SOLITAIRE 1895"
+			data-sfy-subheadline="Platinum, diamonds"
+			data-sfy-text = "This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely."
+			data-sfy-video-platinum = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-xhr-url = "xhrRequestUrl"
+			data-sfy-childpagepath="child page path"
+			data-sfy-childpagetitle="child page title"
+		>
+			<!--#set var="IMG_PATH" value="watchmaking_ballon_bleu_de_cartier_men.jpg" -->
+			<!--#set var="COLLECTION_TITLE" value="BALLON BLEU DE CARTIER" -->
+			<!--#set var="MODEL_COUNT" value="18 models" -->
+	        <!--#include virtual="../../components/collection_push/html.shtml" -->
+	    </li>
+
+        <li
+			data-sfy-headline="SOLITAIRE 1895"
+			data-sfy-subheadline="Platinum, diamonds"
+			data-sfy-text = "This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely."
+			data-sfy-video-platinum = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-xhr-url = "xhrRequestUrl"
+			data-sfy-childpagepath="child page path"
+			data-sfy-childpagetitle="child page title"
+        >
+	        <!--#set var="IMG_PATH" value="watchmaking_ballon_bleu_de_cartier_men.jpg" -->
+			<!--#set var="COLLECTION_TITLE" value="BALLON BLEU DE CARTIER" -->
+			<!--#set var="MODEL_COUNT" value="18 models" -->
+	        <!--#include virtual="../../components/collection_push/html.shtml" -->
+    	</li>
+
+		<li
+			data-sfy-headline="SOLITAIRE 1895"
+			data-sfy-subheadline="Platinum, diamonds"
+			data-sfy-text = "This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely."
+			data-sfy-video-platinum = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-xhr-url = "xhrRequestUrl"
+			data-sfy-childpagepath="child page path"
+			data-sfy-childpagetitle="child page title"
+			class="js-hide-content">
+	        <!--#set var="IMG_PATH" value="watchmaking_ballon_bleu_de_cartier_men.jpg" -->
+			<!--#set var="COLLECTION_TITLE" value="BALLON BLEU DE CARTIER" -->
+			<!--#set var="MODEL_COUNT" value="18 models" -->
+	        <!--#include virtual="../../components/collection_push/html.shtml" -->
+    	</li>
+
+    	<li data-sfy-headline="SOLITAIRE 1895"
+			data-sfy-subheadline="Platinum, diamonds"
+			data-sfy-text = "This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely."
+			data-sfy-video-platinum = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-xhr-url = "xhrRequestUrl"
+			data-sfy-childpagepath="child page path"
+			data-sfy-childpagetitle="child page title"
+			class="js-hide-content">
+	        <!--#set var="IMG_PATH" value="watchmaking_ballon_bleu_de_cartier_men.jpg" -->
+			<!--#set var="COLLECTION_TITLE" value="BALLON BLEU DE CARTIER" -->
+			<!--#set var="MODEL_COUNT" value="18 models" -->
+	        <!--#include virtual="../../components/collection_push/html.shtml" -->
+    	</li>
+
+
+
+    	<li
+    		data-sfy-headline="SOLITAIRE 1895"
+			data-sfy-subheadline="Platinum, diamonds"
+			data-sfy-text = "This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely."
+			data-sfy-video-platinum = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-video-gold = "http://www.youtube.com/embed/geTgZcHrXTc"
+			data-sfy-xhr-url = "xhrRequestUrl"
+			data-sfy-childpagepath="child page path"
+			data-sfy-childpagetitle="child page title"
+			class="js-hide-content">
+	        <!--#set var="IMG_PATH" value="watchmaking_ballon_bleu_de_cartier_men.jpg" -->
+			<!--#set var="COLLECTION_TITLE" value="BALLON BLEU DE CARTIER" -->
+			<!--#set var="MODEL_COUNT" value="18 models" -->
+	        <!--#include virtual="../../components/collection_push/html.shtml" -->
+    	</li>
+
+
+    </ul>
+
+
+</div>
+

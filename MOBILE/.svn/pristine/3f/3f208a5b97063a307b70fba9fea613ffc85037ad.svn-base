@@ -1,0 +1,161 @@
+/*------------------------------------*\
+	TITLE -- Mobile CSS
+\*------------------------------------*/
+/*
+* TITLE..... (.title-one-1 ,title-one-2 , title-one-3 etc)
+*/
+
+/*------------------------------------*\
+    $TITLES
+\*------------------------------------*/
+
+.title-one-1{
+	@include rem(font-size, 34px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',58px 0 30px);
+}
+.title-one-2{
+	@include rem(font-size, 32px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',58px 0 30px);
+}
+.title-one-3{
+	@include rem(font-size, 30px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',58px 0 30px);
+}
+.title-one-4{
+	@include rem(font-size, 28px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',58px 0 30px);
+}
+.title-one-5{
+	@include rem(font-size, 26px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',58px 0 30px);
+}
+.title-one-6{
+	@include rem(font-size, 24px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',58px 0 30px);
+}
+.title-two-1{
+	@include rem(font-size, 34px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-two-2{
+	@include rem(font-size, 32px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-two-3{
+	@include rem(font-size, 30px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-two-4{
+	@include rem(font-size, 28px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-two-5{
+	@include rem(font-size, 26px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-two-6{
+	@include rem(font-size, 24px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-three-1{
+	@include rem(font-size, 34px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-three-2{
+	@include rem(font-size, 32px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-three-3{
+	@include rem(font-size, 30px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-three-4{
+	@include rem(font-size, 28px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-three-5{
+	@include rem(font-size, 26px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.title-three-6{
+	@include rem(font-size, 24px);
+	font-family: "CartierRegular", sans-serif;
+	color:#fff;
+	text-align: center;
+	text-transform: uppercase;
+	@include rem('padding',0 0 30px);
+}
+.bold-text{
+	font-family: "CartierBold", sans-serif;
+}
+.georgia-text{
+	font-family: "georgia";
+}

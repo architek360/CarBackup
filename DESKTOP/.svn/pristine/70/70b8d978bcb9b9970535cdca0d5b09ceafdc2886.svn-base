@@ -1,0 +1,140 @@
+/*------------------------------------*\
+    IE8 - Desktop CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT VENDOR  LIBS....................get all compass vendor libs
+ * IMPORT BASE STYLES & MIXINS ...........CSS Wizardy Grid System, Base, Helper(mixins)
+ * IMPORT THEMES..........................get all themes Styles
+ * IMPORT BASE MOBILE STYLES..............get default base mobile Style
+ * IMPORT COMPONENTS......................Components Styles 
+
+ */
+
+/*@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/min";*/
+
+/*----------------------------------------------------------*\
+    $IMPORT - CSS Wizardy Grid System, Base, Helper(mixins)
+\*----------------------------------------------------------*/
+
+//@import "../_csswizardry-grids";
+@import "../_base";
+@import "../_helpers";
+@import "_theme";
+
+
+
+.carousel-wrapper {
+	.carousel {
+		.bx-wrapper {
+			.bx-pager.bx-default-pager a {
+			    text-indent: -9999px;
+			    display: block;
+			    outline: 0;
+				@include rem('width', 10px);
+				@include rem('height', 10px);
+				@include rem('margin', 0px 2px);
+				@include border-radius(9px); 
+				@include rem('margin', 0px 10px);
+				box-shadow: none;
+				background: none; 
+				border:none; 
+				@include setSpriteDesktop(20px, 20px, -0px, -160px, transparent);
+			    cursor: pointer;
+			    border: none;
+			    box-shadow: none;
+
+			    &:hover {
+					cursor: pointer;
+				    box-shadow: none;
+					background: none; 
+					border:none; 
+					@include setSpriteDesktop(20px, 20px, -20px, -160px, transparent);			    
+			    }
+			    &.active {
+				    background: none;	
+				    box-shadow: none; 
+					border:none; 		
+					@include setSpriteDesktop(20px, 20px, -40px, -160px, transparent);	    
+			    }
+
+
+			}
+		}
+	}
+}
+
+.push-over {
+	background-color:$primary-1;
+	-ms-filter: "alpha(opacity=80)";
+	}
+
+		/*  .bx-pager.bx-default-pager a {
+		    text-indent: -9999px;
+		    display: block;
+		    outline: 0;
+			@include rem('width', 10px);
+			@include rem('height', 10px);
+			@include rem('margin', 0px 2px);
+			@include border-radius(9px); 
+			@include rem('margin', 0px 10px);
+			box-shadow: none;
+			background: $primary-56; 
+			border:1px solid $primary-56; 
+			@include setSpriteDesktop(20px, 20px, -0px, -160px, transparent);
+		    cursor: pointer;
+		    border: none;
+		    box-shadow: none;
+
+		    &:hover {
+				@include setSpriteDesktop(20px, 20px, -20px, -160px, transparent);
+				cursor: pointer;
+			    border: none;
+			    box-shadow: none;
+		    }
+		    &.active {
+			    background: none;
+			    @include setSpriteDesktop(20px, 20px, -40px, -160px, transparent);
+			    border: thin none;
+			    box-shadow: none;
+		    }
+
+
+		  }*/
+
+.main-container{
+	min-height: auto !important;
+}
+.body-wrapper .header{
+	height:164px;
+	
+}
+
+.nav-show{
+	border-top:1px solid $primary-17;
+	border-bottom:1px solid $primary-17;
+}
+
+.nav-heading-cont{
+	.nav-show{
+		filter: alpha(opacity=80);
+		background:$primary-1;
+	}
+}
+
+.body-wrapper{
+
+	background:none;
+
+	.header{
+		filter: alpha(opacity=80);
+		background:$primary-1;
+	}
+}
+
+.one-third{width: 33%;}
+.one-third:first-child + .one-third + .one-third {margin-right:0;}
+

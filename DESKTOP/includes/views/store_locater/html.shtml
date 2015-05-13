@@ -1,0 +1,32 @@
+<!-- store locater Starts Here-->
+<div class="store-locater grid">
+	  <h1 class="heading2">Find a boutique <br/> or retailer </h1>
+	  
+	  <!--#set var="text-detail" value="geolocate me"-->
+	  <a class="cta <!--#echo var="cta--varaint" -->" alt="geolocate me"><span class="location"></span><!--#echo var="text-detail" --></a>
+	<div class="store-locater__search">
+		<!--#set var="label-name" value="Or search by city, zip code or state : " -->
+		<!--#set var="mandatory" value="yes"-->
+		<!--#set var="input-name" value="fn_fname" -->
+		<!--#include virtual="../../components/form_elements/label.shtml" -->
+		<input type="text"  class="form-input searchTextField" id="searchTextField" placeholder="City,zipcode,state" />
+		<span class="store-locater__search__bg"></span>
+		<span class="store-locater__search-message">There is no result for your search, we suggest the following : </span>
+	</div>
+	<div class="store-locate__list ">
+           
+            <ul class="store-locate__listing">
+                <li> <a href="#"> High jewelry watches </a> </li>
+                <li> <a href="#"> bestiaire watches </a> </li>
+               
+            </ul>
+    </div>
+    <div class="store-locate__find-boutique">
+	      <!--#set var="text-detail" value="find a boutique"-->
+		  <a class="cta <!--#echo var="cta--varaint" -->" alt="find a boutique"><!--#echo var="text-detail" --></a>
+	</div>
+
+</div>
+<img  class="store-locater__img" src="<!--#echo var="CONTENT_IMG_PATH" -->store_locator_bottom_img.png">
+
+ <!-- store locater Ends Here-->

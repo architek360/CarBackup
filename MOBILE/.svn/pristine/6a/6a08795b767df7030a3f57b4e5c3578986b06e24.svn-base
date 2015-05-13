@@ -1,0 +1,999 @@
+/*------------------------------------*\
+    Global -- MOBILE CSS
+ 
+\*------------------------------------*/
+/**
+ * FRAMEWORK STYLES
+
+ */
+
+/*------------------------------------*\
+    $GLOBAL STYLES
+\*------------------------------------*/
+* {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-color: $primary-1;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+a img {
+    color: $primary-2;
+}
+
+.text-link {
+    text-transform: uppercase;
+    display: inline-block;
+    @include brand-font;
+    @include f(20);
+}
+
+a.disabled {
+    pointer-events: none;
+}
+
+.main-container {
+    margin-top: 92px;
+}
+
+.heading1 {
+    @include brand-font;
+    @include f(34);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("padding", 50px 0 30px);
+    color: $primary-2;
+}
+
+.heading2 {
+    @include brand-font;
+    @include f(32);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("padding", 50px 0 30px);
+    color: $primary-2;
+}
+
+.heading-white-line {
+    border-bottom: 1px solid #ffffff;
+}
+
+.heading3 {
+    @include brand-font;
+    @include f(30);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("padding", 30px 0);
+    color: $primary-2;
+}
+
+.heading4 {
+    @include brand-font;
+    @include f(28);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("padding", 30px 0);
+    color: $primary-2;
+}
+
+.heading5 {
+    @include brand-font;
+    @include f(26);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("padding", 30px 0);
+    color: $primary-2;
+}
+
+.heading6 {
+    @include brand-font;
+    @include f(24);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("padding", 30px 0);
+    color: $primary-2;
+}
+
+.body-wrapper {
+    p {
+        @include f(26);
+        text-align: left;
+        @include rem("padding", 25px 0);
+        @include rem("line-height", 30px);
+        /*line-height:1.6em;
+        font-size:1.4em;*/
+    }
+    label {
+        @include main-font;
+        @include f(22);
+    }
+}
+
+hr {
+    background: $primary-2;
+    border: none;
+    height: 1px;
+    @include rem("margin", 25px 0);
+}
+
+.grey-text {
+    color: $primary-3;
+}
+
+.underline-text {
+    text-decoration: underline;
+}
+
+/* TEXT ALIGNMENT PROPERTIES */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* CREDIT CARD ICONS WITH SPRITE*/
+
+.mastercard {
+    @include setSprite(77.3px, 46px, -20px, -215px);
+}
+
+.visa_card {
+    @include setSprite(77.3px, 46px, -116px, -215px);
+}
+
+.discover_network_card {
+    @include setSprite(71.3px, 46px, -311px, -215px);
+}
+
+.jsb_card {
+    @include setSprite(59.3px, 46px, -403px, -215px);
+}
+
+.american_express_card {
+    @include setSprite(77.3px, 46px, -214px, -215px);
+}
+
+.diners_club_card {
+    @include setSprite(77.3px, 46px, -476px, -215px);
+}
+
+.icon-phone {
+    @include setSprite(13px, 36px, -155px, -20px);
+}
+
+/* NORTON SECURED ICON WITH SPRITE*/
+
+.norton-icon {
+    @include setSprite(95.3px, 59px, -393px, -135px);
+}
+
+/************ Fonts Family *************/
+.bold-font {
+    @include bold-font;
+}
+
+.brand-font {
+    @include brand-font;
+}
+
+.bold-font {
+    @include bold-font;
+}
+
+.main-font {
+    @include main-font;
+}
+
+/************ Fonts Size *************/
+
+.font32 {
+    @include f(32);
+}
+
+.mandatory {
+    @include font-color($primary-20);
+    @include f(20);
+    @include rem(margin, 0 0 0 5px);
+}
+
+.info-icon {
+    @include setSprite(50px, 52px, -251px, -135px);
+}
+
+.zoom-icon {
+    @include setSprite(62px, 60px, -255px, -284.5px);
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    bottom: 3rem;
+}
+
+.degree360-icon {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    bottom: 4.3rem;
+}
+
+.logout-icon {
+    @include setSprite(23px, 28px, -926px, -21px);
+    @include rem(margin, 0 0 0 10px);
+}
+
+/*This class is for both server and client side messages. So the mixins were not used. The importnat is used to over ride all the styling for server side messages*/
+span.error,label.error, .input-wrapper label.error {
+    @include font-color($primary-20 !important);
+    font-family: Georgia, sans-serif !important;
+    font-style: italic !important;
+    text-transform: none;
+    font-size: 24px !important;
+    display: block;
+    padding-top: 5px !important;
+    text-align: left;
+    text-transform: none;
+}
+
+.formerror .form-select {
+    border: 1px solid #8f141a !important;
+    background-color: #3b1112 !important;
+}
+
+.js-zoom {
+    cursor: pointer;
+}
+
+.error {
+    text-transform: none !important;
+}
+
+.loaderImage {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-image: url($path-images + "icons/throbber.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include rem("margin-top", 7px);
+}
+
+.loading {
+    background: url($path-images + "icons/throbber.gif") no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.hide-product {
+    display: none;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.opacity-none {
+    opacity: 0 !important;
+    filter: alpha(opacity = 0) !important;
+}
+
+/*
+Fix For Iphone // 6th feb
+ */
+
+textarea,
+select,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.js-hide-content {
+    display: none;
+}
+
+.js-show-content {
+    display: block;
+}
+
+.error-zone {
+    margin: 0 auto;
+    color: #8f141a;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    display: block;
+    width: 81.25%;
+    border: 1px solid #4d4d4d;
+    @include f(20);
+    @include brand-font;
+    span {
+        margin-top: 5px;
+        text-transform: uppercase;
+        display: block;
+        @include bold-font;
+        margin-bottom: 10px;
+    }
+}
+
+.error-div {
+    @include rem(margin, 40px 0px);
+    color: #ffffff;
+    padding: 20px;
+    display: block;
+    @include rem("padding", 10px);
+    @include linear-gradient(135deg, black 73%, #010000 0%, #460000 100%);
+    border: 1px solid red;
+    text-align: center;
+    @include main-font;
+    @include f(18);
+    word-wrap: break-word;
+    width: 95%;
+    span {
+        margin-top: 5px;
+        text-transform: uppercase;
+        display: block;
+        @include bold-font;
+        margin-bottom: 10px;
+    }
+}
+
+/*.viewportWrapper{
+overflow: hidden;
+
+}*/
+
+.message-area {
+    color: #ffffff;
+    padding: 20px;
+    display: block;
+    width: 81.25%;
+    border: 1px solid #4d4d4d;
+    @include f(20);
+    @include brand-font;
+    margin: 10px auto 0;
+    span {
+        margin-top: 5px;
+        text-transform: uppercase;
+        display: block;
+        @include bold-font;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+/*Galaxy S4 specific fix */
+
+.device-s4 {
+    footer {
+        li {
+            height: 92px;
+        }
+    }
+    .radio-title:after {
+        width: 18px;
+        height: 18px;
+        @include rem(line-height, 28px);
+        @include border-radius(12px);
+    }
+}
+
+/* event Article  s-4 fix*/
+.not-uc-browser {
+    .event-article {
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+/*Galaxy S3 specific fixes*/
+.device-s3 {
+    header {
+        height: 94px;
+    }
+    .event-article {
+        p {
+            line-height: 36px;
+        }
+        .heading7 {
+            line-height: 35px;
+        }
+        .heading6 {
+            line-height: 45px;
+        }
+    }
+}
+
+.uc-browser {
+    .email-sent {
+        .heading3 {
+            @include f(35);
+        }
+        p {
+            @include f(20);
+        }
+    }
+}
+
+/*Confirmation css goes here
+*/
+#confirmOverlay {
+    width: 100%;
+    height: 100%;
+    /*background:url('ie.png');*/
+    background: -moz-linear-gradient(rgba(11, 11, 11, 0.1), rgba(11, 11, 11, 0.6)) repeat-x rgba(11, 11, 11, 0.2);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11, 11, 11, 0.1)), to(rgba(11, 11, 11, 0.6))) repeat-x rgba(11, 11, 11, 0.2);
+    z-index: 100000;
+}
+
+.create-account-link {
+    @include f(18);
+    color: #a0a0a0;
+    display: block;
+    font-style: italic;
+}
+
+.positionChange {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#confirmBox {
+    background: repeat-x left bottom #e5e5e5;
+    width: 460px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -130px 0 0 -230px;
+    border: 1px solid $primary-25;
+    @include rem("padding", 20px);
+    @include linear-gradient(130deg, $primary-1 0%, $primary-28 50%, $primary-27 100%);
+}
+
+#confirmBox h1,
+#confirmBox p {
+    @include bold-font;
+    @include f(26);
+    text-align: center;
+    /*padding: 18px 25px;*/
+    color: #666;
+}
+
+#confirmBox h1 {
+    letter-spacing: 0.3px;
+    color: $primary-2;
+    @include bold-font;
+    @include f(18);
+    text-align: center;
+    text-transform: uppercase;
+    @include rem("margin-bottom", 20px);
+}
+
+#confirmBox p {
+    @include f(16);
+    line-height: 1.4;
+    /*@include rem('padding-top',35px);*/
+}
+
+#confirmButtons {
+    padding: 15px 0 10px;
+    text-align: center;
+    .cta-button {
+        @include rem("margin", 20px);
+        margin-bottom: auto;
+    }
+    .cta--red {
+        width: 40%;
+    }
+    .cta--grey {
+        width: 40%;
+        @include rem("padding-top", 15px);
+        @include rem("padding-bottom", 15px);
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
+
+.heading-wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 82.25%;
+}
+
+.loaderDiv {
+    height: 60px;
+    @include bold-font;
+    @include f(18);
+    line-height: 40px;
+    .loaderImage {
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.bold-class {
+    font-family: "CartierBold", sans-serif !important;
+    font-style: normal !important;
+    text-transform: none !important;
+}
+
+.cursive-class {
+    font-family: Georgia, sans-serif !important;
+    font-style: italic !important;
+    text-transform: none !important;
+}
+
+/*Special fonts*/
+
+.lovefont {
+    font-family: "CartierLoveTM" !important;
+    display: inline-block !important;
+}
+
+/*Error input Styling*/
+
+/*These stylings cannot remove important as these are to be applied irrespective of the for or the page*/
+
+input[type='text'],input[type='email'],input[type='tel'],input[type='password'],input[type='message'],select,textarea {
+    &.error {
+        border: 1px solid $primary-20 !important;
+        background-color: #3b1112 !important;
+    }
+}
+
+input[type='checkbox'].error + span + span.form-check__wrapper {
+    border: 1px solid $primary-20 !important;
+    background-color: #3b1112 !important;
+}
+
+input[type='radio'].error + label:after {
+    border: 1px solid $primary-20 !important;
+    background-color: #3b1112 !important;
+}
+
+.login .login-box .login-box__list li .password-input {
+    border: none !important;
+}
+
+.login .login-box .login-box__list li div.error, .error-date {
+    border: 1px solid $primary-20 !important;
+    background-color: #3b1112 !important;
+}
+
+.cross-button {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+    @include setSprite(27px, 29px, -630px, -128px);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+  /*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+
+.input-wrapper {
+    .form-input {
+        color: $primary-2;
+        background-color: $primary-16;
+        border: 1px solid $primary-61;
+    }
+}
+
+/*------------------------------------*\
+    	$RADIO ELEMENTS
+\*------------------------------------*/
+
+.radio {
+    span {
+        background-position: -81px -11px;
+    }
+    .checked {
+        background-position: -111px -11px;
+    }
+}
+
+.checkbox-wrapper {
+    .form-checkbox-label {
+        .checker {
+            span {
+                background-position: -14px -12px;
+            }
+            .checked {
+                background-position: -47px -12px;
+            }
+        }
+    }
+}
+
+.checkbox-wrapper {
+    #uniform-termsCondition {
+        span {
+            background-position: -14px -12px;
+        }
+        span.checked {
+            background-position: -47px -12px;
+        }
+    }
+}
+
+.textarea-wrapper {
+    .form-textarea {
+        background: $primary-127;
+        border: 1px solid $primary-126;
+    }
+}
+
+.checker {
+    span {
+        background-position: -14px -11px;
+    }
+    .checked {
+        background-position: -47px -11px;
+    }
+    span.formerror {
+        background-position: -234px -11px !important;
+    }
+}
+
+.form-check {
+    display: inline-block;
+    width: auto;
+}
+
+input[type='text'].error, input[type='email'].error, input[type='tel'].error, input[type='password'].error, input[type='message'].error, select.error, textarea.error {
+    border: 1px solid #8f141a !important;
+    background-color: $primary-122 !important;
+}
+
+.error_message_js-personal-info-form {
+    /*@include rem(margin, 30px 119px);*/
+    /*margin-left: 9%;*/
+    /*margin-right: 9%;*/
+    color: #ffffff;
+    /*padding:20px;*/
+    display: block;
+    /*@include rem('padding', 10px);*/
+    @include linear-gradient(135deg, black 73%, #010000 0%, #460000 100%);
+    border: 1px solid red;
+    text-align: center;
+    @include main-font;
+    @include f(18);
+    /*width : 81.25%;*/
+    /*position : absolute;*/
+    /*top :  263px;*/
+    z-index: 1;
+    margin: 3rem auto 0rem;
+    padding: 1rem 3rem;
+    width: 91.25%;
+    position: relative;
+    span {
+        margin-top: 5px;
+        text-transform: uppercase;
+        display: block;
+        @include bold-font;
+        margin-bottom: 10px;
+    }
+}
+
+/*
+Here, there are all common error message classes for forms
+*/
+.error_message_js-reg-step-1, .error_message_js-light-account-form {
+    /*@include rem(margin, 30px 119px);*/
+    /*margin-left: 9%;*/
+    /*margin-right: 9%;*/
+    color: #ffffff;
+    /*padding:20px;*/
+    display: block;
+    /*@include rem('padding', 10px);*/
+    @include linear-gradient(135deg, black 73%, #010000 0%, #460000 100%);
+    border: 1px solid red;
+    text-align: center;
+    @include main-font;
+    @include f(18);
+    /*width : 81.25%;*/
+    /*position : absolute;*/
+    /*top :  263px;*/
+    z-index: 1;
+    margin: 3rem auto 0rem;
+    padding: 1rem 3rem;
+    width: 82.25%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 173px;
+    span {
+        margin-top: 5px;
+        text-transform: uppercase;
+        display: block;
+        @include bold-font;
+        margin-bottom: 10px;
+    }
+}
+
+/*ECS CODE*/
+
+/* line 94, ../../../../../../sass/_base.scss */
+.f-left {
+    float: left;
+}
+
+/* line 98, ../../../../../../sass/_base.scss */
+.f-right {
+    float: right;
+}
+
+/* line 101, ../../../../../../sass/_base.scss */
+.f-none {
+    float: none;
+}
+
+.to-lowercase {
+    text-tranform: lowercase !important;
+}
+
+.success-div {
+    width: 80.30%;
+    margin: 0 auto;
+    margin-bottom: 17px;
+    border: solid 1px #464646;
+    font-size: 2.4rem;
+    @include medium-font;
+    background: initial;
+}
+
+.silentlogin {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 1000;
+    opacity: 0.8;
+    background-image: url($path-images + "icons/loading_animation.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.coloumn-wrapper {
+    width: 82.25%;
+    margin: 0 auto;
+}
+
+.coloumn-wrapper .grid {
+    margin-left: 0;
+}
+
+.comp-rich-text .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.just-preloader {
+    background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bx_loader.gif");
+    background-size: 20px 20px  !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-mandatory {
+    color: #b10000;
+    margin-left: 0.5rem;
+}
+
+.mobile-create-btn .error_message_js-reg-step-1 {
+    top: 0;
+}
+
+.carousel-product-detail.heading2 .prod-name {
+    display: block;
+    margin-bottom: 25px;
+}
+
+#send_email #fn_titledesc {
+    display: none;
+}
+
+.form-loader {
+    background: url($path-images + "icons/bx_loader.gif") 5px 0 no-repeat transparent;
+    height: 34px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.owned-creations .form-loader {
+    display: none !important;
+}
+
+.js-owncreation-container {
+    margin-top: 35px;
+}
+
+.js-personal-info-form .personal-info-c1 .heading-wrapper {
+    width: 100%;
+}
+
+.js-personal-info-form .personal-info-c1 .heading-wrapper .heading4 {
+    text-align: left;
+    font-family: "CartierBold",sans-serif;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.js-subscription-and-interest-form .form {
+    width: 82.25%;
+    margin: 0 auto;
+}
+
+.js-login-dropdown .comp-rich-text.rte-wrapper {
+    padding: 10px 0 0;
+    width: 100%;
+}
+
+.services-img-cont img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.services-img-cont {
+    width: 82.25%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-view__wrapper .exhibitions {
+    width: 100%;
+}
+
+.faq-view__wrapper .exhibitions p {
+    display: inline-block;
+}
+
+span.red-more a {
+    @include setSprite(auto, auto, -1035px, -223px);
+    text-decoration: none;
+    font-weight: normal;
+    border-bottom: none;
+    padding-left: 15px;
+}
+
+.schema-wrapper {
+    display: none !important;
+}
+
+/**************************************************************************************
+		DISPATCH LANDING PAGE SCSS
+
+***************************************************************************************/
+.dispatch-landing {
+    background-color: $primary-1;
+}
+
+.dispatch-body {
+    background: $primary-1 none;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: hidden;
+    .site-logo {
+        @include rem("margin-top", 25px);
+        @include rem("margin-bottom", 15px);
+        text-align: center;
+        position: relative;
+    }
+    .main-dispatch {
+        margin: auto;
+        @include rem("margin-top", 50px);
+        text-align: center;
+        @include rem("letter-spacing", 1px);
+        display: block;
+        padding: 30px 50px;
+        position: relative;
+        .heading2 {
+            color: $primary-2;
+            @include f(27);
+            font-weight: normal;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 0.2rem;
+        }
+        .continent {
+            color: $primary-2;
+            @include f(20);
+            font-weight: bold;
+            @include rem("margin-top", 20px);
+            text-transform: uppercase;
+            @include rem("line-height", 15px);
+        }
+        ul {
+            li {
+                list-style: none;
+                @include rem("margin-top", 5px);
+                text-transform: uppercase;
+                a {
+                    color: $primary-3;
+                    @include f(16);
+                    font-weight: normal;
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: $primary-2;
+                }
+            }
+        }
+        .heading-wrapper {
+            position: relative;
+        }
+        .heading-wrapper:before {
+            content: "";
+            border-top: 1px solid $primary-69;
+            left: 0;
+            position: absolute;
+            bottom: 45px;
+            width: 50px;
+        }
+        .heading-wrapper:after {
+            content: "";
+            border-top: 1px solid $primary-69;
+            right: 0;
+            position: absolute;
+            bottom: 45px;
+            width: 50px;
+        }
+        .left-col {
+            position: relative;
+            .bag {
+                background: url($path-images + "icons/bag.png") no-repeat center top;
+                height: 20px;
+                width: 23px;
+                margin: 4px auto 0;
+            }
+        }
+        .right-col {
+            position: relative;
+        }
+    }
+    .dispatch-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.ecsMyServiceOrderPage .title-line {
+    margin-top:0px;
+}
+.address-box {
+    width: 81.25%;
+    margin: 0 auto;
+}

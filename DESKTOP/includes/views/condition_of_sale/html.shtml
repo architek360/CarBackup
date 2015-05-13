@@ -1,0 +1,65 @@
+<!-- condtion of sale  Starts Here-->
+<div class="condition-of-sale comp-rich-text">
+        <h1 class="heading2">
+                CONDITIONS OF SALE CARTIER U.S. E-BOUTIQUE AND CUSTOMER CONTACT CENTER
+        </h1>
+        <dl>
+        	<dt>Company Information:</dt>
+        	
+        	<dd>
+        		Vendor: Cartier North America, Branch of Richemont North America, 645 Fifth Avenue, 5th Floor, New York, NY 10022, U.S.A
+        	</dd>
+        	<dt>Person in charge of telephone and websales: </dt>
+        	<dd>
+        			Karl Taps, Cartier North America
+        	</dd>
+        	<dt> Address:</dt>
+        	<dd>
+        		Cartier North America, e-Boutique, 653 Fifth Avenue, New York, NY 10022, U.S.A
+
+        	</dd>
+        </dl>
+        <p>
+        	Please also consult the Terms of Use which, unless stated otherwise, also apply to use of the Cartier e-boutique
+        </p>
+        <!--acordian start here -->
+        <div class="faq-view clearfix">
+			<ol class="faq-view__wrapper js-accordion"> 
+	        		<li class="faq-view__node js-accordion__node">
+	        			<div class="faq-view_node__title heading3 js-accordion_node__title">
+							<span class="off"></span>
+							<div class="faq-view_node_title__ques">
+								<p>general</p>
+							</div>
+						</div>
+						<div class="faq-view_node__desc js-accordion_node__desc">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+						</div>
+
+	        		</li>
+	        		<li class="faq-view__node js-accordion__node">
+	        			<div class="faq-view_node__title heading3 js-accordion_node__title">
+							<span class="off"></span>
+							<div class="faq-view_node_title__ques">
+								<p>purchasing</p>
+							</div>
+						</div>
+						<div class="faq-view_node__desc js-accordion_node__desc">
+							<p>
+								<ul>
+									<li>nh</li>
+									<li>kj</li>
+									<li>kjl</li>
+								</ul>
+							</p>
+						</div>
+
+	        		</li>
+	        </ol>
+	    </div>
+        <!-- acordian end here -->
+
+</div>
+<!-- condtion of sale  Ends Here-->

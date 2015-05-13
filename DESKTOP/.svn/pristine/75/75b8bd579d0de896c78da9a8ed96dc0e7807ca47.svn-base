@@ -1,0 +1,3 @@
+<div class="form-element button-wrapper <!--#echo var="action-name" -->">
+    <input type="submit" value="<!--#echo var="text-detail" -->" class="form-button">
+</div>

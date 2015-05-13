@@ -1,0 +1,220 @@
+/*------------------------------------*\
+    ENGRAVING -- Desktop CSS
+\*------------------------------------*/
+
+.engraving{
+	width: 978px;
+	background: $primary-1;
+	@include rem('padding-bottom', 0px);
+	.col-image{
+		display: inline-block;
+		width: 420px;
+		@include rem('padding-top', 10px);
+
+		img{
+			max-width: 420px;
+			max-height: 420px;
+			padding: 15px;
+		}
+
+
+	}
+
+	ul {
+
+		@include set-ulFix;	/* For normalizing margins, padding*/
+		
+		li {
+			clear: both;
+			text-align: left;
+			@include rem('margin-bottom', 20px);
+
+			label{
+				width: auto;
+			}
+
+			.engraving__line {
+				display: block;
+				text-align: left;
+				@include rem('padding', 0px 0px 5px 0px);
+				@include bold-font;
+
+				.form-label{
+					margin-right: 25px;
+					display: inline-block;
+					width: auto;
+				}
+				span {
+					margin-left: 13%;
+				}
+
+
+				.form-input{
+					border:1px solid $primary-103;
+					background: $primary-102;
+					width: 210px;
+					display: inline-block;
+				}
+
+				/*span.error{
+					display: none !important;
+				}*/
+
+			}
+
+			.slide_switch  {
+				display: block;
+				text-align: center;
+				margin: 0;
+
+				label {
+					width: auto;
+					text-transform: none;
+					@include f(14);
+					@include rem('padding-right', 10px);
+					@include rem('letter-spacing', 1.5px);
+					vertical-align: top;
+				}
+				.js-cursive-class{
+					@include main-font;
+				}
+				.uniform-Bold{
+					font-weight: bold;
+				}
+			}
+
+			.form-input{
+				border:1px solid $primary-101;
+			}
+		}
+	}
+
+	.col-form{
+		display: inline-block;
+		@include rem('margin-top', 40px);
+		text-align: center;
+		width: 510px;
+
+		p{
+			@include main-font();
+			@include f(11);
+			font-style: italic;
+			 @include rem('letter-spacing', 1px);
+			color: $primary-6;
+			@include rem('padding-top', 5px);
+			text-align: center;
+		}
+
+		.engraving_preview{
+			@include main-font();
+			@include f(17);
+			@include rem('margin-right', 20px);
+			text-transform: none;
+			font-weight: normal;
+			background: none;
+			height: auto;
+			@include rem('padding', 0 10px);
+			display: block;
+
+			.engraving_preview__line{
+				@include rem('margin-bottom', 0px);
+				@include rem('padding-bottom', 0px);
+				@include f(13);
+				min-height: 15px;
+				display: block;
+				width: 100%;
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-style: normal;
+				color: $primary-2;
+			}
+
+			.js-cursive-class{
+				@include mb-script-font();
+				@include f(17);
+				@include rem('margin-right', 20px);
+			}
+		}
+
+		hr{
+			padding:0;
+			@include rem('margin', 0 50px);
+			border: none;
+			border-bottom:1px solid $primary-100;
+			background: none;
+			right: 0;
+			width: 510px;
+			left: inherit;
+			}
+	}
+
+	.grid__item{
+		padding-left: 0;
+	}
+
+	.input-wrapper{
+		@include rem('padding-bottom', 0px);
+		@include rem('margin-top', 0px);
+
+		label{
+			@include proxi-font();
+			font-weight: bold;
+			@include rem('letter-spacing', 1px);
+			@include f(11);
+			text-transform: uppercase;
+			display: inline;
+			@include rem('margin-right', 25px);
+		}
+
+		.form-input{
+			@include main-font();
+			@include f(12);
+			@include rem('letter-spacing', 1px);
+			@include rem('margin', 0 10px 10px 0);
+			@include rem('padding', 5px);
+			@include rem('width', 210px);
+		}
+	}
+
+
+	.engraving-form{
+		@include rem('padding', 10px 0 0);
+		display: inline-block;
+	}
+
+	
+
+	.form-radios{
+		display: table;
+		margin: 10px auto;
+
+		.radio-wrapper{
+			text-align: center;
+			width: auto;
+			@include rem('margin-right', 15px);
+			display: inline-block;
+
+			label{
+				@include proxiBold-font();
+				@include rem('letter-spacing', 1px);
+				text-transform: none;
+				@include f(14);
+				display: inline-block;
+				@include rem('margin-bottom', 5px);
+			}
+
+
+
+			.radio-name{
+				text-transform: none;
+			}
+		}
+	}
+
+
+
+	.title-line{
+		border-top:1px solid $primary-100;
+		@include rem('margin-bottom', 10px);
+	}
+
+}

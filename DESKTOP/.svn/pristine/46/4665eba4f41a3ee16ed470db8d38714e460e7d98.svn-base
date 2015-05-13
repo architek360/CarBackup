@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+
+<!--#set var="coltype" value="6040" -->
+
+<!--#set var="VIEWS_1" value="maison_columns" -->
+
+
+<!--#set var="COMP_4" value="breadcrumb" -->
+<!--#endif -->
+<!--#set var="MODULE" value="maison js-living-heritage" -->
+<!--#include virtual="../templates/base.shtml" -->
+

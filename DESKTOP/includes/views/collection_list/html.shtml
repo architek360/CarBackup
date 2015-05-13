@@ -1,0 +1,66 @@
+<!-- collection Starts Here-->
+<div class="collection-image">
+      <img src="<!--#echo var="CONTENT_IMG_PATH" -->collection_watch.png" alt="watch">
+</div> 
+<div class="collection">
+    
+    <div class="collection__title">
+        <h4 class="heading4">timpieces</h4>
+        <h1 class="heading2">Men's Watches</h1>
+    </div>
+
+    <ul class="collection__listing grid clearfix">
+        <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="listing-collection.jpg" -->
+            <!--#set var="more-text" value="8 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="CALIBRE DE CARTIER" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="listing-collection.jpg" -->
+            <!--#set var="more-text" value="12 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="Ballon bleu" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img -->
+            <!--#set var="img-src" value="listing-collection.jpg" -->
+            <!--#set var="more-text" value="3 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="roadster" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="listing-collection.jpg" -->
+            <!--#set var="more-text" value="12 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="tank" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+         <li class="grid__item one-half palm--one-whole">
+            <!--#set var="links-to" value="#" -->
+            <!--#set var="class-name" value="product-push__img" -->
+            <!--#set var="img-src" value="listing-collection.jpg" -->
+            <!--#set var="more-text" value="6 models" -->
+            <!--#set var="arrow-class" value="arrow-show" -->  
+            <!--#set var="product-title" value="santos" -->  
+            <!--#include virtual="../../components/collection_box/html.shtml" -->
+        </li>
+
+    </ul>       
+
+</div>
+<!-- collection Ends Here-->

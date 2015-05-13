@@ -1,0 +1,201 @@
+/*
+ * cartier.location.js
+ * This file contains functionalities handling location Messages to decouple modules.
+ * the possible channels are restricted to maintain a robust api
+ *
+ * @project   cartier Desktop
+ * @date      2014-01-03
+ * @author    Sapient
+ * @licensor  cartier Desktop
+ * @site      cartier Desktop
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+;
+(function(win, $, ns, undefined) {
+	//this will cause the browser to check for errors more aggressively
+	'use strict';
+	//check if Jquery is defined, else return
+	if (typeof $ === 'undefined') {
+		console.log('jQuery not found');
+		return false;
+	}
+
+	/*
+        private variables
+    */
+
+	var
+	_mediator = {
+		channels: [],
+		possibleChannels: ['loadstart', 'loadend', 'beforeDataChanged', 'dataChanged', 'afterDataChanged', 'emptyResult', 'visibilityChanged', 'filterDataSet', 'hasmore', 'dataLoaded']
+	},
+		_applications = [],
+		_cache = {},
+		_dataStore,
+		_noresultMsgStatus = false,
+
+
+		//--------------------------------------------------------------------------------------------------------
+		//         Caching jQuery object
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+      @private method : caching jquery objects
+      @param : none
+    */
+		_cacheObjects = function() {
+			_cache = {
+				$map: $('.js-map'),
+				$geocoder: $('.js-geocoder'),
+				$boutiquelist: $('.boutique.scrollable'),
+				$filter: $('.js-filter'),
+				$hasmore: $('.js-view-button'),
+				$loadingindicator: $('.loadingindicator'),
+				$hideOnLoad: $('.hideonload')
+			};
+		},
+
+		//--------------------------------------------------------------------------------------------------------
+		//          EVENT Bindings
+		//--------------------------------------------------------------------------------------------------------
+
+
+		/*
+      @private method : To fire Callback of Each Instance in the _Application Object
+      @param : Callback Function
+    */
+		_eachInstance = function(callback) {
+			$.each(_applications, function(i, instance) {
+				callback(instance, i);
+			});
+		};
+
+
+
+	//--------------------------------------------------------------------------------------------------------
+	//          Public functions
+	//--------------------------------------------------------------------------------------------------------
+
+	/*
+        @public method : initailize the module
+    */
+
+	ns.init = function() {
+		_cacheObjects();
+		cartier.location.datastore.prototype = cartier.location.prototype;
+		_dataStore = new ns.datastore({}, ns, win, $);
+		/* init map if present*/
+		if (_cache.$map.length) {
+			cartier.location.googlemap.prototype = cartier.location.prototype;
+			_applications.push(new ns.googlemap(_cache.$map[0], {}, ns, win, $, _dataStore));
+		}
+		/* init Geocoder input if present*/
+		if (_cache.$geocoder.length) {
+			cartier.location.geocodedinput.prototype = cartier.location.prototype;
+			_applications.push(new ns.geocodedinput(_cache.$geocoder[0], {}, ns, win, $, _dataStore));
+		}
+		if (_cache.$hasmore.length) {
+			cartier.location.hasmore.prototype = cartier.location.prototype;
+			_applications.push(new ns.hasmore(_cache.$hasmore, {}, ns, win, $, _dataStore));
+		}
+
+		if (_cache.$filter.length) {
+			cartier.location.filter.prototype = cartier.location.prototype;
+			_applications.push(new ns.filter(_cache.$filter[0], {}, ns, win, $));
+		}
+		if (_cache.$boutiquelist.length) {
+			cartier.location.boutiquelist.prototype = cartier.location.prototype;
+			_applications.push(new ns.boutiquelist(_cache.$boutiquelist[0], {}, ns, win, $, _dataStore));
+		}
+
+
+		_eachInstance(function(instance) {
+			instance.init();
+		});
+		ns.subscribe('loadstart', function() {
+			_cache.$hideOnLoad.each(function(i, e) {
+				_noresultMsgStatus[i] = $(e).is(':visible');
+				$(e).hide(0);
+			});
+			_cache.$loadingindicator.css('display', 'block');
+			$('.js-store-detail').remove();
+
+		});
+		ns.subscribe('beforeDataChanged', function() {
+			_cache.$loadingindicator.css('display', 'none');
+			_cache.$hideOnLoad.each(function(i, e) {
+				if (_noresultMsgStatus[i] === true) {
+					$(e).show(0);
+				}
+			});
+
+		});
+
+		if (_cache.$boutiquelist.length) {
+            $.jStorage.set('porigin','blp');
+		}
+
+	},
+
+	/*
+        @public method : Subscribe Method for Channeling Subscriptions
+        @param : Channel Object and Callback Function
+    */
+
+	ns.subscribe = function(channel, fn) {
+		if (!_mediator.channels[channel]) {
+			_mediator.channels[channel] = [];
+		}
+		_mediator.channels[channel].push({
+			context: this,
+			callback: fn
+		});
+		return this;
+	},
+	/*
+        @public method : To Get All Availble Channels in the Mediator Object
+        @param : none
+    */
+	ns.getChannels = function() {
+		return _mediator.channels;
+	};
+
+	/*
+        @public method : Publish Method for Publishing Data To Channels
+        @param : channel Object to be Published
+    */
+	ns.publish = function(channel) {
+		// if channel does not exist or isn't allowed exit and return false
+		if (!_mediator.possibleChannels || !_mediator.channels[channel]) {
+			return false;
+		}
+		var args = Array.prototype.slice.call(arguments, 1);
+		for (var i = 0, l = _mediator.channels[channel].length; i < l; i++) {
+			var subscription = _mediator.channels[channel][i];
+			subscription.callback.apply(subscription.context, args);
+		}
+		return this;
+	};
+	/*
+        @public method : Adding init, Publish, and SubmitDatChange Function to cartier.Location
+        @param : channel Object to be Published
+    */
+	cartier.location.prototype = {
+		submitDataChange: function(xhrResult) {
+			cartier.location.publish('dataChanged', xhrResult);
+		},
+		publish: function(channel, msg) {
+			cartier.location.publish(channel, msg);
+		},
+		init: function() {
+			cartier.location.subscribe('beforeDataChanged', function(xhrResult) {
+				this.xhrPlainData = xhrResult;
+			});
+		}
+	};
+}(window, jQuery, cartier.location));

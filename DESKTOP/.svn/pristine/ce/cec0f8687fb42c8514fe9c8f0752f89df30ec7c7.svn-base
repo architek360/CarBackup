@@ -1,0 +1,83 @@
+/*!
+ *  cartier.author.js
+ *  This file contains functionalities for author mode 
+ */
+var cartier = cartier || {}; // core namespace
+cartier.author = {};
+;
+(function(window, $, author, undefined) {
+    //this will cause the browser to check for errors more aggressively
+    'use strict';
+
+    //check if jquery is defined, else retun
+    if ($ === undefined) {
+        //console.log("jQuery not found");
+        return false;
+    }
+
+    var
+
+    _cache = {};
+
+
+    /*
+       @private method : caching jquery objects 
+       @param : none 
+      */
+    var _cacheObjects = function() {
+        _cache = {
+            $login : $(".js-login"),
+            $author_slider : $("ul.js-author-slider")
+        };
+
+    },_author_carousel;
+
+    var _loginAuthorFixes = function(){
+    setTimeout(function(){
+            $('.js-myaccount').closest('.js-accordion_node__desc').css("display","block");
+    },500);
+
+
+
+    },
+
+    _initializeCarousel= function(){
+
+        setTimeout(function(){
+
+        _author_carousel = _cache.$author_slider.bxSlider({
+            mode:'horizontal',
+            speed:1000,
+            auto:false,
+            pager:false,
+            infiniteLoop:false
+        });
+
+        }, 1000);
+
+
+
+
+    };
+
+    /*
+    @pubic method : initailize the module
+    */
+    author.init = function() {
+        //console.log('JS-LOG:Author Init Called');
+
+        //caching the jquery objects
+        _cacheObjects();
+        if(_cache.$author_slider)
+        _initializeCarousel();
+        if(_cache.$login.length){
+            _loginAuthorFixes();
+        }
+    };
+
+}(window, jQuery, cartier.author));
+
+
+$( document ).ready(function() {
+    cartier.author.init();
+});

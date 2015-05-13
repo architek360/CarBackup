@@ -1,0 +1,60 @@
+{
+	"success": true,
+	"serverMessage": "Variant JSON",
+	"content": {
+		"hasVariants": true,
+		"multiplePrices": false,
+		"productprice": "$6,600",
+		"numericPrice": 6600,
+		"availability": true,
+		"variants": [{
+			"refid": "B6035516",
+			"size": "16 (US 2 ¼)",
+			"price": "$6,600",
+			"numericPrice": 6600,
+			"showReqPrice": false,
+			"images": ["http://m.cartier.us/content/dam/rcq/car/58/71/28/587128.png", "http://m.cartier.us/content/dam/rcq/car/63/75/42/637542.png", "http://m.cartier.us/content/dam/rcq/car/63/75/43/637543.png", "http://m.cartier.us/content/dam/rcq/car/59/06/88/590688.png"],
+			"availability": true
+		}, {
+			"refid": "B6035517",
+			"size": "17 (US 2 ¼)",
+			"price": "$6,600",
+			"numericPrice": 6600,
+			"showReqPrice": false,
+			"images": ["http://m.cartier.us/content/dam/rcq/car/58/61/63/586163.png", "http://m.cartier.us/content/dam/rcq/car/63/75/44/637544.png", "http://m.cartier.us/content/dam/rcq/car/63/75/45/637545.png", "http://m.cartier.us/content/dam/rcq/car/59/17/89/591789.png", "http://m.cartier.us/content/dam/rcq/car/59/09/21/590921.png", "http://m.cartier.us/content/dam/rcq/car/59/36/51/593651.png"],
+			"availability": true
+		}, {
+			"refid": "B6035518",
+			"size": "18 (US 2 ¼)",
+			"price": "$6,600",
+			"numericPrice": 6600,
+			"showReqPrice": false,
+			"images": ["http://m.cartier.us/content/dam/rcq/car/63/75/46/637546.png", "http://m.cartier.us/content/dam/rcq/car/63/75/47/637547.png", "http://m.cartier.us/content/dam/rcq/car/59/02/94/590294.png", "http://m.cartier.us/content/dam/rcq/car/58/99/92/589992.png"],
+			"availability": true
+		}, {
+			"refid": "B6035519",
+			"size": "19 (US 2 ¼)",
+			"price": "$6,600",
+			"numericPrice": 6600,
+			"showReqPrice": false,
+			"images": ["http://m.cartier.us/content/dam/rcq/car/63/75/49/637549.png"],
+			"availability": true
+		}, {
+			"refid": "B6035520",
+			"size": "20 (US 2 ¼)",
+			"price": "$6,600",
+			"numericPrice": 6600,
+			"showReqPrice": false,
+			"images": ["http://m.cartier.us/content/dam/rcq/car/58/90/49/589049.png", "http://m.cartier.us/content/dam/rcq/car/63/75/50/637550.png", "http://m.cartier.us/content/dam/rcq/car/63/75/51/637551.png", "http://m.cartier.us/content/dam/rcq/car/58/93/69/589369.png"],
+			"availability": true
+		}, {
+			"refid": "B6035521",
+			"size": "21 (US 2 ¼)",
+			"price": "$6,600",
+			"numericPrice": 6600,
+			"showReqPrice": false,
+			"images": ["http://m.cartier.us/content/dam/rcq/car/63/75/52/637552.png", "http://m.cartier.us/content/dam/rcq/car/63/75/53/637553.png"],
+			"availability": true
+		}]
+	}
+}

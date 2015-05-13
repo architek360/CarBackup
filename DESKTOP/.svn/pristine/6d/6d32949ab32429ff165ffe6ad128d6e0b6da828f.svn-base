@@ -1,0 +1,78 @@
+.product-list-wrapper{
+
+	@include rem('margin',40px 0px 0px 0px );
+	h3{
+		@include f(15);
+		color: #fff;
+		@include rem('margin-bottom',30px);
+		.js-product-list__selection-num{
+			@include f(25);
+		}
+	}
+	.product-list{
+		display: inline-block;
+		width: 100%;
+		padding: 0;
+
+		.one-product{
+			display: inline-block;
+			width: 184px;
+			@include rem('margin-right',10px);
+
+			&:nth-of-type(5n) {
+				@include rem('margin-right',0px);
+			}
+		}
+
+		.js-hide-content {
+			display : none;
+		}
+	}
+
+	
+}
+
+.product-list__view-more,.collection-list__view-more{
+		text-align: center;
+		border-top: 1px solid #4d4d4d;
+		margin: 10px 0;
+		@include f(12);
+		cursor: pointer;
+		position:relative;
+		clear:both;
+		color: $primary-3;
+		text-transform: uppercase;
+
+		.down-arrow{
+			//left:49.5%;
+			@include rem('top', 10px);
+		}
+		.view-more{
+			background: $primary-1;
+			position:relative;
+			//@include rem('top', -6px);
+			@include rem('padding',0px 10px);
+			font-size: 12px;
+			//position: absolute;
+			top: -5px;
+			margin: 0 auto;
+			//left: 45%;
+			font-weight: bold;
+			padding: 0px 5px;
+		}
+		.down-arrow{
+			position: absolute;
+			//bottom: -18px;
+			left: 50%;
+			@include setSpriteDesktop(15px, 10px, -54px, -46px,transparent);
+			//background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -54px -46px no-repeat transparent;
+			display: inline-block;
+			vertical-align: middle;
+			width: 15px;
+			height: 10px;
+		}
+	}
+
+.quick-link-pushes-wrapper {
+	@include rem('margin', 0px );
+}

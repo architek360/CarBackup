@@ -1,0 +1,106 @@
+/*
+    Push -- Desktop CSS
+*/
+
+
+.pushs{
+
+	@include brand-font;
+	@include font-color($primary-2);
+	border-top:1px solid $primary-79;
+	display: block;
+	@include rem('padding', 20px 0 20px 0);
+	@include rem('width',980px);
+	margin:0 auto;
+	> ul {
+		@include set-ulFix;
+		text-align: center;
+		
+		> li {
+			
+			@include rem('width', 250px);
+			margin: 0 38px;
+			float: left;
+			border: none;
+			height: auto;
+			text-align: center;
+			@include rem('padding', 0 0 0 0);
+
+			.pushs__title {
+				display: inline-block;
+				@include f(14);
+				@include rem('margin', 0px 0px 25px 0px);
+				text-transform:uppercase;
+				@include rem('line-height', 16px);
+				@include rem('padding', 0px);
+				width: 100%;
+				opacity: 0.8;
+				@include proxi-font();
+				letter-spacing: .1em;
+			}
+			.pushs__desc {
+				display: inline-block;
+				text-align: center;
+				@include f(12);
+				@include main-font;
+				@include rem('margin', 0px);
+				padding: 0;
+				width: 98%;
+				line-height: 16px;
+				letter-spacing: 0;
+				
+
+				span{
+					font-style: italic;
+					display: block;
+					@include f(12);
+					color: #a0a0a0;
+					a{
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.pushs__desc:last-child{
+				@include f(12);
+			}
+			.pushs__read-more {
+				display: block;
+				text-align: center;
+				@include f(24);
+				@include main-font;
+				font-style: italic;
+			}
+			.norton-icon{
+				@include rem(margin, 20px 0);
+			}			
+		}
+
+		li:nth-child(2){
+			.pushs__title {
+				width: 100%;
+			}
+
+			.pushs__desc{
+				width: 100%;
+			}
+		}
+	}
+	.pushs__credit-cards {
+		@include set-ulFix;
+		margin: 0px auto;
+		
+		@include rem(width, 155px);
+
+		> li {
+			
+			@include rem(margin, 0 3px 15px 3px);
+			display: inline-block;
+			border: none;
+
+			text-indent: -999em;
+			overflow: hidden;			
+		}
+			
+	}
+}

@@ -1,0 +1,111 @@
+/*------------------------------------*\
+   Captcha Select Box -- Desktop CSS
+\*------------------------------------*/
+/**
+ * Captcha CONTAINER.... (.captcha)
+ * INPUT TEXT BOX CONTAINER.... (.captcha_input)
+ * IMAGE BOX CONTAINER.... (.captcha_image_container)
+ * CAPTCHA INFORMATION BOX .... (.captcha__description, .userinfo)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.captcha{
+	@include rem('padding', 0px); 
+	float: left;
+	
+
+    .captcha__image__container {
+        @include rem('margin-top', 0px); 
+        position: relative;
+	        .input-wrapper{
+	        	height: 70px;
+	        	width: 33%;
+	        	margin-top: 0;
+	        	@include rem('margin-right',13px);
+  				
+	        	.form-input{
+	    			width: 142px;
+	    		}
+	    	}
+	    	span.img{
+	    		display: inline-block;
+	    		margin-top: 5px;
+	    		width: 140px;
+	    	}
+	    	span.img img {
+	    		margin: 0;
+	    		max-width: 100%;
+				max-height: 100%;
+	    		
+	    	}
+	    	.js-captcha-embed {
+	    		margin-top: 25px;
+				display: inline-block;
+	    	}
+	    	.verify-audio-text{
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 43px;
+				width: 130px;
+				padding: 0;
+				@include f(12);
+
+				a{
+					background: none;
+					text-align: left;
+					color: #a0a0a0 !important;
+					float: none;
+					padding: 0;
+					margin-left: 0;
+					margin-right: 0;
+					margin-bottom: 4px;
+					position: static;
+					margin-top: 0;
+
+					&:hover{
+						color:$primary-2;
+					}
+				}
+	    	}
+	     	.captcha-component{
+		   		position: absolute;
+		   		top: 30px;
+				left: 155px;
+
+				object {
+					float: left;
+					width: 140px;
+					display: inline-block;
+				}
+	   		}
+
+	   	.captcha-changer{
+	   		line-height: 50px;
+			vertical-align: top;
+			color: $primary-3;
+			@include main-font();
+			@include f(13);
+	   	}
+
+	   	span.img img {
+	   		@include rem('margin-top',20px);
+	   	}
+    }
+
+  
+    .captcha__description{
+    	clear: both;
+    	@include font-color($primary-3); 
+    	@include f(12);
+    	@include main-font();
+    	font-style: italic;
+    	@include rem('line-height', 17px);
+    	@include rem('margin-bottom', 0px);  
+    	text-align: center;
+    	padding: 20px 0 10px;
+    }
+
+}

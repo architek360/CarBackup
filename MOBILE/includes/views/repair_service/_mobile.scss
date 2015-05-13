@@ -1,0 +1,146 @@
+/*------------------------------------*\
+	REPAIR SERVICE -- Mobile CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER ..... (.repair-service)
+* FORM ..... (form)
+* MORE BUTTON..... (.more-link)
+* NOTIFICATION DESCRIPTION...(.notification__desc)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.repair-service{
+	text-align: center;
+	width:100%;
+	@include rem('margin', 0 0 20px 0); 
+	float:none;
+	h4{
+		@include f(25);
+		@include bold-font;
+		color:$primary-20;
+		@include rem('margin', 0 0 5px 0);
+	}
+	.error{
+		@include f(12);
+		line-height: 4rem;
+	}
+	.notification {
+		width:60%;
+		margin:0 auto;
+	}
+	.heading{
+		@include rem('margin', 0 0 50px 0);
+		text-align: center;
+		h4{
+			@include f(25);
+			@include rem('padding-top', 5px);
+			@include rem('margin', 0 0 20px 0);
+			color:$primary-2;
+		}
+		h5{
+			@include rem('padding-bottom', 5px);
+			@include f(20);
+		}
+	}
+	.notification{
+		float:none;
+		width:100%;
+		text-align:center;
+		h4{
+			@include rem('padding', 20px 0);
+			@include rem('margin', 0 0 20px 0);
+			color:$primary-2;
+			border-top: 1px solid $primary-17;
+			border-bottom: 1px solid $primary-17;
+		}
+		p{
+			@include f(20);
+		    @include rem('padding', 0 0 20px 0);
+		    text-align: center;
+		}
+	}
+	.side-image{
+		display: none;
+	}
+}
+
+/*------------------------------------*\
+    		FORM 
+\*------------------------------------*/
+
+form.notification-number{
+	width: 60%;
+	margin:0 auto;
+	.tooltip-div{
+		display: none;
+	}
+ 	label{
+		color:$primary-3;
+		@include f(22);
+		@include rem('margin', 30px 0 10px 0);
+		@include rem('line-height', 20px);
+		letter-spacing: .1em;	
+		text-align:left;
+		@include bold-font;
+		text-transform:uppercase;
+	}
+	.form-input{
+		@include rem('height', 58px);
+		padding:0;
+		@include f(23);
+		width:100%;
+		float:left;
+	}
+	.cta-button {
+		width: 100%;
+		@include rem('padding', 20px 0 20px 0);
+		@include rem('margin', 30px 0 0 0);
+		.cta-button__input{
+			@include f(20);
+			letter-spacing: .2rem;
+		}
+		.input-arrow{
+			top:0;
+		}
+	}
+}
+
+/*------------------------------------*\
+    		MORE BUTTON
+\*------------------------------------*/
+
+.call-all .more-link{
+	margin:0 auto; 
+	width:100%;
+	text-align:center;
+	@include rem('margin-top', 20px);
+ 	a {
+		background: url($path-images + 'icons/red_bullet.png') no-repeat scroll 0 2px rgba(0, 0, 0, 0);
+		display: inline;
+		font-size: 1.3rem;
+		font-weight:bold;
+		height: auto;
+		letter-spacing: 0.2rem;
+		padding-left: 1.5rem;
+		text-align: center;
+		text-transform: uppercase;
+		vertical-align: middle;
+		color:#a0a0a0;
+	}
+	a:hover{
+		color:#fff;	
+	}
+}
+
+/*------------------------------------*\
+    	NOTIFICATION DESCRIPTION
+\*------------------------------------*/
+
+.notification__desc  p{
+	@include rem('padding-bottom', 20px);
+}
+
+

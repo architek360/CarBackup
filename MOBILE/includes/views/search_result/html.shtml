@@ -1,0 +1,244 @@
+<!-- search-result Block Starts Here-->
+
+<div class="search-result js-others grid">
+
+	<h1 class="heading2">search results</h1>
+	
+	<!-- SEARCH CONTAINER -->
+	<div class="search">
+        <a href="" class="magnify-glass"> 
+
+                      </a>  
+	  <input type="text" id="mobile-nav-search" class="search__term"/>
+	</div>
+
+	    <!-- Selection Slider -->
+	<!--#set var="label-first" value="ALL PRODUCTS" -->
+    <!--#set var="class-first" value="" -->
+    <!--#set var="label-second" value="SOLD ONLINE" -->
+    <!--#set var="class-second" value="" -->
+    <!--#set var="radio-name" value="fn_grpchoosefont"-->
+    <!--#include virtual="../../components/form_elements/slide_switch.shtml" -->
+    <!-- END OF SELECTION SLIDER -->
+
+	<!-- REFINE MODULE AREA-->
+    <div class="product-filter clearfix">
+        <div class="js-accordion product-filter__wrapper">
+            <div class="js-accordion__node product-filter__node">
+                <div class="js-accordion_node__title product-filter_node__title heading3">
+                     <span class="off"></span>
+                    <div class="product-filter_node_title__ques">
+                        <p>refine selection</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc product-filter_node__desc">
+
+                    <div class="filter_detail">
+                        <div class="js-accordion__node filter_detail__node">
+                            <div class="js-accordion_node__title filter_detail_node__title heading3">
+                                <span class="off"></span>
+                                <div class="filter_detail_node_title__ques" data-gtm="asd">
+                                    <p>selection</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc filter_detail_node__desc">
+                                <p class="text-wrapper">
+                                   selection
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="js-accordion__node filter_detail__node">
+                            <div class="js-accordion_node__title filter_detail_node__title heading3">
+                                <span class="off"></span>
+                                <div class="filter_detail_node_title__ques" data-gtm="asd">
+                                    <p class="text-wrapper">categorization</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc filter_detail_node__desc">
+                                    <!-- REFINE MODULE CATEGORISATION AREA-->
+                                    <ul class="category-wrapper">
+                                        <li>
+                                            <!--#set var="checkbox-value" value="rings" -->
+                                            <!--#set var="checkbox-label-name" value="rings" -->
+                                            <!--#set var="checkbox-name" value="fn_category" -->
+                                            <!--#set var="checkbox-class" value="rings" -->
+                                            <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+                                        </li>
+
+                                        <li>
+                                            <!--#set var="checkbox-value" value="bracelet" -->
+                                            <!--#set var="checkbox-label-name" value="bracelet" -->
+                                            <!--#set var="checkbox-name" value="fn_category" -->
+                                            <!--#set var="checkbox-class" value="bracelet" -->
+                                            <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+                                        </li>
+
+                                        <li>
+                                            <!--#set var="checkbox-value" value="necklaces" -->
+                                            <!--#set var="checkbox-label-name" value="necklaces" -->
+                                            <!--#set var="checkbox-name" value="fn_category" -->
+                                            <!--#set var="checkbox-class" value="necklaces" -->
+                                            <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+                                        </li>
+
+                                        <li>
+                                            <!--#set var="checkbox-value" value="earrings" -->
+                                            <!--#set var="checkbox-label-name" value="earrings" -->
+                                            <!--#set var="checkbox-name" value="fn_category" -->
+                                            <!--#set var="checkbox-class" value="earrings" -->
+                                            <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+                                        </li>
+
+                                        <li>
+                                            <!--#set var="checkbox-value" value="broches" -->
+                                            <!--#set var="checkbox-label-name" value="broches" -->
+                                            <!--#set var="checkbox-name" value="fn_category" -->
+                                            <!--#set var="checkbox-class" value="broches" -->
+                                            <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+                                        </li>
+
+                                        <li>
+                                                <!--#set var="text-detail" value="cancel" -->
+                                                <!--#set var="cta--varaint" value="cta--grey" -->
+                                                <!--#include virtual="../../components/form_elements/cancel_button_without_arrow.shtml" -->
+                                                <!--#set var="text-detail" value="confirm" -->
+                                                <!--#set var="cta--varaint" value="cta--red" -->
+                                                <!--#include virtual="../../components/form_elements/button_without_arrow1.shtml" -->
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+  
+                        <div class="js-accordion__node filter_detail__node">
+                            <div class="js-accordion_node__title filter_detail_node__title heading3">
+                                 <span class="off"></span>
+                                <div class="filter_detail_node_title__ques" data-gtm="asd">
+                                    <p>metals</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc filter_detail_node__desc">
+                                <p class="text-wrapper">
+                                   metals
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="js-accordion__node filter_detail__node">
+                            <div class="js-accordion_node__title filter_detail_node__title heading3">
+                                 <span class="off"></span>
+                                <div class="filter_detail_node_title__ques" data-gtm="asd">
+                                    <p>stones</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc filter_detail_node__desc">
+                                <p class="text-wrapper">
+                                    stones
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="js-accordion__node filter_detail__node">
+                            <div class="js-accordion_node__title filter_detail_node__title heading3">
+                                 <span class="off"></span>
+                                <div class="filter_detail_node_title__ques" data-gtm="asd">
+                                    <p>price</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc filter_detail_node__desc">
+                                <!-- REFINE MODULE PRICE AREA-->
+                                <div class="price-wrapper js-form-validator">
+                                    <form>
+                                        <ul>
+                                             <li>
+                                                    <!--#set var="label-name" value="minimum" -->
+                                                    <!--#set var="mandatory" value="no"-->
+                                                    <!--#set var="input-name" value="minimum" -->
+                                                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                                                    <!--#set var="input-name" value="fn_min" -->
+                                                    <!--#set var="style-name" value="select-2" -->
+                                                    <!--#set var="option-component" value="price_range_option" -->
+                                                    <!--#include virtual="../../components/form_elements/select.shtml" -->
+                                            </li>
+
+                                            <li>
+                                                    <!--#set var="label-name" value="maximum" -->
+                                                    <!--#set var="mandatory" value="no"-->
+                                                    <!--#set var="input-name" value="minimum" -->
+                                                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                                                    <!--#set var="input-name" value="fn_max" -->
+                                                    <!--#set var="style-name" value="select-2" -->
+                                                    <!--#set var="option-component" value="price_range_option" -->
+                                                    <!--#include virtual="../../components/form_elements/select.shtml" -->
+                                            </li>
+                                             <li>
+                                                <!--#set var="text-detail" value="cancel" -->
+                                                <!--#set var="cta--varaint" value="cta--grey" -->
+                                                <!--#include virtual="../../components/form_elements/cancel_button_without_arrow.shtml" -->
+                                                <!--#set var="text-detail" value="confirm" -->
+                                                <!--#set var="cta--varaint" value="cta--red" -->
+                                                <!--#include virtual="../../components/form_elements/button_without_arrow1.shtml" -->
+                                            </li>
+                                        </ul>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PRODUCT LIST AREA -->
+    <div class="search-product">
+        <h3 class="heading2">jewellery (48)</h3>
+        <ul class="product-list__listing grid">
+            <li class="grid__item one-half palm--one-whole">
+                <!--#set var="links-to" value="#" -->
+                <!--#set var="class-name" value="product-listing_img" -->
+                <!--#set var="img-src" value="/event_article.png" -->
+                <!--#set var="product-color" value="3 models" -->
+                <!--#set var="product-color" value="Yellow gold " -->  
+                <!--#set var="product-title" value="White gold " -->  
+                <!--#include virtual="../../components/product_list_box/html.shtml" -->
+            </li>
+            <li class="grid__item one-half palm--one-whole">
+                <!--#set var="links-to" value="#" -->
+                <!--#set var="class-name" value="product-listing_img" -->
+                <!--#set var="img-src" value="/carousel-1.jpg" -->
+                <!--#set var="product-color" value="3 models" -->
+                <!--#set var="product-color" value="Yellow " -->  
+                <!--#set var="product-title" value="White gold mechanic" -->  
+                <!--#include virtual="../../components/product_list_box/html.shtml" -->
+                    
+            </li>
+        </ul>
+        <!-- VIEW MORE LINK -->
+        <div class="product-list__view-more js-view-button-search">
+            <a href="#"><span class="down-arrow"></span>View more selections</a>
+        </div>
+    </div>
+
+
+    <div class="search-product">
+        <h3 class="heading2">accessories (1)</h3>
+        <ul class="product-list__listing grid">
+            <li class="grid__item one-half palm--one-whole">
+                <!--#set var="links-to" value="#" -->
+                <!--#set var="class-name" value="product-listing_img" -->
+                <!--#set var="img-src" value="/event_article.png" -->
+                <!--#set var="product-color" value="3 models" -->
+                <!--#set var="product-color" value="Yellow gold tsavorite lacquer" -->  
+                <!--#set var="product-title" value="White gold mechanic steel bracelet" -->  
+                <!--#include virtual="../../components/product_list_box/html.shtml" -->
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+ <!-- search-result Block Ends Here-->

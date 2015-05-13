@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    Women Awards-- Desktop CSS
+\*------------------------------------*/
+/**
+ * 
+
+ */
+.social-share{
+	.social-share__favorite{
+		/*display:none;*/
+	}
+}
+
+.women-award-teaser{
+	@include rem('padding', 0px 0px 60px);
+
+	.heading1{
+		border:none;
+		@include rem('letter-spacing', 2.79px);
+		@include proxi-font();
+		@include f(28);
+		text-align: left;
+		@include rem('padding', 140px 0px 0px);
+	}
+
+	.image{
+		@include rem('margin', 30px 0px 0px);
+		border: 0.1rem solid $primary-17;
+	}
+
+	.content{
+		@include rem('margin', 30px 0px);
+
+		p{
+			@include font-color($primary-3);
+			@include main-font;
+			@include rem('padding', 0px);
+			@include rem('padding', 0px 0px 11px);
+			@include rem('line-height', 15px);
+		}
+	}
+}
+
+.back-button{
+	@include rem('padding', 27px 0px 0px);
+}
+
+

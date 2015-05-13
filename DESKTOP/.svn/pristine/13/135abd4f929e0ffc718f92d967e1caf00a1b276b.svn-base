@@ -1,0 +1,17 @@
+
+
+	<h2 class="heading2">MY REPAIR SERVICES</h2>
+	<p class="welcome-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non lectus ante. Quisque non malesuada nulla. Sed hendrerit erat et lacus imperdiet semper. Maecenas consequat sapien sed lorem vestibulum porta. Fusce ut erat metus. Donec vulputate, sapien eu blandit suscipit, sem nunc ultrices velit.</p>
+	<div class="registration_page js-ecsV3Registration">
+	<!-- INCLUDING TABS COMPONENT-->
+    <!--#set var="tab_1" value="Send my creation to the repair center" -->
+	<!--#set var="tab_2" value="Entrust mycreation in a boutique" -->
+    <!--#set var="tab_content_1" value="tab_repair_center" -->
+   
+    <!--#include virtual="../../components/tabs/desktop.shtml" -->
+
+	<!-- END OF TABS COMPONENT-->
+	</div>
+	<div class="positionChange js-modal-overlay" id="modalOverlay">
+    	<div class="js-modal-window" id="modalWindow"></div>
+	</div>

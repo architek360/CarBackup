@@ -1,0 +1,69 @@
+/*!
+ * lazyLoader.js
+ * This file contains plugins for Lazy Loader
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-21
+ * @author    SapientNitro 
+ * @licensor  Cartier Desktop
+ * @site      Cartier Desktop
+ * USAGE :
+ * Initialize lazyloading Plugin with pluginName "lazyLoader" to The div that has class "js-lazy-load"
+ *  lazyLoader();
+ * 
+ * This plugin helps to replace the image src from from data-linksrc to src attributes.
+ */
+;(function ( $, window, document, undefined )
+{
+    'use strict'; 
+
+    //check if jquery is defined, else retun
+    if ($ === undefined) { console.log("jQuery not found"); return false; }
+    
+    var pluginName = "lazyLoader",
+        defaults =
+        {
+      
+        };
+    function Plugin( element, options )
+    {
+        this.element = element;
+        this.$elem = $(this.element);
+        this.options = $.extend( {}, defaults, options );
+        this.init();
+    }
+
+    Plugin.prototype = {
+
+        init: function()
+
+        {   
+            
+            this.lazyLoader();
+        },
+
+
+        lazyLoader : function(){
+                var image =  $('.js-lazy-load');
+                var imagePath = image.data('linksrc');
+                $(image).attr('src', imagePath);
+        }
+    };
+
+    $.fn[pluginName] = function ( options )
+    {   
+      
+        return this.each(function ()
+        {
+            
+            if (!$.data(this, "plugin_" + pluginName))
+            {
+               $.data(this, "plugin_" + pluginName,
+                new Plugin( this, options ));
+           }
+        });
+    };
+
+})( jQuery, window, document );
+
+

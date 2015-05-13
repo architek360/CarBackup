@@ -1,0 +1,88 @@
+<div class="sfy-caption">Cartier has made a selection of solitaires that best meet your criteria*.</div>
+<div class="sfy-result">
+  <div class="grid__item one-third stepOneBlockOne">
+    <div class="sfy-result__infos">
+      <h2 class="model__name">TRINITY RUBAN SOLITAIRE</h2>
+      <h3 class="model__description">Platinum, diamonds</h3>
+      <p class="model__reference">REF : <span>N4139400<span> </p>
+      <p class="model__summary">This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and open setting allows the light of the diamond to flow freely.</p>
+      <a href="#" class="more">More information about Cartier diamonds</a> </div>
+  </div>
+  <div class="grid__item one-third stepThreeSlider">
+    <div id="sfystepThree-11" class="sfyCrousel">
+   <!--#include virtual="../../components/carousel/pdp_carousel.shtml" -->
+   </div>
+   <div id="sfystepThree-22" class="sfyCrousel" style="display:none">
+   <!--#include virtual="../../components/carousel/pdp_carousel.shtml" -->
+   </div>
+   <div id="sfystepThree-33" class="sfyCrousel" style="display:none">
+   <!--#include virtual="../../components/carousel/pdp_carousel.shtml" -->
+   </div>
+  </div>
+  <div class="grid__item one-third stepThreeBlockOne">
+    <div class="sfy__results">
+      <h5> <span class="value">$4,450</span> <span>Excl. Sales Tax</span></h5>
+      <form name="sfy-result" method="get">
+        <table class="sfy-result__table">
+          <thead>
+            <tr>
+              <th class="checkbox"></th>
+              <th><h2>Carat</h2></th>
+              <th><h2>Color</h2></th>
+              <th><h2>Clarity</h2></th>
+              <th><h2>Price</h2></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="checkbox "><input data-sfy="sfystepThree-1" data-index="1" type="radio" name="stone" value=""></td>
+              <td class="bold">0.51</td>
+              <td>H</td>
+              <td>VS2</td>
+              <td>$4,450 </td>
+            </tr>
+            <tr>
+              <td class="checkbox"><input data-sfy="sfystepThree-2"  data-index="2" type="radio" name="stone" value=""></td>
+              <td class="bold">0.50</td>
+              <td>D</td>
+              <td>VVS1</td>
+              <td>$8,325 </td>
+            </tr>
+            <tr>
+              <td class="checkbox"><input data-sfy="sfystepThree-3"  data-index="3" type="radio" name="stone" value=""></td>
+              <td class="bold">1.21</td>
+              <td>F</td>
+              <td>IF</td>
+              <td>$34,050 </td>
+            </tr>
+            <tr>
+              <td class="checkbox"><input type="radio" name="stone" value=""></td>
+              <td class="bold">3.83</td>
+              <td>F</td>
+              <td>VVS1</td>
+              <td>$328,800 </td>
+            </tr>
+            <tr>
+              <td class="checkbox"><input type="radio" name="stone" value=""></td>
+              <td class="bold">3.33</td>
+              <td>D</td>
+              <td>IF</td>
+              <td>$594,400 </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <div class="sfy-result__infos"> <a href="#" class="more more-price">More price information</a> <a href="#" class="red-button" title="Request information">Request information</a> </div>
+      <div class="sfy-result__contact"> <a href="#" title="Contact an ambassador">Contact an ambassador</a> </div>
+    </div>
+  </div>
+  <div class='js-overlay'>
+      <div class='js-close-button'>
+          <a href='#'></a>
+      </div>
+      <div class="img-container">
+          <img src="" alt="Overlay image" class="image">     
+      </div>
+  </div>
+</div>
+

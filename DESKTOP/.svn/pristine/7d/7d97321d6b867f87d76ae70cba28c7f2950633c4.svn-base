@@ -1,0 +1,80 @@
+<!-- Sub Collection Landing Page  Block Starts Here-->
+<div class="sub-collection-teaser">
+      <!-- Image Wrapper -->
+      <div class="image-wrapper">
+      <!--#if expr="${THEME_1}=/main_theme/" -->
+             <img src="<!--#echo var="CONTENT_IMG_PATH" -->HP_LINE_push_accessories.jpg" alt="THE ART OF FINE OBJECTS">            
+            <!--#else-->
+              <img src="<!--#echo var="CONTENT_IMG_PATH" -->bridal/HP_LINE_push_bridal.jpg" alt="THE ART OF FINE OBJECTS">
+            <!--#endif -->
+       </div>
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+         <!-- Heading -->
+         <h1 class="heading1">
+            THE ART OF FINE OBJECTS        
+         </h1>
+         <!-- Description -->
+         <div class="content">
+            <p>Cartier makes everyday objects into works of art with its uniquely styled accessories. These creations of everyday elegance deliver Cartier’s same high standards of craftsmanship.</p>
+         </div>
+         <!-- Navigation Links -->
+         <div class="line_links clearfix">
+            <div class="line_links__wrapper js-accordion">
+               <div class="line_links__node js-accordion__node">
+                  <div class="line_links_node__title heading3 js-accordion_node__title">
+                     <span></span>
+                     <div class="line_links_node_title__ques">
+                        <h2>Women's Accessories</h2>
+                     </div>
+                  </div>
+                  <div class="line_links_node__desc js-accordion_node__desc">
+                     <div class="wrapper-links links-accordion">
+                        <div class="va-nav"> <span class="js-less-arrow less-arrow">Previous</span> <span class="js-more-arrow more-arrow">Next</span> </div>
+                        <ul class="sub-menu">
+                              <li><a href="#" title="Leather Goods">Leather Goods</a></li>
+                              <li><a href="#" title="Eyewear">Eyewear</a></li>
+                              <li><a href="#" title="Writing Instruments">Writing Instruments</a></li>
+                              <li><a href="#" title="Scarves">Scarves</a></li>
+                              <li><a href="#" title="Personal Accessories">Personal Accessories</a></li>
+                              <li><a href="#" title="Diary Refills">Diary Refills</a></li>
+                              <li><a href="#" title="Home Decor">Home Decor</a></li>
+                              <li><a href="#" title="Scarves">Scarves</a></li>
+                              <li><a href="#" title="Home Decor">Home Decor</a></li>
+                           </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="line_links_node js-accordion__node">
+                  <div class="line_links_node__title heading3 js-accordion_node__title">
+                     <span></span>
+                     <div class="line_links_node_title__ques">
+                        <h2>Men's Accessories</h2>
+                     </div>
+                  </div>
+                  <div class="line_links_node__desc js-accordion_node__desc">
+                     <div class="wrapper-links links-accordion">
+                        <div class="va-nav"> <span class="js-less-arrow less-arrow">Previous</span> <span class="js-more-arrow more-arrow">Next</span> </div>
+                        <ul class="sub-menu">
+                              <li><a href="#" title="Leather Goods">Leather Goods</a></li>
+                              <li><a href="#" title="Eyewear">Eyewear</a></li>
+                              <li><a href="#" title="Writing Instruments">Writing Instruments</a></li>
+                              <li><a href="#" title="Scarves">Scarves</a></li>
+                              <li><a href="#" title="Personal Accessories">Personal Accessories</a></li>
+                              <li><a href="#" title="Diary Refills">Diary Refills</a></li>
+                              <li><a href="#" title="Home Decor">Home Decor</a></li>
+                              <li><a href="#" title="Scarves">Scarves</a></li>
+                              <li><a href="#" title="Home Decor">Home Decor</a></li>
+                           </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+</div>
+
+
+<!-- Sub Collection Landing Page  Block Ends Here-->

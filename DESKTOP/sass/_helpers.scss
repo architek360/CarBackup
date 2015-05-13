@@ -1,0 +1,283 @@
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+
+@mixin font-size($sizeValue: 1.6) {
+    font-size: $sizeValue + px;
+    //font-size: $sizeValue / 10 + rem;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+@mixin f($sizeValue: 1.6) {
+    font-size: $sizeValue + px;
+    //font-size: $sizeValue / 10 + rem;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+@mixin font-color($color: $font-color) {
+    color: $color;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+@mixin font-weight($value: normal) {
+    font-weight: $value;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+@mixin opacity($value) {
+    -moz-opacity: $value / 100;
+    opacity: $value / 100;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=$value);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+@function pxtoem($target, $context: $base-px) {
+    @return $target / $context + 0em;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+@mixin border-radius($value: pxtoem(5)) {
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}
+
+/* Default font size in pixels if not overridden. */
+$baseFontSize: 10;
+
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+@function pem($pxval, $base: $baseFontSize) {
+    @return #{$pxval / $base}em;
+}
+
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+
+// Baseline, measured in pixels
+// The value should be the same as the font-size value for the html element
+// If the html element's font-size is set to 62.5% (of the browser's default font-size of 10px),
+// then the variable below would be 10px.
+$baseline_px: 10px;
+
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+@mixin rem($property, $px_values) {
+    // Convert the baseline into rems
+    $baseline_rem: $baseline_px / 1rem;
+    // Print the first line in pixel values
+    #{$property}: $px_values;
+    // If there is only one (numeric) value, return the property/value line for it.
+    @if type-of($px_values) == "number" {
+        //#{$property}: $px_values / $baseline_rem;
+    }
+    @else {
+        // Create an empty list that we can dump values into
+        $rem_values: ();
+        @each $value in $px_values {
+            // If the value is zero, return 0
+            @if $value == 0 {
+                $rem_values: append($rem_values, $value);
+            }
+            @else {
+                $rem_values: append($rem_values, $value / $baseline_rem);
+            }
+        }
+        // Return the property and its list of converted values
+        //#{$property}: $rem_values;
+    }
+}
+
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+@mixin setSprite($w, $h, $x, $y) {
+    background: url($path-images + "icons/sprite.png") $x $y no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: $w;
+    height: $h;
+}
+
+@mixin setSpriteDesktop($w, $h, $x, $y, $color) {
+    background: url($path-images + "icons/sprite-desktop.png") $x $y no-repeat $color;
+    display: inline-block;
+    vertical-align: middle;
+    width: $w;
+    height: $h;
+}
+
+@mixin setSpriteMobileDesktop($w, $h, $x, $y, $color) {
+    background: url($path-images + "icons/sprite-mobile-desktop.png") $x $y no-repeat $color;
+    display: inline-block;
+    vertical-align: middle;
+    width: $w;
+    height: $h;
+}
+
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+@mixin set-ulFix {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+@mixin linear-gradient($angle, $color-stops...) {
+    $_angle-with-vendor-prefix: "";
+    $_angle: "";
+    @if $angle == "to top" or $angle == "bottom" {
+        $_angle-with-vendor-prefix: bottom;
+        $_angle: to top;
+    }
+    @else if $angle == "to right" or $angle == "left" {
+        $_angle-with-vendor-prefix: left;
+        $_angle: to right;
+    }
+    @else if $angle == "to bottom" or $angle == "top" {
+        $_angle-with-vendor-prefix: top;
+        $_angle: to bottom;
+    }
+    @else if $angle == "to left" or $angle == "right" {
+        $_angle-with-vendor-prefix: right;
+        $_angle: to left;
+    }
+    @else if $angle == "to top right" or $angle == "bottom left" {
+        $_angle-with-vendor-prefix: bottom left;
+        $_angle: to top right;
+    }
+    @else if $angle == "to bottom right" or $angle == "top left" {
+        $_angle-with-vendor-prefix: top left;
+        $_angle: to bottom right;
+    }
+    @else if $angle == "to bottom left" or $angle == "top right" {
+        $_angle-with-vendor-prefix: top right;
+        $_angle: to bottom left;
+    }
+    @else if $angle == "to top left" or $angle == "bottom right" {
+        $_angle-with-vendor-prefix: bottom right;
+        $_angle: to top left;
+    }
+    @else {
+        $_angle-with-vendor-prefix: $angle % 360;
+        $_angle: (90 - $angle) % 360;
+    }
+    background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+    background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+    background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+    background: linear-gradient($_angle, $color-stops);
+}
+
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+}
+
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+@mixin transition($time) {
+    transition: transform($time);
+    /*  -webkit-transition: -webkit-transform ($time);*/
+}
+
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+    // Safari <= 5
+    -moz-box-sizing: $box-model;
+    // Firefox <= 19
+    box-sizing: $box-model;
+}
+
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+@mixin transition-full($property: all, $duration: 500ms, $transition-timing-function: ease) {
+    -webkit-transition: $property $duration $transition-timing-function;
+    -moz-transition: $property $duration $transition-timing-function;
+    -ms-transition: $property $duration $transition-timing-function;
+    -o-transition: $property $duration $transition-timing-function;
+    transition: $property $duration $transition-timing-function;
+}

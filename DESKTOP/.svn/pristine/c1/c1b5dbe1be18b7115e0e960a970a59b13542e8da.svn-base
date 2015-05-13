@@ -1,0 +1,1641 @@
+/*------------------------------------*\
+    Global -- DESKTOP CSS
+ 
+\*------------------------------------*/
+/**
+ * FRAMEWORK STYLES
+
+ */
+
+/*------------------------------------*\
+    $GLOBAL STYLES
+\*------------------------------------*/
+* { outline: normal;
+
+}
+:focus {
+    outline: auto 5px -webkit-focus-ring-color;
+}
+body {
+	background-color:$primary-1;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+a img{
+	color:$primary-2;
+}
+
+i{
+	font-style: italic;
+}
+.main-container{
+	margin-top: 0px;
+	max-width: 1600px;
+	width: 980px;
+	margin: 0 auto;
+	@include rem('margin-top', 34px);
+	height: auto;
+}
+
+.heading-wrapper{
+	display: inline-block;
+	margin: 0 auto;
+	clear: both;
+	width: 100%;
+}
+
+.heading1{
+	@include f(30);
+	text-align:center;
+	text-transform:uppercase;
+	@include rem('padding', 20px 0);
+	color:$primary-2;
+	@include rem('letter-spacing',3px);
+}
+
+.heading2{
+	@include f(26);
+	text-align:center;
+	text-transform:uppercase;
+	@include rem('padding', 10px 0 10px);
+	color:$primary-2;
+	@include rem('letter-spacing',3px);
+}
+
+.heading-white-line{
+	border-bottom:1px solid #ffffff;
+}
+
+.heading3{
+	@include f(15);
+	text-align:center;
+	text-transform:uppercase;
+	@include rem('padding', 10px 0 15px);
+	@include rem('letter-spacing',3px);
+	color:$primary-2;
+	width: 100%;
+
+}
+
+.heading4{
+	font-weight: bold;
+	@include f(10);
+	color:$primary-2;	
+    text-align: left;
+    text-transform: uppercase;
+    @include rem('padding',0px);
+    @include rem('margin-bottom',10px);
+    @include rem('letter-spacing',1.2px);
+}
+
+.heading5{
+	@include brand-font;
+	@include f(26);
+	text-align:center;
+	text-transform:uppercase;
+	@include rem('padding', 30px 0);
+	color:$primary-2;	
+}
+.heading6{
+	@include brand-font;
+	@include f(24);
+	text-align:center;
+	text-transform:uppercase;
+	@include rem('padding', 30px 0);
+	color:$primary-2;	
+}
+
+.body-wrapper{
+	p{
+		@include f(11);
+		text-align:left;
+		@include main-font;
+		@include rem('padding', 15px 0);
+		@include rem('letter-spacing', 1px);
+		@include rem('line-height', 18px);
+	}
+
+	p.forgotpass-link {
+		display: inline;
+		font-family: Georgia, sans-serif;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: normal;
+	}
+
+	.social-share{
+		p{
+			@include main-font;
+		}
+	}
+
+	label{
+		@include proxi-font();
+		@include f(10);
+	}
+}
+a.disabled {
+   pointer-events: none;
+}
+
+/*Special fonts*/
+
+.lovefont {
+	font-family: "CartierLoveTM" !important;
+	display: inline-block !important;
+}
+
+
+/*.carousel .rslides_tabs a {
+	@include setSpriteDesktop(20px, 20px, -0px, -160px, transparent);
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+}
+.carousel .rslides_tabs a:hover {
+	@include setSpriteDesktop(20px, 20px, -20px, -160px, transparent);
+}
+.carousel .rslides_tabs .rslides_here a {
+    background: none;
+    @include setSpriteDesktop(20px, 20px, -40px, -160px, transparent);
+}
+
+*/
+
+.error-zone,.serverMessage, .error_message,.error-div, .error_message_js-personal-info-form{
+	@include rem('padding', 10px);
+	@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+	border:1px solid red;
+	text-align: center;
+	@include main-font;
+	@include f(12);
+	width:100%;
+	position: relative;
+	top: 10px;
+	color: $primary-2;
+	font-weight: normal;
+	display: none;
+}
+.error-zone-pdp{
+	@include rem('padding', 10px);
+	@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+	border:1px solid red;
+	text-align: center;
+	@include main-font;
+	@include f(12);
+	width:100%;
+	position: relative;
+	top: 10px;
+	color: $primary-2;
+	font-weight: normal;
+	display: block;
+	margin-bottom:10px;
+}
+.error-div, .error_message_js-personal-info-form{
+	display:block;
+	margin-bottom: 15px;
+}
+
+.serverMessage, .error_message{
+	margin: 30px 0;
+	color: $primary-2 !important;
+}
+
+
+
+.error_message_js-reg-step-1,.error_message_js-light-account-form{
+	padding:10px;
+	padding:1rem;
+	background:-webkit-linear-gradient(135deg,black 73%,#010000 0,#460000 100%);
+	background:-moz-linear-gradient(135deg,black 73%,#010000 0,#460000 100%);
+	background:-o-linear-gradient(135deg,black 73%,#010000 0,#460000 100%);
+	background:linear-gradient(315deg,#000 73%,#010000 0,#460000 100%);
+	border:1px solid red;
+	text-align:center;
+	font-family:Georgia,sans-serif;
+	font-size:12px;
+	font-size:1.2rem;
+	width:100%;
+	position:relative;
+	top:10px;
+	color:white;
+	font-weight:normal
+}
+
+.error_message_js-reg-step-1{
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	border: none;
+	background: none;
+	color: #B10000;
+	font-size: 13px;
+	font-style: italic;
+}
+
+
+/*STYLE FOR ERROR MSG IN PERSONAL INFO*/
+.error_message_js-personal-info-form{
+	@include rem('padding', 10px);
+	@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+	border:1px solid red;
+	text-align: center;
+	@include main-font;
+	@include f(12);
+	width:100%;
+	position: relative;
+	top: 10px;
+	color: $primary-2;
+	font-weight: normal;
+	display: none;
+}
+
+.error_message_js-personal-info-form {
+	position: absolute;
+	width: 67.5%;
+	top: 167px;
+	left: 220px;
+}
+.error_message_js-personal-info-form{
+	display:block;
+	margin-bottom: 15px;
+}
+.js-ga-mycartier-mypersonal-info {
+	margin-top: 7rem;
+}
+
+
+/**************************************************************************************
+		DISPATCH LANDING PAGE SCSS
+
+***************************************************************************************/
+.dispatch-landing{ 
+	background-color:$primary-1;
+}
+.dispatch-body{
+	-background-color:$primary-1;
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 639px;
+	overflow:hidden;
+	.site-logo{
+		@include rem('margin-top', 25px);
+		@include rem('margin-bottom', 15px);
+		text-align:center;
+		position: relative;
+	}
+	.main-dispatch{
+		@include rem('margin-top', 50px);
+		text-align: center;
+		@include rem('letter-spacing', 1px);
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		.heading2{
+				color: $primary-2;
+				@include f(18);
+				font-weight: normal;
+				text-transform: uppercase;
+				position: relative;
+				letter-spacing: 0.2rem;
+		}
+
+		.continent{
+			color: $primary-2;
+			@include f(13);
+			font-weight: bold;
+			@include rem('margin-top', 20px);
+			text-transform: uppercase;
+			@include rem('line-height', 15px);
+		}
+		ul{
+			li{
+				list-style: none;
+				@include rem('margin-top', 5px);
+				text-transform: uppercase;
+				a{
+					color: $primary-3;
+					@include f(11);
+					font-weight: normal;
+					text-decoration: none;
+				}
+
+				a:hover{
+					color: $primary-2;
+				}
+			}
+		}
+		.left-col{
+			width: 274px;
+			float: left;
+			@include rem('margin-left',230px);
+			position: relative;
+			.bag{
+				background:url($path-images+'icons/bag.png') no-repeat center top;
+				height: 20px;
+				width: 23px;
+				margin:4px auto 0;
+			}
+			.heading-wrapper:before{
+				content: "";
+				border-top: 1px solid $primary-69;
+				left: 0;
+				position: absolute;
+				top: 19px;
+				width: 50px;
+			}
+
+			.heading-wrapper:after{
+				content: "";
+				border-top: 1px solid $primary-69; 
+				right: 0;
+				position: absolute;
+				top: 19px;
+				width: 50px;
+			}
+		}
+
+		.right-col{
+			width: 274px;
+			position: relative;
+			float: right;
+			@include rem('margin-right',230px);
+			.heading-wrapper:before{
+				content: "";
+				border-top: 1px solid $primary-69;
+				left: 0;
+				position: absolute;
+				top: 19px;
+				width: 30px;
+			}
+			.heading-wrapper:after{
+				content: "";
+				border-top: 1px solid $primary-69;
+				right: 0;
+				position: absolute;
+				top: 19px;
+				width: 30px;
+			}
+		}
+	}
+
+	.dispatch-image{
+		position:absolute; 
+		left:0; 
+		right:0; 
+		top:0; 
+		bottom:0; 
+		margin:0 auto;
+	}
+
+}
+.logout-icon{
+	@include setSpriteDesktop(13px, 13px, -360px, -11px, transparent );
+	@include rem(margin, 0 0 0 10px);
+}
+
+/*This class is for both server and client side messages. So the mixins were not used. The importnat is used to over ride all the styling for server side messages*/
+span.error,label.error{
+	@include font-color($primary-20 !important);
+	@include main-font;
+	font-style:italic !important;
+	text-transform:none;
+	font-size: 15px !important;
+	display: block;
+	@include rem('padding-top', 5px);
+	text-align: left;
+}
+.cross-button{
+    position:absolute;
+    top:7px;
+    right:7px;
+    width:20px;
+    height:20px;
+    @include setSprite(27px, 25px, -620px, -136px ); 
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+  }
+.page-title{
+	@include f(26);
+	font-weight: normal;
+	@include rem('letter-spacing', 2px);
+	text-transform: uppercase;
+	@include rem('padding', 30px 0 20px);
+	color: $primary-2;
+}
+#sortable { list-style-type: none; margin: 0; padding: 20px; width: 60%; }
+	#sortable li { margin: 0 3px 10px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 70px; cursor: move; background-color: grey;}
+	//#sortable li span { position: absolute; margin-left: -1.3em; }
+
+.edit-icon {
+ 	@include setSprite(27px, 29px, -730px, -134px);         
+	display: inline-block;
+	@include rem('height', 15px);
+	@include rem(margin, 0 0 0 5px);
+	position:relative;
+	top:-1px;
+	border-left: 1px solid $primary-94;
+}
+
+.replace-icon {
+ 	@include setSprite(23px, 14px, -736px, -189px);         
+	display: inline-block;
+	@include rem('height', 14px);
+	@include rem(margin, 0 0 0 5px);
+	position:relative;
+	top:-1px;
+	border-left: 1px solid $primary-94;
+}
+
+/* CREDIT CARD ICONS WITH SPRITE*/
+
+.mastercard {								
+	@include setSpriteDesktop(37px, 23px, -309px, -711px, transparent);
+}
+.visa_card {				
+	@include setSpriteDesktop(37px, 23px, -355px, -711px, transparent);
+}
+.discover_network_card {
+	@include setSpriteDesktop(37px, 23px, -309px, -741px, transparent);
+}
+.jsb_card {
+	@include setSpriteDesktop(37px, 23px, -355px, -741px, transparent);
+}
+.american_express_card {
+	@include setSpriteDesktop(37px, 23px, -400px, -711px, transparent);
+}
+.diners_club_card {
+	@include setSpriteDesktop(37px, 23px, -400px, -741px, transparent);
+}
+
+.icon-phone {
+	@include setSpriteDesktop(37px, 23px, -309px, -711px, transparent);
+}
+
+/* NORTON SECURED ICON WITH SPRITE*/
+
+.norton-icon {
+	@include setSpriteDesktop(100px, 53px, -190px, -711px, transparent);		
+}
+
+.pushes-wrapper{
+	.one-half {
+		@include rem('margin-right', 15px);
+		width: 48.4%;
+	}
+	.even{
+		margin-right: 0px;
+	}
+}
+
+hr{
+	background: none;
+}
+
+.degree360-icon{
+	z-index: 100;
+	top: 15px;
+	position: relative;
+	text-align: center;
+	left: -5px;
+}
+
+
+.zoom-icon{
+	background: url($path-images +'icons/buttons.png') no-repeat 0 -250px;
+	position:absolute;
+	left:370px;
+	z-index:10;
+	bottom: -2px;
+	width: 20px;
+	height: 20px;
+
+}
+
+.select-error{
+	background-position: -427px -955px !important;
+
+	span{
+		background-position: right -913px !important;
+		 color: $primary-3 !important;
+	}
+
+	select.error option {
+	    background-color: #3c1111;
+	}
+}
+
+.span-error{
+	 background-position: right -913px !important;
+	 color: $primary-3 !important;
+}
+
+.wrapper-error{
+	  background-position: -427px -955px !important;
+}
+
+.popup-close-button{
+	position:absolute;
+    top:0px;
+    right:0px;
+    width:20px;
+    height:20px;
+    @include setSprite(20px, 20px, -630px, -132px ); 
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#confirmBox{
+	background: repeat-x left bottom #e5e5e5;
+	width:460px;
+	position:relative;
+	left:50%;
+	top:50%;
+	margin:-130px 0 0 -230px;
+	border:1px solid $primary-25;
+	@include rem('padding',20px);
+	/*@include linear-gradient(130deg, $primary-1 0%, $primary-28 50%, $primary-27 100%);*/
+	
+
+	h1{
+		@include f(12);
+		@include proxiBold-font();
+	}
+
+	a{
+		color: $primary-3;
+		font-style:italic;
+	}
+	p{
+		@include main-font();
+		@include f(12);
+		/*color: $primary-51;*/
+		color: $primary-3;
+		font-style: italic;
+		text-align: center;
+	}
+
+	a.popup-close-button{
+		color: $primary-1;
+	}
+
+	.cta-button{
+		@include rem('margin-top', 0px);
+
+		.input-arrow{
+			width: 9px;
+		}
+	}
+
+	.cta--red{
+		width: auto;
+	}
+}
+
+.js-overlay {
+	@include rem('top', 0px);
+
+
+
+
+	.img-container {
+	    position: absolute;
+	    @include rem('top', 30px);
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    text-align:center;
+	}
+
+
+
+	.img-container:before {
+	    content: ' ';
+	    display: inline-block;
+	    vertical-align: middle;
+	    height: 100%;
+	}
+
+
+
+	img {
+		opacity : 1;
+		display : block;
+		position: absolute;
+		left : 0;
+		right : 0;
+		top  : 0;
+		margin :auto;
+		vertical-align: middle;
+	    display: inline-block;
+	    max-height: 100%;
+	    max-width: 100%;
+
+	}
+}
+
+p.collection-header-desc {
+	text-align: center;
+	@include main-font;
+	font-style: italic;
+	font-size: 12px;
+	line-height: 16.799999237060547px;
+	color: #B4B3B3;
+	margin-left: 17%;
+    width: 68%;
+    padding-top: 0;
+}
+
+
+input[type='text'].error, input[type='email'].error, input[type='tel'].error, input[type='password'].error, input[type='message'].error, select.error, textarea.error {
+  border: 1px solid #8f141a !important;
+  background-color: $primary-122 !important;
+}
+
+/*------------------------------------*\
+   LIVING HERITAGE THEME -- DESKTOP CSS
+ 
+\*------------------------------------*/
+
+.living-heritage-bg{
+	background: $primary-2!important;
+	color: $primary-1;
+
+	h2,h3{
+		color: $primary-1;
+	}
+
+	.comp-rich-text{
+		h2,h3{
+			color: $primary-3;
+		}
+	}
+	.header {
+    	background: $primary-2;
+
+    	.left-nav {
+    		.left-nav__list {
+    			li {
+    				.nav-link {
+    					&:hover {
+    						color: $primary-40 !important;
+    					}
+					}
+				}
+			}
+		}
+
+		.right-nav {
+    		.right-nav__list {
+    			li {
+    				.nav-link {
+    					&:hover {
+    						color: $primary-40 !important;
+    					}
+					}
+				}
+			}
+		}
+    }
+
+	.social-share{
+		background-color: $primary-2;
+		.share-tabs{
+			background: $primary-2;
+		
+			.share-link-container:first-child{
+			 	background-color: $primary-112;
+			 	border:none;
+			}
+		}
+
+		ul{
+			background-color: $primary-112;
+		}
+	}
+
+	.search-form {
+		.search__term{
+			border: solid 1px $primary-121;
+			color:$primary-64;
+		}
+	}
+	.coloumn-wrapper-image-center {
+		.comp-rich-text {
+			margin-left: 0px;
+			float: inherit;
+
+			.column.grid__item {
+				width: 100%;
+				text-align: center;
+				float: inherit;
+				img {
+					float: inherit;
+					margin-left: 0;
+				}
+			}
+		}		
+	}
+	.breadcrumb {
+		margin-top: 65px;
+		.grid.breadcrumb {
+			margin-top: 0px;
+		}
+	}
+	.coloumn-wrapper {
+
+		.exhibitions {
+			min-height: inherit;
+		}
+	
+		.comp-rich-text {
+			@include rem('margin-top', 0px);
+			span {
+				display: block;
+			}
+			img {
+				border: none;
+				margin-left: 0px;
+				margin-bottom: 0px;
+			}
+			h2{
+				@include proxi-font;
+				@include f(22);
+				@include rem(line-height, 24px);
+				clear: both;
+				font-weight: normal;
+				letter-spacing: normal;
+				text-transform: uppercase;
+				color: $primary-1;
+				padding: 0;
+				text-align: left;
+			}
+			h3{
+				@include proxi-font;
+				font-weight: bold;
+				@include f(14);
+				@include rem(height, 23px);
+				@include rem(line-height, 19px);
+				@include rem(padding-top, 4px);
+				text-align: left;
+				font-weight: normal;
+				letter-spacing: normal;
+				text-transform: uppercase;
+				text-transform: uppercase;
+				color: $primary-1;
+				padding: 0;
+				text-align: left;
+			}
+			p{
+				color: $primary-300;
+				letter-spacing: normal;
+				font-family: $primary-font-2;
+				margin: 0;
+				padding: 0;
+				@include f(14);
+				@include rem(line-height, 16px);
+				@include rem(margin-top, 7px);
+				span {
+					&.border-wrapped {
+						border-top: 1px solid $primary-59;
+						border-bottom: 1px solid $primary-59;
+						@include rem(padding-top, 12px);
+						@include rem(padding-bottom, 12px);
+					}
+	
+					&.productdata {
+						color: $primary-301;
+						@include f(11);
+						@include rem(line-height, 13px);
+						@include rem(padding-top, 9px);
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+	.item-list{
+		@include rem('margin-right', 20px);
+		vertical-align: top;
+		li{
+			border-bottom: 1px solid $primary-63;
+			margin-left: 0;
+			color:$primary-3;
+			@include rem('padding', 15px 0 40px);
+			@include setSpriteDesktop(100%, auto ,-431px ,-45px, transparent);
+
+			a{
+				@include proxiBold-font;
+				font-size: 12px;
+				color:$primary-64;
+			 	&:hover{
+					@include font-color($primary-40);
+				}
+
+			}
+
+		  	h2{
+			  	@include proxiBold-font;
+			  	@include rem('letter-spacing', 1px);
+				@include f(11);
+				display: inline-block;
+				text-transform: uppercase;
+				@include rem('padding-left', 10px);
+		  	}
+		}
+
+		li:first-child{
+			border-top: 1px solid $primary-63;
+		}
+
+		li:hover, .active{
+			@include setSpriteDesktop(100%, auto ,-431px ,-142px, transparent);
+			@include font-color($primary-40);
+
+			a{
+				@include font-color($primary-40);
+			}
+		}
+	}
+
+	.breadcrumb{
+		.heading3{
+			color:$primary-48;
+		}
+
+		ul{
+			.heading3{
+				&:hover{
+					color:$primary-40;
+				}
+			}
+		}
+	}
+
+	.primary-nav-container{
+		/*background-color: $primary-1;
+		-ms-filter: "alpha(opacity=40)"; */
+		background: $primary-2;
+		border-bottom: 1px solid $primary-63;
+		height: 26px;
+
+		.first-level-nav {
+			a.active{
+				@include font-color($primary-3);
+				border-bottom: 1px solid $primary-1;
+			}
+
+			.first-level-nav__title{
+				@include font-color($primary-1);
+
+				&:hover h2{
+					@include font-color($primary-1);
+					border-bottom: 1px solid $primary-1;
+				}
+			}
+
+			.nav-show{
+				background: $primary-2;
+				border-bottom: 1px solid $primary-63;
+
+				.secondary-nav {
+					line-height: 26px;
+					a.sec-nav-link:hover{
+						border-bottom: 1px solid $primary-1;
+    					color: $primary-1;
+					}
+
+					a.sec-nav-link.active{
+						border-bottom: 1px solid $primary-1;
+    					color: $primary-1;
+					}
+				}
+			}
+		}
+	}
+
+	.comp-rich-text{
+		@include rem('margin-top', 25px);
+		.hidden{
+			display:none;
+		}
+		.content-medias-left, img {
+			border: none;
+		}
+		span{
+			display:inline-block;
+		}
+		h1{
+			@include proxi-font;
+			@include f(30);
+			text-transform:uppercase;
+			@include rem('padding', 20px 0);
+			color:$primary-3;
+			@include rem('letter-spacing',3px);
+			margin-bottom:0px;
+		}
+		h3{
+			text-align: left;
+			@include f(28);
+			@include rem('padding-bottom', 30px);
+			@include font-color($primary-3);
+			letter-spacing: 0.1em;
+		}
+
+		p{
+			@include rem('padding', 0px 0px 5px);
+
+			strong{
+				display: block;
+			}
+
+			em{
+				font-style: italic;
+			}
+		}
+		.dido-normal{
+	        font-family: didotroman, sans-serif !important;
+	        font-size: 1.4rem ;
+	        margin: 1.5rem 0 0 0 ;
+	        padding: 1rem 0;
+	        color: $primary-1 ;
+	        text-align: center ;
+	        line-height: 1.4 ;
+	        letter-spacing: normal ;
+		}
+
+		.dido-italic{
+	        font-family:didotromanitalic, sans-serif;
+	        font-size: 2.6rem;
+	        padding: 2.6rem 0 ;
+	        color: $primary-3 ;
+	        font-weight: normal ;
+	        margin: 0 !important; 
+	        text-align: center;
+	        line-height: 1.4;
+	        letter-spacing: normal;
+		}
+
+		a.more-button {
+		    color: $primary-1;
+		    @include f(11);
+		    font-style: normal;
+		    font-weight: normal;
+		    letter-spacing: 0.1em;
+		    margin-top: 5px;
+		    text-decoration: none;
+		}
+	}
+	.back-button a:hover, .back-button:hover {
+		color: $primary-1
+	}
+	.back-button {
+		width: 82.25%;
+	}
+	.social-share .share-tabs .share-link-container {
+		padding: 0;
+		a.share-tabs__social:hover {
+			color: $primary-1
+		}
+	}
+
+	span.red-more{
+		a{
+	        color: $primary-1;     
+	    }
+	}	
+
+	span.mores{
+		a{
+	        @include setSpriteDesktop(auto, auto, 0, -634px, transparent);
+	        color: $primary-99;
+	        @include didotroman-font;
+	        @include rem(font-size, 18px);
+	        @include rem(height, 30px);
+	        @include rem(line-height, 30px);
+	        @include rem(margin-top, 20px);
+	        @include rem(padding-left, 40px);
+	        text-align: center;
+	        display: inline-block;
+	        &.active{
+	            background-position:0 -672px;
+	        }
+	        text-decoration:none ;
+	        font-weight: normal;
+	    }
+	}	
+
+	a.more{
+	        @include setSpriteDesktop(auto, auto, 0, -624px, transparent);
+	        color: $primary-99;
+	        @include didotroman-font;
+	        @include rem(font-size, 18px);
+	        @include rem(height, 30px);
+	        @include rem(line-height, 30px);
+	        @include rem(margin-top, 20px);
+	        @include rem(padding-left, 40px);
+	        text-align: center;
+	        display: inline-block;
+	        &.active{
+	            background-position:0 -672px;
+	        }
+	        text-decoration:none ;
+	        font-weight: normal;
+	}
+
+	.link-to-top a:hover {
+		@include setSpriteDesktop(8px, 15px ,-335px, -48px, transparent);
+		@include font-color($primary-40);
+	}
+
+}
+
+/*overriding CSS for exper guide into living heritage theme*/
+body.living-heritage-body {
+	background-color:#ffffff!important;
+}
+.living-heritage-bg {
+	.services-pushes .pushes-wrapper .pushes-wrapper-service-push {
+		border: 1px solid #d3d3d3;
+	}
+	.pushes-wrapper-service-push .push-hover {
+		background-image:url($path-images+'icons/bridal_ie_0.8.png');
+	}
+	.pushes-wrapper-service-push .push-col_title {
+		font-size: 15px;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		vertical-align: middle;
+		display: table-cell;
+		line-height: 15px;
+		line-height: 4.5rem;
+		color: #797878;
+	}
+	.pushes-wrapper-service-push .push-col_title .text-link {
+		color: #797878!important;
+	}
+	.expert-guide{
+	
+		.tabs {
+
+    	@include font-color($primary-2);  
+		.tabs__content {
+				margin: 10px 0 20px;
+		}
+
+    	.tab-header {
+       	 border-bottom: 1px solid #c6c6c6;
+			font-weight: bold;
+
+       	 ul.tabs__nav {
+            li {
+                background-color:#eaeaea;
+                border: 1px solid #c6c6c6;
+                color: $primary-10;
+			h2 {
+				color: #a0a0a0!important;
+				@include proxiBold-font();
+				font-weight: normal;
+			}
+            }
+            li:hover {
+				h2 {
+					color: $primary-1;
+				}
+				a {
+					 @include font-color($primary-40);
+				}
+                @include font-color($primary-40);
+                background-color:#eaeaea;
+                border: 1px solid #c6c6c6;
+            }
+            .tab-active, .tab-active:hover {
+				border-bottom: none;
+                
+                @include font-color($primary-3);
+                background: $primary-2;
+
+                .tab__title-wrapper {
+                    @include font-color($primary-3);
+                }
+            }
+			.tab-active:hover {
+				a {
+					color: $primary-10;
+				}
+			}
+			.tab-active {
+				h2 {
+					color: $primary-1;
+				}
+				 .tab__title-wrapper:after {
+                    @include setSpriteDesktop(8px, 15px ,-9px, -52px, transparent);
+                    display: block;
+                    @include rem('height', 4px);
+                    @include rem('width', 7px);
+                    margin: 0 auto 0;
+                    @include rem('margin-top', 6px);
+					}
+				}
+        	}
+    	}
+	}
+
+	
+		.coloumn-wrapper .comp-rich-text {
+			p {
+				@include f(11);
+				@include font-color($primary-62);
+				margin-top: 0px;
+			}
+			.red-more {
+				margin-top: -6px;
+			}
+		}
+	
+		.comp-rich-text{
+			@include rem('margin-top', 7px);
+			.content-medias-left {
+				margin-right: 15px;
+			}
+			h1 {
+				margin-top: 0px;
+			}
+			.content-medias-right {
+				margin-left: 15px;
+			}
+			img {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.comp-rich-text{
+		@include rem('margin-top', 0px);
+	}
+
+	.primary-nav-container .first-level-nav a.active h2,  primary-nav-container .first-level-nav a.activesec h2{
+		  color: $primary-1;
+		  border-bottom: 1px solid $primary-1;
+	}
+}
+
+
+/*------------------------------------*\
+  GLOBAL SPACING CLASSES -- DESKTOP CSS
+ 
+\*------------------------------------*/
+.comp-rich-text {
+	.top-pad-15{
+		 @include rem(padding-top, 15px);	
+	}
+	.bottom-pad-15{
+		 @include rem(padding-bottom, 15px);	
+	}
+	.top-pad-294{
+		 @include rem(padding-top, 294px);
+		 display: block;	
+	}
+	.column.grid__item img{
+		margin-bottom: 0px;
+	}
+	.left-pad-55 {
+		padding-left: 55px;
+	}
+}
+.loaderImage{
+	width: 20px;
+	height: 20px;
+}
+.loaderDiv{
+	height:60px;
+	@include main-font;
+    @include f(11);
+    line-height:20px;
+    .loaderImage{
+    	margin-top:0px;
+    	margin-left:20px;
+    }
+}
+
+
+
+.loading {
+	background: url($path-images +'icons/throbber.gif') no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    float: right;
+    font-size: 26px;
+    height: 20px;
+    margin-left: -50px;
+    text-indent: -9999px;
+    width: 50px;
+}
+
+
+/* new letter css  */
+
+p {
+	 .newsletter_success{
+	 	  margin: 26%;
+		  margin-top: 0px;
+		  margin-bottom: 0px;
+		  border: 1px solid #a0a0a0;
+		  padding: 10px;
+		  display : block;
+
+		  .quote{
+		  @include main-font();
+		  color: #a0a0a0;
+		}  
+	 }
+}
+
+span.red-more{
+	a{
+        @include setSpriteDesktop(auto, auto, -431px, -152px, transparent);
+        color: $primary-3;
+        @include rem(font-size, 11px);
+        @include rem(height, 20px);
+        @include rem(line-height, 20px);
+        @include rem(padding-left, 10px);
+        @include rem(letter-spacing, 1px);
+        text-align: center;
+        display: inline-block;
+        &.active{
+            background-position:0 -672px;
+        }
+        text-decoration:none ;
+        font-weight: normal;
+    }
+}
+
+
+
+.coloumn-wrapper .row.grid .column.grid__item .coloumn-wrapper .row.grid {
+		padding-bottom: 0px;
+}
+/*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+
+.input-wrapper{
+
+	.form-input{
+		color: $primary-2;
+	}
+
+}
+
+/*------------------------------------*\
+    	$RADIO ELEMENTS
+\*------------------------------------*/
+
+.radio{
+	span{
+		background-position: -54px -460px;
+	}
+
+	.checked {
+		background-position: -70px -460px;
+	}
+}
+
+
+.checkbox-wrapper{
+
+	.form-checkbox-label {
+		.checker{
+		    span{
+			    background-position: -14px -460px;
+		   	}
+
+		    .checked {
+		    	background-position: -34px -460px;
+		  	}
+
+		}
+	}
+}
+
+.checkbox-wrapper
+ {
+		 #uniform-termsCondition
+		  {
+			 span {
+			 background-position: -13px -415px;
+			}
+			 span.checked {
+			 background-position: -89px -415px;
+			}
+		}
+}
+
+
+.textarea-wrapper {
+
+	.form-textarea {
+		background-color: $primary-16;
+		border: 1px solid $primary-12;
+	}
+}
+
+
+
+
+
+
+.form-check{
+	display: inline-block;
+	width: auto;
+}
+
+.radio span{background-position:-54px -460px}
+.radio .checked{background-position:-70px -460px}
+
+span.error,label.error, .input-wrapper label.error{
+	font-size: 12px !important;
+}
+
+.display-none {
+	display : none !important;
+}
+
+#confirmButtons{
+	padding:5px 0 10px;
+	text-align:center;
+	.cta-button {
+		@include rem('margin' ,20px);
+		margin-bottom: auto;
+	}
+
+	.cta--grey {
+		width :40%;
+		@include rem('padding-top' , 15px );
+		@include rem('padding-bottom' , 15px );
+		padding-left: auto;
+		padding-right: auto;
+	}
+}
+
+/*Confirmation css goes here
+*/
+#confirmOverlay{
+	width:100%;
+	height:100%;
+	
+	/*background:url('ie.png');*/
+	background: -moz-linear-gradient(rgba(11,11,11,0.1), rgba(11,11,11,0.6)) repeat-x rgba(11,11,11,0.2);
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11,11,11,0.1)), to(rgba(11,11,11,0.6))) repeat-x rgba(11,11,11,0.2);
+	z-index:100000;
+}
+
+#confirmBox h1{
+	letter-spacing:0.3px;
+	color: $primary-2;
+    @include f(12);
+    text-align: center;
+    text-transform: uppercase;
+   	@include rem('margin-bottom',10px);
+}
+
+/*Store locator Ballons on Marker Style */
+
+.location.vcard {
+	min-height: 150px;
+	width: 250px;
+	color: #000000;
+	.view-more a {
+		color: #a0a0a0;
+	}
+	.view-more a:hover {
+		color: #000;
+	}
+	.phone-number{
+		font-family: Roboto, Arial, sans-serif !important;
+	}
+	
+
+	h4 {
+		line-height: 16px;
+		margin: 0 0 6px;
+		font-size: 1.2em;
+		@include proxi-font;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+
+		a {
+			font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: bold;
+			color: #2D57CB;
+		}
+	}
+	.adr {
+		margin-bottom: 10px;
+		line-height: 17px;
+		.boutique-map-image {
+			float: right;
+
+			img {
+				border: 0;
+				/*-ms-interpolation-mode: bicubic;*/
+				vertical-align: middle;
+				width: 50px;
+			}
+		}
+		.address {
+			.mystore-sub {
+				font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+				font-size: 12px;
+				font-style: italic;
+				letter-spacing: .1em;
+				font-style: normal;
+				letter-spacing: 0;
+			}
+		}
+	}
+}
+
+.to-lowercase { text-tranform: lowercase !important; }
+
+.success-div {
+	border: solid 1px #464646;
+	font-size: 1.4rem;
+	@include proxi-font;
+	width: initial;
+	background: initial;
+}
+
+.silentlogin {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left:0;
+	background: black;
+	z-index: 1000;
+	/*opacity: 0.8;*/
+	background-image: url($path-images +'icons/loading_animation.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*.grid.breadcrumb {
+	padding-top: 80px;
+}*/
+
+.exhibitions .comp-rich-text img {
+	margin-bottom: 0px;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.overlay-fix {
+    padding:0px !important;
+    border:none !important;
+}
+
+.coloumn-wrapper .grid .image-left, .exhibitions .comp-rich-text img.image-left{
+	float:left;
+	margin-right: 20px !important;
+	padding:0;
+	margin-left:0;
+}
+
+.living-heritage-bg .expert-guide .comp-rich-text img.image-right, .exhibitions .comp-rich-text img.image-right{
+	float:right;
+	margin-left: 20px !important;
+	padding:0;
+	margin-right:0;
+}
+
+.living-heritage-bg .expert-guide .coloumn-wrapper .comp-rich-text .text-wrapper , .exhibitions .comp-rich-text .text-wrapper{
+	overflow:hidden !important;
+}
+/* “ DATE  29-10-2014 |  DEFECT- CARE-5334 | BRANCH 2.0.0”  
+	START
+	Authring issue for textImage component 
+*/
+.living-heritage-bg .coloumn-wrapper .comp-rich-text .image-left + .text-wrapper, .living-heritage-bg .coloumn-wrapper .comp-rich-text .image-right + .text-wrapper{
+  overflow: hidden;
+}
+/* “ DATE  29-10-2014 |  DEFECT- CARE-5334 | BRANCH 2.0.0”  
+	END
+	Authring issue for textImage component
+*/
+
+.just-preloader {
+    background: url('/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bx_loader.gif');
+	background-size: 20px 20px  !important;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.js-product .heading-wrapper p.heading1{
+	font-size: 26px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 20px 0;
+	padding: 2rem 0;
+	color: $primary-2;
+	letter-spacing: 3px;
+	letter-spacing: .3rem;
+	font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.page-product .column-description h1{
+	line-height:11px;
+	margin-bottom:12px;
+}
+/*.contact .contact__contact-cont .contact__service-cont img {
+  width: auto;
+  min-height: 298px;
+}*/
+
+.pushes-wrapper-service-push .push-hover .description { color:white;}
+.sfy .carousel .bxslider li h2 {
+	color: #810026;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 0;
+	text-align: left;
+}
+.quick-link-push .more-button {
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-size: 11px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: normal;
+  color: white;
+}
+.form-mandatory {
+    color: $primary-51;
+    margin-left: 0.5rem;
+}
+
+.form-loader{
+	background: url($path-images +'icons/bx_loader.gif') 5px 0 no-repeat transparent;
+	height: 25px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.owned-creations .form-loader{
+  display:none !important;
+}
+
+.js-tab-collection-view-all .loaderImage{
+	background: url($path-images + 'icons/bx_loader.gif') no-repeat;
+	margin:10px auto;
+	display: block;
+}
+
+.js-my-wishlist li .nav-link{
+    background: initial !important;
+    text-indent: 0 !important;
+}
+
+.set-for-you-cart-link{
+	width: 90%;
+	display: block;
+	text-align: left;
+	padding-bottom: 7px;
+
+	.input-arrow{
+		height: 15px;
+		padding-right: 5px;
+	}
+}
+
+button.cta-button.more-button-overlay{
+	vertical-align: bottom;
+	display: inline-block;
+	margin-bottom: 10px !important;
+}
+
+@-moz-document url-prefix() {
+  .error-page img{
+    max-height: 726px !important;
+  }	
+}
+
+.js-dynamic-delievery .tooltip-div a.tooltip .tool-tip-details-wrapper{bottom:30px;}
+
+.overlay-form .comp-rich-text p {
+    font-family:proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    color: $primary-2 !important;
+}
+.js-shipping-section-one #uniform-fn_state{display:block !important; clear:both !important;}
+.js-billing-section-one #fn_phno{float:left;}
+

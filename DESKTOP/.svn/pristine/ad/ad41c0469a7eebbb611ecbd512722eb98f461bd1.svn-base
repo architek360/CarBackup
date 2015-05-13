@@ -1,0 +1,50 @@
+<div class="js-clone"><input type="hidden" name="clicked-event" value="value" class="js-features">
+<div class="personalise-features">
+    <div class="att-accordion clearfix">
+        <div class="js-accordion att-accordion__wrapper">
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques js-engraving-wrapper">
+                        <p>Customize your creation</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc">
+                    <fieldset data-confirm-flag='false'>
+                    <!--#include virtual="../../views/engraving/desktop.shtml" -->
+                    </fieldset>
+                </div>
+            </div>
+            <div class="js-accordion__node att-accordion__node">
+                <div class="js-accordion_node__title att-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="att-accordion_node_title__ques js-adjust-wrapper">
+                        <p>adjust your bracelet</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc att-accordion_node__desc">
+                    <fieldset data-confirm-flag='false'>
+                    <!--#include virtual="../../views/adjust_bracelet_size/desktop.shtml" -->
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="action-button">
+      
+
+            <!--#set var="cta--varaint" value="cta--red js-confirm-button" -->
+            <!--#set var="text-detail" value="add to shopping bag" -->
+            <!--#set var="input-type" value="button" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" --> 
+
+               <!--#set var="cta--varaint" value="cta--red js-cancel-ac" -->
+            <!--#set var="text-detail" value="cancel" -->
+            <!--#set var="input-type" value="submit" -->
+           
+            <!--#include virtual="../../components/form_elements/button.shtml" --> 
+    </div>
+</div>
+</div>
+
+            

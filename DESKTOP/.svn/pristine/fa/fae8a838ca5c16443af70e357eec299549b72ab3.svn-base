@@ -1,0 +1,68 @@
+<div class="row grid relative clearfix">
+    <div class="column grid__item two-fifths w312">
+        <div class="row grid relative clearfix">
+            <div class="column grid__item one-whole nomargin">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}chimeras-headline.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole nomargin">
+            <p class="border-wrapped bold">
+                The mythical founder of Chinese civilization and a symbol of longevity and success, the dragon is a chimera, a fantastic amalgam of several animals in one body. Fascinated by their magic and strange beauty, Cartier regularly created Chinese Chimera jewelry from 1920 onwards. He did not copy traditional jewelry and ornaments but immersed himself in the spirit of ancient China to create original pieces, often using coral and precious stones to produce marvelous color combinations.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="column grid__item three-fifths w650">
+        <div class="row grid firstrow relative clearfix">
+            <div class="column grid__item one-whole nomargin image ">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}chimera_cliquet_pin.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole nomargin w323 box-absolute">
+                <h2>CHIMERA CLIQUET PIN</h2>
+                <h3>CARTIER PARIS, 1923</h3>
+                <p>
+                    Platinum, yellow gold, round old- and single-cut diamonds, one fluted emerald bead, emerald cabochons and buff-top emeralds, one natural pearl, carved and fluted coral, onyx cabochons, black enamel.<br><br>Sold to Louis Cartier.
+                </p>
+                <p class="productdata">
+                    13.0 x 1.8 cm
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row grid">
+    <div class="column grid__item one-whole nomargin">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}chimera_bangle.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+
+                <!--#set var="imgclass" value="right" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}chimera_bangle2.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+    </div>
+    <div class="column grid__item one-whole nomargin">
+        <div class="fleft w328">
+            <h2>CHIMERA BANGLE</h2>
+            <h3>CARTIER PARIS, COMMISSIONED IN 1929</h3>
+            <p>
+                Platinum, pear-shaped diamonds, round old-, single- and French-cut diamonds, sapphire cabochons, buff-top sapphires and emeralds, gadrooned rock crystal (throat).<br><br>This bracelet was the first of the chimera bangles to be made entirely of platinum and gemstones.
+            </p>
+            <p class="productdata">
+                7.8 x 7.7 x 1.8 cm
+            </p>
+        </div>
+        <div class="fright w323">
+            <h2>CHIMERA BANGLE</h2>
+            <h3>CARTIER PARIS, COMMISSIONED IN 1954</h3>
+            <p>
+                Platinum, white gold, marquise- and brilliant-cut diamonds, fluted coral beads and buff-top coral cabochons.The eyes are formed by brilliant-cut diamonds set in reverse, the collet outward. The central strand of coral beads is studded with collet-set diamonds.
+            </p>
+            <p class="productdata">
+            Diameter: 5.33 cm
+            </p>
+        </div>
+    </div>
+</div>

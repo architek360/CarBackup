@@ -1,0 +1,534 @@
+/*------------------------------------*\
+    REGISTER STEP 3 -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.regform-step3)
+ * $FORM FIELDS...(.regform-step3__form)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.regform-step3{
+	width:81.25%;
+	margin:0 auto;
+	@include rem(padding, 20px 0 0);
+	& > div 
+	{
+		border-top:solid 1px $white;
+		text-align: center;
+		color: $white;
+	}
+	.account-status{
+		text-transform:uppercase;
+		@include rem(margin, 17px 0 0);
+		.heading2 {
+			@include rem('margin-top',26px);
+			@include f(24);
+			color: $primary-2;
+			border: none;
+			padding: 0;
+		}
+		.account-status__message{
+			text-align: center;
+			@include brand-font;
+			@include rem('padding',21px 0);
+			@include f(32);
+			@include rem('line-height',33px);
+		}
+		.account-status__suggestion-to-user{
+			font-style: italic;
+			@include f(24);
+			@include rem('padding',10px 0 18px);
+			text-transform: none;
+			@include main-font;
+			text-align: center;
+		}
+	}
+	
+	/*------------------------------------*\
+    	$FORM FIELDS
+	\*------------------------------------*/
+
+	.regform-step3__form{
+		@include rem('padding',47px 0 0);
+		.heading2{
+			@include rem(padding, 44px 0 30px);
+			@include medium-font;
+		}
+		.invoice-check{
+			text-align: left;
+			label{
+				width:100%;
+				color: $primary-3;
+			}
+			.form-check{
+				@include rem(margin, 15px 0 12px 0px);
+				@include rem('line-height',27px);
+			}
+		}
+		.form-select{
+			text-transform:uppercase;
+		}
+		.address-name-radio{
+			text-transform:uppercase;
+			text-align:center;
+			.radio-main-label{
+				display:none;
+			}
+			ul{
+				margin-top:0;
+				li{
+					margin:0;
+				}
+			}
+			.address-name-radio__tab{
+				.one-half{
+					text-align:center;
+				}
+			}
+			label {
+				display:inline;
+				@include brand-font;
+			}
+		}
+		.skip-this-step
+		{
+			color:$primary-3;
+			text-transform:uppercase;
+			@include f(18);
+			text-decoration: none;
+			@include bold-font;
+			span
+			{
+				@include setSprite(10px, 13px, -577px, -20px);
+				display:inline-block;
+				@include rem(margin-right,16px);
+				@include rem(margin-top,2px);
+				position:relative;
+				@include rem('bottom',2px);
+			}
+		}
+		.heading2{
+			border:none;
+			padding-bottom:0;
+			@include f(28);
+		}
+		.submitbutton
+		{
+		 	@include rem(padding,40px 0 7px);
+			text-align: center;
+			clear: both;
+			.cta--red-width-auto-pad-20{
+				@include rem(padding,15px 50px 15px 30px);
+				@include bold-font;
+			}
+			.cta-button{
+				margin-bottom:0;
+			}
+		}
+		.form-label{
+			@include brand-font;
+		}
+		.address-name-radio{
+			border:1px solid $primary-17;
+			@include rem('margin-bottom',-34px);
+			padding:0;
+			ul{
+				li{
+					border-right:1px solid $primary-17;
+					@include rem('min-height',74px);
+					position: relative;
+					@include rem(padding, 16px 16px 6px);
+					.radio-title {
+						@include bold-font;
+					}
+					.radio-title:after {
+						position: absolute;
+						left: 40%;
+						top: 56%;
+					}
+				}
+				li:last-child{
+					border:none;
+					position: relative;
+					@include rem('padding',16px);
+				}
+			}
+		}
+		.grid__item{
+			padding-left:0;
+			.cta-button {
+				display: block;
+			}
+		}
+		.birthday-details{
+			border:1px solid $primary-17;
+			@include f(20);
+			@include rem('padding',19px 22px 30px);
+			@include rem('margin',51px 0 7px 0);
+			display:inline-block;
+			width: 100%;
+			text-transform:uppercase;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			.form-select {
+					@include main-font;
+					font-style: italic;
+			}
+			.birthday-details__heading{
+				color:$primary-3;
+				@include f(22);
+				@include rem('padding',0 0 25px 0);
+				@include main-font;
+				text-transform:none;
+			}
+			.birthday-details__form-select{
+				@include set-ulFix;
+				li{
+					display:inline-block;
+					width:31.6%;
+				}
+			}
+			.grid__item{
+				@include rem('padding',0 0 33px 0);
+				text-align:left;
+				label {
+					@include bold-font;
+				}
+				&:last-child{
+					padding:0;
+				}
+			}
+		}
+		.personal-details{
+			text-align:left;
+			@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+			border:1px solid $primary-17;
+			@include f(20);
+			@include rem('padding',24px 24px 0px 24px);
+			@include rem('margin',22px 0);
+			display:inline-block;
+			text-transform:uppercase;
+			 -moz-box-sizing: border-box;
+			box-sizing: border-box;
+			.radio-btn{
+				@include rem('padding',0 0 33px);
+				@include rem('margin',15px 0 0px);
+			}
+			.radio-btn + span {
+				@include rem('margin',-29px 0 0px);
+			}
+			.grid__item{
+				@include rem('padding',0px);
+				label{
+					@include bold-font;
+				}
+				&:last-child{
+					padding:0;
+				}
+			}
+		}
+	}
+	.grid__item--row{
+		@include rem('min-height',120px);
+		input + span {
+			@include rem(height,35px);
+		}
+	}
+	.grid__item--pad{
+		@include rem('padding',0 0 20px 0);
+	}
+	.js-radio-tabs{
+		.radio-btn{
+			.radio-btn-li{
+				width: 49%;
+				.radio-title{
+					@include rem(height,72px);
+					@include rem(padding, 16px 0 0);
+				}
+			}
+		}
+	}
+	.address-details{
+		background:$primary-1;
+		width: 100%;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		@include rem('padding-top', 0px);
+		@include rem('margin-bottom', 10px);
+		text-align:left;
+		border:1px solid $primary-17;
+		@include f(20);
+		@include rem('padding',24px 24px 0px 24px);
+		display:inline-block;
+		text-transform:uppercase;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		.radio-btn{
+			@include rem('padding',0 0 33px);
+			@include rem('margin',15px 0 0px);
+		}
+		.radio-btn + span {
+			@include rem('margin',-29px 0 0px);
+		}
+		.grid__item{
+			@include rem('padding',0px);
+			label{
+				@include bold-font;
+			}
+			&:last-child{
+				padding:0;
+			}
+		}
+	}
+}
+.bottom-grad{
+	@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+}
+.gradbox-topbottom{
+	@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+}
+.js-reg-step-3, .js-jp-reg-step-3{
+	width:82.25%;
+	margin:0 auto;
+	.data-picker-wrapper{
+		label {
+		color: $primary-2;
+		margin-top: 20px;
+		}
+	}
+
+	@include rem(padding, 20px 0 0);
+    .comp-rich-text{
+		h2{
+			@include f(34);
+			@include brand-font();
+			text-transform: uppercase;
+			@include rem(letter-spacing,4px);
+			@include rem('padding',15px 0);
+		}
+		p:first-child{
+			border-bottom: 1px solid $primary-2;
+		}
+		p,ol>li{
+			@include f(24);
+			text-transform: none;
+			@include main-font();
+			@include rem('padding',15px 0);
+			border-bottom: 1px solid $primary-2;
+			@include rem('margin-bottom',15px);
+			text-align: center;
+			border-bottom: none;
+			i{
+				font-style: italic;
+			}
+		}
+		ul{
+			display: none;
+		}
+		div {
+			text-align: center;
+		}
+		a{
+			@include setSpriteMobileDesktop(auto, 23px, -1427px, -264px, transparent);
+			color:$primary-3;
+			text-transform:uppercase;	
+			@include f(18);
+			@include rem('margin-top',30px);
+			@include rem('padding-left',20px);
+			@include bold-font();
+			border-bottom: none;
+			@include rem('padding-top',6px);
+		}
+	}
+	.txt{
+		ul{
+			display: none;
+		}
+		div {
+			text-align: center;
+		}
+		a{
+			@include setSpriteMobileDesktop(auto, 15px, -1427px, -270px, transparent);
+			color:$primary-3;
+			text-transform:uppercase;	
+			@include f(18);
+			@include rem('padding-left',20px);
+			@include bold-font();
+		}
+	}
+	.heading-wrapper{
+		.heading3{
+			@include f(28);
+			color: $primary-2;
+			border: none;
+			padding: 0;
+			@include rem(padding, 44px 0 30px);
+			@include medium-font;
+		}
+	}
+	.regstep3-col1{
+		border:1px solid $primary-72;
+		@include rem(margin-top, 20px);
+		@include rem(padding, 19px 22px 30px);
+		p{
+			color:$primary-3;
+			@include f(22);
+			@include rem('padding',0px);
+			@include main-font;
+			text-transform:none;
+		}
+		.txt {
+			label{
+				@include bold-font();
+				@include f(22);
+				@include rem('padding-top',33px);
+				display: inline-block;
+			}
+		}
+		.js-date-picker{
+			.select-wrapper{
+				display: inline-block;
+				width: 32%;
+				padding: 0;
+				@include rem(margin, 0px);
+
+
+				.selector{
+					width: 100%!important;
+					@include rem(padding-right,0px);
+					@include box-sizing(border-box);
+					span{
+						width: 100%!important;
+						@include rem(padding-right,10px);
+						@include box-sizing(border-box);
+						text-transform: uppercase;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	fieldset{
+		min-width: 100%;
+	}
+	.regstep3-col2{
+		width:100%;
+		text-align:left;
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		border:1px solid $primary-17;
+		@include f(20);
+		@include rem('padding',24px);
+		@include rem('margin',22px 0);
+		display:inline-block;
+		text-transform:uppercase;
+		@include box-sizing(border-box);
+		.input-wrapper{
+			label{
+				padding-top: 0;
+			}
+		}
+		label{
+			@include f(22);
+		}
+	}
+	.regstep3-col3{
+		border:1px solid $primary-17;
+		@include rem('padding',24px 24px 0);
+		width:100%;
+		text-align:left;
+		display:inline-block;
+		text-transform:uppercase;
+		@include box-sizing(border-box);
+		label{
+			@include f(22);
+			padding-top: 0;
+		}
+	}
+	.regstep3-col4{
+		width:100%;
+		text-align:left;
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		border:1px solid $primary-17;
+		@include f(20);
+		@include rem('padding',24px 24px 0);
+		@include rem('margin',22px 0);
+		display:inline-block;
+		text-transform:uppercase;
+		@include box-sizing(border-box);
+		label{
+			@include f(22);
+			padding-top: 0;
+		}
+		.select-wrapper{
+			@include rem(margin, 0px);
+			@include rem(margin-bottom, 33px);
+
+
+			.selector{
+				width: 99%!important;
+				@include rem(max-width,640px);
+				span{
+					width: 99%!important;
+					text-transform: uppercase;
+					@include rem(max-width,640px);
+				}
+			}
+		}
+	}
+	.js-form-address-selector{
+		width: 100%;
+		display: inline-block;
+		@include box-sizing(border-box);
+		border:1px solid $primary-17;
+		border-bottom: none;
+		.js-first-radio{
+			width: 49%;
+			label{
+				text-transform: uppercase;
+				@include bold-font();
+				@include f(22);
+				width: 100%;
+				text-align: center;
+				display: inline-block;
+				@include rem(padding, 10px 0);
+				color: $primary-2;
+				.radio{
+					@include rem(padding, 10px 0);
+					position: static;
+					display: block;
+				}
+			}
+			.radio{
+				@include rem(padding, 10px 0);
+				position: static;
+				display: block;
+				text-align: center;
+			}
+		}
+		.checkbox-wrapper{
+			margin: 0;
+		}
+	    .js-second-radio{
+			width: 49%;
+			border-left: 1px solid $primary-17;
+			color: $primary-2;
+			label{
+				text-transform: uppercase;
+				@include bold-font();
+				@include f(22);
+				width: 100%;
+				text-align: center;
+				display: inline-block;
+				@include rem(padding, 10px 0);
+				.radio{
+					@include rem(padding, 10px 0);
+					position: static;
+					display: block;
+				}
+			}
+		}
+	}
+}

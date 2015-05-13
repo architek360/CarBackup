@@ -1,0 +1,29 @@
+<!--Price Detail Box Starts Here-->
+<div class="price-detail clearfix grid">
+    <div class="price-detail__row">
+        <span class="grid__item  three-fifths  price-detail__col">subtotal <span class="price-detail--note js-subtotal-info">excl.sales tax</span> </span>
+        <span class="grid__item grid--right two-fifths price-detail__col-right font32 right-zero js-subtotal">$ 5,540.00</span>
+    </div>
+
+    <div class="price-detail__row">
+        <span class="grid__item three-fifths  price-detail__col">delivery charge <span class="price-detail--note js-deliverycharge-info">offered on orders over $500</span> </span>
+        <span class="grid__item grid--right two-fifths price-detail__col-right right-zero bold-font js-deliverycharge">free</span>
+
+    </div>
+    <!--#if expr="${sales_tax}=on" -->
+    <div class="price-detail__row js-saletaxrow">
+        
+        <span class="grid__item three-fifths  price-detail__col right-zero">sale tax  </span>
+        <span class="grid__item grid--right two-fifths  price-detail__col-right font32 right-zero js-saletax">$ 403.81</span>
+    </div>
+    <!--#endif -->
+
+
+    <div class="price-detail__row">
+        <span class="grid__item three-fifths  price-detail__col right-zero">total<span class="price-detail--note js-totalprice-info">excl.sales tax</span> </span>
+        <span class="grid__item grid--right two-fifths  price-detail__col-right font39 right-zero js-totalprice">$ 5,540.00</span>
+    </div>
+
+</div>
+
+<!-- Price Detail Box Ends Here-->

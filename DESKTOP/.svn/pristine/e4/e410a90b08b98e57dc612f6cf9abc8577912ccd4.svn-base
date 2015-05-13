@@ -1,0 +1,38 @@
+<!-- Expert Guide View Starts Here-->
+	<!--#if expr="${maison-tab}=yes" -->
+    <div class="expert-guide">
+    <!--#set var="active1" value="tab-active" -->
+    <!--#set var="tab_1" value="Cartier, responsible jeweler" -->
+    <!--#set var="tab_2" value="A Pioneering role" -->
+    <!--#set var="tab_3" value="Resources of Excellence" -->
+    <!--#set var="tab_4" value="Passing on Cartier Passion" -->
+
+    
+        <!--#set var="tab_content_1" value="maison_rich_text_editor" -->
+ 
+    <!--#include virtual="../../components/tab_nav/html.shtml" -->
+
+    </div>
+    <!--#else-->
+	<div class="expert-guide">
+
+	<!--#set var="tab_1" value="after sale service" -->
+    <!--#set var="tab_2" value="warranty" -->
+    <!--#if expr="${tab_content_page} = 'client_services'"  -->
+    	<!--#set var="active1" value="tab-active" -->
+    <!--#else -->
+    	<!--#set var="active3" value="tab-active" -->
+    <!--#endif -->
+    <!--#set var="tab_3" value="secure shopping" -->
+
+    <!--#if expr="${tab_content_page} = 'client_services'"  -->
+    	<!--#set var="tab_content_1" value="expert_collection_list" -->
+    <!--#else -->
+    	<!--#set var="tab_content_1" value="expert_guide" -->
+    <!--#endif -->
+    <!--#include virtual="../../components/tab_nav/html.shtml" -->
+
+	</div>
+    <!--#endif-->
+
+<!-- Expert Guide View Ends Here-->

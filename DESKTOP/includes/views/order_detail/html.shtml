@@ -1,0 +1,92 @@
+  <!-- Order Detail  Starts Here-->
+
+<div class="order-detail clearfix">
+    <!-- HEADING AREA-->
+    <div class="order-detail__title">
+        <h4 class="heading4">mY CARTIER</h4>
+        <h1 class="heading2">COMMANDE N° 115780</h1>
+    </div>
+    
+    <!--#set var="product_size" value="off" -->
+    
+    <!--Product Detail Box For Order Detail Starts Here-->
+    <div class="product-detail grid clearfix">
+        <h3 class="heading3">panthere ring</h3>
+        <span class="product-detail__variant">Yellow gold, tsavorite, lacquer</span>
+        <span class="product-detail__size">ref: HPI00480 </br> 
+            <!--#if expr="${product_size}=on" -->
+            SIZE: 47
+            <!--#endif -->
+        </span>
+        <div class="product grid__item one-whole">
+            <div class="product__image one-half"><img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="image" alt=""/></div>
+            <p class="product__price one-half">
+                <span class="number-items">$ 5,540 x 1</span>
+                <span class="price-text">$ 5,540</span>
+                <span class="note">incl.tva</span>
+            </p>
+        </div>
+    </div>
+    <div class="order-reconfirm">
+        <ul class="product-filter">
+            <li>
+                <span class="product-filter__left">Engraving </span>
+                <span class="product-filter__right">Helen Baker</span>
+            </li>
+            <li>
+                <span class="product-filter__left"> a message card with your gift </span>
+                <span class="product-filter__right">For my love Helen Baker</span>            
+            </li>
+        </ul>
+    </div>
+
+    <div class="order-detail__separator"></div>
+    <!-- Product Detail Box For Order Detail Ends Here-->
+    <!--#set var="sales_tax" value="on" -->
+
+    <!--#include virtual="../../views/price_details/html.shtml" -->
+
+    <!-- ACCORDION PRODUCT INFO-->
+
+    <div class="order-accordion clearfix">
+        <div class="js-accordion accordion__wrapper">
+             <div class="js-accordion__node accordion__node">
+                <div class="js-accordion_node__title accordion_node__title heading3">
+                    <span class="off"></span>
+                    <div class="accordion_node_title__ques">
+                        <p>billing address</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc accordion_node__desc">
+                    <p>details</p>
+                </div>
+            </div>
+
+             <div class="js-accordion__node accordion__node">
+                <div class="js-accordion_node__title accordion_node__title heading3">
+                    <span class="off"></span>
+                    <div class="accordion_node_title__ques">
+                        <p>shipping address</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc accordion_node__desc">
+                    <p>description</p>
+                </div>
+            </div>
+            <div class="js-accordion__node accordion__node">
+                <div class="js-accordion_node__title accordion_node__title heading3">
+                    <span class="off"></span>
+                    <div class="accordion_node_title__ques">
+                        <p>delivery address</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc accordion_node__desc">
+                    <p>description</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+ <!-- Order Detail Ends Here-->

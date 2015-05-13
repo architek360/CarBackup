@@ -1,0 +1,247 @@
+<div class="form-layout js-request-price-form">
+    <script type="text/javascript" src="/etc/clientlibs/foundation/form.1388724522515.js"></script>
+<script type="text/javascript">
+  cq5forms_reloadForPreview = true;
+  function cq5forms_preCheck_js_request_price_form(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/content/car/langmaster/global/en/RequestPrice.html" id="js-request-price-form" name="js-request-price-form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-request-price-form"><input type="hidden" name=":formstart" value="/content/car/langmaster/global/en/RequestPrice/jcr:content/article-containt-par/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><div class="form"><script type="text/javascript">
+var rulesObjects = {};
+var messagesObjects = {};
+        
+    if(rulesObjects.requestPrice_title){
+        rulesObjects.requestPrice_title.required="true";
+        messagesObjects.requestPrice_title.required="Title should be selected";
+           
+        } else{
+             rulesObjects.requestPrice_title= {
+            required: true
+            }
+            messagesObjects.requestPrice_title = {
+            required: "Title should be selected"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_firstName){
+        rulesObjects.requestPrice_firstName.required="true";
+        messagesObjects.requestPrice_firstName.required="This is a mandatory Field";
+           
+        } else{
+             rulesObjects.requestPrice_firstName= {
+            required: true
+            }
+            messagesObjects.requestPrice_firstName = {
+            required: "This is a mandatory Field"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_lastName){
+        rulesObjects.requestPrice_lastName.required="true";
+        messagesObjects.requestPrice_lastName.required="This is a required field";
+           
+        } else{
+             rulesObjects.requestPrice_lastName= {
+            required: true
+            }
+            messagesObjects.requestPrice_lastName = {
+            required: "This is a required field"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_firstName2){
+        rulesObjects.requestPrice_firstName2.required="true";
+        messagesObjects.requestPrice_firstName2.required="This field is required";
+           
+        } else{
+             rulesObjects.requestPrice_firstName2= {
+            required: true
+            }
+            messagesObjects.requestPrice_firstName2 = {
+            required: "This field is required"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_lastName2){
+        rulesObjects.requestPrice_lastName2.required="true";
+        messagesObjects.requestPrice_lastName2.required="This field is required";
+           
+        } else{
+             rulesObjects.requestPrice_lastName2= {
+            required: true
+            }
+            messagesObjects.requestPrice_lastName2 = {
+            required: "This field is required"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_contactPreference){
+        rulesObjects.requestPrice_contactPreference.required="true";
+        messagesObjects.requestPrice_contactPreference.required="Contact Preference should be selected";
+           
+        } else{
+             rulesObjects.requestPrice_contactPreference= {
+            required: true
+            }
+            messagesObjects.requestPrice_contactPreference = {
+            required: "Contact Preference should be selected"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_emailAddress){
+        rulesObjects.requestPrice_emailAddress.required="true";
+        messagesObjects.requestPrice_emailAddress.required="This is a required field";
+           
+        } else{
+             rulesObjects.requestPrice_emailAddress= {
+            required: true
+            }
+            messagesObjects.requestPrice_emailAddress = {
+            required: "This is a required field"
+            }
+        }
+
+        
+    if(rulesObjects.requestPrice_phoneNumber){
+        rulesObjects.requestPrice_phoneNumber.required="true";
+        messagesObjects.requestPrice_phoneNumber.required="This is a required field";
+           
+        } else{
+             rulesObjects.requestPrice_phoneNumber= {
+            required: true
+            }
+            messagesObjects.requestPrice_phoneNumber = {
+            required: "This is a required field"
+            }
+        }
+
+
+    $(document).ready(function(){
+        $("#js-request-price-form").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+        });
+    });
+</script>
+<fieldset>
+    <div class="heading-wrapper">
+
+<h3 class="heading3"> Request Price</h3>
+
+        </div>
+
+
+<div class="group-wrapper">
+                <label>TITLE</label>
+<div class="form-element radio-wrapper requestPrice_title">   
+                                    <input type="radio" id="mr" name="requestPrice_title" value="0001" class="form-radio">
+                                   <label for="mr" class="radio  form-radio-label">MR.
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper requestPrice_title">   
+                                    <input type="radio" id="mrs" name="requestPrice_title" value="0002" class="form-radio">
+                                   <label for="mrs" class="radio  form-radio-label">MRS.
+
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper requestPrice_title">   
+                                    <input type="radio" id="ms" name="requestPrice_title" value="0003" class="form-radio">
+                                   <label for="ms" class="radio  form-radio-label">MS.
+</label>                              
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-requestPrice_title"></div><div class="form-element input-wrapper requestPrice_firstName">
+        <label>SURNAME (CHINESE)</label>
+<input id="requestPrice_firstName" type="text" name="requestPrice_firstName" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_firstName"></div></div>
+    <div class="form-element input-wrapper requestPrice_lastName">
+        <label>NAME (CHINESE)</label>
+<input id="requestPrice_lastName" type="text" name="requestPrice_lastName" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_lastName"></div></div>
+    <div class="form-element input-wrapper requestPrice_firstName2">
+        <label>SURNAME (ENGLISH)</label>
+<input id="requestPrice_firstName2" type="text" name="requestPrice_firstName2" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_firstName2"></div></div>
+    <div class="form-element input-wrapper requestPrice_lastName2">
+        <label>NAME (ENGLISH)</label>
+<input id="requestPrice_lastName2" type="text" name="requestPrice_lastName2" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_lastName2"></div></div>
+    <div class="group-wrapper">
+                <label>CONTACT PREFERENCE</label>
+<div class="form-element radio-wrapper requestPrice_contactPreference">   
+                                    <input type="radio" id="email" name="requestPrice_contactPreference" value="email" class="form-radio">
+                                   <label for="email" class="radio  form-radio-label">BY-EMAIL
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper requestPrice_contactPreference">   
+                                    <input type="radio" id="phone" name="requestPrice_contactPreference" value="phone" class="form-radio">
+                                   <label for="phone" class="radio  form-radio-label">BY TELEPHONE
+</label>                              
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-requestPrice_contactPreference"></div><div class="form-element input-wrapper requestPrice_emailAddress">
+        <label>EMAIL</label>
+<input id="requestPrice_emailAddress" type="text" name="requestPrice_emailAddress" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_emailAddress"></div></div>
+    <div class="form-element input-wrapper requestPrice_phoneNumber">
+        <label>TELEPHONE</label>
+<input id="requestPrice_phoneNumber" type="text" name="requestPrice_phoneNumber" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_phoneNumber"></div></div>
+    <input id="pdp_pagepath" type="hidden" name="pdp_pagepath" value="">    
+    <div class="form-element select-wrapper requestPrice_mainMessage">
+     <label>MAIN MESSAGE</label>
+<select name="requestPrice_mainMessage" class=" form-select" id="requestPrice_mainMessage">
+            <option value="Ask For Price">
+                    Ask For Price </option>
+            </select>
+    <div class="errormessage" id="errormessage-requestPrice_mainMessage"></div></div>
+<div class="group-wrapper">
+                <div class="form-element checkbox-wrapper requestPrice_checkbox_askForPrice">
+                                <input type="checkbox" id="" name="requestPrice_checkbox_askForPrice" value="true" class="form-checkbox">
+                                    <label for="" class="checkbox  form-checkbox-label">Add Message
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-requestPrice_checkbox_askForPrice"></div><div class="form-element input-wrapper requestPrice_message">
+        <label>MESSAGE</label>
+<input id="requestPrice_message" type="text" name="requestPrice_message" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-requestPrice_message"></div></div>
+    <div class="group-wrapper">
+                <div class="form-element checkbox-wrapper requestPrice_checkbox_val">
+                                <input type="checkbox" id="wishToRecieve" name="requestPrice_checkbox_val" value="wishToRecieve" class="form-checkbox">
+                                    <label for="wishToRecieve" class="checkbox  form-checkbox-label">I would like to receive information from Cartier using any of the communication method(s) that I have provided above.
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-requestPrice_checkbox_val"></div><div class="comp-rich-text">
+      <p>By submitting this form, I certify that I have read and accepted the <a href="http://www.cartier.us/privacy-notice">Privacy Notice</a>.</p>
+</div>
+</fieldset><div class="form-element button-wrapper SUBMIT">
+<input class="form-button" type="submit" name="SUBMIT" value="SUBMIT">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+<script type="text/javascript">
+            RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : 'formType',
+                'actionName' : "RequestPriceAction",
+                'currentPagePath' : "/content/car/langmaster/global/en/RequestPrice",
+                'elementId' : "js-request-price-form",
+                'eventName' : 'submit'
+              });
+        </script>
+
+    </div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

@@ -1,0 +1,18 @@
+
+    <ul class="radio-btn js-radio-change-handler">
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="fn_permsg" -->
+            <!--#set var="radio-text" value="Compose your message now" -->
+            <!--#set var="radio-value" value="compose-message" -->
+            <!--#set var="is-checked" value="checked" -->
+            <!--#include virtual="../../components/form_elements/radio2.shtml" -->
+        </li>
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="fn_permsg" -->
+            <!--#set var="radio-text" value="Receive a blank message card" -->
+            <!--#set var="radio-value" value="receive-message" -->
+            <!--#set var="is-checked" value="" -->
+
+            <!--#include virtual="../../components/form_elements/radio2.shtml" -->
+        </li>
+    </ul>

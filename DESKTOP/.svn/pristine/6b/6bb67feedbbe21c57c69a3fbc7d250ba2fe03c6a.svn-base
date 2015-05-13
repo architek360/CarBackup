@@ -1,0 +1,501 @@
+
+<!--#if expr="${nested-carousel-type}=sfy" -->
+	<div class="nested-carousel-wrapper sfy heightZero">
+		<div class="carousel">
+			<ul class="bxslider js-nested-slider">
+			  <li>
+			  	<div class="info__desc col_1-4">
+			  		<h2 class="product-name">Cartier Destinée solitaire</h2>
+					<h2 class="product-description">Platinum, diamonds</h2>
+					<p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+
+          <div class="sfy_check sfy_checkPlatinum">
+         <!--#set var="radio-value" value="PLATINUM" -->
+      <!--#set var="radio-name" value="goldPlatinum_video" -->
+            <!--#set var="radio-text" value="PLATINUM" -->     
+      <!--#set var="attr-value" value="" -->    
+        <!--#include virtual="../../components/form_elements/radio.shtml" -->
+        <div class="platinum"></div>
+      </div>
+       <div class="sfy_check sfy_checkGold clearfix">
+         <!--#set var="radio-value" value="YELLOW GOLD" -->
+      <!--#set var="radio-name" value="goldPlatinum_video" -->
+            <!--#set var="radio-text" value="YELLOW GOLD" -->     
+      <!--#set var="attr-value" value="" -->    
+        <!--#include virtual="../../components/form_elements/radio.shtml" -->
+         <div class="gold"></div>
+      </div>
+
+          <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="SELECT" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+				</div>
+				<div class="info__pic col_3-4">
+
+						<div class="product-carousel__wrapper platinum-1">
+							<ul class="bxslider js-product-img-slider">
+							  <li>
+                  <!--#include virtual="../../components/jwplayer/html.shtml" -->  
+                </li>
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4163600_0.png" alt="" class="image"></li>
+							</ul>
+						</div>
+            <div class="product-carousel__wrapper goldBlock-1">
+              <ul class="bxslider js-product-img-slider">
+                <li>
+                <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image">
+                </li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+                <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+              </ul>
+            </div>
+
+				</div>
+			  </li>
+			  <li>
+			  	<div class="info__desc col_1-4">
+			  		<h2 class="product-name">Cartier d'Amour solitaire</h2>
+					<h2 class="product-description">Platinum, diamonds</h2>
+					<p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+          <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="SELECT" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+				</div>	  
+				<div class="info__pic col_3-4">
+
+						<div class="product-carousel__wrapper platinum-1">
+							<ul class="bxslider js-product-img-slider">
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							</ul>
+						</div>
+
+				</div>				
+			  </li>
+			  <li>
+			  	<div class="info__desc col_1-4">
+			  		<h2 class="product-name">Cartier Destinée solitaire</h2>
+					<h2 class="product-description">Platinum, diamonds</h2>
+					<p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+          <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="SELECT" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+				</div>		
+				<div class="info__pic col_3-4">
+
+						<div class="product-carousel__wrapper platinum-1">
+							<ul class="bxslider js-product-img-slider">
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							  <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4250600_1.png" alt="" class="image"></li>
+							</ul>
+						</div>
+
+				</div>  	
+			  </li>
+			</ul>
+		</div>
+	</div>
+<!--#elif expr="${nested-carousel-type}=gift-for-you"-->
+
+<!-- Nested Carousel component for gift pages  starts here-->
+
+	<div class="nested-carousel-wrapper nested-gift-for-you js-nested-gift-for-you">
+	<div class="carousel">
+    <!-- Nested Carousel ul js initialize carousel from here-->
+		<ul class="bxslider js-nested-slider">
+      <!-- one slide of nested carousel starts-->
+		  <li>
+		  	<div class="info__desc col_1-4">
+		  		<h2 >Cartier Destinée solitaire</h2>
+				<h3 >Platinum, diamonds</h3>
+				<p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+        <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+			</div>
+			<div class="info__pic col_3-4">
+         <!-- inner carousel starts-->
+					<div class="product-carousel__wrapper">
+						<ul class="bxslider js-product-img-slider">
+						  <li><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4227900_0_cartier_rings.png" alt="" class="image"></li>
+            <li><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/personal_info.jpg" alt="" class="image"></li>
+						</ul>
+             <a class="zoom-icon js-zoom" href="#"></a>
+					</div>
+          <!-- inner carousel ends-->
+			</div>
+		  </li>
+      <!-- one slide of nested carousel ends here-->
+       <!-- one slide of nested carousel starts-->
+		  <li>
+		  	<div class="info__desc col_1-4">
+		  		<h2 >Cartier d'Amour solitaire</h2>
+				<h3 >Platinum, diamonds</h3>
+				<p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+         <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+			</div>	  
+			<div class="info__pic col_3-4">
+
+					<div class="product-carousel__wrapper">
+						<ul class="bxslider js-product-img-slider">
+						 <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+						  <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+						</ul>
+            <a class="zoom-icon js-zoom" href="#"></a>
+					</div>
+
+			</div>				
+		  </li>
+      <!-- one slide of nested carousel ends here-->
+      <!-- one slide of nested carousel starts-->
+		  <li>
+		  	<div class="info__desc col_1-4">
+		  		<h2 >Cartier Destinée solitaire</h2>
+				<h3 >Platinum, diamonds</h3>
+				<p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+         <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+			</div>		
+			<div class="info__pic col_3-4">
+
+					<div class="product-carousel__wrapper">
+						<ul class="bxslider js-product-img-slider">
+						 <li><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4227900_0_cartier_rings.png" alt="" class="image"></li>
+            <li><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/personal_info.jpg" alt="" class="image"></li>
+						</ul>
+            <a class="zoom-icon js-zoom" href="#"></a>
+					</div>
+
+			</div>  	
+		  </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+          <li>
+            <div class="info__desc col_1-4">
+                <h2 >Cartier d'Amour solitaire</h2>
+                <h3 >Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                        <a class="zoom-trigger zoom-trigger-link" href="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/cartier_exceptional_pieces_large.png">Zoom</a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+          <li>
+            <div class="info__desc col_1-4">
+                <h2>Cartier d'Amour solitaire</h2>
+                <h3>Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                        <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+          <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+
+          <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                        <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+           <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                        <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+           <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+           <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+                 <!--#set var="cta--varaint" value="cta--red" -->
+          <!--#set var="text-detail" value="Read more" -->
+          <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+		</ul>
+</div>
+</div>
+<!-- Nested Carousel component for gift pages  ends here-->
+
+<!--#elif expr="${nested-carousel-type}=exceptional-creation"-->
+
+  <div class="nested-carousel-wrapper nested-exceptional-creation js-nested-exceptional-creation">
+  <div class="carousel">
+    <!-- Nested Carousel ul js initialize carousel from here-->
+    <ul class="bxslider js-nested-slider">
+      <!-- one slide of nested carousel starts-->
+      <li>
+        <div class="info__desc col_1-4">
+          <h2 >Cartier Destinée solitaire</h2>
+        <h3 >Platinum, diamonds</h3>
+        <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+        <a href="#" class="more-button"><span class="arrow-show"></span>Read more</a>
+      </div>
+      <div class="info__pic col_3-4">
+         <!-- inner carousel starts-->
+          <div class="product-carousel__wrapper">
+            <ul class="bxslider js-product-img-slider">
+              <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_small.png" alt="High Jewelry earrings Platinum, onyx, rose-cut diamonds, brilliants." class="image"></li>
+              <li><img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_exceptional_pieces_small.png" alt="High Jewelry earrings Platinum, onyx, rose-cut diamonds, brilliants." class="image"></li>
+            </ul>
+            <a class="zoom-icon js-zoom" href="#"></a>
+          </div>
+          <!-- inner carousel ends-->
+      </div>
+      </li>
+      <!-- one slide of nested carousel ends here-->
+       <!-- one slide of nested carousel starts-->
+      <li>
+        <div class="info__desc col_1-4">
+          <h2 >Cartier d'Amour solitaire</h2>
+        <h3 >Platinum, diamonds</h3>
+        <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+      </div>    
+      <div class="info__pic col_3-4">
+
+          <div class="product-carousel__wrapper">
+            <ul class="bxslider js-product-img-slider">
+             <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+              <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+            </ul>
+             <a class="zoom-icon js-zoom" href="#"></a>
+          </div>
+
+      </div>        
+      </li>
+      <!-- one slide of nested carousel ends here-->
+      <!-- one slide of nested carousel starts-->
+      <li>
+        <div class="info__desc col_1-4">
+          <h2 >Cartier Destinée solitaire</h2>
+        <h3 >Platinum, diamonds</h3>
+        <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+      </div>    
+      <div class="info__pic col_3-4">
+
+          <div class="product-carousel__wrapper">
+            <ul class="bxslider js-product-img-slider">
+             <li><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/N4227900_0_cartier_rings.png" alt="" class="image"></li>
+            <li><img src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/personal_info.jpg" alt="" class="image"></li>
+            </ul>
+             <a class="zoom-icon js-zoom" href="#"></a>
+          </div>
+
+      </div>    
+      </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+          <li>
+            <div class="info__desc col_1-4">
+                <h2 >Cartier d'Amour solitaire</h2>
+                <h3 >Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+          <li>
+            <div class="info__desc col_1-4">
+                <h2>Cartier d'Amour solitaire</h2>
+                <h3>Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+          <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+<!-- one slide of nested carousel starts-->
+
+          <li>
+            <div class="info__desc col_1-4">
+                <h2 class="product-name">Cartier d'Amour solitaire</h2>
+                <h3 class="product-description">Platinum, diamonds</h3>
+                <p>This solitaire has been a Cartier classic since 1895. The elegance of the lines is unique, the refined and light setting allows the light of the diamond to flow freely.</p>
+            </div>    
+            <div class="info__pic col_3-4">
+
+                    <div class="product-carousel__wrapper">
+                        <ul class="bxslider js-product-img-slider">
+                         <li><img src="http://l.yimg.com/bt/api/res/1.2/Y2k2PBnjKM_IGroaFY0T3Q--/YXBwaWQ9eW5ld3M7cT04NTt3PTYzMA--/http://media.zenfs.com/en/blogs/technews/fva-630-diamonds-rich-wealth-shutterstock-630w.jpeg" alt="" class="image"></li>
+                          <li><img src="http://ak4.picdn.net/shutterstock/videos/2992381/preview/stock-footage-diamond-background-seamless-looping-d-animation-with-alpha-matte.jpg" alt="" class="image"></li>
+                        </ul>
+                         <a class="zoom-icon js-zoom" href="#"></a>
+                    </div>
+
+            </div>              
+          </li>
+<!-- one slide of nested carousel ends here-->
+
+    </ul>
+</div>
+<div class='js-overlay'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class="img-container">
+        <img src="" alt="Overlay image" class="image">     
+    </div>
+</div>
+</div>
+<!--#endif-->

@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/** 
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "_theme_vars";
+@import "../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+
+/* line 54, ../../../../../../includes/components/message_card_desc/_desktop.scss */
+.shopping_bag .personal-card .logo_section {
+  background: url("../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/cartier-preview-card.jpg") no-repeat 0 0;
+  height: 249px;
+  width: 320px;
+  padding: 54px 36px;
+}
+
+
+.shopping_bag .personal-card .logo_section .preview{
+   font-family:Kuenstler Script W01 Medium,sans-serif;
+}
+
+.shopping_bag .personal-card .logo_section .preview.cursive-class{
+   font-family:Corsiva W01,sans-serif;
+}

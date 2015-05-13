@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    SOGOU - Desktop CSS
+\*------------------------------------*/
+
+.sogou-css {
+
+  .services-pushes{
+    .pushes-wrapper {
+      .one-third {
+        margin-right: 15px;
+      }
+      .one-third:nth-child(3n){
+        margin-right: 0;
+      }
+    }
+  }
+
+  .expert-collection-list {
+    .expert-collection-list__expert-listing {
+      ul li {
+        margin-top: 20px;
+        .product-push {
+          padding: 15px;
+          width: 92%;
+          .product-push_img {
+            height: 157px;
+            width: 197px;
+          }
+        }
+      }
+
+      ul:last-child {
+        margin-bottom: 67px;
+      }
+    }
+  }
+
+  .cq-colctrl-lt0-forlogin {
+    .cq-colctrl-lt0-c0, .cq-colctrl-lt0-c1 {
+      padding: 0 15px;
+      padding: 0 1.5rem;
+    }
+
+    .js-login-form .button-wrapper {
+      margin-top: 0;
+      padding-top: 20px;
+    }
+
+    
+  }
+
+  .checkbox-wrapper .form-checkbox-label {
+    margin-top: 1px;
+  }
+
+  .checkbox-wrapper .form-checkbox-label .checker span {
+      width: 17px;
+      width: 1.7rem;
+  }
+
+  .home-carousel .carousel-wrapper{
+    min-height: 775px;
+  }
+
+  .footer .footer-right .social-icons li{
+    margin-right: 13px;
+  }
+}
+
+
+
+

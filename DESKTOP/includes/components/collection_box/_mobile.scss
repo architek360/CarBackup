@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    collection box  -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....collection__listing (.product-push)
+ 
+ 
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.product-push{
+	border:1px solid $primary-25;
+	@include rem(margin, 14px 0);
+	display: table;
+    width: 100%;
+    height:230px;
+    position : relative;
+	@include linear-gradient(-45deg, $primary-1 0%, $primary-28 73%, $primary-27 100%);
+	.product-push__img{
+		display: table-cell;
+		@include rem('height',230px);
+		img{
+			@include rem('max-width',242px);
+			height:100%;
+		}
+
+	
+	}
+	.tappable{
+		height : 230px;
+		width :  100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		}
+	.product-push__desc{
+		display:inline-block;
+		vertical-align:middle;
+		display:table-cell;
+		width:44%;
+		text-align:center;
+		@include rem(padding, 0 30px 0 0);
+
+		.heading3{
+			@include f(24);
+			@include bold-font;
+			color: $primary-2;
+			display:inline-block;
+			padding:0;
+			@include rem('line-height',30px);
+		}
+
+		.more-button{
+			@include font-color($primary-3);
+			@include f(26);
+			text-transform:none;
+			@include rem(padding, 20px 0 0 0);
+		}
+		.arrow-show {
+			margin-top:5px;
+		}
+	}
+}

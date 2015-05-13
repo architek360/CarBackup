@@ -1,0 +1,120 @@
+<div class= "js-dynamic-delieverydays-content">
+<div class="tab_billing_address" style="">
+       <!--<form>-->
+           <div class="delivery-days" style="">
+               <ul data-selectoption="" data-isjapan="true" class="delivery-days__list js-delivery-days" style="">
+                   <li data-currency="" data-deliverypriceformatted="￥0" data-totalprice="￥0" data-deliveryprice="0.0" class="STDD js-delivery-charge active" style="">
+                               <input type="hidden" value="1408924800000" name="expected_date">
+                               <div class="form-element radio-wrapper (none)">
+                                   <label class="form-radio-label" value="" for="fn_grpdelivlabel30">
+                                       <div class="radio" id="uniform-fn_grpdelivlabel30"><span class="checked"><input type="radio" checked="checked" class="radio-input" value="STDD" name="fn_grpdeliv_sf" selected="selected" id="fn_grpdelivlabel30"></span></div>
+                                           </label>
+                               </div>
+                               <!--<label for="fn_grpdeliv_ba" class="radio-title"> </label>-->
+                               <div class="delivery-wrapper" style="">
+                                   <div class="delivery-days__desc">
+                                       <p class="delivery-days__desc__title">
+                                           Standard delivery ( 3-6business days)</p>
+                                       <!--<p class="delivery-days__desc__detail">if you place your order today, the estimated delivery date is2014'8月25'</p>-->
+                                   </div>
+                                   <input type="hidden" value="0.0" name="delivery_price">
+                                   <div class="delivery-days__amt">0.0</div>
+                                   <div class="delivery-day__japan js-delivery-day__japan" style="">
+                                       <!--<label class="form-label" for="fn_grpdeliv_ba">
+                                            Cartier recognizes the importance of protectingyour information. Privacy notice Please note that Cartier does not ship orders to P.O Boxes.</label>-->
+                                            <ul style="">
+                                                <li class="date-options" style="">
+                                                    <div class="selector" style="width: 127px;"><span style="width: 127px; -moz-user-select: none;">
+                                                                        2014'8月31'</span><select class="form-select select-1 valid" name="date_options2" style="">
+                                                        <option value="1409080410637">
+                                                                        2014'8月26'</option>
+                                                                <option value="1409166810637">
+                                                                        2014'8月27'</option>
+                                                                <option value="1409253210637">
+                                                                        2014'8月28'</option>
+                                                                <option value="1409339610637">
+                                                                        2014'8月29'</option>
+                                                                <option value="1409426010637">
+                                                                        2014'8月30'</option>
+                                                                <option value="1409512410637">
+                                                                        2014'8月31'</option>
+                                                                <option value="1409598810637">
+                                                                        2014'9月01'</option>
+                                                                <option value="1409685210637">
+                                                                        2014'9月02'</option>
+                                                                <option value="1409771610637">
+                                                                        2014'9月03'</option>
+                                                                <option value="1409858010637">
+                                                                        2014'9月04'</option>
+                                                                <option value="1409944410637">
+                                                                        2014'9月05'</option>
+                                                                <option value="1410030810637">
+                                                                        2014'9月06'</option>
+                                                                <option value="1410117210637">
+                                                                        2014'9月07'</option>
+                                                                <option value="1410203610637">
+                                                                        2014'9月08'</option>
+                                                                <option value="1410290010637">
+                                                                        2014'9月09'</option>
+                                                                <option value="1410376410637">
+                                                                        2014'9月10'</option>
+                                                                <option value="1410462810637">
+                                                                        2014'9月11'</option>
+                                                                <option value="1410549210637">
+                                                                        2014'9月12'</option>
+                                                                <option value="1410635610637">
+                                                                        2014'9月13'</option>
+                                                                <option value="1410722010637">
+                                                                        2014'9月14'</option>
+                                                                <option value="1410808410637">
+                                                                        2014'9月15'</option>
+                                                                <option value="1410894810637">
+                                                                        2014'9月16'</option>
+                                                                <option value="1410981210637">
+                                                                        2014'9月17'</option>
+                                                                <option value="1411067610637">
+                                                                        2014'9月18'</option>
+                                                                <option value="1411154010637">
+                                                                        2014'9月19'</option>
+                                                                </select></div>
+                                                    <label class="form-label" for="(none)">Standard Flights </label>
+                                                    <div class="tooltip-div js-tool-tip">
+                                                        <a class="tooltip" href="#">
+                                                            <img src="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/tooltip_icon.png.resource.1406014542940.png">
+                                                            <div class="js-tool-tip-detail tool-tip-details-wrapper" style="display: none;">
+                                                                <img src="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bottom-arrow.png.resource.1406014542271.png" alt="CSS Tooltip callout" class="callout">
+                                                                <div class="tool-tip-details">
+                                                                    <p>
+                                                                        The repair number must be seven characters with no spaces.
+                                                                        Please refer to your receipt or to the Service Order email your
+                                                                        received.
+                                                                    </p>
+                                                                    <p>Tel: +852 8105 5008</p>
+                                                                    <p>Email : repairservice.us@cartier.com</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li data-show="false" class="time-options" style="">
+                                                    <div class="selector" style="width: 127px;"><span style="width: 127px; -moz-user-select: none;">14:00 - 16:00</span><select class="form-select select-1 valid" name="time_options2" style="">
+                                                        <option value="">ANY TIME</option>
+                                                                <option value="090000">AM</option>
+                                                                <option value="120000">12:00 - 14:00</option>
+                                                                <option value="140000">14:00 - 16:00</option>
+                                                                <option value="160000">16:00 - 18:00</option>
+                                                                <option value="180000">18:00 - 21:00</option>
+                                                                </select></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <div class="delivery-days__desc below_desc_container">
+                                     <p class="delivery-days__desc__detail">if you place your order today, the estimated delivery date is2014'8月25'</p>
+                                  </div>
+                                </div> 
+                            </li>
+                        </ul>
+            </div>
+        <!--</form>-->
+    </div>
+</div>

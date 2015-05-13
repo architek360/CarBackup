@@ -1,0 +1,22 @@
+    <div class="radio-main-label">
+	<!--#set var="label-name" value="${head-label-name}" -->
+    <!--#set var="mandatory" value="yes"-->
+    <!--#include virtual="../../components/form_elements/label.shtml" -->
+    </div>
+    <ul class="radio-btn">
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="${input-name}" -->
+            <!--#set var="radio-text" value="${radio-text1}" -->
+            <!--#set var="radio-value" value="${radio-value1}" -->
+            <!--#set var="is-checked" value="checked" -->
+            <!--#include virtual="../../components/form_elements/radio2.shtml" -->
+        </li>
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="${input-name}" -->
+            <!--#set var="radio-text" value="${radio-text2}" -->
+            <!--#set var="radio-value" value="${radio-value2}" -->
+            <!--#set var="is-checked" value="" -->
+
+            <!--#include virtual="../../components/form_elements/radio2.shtml" -->
+        </li>
+    </ul>

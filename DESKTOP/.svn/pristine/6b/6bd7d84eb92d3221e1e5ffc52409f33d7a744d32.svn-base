@@ -1,0 +1,176 @@
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="">
+   <meta name="viewport" content="width=640px, initial-scale=.5, maximum-scale=.5,minimum-scale=.5, target-densitydpi=device-dpi, 
+user-scalable=no" />
+
+
+    
+
+
+    
+
+
+    
+    
+    
+    <link href="/etc/designs/richemont-car.css" rel="stylesheet" type="text/css">
+
+    <title>Request Information Page</title>
+    
+
+
+
+
+
+
+
+
+
+</head>
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/author.1403682295385.css" type="text/css">
+
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_common.1399619430251.css" type="text/css">
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_mobile.1403935490705.css" type="text/css">
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop.1403935436571.css" type="text/css">
+<div id="formAjaxResponse" name="formAjaxResponse" style="display:none"></div>
+<div class ="error_message" style="color:red;"></div>
+
+<div class="form-layout js-request-info-form">
+   
+<form method="POST" action="/content/car/langmaster/global/en/services/ReqInfoPage.desktop.html" id="js-request-info-form" name="js-request-info-form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-request-info-form"/><input type="hidden" name=":formstart" value="/content/car/langmaster/global/en/services/ReqInfoPage/jcr:content/article-containt-par/formbuilder/start"/><input type="hidden" name="_charset_" value="UTF-8"/><div class="form">
+<fieldset>
+    <div class="heading-wrapper">
+
+<h3 class="heading3"> Request Information</h3>
+
+        </div>
+
+
+
+<div class="parsys_column cq-colctrl-default"><div class="parsys_column cq-colctrl-default-c0"><div class="group-wrapper">
+                <label>TITLE</label>
+<div class="form-element radio-wrapper requestInformation_title">
+                                <label for="mr" class="radio  form-radio-label">
+                                    <input type="radio" 
+                                    id="mr" name="requestInformation_title"  value="0001" class="form-radio">
+                                    <span class="radio-name">MR.
+</span>
+                                </label>
+                            </div>
+
+                        <div class="form-element radio-wrapper requestInformation_title">
+                                <label for="mrs" class="radio  form-radio-label">
+                                    <input type="radio" 
+                                    id="mrs" name="requestInformation_title"  value="0002" class="form-radio">
+                                    <span class="radio-name">MRS.<br>
+
+</span>
+                                </label>
+                            </div>
+
+                        <div class="form-element radio-wrapper requestInformation_title">
+                                <label for="ms" class="radio  form-radio-label">
+                                    <input type="radio" 
+                                    id="ms" name="requestInformation_title"  value="0003" class="form-radio">
+                                    <span class="radio-name">MS.
+</span>
+                                </label>
+                            </div>
+
+                        <div class="errormessage" id="errormessage-requestInformation_title"></div></div>
+        </div></div><div style="clear:both"></div>
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><div class="form-element input-wrapper requestInformation_firstName">
+        <label>FIRST NAME</label>
+<input id="requestInformation_firstName" type="text" name="requestInformation_firstName"
+            placeholder=""
+             class=" form-input"  value=""/>
+        <div class="errormessage" id="errormessage-requestInformation_firstName"></div></div>
+    <div class="form-element input-wrapper requestInformation_lastName">
+        <label>LAST NAME</label>
+<input id="requestInformation_lastName" type="text" name="requestInformation_lastName"
+            placeholder=""
+             class=" form-input"  value=""/>
+        <div class="errormessage" id="errormessage-requestInformation_lastName"></div></div>
+    <div class="group-wrapper">
+                <label>CONTACT PREFERENCE</label>
+<div class="form-element radio-wrapper requestInformation_contactPreference">
+                                <label for="email" class="radio  form-radio-label">
+                                    <input type="radio" 
+                                    id="email" name="requestInformation_contactPreference"  value="email" class="form-radio">
+                                    <span class="radio-name">BY-EMAIL
+</span>
+                                </label>
+                            </div>
+
+                        <div class="form-element radio-wrapper requestInformation_contactPreference">
+                                <label for="phone" class="radio  form-radio-label">
+                                    <input type="radio" 
+                                    id="phone" name="requestInformation_contactPreference"  value="phone" class="form-radio">
+                                    <span class="radio-name">BY TELEPHONE
+</span>
+                                </label>
+                            </div>
+
+                        <div class="errormessage" id="errormessage-requestInformation_contactPreference"></div></div>
+        <div class="form-element input-wrapper requestInformation_emailAddress">
+        <label>EMAIL</label>
+<input id="requestInformation_emailAddress" type="text" name="requestInformation_emailAddress"
+            placeholder=""
+             class=" form-input"  value=""/>
+        <div class="errormessage" id="errormessage-requestInformation_emailAddress"></div></div>
+    <div class="form-element input-wrapper requestInformation_phoneNumber">
+        <label>TELEPHONE</label>
+<input id="requestInformation_phoneNumber" type="text" name="requestInformation_phoneNumber"
+            placeholder=""
+             class=" form-input"  value=""/>
+        <div class="errormessage" id="errormessage-requestInformation_phoneNumber"></div></div>
+    <input id="js-request-info-form_pdp_pagepath" type="hidden" name="pdp_pagepath"
+                value=""/>    
+    </div><div class="parsys_column cq-colctrl-lt0-c1"><div class="form-element select-wrapper requestInformation_mainMessage">
+     <label>MAIN MESSAGE</label>
+<select name="requestInformation_mainMessage" class=" form-select" 
+             id="requestInformation_mainMessage">
+            <option value="product information" >
+                    PRODUCT INFORMATION </option>
+            <option value="sales policy" >
+                    SALES POLICY </option>
+            <option value="boutique information" >
+                    BOUTIQUE INFORMATION </option>
+            <option value="e boutique information" >
+                    EBOUTIQUE INFORMATION </option>
+            <option value="after sales services" >
+                    AFTER SALES SERVICES </option>
+            <option value="request a catalogue" >
+                    REQUEST A CATALOGUE </option>
+            <option value="other" >
+                    OTHER </option>
+            </select>
+    </div><div class="form-element input-wrapper requestInformation_message">
+        <label>MESSAGE</label>
+<input id="requestInformation_message" type="text" name="requestInformation_message"
+            placeholder=""
+             class=" form-input"  value=""/>
+        <div class="errormessage" id="errormessage-requestInformation_message"></div></div>
+    <div class="group-wrapper">
+                <div class="form-element checkbox-wrapper requestInformation_checkbox_val">
+                                <label for="wishToRecieve" class="checkbox  form-checkbox-label">
+                                    <input type="checkbox" 
+                                    id="wishToRecieve" name="requestInformation_checkbox_val"  value="wishToRecieve" class="form-checkbox">
+                                    <span class="checkbox-name">I would like to receive information from Cartier using any of the communication method(s) that I have provided above.
+</span>
+                                </label>
+                            </div>
+
+                        <div class="errormessage" id="errormessage-requestInformation_checkbox_val"></div></div>
+        </div></div><div style="clear:both"></div>
+</fieldset><div class="form-element button-wrapper SUBMIT">
+<input class="form-button" type="submit"
+    name="SUBMIT" value="SUBMIT" >
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>

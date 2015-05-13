@@ -1,0 +1,214 @@
+/*------------------------------------*\
+    boutique_list -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.pushs)
+ * INNER BLOCK......inner items (ul, etc.)
+ * HEADING BLOCK...... headings styling (.pushs__title)
+ * DESCRIPTION BLOCK...... DESCRIPTION styling (.pushs__desc)
+ * NORTON SECURED BLOCK ..... FOR NORTON SECURED ICON (.pushs__norton-secured)
+ * NORTON ICON ..... ('.norton-icon' FROM /sass/_mobile.scss)
+ * CREDIT CARD ICON ..... (E.G '.mastercard' FROM /sass/_mobile.scss)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+
+.boutique_list 
+{
+	width:81.25%;
+	margin:0 auto;
+	@include rem('padding',39px 0);
+    background:$primary-1 url($path-images + 'content/boutique_list_texture.jpg') no-repeat bottom right 0 ;	 
+	background-size:100%;
+	.boutique_list__title {
+		text-transform:uppercase;
+		letter-spacing:2px;
+		@include brand-font;
+		border-bottom:solid 1px $primary-2;
+		.heading2{
+			padding-top:10px;
+		}
+	}
+	.boutique_list__change-loc{
+		color:$primary-3;
+		text-align:center;
+		display:block;
+		@include f(19);
+		@include main-font;
+		text-decoration:underline;
+		@include rem('margin-top', 15px);
+		.arrow-show{
+			margin-right:0px;
+			@include rem('margin-top', 3px);
+		}
+	}
+
+
+ 	.boutique_filter_detail{
+ 		@include rem('margin-top', 28px);
+ 		@include font-color($primary-3);
+ 		.boutique_filter_detail__node{
+			background:$primary-23;
+			
+		}
+
+	.boutique_filter_detail_node__title{
+		border-top:2px solid $primary-1;
+		@include rem('padding', 22px 45px);
+		text-align:left;
+		position:relative;
+
+		.boutique_filter_detail_node_title__ques{
+			@include rem('padding-right', 30px);
+			display: table;
+			}
+		
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include f(22);
+		 	 	@include bold-font;
+			}
+
+			span{
+				position:absolute;
+				right:25px;
+				top:30%;
+				@include setSprite(22px, 30px, -363px, -20px);
+			}
+
+			.on{
+				@include rotate(90deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+
+			.off{
+				@include rotate(0deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+		
+		}
+
+			.category-wrapper{
+			@include font-color($primary-2);
+			display:block;
+			@include f(22);		
+
+			li{
+				border-top:3px solid #000;
+				@include rem(padding, 30px 44px 30px 78px);
+
+				label{
+					@include brand-font;
+				}
+			}
+		}
+ 	}
+
+	.boutique_list__c-boutique{
+		
+		.store_detail{
+			background:$primary-1 url($path-images + 'content/boutique_texture.jpg') no-repeat bottom right 0 ;
+			background-size:100%;
+			@include rem('padding', 22px 18px);
+			position:relative;
+			display:block;
+			@include rem('margin-top',50px);
+			color:$primary-2;
+			text-transform:uppercase;
+			@include f(18);
+			@include brand-font;
+			.store_detail__title{
+				text-align:center;
+			}
+			.store_detail_bold{
+				@include bold-font;
+			}
+		}
+		.image-text{
+			margin-top:30px;
+			img{
+
+				display:inline;
+				width:42%;
+			}
+
+			.image-text__details{
+				display:inline;
+				float:right;
+				width:53%;
+				text-transform:none;
+				text-align:center;
+
+				&.auth-dealer{
+				width:100%;
+				}
+			}
+
+			.boutique_details__add{
+				@include brand-font;
+				color:$primary-2;
+				@include f(17);
+				line-height:25px;
+			}
+
+			.boutique_details__con{
+				@include rem('margin-top',10px);
+				@include main-font;
+				@include f(19);
+				color:$primary-3;
+				line-height:32px;
+				.arrow-red{
+					margin-left: -6px;
+				}
+				a{
+					border-bottom:solid 1px;
+					
+				}
+			}
+			.service-detail{
+				@include rem('margin-top',35px);
+				@include rem('margin-bottom',30px);
+				@include f(15);
+				color:$primary-3;
+			}
+		}
+		.more-link{
+			@include rem('margin-top',45px);
+			display:block;
+			clear:both;
+			.show-map{
+				position:absolute;
+				right:27px;
+			}
+			text-transform:none;
+		}
+	}
+
+ 	.arrow-red{
+		@include setSprite(10px, 15px, -577px, -20px);
+	 	position: relative;
+	 	@include rem('margin-left', 10px);
+	 	@include rem('margin-right', -8px);
+	 	left:-10px;
+	}
+
+	.heading3{
+		text-align:left;
+		@include f(25);
+		padding-bottom:0px;
+	}
+
+
+
+}
+

@@ -1,0 +1,54 @@
+<!-- Refine Selection Block Starts Here-->
+<div class="collection__refine-selection js-collection__refine-selection js-product-filter">
+	
+	<!-- Refine Selection  | RADIO BUTTONS | Starts Here-->
+	<div class="collection__refine-selection__radio-tabs">
+		<ul class="radio-buttons__list">
+	        <li class="is-checked">	
+		        <span class="js-refine-radio"><input id="view-all" type="radio" name="fn_radiocategory" value="true" /></span>		     
+		        <label for="view-all">View all</label>
+		    </li>
+	        <li>	
+		        <span class="js-refine-radio"><input id="sold-online" type="radio" name="fn_radiocategory" value="false" /></span>	        
+		        <label for="sold-online">Sold Online</label>
+		    </li>
+		    <li class="sort js-sort">
+		    	<span>sort by:</span>
+		    </li>
+		</ul>
+		
+	</div>
+	<!-- Refine Selection  | RADIO BUTTONS | ENDS Here-->
+
+	<!-- Refine Selection  | Category Selector | Starts Here-->
+	
+	<div class="collection__refine-selection__category">
+		<!--#include virtual="../../components/refine_selector_box/html1.shtml" -->	
+		<!--#include virtual="../../components/refine_selector_box/html2.shtml" -->	
+		<!--#include virtual="../../components/refine_selector_box/html3.shtml" -->	
+
+
+
+
+<div class="refine-selector js-refine-selector">
+    <div class="refine-selector__title js-refine-selector__title">price<span class="double-arrow"></span></div>
+    <div class="refine-selector__content js-refine-selector__content ">
+    	<div class="js-range-slider"></div>
+    	<p>All price</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+		
+	</div>
+	<!-- Refine Selection  | Category Selector | Ends Here-->
+</div>
+<!-- Refine Selection Block Ends Here-->

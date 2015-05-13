@@ -1,0 +1,5 @@
+<input id="<!--#echo var="radio-value" -->" type="radio" name="<!--#echo var="radio-name" -->" value="<!--#echo var="radio-text" -->" class="radio-input" >
+
+<!--#if expr="${radio-text}" -->
+<label for="<!--#echo var="radio-value" -->" class="radio-title"><!--#echo var="radio-tab-text" --></label>  
+<!--#endif -->

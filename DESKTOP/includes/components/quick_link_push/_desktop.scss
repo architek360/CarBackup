@@ -1,0 +1,76 @@
+
+/*  Quick Link pushes  */
+
+.quick-link-push{
+	border: 1px solid $primary-17;
+	clear: none;
+	cursor: pointer;
+	float: left;
+	height: 169px;
+	@include rem('margin-right', 17px );
+	text-align: center;
+	width: 311px;
+
+	.content-title{
+		font-weight: bold;
+		@include f(12);
+		font-style: normal;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		margin-top: 17px;
+		@include rem('margin-bottom', 10px );
+		min-height: 35px;	
+		color: $primary-3;
+	}
+	.more{
+		.more-button{
+			@include rem('padding', 5px 0 );
+		}
+	}
+	.content-title:hover{
+		color: $primary-2;
+	}
+	.hover-push{
+		position: relative;
+		min-height: 65px;
+		.image{
+			position: absolute;
+			top: 0;
+			width: 100%;
+			img{
+				width:auto;
+				position: static;
+			}
+		}
+		.text{
+			@include main-font;
+			font-size: 11px;
+			font-style: italic;
+			letter-spacing: .1rem;
+			@include rem('line-height', 15px );
+			display: none;
+			margin: 0 auto;
+			width: 80%;
+			color: $primary-2;
+			text-transform:none;
+			font-weight: normal;
+		}
+	}
+
+	.more-button{
+		@include rem(letter-spacing, 1px);
+		@include f(11);
+		text-transform: capitalize;
+		font-weight: normal;
+		color: $primary-2;
+
+		&:hover{
+			color:$primary-62;
+		}
+	}
+
+	&:last-child{
+		margin-right: 0;
+	}
+	
+}

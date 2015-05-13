@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+<!--#set var="THEME_1" value="main_theme" -->
+
+<!--#set var="VIEWS_1" value="multiple_video_carousel" -->
+
+<!--#set var="MODULE" value="gift-for-you" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#include virtual="../templates/base.shtml" -->

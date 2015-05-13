@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    REQUEST INFO BLOCK -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.request_info)
+
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.request_price{
+	@include rem('padding-top',45px);
+	.add-message{
+		margin-bottom: 20px;
+		.mobile-device__list{
+			margin-top:-60px;
+		}
+	}
+	.radio-main-label {
+		.form-label {
+			display: inline-block;
+		}
+	}
+
+	.form-check.text-only{
+		width: 90%;
+		margin-left: 20px;
+		margin-top: 30px;
+	}
+}
+
+.request_info.request_price .grid__item .radio-btn {
+	@include rem('padding',0 0 15px);
+}
+
+.js-emaildiv{
+	margin-top:22px;
+}
+
+
+/*------------------------------------*\
+    Request price Form container
+\*------------------------------------*/
+
+
+#js-request-price-form{
+	border:1px solid $primary-17;
+	@include f(20);
+	@include rem('padding',30px 24px 20px 24px);
+	@include rem('margin',20px 0 52px 0);
+	@include font-color($primary-2);
+	display:inline-block;
+	text-transform:uppercase;
+	text-align: left;
+	width: 100%;
+	 -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background:$primary-1;
+
+	.heading-wrapper{
+		display: none;
+	}
+
+	p{
+		text-transform:none;
+		color: $primary-3;
+		@include f(22);
+	}
+	.button-wrapper{
+		@include rem('margin-bottom',30px);
+	}
+
+	.comp-rich-text{
+		clear: both;
+		width: 100%;
+	}
+
+	.group-wrapper .checkbox-wrapper{
+		width: 100%;
+
+		.form-checkbox-label{
+			width: 90%;
+			@include main-font();
+			text-transform:none;
+			font-style: italic;
+			color: $primary-2;
+			@include rem('padding-top',3px);
+		}
+	}
+
+	.group-wrapper{
+		@include rem('margin-top',30px);
+
+		.requestInformation_checkbox_val{
+			@include rem('margin-top',25px);
+		}
+	}
+
+	.select-wrapper{
+		@include rem('margin-top',25px);
+		display: inline-block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,17 @@
+<!-- Guest Checkout Component  -->
+<div class="checkout-wrapper">
+    <div class="guest-checkout">
+    	<h3 class="heading3">Guest Checkout</h3>
+        <p class="message">Finalize your order. If you wish,</br> you may create your account at the end.</p>
+        <!--#set var="text-detail" value="checkout" -->
+        <!--#set var="cta--varaint" value="cta--red js-checkout-ajax" -->
+        <!--#include virtual="../../components/form_elements/button.shtml" -->
+    </div>
+    <div class="registered-checkout">
+    	<h3 class="heading3">Already registered</h3>
+        <p class="message">If you already have a MyCartier account, please sign in here.</p>
+        <!--#set var="text-detail" value="sign in & checkout" -->
+        <!--#set var="cta--varaint" value="cta--red js-login-checkout-cta js-checkout-ajax" -->
+        <!--#include virtual="../../components/form_elements/button.shtml" -->
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="repairservice section">
+<div class="back-button">
+    <a href="/en-us/services/my-cartier.html">Back<span class="js-backtotext"></span></a>
+</div>
+
+<div class="title">    
+    <h1 class="heading2">MY REPAIR SERVICE</h1>
+</div>
+
+<div class="repair-service js-repair-service">
+    <!-- timeline Starts Here-->
+        <div class="heading">
+            <h4>    </h4>
+            <h5>    </h5>
+            <h5>   </h5>
+            <h5>    </h5>
+        </div>
+    <div class="notification js-form-validator">      
+        <h4></h4>
+        <div class="notification__desc"><p></p></div>
+		 <div class="comp-rich-text rte-wrapper">  
+		        <h3>SERVICE DESCRIPTION</h3>
+		<p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipicing elit. Fusce non lectus ante. Quisque non malesuada nulla. Sed hendreril erat el lacus imperdiet semper. Maecenas consequat sapien sed torem vestibulum porta. Fuesce ut erat metus.</p>   
+		</div><h3 class="clientName">Dear <span>anand sharma</span></h3>
+		 <div class="comp-rich-text rte-wrapper">  
+		        <p>Thank you for finalizing your eRepair preregistration form.</p>
+		<p>The Cartier Service Shipping Box will be sent to the following address with corresponding shipment documentation</p>
+		</div><div class="address-box"></div>
+		<div class="comp-rich-text rte-wrapper">  
+		        <p>A confirmation email will be sent to you in the next minutes.</p>
+		<p>For any further information or details regarding the service, please kindly contact our Call Center on<b> 1-800227-8437.</b></p>
+		</div>
+    </div>
+    <div class="side-image">
+        <div id="cq-image-jsp-/content/car/us/usa/en_us/services/my-cartier/thankyoupage/jcr:content/par/repairservice/repairimage"><img title="" alt="file" class="cq-dd-image" src="../etc/designs/dmp/clientlibs_base/images/content/panthere_ring1.png"></div>
+    </div>  
+</div>
+</div>

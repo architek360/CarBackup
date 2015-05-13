@@ -1,0 +1,19 @@
+			<div class="expiration-date">
+				<label class="expiration-date__title">expiration date</label>
+				
+				<ul class=" js-date-picker date-picker">
+	                <li class="js-month expiration-date__dropdown">
+	                	<!--#set var="input-name" value="${input-name-dp1}" -->
+	                    <!--#set var="style-name" value="select-1" -->
+						<!--#set var="option-component" value="month_option" -->
+						<!--#include virtual="../../components/form_elements/select.shtml" -->
+	                </li>
+	                
+	                <li class="js-year expiration-date__dropdown">
+	                	<!--#set var="input-name" value="${input-name-dp3}" -->
+	                    <!--#set var="style-name" value="select-1" -->
+						<!--#set var="option-component" value="year_option" -->
+						<!--#include virtual="../../components/form_elements/select.shtml" -->
+	                </li>
+				</ul>
+			</div>

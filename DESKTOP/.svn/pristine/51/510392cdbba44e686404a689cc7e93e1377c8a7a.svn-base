@@ -1,0 +1,74 @@
+/*------------------------------------*\
+   Captcha Select Box -- Desktop CSS
+\*------------------------------------*/
+/**
+ * Captcha CONTAINER.... (.captcha)
+ * INPUT TEXT BOX CONTAINER.... (.captcha_input)
+ * IMAGE BOX CONTAINER.... (.captcha_image_container)
+ * CAPTCHA INFORMATION BOX .... (.captcha__description, .userinfo)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.captcha{
+	@include rem('padding', 0px); 
+	float: left;
+	
+
+    .captcha__image__container {
+        @include rem('margin-top', 0px); 
+        position: relative;
+	        .input-wrapper{
+	        	height: 70px;
+	        	width: 32%;
+	        	@include rem('margin-right',20px);
+  				
+	        	.form-input{
+	    			width: 142px;
+	    		}
+	    	}
+
+	    	span.img img {
+	    		margin-top: 20px;
+	    		
+	    	}
+	     	.captcha-component{
+		   		position: absolute;
+		   		top: 30px;
+				left: 155px;
+
+				object {
+					float: left;
+					width: 140px;
+					display: inline-block;
+				}
+	   		}
+
+	   	.captcha-changer{
+	   		line-height: 50px;
+			vertical-align: top;
+			color: $primary-3;
+			@include main-font();
+			@include f(13);
+	   	}
+
+	   	span.img img {
+	   		@include rem('margin-top',20px);
+	   	}
+    }
+
+  
+    .captcha__description{
+    	clear: both;
+    	@include font-color($primary-3); 
+    	@include f(12);
+    	@include main-font();
+    	font-style: italic;
+    	@include rem('line-height', 17px);
+    	@include rem('margin-bottom', 0px);  
+    	text-align: center;
+    }
+
+}

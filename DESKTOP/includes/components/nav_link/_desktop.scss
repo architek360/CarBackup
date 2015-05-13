@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    link -- Desktop CSS
+\*------------------------------------*/
+
+.nav-link{ 
+        color:$primary-3; 
+        @include f(10); 
+        @include rem('line-height', 30px); 
+        text-transform:uppercase;
+        text-decoration: none; 
+        &:hover { 
+                color:$primary-2; 
+                
+         } 
+}

@@ -1,0 +1,346 @@
+/*------------------------------------*\
+    billing payment option - tab card payment -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..(.billing-confirmation)
+ * CONFIRMATION BLOCK    (.conf, etc)
+ */
+
+/*------------------------------------*\
+    $BILLING CONFIRMATION BLOCK
+\*------------------------------------*/
+.my-billing-address-content-wrapper {
+ 	border-bottom: none;
+
+ 	.billing-payment__desc {
+		text-align: center;
+		 @include rem('line-height', 9px);
+		 @include rem('letter-spacing', 0px);
+		 @include f(12);
+	}
+
+	.billing-payment-option {
+		@include main-font();
+		background: $primary-82;
+		@include rem('padding-top', 0px);
+		@include rem('padding-bottom', 0px);
+		@include rem('padding-left', 35px);
+		@include rem('padding-right', 35px);
+		
+		.heading__desc {
+			border-bottom: 1px solid $primary-84;
+		}
+
+		.tab-card-payment {
+			.tab_card_inner-block{
+				width: 450px;
+				@include rem('width', 450px);
+				margin:0 auto;
+			}
+		
+			label {
+				@include f(10);
+				display: block;
+				width: auto;
+				float: left;
+			}
+
+			input {
+				background: $primary-105;
+				border: 1px solid $primary-79;
+			}
+
+			.card-type {
+				background: none;
+				height: auto;
+				
+				.card-type__title {
+					@include f(10);
+				}
+
+			ul.cc-name-selector {
+				text-align: center;
+					
+					li {
+						background: none;
+						width: 18%;
+						border: none;
+						
+						label {
+							top: auto;
+	 		 				left:auto;
+	 		 				position: absolute;
+							@include rem('width', 60px);
+							@include rem('height', 15px);
+						}
+
+						div.radio {
+							span {
+								background-position: -10px -434px;
+								@include rem('height', 18px);
+							}
+							
+							span.checked {
+								background-position: -81px -434px;
+							}
+						}
+
+						span {
+							@include rem('width', 18px);
+							@include rem('margin-left', 0px);
+						}
+						div {
+							@include rem('width', 26px);
+							float: left;
+						}
+						span.mastercard , .visa_card , .discover_network_card , .jsb_card , .american_express_card , .diners_club_card {	
+							@include rem('width', 35px);
+							float: left;
+						}
+					}
+				}
+			}
+		.confirmation {
+			
+			margin: 0 auto;
+			float: none;
+			width: auto;
+			label {
+				@include rem('width', 300px);
+				float: 	left;
+				@include rem('padding-top', 2px);
+				margin-top: 2px;
+				@include f(12);
+			}
+
+			#uniform-checbox,#uniform-fn_chktnc{
+				span {
+					background-position: -13px -415px;
+				}
+				span.checked {
+					background-position: -89px -415px;
+				}
+			}
+		}
+
+		
+		.first-name {
+			float: left;
+			@include rem('width', 175px);
+			height: auto;
+			.one-whole {
+				label {
+					@include rem('margin', 0px);
+					@include rem('padding', 0px);
+				}
+			}
+		}
+
+		.expiration-date {
+			background: none;
+			float: right;
+			width: 50%;
+			@include rem('height', 50px);
+			@include rem('margin-bottom', 0px);
+			
+			.selector {
+				width: 99px!important;
+				background-position: -430px -635px;
+				span {
+				background-position: right -536px;
+				width: 94px!important;
+			}
+		}
+		ul {
+			overflow: inherit;
+		}
+		}
+		.ccv  {
+			width: 30%;
+			float: left;
+			height: auto;
+			
+			padding-top: 0px;
+			.grid__item {
+			padding-bottom: 0px;	
+			}
+			label {
+				 @include rem('margin', 0px);
+				  @include rem('padding', 0px);
+			}
+
+		}
+		.name-on-card {
+			width: 70%;
+			float: right;
+			height: auto;
+			padding-top: 0px;
+			.grid__item {
+			padding-bottom: 0px;	
+			}
+			label {
+				 @include rem('margin', 0px);
+				  @include rem('padding', 0px);
+			}
+		}
+		
+		.tab-card-payment__info {
+			@include f(13);
+			color: #fff;
+			@include rem('letter-spacing', 0px);
+			float: left;
+			width: 100%;
+			border-top: 1px solid $primary-79;
+
+			 @include rem('padding-bottom', 10px);
+	 		 @include rem('padding-top', 10px);
+		}
+
+
+		.next-step-cta {
+			.cta--red{
+				width: auto;
+			}
+		}
+	}
+	}
+
+
+	/*tab for card payment start*/
+
+.radio-btn {
+	background: $primary-85;
+	text-align: center;
+	@include rem('padding-top', 15px);
+		@include rem('padding-bottom', 15px);
+		@include rem('padding-left', 0px);
+		@include rem('padding-right', 0px);
+		div.radio {
+		float: left;
+	}
+	li {
+		@include rem('padding-left', 25px);
+		@include rem('padding-right', 30px);
+		display: inline-block;
+			width: 145px;
+		span {
+			background-position: -195px -432px;
+			@include rem('height', 18px);
+		}
+		span.checked {
+			background-position: -218px -432px;
+			@include rem('height', 18px);
+		}
+	}
+	 
+		label {
+			@include rem('padding-top', 5px);
+			@include rem('padding-left', 10px);
+			@include f(14);
+			float: left;
+			position: absolute;
+				width: 150px;
+	}
+}
+
+
+	/*tab for card ayment start*/
+}
+
+/*------------------------------------*\
+    billing payment option - tab cash on delivery -- Desktop CSS
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $BILLING CONFIRMATION BLOCK
+\*------------------------------------*/
+.my-billing-address-content-wrapper {
+.billing-payment-option {
+			.cash-delivery-accordion {
+			.cash-delivery-accordion__wrapper {
+				border:none;
+					.cash-delivery-accordion__node {
+						float: left;
+						width: 45%;
+						background: $primary-85;
+						border:none;
+						.cash-delivery-accordion_node_title__ques {
+							display: block;
+							@include rem('min-height', 20px);
+							
+							p {
+								text-align: center;
+								display: block;
+							}
+						}
+						.cash-delivery-accordion_node__desc {
+							@include rem('padding', 0px);
+							@include rem('width', 275px);
+							margin: 0 auto;
+		  					text-align: left;
+		  					a {
+		  						float: right;
+		  					}
+						}
+					}
+					.floatRight {
+						float: right;
+					}
+					.address {
+						@include f(12);
+						@include rem('padding', 0px);
+					}
+			}
+		}
+	}
+}
+
+
+
+.my-billing-address-content-wrapper {
+.billing-payment-option {
+	.tab_content{
+	.bank-transfer {
+			.message-box{
+			background: none;
+			border:none;	
+			}
+
+			hr {
+				border-bottom:1px solid $primary-84;
+				background: none;
+				position: relative;
+			}
+		}
+		.terms-condition {
+			
+			@include rem('width', 400px);
+			margin: 0 auto;
+			float: none;
+			display: block;
+			span {
+				@include rem('margin', 0px);
+				background-position: -13px -415px;
+			}
+			span.checked {
+				background-position: -89px -415px;
+			}
+			label {
+				
+				@include rem('width', 300px);
+				float: 	left;
+				@include rem('padding', 0px);
+				@include rem('margin-top', 2px);
+			}
+		}
+
+
+
+	}
+}
+
+
+
+
+
+}

@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    iconbox Component -- Mobile CSS
+\*------------------------------------*/
+
+.iconbox{
+	@include main-font;
+
+	.iconbox__number{
+		position: absolute;
+		top: 6px;
+		right: 12px;
+		height:26px;
+		width:26px;
+		border-radius: 50%;
+		background-color: $primary-2;
+		span{
+			text-align:center;
+			@include f(19);
+			display:block;
+			@include font-color($primary-51); 
+		}
+	}
+}

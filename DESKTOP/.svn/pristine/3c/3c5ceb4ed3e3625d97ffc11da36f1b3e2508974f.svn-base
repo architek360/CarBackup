@@ -1,0 +1,112 @@
+<!-- Shopping bag authorised ends here-->
+<div class="shopping_bag  grid__item  shopping_bag_unauthorised three-quarters  clearfix  js-form-validator">
+    <!-- Shopping bag Info Wrapper-->
+    <div class="js-dynamic-placeholder">
+        <div class="js-dynamic-shopping-bag display-none">
+            <ul class= "js-productlist-inbag">
+                <li class="js-product-inbag product-inbag clearfix" >
+                    <form>
+                        <fieldset>
+                            <ul>
+                                <li class="display-none"> <input type="hidden" class="teaserId"  name="fn_teaserid"></li>
+                                <li class="product-inbag clearfix display-none adjust_bracelet_sizeSection">
+                                    <!--#include virtual="../../views/adjust_bracelet_size/desktop.shtml" -->
+                                    <div class="alignCenter">
+                                        <!--#set var="text-detail" value="ADD TO SHOPPING BAG" -->
+                                        <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-bracelet-confirm-button" -->
+                                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                                        <!--#set var="text-detail" value="Cancel" -->
+                                        <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-cancel-ac" -->
+                                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                                    </div>
+                                    <div></div>
+                                </li>
+                                <li class="product-inbag clearfix display-none engravingSection">
+                                    <!--#include virtual="../../views/engraving/desktop.shtml" -->
+                                    <div class="alignCenter">
+                                        <!--#set var="text-detail" value="Save" -->
+                                        <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-confirm-button" -->
+                                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                                        <!--#set var="text-detail" value="Cancel" -->
+                                        <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-cancel-ac" -->
+                                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                                    </div>
+                                </li>
+                                <li class="product-inbag clearfix display-none messageSection">
+                                    <!--#include virtual="../../components/message_card_desc/desktop.shtml" -->
+                                </li>
+                                <li class="productSection">
+                                    <!--#include virtual="../../views/shopping_bag/producthtml.shtml" -->
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </li>
+            </ul>
+            <div class="checkout_details check_details clearfix grid">
+                <div class="grid__item one-half ">
+                    <div class="gift-wrapper">
+                        <p>All creations are individually gift wrapped.</p>
+                        <img src="<!--#echo var="CONTENT_IMG_PATH" -->shopping-bag.png" alt=""/> 
+                    </div>
+                </div>
+                <div class="grid__item one-half alignCenter">
+                    <!--#set var="sales_tax" value="on" --> 
+                    <!--#set var="subtotal" value="cartier_desktop" --> 
+                    <!--#include virtual="../../views/price_details/desktop.shtml" -->
+                    <div class="shopping-bag__confirm">
+                        <!--#set var="text-detail" value="proceed to checkout" --> 
+                        <!--#set var="cta--varaint" value="cta--red js-proceed-to-checkout" --> 
+                        <!--#include virtual="../../components/form_elements/button.shtml" --> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gift Wrapper--> 
+</div>
+<div class="grid__item one-quarter shopping-bag-rt-col">
+    <div class="guest_checkout_details_bg">
+        <!--#include virtual="../../components/guest_checkout/desktop.shtml" --> 
+    </div>
+</div>
+<div class="empty_shopping_bag clearfix display-none">
+    <h3 class="heading3">YOUR CART IS CURRENTLY EMPTY</h3>
+    <div class="shopping_options">
+        <ul>
+            <li>
+                <!--#set var="arrow-class" value="more-button-arrow " -->
+                <!--#set var="more-text" value="shop jewelry" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </li>
+            <li>
+                <!--#set var="arrow-class" value="more-button-arrow " -->
+                <!--#set var="more-text" value="shop timepieces" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </li>
+            <li>
+                <!--#set var="arrow-class" value="more-button-arrow " -->
+                <!--#set var="more-text" value="shop bridal" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </li>
+            <li>
+                <!--#set var="arrow-class" value="more-button-arrow " -->
+                <!--#set var="more-text" value="shop accessories" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </li>
+            <li>
+                <!--#set var="arrow-class" value="more-button-arrow " -->
+                <!--#set var="more-text" value="shop fragnance" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </li>
+        </ul>
+    </div>
+    <div class="wishlist_button clearfix">
+        <a  class="cta-button cta-button__inner cta--red view-wishlist" href="#">
+        <span class="input-arrow"></span>
+        <span class="cta-button__input">view your wishlist</span>
+        </a>
+    </div>
+</div>
+<!--#include virtual="../../views/pushs/desktop.shtml" --> 
+<!-- Shopping bag authorised ends here-->

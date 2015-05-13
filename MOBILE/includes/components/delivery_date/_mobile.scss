@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    delivery_day -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.delivery-day)
+ * LISTING CONTAINER......FOR EACH SUB BLOCKS (ul li)
+ * DELIVERY DESCRIPTION BLOCK......Find a boutique block (.delivery-days__desc)
+ * TITLE IN DELIVERY DESCRIPTION BLOCK......( .delivery-days__desc__title, .delivery-days__desc__title )
+ * TITLE IN DELIVERY DESCRIPTION BLOCK......( .delivery-days__desc__detail )
+ * DELIVERY AMOUNT BLOCK......  (.delivery-days__amt)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.delivery-days {
+
+  	@include font-color($primary-2);  
+	display: block;
+	background: $primary-1;
+	width: 81.25%;
+	margin: 0 auto; 
+  	@include rem('padding', 20px 0px);
+
+	.delivery-days__list {
+		@include set-ulFix;
+		
+		li {
+			width: 100%;
+			margin: 0;
+			display: inline-block;
+			background: #000;
+			@include rem('padding', 54px 0px 30px);
+			@include rem('line-height', 23px);
+			border: 1px solid $primary-6;
+
+			 label {			
+				display: inline-block;
+				@include brand-font;
+				@include rem('margin', 0 10px 0px 0);
+				margin-top: -0.02%;
+				margin-right: -0.08%;
+				position: relative;
+				vertical-align: top;
+	
+				
+			}
+			.delivery-days__desc {
+				display: inline-block;
+				width: 61%;
+				@include rem('margin', -15px 0px 0px 10px);
+				vertical-align: top;
+				
+				.delivery-days__desc__title {
+					@include bold-font;
+					text-transform: uppercase;
+
+					@include f(18);	
+					@include rem('margin-top', -5px);
+					padding: 0;
+					@include rem('padding-bottom', 10px);
+					text-align: left;
+					@include rem('letter-spacing', 2px);
+				}
+				.delivery-days__desc__detail {
+					font-size: 20px;
+					@include f(20);	
+					@include font-color($primary-6);
+					padding: 0;
+					@include rem('line-height', 25px);
+
+				}
+			}
+
+
+		}
+			.delivery-days__amt {
+				display: inline-block;
+				@include main-font;
+				float: right;
+				@include rem('width', 80px);
+				@include rem('height', 60px);
+				@include f(20);	
+				@include rem('margin-left', 12px);
+				@include rem('margin-right', 12px);
+
+			}
+
+
+			.delivery-day__japan {
+				text-align: center;
+				@include rem('margin-top' ,20px);
+				label {
+					display: block;
+	    			
+				}
+				li {
+					width: 82%;
+					@include rem('margin-top' ,20px);
+					display : inline-block;
+					padding : 0;
+					border :none; 
+					
+				}
+		}
+
+		.active{
+			border: 1px solid $primary-6;
+			background:  #191919;
+		}
+
+	}
+
+}

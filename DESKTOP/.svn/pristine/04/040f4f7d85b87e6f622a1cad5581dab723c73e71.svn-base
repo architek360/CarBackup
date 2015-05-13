@@ -1,0 +1,1 @@
+<a href="#" class="more-button <!--#echo var="cta-class" -->"><span class="<!--#echo var="arrow-class" -->"></span><!--#echo var="more-text" --></a>

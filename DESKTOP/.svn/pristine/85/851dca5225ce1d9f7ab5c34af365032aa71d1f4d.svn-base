@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "_theme_vars";
+@import "../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+.js-reg-step-3 {
+	.fn_strname {
+  		clear: both !important;
+	}
+	.fn_addrinfo {
+		width: 48%;
+		clear:none;
+		float:left;
+	}
+	#fn_zip {
+		width: 176px !important;
+	}
+	.fn_town {
+		clear: none;
+		width: 48%;
+	}
+
+	.fn_state{
+		width: 44% !important;
+	}
+	.fn_phno{
+		clear: none !important;
+		#fn_phno{
+			width:190px !important;
+		}
+	}
+}
+
+.js-address-form {
+	.input-wrapper {
+		width:48%;
+	}
+	.addressform_firstName1{
+		width:46%;
+	}
+	.addressLabel {
+		width: 48%;
+		#addressLabel {
+			width:96%;
+		}
+	}
+	
+	.fn_strname{
+		clear: both;
+	}
+	.addressform_phone {
+		margin-left: 0px;
+	}
+}

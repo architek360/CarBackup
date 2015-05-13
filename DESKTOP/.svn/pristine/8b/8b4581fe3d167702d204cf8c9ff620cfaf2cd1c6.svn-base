@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    SET FOR YOU-SLIDER -- Desktop CSS
+\*------------------------------------*/
+
+/**
+ * MODULE CONTAINER.... (#sfy-slideshow)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+#sfy-slideshow {
+	@include proxi-font;
+	position: relative;
+}
+
+.sl-previous, .sl-next {
+	width: 14px;
+	height: 27px;
+	position: absolute;
+	top: 50%;
+
+	text-shadow: none;
+	/*color: transparent;*/
+	z-index: 10;
+	overflow: hidden;
+}
+.sfy-slideshow__pane {
+	@include rem(margin-top, 10px);
+}
+.model__name {
+	@include f(14);
+	@include rem('line-height', 20px);
+	@include rem(margin, 18px 0 5px 0);
+	font-weight: bold;
+
+	letter-spacing: .1em;
+}
+.model__description {
+	@include f(13);
+	font-weight: normal;
+	font-style: italic;
+
+	letter-spacing: .1em;
+}
+.model__name, .model__description {
+	text-align: center;
+	@include font-color($primary-44);
+}
+.model__summary {
+	@include rem('line-height', 15px);
+	@include f(12);
+	@include font-color($primary-44);
+
+	font-family: $primary-font-2;
+}
+.model-type {
+	@include rem(margin, 34px 0);
+	@include font-color($primary-44);
+
+	li {
+		@include rem(margin, 8px 0);
+		@include rem('line-height', 16px);
+		@include f(12);
+
+		text-transform: uppercase;
+		width: 150px;
+		
+		letter-spacing: .1em;
+	}
+	.radio {
+		@include rem(margin-right, 8px);
+		width: 15px;
+		height: 15px;
+
+		float: left;
+		vertical-align: middle;
+	}
+}
+.model-type__platinum, .model-type__yellow-gold {
+	width: 10px;
+	height: 10px;
+	@include rem(margin,3px 0);
+
+	float: right;
+}
+.model-type__platinum {
+	background-color: #bebebe;
+}
+
+.model-type__yellow-gold {
+	background: #e0b570;
+}
+.red-button {
+	@include rem(padding, 8px 13px 8px 26px);
+	@include f(12);
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+			
+	@include font-color($primary-40);
+	letter-spacing: .1em;
+	display: inline-block;
+	background: #8f010f url($path-images +'icons/arrows-white.png') no-repeat 12px 13px;
+	&:hover {
+			background: $primary-51 url($path-images +'icons/arrows-white.png') no-repeat 12px 13px;
+	}	
+}
+
+

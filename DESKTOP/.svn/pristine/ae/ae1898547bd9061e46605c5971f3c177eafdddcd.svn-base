@@ -1,0 +1,430 @@
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+
+/**
+ * MODULE CONTAINER....main container (.order_review)
+ * TITLE CONTAINER...... (.order-review__title)
+ * PRODUCT CONTAINER.........(.product-detail)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.order-review-section-left {
+	margin: 0 auto;
+   	@include rem('padding', 0px);
+    display: block;
+    vertical-align: top;
+    color: $primary-2;
+    background: $primary-82;
+	
+	.order-review__title {
+		@include f(24);
+		text-transform: uppercase;
+		text-align: center;
+		@include rem('letter-spacing', 2px);
+		@include rem('padding', 30px 0 18px);
+	}
+
+	.heading__desc{
+		border-bottom: none;
+	}
+
+	
+	.order-review__confirm {
+			text-align: center;
+			float: right;
+			.cta--red  {
+				@include proxi-font;
+			}
+			@include rem(margin, 0px 10px 20px 0px);
+	}
+
+	/*------------------------------------*\
+	    $PRODUCT DETAIL CONTAINER
+	\*------------------------------------*/
+
+	.product-detail{
+		display:block;
+		@include f(22);
+		@include main-font;
+		@include font-color($primary-2);
+		border: none;
+		background: none; /* Old browsers */
+		text-align:center;
+		margin: 0 auto;
+		@include rem('padding', 0px);
+
+		.product__image {
+    		display: table-cell;
+    		@include rem('max-height', 218px);
+    		@include rem('height', 218px);
+    		text-align: center;
+    		vertical-align: middle;
+
+    		img.image{
+    			/* “ DATE 01-10-2014 | image stretching issue | BRANCH Develop”  
+		 			START 
+		 		*/
+    				max-width: 200px;
+					max-height: 200px;
+				/*END*/
+    			@include box-sizing(border-box);
+    			@include rem('padding', 10px);
+    		}
+		}
+
+		.product-description {
+		    display: table-cell;
+    		text-align: left;
+    		vertical-align: top;
+    		@include rem('padding-top', 15px);
+    		width: 225px;
+		}
+
+		.product__price {
+    		display: table-cell;
+    		vertical-align: top;
+    		width:200px;
+
+    		p {
+    			text-align: right;
+    			@include rem('margin-right', 21px);
+    		}
+		}
+
+		h3{
+			@include f(18);
+			font-weight: bold;
+			@include rem('padding', 2px 0 0 0);
+			@include rem('margin', 6px 0);
+			text-align: left;
+		}
+
+		.product-detail__variant{
+			display:block;
+			@include f(11);
+			@include main-font;
+			font-style:italic;
+			font-weight:normal;
+			@include rem('margin', 20px 0);
+		}
+		.product-detail__size{
+			display:block;
+			@include f(12);
+			@include proxi-font;
+			text-transform:uppercase;
+			font-weight: bold;
+			@include rem('margin', 20px 0);
+			@include rem('line-height', 20px);
+		}
+	/*------------------------------------*\
+	    $PRODUCT CONTAINER
+	\*------------------------------------*/
+		.product{
+			display:block;
+			padding: 0;
+			.product__image{
+				display: inline-block;	
+				width:55%;
+				.image{
+					background-size: cover;
+					width: 100%;
+				}
+			}
+			.product__price{
+				@include rem('margin', 30px 0);
+				@include f(40);
+				text-transform: uppercase;
+				text-align: center;
+				width: 43%;
+				display: inline-block;
+				vertical-align: top;
+
+				.price-text {
+					@include rem('margin-top' ,30px);
+					display: block;
+				}
+
+			
+
+				.select-2 {
+				    width: 54%;
+				    @include rem('margin' ,35px 0px 0px);
+				}
+
+			}
+			.total-price-text {
+				@include rem('margin-top', 50px);
+				display: inline-block;
+				@include f(50);
+				@include main-font;
+				width: 100%
+
+			}
+		}
+
+		ul.product-filter {
+			display: block;
+			width: 65%;
+			//float: right;
+			@include rem('margin-bottom', 10px);
+
+			li{
+				@include rem('margin-top', 17px);
+			}
+
+			.product-filter__left{
+				font-weight:bold;
+			}
+			.product-filter__right{
+				margin-top:5px;
+			}
+		}
+
+		span.product-filter__left {
+			@include f(15);
+			@include proxiBold-font;
+			@include rem('line-height', 21px);
+			text-align: left;
+		}
+
+		span.product-filter__right {
+			@include f(11);
+			@include proxi-font;
+			display: block;
+			@include rem('line-height', 21px);
+		}
+	}
+
+	.price-detail {
+		background: none;
+    	color: $primary-81;
+    	float: right;
+    	letter-spacing: 1.5px;
+    	@include rem('padding', 30px 0px);
+    	@include rem('margin-right', 15px);
+    	width: 46%;
+
+    	p{
+    		display: none;
+    	}
+
+    	.more-button {
+		    display: none;
+		}
+
+    	.price-detail__row {
+    		@include f(13);
+    		@include rem('padding', 8px 0px);
+
+    		.price-detail--note {
+			    color: $primary-81;
+    			@include f(11);
+    			@include rem('padding', 0px);
+			}
+
+			.price-detail__col-right {
+    			@include f(15);
+			}
+
+
+
+			.price-detail__col{
+				@include f(15);
+				@include rem('padding', 0px);
+			}
+
+			.right-zero {
+    			@include f(12);
+    			@include rem('padding', 0px);
+    		}
+		}
+		.price-detail__row:nth-child(5) {
+			border-top: 1px solid $primary-92;
+		}
+		.subtotal__row {
+		    color: $primary-81;
+    		@include proxiBold-font;
+    		@include f(17);
+    		@include rem('padding', 10px 0px 0px);
+
+    		.right-zero{
+    			@include f(15);
+    			@include rem('padding', 0px);
+    		}
+
+    		.price-detail__col{
+    			@include rem('padding', 0px);
+    		}
+
+    		.price-detail--note {
+			    color: $primary-81;
+    			@include f(11);
+    			@include rem('padding-top', 2px);
+			}
+
+			.price-detail__col-right {
+			    color: $primary-2;
+    			@include proxiBold-font;
+    			@include f(17);
+			}
+		}
+    }
+
+    .separator_line {
+    	border-top: 1px solid #79484C;
+    	margin: 0 auto;
+    	width: 98%;
+	}
+
+	.guest-verify {
+
+		.message {
+    		font-size: 12px;
+    		@include rem('padding', 0px 25px 18px);
+		}
+
+		#uniform-checbox {
+			span {
+	    		background-position: -13px -415px;
+	    	}
+
+	    	span.checked {
+	    		background-position: -89px -415px;
+	    	}
+		}
+
+		.form-check {
+		    @include main-font;
+		    font-size: 12px;
+		    line-height: 7px;
+		    margin: 0;
+		    padding: 0.4rem 0 0;
+		    width: auto;
+		}
+	}
+}
+	.order-review-section-right {
+		display: block;
+    	@include rem('padding', 0px);
+    	background: none;
+    	vertical-align: top;
+    	@include rem('margin', 0px);
+    	color: $primary-2;
+
+		.conf {
+    		width: 100%;
+    		margin: 0 auto 10px;
+    		text-align: center;
+    		background: $primary-82;
+    		@include proxi-font;
+
+    		span{
+    			 @include f(13);
+    			 @include main-font();
+    		}
+
+    		.conf-text{
+    		@include f(11);
+			font-style: italic;
+			@include rem('padding', 0 20px);
+			@include main-font();
+    		}
+
+    		.js-conf-name{
+    			@include proxi-font;
+    			letter-spacing: .1em;
+				text-transform: uppercase;
+				@include f(13);
+    		}
+
+    		.conf-title{
+    			font-weight: normal;
+    			font-weight: normal;
+				padding-bottom: 0;
+    		}
+    		.conf-days{
+    			text-transform: uppercase;
+    			font-size: 11px;
+    		}
+		}
+
+		.address-button {
+		    background: none repeat scroll 0 0 $primary-82;
+		    border-bottom: 1px solid #79484C;
+		    border-top: none;
+		    @include f(11);
+		    margin: 0 auto;
+		    @include rem('padding', 10px 0px 10px 10px);
+		    text-transform: uppercase;
+		    color: $primary-2;
+		    width: 95.5%;
+		    text-align: left;
+			line-height: 5px;
+			height: 14px;
+			> h2 {
+				float: left;
+			}
+
+		    > span {
+		    	max-width: 125px;
+				text-align: left;
+				display: inline-block;
+		    }
+		    
+			span {
+			    @include f(13);
+			}
+
+			.edit-link{
+				float: right;
+				@include rem('margin-right', 14px);
+			}
+
+			.replace-link{
+				display: none;
+			}
+
+			.edit-icon {
+			    border-left-color: #79484C;
+			}
+		}
+
+	}
+
+	.order-review__info-notice {
+		@include rem('padding-bottom', 30px);
+		@include rem('padding-top', 20px);
+		@include f(24);
+		@include rem('word-spacing',6px);
+		@include rem('line-height',29px);
+		display: inline-block;
+		width: 100%;
+
+		p {
+			border-top: 1px solid $primary-79;
+		    @include main-font;
+		    @include f(10);
+		    text-align: center;
+		    color: $primary-2;
+		    letter-spacing: 0;
+		    word-spacing: normal;
+		    padding-top: 5px;
+		}
+		
+	}
+
+.ecs-payment .order-review-section-right .address-button {
+
+  line-height: none;
+  height: auto;
+
+  		> span{
+
+ 		 width: 100%;
+		}
+}
+

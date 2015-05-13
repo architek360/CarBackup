@@ -1,0 +1,55 @@
+.multiple-video{
+	.nested-carousel-wrapper {
+		.carousel{
+			position:absolute;
+			left:0;
+			.bx-viewport {
+				@include rem('height', 600px);
+				width: 1424px !important;
+				margin: 0 auto;
+				.bxslider li {height: 600px;}
+			}
+		}
+	}
+
+	.thumbnail-wrapper{
+		position: absolute;
+		width: 100%;
+		bottom: 10px;
+		.carousel{
+			li{
+				img{
+					height: 210px;
+					width: 180px;
+				}
+			}
+		}
+	}
+	.field-item{
+		font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		color: #a0a0a0;
+		font-size: 12px;
+		font-weight: bold;
+		//background: url(../../../all/themes/cartierfotheme/images/arrows-white.png) no-repeat center -130px;
+		color: #ffffff;
+		display: inline-block;
+		position: relative;
+		padding-bottom: 10px;
+		width: 100%;
+		text-align: center;
+	}
+
+}
+
+
+
+
+.multiple_video_wrapper {
+	width: 980px;
+margin: 0 auto;
+	li {
+		width: 180px!important;
+	}
+}

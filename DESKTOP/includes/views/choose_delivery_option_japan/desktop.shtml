@@ -1,0 +1,24 @@
+<div class="grid js-billing">
+  <div class="grid__item three-quarters">
+  <div class="billing-address-content-wrapper">
+    <h1 class="heading1">I CHOOSE THE DESTINATION, THE DELIVERY METHOD</h1>
+
+    <div class="choose-tab">
+		<!--#set var="tab_1" value="Deliver to my billing address" -->
+    <!--#set var="tab_2" value="Deliver to another shipping address" -->
+    <!--#set var="tab_3" value="Boutique" -->
+    <!--#set var="tab_content_1" value="billing_address" --> 
+    <!--#set var="tab_content_2" value="shipping_address_jp" -->
+    <!--#set var="tab_content_3" value="receive_boutique" -->
+		<!--#include virtual="../../components/tabs/desktop.shtml" -->
+	</div>
+      
+   
+
+  </div>
+  </div>
+  <div class="grid__item one-quarter shopping-bag-rt-col"> 
+    <div class="price-details-bg"><!--#include virtual="../../views/price_details/desktop.shtml" --> 	</div>
+    <!--#include virtual="../../views/return-exchange/desktop.shtml" --> 
+  </div>
+</div>

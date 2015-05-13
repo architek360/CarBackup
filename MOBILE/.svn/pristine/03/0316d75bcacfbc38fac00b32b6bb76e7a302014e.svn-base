@@ -1,0 +1,365 @@
+/*------------------------------------*\
+    PERSONAL INFO -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ppersonal-info-c1)
+ * PERSONAL DETAILS....personal details (.personal-details)
+ * BIRTHDAY DETAILS....birthday details (.birthday-details)
+ * MOBILE DEVICES DETAILS.... mobile devices block(.mobile-device)
+ * OWNED CREATIONS DETAILS..... owned creation detail block(.owned-creations)
+ */
+
+@mixin personal-info-box(){
+	@include f(20);
+	border:1px solid $primary-17;
+	@include rem('padding',24px 24px 0px 24px);
+	@include rem('margin',0px 0 22px 0);
+	display:inline-block;
+	text-transform:uppercase;
+	@include bold-font;
+	@include box-sizing(border-box);
+}
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.personal-info-c1{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	margin: 0 auto;
+	width:100%;
+	.heading2{
+		@include f(28);
+		@include rem(padding, 20px 0 20px 0);
+	}
+	.profile-message{
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		display:table;
+		margin:0 auto;
+		@include f(28);
+		@include main-font;
+		font-style:italic;
+		@include rem('padding', 20px 0);
+	}
+	.personal-info__heading{
+		@include f(28);
+		@include rem(padding, 25px 0 10px 0);
+		text-transform:uppercase;
+		text-align:center;
+		@include medium-font;
+	}
+	.personal-info__welcome-image{
+		height: 100%;
+ 		width: 100%;
+ 		height: 238px;
+  		background:url($path-images+"/content/personal-information.jpg") no-repeat;
+  		background-position: top center;
+	}
+	.grid__item{
+		@include rem('padding',0px);
+		label{
+			@include bold-font;
+			@include f(20);
+		}
+		/*&:last-child{
+			padding:0;
+		}*/
+		.radio-btn{
+			@include rem('padding',0 0 33px);
+			@include rem('margin',15px 0 0px);
+		}
+		.radio-btn + span {
+			@include rem('margin',-29px 0 0px);
+		}
+	}
+	.grid__item--row{
+		@include rem('min-height',120px);
+		input + span {
+			height: 35px
+		}
+	}
+	.two-row-line{
+		@include rem('margin-bottom',20px);
+	}
+	.grid__item--pad{
+		@include rem('padding',0 0 20px 0);
+	}
+
+	/*------------------------------------*\
+	    $PERSONAL DETAILS
+	\*------------------------------------*/
+
+	.personal-details{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		@include personal-info-box;
+		.form-select{
+			@include main-font;
+		}
+		.newpass{
+			display:none;
+		}
+	}
+
+	/*------------------------------------*\
+	    $BIRTHDAY DETAILS
+	\*------------------------------------*/
+
+	.birthday-details{
+		@include personal-info-box;
+		@include rem('padding-bottom',35px );
+		.birthday-details__heading{
+			color:$primary-3;
+			@include f(22);
+			@include rem('padding',0 0 25px 0);
+			@include main-font;
+			text-transform:none;
+		}
+		.birthday-details__form-select{
+			@include set-ulFix;
+			li{
+				display:inline-block;
+				width:32.2%;
+			}
+		}
+		.form-select{
+			text-transform:uppercase;
+			@include main-font;
+		}
+	}
+	
+	/*------------------------------------*\
+	    $MOBILE DEVICES DETAILS
+	\*------------------------------------*/
+
+	.mobile-device{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		@include personal-info-box;
+		@include rem('margin',8px 0 22px 0);
+		@include rem('padding-bottom',12px);
+		.grid__item:last-child {
+			@include rem('margin',35px 0 0 0);
+		}
+		.mobile-device__list{
+			@include set-ulFix;
+			li{
+				display:inline-block;
+				vertical-align: top;
+    			width: 49%;
+				.form-check{
+					@include brand-font;
+					display:block;
+					width:100%;
+					@include f(20);
+					label{
+						display:inline-block;
+						width:100%;	
+					}
+					.form-check-label{
+						width:72%;
+					}
+				}
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $OWNED CREATIONS DETAILS
+	\*------------------------------------*/
+
+	.owned-creations{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		@include personal-info-box;
+		@include rem('margin',8px 0 36px 0);
+		@include rem('padding-bottom',38px);
+		display:block;
+		.slide_switch{
+			@include rem( 'margin-top', 20px );
+			@include rem( 'margin-bottom', 30px );
+			@include rem( 'margin-left', 0px );
+		}
+		.owned-creations-label{
+			@include rem( 'margin-top', 40px );
+			@include bold-font;
+		}
+		.form-label{
+			@include brand-font;
+		}
+		li{
+			margin-right:140px;
+		}
+		.form-select{
+			@include rem('margin-bottom',17px);
+		}
+		.radio-main-label{
+			@include rem('padding-bottom',12px);
+		}
+		.added-creation {
+			border: 1px solid $primary-3;
+			@include rem( 'margin-top', 20px );
+			.added-creation__name {
+				@include f(20);
+				@include bold-font;
+			  	@include rem( 'padding', 10px);
+				width: 86% ;
+				display : inline-block;
+			}
+			.delete-icon {
+				@include setSprite(27px, 29px, -623px, -135px);           
+				display: inline-block;
+				@include rem('height', 15px);
+				@include rem(margin, 11px 0 0 5px);
+				position:relative;
+				top:-8px;
+				right: 0;
+			}
+		}
+	}
+
+	.action-button{
+		text-align:center;
+		@include rem(margin, 20px 0 0 0);
+		clear:both;
+		.cta-button{
+			@include rem('margin-bottom',0px);
+		}
+	}
+	.slide_switch label {
+		@include rem(padding-top, 3px);
+	}
+}
+#cq-image-jsp-\/content\/car\/jp\/japan\/ja\/services\/my-cartier\/my-preferences\/my_personal_information01\/jcr\:content\/par\/image{
+	width: 82.25%;
+	margin: 0 auto;
+	img{
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+.js-personal-info-form{
+	.piform_new_password, .confirm_new_password{
+		@include rem(padding-top, 45px);
+		min-height:inherit;
+		label{
+			padding:0;
+		}
+	}
+	.group-wrapper .checkbox-wrapper.piform_phoneDetail{
+		width:48%;
+	}
+	.piform_countryName{
+		display: inline-block;
+		clear: both;
+		@include rem(margin-top, 25px);
+		width: 100%;
+	}
+	.personal-info-c1{
+		border:1px solid $primary-17;
+		width: 100%;
+		display: inline-block;
+		@include rem(padding, 7px 24px 15px 24px);
+		@include box-sizing(border-box);
+		.heading5{
+			padding-top: 0;
+			@include f(22);
+		}
+		.group-wrapper{
+			clear: both;
+			@include rem('margin', 0px );
+			.radio-wrapper label {
+				width: auto;
+				font-family: inherit;		
+			}
+			.radio-wrapper .radio span input { position: absolute; opacity: 0 }
+			.piform_owncreationcheck:first-child .radio + label::after {
+			    content: ".";
+			    @include rem('border-radius', 600px );
+			    @include rem('margin-left', 12px );
+			    @include rem('width', 106px );
+			    @include rem('padding', 10px 0);
+			    @include rem('margin-right', 10px);
+			    display: inline-block;
+			    @include rem('text-indent', -9999px);
+				border:1px solid $primary-12;
+				background: ($primary-30);
+			}
+			.radio-wrapper .radio{
+				position: static;
+				span{
+					background:transparent;
+				}
+			}
+			.radio-wrapper .radio + label + input + label::after {
+			  width: 0;
+			  border-width: 0
+			}
+			.radio-wrapper .radio + label {
+				@include rem('padding-right', 0px);
+			}
+			.radio-wrapper .radio{
+				width: 1px;
+			}
+			.radio-wrapper + .radio-wrapper .radio + label {
+			    padding-right: 0;
+			    @include rem('padding-left', 122px);
+			    @include rem('padding-top', 6px);
+			     @include rem('padding-bottom', 10px);
+			    @include rem('margin-left', -122px); 
+			 	background: -webkit-radial-gradient(circle, black 25%, transparent 20%, white 30%, white 61%, transparent 66%, transparent 100%);
+	    		background: -moz-radial-gradient(circle, black 25%, transparent 20%, white 30%, white 61%, transparent 66%, transparent 100%);
+			    /*background-position: 0px -1px;*/
+			    background-size: 40px 85%;
+			    background-repeat: no-repeat;
+			}
+			/*input:checked + label {
+			  color: red
+			}
+			input + label:checked{
+			  color: red;
+			}*/
+			.group-wrapper  .form-radio-label{
+				padding-right: 0;
+			}
+			.radio-wrapper + .slide-button .radio + label{	 	
+				@include rem('padding-left', 60px);
+				@include rem('margin-left', -60px);
+			}
+			.slide-button + .radio-wrapper .radio + label{	 	
+				@include rem('padding-left', 122px);
+				@include rem('margin-left', -122px);
+			}
+			.radio-wrapper + .slide-button .radio + label,  .slide-button + .radio-wrapper .radio + label{
+			    -webkit-transition: all 0.3s ease;
+			    -moz-transition: all 0.3s ease;
+			    -ms-transition: all 0.3s ease;
+			    -o-transition: all 0.3s ease;
+			    transition: all 0.3s ease;
+			}
+		}
+		hr{
+			display: none;
+		}
+	}
+}
+
+.personal-info-c1 .creation-link{
+		@include setSpriteMobileDesktop(auto, auto, -1371px, 1px, #8f141a);
+	  display: table;
+	  margin: 0 auto;
+	  vertical-align: middle;
+	  color: white;
+	  @include bold-font();
+	  @include rem('padding', 18px 28px 17px 28px);
+	  @include f(20);
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  border: none;
+	  cursor: pointer;
+	  margin-top: 50px;
+	  
+	  .arrow-show{
+	  	background: none;
+	  }
+}

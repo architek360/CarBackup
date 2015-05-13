@@ -1,0 +1,84 @@
+
+    <!--#include virtual="../../components/social_share/html.shtml" -->
+
+    <h1 class="heading1">SIZING GUIDE - RINGS</h1>
+    <div class="expert-guide grid">
+        <div class="grid__item one-quarter">
+            <ul class="item-list">
+                <li class="active"><h2><a href="#" title="Jewelry">CHOOSING A RING SIZE BY MEASURING YOUR FINGER</a></h2></li>
+                <li><h2><a href="#" title="Watches">CHOOSING THE SIZE OF A CLASSIC OR LARGE MODEL TRINITY RING</a></h2></li>
+            </ul>
+        </div>
+
+        <div class="grid__item three-quarters">
+            <article>
+                <div class="comp-rich-text">
+                    <h3>CHOOSING A RING SIZE BY MEASURING YOUR FINGER</h3>
+                    
+                    <p>Measure your finger at the end of the day. Do not measure your finger when it is hot or cold.</p>
+                    <p>Remember that the two hands differ slightly in size; a ring worn on a finger of the left hand will not be a perfect fit for the same finger on the right hand.
+Make sure that the chosen size leaves enough room for the ring to pass easily along the entire length of the finger.</p>
+                    <p>To measure your finger, you can use a tape measure. Measure the circumference of your finger in mm. This measurement corresponds to the size of the ring.    </p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td>Ring size</td>
+                            <td>Finger circumference in mm</td>
+                            <td>Diameter of the ring in mm</td>
+                          </tr>
+                          <tr>
+                            <td>44</td>
+                            <td>44</td>
+                            <td>14.01</td>
+                          </tr>
+                          <tr>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>14.33</td>
+                          </tr>
+                          <tr>
+                            <td>44</td>
+                            <td>44</td>
+                            <td>14.01</td>
+                          </tr>
+                          <tr>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>14.33</td>
+                          </tr>
+                          <tr>
+                            <td>44</td>
+                            <td>44</td>
+                            <td>14.01</td>
+                          </tr>
+                          <tr>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>14.33</td>
+                          </tr>
+                          <tr>
+                            <td>44</td>
+                            <td>44</td>
+                            <td>14.01</td>
+                          </tr>
+                          <tr>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>14.33</td>
+                          </tr>
+                          <tr>
+                            <td>44</td>
+                            <td>44</td>
+                            <td>14.01</td>
+                          </tr>
+                          <tr>
+                            <td>45</td>
+                            <td>45</td>
+                            <td>14.33</td>
+                          </tr>
+                          
+                    </table>
+                </div>
+            </article>
+        </div>
+        
+    </div>

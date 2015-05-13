@@ -1,0 +1,42 @@
+.exception-bridal{
+	position:relative;
+	@include rem('top', -182px);
+	@include rem('left', -198px);
+	@include rem('width', 1400px);
+	.image{
+		width:inherit;
+		@include rem('height', 800px);
+	}
+}
+
+.exception-bridal__content{
+	position: absolute;
+	@include rem('top', 190px);
+	@include rem('left', 200px);
+	.heading1{
+		text-align: left;
+		@include EB-font();
+	}
+	.exception-bridal-text{
+		@include rem('width', 340px);
+		text-align: left;
+		@include main-font();
+		color:$primary-2;
+		@include f(13);
+		@include rem('line-height', 18px);
+		@include rem('letter-spacing', 0px);
+	}
+
+	.more-button{
+		@include proxiBold-font();
+		@include f(13);
+		color:$primary-2;
+		font-style: normal;
+		@include rem('line-height', 18px);
+		@include rem('letter-spacing', 1.2px);
+		text-transform: uppercase;
+		&:hover{
+			color:$primary-53;
+		}
+	}
+}

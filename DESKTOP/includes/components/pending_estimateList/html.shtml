@@ -1,0 +1,46 @@
+<!-- pending estimate table Starts Here-->
+<div class="pending-estimate">
+	<table border="0" width="200">
+		<tr class="head">
+				<td>Date</td>
+				<td>Preview</td>
+				<td>Status</td>
+				<td>Action</td>
+		</tr>
+		<tr>
+				<td>12/08/2014</td>
+				<td><img class="preview active-request" alt="preview" src="<!--#echo var='ICON_IMG_PATH' -->/pdf.gif"></td>
+				<td>Active</td>
+				<td><button class="cta-button cta-button__inner cta--red cta-step2-popup js-cta-popup" type="submit"><span class="input-arrow"></span>
+					<span class="cta-button__input">CTA</span></button>
+				</td>
+		</tr>
+		<tr>
+				<td>12/08/2014</td>
+				<td><img class="preview active-request" alt="preview" src="<!--#echo var='ICON_IMG_PATH' -->/pdf.gif"></td>
+				<td>Active</td>
+				<td><button class="cta-button cta-button__inner cta--red cta-step2-popup js-cta-popup" type="submit"><span class="input-arrow"></span>
+					<span class="cta-button__input">CTA</span></button>
+				</td>
+		</tr>
+		<tr>
+				<td>12/08/2014</td>
+				<td><img class="preview active-request" alt="preview" src="<!--#echo var='ICON_IMG_PATH' -->/pdf.gif"></td>
+				<td>Active</td>
+				<td><button class="cta-button cta-button__inner cta--red cta-step2-popup js-cta-popup" type="submit"><span class="input-arrow"></span>
+					<span class="cta-button__input">CTA</span></button>
+				</td>
+		</tr>
+		<tr>
+				<td>12/08/2014</td>
+				<td><img class="preview rejected" alt="preview" src="<!--#echo var='ICON_IMG_PATH' -->/pdf.gif"></td>
+				<td>Rejected</td>
+				<td><button class="cta-button cta-button__inner cta--red cta-step2-popup js-cta-popup" type="submit"><span class="input-arrow"></span>
+					<span class="cta-button__input">CTA</span></button>
+				</td>
+		</tr>
+	</table>
+
+</div>
+
+<!-- pending estimate table  Ends Here-->

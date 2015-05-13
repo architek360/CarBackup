@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+
+
+
+<!--#if expr="${DEVICE} = 'desktop'"  -->
+	<!--#set var="COMP_1" value="sub_collection_landingpage" -->
+	<!--#set var="COMP_2" value="highlight_pushes" -->
+	<!--#set var="COMP_3" value="breadcrumb" -->
+<!--#endif -->
+
+<!--#if expr="${DEVICE} = 'mobile'"  -->
+	<!--#set var="VIEWS_1" value="collection_list" -->
+	<!--#set var="VIEWS_2" value="quick_links" -->
+<!--#endif -->
+
+<!--#set var="MODULE" value="others" -->
+<!--#include virtual="../templates/base.shtml" -->

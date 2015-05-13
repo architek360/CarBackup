@@ -1,0 +1,363 @@
+/*------------------------------------*\
+	CONTACT AMBASSADOR -- Mobile CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER ..... main container block(.ambassador-cont)
+* AMBASSADOR CONTENT CONTAINER..... content block(.ambassador-cont__price-detail, .ambassador-cont__attributes)
+* AMBASSADOR ACCORDIAN CONTAINER..... accordian block(.att-accordion)
+* AMBASSADOR TAB & BUTTONS CONTAINER..... tabs and buttons block(.ambassador-cont__contact-tab, .ambassador-cont__action-button, .next-step-cta)
+* OVERLAY AND ZOOM CONTAINER..... overlay and zoom container(.js-overlay, .js-overlay-zoom)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.ambassador-cont{
+	@include brand-font;
+	@include font-color($primary-2);
+	border-top:1px solid $primary-2;
+	@include rem('margin', 35px 62px 0px);
+	display: block;
+
+	/*------------------------------------*\
+	    $AMBASSADOR CONTENT CONTAINER
+	\*------------------------------------*/
+
+	.ambassador-cont__price-detail {
+		@include main-font;
+		@include rem('padding', 45px 0 20px);
+		display:block;
+		text-align:center;
+		border-top: 1px solid $primary-2;
+
+		.product-price{
+			@include f(60);		
+		}
+		.product-taxes{
+			@include f(18);
+			@include font-color($primary-10);
+			@include rem('padding', 10px 0 5px);
+			display:block;
+			font-style:italic;
+		}
+	}
+	.contact-tab__title{
+		@include rem('margin-top', 33px);
+		position:relative;
+		text-transform:uppercase;
+		p{
+			display: inline;
+			text-align:center;
+			@include bold-font;
+			@include f(20);
+		}
+		span{
+			@include rem('margin-right', 12px);
+			@include rem('margin-top', -5px);
+			@include setSprite(14px, 15px, -577px, -20px);
+			position: relative;
+		}
+		span.on, span.off {
+			@include transition(0.2s);
+			transition-timing-function:linear;
+		}
+		span.off{
+			@include rotate(0deg);
+		}
+		span.on{
+			@include rotate(90deg);
+		}
+	}
+	.ambassador-cont__attributes{
+			
+		@include rem('margin-top',25px);		
+		.attributes-size{
+			float: left;
+			width:50%;
+			.styled-select select{
+				@include font-color($primary-3);
+			}
+			.form-select {
+				@include rem('margin', 0 0 75px 0);	
+				font-size:22px;   
+				option[data-availability='false']{
+					color: $primary-129;
+				}
+			}
+		}
+		.attributes-sizing-guide{
+			@include font-color($primary-2);
+			@include rem('line-height',70px);
+			display:inline-block;
+			float:right;
+			.arrow-show {
+				margin-right: 12px;
+    			margin-top: 4px;
+			}
+			a{
+				text-transform:uppercase;
+				@include bold-font;
+				padding:0;
+				vertical-align:middle;
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $AMBASSADOR ACCORDIAN CONTAINER
+	\*------------------------------------*/
+
+	.att-accordion{
+		@include rem('padding', 0 0 105px);
+		margin:0 auto;
+		width:100%;
+		.att-accordion__wrapper{
+			border-top:solid 1px $primary-6;
+		}
+		.att-accordion__node {
+			border-bottom:solid 1px $primary-6;
+			overflow:hidden;
+			//.bx-viewport{
+			//	height: 385px !important;
+			//	.bxslider li {
+			//		height: 600px;
+			//	}
+			//}
+		}
+		.att-accordion_node__title {
+			@include rem('padding', 15px 0px 15px);
+			position:relative;
+			text-align:left;
+			.att-accordion_node_title__ques{
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table
+			}
+			p, h2{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+		 	 	@include bold-font;
+		 	 	@include f(22);
+			}
+			span{
+				position:absolute;
+				right:0;
+				top:30%;
+			}
+		}
+		.att-accordion_node__desc{
+			@include f(26);
+			@include main-font;
+			@include font-color($primary-50);
+		}
+	}
+
+	/*------------------------------------*\
+	    $AMBASSADOR TAB & BUTTONS CONTAINER
+	\*------------------------------------*/
+
+	.ambassador-cont__contact-tab{
+		text-align:center;
+		@include font-color($primary-3);
+		@include rem('margin', 10px 0 75px);
+		clear:both;
+		@include rem('padding', 20px 0 0);
+		a{
+			text-transform:uppercase;
+			@include brand-font;
+			@include f(22);
+			@include rem('margin-bottom', 10px);
+			@include rem('margin-top', 30px);
+		}
+		.message-area{
+			margin-top:10px;
+			color:#ffffff;
+			padding:20px;
+			display:block;
+			border:1px solid #4d4d4d;
+			@include f(20);
+			@include brand-font;
+			span{
+				margin-top:5px;
+				text-transform:uppercase;
+				display:block;
+				@include bold-font;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.ambassador-cont__action-button{
+		text-align:center;
+		@include rem('margin', 0px 0);
+		@include bold-font;
+		.phone-detail{
+			@include f(26);
+			text-transform:uppercase;
+			text-align:center;
+			@include rem('margin', 4px 0);
+			.phone-detail__number{
+				@include font-color($primary-24);
+				display:block;
+			}
+		}
+	}
+	.next-step-cta{
+		text-align:center;
+		clear:both;
+		@include rem('margin-bottom', 16px);
+		.cta--red-width-auto {
+			@include rem('padding', 15px 50px 15px 30px);
+			@include rem('margin-top', 30px);
+		}
+	}
+}
+.ambassador--quick-links{
+	@include rem('margin', 20px 0);
+	display: inline-block;
+	width: 100%;
+}
+
+/*------------------------------------*\
+    $OVERLAY AND ZOOM CONTAINER
+\*------------------------------------*/
+
+.js-overlay {
+	display:none;
+	opacity : 1;
+	position: absolute;
+	@include rem('top', 83px);
+	left : 0;
+	background-color : $primary-1;
+	width : 100%;
+	z-index : 100;
+	.img-container {
+	    position: absolute;
+	    @include rem('top', 100px);
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    text-align:center;
+	    width: 100%;
+	    display:table;
+	    height:100%;
+	}
+	.img-container:before {
+	    content: ' ';
+	    display: inline-block;
+	    vertical-align: middle;
+	    height: 100%;
+	}
+	img {
+		opacity : 1;
+		display : block;
+		position: absolute;
+		left : 0;
+		right : 0;
+		top  : 0;
+		margin :auto;
+		vertical-align: middle;
+	    display: inline-block;
+	    max-height: 100%;
+	    max-width: 100%;
+ 		display: table-cell;
+	}
+}
+.js-overlay-zoom {
+	display: none;
+	opacity : 1;
+	position: fixed;
+	@include rem('top', 84px);
+	left : 0;
+	background-color : $primary-1;
+	width : 100%;
+	z-index : 100;
+	.degree360-icon-cont {
+		@include rem('height', 10px);
+		@include rem('margin-top', 80px);
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		a { position: relative;}
+	}
+	.img-container {
+	    position: fixed;
+	    top: 30px;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    text-align:center;
+	}
+	.img-container:before {
+	    content: ' ';
+	    display: inline-block;
+	    vertical-align: middle;
+	    height: 100%;
+	}
+	.image-tab{
+		display: block;
+		margin: 0 auto;
+		img {
+			opacity : 1;
+			background-color : $primary-1;
+			display : inline;
+			/*position: absolute;*/
+			left : 0;
+			right : 0;
+			top  : 0;
+			margin :auto;
+			vertical-align: middle;
+		    max-height: 100%;
+		    max-width: 100%;
+		}
+	}
+}
+.body-push{
+	width:100%;
+	position:fixed;
+	left:450px;
+	overflow-x:hidden;
+}
+.js-close-button {
+	@include setSprite(27px, 29px, -402px, -285.3px); 	
+	opacity : 1;
+	@include font-color($primary-2);
+	@include rem('width', 50px);
+	@include rem('height', 48px);
+	display : block;
+	position: absolute;
+	@include rem('right', 20px);
+	@include rem('top', 30px);
+	z-index: 100;
+	a {
+		@include rem('width', 50px);
+		@include rem('height', 50px);
+		display: inherit;
+	}
+	.form-check-label{
+		width:80%;
+	}
+}
+.js-video-url {
+	opacity: 0;
+}
+video { background: #CCC; border: thin solid #999;}
+.history-carousel .carousel .bxslider li:before{
+	padding-top: 0;
+}
+
+.js-product .copy-to-wishlist .single-line .js-addtomywishlist-ok{top:6px;}
+.js-product .copy-to-wishlist .single-line .js-createnewwishlist-ok{top:2px;}
+.copy-to-wishlist .form-input.js-newwishlistname {
+	height: 56px;
+}
+
+#js-request-price-form .textarea-wrapper.requestPrice_message {
+	display: none;
+}
+
+.suggestion-carousel .carousel .rslides li{
+	height: auto !important;
+}

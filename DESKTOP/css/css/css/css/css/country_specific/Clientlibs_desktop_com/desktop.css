@@ -1,0 +1,208 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*$primary-88     : #472021;*/
+/*$primary-89		: #6D3536;*/
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize"; 
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/* line 24, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 .fn_strname {
+  clear: both !important;
+}
+/* line 27, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 .fn_addrinfo {
+  width: 48%;
+  clear: none;
+  float: left;
+}
+/* line 32, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 #fn_zip {
+  width: 176px !important;
+}
+/* line 35, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 .fn_town {
+  clear: none;
+  width: 48%;
+}
+/* line 39, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 .fn_state {
+  width: 44% !important;
+}
+/* line 42, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 .fn_phno {
+  clear: none !important;
+}
+/* line 44, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-reg-step-3 .fn_phno #fn_phno {
+  width: 190px !important;
+}
+
+/* line 50, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .input-wrapper {
+  width: 48%;
+}
+/* line 53, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_firstName1 {
+  width: 46%;
+}
+/* line 56, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressLabel {
+  width: 48%;
+}
+/* line 58, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressLabel #addressLabel {
+  width: 96%;
+}
+/* line 62, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .fn_strname {
+  clear: both;
+}
+/* line 65, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_phone {
+  margin-left: 0px;
+}
+/* line 68, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form #addressform_phone {
+  width: 96%;
+}
+/* line 71, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_address2 {
+  margin-top: 15px;
+  margin-right: 0px;
+}
+/* line 75, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_address5 {
+  clear: left;
+  margin-top: 15px;
+}
+/* line 78, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_address5 .form-input {
+  width: 96%;
+}
+/* line 82, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_address7 {
+  clear: none;
+}
+/* line 84, ../../../../../../../sass/country_specific/Clientlibs_desktop_com/desktop.scss */
+.js-address-form .addressform_address7 .form-input {
+  width: 96%;
+}

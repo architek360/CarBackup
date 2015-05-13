@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    country list-- DESKTOP CSS
+\*------------------------------------*/
+/**
+
+*/
+
+/*------------------------------------*\
+    country list
+\*------------------------------------*/
+
+
+
+.coutry-list-wrapper{
+    @include rem('margin',30px 0px 0px 0px );
+
+    
+    h3{
+        letter-spacing: 3px;
+        border-top: 1px solid $primary-17;
+        @include rem('padding',15px 0px 0px 0px );
+        @include rem('line-height', 21px);
+        text-transform: uppercase;
+        @include proxi-font;
+        text-align: left;
+        @include f(15);
+        color: $primary-2;
+    }
+    .more-button{
+        @include  transition-full(color, 0.2s, ease-in-out);
+        @include rem('padding',2px 10px 2px 0px );
+        &:hover{
+            color: $primary-2;
+        }
+    }
+    .grid__item{
+        display:inline-block;
+        float: none;
+        width:32%;
+        @include rem('margin-bottom',30px);
+        @include rem('min-height',430px);
+        
+    }
+
+    .coutry-list-wrapper__row {
+        margin-bottom:30px;
+    }
+}

@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    Expiration Date -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.expiration-date)
+ * TITLE BLOCK......HEADING (.expiration-date__title)
+ * DROPDOWN STYLING......SELECT BOX styling (.styled-select)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+
+.expiration-date {
+
+	@include brand-font;
+	@include font-color($primary-2);	
+	display: block;
+	background: $primary-1; 
+	/*width: 81.25%;*/
+	margin: 0 auto;	
+	@include rem('margin-bottom', 20px);	
+
+	.expiration-date__title {
+		text-align: left;
+		text-transform: uppercase;
+		@include bold-font;
+		@include rem('margin-bottom', 10px);
+		@include f(22);
+	}
+	ul {
+		@include set-ulFix;
+		overflow:auto;
+		
+		li {
+					width: 47%;
+					float:left;
+					margin: 0;
+					display: inline-block;
+					border: none;
+					@include rem('height', 58px);
+
+					/*.expiration-date__dropdown select {
+					   background: transparent;
+					   width:100%;
+					   @include rem('padding', 6px);
+					   @include rem('padding-left', 57px);
+					   @include rem('padding-top', 13px);
+					   @include font-color($border_grey);					   
+					   @include main-font;
+					   @include f(22);
+					   text-align: left;
+					   line-height: 1;
+					   border: 0;
+					   -webkit-appearance: none;
+
+					   option{
+					   		@include main-font;
+					   		background:$primary-1;
+					   }
+					}
+					.expiration-date__dropdown {
+						width: 100%;
+						@include rem('height', 56px);
+						overflow: hidden; 
+						@include font-color($text_grey);
+						background:$primary-16 url($path-images + 'icons/select_arrow.png') no-repeat right 0 ;	 
+						border: 1px solid $primary-12;
+
+						.form-select{
+							@include main-font;
+						}
+						
+					}*/
+			}
+		li:last-child {
+			margin-left:2%;
+			float:right;
+
+		}
+	}
+
+	.form-select {
+		@include main-font;
+		font-style: italic;
+	}
+}

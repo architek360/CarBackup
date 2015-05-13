@@ -1,0 +1,24 @@
+<!-- View All Block Starts Here-->
+<div class="search-page-wrapper js-others">
+	<h1 class="heading1">search results</h1>
+		<!--#include virtual="../../components/search_box/desktop.shtml" -->
+	
+	<!--#include virtual="../../views/refine_selection/desktop.shtml" -->	
+	<span class="total-result">100 RESULT</span>
+	<input type="hidden" value="800" name="priceRangeUpperBound"></input>
+	<input type="hidden" value="300" name="priceRangeLowerBound"></input>
+	<input type="hidden" value="" name="minPrice"></input>
+	<input type="hidden" value="" name="maxPrice"></input>
+	<div class="view-items jewellery">
+	<h2 class="heading2">jewellery(48)</h2>
+		<!--#include virtual="../../views/collection_view_all_pushes/search.shtml" -->
+	</div>
+
+	
+	<div class="view-items">
+	<h2 class="heading2">Accessories(1)</h2>
+		<!--#include virtual="../../views/collection_view_all_pushes/search.shtml" -->
+	</div>
+
+</div>
+<!-- tab Collection View All Block Ends Here-->

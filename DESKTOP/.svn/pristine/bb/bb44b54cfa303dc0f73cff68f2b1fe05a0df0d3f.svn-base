@@ -1,0 +1,228 @@
+/*------------------------------------*\
+    ECS BILLING PAYMENT PAGE -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..... main container (.ecs-payment-page)
+ * CARD FIELD CONTAINER..... payment card fields block(.payment_card_number, .payment_card_month.... , .payment_card_name)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.ecs-payment-page{
+	background: none;
+	height: auto;
+	@include rem('margin-top', 9px);
+	.form{
+		width:100%;
+		ul{
+			@include rem('margin-left', 105px);
+			li{
+				display: inline-block;
+				@include rem('padding', 8px 15px 0 0);
+				&:first-child{
+					.formerror{
+						@include rem('top', 0px);
+						position: relative;
+					}
+				}
+			}
+		}
+		label{
+			@include font-weight(bold);
+			@include rem('letter-spacing', 1px);
+			@include rem('margin-bottom', 5px);
+			text-transform: uppercase;
+			display: block;
+			@include proxi-font;
+			@include f(11);
+			@include rem('line-height', 11px);
+			&.error {
+			    @include rem('width', 250px);
+			    position: absolute;
+			    @include rem('top', -26px);
+			    @include rem('left', 89px);
+			}
+		}
+		.radio-title{
+			display: inline-block;
+		}
+		.form-input{
+			border: 1px solid $primary-60;
+			background: $primary-105;
+		}
+		.checker{
+			input{
+				@include opacity('0');
+			}
+		}
+		.form-element{
+			display: inline-block;
+		}
+		.button-wrapper{
+			@include rem('padding-bottom', 30px);
+		}
+
+		/*------------------------------------*\
+		    $CARD FIELD CONTAINER
+		\*------------------------------------*/
+
+		.payment_card_number{
+			@include rem('margin-left', 105px);
+			@include rem('width', 170px);
+		}
+		.payment_card_month{
+			@include rem('margin', 0px 0 10px);
+			@include rem('padding', 0px);
+			@include rem('margin-left', 20px);
+			#uniform-payment_card_month{
+				width: 120px !important;
+				span{
+					width :115px !important;
+				}
+			}
+		}
+		.payment_card_year{
+			@include rem('margin-left', 30px);
+			@include rem('padding', 0px);
+			#uniform-payment_card_year{
+				width: 100px !important;
+				span{
+					width :105px !important;
+				}
+			}
+		}
+		.payment_card_cvv{
+			@include rem('width', 95px);
+			@include rem('padding', 0px);
+			@include rem('margin-right', 60px);
+			clear: left;
+			@include rem('margin-left', 105px);
+			input{
+				@include rem('width', 85px);
+			}
+		}
+		.payment_card_name{
+			@include rem('width', 300px);
+			@include rem('padding', 0px);
+			@include rem('margin-bottom', 30px);
+			#payment_card_name{
+				@include rem('width', 300px);
+			}
+		}
+		p.instruction-text{
+			text-align: center;
+		}
+		label[for="blank"]{
+			clear:both;
+			@include rem('letter-spacing', 0px);
+			@include rem('padding-top', 30px);
+			border-top: 1px solid $primary-79;
+			text-align: center;
+			.checker{
+				display: inline-block;
+				float: none;
+				input{
+					cursor: pointer;
+				}
+				span{
+					@include rem('margin-top', 0px);
+				}
+			}
+			span{
+				text-transform: none;
+				@include font-weight(normal);
+				@include rem('letter-spacing', 0px);
+				@include f(13);
+			}
+		}
+		.heading-wrapper{
+			.heading-white-line{
+				border-bottom: 1px solid $primary-79;
+				@include rem('margin-bottom', 20px);
+				@include rem('padding-top', 0px);
+			}
+			.heading4{
+				text-align: center;
+				@include main-font();
+			    text-transform: none;
+			    font-weight: normal;
+			    @include f(11);
+			}
+		}
+		.form-element{
+			&.checkbox-wrapper{
+				width: 100%;
+			    text-align: center;
+				.form-checkbox-label{
+				    text-align: center;
+					@include main-font();
+				    text-transform: none;
+				    font-weight: normal;
+				    @include f(11);
+				    float: none;
+				    display: inline-block;
+				    width: auto;
+				    a{
+				    	text-decoration: underline;
+					    color: $primary-114;
+					    @include main-font;
+				    }
+				}
+				.checker{
+					float: none;
+			    	display: inline-block;
+				}
+			}
+		}
+	}
+	fieldset{
+		.rte-wrapper{
+			&:first-child{
+				border-bottom: 1px solid $primary-79;
+				@include rem('margin-bottom', 20px);
+				@include rem('padding-bottom', 20px);
+			}
+		}
+	}
+	.card_type {
+		@include rem('margin', 0 0 0 105px);
+		@include rem('padding-bottom', 0px);
+		@include font-weight(bold);
+		@include rem('letter-spacing', 1px);
+		@include rem('margin-bottom', 5px);
+		text-transform: uppercase;
+		@include proxi-font;
+		@include f(11);
+		@include rem('line-height', 11px);
+	}
+}
+.left-payment-sec {
+	.comp-rich-text.rte-wrapper{
+		 p{
+		 	color: $primary-65 !important;
+    		@include rem('padding', 0px);
+		 }
+	}
+}
+.right-payment-sec{
+	.price-detail{
+		.price-detail__row{
+			&.line{
+				border-top: 1px solid $primary-84;
+				@include rem('margin', 19px 0px);
+			}
+			.price-detail--note{
+				@include rem('padding', 0px);
+			}
+		}
+	}
+}
+
+#ecs-payment-page{
+	.ecs-payment-dummy-username, .ecs-payment-dummy-password {
+		display:none;
+	}
+}
+

@@ -1,0 +1,15 @@
+<!-- store locater wrapper Starts Here-->
+<div class="boutique-search-wrapper clearfix">
+    <!--#set var="standalone" value="true" -->
+    <!--#include virtual="../../components/autosuggest/desktop.shtml" -->
+    <div class="boutique-bg">
+    	<img src="<!--#echo var="CONTENT_IMG_PATH" -->bg-store-locator-homepage.jpg" alt="find a boutique">
+        
+    </div>
+    <div class="see-all">
+        <!--#set var= "arrow-class"  value= "arrow-show" -->
+        <!--#set var="more-text" value="SEE ALL THE CARTIER BOUTIQUES" -->
+        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+     <!-- <div class="videocontainer js-video">
+                        
+                
+                       
+                    </div> -->
+                   <!-- <span class="video-url js-video-url" 
+                    data-url="http://www.youtube.com/embed/geTgZcHrXTc?enablejsapi=1&version=3&playerapiid=ytplayer?wmode=transparent" 
+                    data-source="youtube"></span> -->
+                    <!-- <span class="video-url js-video-url" 
+                    data-url="http://www.youtube.com/embed/qtngzm0T1yI?autoplay=1&origin=http://cartier.com" 
+                    data-source="youtube"
+                    data-lang-pref="fr"
+                    data-load-policy="1"></span> 
+                      <span class="video-url js-video-url" 
+                    data-url="http://www.youtube.com/embed/hqiNL4Hn04A?autoplay=0&origin=http://cartier.com" 
+                    data-source="youtube"
+                    data-lang-pref="fr"
+                    data-load-policy="1"></span>
+        -->
+
+                
+                    <!--<span class="video-url js-video-url" 
+                    data-id="XMzYwNjE4MDQ4" data-source="youku"
+                    data-url="http://player.youku.com/player.php/sid/XMzYwNjE4MDQ4/v.swf"
+                    data-lang-pref="fr"
+                    data-load-policy="1"></span> -->
+
+
+
+
+
+<div>
+<!--#include virtual="../../views/multiple_video_carousel/desktop.shtml" -->
+</div>

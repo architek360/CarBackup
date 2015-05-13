@@ -1,0 +1,137 @@
+/*------------------------------------*\
+   Tabs Box -- Desktop CSS
+\*------------------------------------*/
+/**
+ * Main CONTAINER.... Wrapper for Tabs (.tabs)
+ * Heading Block for Tab .... Wrapper for Tabs Heading (.tabs__title)
+ * Content CONTAINER for Tab .... Wrapper for Tabs content (.tabs__content)
+ */
+
+/*------------------------------------*\
+    $tabs CONTAINER
+\*------------------------------------*/
+
+
+.tabs {
+
+    @include proxiBold-font;
+    @include font-color($primary-2);  
+    display: block;
+    background: $primary-1; 
+    /*width: 81.25%;*/
+    margin: 0 auto; 
+    @include rem('padding', 20px 0px);  
+
+
+
+    .tab-header {
+        border-bottom: 1px solid $primary-17;
+        @include rem('height', 30px);  
+        left: 0;
+        padding-left: 0;
+        position: absolute;
+        width: 100%;
+        margin: 0px auto;
+        @include rem('margin-top', 30px); 
+        @include rem('margin-bottom', 30px); 
+
+
+        ul.tabs__nav {
+            @include font-color($primary-2);  
+            @include proxiBold-font;
+            position: static;
+            width: auto;
+            margin: 0px auto;
+            @include rem('margin-top', -3px); 
+            @include rem('margin-bottom', -3px); 
+
+            li {
+                position: relative;
+                text-align: center; 
+                display: inline-block;
+                margin:0;
+                background-color:$primary-58;
+                border: 1px solid $primary-17 ;
+                color: #5C5C5C;
+                @include proxiBold-font;
+                @include f(12);
+                @include rem('letter-spacing', 1.2px);
+                text-transform: uppercase;
+                vertical-align: middle;
+                @include rem('width', 230px);
+                @include rem('padding', 7px 0px);
+                @include rem('height', 18px);
+
+                .tab__title-wrapper{
+                    width: 100%;
+                    max-width: none;
+                    display: inline-block;
+                    vertical-align:middle;
+                    @include proxiBold-font;
+                    @include f(12);
+                    display: block;
+                    @include font-color($primary-3);
+
+                }
+
+                &:hover .tab__title-wrapper{
+                    @include font-color($primary-2);
+                }
+            }
+            li:hover {
+                @include font-color($primary-2);
+                background: $primary-58;
+                border: 1px solid $primary-17;
+            }
+            .tab-active, .tab-active:hover {
+                
+                @include font-color($primary-2);
+                border-bottom: none;
+                background: $primary-1;
+                padding: 0;
+                @include rem('padding', 7px 0px 8px);
+                @include f(12);
+                border-bottom: none;
+
+                .tab__title-wrapper {
+                    @include font-color($primary-3);
+                }
+            }
+
+            .tab-active {
+                display: inline-block;
+                .tab__title-wrapper {
+                     @include font-color($primary-2);
+                }
+                .tab__title-wrapper:after {
+                    @include setSpriteDesktop(8px, 15px ,-54px, -50px, transparent);
+                    content: "";
+                    display: block;
+                    @include rem('height', 3px);
+                    @include rem('width', 5px);
+                    margin: 0 auto 0;
+                    @include rem('margin-top', 3px);
+
+                }
+            }     
+        }
+    }
+    /* End of Tabs_header Wrapper*/
+    
+    .tabs__content {
+            margin: 0;
+            padding: 0;
+            background: none repeat scroll 0% 0% $primary-1;
+            @include rem('left', 0px);
+            @include rem('top', 80px);
+            @include rem('bottom', 0px);
+            @include rem('right', 0px);            
+            display: none;
+            @include rem('margin', 70px 0 0);
+            opacity: 0;
+        }
+        .content-active {
+            display: block;
+            opacity: 1.0;
+    }
+}

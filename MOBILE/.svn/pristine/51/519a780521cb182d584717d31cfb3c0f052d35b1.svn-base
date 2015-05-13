@@ -1,0 +1,1108 @@
+/*!
+ * cartier.shoppingbag.js
+ * This file contains functionalities handling the my billing module
+ *
+ * @project   cartier mobile
+ * @date      2014-01-03
+ * @author    SapientNitro 
+ * @licensor  cartier mobile
+ * @site      cartier mobile
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+
+;
+(function(win, $, shoppingbag, undefined) {
+	//this will cause the browser to check for errors more aggressively
+	'use strict';
+
+	//check if jquery is defined, else retun
+	if (typeof $ === "undefined") {
+		console.log("jQuery not found");
+		return false;
+	}
+
+	/*
+        private variables
+        */
+
+	var
+	_cache = {},
+		clonedBag,
+		clonedProduct,
+		_objPropertiesPth,
+		_objPropertiesMsg,
+
+		/*
+          @private method : caching jquery objects 
+          @param : none 
+        */
+		_cacheObjects = function() {
+
+			_cache = {
+				$shoppingbag: $(".js-shoppingbag"),
+				accordionObject: $(".js-accordion"),
+				datePicker: $(".js-date-picker"),
+				$boldclass: "js-bold-class",
+				$cursiveclass: "js-cursive-class",
+				$composeMessage: $(".js-message"),
+				$line1: $(".js-engraving-preview-line1"),
+				$line2: $(".js-engraving-preview-line2"),
+				$accancel: $('.js-cancel-ac'),
+				$acconfirm: $('.js-confirm-button'),
+				$closebutton: $('.js-close-button'),
+				$quantityDropdown: $('.js-quantityselect'),
+				$submitButton: $('.js-confirm-button'),
+				$cancleButton: $('.js-cancel-ac'),
+				$inputFields: $('.js-inputfield'),
+				$checkout: $('.js-proceed-to-checkout'),
+				$sizeDropdown: $('.js-sizerow select'),
+				$countryDropDown: $('.js-country-dropdown'),
+				$addtomywishlistok: $('.js-addtomywishlist-ok'),
+				$messagerow: $('.js-messagerow'),
+				$crossButton: $('.js-crossbutton'),
+				$checkoutAjaxToCheckRes: $('.js-checkout-ajax')
+			};
+		},
+
+		/*
+	        @private method : binding the event 
+	        @param : none 
+    	*/
+		_bindEvents = function() {
+
+			_cache.$checkoutAjaxToCheckRes.on('click', function(e) {
+				e.preventDefault();
+
+				var $that = $(this);
+				_ajaxSubmitHandlerForCheckoutButton(_objPropertiesPth.checkoutCallRes, function(data) {
+					if (data.reservationSuccess) {
+						window.location.href = $that.attr('href');
+					} else {
+						window.location.reload();
+					}
+				});
+			});
+
+			// Click event for close button
+			_cache.$closebutton.on('click', function() {
+				$('.body-wrapper').data('plugin_analytics').shoppingBagGAEventsRemoval($(this));
+				_updatedShoppingBag(_objPropertiesPth.deleteTeaser, $(this).closest('form').serialize());
+			});
+
+			// On change event for quantity drop down
+			_cache.$quantityDropdown.on('change', function() {
+				$('.body-wrapper').data('plugin_analytics').shoppingBagGAEventsQuantity();
+				_updatedShoppingBag(_objPropertiesPth.quantityChange, $(this).closest('form').serialize());
+			});
+
+			// Click event for submit button
+			_cache.$submitButton.on('click', _submitHandler);
+
+			// Click event for cancel button
+			_cache.$cancleButton.on('click', function(e) {
+
+				e.preventDefault();
+				var $this = $(this).closest('fieldset');
+
+				$this.find('.js-inputfield').each(function(index, el) {
+					$(el).val($(el).data().backup).trigger('change');
+				});
+
+				var $thisNode = $(this).closest('.js-accordion__node');
+				//console.log($thisNode.data().backup);
+				if ($thisNode.data().backup) {
+					setTimeout(function() {
+						$thisNode.find('.slide_switch').find('input:eq(1)').trigger('click');
+					}, 10); /// Fix for firefox
+				} else {
+					setTimeout(function() {
+						$thisNode.find('.slide_switch').find('input:eq(0)').trigger('click');
+					}, 10); /// Fix for firefox            	
+				}
+
+				if ($thisNode.hasClass('js-messagerow')) {
+					//console.log($thisNode.data().backupblankcard);
+
+					if ($thisNode.data().backupblankcard) {
+						setTimeout(function() {
+							$thisNode.find('.js-radio-change-handler li:eq(1)').find('input').trigger('click').end().trigger('click').trigger('change');
+						}, 10); /// Fix for firefox
+					} else {
+						setTimeout(function() {
+							$thisNode.find('.js-radio-change-handler li:eq(0)').find('input').trigger('click').end().trigger('click').trigger('change');
+						}, 10); /// Fix for firefox            	
+					}
+				}
+
+				$(".js-accordion").data('plugin_makeAccordion')._closeHandler($(this));
+			});
+
+			// On change event for removing the error message
+			_cache.$inputFields.on('change keyup blur', function() {
+				$(this).closest('fieldset').find('span.error').remove();
+			});
+
+			// Click event for checkout button
+			_cache.$checkout.on('click', function() {
+				_updatedShoppingBagCheckout(_objPropertiesPth.bagCheckout, "currentPage=" + $("#currentPage").val() + "&successPage=" + $('#successPage').val());
+			});
+
+			// On change event for size drop down to update the product info
+			_cache.$sizeDropdown.on('change', function() {
+				$('.body-wrapper').data('plugin_analytics').shoppingBagGAEventsSizechange($(this));
+				_updatedShoppingBag(_objPropertiesPth.sizeUpdateShopping, $(this).closest('form').serialize());
+			});
+
+			// On change event for country drop down to update the shopping bag
+			_cache.$countryDropDown.on('change', function() {
+				_updatedShoppingBag(_objPropertiesPth.countrydropdown, $(this).closest('form').serialize());
+			});
+
+			// Click event for cross button
+			_cache.$crossButton.on('click', function() {
+				_deleteSectionHandler($(this));
+			});
+
+			// Click event for sign in and checkout button
+			$('.js-login-checkout-cta').on('click', function() {
+				_loginBeforeCheckout();
+			});
+
+			// Click event for add selection to wishlist button
+			// check the cookie whether user is loggedin or not
+			var loggedIn = cartier.common.isLoggedIn();
+			_guestAccount(loggedIn);
+
+		},
+
+		/*
+	        @private method : Cross button handler
+	        @param : $this 
+    	*/
+		_deleteSectionHandler = function($this) {
+			var
+			sendString = "";
+
+			if ($this.closest('.js-accordion__node').hasClass('js-engravingrow'))
+				sendString = 'engraving';
+			else if ($this.closest('.js-accordion__node').hasClass('js-braceletrow'))
+				sendString = 'bracelet';
+			else if ($this.closest('.js-accordion__node').hasClass('js-messagerow'))
+				sendString = 'message';
+
+			_updatedShoppingBag(_objPropertiesPth.deleteSectionInBag, $this.closest('form').serialize() + '&deleteSection=' + sendString);
+
+		},
+
+		/*
+	        @private method : Submit button handler
+	        @param : event
+    	*/
+		_submitHandler = function(e) {
+			e.preventDefault();
+			_messageCardValidation($(this));
+			_engravingValidation($(this));
+			var braceletInput = $(this).closest('fieldset').find("input[name='fn_wristsize']");
+			if (braceletInput.length > 0) {
+				var min = parseFloat(braceletInput.attr('data-min')),
+					max = parseFloat(braceletInput.attr('data-max'));
+				if (isNaN(min)) min = 5;
+				if (isNaN(max)) max = 10;
+
+				_braceletValidation(max, min, braceletInput);
+			}
+
+			var isValid = $(this).closest('fieldset').find('span.error').remove().end().find('.js-inputfield').valid();
+			_updatedShoppingBag(_objPropertiesPth.productUpdate, $(this).closest('form').serialize(), function(jqXHR) {
+				if (!isValid) {
+					jqXHR.abort();
+					return false;
+				} else {
+					return true;
+				}
+			});
+		},
+
+
+		/*	
+	      @private method :Function to initialize the accordion
+	      @param : none 
+	    */
+		initializeAccordion = function() {
+			_cache.accordionObject.makeAccordion({
+				showBehaviour: true
+			});
+
+		},
+
+
+		/*	
+	      @private method :clones the shopping bag from the HTML. Runs on the page load
+	      @param : none 
+	    */
+		_cloneShoppingBag = function() {
+			clonedBag = $(".js-dynamic-shopping-bag").clone(true, true);
+			clonedProduct = clonedBag.find('.js-product-inbag').clone(true, true);
+			clonedBag.find('.js-product-inbag').remove();
+			_updatedShoppingBag(_objPropertiesPth.getCart, "currentPage=" + $("#currentPage").val());
+		},
+
+		/*	
+	      @private method : Updates the whole shopping bag. Makes an AJAX call to get an updated shopping bag
+	      @param : action that has to be sent in the ajax call
+	    */
+		_updatedShoppingBag = function(pathVariable, dataToSend, _beforesend) {
+			if (_beforesend === undefined)
+				_beforesend = function() {
+					return true;
+				};
+
+			dataToSend = dataToSend + "&currentPage=" + $("#currentPage").val() + "&adaptivePath=" + $('.js-adaptiveImage').data('original');
+
+			_ajaxSubmitHandler(pathVariable, dataToSend, function(data) {
+
+				if (data.reservflag !== undefined && data.reservflag === true) {
+					$('.js-reservation-div').removeClass('display-none');
+				} else {
+					$('.js-reservation-div').addClass('display-none');
+				}
+
+				$(".loadernode").replaceWith(_fillShoppingBag(data));
+				_idFixForRadio();
+				cartier.common.checkCookie();
+				$('.body-wrapper')
+					.data('plugin_analytics')
+					.shoppingBagGAEvents();
+			}, _beforesend);
+		},
+
+		/*
+	        @private method : Submit button handler
+	        @param : pathVariable : Variable path
+			        dataToSend : data which want to send on call
+			        _beforesend : before send callback function
+    	*/
+		_updatedShoppingBagCheckout = function(pathVariable, dataToSend, _beforesend) {
+			if (_beforesend === undefined)
+				_beforesend = function() {
+					return true;
+				};
+			_ajaxSubmitHandler(pathVariable, dataToSend, function(data) {
+				if (data.isRedirect === undefined)
+					data.isRedirect = false;
+
+				if (data.isRedirect) {
+					win.location.href = data.redirectUrl;
+				}
+
+				$(".loadernode").replaceWith(_fillShoppingBag(data));
+				_idFixForRadio();
+				cartier.common.checkCookie();
+				$('.body-wrapper')
+					.data('plugin_analytics')
+					.shoppingBagGAEvents();
+
+			}, _beforesend);
+		},
+
+		/*	
+	      @private method : fills the shopping bag from the json and returns the filled shpping bag
+	      @param : data(json)
+	    */
+		_fillShoppingBag = function(data) {
+			$('.error-zone').remove();
+			var _bag = clonedBag.clone(true, true);
+			var teaserSize = data.teaserArray.length;
+			//Handle Update Failure
+			if ((data.isErrorMessageVisible || teaserSize === 0) && data.reservflag !== true) {
+
+				if (data.errorMessage === undefined || data.errorMessage === "")
+					data.errorMessage = _objPropertiesMsg.cartEmpty;
+
+				var _temp = $("<div class='error-zone'></div>").append(data.errorMessage);
+				_temp.insertAfter('.shopping-bag__info').ScrollTo({
+					duration: 800,
+					offsetTop: 340
+				});
+			}
+
+			if (teaserSize > 0) {
+				_setDataCurrency(_bag, data, "js-subtotal", "subTotal");
+				_setDatai18n(_bag, data, "js-subtotal-info", "subTotalInfo");
+
+				if (data.deliveryCharge === "checkout.label.tax.free")
+					_setDatai18n(_bag, data, "js-deliverycharge", "deliveryCharge");
+				else {
+					_setDataCurrency(_bag, data, "js-deliverycharge", "deliveryCharge");
+					_bag.find('.js-deliverycharge').removeClass("bold-font").addClass('font32');
+				}
+
+				_setDatai18n(_bag, data, "js-deliverycharge-info", "deliveryChargeInfo");
+				_setDataCurrency(_bag, data, "js-totalprice", "total");
+				_setDatai18n(_bag, data, "js-totalprice-info", "totalInfo");
+				if (data.ifSalesTax) {
+					_setDataCurrency(_bag, data, "js-saletax", "salesTax");
+				} else {
+					_bag.find('.js-saletaxrow').addClass('display-none');
+				}
+				if (data.countryCode !== undefined)
+					_bag.find('.js-country-dropdown').val(data.countryCode);
+
+				for (var i = 0; i < teaserSize; i++) {
+					data.teaserArray[i].currencySymbol = data.currencySymbol;
+					data.teaserArray[i].availableQuantities = data.cartCapacity;
+					_bag.find('.js-productlist-inbag').append(_fillProduct(data.teaserArray[i]));
+				}
+				_bag.removeClass('display-none');
+			}
+			return _bag;
+		},
+
+
+		/*	
+	      @private method :Fills a product data and returns a product in turn
+	      @param : data (json)
+	    */
+
+		_fillProduct = function(data) {
+			var _product = clonedProduct.clone(true, true);
+			var _option = _product.find('.js-quantityselect option:eq(0)').clone(true, true);
+			_setProductPagePath(_product, data, "js-pdpUrl", "productPagePath");
+
+
+
+			//Addition for google analytics
+			_product.attr({
+				"data-productLine": data.productLineEn,
+				"data-productCollection": data.productCollectionEn,
+				"data-productName": data.productTitleEn,
+				"data-productId": data.variantID,
+				"data-sellable": "sellable",
+				"data-productprice": data.productPrice,
+				"data-productquantity": data.selectedQuantity
+			});
+			//End google analytics
+			_setData(_product, data, "js-productTitle", "productTitle");
+			_setData(_product, data, "js-productDesc", "productDesc");
+			_setData(_product, data, "js-refId", "variantID");
+			_product.find('.teaserId').val(data.teaserID);
+
+			_setDataCurrency(_product, data, "js-productPrice", "productPrice");
+			_setDataCurrency(_product, data, "js-teaserTotal", "totalDisplayPrice");
+			_product.find('.js-imageURL').attr({
+				src: data.imageURL
+			});
+			_product.find('.js-quantityselect').empty();
+			var quantLength = data.availableQuantities;
+			for (var i = 0; i < quantLength; i++) {
+				var _toAddOption = _option.clone(true, true);
+				_toAddOption.html(i + 1).attr({
+					value: i + 1
+				});
+				_product.find('.js-quantityselect').append(_toAddOption);
+			}
+			_product.find('.js-quantityselect').val(data.selectedQuantity);
+
+
+			if (data.hasSize) {
+				_product = _fillSizeInfo(_product, data.sizeInfo);
+				_product.find('.js-refId').append('<br/> SIZE:' + data.sizeValue);
+			} else {
+				_product.find(".js-sizerow").addClass('display-none');
+			}
+
+			if (data.hasEngraving) {
+				_product = _fillEngravingInfo(_product, data.engravingInformation);
+			} else {
+				_product.find(".js-engravingrow").addClass('display-none');
+			}
+
+			if (data.hasBracelet) {
+				_product = _fillBraceletInfo(_product, data.braceletInfo);
+			} else {
+				_product.find(".js-braceletrow").addClass('display-none');
+			}
+
+			if (data.hasGiftCard) {
+				_product = _fillGiftcardInfo(_product, data.giftCardInfo);
+			} else {
+				_product.find(".js-messagerow").addClass('display-none');
+			}
+
+			return _product;
+		},
+
+		/*	
+	      @private method :Fill size info
+	      @param : product, data(json) 
+	    */
+		_fillSizeInfo = function(_product, data) {
+			if (data === undefined) {
+				data = {
+					sizeInfoOptions: [{
+						display: "",
+						value: ""
+					}]
+				};
+			}
+			var $sizerow = _product.find('.js-sizerow'),
+				_optionClone = $sizerow.find('option:eq(0)').clone(true, true),
+				maxOptions = data.sizeInfoOptions.length;
+			$sizerow.find('select').empty();
+			for (var i = 0; i < maxOptions; i++) {
+				var toAppendOption = _optionClone.clone(true, true);
+				toAppendOption.attr({
+					'value': data.sizeInfoOptions[i].value
+				});
+				toAppendOption.html(data.sizeInfoOptions[i].display);
+				$sizerow.find('select').append(toAppendOption);
+			}
+			$sizerow.find('select').val(data.selectedOption);
+			return _product;
+		},
+
+		/*	
+	      @private method :Fill engraving info
+	      @param : product, data(json) 
+	    */
+		_fillEngravingInfo = function(_product, data) {
+			if (data === undefined) {
+				data = {
+					lineOne: "",
+					lineTwo: "",
+					textStyle: true
+				};
+			}
+
+			if ((data.lineOne !== "" || data.lineTwo !== "") && false) { ////////////// Engraving Text display removed CARE-3368 (to enable, replace false with true)
+				_product
+					.find(".js-engravingrow .js-accordion_node__title span")
+					.addClass('opacity-none')
+					.end()
+					.find('.js-engravingrow .js-message-text-saved')
+					.removeClass('display-none')
+					.html(_notUndefined(data.lineOne) + ' ' + _notUndefined(data.lineTwo));
+
+			}
+
+			if ((data.lineOne !== "" || data.lineTwo !== "")) {
+				_product
+					.find(".js-engravingrow .js-accordion_node__title .js-crossbutton").removeClass('display-none');
+			}
+
+
+			_product.find('.js-line-1').val(data.lineOne).data('backup', data.lineOne).trigger('change').attr('maxlength', data.lineOneMax).attr('placeholder', data.lineOneMax + " " + _objPropertiesMsg.charactersMax);
+			_product.find('.js-line-2').val(data.lineTwo).data('backup', data.lineTwo).trigger('change').attr('maxlength', data.lineTwoMax).attr('placeholder', data.lineTwoMax + " " + _objPropertiesMsg.charactersMax);
+
+			if (data.lineTwoMax === "0" || data.lineTwoMax === 0 || typeof data.lineTwoMax === "undefined") {
+				_product.find('.js-line-2').closest('.engraving__line').addClass('display-none');
+			} else {
+				_product.find('.js-line-2').closest('.engraving__line').removeClass('display-none');
+			}
+
+
+			if (data.textStyle) {
+				setTimeout(function() {
+					_product
+						.find('.js-engravingrow').data({
+							'backup': true
+						})
+						.find('.js-cursive-switch')
+						.trigger('click')
+						.trigger('change')
+						.end()
+						.find('.js-message-text-saved')
+						.removeClass('bold-class')
+						.addClass('cursive-class');
+				}, 10); /// Fix for firefox
+			} else {
+				setTimeout(function() {
+					_product
+						.find('.js-engravingrow').data({
+							'backup': false
+						})
+						.find('.js-bold-switch')
+						.trigger('click')
+						.trigger('change')
+						.end()
+						.find('.js-message-text-saved')
+						.addClass('bold-class')
+						.removeClass('cursive-class');
+				}, 10); /// Fix for Firefox
+			}
+			return _product;
+		},
+
+		/*	
+	      @private method :Fill bracelet info
+	      @param : product, data(json) 
+	    */
+		_fillBraceletInfo = function(_product, data) {
+
+			if (data === undefined) {
+				data = {
+					lineOne: "",
+					min: "5",
+					max: "10",
+					textStyle: true
+				};
+			}
+
+
+
+			if ((data.lineOne !== "" && data.lineOne !== undefined && data.lineOne !== "undefined") && false) { ////////////// Bracelet Text display removed CARE-3368 (to enable replace false with true)
+				var fitting;
+				if (data.textStyle) {
+					fitting = _objPropertiesMsg.exact;
+				} else {
+					fitting = _objPropertiesMsg.loose;
+				}
+
+				_product
+					.find(".js-braceletrow .js-accordion_node__title span")
+					.addClass('opacity-none')
+					.end()
+					.find('.js-braceletrow .js-message-text-saved')
+					.removeClass('display-none')
+					.html(data.lineOne + ' CM   ' + fitting);
+
+			}
+
+			if ((data.lineOne !== "" && data.lineOne !== undefined && data.lineOne !== "undefined")) {
+				_product
+					.find(".js-braceletrow .js-accordion_node__title .js-crossbutton").removeClass('display-none');
+			}
+
+
+
+			_product.find('.js-line-3').val(data.lineOne).data('backup', data.lineOne).attr({
+				"data-max": data.max,
+				"data-min": data.min,
+				"placeholder": _objPropertiesMsg.valueInBetween + " " + data.min + " " + _objPropertiesMsg.toWordString + " " + data.max
+			});
+			if (data.textStyle) {
+				setTimeout(function() {
+					_product.find('.js-braceletrow').data('backup', true).find('.exact-fit-switch').trigger('click');
+				}, 10); /// Fix for Firefox
+			} else {
+				setTimeout(function() {
+					_product.find('.js-braceletrow').data('backup', false).find('.loose-switch').trigger('click');
+				}, 10); /// Fix for Firefox
+			}
+			return _product;
+		},
+
+		/*	
+	      @private method :Fill gift info
+	      @param : product, data(json) 
+	    */
+		_fillGiftcardInfo = function(_product, data) {
+			if (data === undefined) {
+				data = {
+					receiveBlank: false,
+					cardMessage: ""
+				};
+			}
+			if (data.receiveBlank) {
+				setTimeout(function() {
+					_product.find('.js-messagerow').data('backupblankcard', true).find('.js-radio-change-handler .radio-btn-li:eq(1) input').trigger('click');
+					_product.find('.js-messagerow').find('.js-radio-change-handler').trigger('click');
+				}, 10); /// Fix for Firefox
+				_product
+					.find(".js-messagerow .js-accordion_node__title .js-crossbutton").removeClass('display-none');
+			} else {
+				if (data.cardMessage !== "" && false) {
+					_product
+						.find(".js-messagerow .js-accordion_node__title span")
+						.addClass('opacity-none')
+						.end()
+						.find('.js-messagerow .js-message-text-saved')
+						.removeClass('display-none')
+						.text(data.cardMessage);
+				}
+				if (data.cardMessage !== "") {
+					_product
+						.find(".js-messagerow .js-accordion_node__title .js-crossbutton").removeClass('display-none');
+				}
+
+				setTimeout(function() {
+					_product
+						.find('.js-messagerow').data('backupblankcard', false)
+						.find('.js-radio-change-handler .radio-btn-li:eq(0) input')
+						.trigger('click')
+						.end()
+						.find('.js-message').val(data.cardMessage).data('backup', data.cardMessage);
+				}, 10); /// Fix for Firefox
+			}
+
+
+
+			if (data.textStyle) {
+				setTimeout(function() {
+					_product
+						.find('.js-messagerow').data('backup', true)
+						.find('.js-cursive-switch')
+						.trigger('click')
+						.trigger('change')
+						.end()
+						.find('.js-message-text-saved')
+						.removeClass('bold-class')
+						.addClass('cursive-class');
+				}, 10); /// Fix for Firefox
+
+			} else {
+				setTimeout(function() {
+					_product
+						.find('.js-messagerow').data('backup', false)
+						.find('.js-bold-switch')
+						.trigger('click')
+						.trigger('change')
+						.end()
+						.find('.js-message-text-saved')
+						.addClass('bold-class')
+						.removeClass('cursive-class');
+				}, 10); /// Fix for Firefox
+
+			}
+
+			return _product;
+		},
+
+		/*	
+	      @private method :Sets json data to dom
+	      @param : jquery dom object, json data, class on which the html has to be added, parameter of the json 
+	    */
+		_setData = function(obj, data, className, parameter) {
+			obj.find("." + className).html(data[parameter]);
+		},
+
+
+		/*	
+	      @private method :Sets json data to dom
+	      @param : jquery dom object, json data, class on which the html has to be added, parameter of the json 
+	    */
+		_setDataCurrency = function(obj, data, className, parameter) {
+			obj.find("." + className).html(data[parameter]);
+		},
+
+
+		/*	
+	      @private method :Sets json data to dom ( For Converting it to i18n)
+	      @param : jquery dom object, json data, class on which the html has to be added, parameter of the json 
+	    */
+		_setDatai18n = function(obj, data, className, parameter) {
+			obj.find("." + className).html(CQ.I18n.getMessage(data[parameter]));
+		},
+
+
+		_setProductPagePath = function(obj, data, className, parameter) {
+			obj.find("." + className).attr({
+				href: data.productPagePath + '.html'
+			});
+		},
+
+		/*	
+	      @private method :Ajax call 
+	      @param : action to be sent as a parameter , callback function
+	    */
+		_ajaxSubmitHandler = function(pathToSend, dataToSend, callback, _beforesend) {
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				url: pathToSend,
+				data: dataToSend,
+				dataType: 'json',
+				contentType: "application/x-www-form-urlencoded",
+				beforeSend: function(objXHR) {
+					if (_beforesend(objXHR)) {
+						$(".js-dynamic-shopping-bag").replaceWith("<div class='loadernode'>" + "" + "</div>");
+						$(".loadernode").addLoader().ScrollTo({
+							duration: 0,
+							offsetTop: 340
+						});
+					}
+				}
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					if (typeof data === "undefined") {} else {
+
+						var parsedData = cartier.common.cartierJSONparser({
+							json: data
+						});
+						if (parsedData !== false) {
+							callback(parsedData);
+						}
+					}
+				});
+			}
+			return false;
+		},
+
+
+		/*	
+	      @private method :Ajax call 
+	      @param : action to be sent as a parameter , callback function
+	    */
+		_ajaxSubmitHandlerForCheckoutButton = function(pathToSend, callback) {
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				url: pathToSend,
+				dataType: 'json',
+				contentType: "application/x-www-form-urlencoded"
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					if (typeof data === "undefined") {} else {
+						callback(data);
+					}
+				});
+			}
+			return false;
+		},
+
+
+		/*	
+	      @private method : Message style changer (bold or cursive)
+	      @param : none 
+	    */
+		_messageCardClassToggle = function() {
+			$(".slide_switch input").change(function() {
+				if ($(this).parent().find(".js-cursive-switch").is(':checked')) {
+					$(this).closest('.js-accordion__node').find('.js-message').removeClass(_cache.$boldclass).addClass(_cache.$cursiveclass);
+				} else
+				if ($(this).parent().find(".js-bold-switch").is(':checked')) {
+					$(this).closest('.js-accordion__node').find('.js-message').removeClass(_cache.$cursiveclass).addClass(_cache.$boldclass);
+				}
+			});
+		},
+
+		/*
+	      @private method : Function to provide functionality to engraving
+	      @param : none 
+	    */
+		_engravingPreview = function() {
+			$(".js-line-1").on("change paste keyup", function() {
+				$(this).closest('.js-accordion__node').find('.js-engraving-preview-line1').text($(this).val());
+			});
+			$(".js-line-2").on("change paste keyup", function() {
+				$(this).closest('.js-accordion__node').find('.js-engraving-preview-line2').text($(this).val());
+			});
+		},
+
+
+		/*	
+	      @private method : fixes radio button on the page
+	      @param : none 
+	    */
+		_idFixForRadio = function() {
+			_idFixForEachLoop('js-bold-switch', 'Bold');
+			_idFixForEachLoop('js-cursive-switch', 'Cursive');
+			_idFixForEachLoop('loose-switch', 'Loose');
+			_idFixForEachLoop('exact-fit-switch', 'Exact');
+			_idFixForEachLoop('compose-message', 'Compose');
+			_idFixForEachLoop('receive-message', 'Receive');
+		},
+
+
+		/*	
+	      @private method :adds an index value on the id of the radio
+	      @param : none 
+	    */
+		_idFixForEachLoop = function(className, idName) {
+			$('.' + className).each(function(index, el) {
+				$(el).attr({
+					id: idName + index
+				}).next('label').attr('for', idName + index);
+			});
+		},
+
+		/*
+	      @private method : Function to provide functionality to engraving
+	      @param : none 
+	    */
+
+		_engravingClassToggle = function() {
+
+			$(".slide_switch input").change(function() {
+				if ($(this).parent().find(".js-cursive-switch").is(':checked')) {
+					$(this).closest('.js-accordion__node').find('.js-engraving-preview-line1').removeClass(_cache.$boldclass).addClass(_cache.$cursiveclass);
+					$(this).closest('.js-accordion__node').find('.js-engraving-preview-line2').removeClass(_cache.$boldclass).addClass(_cache.$cursiveclass);
+				} else
+				if ($(this).parent().find(".js-bold-switch").is(':checked')) {
+					$(this).closest('.js-accordion__node').find('.js-engraving-preview-line1').removeClass(_cache.$cursiveclass).addClass(_cache.$boldclass);
+					$(this).closest('.js-accordion__node').find('.js-engraving-preview-line2').removeClass(_cache.$cursiveclass).addClass(_cache.$boldclass);
+				}
+			});
+		},
+
+
+		/*	
+	      @private method : handles the engraving radio 
+	      @param : none 
+	    */
+		_engravingRadioHandler = function() {
+			$('.js-radio-change-handler').on('click', function() {
+				if ($(this).closest('.js-accordion__node').find('.compose-message').prop('checked')) {
+					$(this).closest('.js-accordion__node').find('.js-hide-when-blank').removeClass('display-none');
+				} else if ($(this).closest('.js-accordion__node').find('.receive-message').prop('checked')) {
+					$(this).closest('.js-accordion__node').find('.js-hide-when-blank').addClass('display-none');
+				}
+			});
+		},
+
+		//--------------------------------------------------------------------------------------------------------
+		//          Module level validtion additions
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+	      @private method : extends jQuery validation for range checking on bracelet 
+	      @param : none
+    	*/
+		_braceletValidation = function(max, min, sizeInputField) {
+
+			$.validator.addMethod("range", function(value, element) {
+				var status = false,
+					decimalPattern = "[0-9]+(\.[0-9][0-9]?)?",
+					patt1 = new RegExp(decimalPattern);
+				var validNo = patt1.test(value);
+				if (validNo === true && value >= min && value <= max) {
+					status = true;
+				}
+				return status;
+			}, "");
+
+			$.validator.addMethod("hasNoSpace", function(value, element) {
+				return value.match(/\s/) === null;
+			}, "");
+
+			if (sizeInputField.length > 0) {
+				sizeInputField.rules("add", {
+					required: true,
+					hasNoSpace: true,
+					range: true,
+					messages: {
+						required: _objPropertiesMsg.mandatory,
+						range: _objPropertiesMsg.notInRange,
+						hasNoSpace: _objPropertiesMsg.hasNoSpace
+					}
+				});
+			}
+		},
+
+		/*
+	      @private method : Validation for message card with your gift. 
+	      @param : $this
+    	*/
+
+		_messageCardValidation = function($this) {
+			// extends jQuery validation for message required
+			$.validator.addMethod("messageRequired", function(value, element) {
+				if (!$(element).is(':visible')) {
+					return true;
+				} else {
+					if ($(element).val().trim() === "")
+						return false;
+					else
+						return true;
+				}
+			}, "");
+
+			var messageBox = $this.closest('fieldset').find('textarea');
+			if (messageBox.length > 0 && messageBox.is(':visible')) {
+				messageBox.rules('add', {
+					messageRequired: true,
+					messages: {
+						messageRequired: _objPropertiesMsg.messageEmpty
+					}
+				});
+			}
+		},
+
+		/*
+	      @private method : extends jQuery validation for empty field checking on PDP
+	      @param : none
+	    */
+		_engravingValidation = function($this) {
+			$.validator.addMethod("emptyField", function(value, element) {
+				var status = true,
+					field1 = $(element).closest('fieldset').find("input[name='fn_commsgone']"),
+					field2 = $(element);
+				if (field1.val().trim() === "" && field2.val().trim() === "") {
+					field1.addClass('error');
+					field2.addClass('error');
+					status = false;
+				} else {
+					field1.removeClass('error');
+					field2.removeClass('error');
+				}
+
+				return status;
+			}, "Please fill atleast one value");
+
+
+			var engravingInputField1 = $this.closest('fieldset').find("input[name='fn_commsgone']");
+			var engravingInputField2 = $this.closest('fieldset').find("input[name='fn_commsgtwo']");
+
+			if (engravingInputField2.length > 0) {
+				engravingInputField2.rules("add", {
+					emptyField: true,
+					messages: {
+						emptyField: _objPropertiesMsg.engravingErrorMessage
+					}
+				});
+			}
+
+			if (engravingInputField1.length > 0) {
+				engravingInputField1.on('change paste keyup', function() {
+					engravingInputField2.trigger('blur');
+				});
+			}
+
+		},
+
+		/*  @private method : Save Comment Popup Box
+          @param : none 
+        */
+		_saveButtonAjaxCallBack = function(parsedData, message, title, clickedEl) {
+
+			clickedEl.closest('.js-accordion__node').find('.js-add-selection').trigger('click');
+			_cache.$addtomywishlistok.confirmBox();
+			_cache.$addtomywishlistok.data('plugin_confirmBox').popupInitialize({
+
+					'title': title,
+					'anchormessage': message,
+					'src': $('.js-wishlistPath').val(),
+					'buttons': {
+						'ok': {
+							'buttonName': _objPropertiesMsg.okButton,
+							'class': 'cta-button cta-button__inner cta--red',
+							'action': function() {                                
+								//location.reload();                            
+							}
+
+
+						}
+					}
+				},
+				_cache.$addtomywishlistok.data('plugin_confirmBox').confirmHide
+			);
+		},
+		/*
+          @private method : Bind event for wishlist accordion 
+          @param : loggedIn :- login in or not 
+        */
+		_guestAccount = function(loggedIn) {
+			//Incase of logged In user
+			if (loggedIn) {
+				$('button').removeAttr('disabled');
+
+				$('.js-addtomywishlist-ok').on('click', function(e) {
+					e.preventDefault();
+					cartier.common.addSelectionToWishlist("addPDPwishlist", _saveButtonAjaxCallBack, _objPropertiesMsg.wishlistParagraph, _objPropertiesMsg.wishlistcopytoWishlist, $(this));
+				});
+
+				$('.js-createnewwishlist-ok').on('click', function(e) {
+					e.preventDefault();
+					$(this).closest('form').find('input[name="fn_newwishlistname"]').on('change keypress keydown', function() {
+						$(this).closest('.single-line').find('span.error').remove();
+					});
+					var that = $(this);
+					$(this).closest('form').find('input[name="fn_newwishlistname"]').closest('.single-line').find('span.error').remove();
+					if ($(this).closest('form').find('input[name="fn_newwishlistname"]').valid()) {
+						cartier.common.addSelectionToWishlist("createPDPwishlist", function(data) {
+							
+							var $option = $('<option></option>');
+							$option.attr('data-wishlistno', data.wishlistNumber)
+								.val(data.wishlistname)
+								.html(data.wishlistname);
+
+
+
+							var addOption = true;
+							$('.js-select-addtomywishlist').find('option').each(function(index, el) {
+								if ($(el).attr('data-wishlistno') === data.wishlistNumber)
+									addOption = false;
+							});
+
+							if (addOption)
+								$('.js-select-addtomywishlist').append($option);
+
+							_saveButtonAjaxCallBack("", _objPropertiesMsg.wishlistParagraph, _objPropertiesMsg.wishlistcopytoWishlist, that);
+							
+							$('.js-copytowishlist-input').removeClass('display-none');
+						});
+					}
+				});
+				//Incase of Not logged In user
+			} else {
+				$('.js-add-selection')
+					.closest('.js-accordion__node')
+					.find('.js-accordion_node__desc')
+					.addClass('display-none')
+					.end()
+					.find('span')
+					.removeClass('off')
+					.addClass('on');
+
+				$('.js-add-selection').on('click', function() {
+					cartier.common._guestAccountAjaxCallHandler("GuestUserWishList");
+					_saveButtonAjaxCallBack("", _objPropertiesMsg.wishlistParagraph, _objPropertiesMsg.wishlistcopytoWishlist, $(this));
+				});
+			}
+		},
+
+		/*
+          @private method : Not undefined
+          @param : loggedIn :- data
+        */
+
+		_notUndefined = function(data) {
+			if (data === undefined)
+				data = "";
+			return data;
+		},
+
+		/*
+          @private method : Local storage set before checkout
+          @param : loggedIn :- data
+        */
+		_loginBeforeCheckout = function() {
+			$.jStorage.set('loginBeforeCheckout', 'true');
+			$.jStorage.setTTL("loginBeforeCheckout", 3600000); ///// Time out for the local strorage = 1 hours
+			localStorage.setItem('signinandcheckout', 'true'); // LocalStorage set for GA
+
+		};
+
+	/*
+        	@pubic method : initailize the module
+        */
+
+	shoppingbag.init = function() {
+
+		// caching the jquery objects
+		_cacheObjects();
+		_objPropertiesPth = cartier.properties.paths;
+		_objPropertiesMsg = cartier.properties.messages;
+
+		//console.log('JS-LOG:Shopping Bag Init Called');
+		if (_cache.accordionObject.length) {
+			// Initializing the accordion
+			initializeAccordion();
+		}
+		_bindEvents();
+		_messageCardClassToggle();
+		_engravingClassToggle();
+		_engravingPreview();
+		_engravingRadioHandler();
+		cartier.formValidationWrapper.init($('.js-form-validator form'));
+		_cloneShoppingBag();
+		$('.js-engravingrow .js-cursive-switch').click();
+
+	};
+
+}(window, jQuery, cartier.shoppingbag));

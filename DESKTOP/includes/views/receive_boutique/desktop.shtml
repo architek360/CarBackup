@@ -1,0 +1,24 @@
+<!--boutique container starts here -->
+<div class="tab-content">
+	<h1 class="heading1"> I choose the cartier boutique</h1>
+	<p class="heading__desc">Please select a Cartier boutique in to receive the goods.</p>
+	<div class="form-elements js-boutique-list-container">
+		<label for="select_boutique">boutique<span class="asterik">*</span></label>
+		<select id="select_boutique" class="">
+			<option>Cartier Ginza</option>
+			<option>Cartier boutique Shinsaibashi</option>
+			<option>Cartier Nagoya</option>
+			<option>Cartier Minami-Aoyama store</option>
+			<option>Cartier Ginza</option>
+		</select>
+	</div>
+	<div class="">
+		<h3 class="heading3">cartier boutique</h3>
+		<p class="js-boutique-name">cartier ginza</p>
+		<img src="" alt="" />
+	</div>
+	<div class="next-btn">
+		<!--#set var="text-detail" value="Next" -->
+		<!--#include virtual="../../components/form_elements/desktop_button.shtml" -->
+	</div>
+</div>

@@ -1,0 +1,111 @@
+.js-ecs-payment-form{
+.form{
+	ul{
+		display: inline-block;
+		width: 100%;
+		li{
+			background-color: $primary-16;
+		    border: 1px solid $light_grey;
+		    float: left;
+		    @include rem('padding', 14px 0);
+		    width: 49%;
+		    span{
+		    	@include f(10);
+			    @include rem('margin-left', 81px);
+			    width: 7.7rem;
+		    }
+		    label{
+		    	display: inline-block;
+			    left: 15%;
+			    @include rem('padding', 10px 0 0);
+			    position: relative;
+			    top: 2px;
+		    }
+		}
+	}
+}
+.form-element.input-wrapper {
+	    display: table;
+	    width: 100%;
+	}
+.form-element label{
+		color: $primary-2;
+		@include font-weight(bold);
+	    @include rem('margin', 45px 0 0);
+	    @include rem('padding', 0 0 5px);
+	    display: block;
+	}
+.form-element.select-wrapper{
+		width: 47%;
+		float: left;
+	}
+.form-element.select-wrapper.payment_card_year {
+	    float: right;
+	}
+.form-element.button-wrapper{
+		background-color: $primary-52;
+	    margin: 20px auto;
+	    @include rem('padding', 15px 0);
+	    text-align: center;
+	    width: 73%;
+	    .form-button{
+	    	background-color: transparent;
+		    border: 0 none;
+		    color: $primary-2;
+		    @include brand-font;
+		    @include f(20);
+		    @include font-weight(bold);
+		    text-transform: uppercase;
+	    }
+	}
+	.errormessage{
+		color: $primary-5;
+	}
+	.tab-card-payment__info{
+		color: $primary-2;
+		@include f(22);
+		text-align: center;
+	}
+	.confirmation{
+		padding-left: 0;
+		label{
+			span.form-check-label{
+				color: $primary-2;
+				width: auto;
+			}
+		}
+	}
+}
+
+.js-checkout{
+
+	.form-checkbox{
+	    display: block;
+	    float: left;
+	}
+	.js-ecs-payment-form .form-element label.form-checkbox-label{
+	    display: block;
+	    @include rem('margin-left', 50px);
+	    width: 90%;
+	}
+}
+
+
+.registration_page .form .address .addressrow p {
+  display: inline;
+  @include rem('padding', 1.5px);
+}
+.ecs-payment .progressbar {
+  margin-left: 24px;
+  width: 87.4%;
+}
+
+.ecs-review-order-terms-section{
+	text-align:left;
+		.checker{
+			display:inline-block;
+		}
+	label{
+    	width:100%;
+	} 
+}

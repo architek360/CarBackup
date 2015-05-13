@@ -1,0 +1,71 @@
+  <!-- PRODUCT CAROUSEL-->
+  <div class="product-carousel">
+
+        <!-- PRODUCT HEADING-->
+        <div class="product-carousel__title">
+            <h4 class="heading4">timpieces</h4>
+            <h2 class="heading2">panthere ring</h2>
+        </div>
+
+        <!-- PRODUCT CAROUSEL-->
+        <div class="carousel js-product-carousel">
+            <ul class="rslides js-slider">
+                <li class="clearfix" data-productline = "dasdasds" data-productcollection="dasdasds" data-sellable="dasdasds" data-productid="dasdasds" data-productname="dasdasds" data-sizeselected="dasdasds">
+                    <div class="rslides__title">
+                        <h2 class="heading2">panthere ring</h2>
+                        <span class="product-detail__variant">Yellow gold, tsavorite, lacquer</span>
+                        <span class="product-detail__size">ref: HPI00480</span>
+                    </div>
+                    <div class="rslides__img"><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_0_cartier_rings.png" alt="" class="image"></div>
+                    <div class="rslides__desc">
+                        <p class="rslides__desc--para">True jewelry masterpieces, these watches also constitute precious bracelets, crafted in the most noble of metals and adorned with spectacular stones. Perpetuating the secret of their creation, the dials of these watches are elegantly concealed at the heart of an exuberant bloom or a captivating animal.</p>
+                            <!--#set var="more-text" value="read more" -->
+                            <!--#set var="arrow-class" value="arrow-show" -->
+                            <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </div>
+                </li>
+
+                <li class="clearfix" data-productline = "dasdasds1" data-productcollection="dasdasds1" data-sellable="dasdasds1" data-productid="dasdasds1" data-productname="dasdasds1" data-sizeselected="dasdasds1">
+                    <div class="rslides__title">
+                        <h2 class="heading2">abc</h2>
+                        <span class="product-detail__variant">Yellow gold, tsavorite, lacquer</span>
+                        <span class="product-detail__size">ref: HPI00480</span>
+                    </div>
+                    <div class="rslides__img"><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_1_cartier_rings.png" alt="" class="image"></div>
+                     <div class="rslides__desc">
+                        <p class="rslides__desc--para">This colourful, feminine leather goods collection calls to mind the screws of the legendary A bracelet. These smooth-grain leather accessories are available in pink, black, brown and gold tones.</p>
+                            <!--#set var="more-text" value="read more" -->
+                            <!--#set var="arrow-class" value="arrow-show" -->
+                            <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </div>
+                </li>
+               
+           </ul>
+
+           <!-- ZOOM BUTTON -->
+        <a class="zoom-icon js-zoom" href="#"></a>
+            
+        </div>
+  </div>
+<div class='js-overlay'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class="img-container">
+        <img src="" alt="Overlay image" class="image">     
+    </div>
+</div>
+
+<div class='js-overlay-zoom'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class='degree360-icon-cont'>
+        <a class="degree360-icon js-degree360" href="#"></a>
+    </div>
+
+    <div class="image-tab 360-image clearfix">
+        <img src="<!--#echo var="CONTENT_IMG_PATH" -->cartier_images/W1556242_360_0_9459.png" id="my-image-360" height="420" width="420">
+    </div>
+
+</div>

@@ -1,0 +1,785 @@
+/*!
+ * cartier.login.js
+ *  This file contains functionalities handling the login module
+ *
+ * @project   cartier Desktop
+ * @date      2014-01-03
+ * @author    Sapient 
+ * @licensor  cartier Desktop
+ * @site      cartier Desktop
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+  $last) call to init() method
+ */
+
+
+;
+(function(win, $, login, undefined) {
+	//this will cause the browser to check for errors more aggressively
+	'use strict';
+
+	//check if Jquery is defined, else return
+	if (typeof $ === 'undefined') {
+		console.log('jQuery not found');
+		return false;
+	}
+
+	/*
+   	 private variables
+    */
+	var _cache = {},
+		_objPropertiesMsg,
+		_objPropertiesPaths,
+		_capchaUrl = '';
+
+
+	//--------------------------------------------------------------------------------------------------------
+	//         Caching jQuery object
+	//--------------------------------------------------------------------------------------------------------
+
+	/*
+      @private method : caching jquery objects 
+      @param : none 
+    */
+	var _cacheObjects = function() {
+		_cache = {
+
+			$loginButton: $('.js-login-button'),
+			$passInput: $('.js-login .js-password-input'),
+			$forgotPassLink: $('.js-forgotpass-link'),
+			$forgotCancel: $('.js-forgot-cancel'),
+			$forgotSend: $('.js-forgot-send'),
+			$forgotSendInput: $('.js-forgot-send :input'),
+			$emailSentConf: $('.js-emailsent-conf'),
+			$successDiv: $('.js-successdiv'),
+			$failureDiv: $('.js-failurediv'),
+			$errorMessage: $('.js-checkerror .errormessage'),
+			$createYourAcc: $('.js-createyouraccount'),
+			$showPassword: $('.js-show-password'),
+			$passwordInput: $('.js-password-input'),
+			$loginError: $('.loginerror.error'),
+			$jsLoginBox: $('.js-login-box'),
+			$jsLoginBoxInputbox: $('.js-login-box .input-wrapper'),
+			$CaptchaInputBox: $('.captcha .input-wrapper'),
+			$jsLoginBoxForgotPass: $('.form-item .forgot-pass'),
+			$countrySelectorSelect: $('#js-login-form .js-login-dropdown #countryselector'),
+			$confirmBoxOkButton: $('#confirmButtons button'),
+			$countryOfResiText: $('.js-cor'),
+			$loginAjaxbutton: $('.js-login-ajax-button'),
+			$registraionFormServerError: $('.js-create-account'),
+			$careateYourAccount: $('.js-regform-step1'),
+			$guestCheckOut: $('.js-guest-checkout'),
+			$popupWrapper: $('.forgot-box__list'),
+			$forgotWrapper: $('.js-forgotpass-box'),
+			$verfiyUsingAudio: $('.js-verify-using-audio'),
+			$countryforReg: $('#js-reg-step-1 #fn_country')
+		};
+
+	},
+
+		//--------------------------------------------------------------------------------------------------------
+		//          EVENT Bindings
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+          @private method : bind events
+          @param : none
+        */
+
+		_bindEvents = function() {
+			_cache.$forgotCancel.on('click', _forgotPasswordCancelHandler);
+			_cache.$forgotSendInput.on('click', _forgotPasswordSendHandler);
+			_cache.$emailSentConf.on('click', _forgotPasswordEmailHandler);
+			_cache.$countrySelectorSelect.on('change', _countrySelectorAjaxCallHandler);
+			_cache.$guestCheckOut.on('click', _guestCheckOutHandler);
+			_cache.$verfiyUsingAudio.on('click', _captchaAudioToggle);
+			_cache.$countryforReg.on('change', _countrySelectorAjaxCallHandlerReg)
+		},
+
+
+		//--------------------------------------------------------------------------------------------------------
+		//          EVENT HANDLERS
+		//--------------------------------------------------------------------------------------------------------
+
+
+		/*
+          @private method : Guest CheckOut Handler function
+          @param : e :-default event param
+        */
+		_guestCheckOutHandler = function(e) {
+			e.preventDefault();
+
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				url: _objPropertiesPaths.bagCheckout,
+				data: 'currentPage=' + $('.currentPagePath').val() + '&successPage=' + $('.successPagePath').val(),
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded'
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					// handle failure
+					if (typeof data.success !== 'undefined' && !data.success) {
+
+					} else { // handle success
+						var data = cartier.common.cartierJSONparser({
+							json: data
+						});
+						if (data.isErrorMessageVisible) {
+							$('.error-div').remove();
+							$('.js-guest-checkout').before('<div class="error-div">' + data.errorMessage + '</div>');
+						}
+					}
+				});
+			}
+			return false;
+		},
+
+		/*
+          @private method : Function to Trigger Click handler for Forgot Password link on Login Pasge
+          @param : none
+        */
+		_loginIsForgotActive = function() {
+			if (_cache.$forgotPassLink.data('isforgotactive')) {
+				setTimeout(function() {
+					_cache.$forgotPassLink.trigger('click');
+				}, 10);
+			}
+		},
+
+
+		/*
+          @private method : forgot Password Email Handler function
+          @param : e :-default event param
+        */
+
+		_forgotPasswordEmailHandler = function(e) {
+			e.preventDefault();
+			_displayHandler('js-login-box', 'js-emailsent-box', 'js-forgotpass-box');
+		},
+
+		/*
+          @private method : forgot Password Send Handler function
+          @param : e :-default event param
+        */
+		_forgotPasswordSendHandler = function(e) {
+			e.preventDefault();
+			$(this).before('<div class="loaderDiv ">' + '' + '</div>');
+			$('.loaderDiv').addLoader();
+			_sendPostRequest($(this).closest('form'), _objPropertiesPaths.loginForgotPass, function(data) {
+				_cache.$forgotWrapper.addClass('display-none');
+				_cache.$jsLoginBox.removeClass('display-none').addClass('display-block');
+
+				if (data.wasEmailSent) {
+					_cache.$forgotSendInput.modalWindow();
+
+				} else {
+
+
+				}
+			});
+		},
+		/*
+          @private method : forgot Password Link Handler function
+          @param : e :-default event param
+        */
+
+		_forgotPasswordLinkHandler = function(e) {
+			e.preventDefault();
+			_displayHandler('js-forgotpass-box', 'js-emailsent-box', 'js-login-box');
+		},
+		/*
+          @private method : forgot Password Cancel Handler function
+          @param : none 
+        */
+
+		_forgotPasswordCancelHandler = function(e) {
+			e.preventDefault();
+			_displayHandler('js-login-box', 'js-emailsent-box', 'js-forgotpass-box');
+		},
+
+
+
+		//--------------------------------------------------------------------------------------------------------
+		//         Other Business Logic Functions
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+          @private method : login Error Check
+          @param : none 
+        */
+		_loginErrorCheck = function() {
+			_cache.$errorMessage.each(function(index, el) {
+				if ($(el).html() !== '')
+					_cache.$createYourAcc.trigger('click');
+			});
+		},
+
+
+		/*
+			@private method : adds show button on the go (Direct implementation of show button could not be done in the CQ environment) 
+			@param : none 
+		*/
+		_passShowButton = function() {
+			_cache.$passInput
+				.addClass('password-input')
+				.wrap('<div class="form-input"></div>')
+				.after('<div class="show-password js-show-password">' + _objPropertiesMsg.showPassword + '</div>');
+			_bindShowHide();
+		},
+
+
+		/*
+       @private method : gives the show hide functionlity
+       @param : none 
+	    */
+
+
+		_bindShowHide = function() {
+			var intype = _cache.$passwordInput,
+				$showPassword = $('.js-show-password');
+			$showPassword.on('click', function() {
+				if (intype.attr('type') === 'password') {
+					intype.attr({
+						type: 'text'
+					});
+					$showPassword.html(_objPropertiesMsg.hidePassword);
+				} else if (intype.attr('type') === 'text') {
+					intype.attr({
+						type: 'password'
+					});
+					$showPassword.html(_objPropertiesMsg.showPassword);
+				}
+			});
+		},
+
+		/*
+	       @private method : to handle Server Side Error
+	       @param : none 
+	    */
+		_handleServerSideError = function() {
+			var errorMessage = _cache.$loginError.html();
+			_cache.$loginError.replaceWith('<span for="j_username" class="error">' + errorMessage + '</span>');
+		},
+
+		/*
+	       @private method : to send Post Ajax request for forgot password
+	       @param : Form object, URL Link and a callback function 
+	    */
+
+		_sendPostRequest = function($form, link, callback) {
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				url: link,
+				data: $form.serialize(),
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded',
+				//errorDiv : $('#errorZone'),
+				beforeSend: function(jqXHR) {
+					if (!$form.valid()) {
+						jqXHR.abort();
+					}
+					// return false to cancel submit 
+				}
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					// handle failure
+					if (typeof data.success !== 'undefined' && !data.success) {
+
+					} else { // handle success
+						var data = cartier.common.cartierJSONparser({
+							json: data
+						});
+						callback(data);
+					}
+				});
+			}
+			return false;
+		},
+
+
+		/*
+	       @private method : To Handle display logic for _forgotPasswordEmailHandler 
+	       @param : classone, classtwo, classthree 
+	    */
+		_displayHandler = function(classone, classtwo, classthree) {
+			$('.' + classone).removeClass('display-none');
+			$('.' + classtwo).addClass('display-none');
+			$('.' + classthree).addClass('display-none');
+		},
+
+
+		/*
+           @private method : To Handle display logic, If the website is in .com domain.
+                             To hide standard Login elements
+           @param : none
+        */
+		_hideLoginElements = function() {
+			_cache.$jsLoginBoxInputbox.hide();
+			_cache.$CaptchaInputBox.show();
+		},
+
+
+		/*
+           @private method : To Handle display logic, If the website is in .com domain.
+           @param :  none
+        */
+		_dotComHandler = function() {
+			_hideLoginElements();
+			_cache.$countrySelectorSelect.show();
+			_cache.$countryOfResiText.show();
+		},
+
+
+		/*
+           @private method : To Handle display logic, If after Selecting Country, no URL is available
+           @param : none
+        */
+
+		_noWebsiteHandler = function() {
+			$('.js-login-input-section').removeClass('display-none');
+			_cache.$jsLoginBoxInputbox.show();
+			_cache.$countrySelectorSelect.show();
+			_cache.$countryOfResiText.show();
+
+			$('.js-dotcomcheck').removeClass('display-none');
+			$('.Connection').removeClass('display-none');
+		},
+
+
+		/*
+           @private method : To Handle display logic, If Default value is selected
+           @param : classone, classtwo, classthree 
+        */
+		_ifSelectDefaultValueHandler = function() {
+			_hideLoginElements();
+			_cache.$countrySelectorSelect.show();
+			_cache.$countryOfResiText.show();
+		},
+
+
+
+		/*
+          @private method : To display Popup Box for Website Redirect on selecting country of residence
+          @param : redirectUrl will be the Url on which the site will be redirected when OK button is clicked on confirm Popup 
+        */
+
+		_saveButtonAjaxCallBack = function(redirectUrl) {
+			_cache.$countrySelectorSelect.confirmBox();
+			_cache.$countrySelectorSelect.data('plugin_confirmBox').popupInitialize({
+					'title': _objPropertiesMsg.countrySelectorTitle,
+					'message': _objPropertiesMsg.countrySelectorMsg,
+					'buttons': {
+						'ok': {
+							'buttonName': _objPropertiesMsg.okButton,
+							'href': redirectUrl,
+							'class': 'cta-button cta-button__inner cta--red'
+
+						},
+						'cancel': {
+							'buttonName': _objPropertiesMsg.cancelButton,
+							'href': '#',
+							'class': 'cta-button cta-button__inner cta--grey'
+						}
+
+					}
+				},
+				_cache.$countrySelectorSelect.data('plugin_confirmBox').confirmHide
+
+			);
+
+			if (typeof $('.body-wrapper').data('plugin_analytics') !== 'undefined') {
+				$('.body-wrapper').data('plugin_analytics').alreadyRegisteredPopin();
+			}
+
+
+			$($('#confirmButtons button')[0]).on('click', function() {
+
+				if (typeof $('.body-wrapper').data('plugin_analytics') !== 'undefined') {
+					$('.body-wrapper').data('plugin_analytics').alreadyRegisteredContinue();
+				}
+
+				location.href = '' + $(this).attr('href') + '';
+			});
+		},
+
+
+		/*
+          @private method : Function to Update Country DropDown
+          @param : none
+        */
+
+		_countryDropdownUpdater = function(countryArray) {
+			$('.js-login-dropdown').removeClass('display-none');
+
+			var textDiv = $('<div class = "comp-rich-text rte-wrapper">' + _objPropertiesMsg.loginFromDifferentCountry + '</div>').css('font-size', 17);
+			$('.js-login-dropdown').append(textDiv);
+
+			var _clonedDropdown = _cache.$countrySelectorSelect.clone(),
+				_clonedDropdownoption1 = '<option value="default">' + _objPropertiesMsg.selectValue + '</option>',
+				_clonedDropdownoption2 = $('<option value=""></option>'),
+				lengthOfArray = countryArray.length;
+			_clonedDropdown.empty();
+			_clonedDropdown.append(_clonedDropdownoption1);
+
+			for (var i = 0; i < lengthOfArray; i++) {
+				var toAppendOption = _clonedDropdownoption2.clone();
+				toAppendOption.attr({
+					'value': countryArray[i].ccode
+				}).html(countryArray[i].cname);
+				_clonedDropdown.append(toAppendOption);
+			}
+			$('#js-login-form .js-login-dropdown #uniform-countryselector').replaceWith(_clonedDropdown);
+			$('#js-login-form .js-login-dropdown #countryselector').val('default').ScrollTo({
+				duration: 800,
+				offsetTop: 400
+			});
+			$('#js-login-form .js-login-dropdown #countryselector').uniform().on('change', _countrySelectorAjaxCallHandler);
+		},
+
+		/*
+          @private method : Function to Toggle Audio Captcha and Call Captcha Callback
+          @param : none
+        */
+		_captchaAudioToggle = function(e) {
+			e.preventDefault();
+			var boolVal;
+			var $that = $(this);
+			if ($('.js-audio-captcha').hasClass('display-none'))
+				boolVal = true;
+			else
+				boolVal = false;
+
+
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				url: _objPropertiesPaths.audioImageCaptchaCall,
+				data: {
+					sendAudio: boolVal
+				},
+				dataType: 'json',
+				contentType: 'application/x-www-form-urlencoded'
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					// handle failure
+					if (typeof data.success !== 'undefined' && !data.success) {
+
+					} else { // handle success
+						var data = cartier.common.cartierJSONparser({
+							json: data
+						});
+						_captchaCallback(data, $that);
+					}
+				});
+			}
+		},
+
+		/*
+          @private method : Captcha Callback Function
+          @param : none
+        */
+		_captchaCallback = function(data, $this) {
+			var captchaDiv = $this.closest('form');
+			if (_capchaUrl === '')
+				_capchaUrl = captchaDiv.find('.js-audio-captcha').attr('src');
+			if (captchaDiv.find('.js-audio-captcha').hasClass('display-none')) { // Image to audio conversion
+				captchaDiv.find('.js-captcha-id').val(data.captchaDetails.captchaId);
+				captchaDiv.find('.js-image-captcha').addClass('display-none');
+				captchaDiv.find('.js-audio-captcha').removeClass('display-none').attr('src', _capchaUrl + '?url=' + data.captchaDetails.contentUrl);
+				var clonedEmbed = captchaDiv.find('.js-audio-captcha').clone(true, true);
+				captchaDiv.find('.js-audio-captcha').remove();
+				captchaDiv.find('.js-verify-using-audio').html(_objPropertiesMsg.verifyUsingImg);
+				captchaDiv.find('.js-captcha-embed').append(clonedEmbed);
+				captchaDiv.find('.js-captcha-audio').val('true');
+
+			} else {
+				captchaDiv.find('.js-captcha-id').val(data.captchaDetails.captchaId);
+				captchaDiv.find('.js-audio-captcha').addClass('display-none');
+				captchaDiv.find('.js-verify-using-audio').html(_objPropertiesMsg.verifyUsingAud);
+				captchaDiv.find('.js-image-captcha').removeClass('display-none').find('img').attr('src', data.captchaDetails.contentUrl);
+				captchaDiv.find('.js-captcha-audio').val('false');
+			}
+		},
+		/*
+       		@private method : check server side email error if exist then triger click event on create ypur account button
+          	@param : none
+        */
+		_checkServerSideEmailExistError = function() {
+
+			var emailFieldEl = _cache.$careateYourAccount.find('.js-server-error'),
+				serverSideError = emailFieldEl.data('serveremail');
+			if (typeof serverSideError !== 'undefined') {
+
+				setTimeout(function() {
+					$(_cache.$registraionFormServerError.find('button')).trigger('click');
+				}, 10);
+
+
+			}
+
+		},
+
+		/*
+       		@private method : send ajax call on Selecting country of residence, and show confirm popup on success
+          	@param : none
+        */
+
+		_countrySelectorAjaxCallHandler = function() {
+
+			_cache.$jsLoginBox.addLoaderPrepend();
+
+			if (typeof $('.body-wrapper').data('plugin_analytics') !== 'undefined') {
+				$('.body-wrapper').data('plugin_analytics').alreadyRegisteredCountrySelect();
+			}
+
+			var countryParameter = $('#js-login-form .js-login-dropdown #countryselector').find('option:selected').val();
+
+			if (countryParameter === 'default') {
+				_ifSelectDefaultValueHandler();
+				_cache.$jsLoginBox.removeLoader();
+				return (null);
+			}
+
+			/* Ajax caller  */
+
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'GET',
+				url: _objPropertiesPaths.loginCountryDropdown + '?country=' + countryParameter + '&pagePath=' + $('#resourcePath').val() + '&q=123',
+				dataType: 'json'
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					// handle failure
+					if (typeof data.success !== 'undefined' && !data.success) {
+						// handle redirectURL exist if the session expires
+						// data.redirectURL ?  win.location.href = data.redirectURL : $form.find('.server_message').html(data.errorMessage);
+					} else {
+						var parsedData = cartier.common.cartierJSONparser({
+							json: data
+						});
+						if (parsedData !== false) {
+							if (parsedData.url === '') {
+								_noWebsiteHandler();
+							} else {
+								_saveButtonAjaxCallBack(parsedData.url);
+							}
+						}
+					}
+				});
+			}
+			_cache.$jsLoginBox.removeLoader();
+
+		},
+
+
+		_countrySelectorAjaxCallHandlerReg = function() {
+
+
+			var countryParameter = $('#js-reg-step-1 #fn_country').find('option:selected').val();
+
+			if (countryParameter === 'default') {
+				return (null);
+			}
+
+			/* Ajax caller  */
+
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'GET',
+				url: _objPropertiesPaths.loginCountryDropdown + '?country=' + countryParameter + '&pagePath=' + $('#resourcePath').val() + '&q=123',
+				dataType: 'json'
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					// handle failure
+					if (typeof data.success !== 'undefined' && !data.success) {
+						// handle redirectURL exist if the session expires
+						// data.redirectURL ?  win.location.href = data.redirectURL : $form.find('.server_message').html(data.errorMessage);
+					} else {
+						var parsedData = cartier.common.cartierJSONparser({
+							json: data
+						});
+						if (parsedData !== false) {
+							if (parsedData.url === '') {
+								//Do nothing
+							} else {
+								_saveButtonAjaxCallBackReg(parsedData.url);
+							}
+						}
+					}
+				});
+			}
+		},
+
+		_saveButtonAjaxCallBackReg = function(redirectUrl) {
+			_cache.$countrySelectorSelect.confirmBox();
+			_cache.$countrySelectorSelect.data('plugin_confirmBox').popupInitialize({
+					'title': _objPropertiesMsg.countrySelectorTitle,
+					'message': _objPropertiesMsg.countrySelectorMsg,
+					'buttons': {
+						'ok': {
+							'buttonName': _objPropertiesMsg.okButton,
+							'href': redirectUrl,
+							'class': 'cta-button cta-button__inner cta--red'
+
+						},
+						'cancel': {
+							'buttonName': _objPropertiesMsg.cancelButton,
+							'href': '#',
+							'class': 'cta-button cta-button__inner cta--grey'
+						}
+
+					}
+				},
+				_cache.$countrySelectorSelect.data('plugin_confirmBox').confirmHide
+			);
+
+			$($('#confirmButtons button')[0]).on('click', function() {
+				location.href = '' + $(this).attr('href') + '';
+			});
+		},
+
+
+		/*
+          @private method : Forgot Password Callback
+          @param : Response data
+        */
+		forgotPasswordCallback = function(data) {
+			var forgotMessageHtml;
+
+			if (data.success) {
+				forgotMessageHtml = '<div class="forgot-success-wrapper"><a class="cross-button close js-close" title="close"></a><p class="send-title">' + _objPropertiesMsg.forgotPasswordPopupHeading + '</p><p class="send-text">' + _objPropertiesMsg.forgotPasswordPopupText + '</p><a class="cta-button js-close" href="' + data.content.login + '">Ok</a></div>';
+			} else
+				forgotMessageHtml = '<div class="forgot-success-wrapper"><a class="cross-button close js-close" title="close"></a><p class="send-title">' + _objPropertiesMsg.forgotPasswordPopupHeading + '</p><p class="send-text">' + _objPropertiesMsg.forgotPasswordPopupText + '</p><a class="cta-button js-close">Ok</a></div>';
+			if (data.success) {
+
+				$('.js-modal-window').html(forgotMessageHtml);
+				$('.js-modal-overlay').show();
+
+				if (typeof $('.body-wrapper').data('plugin_analytics') !== 'undefined') {
+					$('.body-wrapper').data('plugin_analytics').forgotPasswordPopin();
+				}
+
+				$('.js-close').on('click', function() {
+
+					$('#modalWindow').empty();
+					$('#modalOverlay').hide();
+				});
+			}
+		},
+
+		already_exists = function() {
+
+			if ($('#accountExistsFlag').val() === 'true') {
+				$('#registration_j_username').addClass('error');
+			} else {
+				$('#registration_j_username').removeClass('error');
+			}
+
+		},
+
+		loginBgChange = function() {
+
+			if ($('.js-reg-step-1').length) {
+				$('.body-wrapper').addClass('login-bg-image');
+			} else {
+				$('.body-wrapper').removeClass('login-bg-image');
+			}
+		};
+
+
+
+	//--------------------------------------------------------------------------------------------------------
+	//          Public functions
+	//--------------------------------------------------------------------------------------------------------
+
+	/*
+	    @public method : Login Captcha CallBack Function
+	    @param: Response Data
+    */
+
+	login.loginCaptchaCall = function(data) {
+
+		if (typeof data === 'object') {
+
+			data = data.content;
+			if (data.isSuccess) {
+
+				$('#js-login-form').unbind('submit');
+				$('#js-login-form').attr('action', $('#js-login-form').attr('action') + '/j_security_check');
+				setTimeout(function() {
+					$('#js-login-form').find('.form-button').trigger('click');
+				}, 10);
+
+
+			} else if (data.countryDropdown !== undefined) {
+				_countryDropdownUpdater(data.countryDropdown);
+			} else if (data.errorMessage === '') 
+				location.reload();                            
+			else {
+				$('.error-div').remove();
+				$('#js-login-form')
+					.before('<div class="error-div">' + CQ.I18n.getMessage(data.errorMessage) + '</div>')
+					.ScrollTo({
+						duration: 800,
+						offsetTop: 400
+					});
+			}
+
+			if (data.captchaDetails !== undefined) {
+				$('#js-login-form .captcha__image__container')
+					.find('img').attr('src', data.captchaDetails.imageUrl).end()
+					.find('.js-captcha-id').val(data.captchaDetails.captchaId).end()
+					.find('.js-captcha-url').val(data.captchaDetails.imageUrl).end();
+			}
+		}
+	};
+
+	/*
+    	@public method : initailize the module
+    */
+	login.init = function() {
+
+		RICHEMONT.AjaxCaller.listOfCallbackFun.CaptchaAction = login.loginCaptchaCall;
+		RICHEMONT.AjaxCaller.listOfCallbackFun.ForgotPasswordAction = forgotPasswordCallback;
+
+
+		_objPropertiesMsg = cartier.properties.messages;
+		_objPropertiesPaths = cartier.properties.paths;
+		//caching the jquery objects
+		_cacheObjects();
+
+		_passShowButton();
+		_checkServerSideEmailExistError();
+		_handleServerSideError();
+
+		_bindEvents();
+
+		_loginErrorCheck();
+
+		/* For handling Login Display Logic for .com Websites*/
+
+		if (_cache.$jsLoginBox.data('com') === true) {
+			_dotComHandler();
+		}
+		login.loginCaptchaCall();
+
+		_loginIsForgotActive();
+
+		if ($('.js-reg-step-1').length > 0) {
+			already_exists();
+		}
+		loginBgChange();
+
+		if ($('.js-dotcomcheck').length)
+			$('.Connection').addClass('display-none');
+
+
+
+	};
+
+}(window, jQuery, cartier.login));

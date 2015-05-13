@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    Boutique-List -- Desktop CSS
+\*------------------------------------*/
+
+.boutique-list-wrapper{
+    color: $primary-2;
+    font-family: $primary-font-2;
+    @include rem(margin-bottom, 25px);
+
+    .store-locator__view-more, .store-list__retailer{
+        display: none;
+    }
+    .boutique-list-detail-wrapper .grid__item{
+        padding-left: 0;
+    }
+    .store-detail_bold{
+        font-weight: bold;
+    }
+    .store-list__title h1{
+        @include rem(padding, 15px 0px 7.5px 0px);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        @include rem(font-size, 15px);
+        font-weight: normal;
+        @include rem(padding-top, 15px);
+        text-align: center;
+    }
+    .store-detail__title{
+        @include rem(padding, 0px 0px 0px 16px);
+    }
+	.boutique_details__add, .boutique_details__con {
+		color: $primary-2;
+	}
+    .boutique_details__add, .boutique_details__con, .store-detail__title,.more-link a{
+        line-height: 1.4;
+        @include rem(font-size, 12px);
+		@include main-font;
+    }
+    .boutique-list-detail-wrapper{
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid $primary-61;
+    }
+    .js-store-detail{
+        width: 95%;
+    }
+    .more-link{
+        font-style: italic;
+        color: $primary-3;
+        @include  transition-full(color, 0.2s, ease-in-out);
+        @include rem('padding',2px 10px 2px 0px );
+        &:hover{
+            color: $primary-2;
+        }
+        .arrow-grey{
+            @include setSpriteDesktop(10px, 5px, -431px, -62px, transparent)
+        }
+    }
+    .store-detail{
+        overflow: hidden;
+        @include rem(margin, 0px 0px 30px 0px);
+    }
+    .image-text img{
+        @include rem(width, 100px);
+        @include rem(height, 68px);
+        @include rem(max-width, 100px);
+        float: left;
+    }
+    .image-text img, .more-link{
+            @include rem(margin, 0px 15px 0px 41px);
+    }
+
+    .store-detail__title{
+        text-transform: uppercase;
+        @include rem(margin, 12px 0px);
+        font-weight: bold;
+    }
+    .store-list{
+        border-right: 1px solid $primary-61;
+        text-align: left;
+        display: inline-block;
+        padding: 0;
+    }
+}
+.store-list__retailer .image-text .more-link {
+    margin-left:0px !important;
+}

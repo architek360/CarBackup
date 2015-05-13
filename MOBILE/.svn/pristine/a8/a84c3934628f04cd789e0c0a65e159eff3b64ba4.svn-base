@@ -1,0 +1,14 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+			"sddd" : 2,	
+			"sdsdsdds" : 2,
+			"dsdsdsdsd" : 3,
+			"sdsadsdsadasd" : 3,
+			"sdsdsddsd" : 0
+			
+	}
+}
+
+

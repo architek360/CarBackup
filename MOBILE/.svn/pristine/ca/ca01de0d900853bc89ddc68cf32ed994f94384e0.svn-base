@@ -1,0 +1,324 @@
+/*------------------------------------*\
+     Tab card payment -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.tab-card-payment )
+ * FORM  FIELDS...(.form-label,.name-on-card, .first-name, .ccv ,.ccv_block ,.ccv_text)
+ * PAYMENT INFO...... (.tab-card-payment__info,.confirmation ,.next-step-cta,.expiration-date )
+ * PUSH LINKS CONTAINER....(.pushs)
+ * PAYMENT IFRAME CONTAINER.......(.payment-iframe)
+*/
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.tab-card-payment {
+	p {
+		@include main-font;
+		@include f(20);
+		text-align: left;
+	}
+
+	/*------------------------------------*\
+    	$FORM  FIELDS
+	\*------------------------------------*/
+
+	.form-label{
+		@include bold-font;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.name-on-card, .first-name, .ccv {
+		color:$primary-2;
+		@include f(20);
+		display:inline-block;
+		text-align: left;
+		width: 100%;
+		 -moz-box-sizing: border-box;
+		box-sizing: border-box;
+		@include rem('height',115px);
+		.grid__item{
+				@include rem('padding',0 0 30px 0);
+				label{
+					@include bold-font;
+					text-transform:uppercase;
+				}
+				&:last-child{
+					padding:0;
+				}
+		}
+		.ccv_block {
+			width: 47%;
+			display: block;
+			float: left;
+		}
+		.ccv_text {
+			@include f(20);
+			@include main-font;
+			@include rem('margin-left',36px);
+			display: block;
+			float: left;
+			text-align: left;
+			width: 45%;
+			@include font-color($primary-6);
+		}
+	}
+
+	/*------------------------------------*\
+    	$PAYMENT INFO
+	\*------------------------------------*/
+
+	.tab-card-payment__info {
+		@include f(20);
+		@include font-color($primary-6);
+		@include main-font;
+		@include rem('margin', 42px 0px 0px);
+		@include rem('padding', 34px 0 0);
+		border-top: 1px solid $primary-2;
+		text-align:center;
+		@include rem('line-height',28px);
+	}
+	.confirmation{
+		display:block;
+		color:$primary-6;
+		@include rem(padding, 13px 0);
+		.form-check{
+			width:100%;
+			text-align: left;
+		}
+	}
+	.next-step-cta{
+		text-align:center;
+		clear:both;
+		@include rem('padding',18px 0);
+		.cta--red{
+			width:73%;
+		}
+	}
+	.expiration-date {
+		.expiration-date__dropdown select {
+			text-transform: uppercase;
+		}
+	}
+
+	/*------------------------------------*\
+    	$PUSH LINKS CONTAINER
+	\*------------------------------------*/
+
+	.pushs{
+		@include brand-font;
+		@include font-color($primary-2);
+		border-top:1px solid $primary-17;
+		display: block;
+		@include rem('padding', 39px 0 20px 0);
+		width:100%;
+		margin:0 auto;
+		> ul {
+			@include set-ulFix;
+			text-align: center;
+			> li {
+				width: 100%;
+				margin: 0;
+				display: inline-block;
+				border: none;
+				height: auto;
+				text-align: center;
+				@include rem('padding', 20px 0 0 0);
+				.pushs__title {
+					display: inline-block;
+					@include f(24);
+					@include rem('margin', 5px);
+					text-transform:uppercase;
+					@include rem('line-height', 30px);
+					padding: 0;
+					width: 80%;
+				}
+				.pushs__desc {
+					display: inline-block;
+					text-align: center;
+					@include f(24);
+					@include main-font;
+					@include rem('margin', 11px 20px  10px 27px);
+					padding: 0;
+					width: 98%;
+					span{
+						font-style: italic;
+						display: block;
+						@include f(24);
+					}
+				}
+				.pushs__desc:last-child{
+					@include f(22);
+				}
+				.pushs__read-more {
+					display: block;
+					text-align: center;
+					@include f(24);
+					@include main-font;
+					font-style: italic;
+				}
+				.norton-icon{
+					@include rem('margin', 20px 0);
+				}			
+			}
+			li:nth-child(2){
+				.pushs__title {
+					width: 60%;
+				}
+				.pushs__desc{
+					width: 80%;
+				}
+			}
+		}
+		.pushs__credit-cards {
+			@include set-ulFix;
+			@include rem('margin', 25px 0 20px 0);
+			> li {
+				@include rem('margin', 0 3px);
+				display: inline-block;
+				border: none;
+				text-indent: -999em;
+				overflow: hidden;			
+			}
+		}
+	}
+
+	/*------------------------------------*\
+    	$PAYMENT IFRAME CONTAINER
+	\*------------------------------------*/
+
+	.payment-iframe {
+		@include rem('min-height', 360px);
+    	width: 100%;
+		#MISSING {
+			background: $primary-1;
+			color: $primary-2;
+			@include rem(margin, 20px 0);
+			.ORB_INSTRUCTIONS {
+			    @include bold-font;
+			    @include f(22);
+			    @include rem(margin, 10px 0);
+			    text-align: center;
+	    		text-transform: uppercase;
+			}
+			.ORB_TABLE_FIELDS {
+				width: 100%;
+				position: relative;
+			}
+			#FIELD_F1009 , #FIELD_F1010, #FIELD_F1136{
+	    		margin: 0;
+	    		display: inline;
+			}
+			#FIELD_F1136 {
+				position: absolute;
+				@include rem('right', -2px);
+				@include rem('top', 0px);
+			    width: 48%;
+				#F1136 {
+					width: 95%;
+				}
+			}
+			#LABEL_F1009, #LABEL_F1010, #LABEL_F1136 {
+				@include bold-font;
+				@include f(18);
+				@include rem('margin', 10px 0);
+				text-align: left;
+				display: block;
+				text-transform: uppercase;
+			}
+			.ORB_TD_FIELDELEMENT {
+				display: block;
+				@include rem('margin', 20px 0);
+			}
+			.ORB_TD_FIELDELEMENT .class a {
+				display: inline;
+				left: 0;
+				position: absolute;
+				@include rem('top', 104px);
+			}
+			.ORB_TD_FIELDELEMENT .ORB_INPUT {
+				-moz-box-sizing: border-box;
+			    background: none repeat scroll 0 0 $primary-16;
+			    border: 1px solid $primary-12;
+			    clear: both;
+			    color: $primary-3;
+			    display: inline-block;
+			    font-family: Georgia,sans-serif;
+			    @include f(18);
+			    font-style: italic;
+			    @include rem('padding', 14px);
+			    width: 45%;
+			}
+			.ORB_TD_FIELDELEMENT {
+				a.Normal {
+					display: none;
+				}
+			}
+			.ORB_TD_FIELDELEMENT .ORB_SELECT {
+			    -moz-appearance: none;
+			    background: url($path-images + "icons/select_arrow.png") no-repeat scroll right 0 $primary-127;
+			    border: 1px solid $primary-89;
+			    clear: both;
+			    color: $primary-10;
+			    font-family: "CartierRegular",sans-serif;
+			    @include f(18);
+			    font-style: italic;
+			    @include rem(height, 56px);
+			    outline: medium none;
+			    overflow: hidden;
+			    @include rem('padding', 11px);
+			    @include rem('text-indent', 0.01px);
+			    text-overflow: "";
+			    width: 45%;
+			}
+			#F1010_MM, #F1010_MM {
+				float: left;
+				@include rem('margin-right',40px);
+			}
+			.ORB_BUTTON {
+			    border: 0 none;
+			    cursor: pointer;
+			    margin: 2rem auto;
+			    text-align: center;
+			    vertical-align: middle;
+			    background: none repeat scroll 0 0 $primary-5;
+			    @include rem('padding', 15px 0px);
+			    width: 47%;
+			    border: medium none;
+			    color: $primary-43;
+			    display: inline;
+			    @include bold-font;
+			    @include f(18);
+			    display: block;
+			    text-decoration: none;
+			    text-transform: uppercase;
+			}
+			#btnCancel {
+				background: none repeat scroll 0 0 $primary-33;
+				display: none;
+			}
+			.ORB_BUTTONHELPTEXT {
+				text-align: center;
+				display: none;
+			}
+			#ERROR_F1136 {
+			    clear: left;
+			    margin-top: 0;
+			    display: none;
+			}
+			#MANDATORY_F1009, #MANDATORY_F1010, #MANDATORY_F1136 {
+				color: $primary-20;
+				@include f(18);
+				@include rem('margin',0 0 0 5px);
+				text-align: left;
+				position: absolute;
+			}
+			#MANDATORY_F1010 {
+				position: absolute;
+			}
+		}
+		#PROGRESS .hidden {
+				display: none;
+		}
+	}
+}

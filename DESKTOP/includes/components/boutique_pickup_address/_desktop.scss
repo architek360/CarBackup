@@ -1,0 +1,17 @@
+.conf{
+    .boutique-image{
+    width: 80%;
+    margin: 10px auto;
+    height: 144px;
+    img{
+    	 /* “ DATE 01-10-2014 | image stretching issue | BRANCH Develop”  
+		 			START 
+		 */
+
+      max-width: 191px;
+      max-height: 130px;
+
+      /*end*/
+    }
+  }
+}

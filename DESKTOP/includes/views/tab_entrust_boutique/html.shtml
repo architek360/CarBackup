@@ -1,0 +1,33 @@
+<div class="tab-entrust-boutique ">
+	<div class="repair-service">
+	    <div class="boutique-search-wrapper clearfix">
+	        <div class="comp-rich-text">  
+	            <p style="text-align: center;">asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;asdf asdf as dfasdf asdfasdf&nbsp;</p>
+	        </div>
+
+	        <div class="heading-wrapper">
+	            <h3 class="heading3"> Search Locator </h3>
+	        </div>
+
+	        <div class="boutique-search">
+	            <!--#set var="standalone" value="true" -->
+	            <!--#include virtual="../../components/autosuggest/desktop.shtml" -->
+	            <div class="boutique-bg"></div>
+	            <div class="see-all">
+	                <!--#set var= "arrow-class"  value= "arrow-show" -->
+	                <!--#set var="more-text" value="SEE ALL THE CARTIER BOUTIQUES" -->
+	                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+	            </div>
+	        </div>
+
+	        <div class="boutique-search-result">
+	            <div class="back-button">
+	                <a href="/content/car/jp/japan/ja/home/ecs.html">Back<span class="js-backtotext"></span></a>
+	            </div>
+	            <!--#include virtual="../../components/autosuggest/desktop.shtml" -->
+	            <!--#include virtual="../../views/boutique_list_with_map/desktop.shtml" -->
+
+	        </div>
+	    </div>
+	</div>
+</div>

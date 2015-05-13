@@ -1,0 +1,32 @@
+<!-- Login Box Starts Here-->
+<div class="forgot js-forgotpass-box display-none js-form-validator">
+	<div class="forgot-box">
+		<span class="cross-button js-forgot-cancel"></span>
+	    <form name="forgot" action="#" method="get" accept-charset="utf-8">  
+		    <h3 class="forgot-box__title">Forgot your password?</h3>
+		    <p class="forgot-box__desc">To receive your password, please enter the e-mail address associated to your cartier account. Your password will be sent to you by e-mail.Thank you.</p>
+		    <ul class="forgot-box__list">  
+		        <li>
+		        	<!--#set var="label-name" value="E-MAIL " -->
+		        	<!--#set var="input-name" value="j_username" -->        	
+		        	<!--#include virtual="../../components/form_elements/label.shtml" -->
+
+		        	<!--#set var="input-type" value="email" -->
+		        	<!--#set var="input-prop" value="form-input" -->
+	        		<!--#include virtual="../../components/form_elements/input.shtml" -->
+		        </li>  
+		        
+		        
+		        <li>  
+		        	<!--#set var="cta--varaint" value="cta--red js-forgot-send" -->
+	            	<!--#set var="text-detail" value="send" -->
+	            	<!--#include virtual="../../components/form_elements/button.shtml" -->
+		    	</li>
+		    	<li><a href="#" class="js-forgot-cancel">cancel</a></li>  
+		    </ul>
+		    
+		</form>  
+	</div>
+	<!-- forgot Box Ends Here-->		        
+</div> 
+<!-- Login Ends Here-->

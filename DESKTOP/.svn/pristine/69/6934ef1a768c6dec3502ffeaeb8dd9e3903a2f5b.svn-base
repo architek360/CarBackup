@@ -1,0 +1,226 @@
+/*!
+ * cartier.home.js
+ * This file contains functionalities handling the my home module
+ *
+ * @project   cartier mobile
+ * @date      2014-01-03
+ * @author    Sapient
+ * @licensor  cartier mobile
+ * @site      cartier mobile
+   @dependency responsiveslides.min.js
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+ 	$last) call to init() method
+ */
+
+;
+(function(window, $, home, undefined) {
+	'use strict'; //this will cause the browser to check for errors more aggressively
+
+	if ($ === undefined) {
+		cartier.log("jQuery not found");
+		return false;
+	}
+
+	var
+	_cache = {},
+		windowHeight = $(window).height(),
+		windowWidth = $(window).width(),
+		footer = $('.footer'),
+		pushes = $('.l-pushes-content'),
+		carCarousel;
+	//--------------------------------------------------------------------------------------------------------
+	//         Caching jQuery object
+	//--------------------------------------------------------------------------------------------------------
+
+	/*
+      @private method : caching jquery objects 
+      @param : none 
+    */
+	var _cacheObjects = function() {
+
+		_cache = {
+			$slider: $('.js-slider'),
+			$carouselSlider: $('.js-slider'),
+			$accordionObject: $('.js-accordion'),
+			$datePicker: $('.js-date-picker'),
+			$tabsObject: $('.js-tabs')
+			//Cache variables for desktop
+
+		};
+	},
+
+
+		//--------------------------------------------------------------------------------------------------------
+		//          Initialize Plugins
+		//--------------------------------------------------------------------------------------------------------
+
+
+
+		_initializeSlider = function() {
+			carCarousel = _cache.$slider.bxSlider({
+				mode: 'horizontal',
+				speed: 1100,
+				auto: true,
+				autoHover: true,
+				pause: 6600,
+				onSlideAfter: function() {
+					$.each(ytplayerCarousel, function(index, val) {
+
+						if (($(carCarousel.getCurrentSlideElement()).has($(ytplayerCarousel[index].d)).length)) {
+							if (ytplayerCarousel[index].playVideo !== undefined)
+								ytplayerCarousel[index].playVideo();
+						} else {
+							if (ytplayerCarousel[index].playVideo !== undefined)
+								ytplayerCarousel[index].pauseVideo();
+						}
+					});
+				},
+
+				onSliderLoad: function() {
+					$.each(ytplayerCarousel, function(index, val) {
+
+						if (($(carCarousel.getCurrentSlideElement()).has($(ytplayerCarousel[index].d)).length)) {
+							if (ytplayerCarousel[index].playVideo !== undefined)
+								ytplayerCarousel[index].playVideo();
+						} else {
+							if (ytplayerCarousel[index].playVideo !== undefined)
+								ytplayerCarousel[index].pauseVideo();
+						}
+					});
+				}
+			});
+		},
+
+
+		initializeSingleSlider = function() {
+			_cache.$slider.bxSlider({
+				mode: 'horizontal',
+				speed: 1100,
+				auto: true,
+				pager: false,
+				autoHover: true,
+				pause: 6600,
+				controls: false
+			});
+
+		},
+
+		/*
+      @private method : initialize Accordion for Home page
+      @param : none 
+    */
+		_initializeAccordion = function() {
+			_cache.$accordionObject.makeAccordion({
+				showBehaviour: false
+			});
+		},
+
+		/*
+      @private method : initialize Tab for Home pagee
+      @param : none 
+    */
+		_initializeTabs = function() {
+			_cache.$tabsObject.tabs();
+		},
+
+		checkOffset = function() {
+			if (pushes.offset().top + pushes.height() >= footer.offset().top - 10) {
+				pushes.css({
+					position: 'absolute',
+					bottom: "initial"
+				});
+			}
+			if ($(document).scrollTop() + window.innerHeight < footer.offset().top) {
+				pushes.css({
+					position: 'fixed',
+					bottom: 0
+				});
+			}
+		},
+
+		positionPushes = function() {
+			if (pushes.length > 0) {
+				pushes.css('background', 'rgba(0,0,0,0.6)');
+				$(window).scroll(function() {
+
+					checkOffset();
+				});
+			}
+		},
+
+		_carouselRepositioning = function() {
+
+			setTimeout(function() {
+				var height = ($('.body-wrapper').width() * 9 / 16) - 170;
+				$('.carousel .home-image-wrapper').height(height + "px");
+				if ($('.no-canvas').length <= 0) { // Check for browser not IE
+					$(window).resize(function() {
+						var height = ($('.body-wrapper').width() * 9 / 16) - 170;
+						$('.carousel .home-image-wrapper').height(height + "px");
+					});
+				}
+			}, 200);
+
+		},
+
+		/*
+      @private method : initialize Date picker for Home page
+      @param : none 
+    */
+
+		_initializeDatePicker = function() {
+			_cache.$datePicker.date_picker();
+		};
+
+
+	//--------------------------------------------------------------------------------------------------------
+	//          Public functions
+	//--------------------------------------------------------------------------------------------------------
+
+
+
+	/*
+	    @pubic method : initailize the module
+	*/
+	home.init = function() {
+		// caching the jquery objects
+		_cacheObjects();
+		if (_cache.$accordionObject.length) {
+			// Initializing the accordion
+			_initializeAccordion();
+		}
+		if (_cache.$slider.length) {
+			if ($('.js-slider > li').not('.bx-clone').length === 1) {
+				initializeSingleSlider();
+			} else {
+				_initializeSlider();
+			}
+
+		}
+
+		if ($('.push-blocks').length > 0) {
+			positionPushes();
+			window.scrollBy(0, -1);
+			window.scrollBy(0, 1);
+		}
+
+		if (_cache.$datePicker.length) {
+			// Initializing the year
+			_initializeDatePicker();
+		}
+
+		if (_cache.$tabsObject.length) {
+			// Initializing the year
+			_initializeTabs();
+
+		}
+
+
+		_carouselRepositioning();
+	};
+
+}(window, jQuery, cartier.home));

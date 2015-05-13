@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "serverMessage": "Some Server Message",
+    "content": {
+
+       	"phone" : "123456789",
+        "openingTime": "Monday-Saturday, 9: 30am-7pm",
+        "address": "Route des Jeunes, 9<br/>P.O. Box 1231<br/>CH-1211 Genve 26",
+        "phoneBridal": "+33(0)158181838",
+       "scheduleBridal": "scheduleBridal",
+       "addressBridal": "addressBridal"
+    }
+}

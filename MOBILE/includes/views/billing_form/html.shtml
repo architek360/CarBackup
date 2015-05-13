@@ -1,0 +1,188 @@
+ <!--Billing FORM Block Starts Here-->
+<div class="billing-form grid js-form-validator js-billing js-data-formdisplay" data-formdisplay="false">
+
+  <!--#if expr="${form_type}=billing-address" -->   
+  <h1 class="heading2 js-billing-section-one display-none">enter your billing address</h1>
+   <!--#endif -->
+  <form>
+    <input type="hidden" class="js-ispreview" value="false">
+    <div class='js-billing-section-one display-none'>
+
+        <div class="bobj-address-section-one">
+            <input type="hidden" class="js-isBobjValid" value="false" name="bobjValid">
+            
+          	<input type="hidden" class="addnew" name="addnew" value="true">
+            <!-- Personal Info Wrapper-->
+            <div class="personal-details">
+                <div class="grid__item grid__item--pad">
+                <!--#set var="input-name" value="fn_grptitle" -->
+                <!--#include virtual="../../components/radio_buttons_group/html.shtml" -->
+                </div>
+
+            	<div class="grid__item grid__item--row js-fname">
+            		<!--#set var="label-name" value="first name" -->
+                    <!--#set var="mandatory" value="yes"-->
+                    <!--#set var="input-name" value="fn_fname" -->
+            		<!--#include virtual="../../components/form_elements/label.shtml" -->
+            		<!--#set var="input-prop" value="form-input" -->    
+                    <!--#set var="input-type" value="text" -->
+            		<!--#include virtual="../../components/form_elements/input.shtml" -->
+
+            	</div>
+
+            	<div class="grid__item grid__item--row js-lname">
+                    <!--#set var="label-name" value="last name" -->
+                    <!--#set var="mandatory" value="yes"-->
+                    <!--#set var="input-name" value="fn_lname" -->
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                    <!--#set var="input-prop" value="form-input" -->    
+                    <!--#set var="input-type" value="text" -->
+                    <!--#include virtual="../../components/form_elements/input.shtml" -->
+            	</div>
+
+            	<div class="grid__item grid__item--row">
+                    <!--#set var="label-name" value="save this address name" -->
+                    <!--#set var="mandatory" value="yes"-->
+                    <!--#set var="input-name" value="fn_addrname" -->
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                    <!--#set var="input-prop" value="form-input" -->    
+                    <!--#set var="input-type" value="text" -->
+                    <!--#include virtual="../../components/form_elements/input.shtml" -->
+                   
+            	</div>
+            </div>
+
+
+                <!--****-->
+
+                <!--#if expr="${form_type}=shipping-address" -->
+
+                <!--****-->
+
+                <!--#include virtual="../../views/tab_home_address_wrapper/html.shtml" -->
+                <!--****-->
+
+                <!--#endif -->
+
+                <!--****-->
+
+
+                <!--****-->
+
+                <!--#if expr="${form_type}=billing-address" -->
+
+                <!--****-->
+
+                <!--#set var="input-name" value="fn_grpaddr" -->
+                <!--#set var="head-label-name" value="" -->
+                <!--#set var="radio-text1" value="homeaddress" -->
+                <!--#set var="radio-value1" value="home" -->
+                <!--#set var="radio-tab-text1" value="home address" -->
+                <!--#set var="radio-text2" value="poboxaddress" -->
+                <!--#set var="radio-value2" value="pobox" -->
+                <!--#set var="radio-tab-text2" value="po address" -->
+
+                <!--#set var="tab_content_1" value="tab_home_address_wrapper" --> 
+                <!--#set var="tab_content_2" value="tab_pobox_address_wrapper" --> 
+
+
+                <input name="tabs" value="true" type="hidden" class="tab-hidden-counter">
+                <input name="radio-tab" value="" type="hidden" class="radiotab-hidden">
+                <!--#include virtual="../../components/tabs2/html.shtml" -->
+
+
+                <!--****-->
+
+                <!--#endif -->
+
+                <!--****-->
+
+            <div class="phone-details">
+            	<div class="grid__item grid__item--row js-cityname">
+            		<!--#set var="label-name" value="city" -->
+                    <!--#set var="mandatory" value="yes"-->
+                    <!--#set var="input-name" value="fn_city" -->
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                    <!--#set var="input-prop" value="form-input" -->    
+                    <!--#set var="input-type" value="text" -->
+                    <!--#include virtual="../../components/form_elements/input.shtml" -->
+            	</div>
+
+                <div class="grid__item grid__item--row js-statename">
+                    <!--#set var="label-name" value="state" -->
+                    <!--#set var="mandatory" value="no"-->
+                    <!--#set var="input-name" value="fn_state" -->
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                    <!--#set var="style-name" value="select-1" -->
+                    <!--#set var="option-component" value="state_option" -->
+                    <!--#include virtual="../../components/form_elements/select.shtml" -->
+                </div>
+
+            	<div class="grid__item grid__item--row js-zipcode">
+                    <!--#set var="label-name" value="zip / area / post code" -->
+                    <!--#set var="mandatory" value="yes"-->
+                    <!--#set var="input-name" value="fn_zip" -->
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                    <!--#set var="input-prop" value="form-input" -->    
+                    <!--#set var="input-type" value="text" -->
+                    <!--#include virtual="../../components/form_elements/input.shtml" -->
+            	</div>
+
+            	<div class="grid__item grid__item--row js-phonenumber">
+            		<!--#set var="label-name" value="phone number" -->
+                    <!--#set var="mandatory" value="yes"-->
+                    <!--#set var="input-name" value="fn_phno" -->
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+                    <!--#set var="input-prop" value="form-input" -->    
+                    <!--#set var="input-type" value="text" -->
+                    <!--#include virtual="../../components/form_elements/input.shtml" -->
+                   
+            	</div>
+            </div>
+
+            <!--#if expr="${form_type}=billing-address" -->   
+        	<div class="grid__item confirmation js-billing-invoice-checkbox">
+                <!--#set var="checkbox-value" value="value" -->
+        		<!--#set var="checkbox-label-name" value="I do not want to receive an invoice to the billing address." -->
+                <!--#set var="checkbox-name" value="fn_chkinvoice" -->
+        		<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+        	</div>
+            <!--#endif -->
+
+        	<div class="next-step-cta clearfix js-billing-ajax-button">
+        		<!--#set var="text-detail" value="continue to next step" -->
+            	<!--#set var="cta--varaint" value="cta--red" -->
+            	<!--#include virtual="../../components/form_elements/button.shtml" -->
+        	</div>
+        </div><!--Bobj screen one ends-->
+        
+        <div class="bobj-address-section-two display-none">
+            <!--#include virtual="../../components/address_bobj/html.shtml" -->
+        </div>
+
+
+    </div>
+    <div class='js-billing-section-two display-none'>
+        <!--#include virtual="../../views/billing_confirmation/html.shtml" -->
+                <!--****-->
+
+                <!--#if expr="${form_type}=shipping-address" -->
+
+                <!--****-->
+                
+                <input type="hidden" class="js-dynamic-delievery-path" value="/MOBILE/pages/dynamic_delievery_days.html">
+                <div class="js-dynamic-delievery">
+                </div>
+                
+                <!--****-->
+
+                <!--#endif -->
+
+                <!--****-->
+
+    </div>
+
+  </form>
+
+</div>
+ <!-- Billing FORM Block Ends Here-->

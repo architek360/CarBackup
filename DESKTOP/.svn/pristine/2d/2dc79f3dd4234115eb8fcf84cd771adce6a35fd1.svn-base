@@ -1,0 +1,308 @@
+/*------------------------------------*\
+    tab-all-selection -- Mobile CSS
+\*------------------------------------*/
+/**
+ * tab-all-selection CONTAINER ...... (.tab-all-selection)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.tab-all-selection{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+
+	.top-margin{
+		border-top:solid 1px $primary-26;
+
+	}
+	.full-width{
+		width:100%;
+	}
+
+	.tab-all-selection__desc {
+		@include main-font;
+		letter-spacing:2px;
+		display: inline-block;
+		text-align: center;
+		@include f(26);
+		@include rem('padding', 50px 0px);
+
+	}
+	
+	.billing-form {
+		margin: 0 auto;
+		width:100%;
+		text-align: left;
+		
+	}
+	.cta--red {
+		width: 70%;	
+		@include rem('margin-top', 30px);
+		@include rem('margin-bottom', 30px);
+	}
+
+
+
+	/*------------------------------------*\
+         SELECTION LISTING AREA
+	\*------------------------------------*/
+	.selection-list__listing {
+		@include set-ulFix;
+		display:block;
+		@include rem(padding, 30px 0 0 0);
+
+		.grid__item {
+			padding-left: 0;
+		}
+
+		> li{
+			@include rem('margin', 0px);
+			
+		}
+	}
+
+	/*------------------------------------*\
+         NUMBER OF SELECTION AREA
+	\*------------------------------------*/
+	.selection-list__selection-num {
+		display: block;
+		width: 100%;
+		@include f(22);
+		@include rem('margin', 45px 0 0 0);
+		text-align: center;
+		display: inline-block;
+		text-transform: uppercase;
+		@include font-color($primary-31);
+	}
+
+
+	/*------------------------------------*\
+                VIEW MORE AREA
+	\*------------------------------------*/
+	.selection-list__view-more{
+		display: block;
+		width: 100%;
+		@include f(22);
+		@include rem('margin', 45px 0 55px 0);
+		text-align: center;
+		display: inline-block;
+		text-transform: uppercase;
+		@include font-color($primary-31);
+		position:relative;
+
+		.down-arrow{
+			position:absolute;
+			bottom:-18px;
+			left: 48%;
+			@include setSprite(15px, 10px, -666px, -20px);
+		}
+	}	
+
+
+/*------------------------------------*\
+         SELECTION FILTER AREA
+\*------------------------------------*/
+.selection-filter{
+	@include rem('margin-top', 40px);
+	@include f(22);
+	
+	.selection-filter__wrapper{
+		.selection-filter__node{
+		border-bottom:solid 2px $primary-1;
+		background:$primary-23;
+
+		}
+
+		.selection-filter_node__title{
+			@include rem('padding', 30px 25px);
+			text-align:left;
+			position:relative;
+
+
+			.selection-filter_node_title__ques{
+				@include rem('padding-right', 30px);
+				display: table;
+			}
+			
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+	    		@include f(22);
+		 	 	@include font-color($primary-2);
+			}
+
+			span{
+				position:absolute;
+				right:25px;
+				top:30%;
+				@include setSprite(22px, 30px, -363px, -20px);
+			}
+			.on{
+				@include rotate(90deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+			.off{
+				@include rotate(0deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+		}
+
+		.selection-filter_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	
+
+		 	.filter_detail{
+		 		@include font-color($primary-3);
+		 		.filter_detail__node{
+					background:$primary-23;
+				}
+
+			.filter_detail_node__title{
+				border-top:2px solid $primary-1;
+				@include rem('padding', 30px 45px);
+				text-align:left;
+				position:relative;
+
+				.filter_detail_node_title__ques{
+					@include rem('padding-right', 30px);
+					display: table;
+					}
+				
+					p{
+						@include rem('padding', 0px);
+						display: table-cell;
+			    		vertical-align: middle;
+				 	 	@include f(22);
+					}
+
+					span{
+						position:absolute;
+						right:25px;
+						top:30%;
+						@include setSprite(22px, 30px, -363px, -20px);
+					}
+
+					.on{
+						@include rotate(90deg);
+						@include transition(0.2s);
+						transition-timing-function:linear;
+						-webkit-transition-timing-function:linear;
+					}
+
+					.off{
+						@include rotate(0deg);
+						@include transition(0.2s);
+						transition-timing-function:linear;
+						-webkit-transition-timing-function:linear;
+					}
+				
+				}
+		 	}
+		}
+
+
+		.active {
+			@include font-color($primary-5);
+		}
+	}
+
+	.text-wrapper{
+		@include rem(padding,0 30px 30px 45px);
+	}
+
+	/*------------------------------------*\
+             PRICE FILTER AREA
+	\*------------------------------------*/
+	.price-wrapper{
+		@include font-color($primary-2);
+		@include rem(padding,0 30px 0 65px);
+
+		li{
+			display:table;
+			@include rem(padding, 0 0 50px 0);
+		}
+		.select-2{
+			background:$primary-23 url($path-images + 'icons/select_arrow.png') no-repeat right 0 ;
+			width:300px;
+			max-width:300px;
+		}
+
+		.form-label{
+			vertical-align:middle;
+			display:table-cell;
+			text-transform:uppercase;
+			width:130px;
+			@include brand-font;
+			@include f(20);
+		}
+	}
+
+	/*------------------------------------*\
+             CATEGORY Wrapper AREA
+	\*------------------------------------*/
+	.category-wrapper{
+		@include font-color($primary-2);
+		@include rem(padding,0 20px);
+		display:block;
+		@include f(22);		
+		text-align: left;
+
+		li{
+			border-top:1px solid #333333;
+			@include rem(padding, 30px 22px 30px 45px);
+
+			label{
+				@include brand-font;
+			}
+		}
+
+		li:last-child{
+			border:none;
+		}
+
+	}
+	.selection-filter__wrapper:last-child {
+			@include rem('padding-bottom', 79px);
+	}
+
+
+	/*------------------------------------*\
+                 BUTTON AREA
+	\*------------------------------------*/
+	.cta{
+			font-weight:none;
+			@include f(22);	
+		}
+
+		.cta--red{
+			@include rem('padding', 15px 35px 15px 15px);
+			display:inline-block;
+			width:auto;
+				
+		}
+
+		.cta--grey {
+			@include rem('padding',  15px 25px 15px 15px); 
+			display:inline-block;
+			background:$primary-25;
+			width:auto;
+			@include rem(margin, 0 25px 0 0);
+		}
+
+	
+}
+
+
+}
+
+

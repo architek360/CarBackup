@@ -1,0 +1,23 @@
+<!-- condtion of sale  Starts Here-->
+<div class="event-article comp-rich-text">
+       <h3 class="heading3"> Event</h3>
+       <h1 class="heading2"> ron mueck exhibition</h1>
+       <p>
+       		From April 16 to October 27, 2013, the Fondation Cartier pour l’art contemporain will be presenting work by the Australian sculptor Ron Mueck, in a show that marks his return to institutional exhibiting in Europe.
+       	</p>
+       	<p>
+       		This new, highly personal show is the most complete, up-to-date presentation of his work since his success at the Fondation Cartier in 2005. In addition to six recent sculptures, three pieces specially produced for this exhibiition will be on display.
+			Based in London, Ron Mueck has exhibited in museums around the world including in Japan, Australia, Mexico and New Zealand. This event is particularly important because it is one of the very rare opportunities to see his sculptures in public. He works slowly in his London studio, making time an important element in his creativity.
+       	</p>
+       	<p>
+       			After visiting the exhibition, you can discover more about this extraordinary artist's work with exclusive material to be found at
+       			
+       	</p>
+              <a href="http://www.fondation.cartier.com">http://www.fondation.cartier.com</a>
+       	<div class="event-article__img">
+       		<span class="event-article__img__title"></span>
+       		<span class="event-article__img__info"></span>
+       		<img  src="<!--#echo var="CONTENT_IMG_PATH" -->event_article.png">
+       	</div>
+</div>
+<!-- condtion of sale  Ends Here-->

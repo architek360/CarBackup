@@ -1,0 +1,138 @@
+/*------------------------------------*\
+     CASH ON DELIVERY -- Mobile CSS
+\*------------------------------------*/
+/**
+/**
+ * MODULE CONTAINER....(.cash-delivery)
+ * MESSAGE AREA... for message text (.message-box)
+ * CASH ON DELIVERY ACCORDIAN...... for accordian(.cash-delivery-accordion)
+ * ACTION BUTTON.... for action button (.placeorder-btn,.confirmation)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.cash-delivery{
+	display: block;
+	@include font-color($primary-2);
+
+	/*------------------------------------*\`
+    		$MESSAGE AREA
+	\*------------------------------------*/
+	
+	.message-box{
+		@include rem(margin, 30px 0 10px);
+		.message{
+			@include rem(padding, 0 50px 30px);
+			font-style: italic;
+			@include main-font;
+			text-align: center;
+		}
+		hr{
+			background: $primary-17;
+			@include rem(margin, 5px 0 30px);
+		}
+	}
+
+	/*------------------------------------*\`
+    		$CASH ON DELIVERY ACCORDIAN
+	\*------------------------------------*/
+
+	.cash-delivery-accordion{
+		@include rem('padding', 14px 0);
+		width:100%;
+		margin:0 auto;
+		.cash-delivery-accordion__wrapper{
+			border-top:solid 1px $primary-6;
+		}
+		.cash-delivery-accordion__node{
+			border-bottom:solid 1px $primary-6; 
+		}
+		.cash-delivery-accordion_node__title{
+			@include rem('padding', 11px 0px);
+			text-align:left;
+			position:relative;
+			.cash-delivery-accordion_node_title__ques{
+				@include bold-font;
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table;
+			}	
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+		 				
+			}
+			span{
+				position:absolute;
+				right:0;
+				top:30%;
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+			span.on{
+				@include setSprite(22px, 30px, -784px, -20px);	
+			}
+			span.off{
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+		}
+		.cash-delivery-accordion_node__desc{
+	 		vertical-align: middle;
+			text-align: center;
+			@include rem(line-height, 30px);
+			@include f(24);
+			@include main-font;
+			@include rem(padding, 10px 0 17px);
+			.address{
+				vertical-align: middle;
+				text-align: center;
+				font-style: italic;
+				@include rem(line-height, 30px);
+				@include f(24);
+				@include main-font;
+				@include rem(padding, 10px 0 17px);
+				.address__uppercase{
+					text-transform: uppercase;;
+				}
+			}
+			.edit-icon {
+	         	@include setSprite(27px, 29px, -730px, -134px);         
+				display: inline-block;
+				@include rem('height', 15px);
+				@include rem(margin, 0 0 0 5px);
+				border-left:1px solid $primary-8;
+				position:relative;
+				@include rem('top', -3px);
+	        }
+			.address-button{
+				display:block;
+				@include f(20);
+	        	@include bold-font;
+	        	text-transform:uppercase;
+	        	@include rem(padding, 20px 0 0);
+	        	text-align:right;
+			}
+		}
+	}
+
+	/*------------------------------------*\
+    		$ACTION BUTTON
+	\*------------------------------------*/
+	.placeorder-btn{
+		text-align:center;
+		clear:both;
+		@include rem('padding',5px 0);
+		@include rem('margin-top',20px);
+		.cta--red{
+			width:73%;
+		}
+	}
+	.confirmation{
+		.form-check{
+		 	width: 100%;
+		 	text-align: left;
+		}
+	}
+}

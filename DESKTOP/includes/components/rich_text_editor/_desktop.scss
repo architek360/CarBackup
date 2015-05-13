@@ -1,0 +1,288 @@
+/*------------------------------------*\
+    RTE -- Mobile CSS
+\*------------------------------------*/
+/**
+ * RICH TEXT COMPONENT....main container (.comp-rich-text)
+ * DOWNLOAD-RTE.......rte__download (.rte__download)
+ * THEME BLUE RICH TEXT.......rich text component style for theme blue (.theme--blue .comp-rich-text)
+ */
+/*------------------------------------*\
+    $RICH TEXT COMPONENT
+\*------------------------------------*/
+.comp-rich-text {
+		clear: both;
+		color:$primary-3;
+		@include main-font;
+
+		.center{
+			margin: 0 auto;
+			display: block;
+			float: none;
+		}
+
+		h1{
+			@include proxi-font;
+			@include f(30);
+			text-transform:uppercase;
+			@include rem('padding', 20px 0);
+			color:$primary-2;
+			@include rem('letter-spacing',3px);
+		}
+		h2{
+			@include proxi-font;
+			@include f(26);
+			text-align:center;
+			text-transform:uppercase;
+			@include rem('padding', 10px 0 10px);
+			color:$primary-2;
+			@include rem('letter-spacing',3px);
+		}
+
+		h3{
+			text-align: center;
+			text-transform: uppercase;
+			color:$primary-2;
+			letter-spacing: 2.5px;
+			a{
+
+			}
+		}
+	
+		h4 {
+				font-weight: bold;
+				display: block;
+				
+				@include main-font;
+				
+				padding: 0;
+				
+				text-align: left;
+				text-transform: none;
+				a{
+
+				}
+
+			}
+		
+		
+		p{
+			
+			
+			
+			color: $primary-3 !important;
+			@include rem(letter-spacing, 1px);
+			@include rem(padding-bottom, 0px);
+			text-align: left;
+			a{
+
+			}
+
+			b {
+				font-weight: bold;
+			}
+
+
+		}
+		ul {
+			list-style-type: disc;
+			
+			@include rem(font-size, 11px);
+			
+			
+			li{
+				
+				@include rem(letter-spacing, 1px);
+				list-style-position: inside;
+				@include rem(line-height, 15px);
+			}
+		}
+
+		ol {
+			counter-reset: decimal;
+			display: table;
+			
+			li{
+				@include rem(font-size, 11px);
+				list-style-position: inside;
+				@include rem(letter-spacing, 1px);
+				@include rem(line-height, 15px);
+				counter-increment: decimal;
+				list-style: none;
+				 display: table-row;
+
+				 a{
+				 	text-decoration: none;
+				 	color: $primary-2;
+				 	font-weight: normal;
+				 }
+			}
+
+			li::before {
+			    content: counter(decimal) ".";
+			    display: table-cell;
+			    text-align: right;
+			    @include rem(padding-right, 5px);
+			}
+		}
+
+		dl {
+			
+			
+			
+			
+			@include rem('line-height',30px);
+			dt {
+				
+				width :95%;
+				
+			}
+			dd {
+				
+				
+
+			}
+		}
+		a{
+			color: $primary-2;
+			@include main-font();
+			text-decoration: none !important;
+		}
+
+		span{
+
+			
+		}
+		a:hover {
+			color: $primary-3;
+		}
+
+		a span.arrow, a span.red-more {
+		    @include setSpriteDesktop(auto, 8px ,-431px ,-155px, transparent);
+		    @include rem(padding-left, 10px);
+		    color: $primary-3;
+		    @include f(11);
+		    @include rem(margin, 10px 0);
+		    @include rem('letter-spacing',1px);
+		    cursor: pointer;
+		    display: inline;
+
+		    &:hover{
+		    	color: $primary-2;
+		    }
+		}
+
+		.intro-copy {
+		@include f(25);
+		line-height: 2.7rem; 
+	}
+	.pull-out-quote {
+		@include f(25);
+		line-height: 2.7rem; 
+	}
+	
+	span.icon--pd__title{
+		@include f(25);
+		margin: 0;
+	}
+	span.icon--pd__desc{
+		margin-top: -1em;
+		padding-left: 36px;
+	}
+
+		
+	.content-medias{
+		float:right;
+		@include rem('margin-left',30px);
+    	max-width: 98%;
+    	border: 0px solid $primary-17;
+	}
+
+	.content-medias-left{
+		float:left;
+		@include rem('margin-right',30px);
+		@include rem('margin-left',0px);
+		max-width: 98%;
+		border: 0px solid $primary-17;
+	}
+
+
+	img{
+		@include rem('margin-bottom',30px);
+		border: 0px solid $primary-17;
+		float:right;
+		@include rem('margin-left',30px);
+		max-width: 100%;
+	}
+
+	table{
+		border: 1px solid #4D4D4D;
+		@include rem('margin-top',20px);
+		@include rem('margin-bottom',10px);
+		letter-spacing: 1px;
+		color: $primary-2;
+		border-collapse: inherit;
+		padding: 10px 10px 30px;
+
+		td{
+			height: 20px;
+			padding:5px;
+			/*border: 1px solid $primary-2;*/
+			@include f(11);
+			line-height: 16px;
+		}
+
+		tr:first-child + tr td{
+			padding-top: 30px;
+		}
+
+		th{
+			text-align: left;
+			border-bottom: 1px solid #4D4D4D;
+			@include f(11);
+			line-height: 16px;
+			padding:5px 20px 15px 0;
+			@include f(14);
+			@include proxiBold-font();
+			text-transform: uppercase;
+		}
+	}
+	.subtitle {
+			font-family: "EBGaramond",Garamond,Georgia,serif;
+			font-size: 22px!important;
+			position: relative;
+			margin: 14px 0 10px 0!important;
+			&:before {
+				border-top: 1px solid #ffffff;
+				content: "";
+				display: block;
+				left: -75px;
+				position: absolute;
+				top: 48%;
+				width: 60px;
+			}
+		}
+
+		.subtitle:after {
+				left: auto!important;
+				right: -70px;
+				border-top: 1px solid #ffffff;
+				content: "";
+				display: block;
+				left: -75px;
+				position: absolute;
+				top: 48%;
+				width: 60px;
+		}
+
+}
+
+.service-article{
+	width:580px;
+	margin:0 auto;
+	clear:both;
+
+	p{
+		@include rem('padding-bottom',0px );
+	}
+}
+

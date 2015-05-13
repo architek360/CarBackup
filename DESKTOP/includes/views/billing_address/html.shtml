@@ -1,0 +1,19 @@
+<!-- tab_billing_address Block Ends Here-->
+
+<div class="my-billing-address-content-wrapper">
+  <div class= "main-content">
+    <p class="heading__desc">Please note that Cartier does not ship orders to P.O. Boxes </p>
+    <div class="conf"> 
+      <!--#include virtual="../../components/edit_footer/desktop.shtml" --> 
+    </div>
+    
+    <!-- tab_billing_address Block Starts Here-->
+    <div class="tab_billing_address">
+      <form>
+        <!--#include virtual="../../components/delivery_date/desktop.shtml" -->
+        
+        
+      </form>
+    </div>
+  </div>
+</div>

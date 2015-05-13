@@ -1,0 +1,286 @@
+  <!-- WISHLIST  Starts Here-->
+  <!--#set var="ICON_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/" -->
+  <!--#set var="CONTENT_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/" -->
+
+<div class="wishlist clearfix js-wishlistCont">
+    <!-- HEADING AREA-->
+    <div class="wishlist__title">
+        <h1 class="heading2">MY WISHLISTS</h1>
+    </div>
+    
+    <div class="wishlist__select js-wishlist-select js-form-validator clearfix">
+        <form>
+            <div class="item-list display-none">
+                <ul class="account-links">
+                    <li class="first">These pieces have been temporarily saved. Please <a href="#">create a MyCartier account</a> to permanently save your selections.</li>
+                    <li class="last">Do you have items saved already? <a href="#">Log in</a> to your account.</li>
+                </ul>
+            </div>
+
+            <div class="edit-wishlist-name-anonymous dark display-none">
+                <div class="delete-wishlist js-delete-wishlist">
+                    <!--#set var="more-text" value="delete this list" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </div>
+                <br/>
+                <a target="_blank" rel="nofollow" class="print-link wishlist-uppercase wishlist-button-action wishlist-button-print" href="#">Print this list</a>
+            </div>
+
+            <div class="edit-field display-none">
+
+                <div class="list-name display-none">List Name : </div>
+                <!--#set var="input-type" value="text" -->
+                <!--#set var="input-prop" value="form-input display-none js-inputfield " -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#set var='input-placeholder' value='watches' -->
+                <input type="text" name="fn_wishlabel" class="form-input display-none js-inputfield " placeholder="">
+                <button type="submit" class="cta-button cta-button__inner cta--red-width-auto-pad-20 display-none js-savelist">
+                    <span class="input-arrow"></span>
+                    <span class="cta-button__input">save</span>
+                </button>
+                <button type="submit" class="cta-button cta-button__inner cta--red-width-auto-pad-20 display-none js-cancellist">
+                    <span class="input-arrow"></span>
+                    <span class="cta-button__input">cancel</span>
+                </button>
+                <div class="label-name display-none"></div>
+                <input type="hidden" name="wishlist_name" value="wishlist_number" class="js-hidden">
+                <input type="hidden" name="action" value="save" class="js-hidden-action">
+                <input type="hidden" name="wishlist_pagepath" value="wishlist_pagepath"/>
+
+            </div>
+
+            <div class="overlap display-none">
+                <div class="center-align">
+                    <div class="select-label">select one list </div>
+                    <select class="form-select select-1 js-form-select" name="wishlist-field">
+                        <option value="watches" data-wishlistno="123">Watches</option>
+                        <option value="watches" data-wishlistno="124">Watches</option>
+                        <option value="watches" data-wishlistno="125">Watches</option>
+                        <option value="rings" data-wishlistno="126">rings</option>
+                        <option value="rings" data-wishlistno="127">rings</option>
+                        <option value="rings" data-wishlistno="128">rings</option>
+                    </select>
+                </div>
+                <button type="submit" class="js-edit cta-button cta-button__inner cta--red-width-auto-pad-20">
+                    <span class="input-arrow"></span>
+                    <span class="cta-button__input">edit</span>
+                </button>
+                <div class="delete-list js-deletelist">
+                    <!--#set var="more-text" value="delete this list" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </div>
+                <br/>
+                <a target="_blank" rel="nofollow" class="print-link wishlist-uppercase wishlist-button-action wishlist-button-print" href="#">Print this list</a>
+            </div>
+        </form>     
+    </div>
+    
+    <!--Product Detail Box For Order Detail Starts Here-->
+    <div class="display-none zero-items-error js-error">There are 0 items in your Wishlist</div>
+    <ul class="js-productListing ui-sortable js-sortable">
+        <li class="js-product-wrapper js-form-validator">
+
+            <form>
+                <div class="product-wrapper">
+                    <input type="hidden" name="wishlist_name" value="wishlist_number" class="js-hidden">
+                    <input type="hidden" id="productId" name="productId" value="CRB/404/050/0/CRB4040500">
+                    <input type="hidden" id="wishlistId" name="wishlistId" value="234">
+                    <input type="hidden" id="wishlistName" name="wishlistName" value="watches">
+                    <input type="hidden" name="wishlist_pagepath" value="wishlist_pagepath"/>
+                    <input type="hidden" name="wishlist-field" value="wishlist_name" class="js-save-name"/>
+                    <input type="hidden" name="existing-wishlistnumber" value="existing-wishlistnumber" class="js-add-number"/>
+
+                    <div class="wishlist-product-line clearfix">
+
+                        <div class="wishlist-move"><img alt="" src="<!--#echo var="ICON_IMG_PATH" -->move.png"></div>
+                        <div class="wishlist-close js-wishlist-product-close"></div>
+                        <div class="wishlist-col-1 clearfix">
+                            <div class="wishlist-product-image">
+                                <a href="/collections/jewelry/collections/love/love-necklaces/b7212300-love-necklace">
+                                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="image" alt="Ring"/>
+                                </a>
+                            </div>
+                            <div class="product-detail grid clearfix">
+                                <div class="field-content">
+                                    <a href="#" class="heading3">panthere ring</a>
+                                </div>
+                                <div class="field-content">
+                                    <h2 class="product-detail__variant">Yellow gold, tsavorite, lacquer</h2>
+                                </div>
+                                <div class="field-content">
+                                    <span class="product-detail__ref">ref : </span><a href="#" class="product-detail__size">HPI00480</a>
+                                    
+                                </div>
+                                <div class="product grid__item one-whole">
+                                    
+                                    <p class="product__price one-half">
+                                        <span class="price-text">$ 5,540</span>
+                                        <span class="note">Excl sales tax</span>
+                                    </p>
+
+                                    <div class="filter-wrapper">
+
+
+                                        <!--#set var="input-name" value="fn_noofitem" -->
+                                        <!--#set var="style-name" value="select-1 js-size-selector" -->
+                                        <!--#set var="option-component" value="size_option" -->
+                                        <!--#include virtual="../../components/form_elements/select.shtml" -->
+                                        <!--#set var="more-text" value="sizing guide" -->
+                                        <!--#set var="arrow-class" value="arrow-show" -->  
+                                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                                    </div>
+                                </div>
+                                <div class="button-wrapper">
+                        <!--#set var="text-detail" value="add to shopping bag" -->
+                        <!--#set var="cta--varaint" value="cta--red cta--red-pad-30 js-addtoshopping" -->
+                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                        <div class="js-accordion">
+                            <div class="js-accordion__node">
+                                <div class="js-accordion_node__title">
+                                    <div class="js-copytowishlist">
+                                        <!--#set var="more-text" value="copy to another wishlist" -->
+                                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                                    </div>
+                                </div>
+                                <div class="js-accordion_node__desc">
+                                    <!--#include virtual="../../views/copy_to_wishlist/html.shtml" -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                        <div class="wishlist-col-2">
+                            <div class="message-wrapper js-message">
+                            <!--#set var="label-name" value="comment" -->
+                            <!--#set var="mandatory" value="no"-->
+                            <!--#set var="input-name" value="fn_comment" -->
+                            <!--#include virtual="../../components/form_elements/label.shtml" -->
+                            <!--#set var="textarea-name" value="enter text..." -->
+                            <!--#set var="cta--varaint" value="cta--grey-pad-30" -->
+                            <!--#include virtual="../../components/form_elements/text_area.shtml" -->
+                            </div>
+                            <!-- SAVE BUTTON -->
+                            <div class="button-wrapper js-save">
+                                <!--#set var="more-text" value="Save" -->
+                                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                            </div>  
+                        </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+
+            </form>
+        </li>
+
+        <li class="js-product-wrapper js-form-validator">
+
+            <form>
+                <div class="product-wrapper">
+                    <input type="hidden" name="wishlist_name" value="wishlist_number" class="js-hidden">
+                    <input type="hidden" id="productId" name="productId" value="pid">
+                    <input type="hidden" id="wishlistId" name="wishlistId" value="pid">
+                    <input type="hidden" id="wishlistName" name="wishlistName" value="pid">
+                    <input type="hidden" name="wishlist_pagepath" value="pagepath"/>
+                    <input type="hidden" name="wishlist-field" value="wishlist_name" class="js-save-name"/>
+                    <input type="hidden" name="existing-wishlistnumber" value="existing-wishlistnumber" class="js-add-number"/>
+
+                    <div class="wishlist-product-line clearfix">
+
+                        <div class="wishlist-move"><img alt="" src="<!--#echo var="ICON_IMG_PATH" -->move.png"></div>
+                        <div class="wishlist-close js-wishlist-product-close"></div>
+                        <div class="wishlist-col-1 clearfix">
+                            <div class="wishlist-product-image">
+                                <a href="/collections/jewelry/collections/love/love-necklaces/b7212300-love-necklace">
+                                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="image" alt="Ring"/>
+                                </a>
+                            </div>
+                            <div class="product-detail grid clearfix">
+                                <div class="field-content">
+                                    <a href="#" class="heading3">Bracelet</a>
+                                </div>
+                                <div class="field-content">
+                                    <h2 class="product-detail__variant">Yellow gold, tsavorite, lacquer</h2>
+                                </div>
+                                <div class="field-content">
+                                    <span class="product-detail__ref">ref : </span><a href="#" class="product-detail__size">HPI00480</a>
+                                    
+                                </div>
+                                <div class="product grid__item one-whole">
+                                    
+                                    <p class="product__price one-half">
+                                        <span class="price-text">$ 5,540</span>
+                                        <span class="note">Excl sales tax</span>
+                                    </p>
+
+                                    <div class="filter-wrapper">
+
+
+                                        <!--#set var="input-name" value="fn_noofitem" -->
+                                        <!--#set var="style-name" value="select-1 js-size-selector" -->
+                                        <!--#set var="option-component" value="size_option" -->
+                                        <!--#include virtual="../../components/form_elements/select.shtml" -->
+                                        <!--#set var="more-text" value="sizing guide" -->
+                                        <!--#set var="arrow-class" value="arrow-show" -->  
+                                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                                    </div>
+                                </div>
+                                <div class="button-wrapper">
+                        <!--#set var="text-detail" value="add to shopping bag" -->
+                        <!--#set var="cta--varaint" value="cta--red cta--red-pad-30 js-addtoshopping" -->
+                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                        <div class="js-accordion">
+                            <div class="js-accordion__node">
+                                <div class="js-accordion_node__title">
+                                    <div class="js-copytowishlist">
+                                        <!--#set var="more-text" value="copy to another wishlist" -->
+                                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                                    </div>
+                                </div>
+                                <div class="js-accordion_node__desc">
+                                    <!--#include virtual="../../views/copy_to_wishlist/html.shtml" -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                        <div class="wishlist-col-2">
+                            <div class="message-wrapper js-message">
+                            <!--#set var="label-name" value="comment" -->
+                            <!--#set var="mandatory" value="no"-->
+                            <!--#set var="input-name" value="fn_comment" -->
+                            <!--#include virtual="../../components/form_elements/label.shtml" -->
+                            <!--#set var="textarea-name" value="enter text..." -->
+                            <!--#set var="cta--varaint" value="cta--grey-pad-30" -->
+                            <!--#include virtual="../../components/form_elements/text_area.shtml" -->
+                            </div>
+                            <!-- SAVE BUTTON -->
+                            <div class="button-wrapper js-save">
+                                <!--#set var="more-text" value="Save" -->
+                                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                            </div>  
+                        </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+
+            </form>
+        </li>
+
+    </ul>
+    <div id="modalOverlay" class="positionChange js-modal-overlay">
+        <div id="modalWindow" class="js-modal-window">
+            
+        </div>
+    </div>
+</div>
+ <!-- WISHLIST Ends Here-->

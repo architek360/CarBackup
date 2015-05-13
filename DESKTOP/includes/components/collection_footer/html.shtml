@@ -1,0 +1,37 @@
+<!--Collection footer starts here -->
+<section class="footer__bottom">
+		<h6 class="display-none">Footer Collection Links</h6>
+  		<ul class="collection-menu">
+  			<li><a href="#" title="Collections">Collections</a>
+	  			<ul class="footer-sub-menu">
+	  				<li><a href="#" title="Jewelry">Jewelry</a></li>
+	  				<li><a href="#" title="Timepieces">Timepieces</a></li>
+	  				<li><a href="#" title="Bridal">Bridal</a></li>
+	  				<li><a href="#" title="Accessories">Accessories</a></li>
+	  				<li><a href="#" title="Fragrances">Fragrances</a></li>
+	  				<li><a href="#" title="Gifts">Gifts</a></li>
+	  			</ul>
+  			</li>
+
+  			<li><a href="#" title="The Maison">The Maison</a>
+	  			<ul class="footer-sub-menu">
+	  				<li><a href="#" title="History and stories">History and stories</a></li>
+	  				<li><a href="#" title="Living Heritage">Living Heritage</a></li>
+	  				<li><a href="#" title="Know How">Know How</a></li>
+	  				<li><a href="#" title="Events">Events</a></li>
+	  				<li><a href="#" title="Commitments">Commitments</a></li>
+	  				<li><a href="#" title="Cartier Connected">Cartier Connected</a></li>
+	  			</ul>
+  			</li>
+
+  			<li><a href="#" title="Services">Services</a>
+	  			<ul class="footer-sub-menu">
+	  				<li><a href="#" title="Client Services">Client Services</a></li>
+	  				<li><a href="#" title="Expertise Guide">Expertise Guide</a></li>
+	  				<li><a href="#" title="My Cartier">My Cartier</a></li>
+
+	  			</ul>
+  			</li>
+  		</ul>
+ </section>
+<!--Collection footer ends here -->

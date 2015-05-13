@@ -1,0 +1,78 @@
+.boutique-search-wrapper{
+
+
+    .store-search-wrapper {
+        @include rem('margin', 30px 0 -50px);
+    }
+
+    .js-store-locator_error-msg-1, .js-store-locator_error-msg-2{
+        margin: 0;
+    }
+    @include rem(margin, 50px 0 20px 0);
+    .store-locater__search{
+        display: block;
+        @include rem(width, 480px);
+        margin: auto;
+        input{
+            width: 100%;
+            @include rem(height, 35px);
+            @include rem(margin-bottom, 15px);
+            @include rem(padding-left, 15px);
+        }
+        .store-locater__find-button{
+            position: relative;
+            height: 0;
+            text-align: center;
+            z-index: 1;
+            .more-button{
+                @include rem(padding, 10px);
+                @include proxi-font();
+                font-weight: bold;
+                @include rem(margin-top, 15px);
+                font-style: normal;
+                color: $primary-2;
+                background: $primary-124;
+                display: inline-block;
+                width: auto;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                .js-search-but-1{
+                    @include rem(height, 13px);
+                    @include rem(width, 5px);
+                    background-position: -124px -45px;
+                    @include rem('margin-right', 5px);
+                }
+            }
+        }
+    }
+    .boutique-bg{
+        text-align: center;
+        width: 100%;
+		min-height: 225px;
+        margin-top: 38px;
+        img{
+            display: inline-block;
+            max-width: 100%;
+            max-height: 215px;
+        }
+    }
+    .see-all{
+        @include rem(margin,20px 0 115px 0);
+        .more-button{
+            @include f(12);
+            color: $primary-3;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            margin: 10px;
+            letter-spacing: 0.1em;
+
+            h2{
+                 @include f(12);
+                 @include proxiBold-font();
+                 display:inline;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,67 @@
+/*------------------------------------*\
+   ECS MY ADDRESS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.. main container(.ecs-form-layout)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER BLOCK
+\*------------------------------------*/
+.js-pre-registration{
+	.js-form-validator{
+		.js-address-form{
+			width: 100%;
+		}
+		form{
+			.form{
+				.js-edit{
+					display: block;
+				}
+				.my-address-c1, .my-address-c2, .my-address-c3{
+					@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+				    border: 0 none;
+				    @include rem('padding', 20px);
+				    display: inline-block;
+				    width: 100%;
+				    @include box-sizing(border-box);
+				    .input-wrapper{
+						label{
+							@include rem('padding', 45px 0px 5px);
+						}
+					}
+				}
+				.my-address-c2{
+				    @include rem('margin-top', 25px);
+				    background: 0 none;
+				    border: 1px solid $primary-11;
+				}
+				.my-address-c3{
+					@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+				    @include rem('margin-top', 25px);
+				    border: 1px solid $primary-11;
+				}
+				.form-address-selector__radio{
+					display: inline-block;
+					width: 100%;
+					border-bottom: 0 none;
+				}
+				.form-element.checkbox-wrapper.fn_grpaddr.js-first-radio, .form-element.checkbox-wrapper.fn_grpaddr.js-second-radio{
+					border-right: 1px solid $primary-11;
+					display: inline-block;
+					@include rem('padding', 20px 0px);
+					text-align: center;
+					width: 49%;
+				}
+				.form-element.checkbox-wrapper.fn_grpaddr.js-second-radio{
+					width: 50%;
+					border: 0 none;
+				}
+				.button-wrapper{
+					
+					@include rem('padding', 40px 0px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    Video Pushes -- Desktop CSS
+\*------------------------------------*/
+
+
+.video-pushes-wrapper {
+		width: 100%;
+		display: block;
+		@include rem('height', 120px); 
+		@include rem('margin-bottom', 20px); 
+
+	.video-pushes {
+		width: 100%;
+		display: block;
+		position: absolute;
+		left: 0;
+		/*background: yellow;*/
+
+		.close-button {
+			@include rem('margin', 10px); 
+			display: none;
+			@include proxiBold-font;
+			@include font-color($primary-2);
+			@include rem('letter-spacing', 1.2px); 
+			@include f(11);
+			z-index: 10;
+			position:absolute;
+			right:50px;
+
+
+			&:hover {
+				@include font-color($primary-3);
+			}
+		}
+
+		.video-pushes__inner {
+			overflow: hidden;
+			width: 100%;
+		}
+		.video-pushes__teaser {
+			width: 100%;
+			height: 120px;
+			display: block;
+			.video-teaser-image {
+				display: block;
+				width: 100%;
+			}
+			.video-pushes__teaser-desc {
+				@include f(12);
+				@include font-color($primary-49);
+			    font-weight: bold;
+			    @include rem('letter-spacing', 1.2px); 
+			    text-align: center;
+			    text-transform: uppercase;
+			    @include rem('padding-top', 50px); 
+			    position: absolute;
+			    @include rem ('top', 10px);
+			    width: 100%;
+			    cursor: pointer;
+			    &:hover {
+					@include font-color($primary-64);
+				}
+			}
+			.video-pushes__teaser-desc:after {
+                    @include setSpriteDesktop(8px, 15px ,-194px, -50px, transparent);
+                    content: "";
+                    display: block;
+                    @include rem('height', 3px);
+                    @include rem('width', 5px);
+                    margin: 0 auto 0;
+                    @include rem('margin-top', 3px);
+
+            }
+		}
+		.video-pushes__slideshow {
+			width: 100%;
+			display: none;
+			min-height:600px;
+			height:100%;
+
+			#video-player_wrapper {
+				position: static !important;
+			}
+		}
+	}
+}
+.multiple-video{
+	.nested-carousel-wrapper{
+		margin-top: 0;
+	}
+
+}

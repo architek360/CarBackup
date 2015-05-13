@@ -1,0 +1,8 @@
+<!-- tab Collection View All Block Starts Here-->
+<div class="tab-collection-view">
+
+<!--#include virtual="../../views/collection_view_all_pushes/html.shtml" -->
+	
+
+</div>
+<!-- tab Collection View All Block Ends Here-->

@@ -1,0 +1,138 @@
+<!-- Back Button Starts Here-->
+    <!--#set var="back-static-text" value="Back to Home"-->
+    <!--#include virtual="../../components/back_button/html.shtml" -->
+<!-- Back Button ENDs Here-->
+
+ <!-- country-switcher WRAPPER-->
+    
+<div class="country-switcher clearfix">
+
+    <!-- HEADING AREA-->
+    <div class="country-switcher__title">
+        <h4 class="heading4">select your country</h4>
+    </div>
+ 
+
+    <!-- START OF COUNTRY SWITCHER FILTER AREA-->
+    <div class="country-switcher__filter clearfix">
+        <div class="js-accordion country-switcher__filter__wrapper">
+            <div class="js-accordion__node country-switcher__filter__node">
+                <div class="js-accordion_node__title country-switcher__filter_node__title heading3">
+                     <span class="off"></span>
+                    <div class="country-switcher__filter_node_title__ques">
+                        <p>america</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc country-switcher__filter_node__desc">
+                    <!-- COUNTRY CHILD STARTS HERE -->
+                    <div class="country-child">
+                        <div class="js-accordion__node country-child__node">
+                            <div class="js-accordion_node__title country-child_node__title heading3">
+                                <span class="off"></span>
+                                <div class="country-child_node_title__ques">
+                                    <p>United states</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc country-child_node__desc">
+                                <!-- LANG CHILD STARTS HERE -->
+                                <ul class="lang-child">
+                                    <li><a href="#">english</a></li>
+                                    <li><a href="#">spanish</a></li>
+                                    <li><a href="#">french</a></li>
+                                    <!-- <li><a href="http://maps.apple.com/?ll=28.601,77.23&z=20"> For apple </a></li> -->
+                                    <!-- <li class="andr-Map"><a href="geo:0,0?q=28.601,77.23(Treasure)">For Map</a></li> -->
+                                    <li class="andr-Map"><a href="http://maps.apple.com/?ll=28.601,77.23&z=20">For Map</a></li>
+
+                                </ul>
+                                <!-- LANG CHILD ENDS HERE -->
+                                
+                            </div>
+                        </div>
+
+                        <div class="js-accordion__node country-child__node">
+                            <div class="js-accordion_node__title country-child_node__title heading3">
+                                <span class="off"></span>
+                                <div class="country-child_node_title__ques">
+                                    <p class="text-wrapper">brasil</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc country-child_node__desc">
+                                    
+                            </div>
+                        </div>
+  
+                        <div class="js-accordion__node country-child__node">
+                            <div class="js-accordion_node__title country-child_node__title heading3">
+                                 <span class="off"></span>
+                                <div class="country-child_node_title__ques">
+                                    <p>mexico</p>
+                                </div>
+                            </div>
+                            <div class="js-accordion_node__desc country-child_node__desc">
+                                <p class="text-wrapper">
+                                   mexico
+                                </p>
+                            </div>
+                        </div>                      
+                    </div> 
+                    <!-- END OF country-child ACCORDIAN -->
+
+                 </div>
+            </div>
+            <div class="js-accordion__node country-switcher__filter__node">
+                <div class="js-accordion_node__title country-switcher__filter_node__title heading3">
+                     <span class="off"></span>
+                    <div class="country-switcher__filter_node_title__ques">
+                        <p>europe</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc country-switcher__filter_node__desc">
+
+                 </div>
+            </div>
+            <div class="js-accordion__node country-switcher__filter__node">
+                <div class="js-accordion_node__title country-switcher__filter_node__title heading3">
+                     <span class="off"></span>
+                    <div class="country-switcher__filter_node_title__ques">
+                        <p>asia-pacific</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc country-switcher__filter_node__desc">
+
+                 </div>
+            </div>
+            <div class="js-accordion__node country-switcher__filter__node">
+                <div class="js-accordion_node__title country-switcher__filter_node__title heading3">
+                     <span class="off"></span>
+                    <div class="country-switcher__filter_node_title__ques">
+                        <p>middle east</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc country-switcher__filter_node__desc">
+
+                 </div>
+            </div>
+            <div class="js-accordion__node country-switcher__filter__node">
+                <div class="js-accordion_node__title country-switcher__filter_node__title heading3">
+                     <span class="off"></span>
+                    <div class="country-switcher__filter_node_title__ques">
+                        <p>other countries</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc country-switcher__filter_node__desc">
+
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF COUNTRY SWITCHER FILTER AREA-->
+   
+
+    
+
+</div>
+<!-- country-switcher Ends Here-->
+
+
+
+

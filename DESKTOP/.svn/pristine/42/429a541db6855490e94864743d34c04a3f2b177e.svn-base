@@ -1,0 +1,280 @@
+/*------------------------------------*\
+    FOOTER -- DESKTOP CSS
+\*------------------------------------*/
+/**
+* MAIN CONTAINER ..... header--desktop used as main outer container for Header.(.footer)
+* LEFT CONTAINER ..... Left footer container (.footer-left)
+* RIGHT CONTAINER..... Right footer container (.footer-right)
+* SOCIAL ICONS........ Container for social icons (.social-icons)
+* COUNTRY SWITCHER.... Container for country switcher (.country)
+* STATIC FOOTER LINKS. Container for static footer links (.footer-menu)
+*/
+
+/*------------------------------------*\
+    MAIN CONTAINER
+\*------------------------------------*/
+.footer{
+	@include rem('padding-top', 10px);
+	border-top:  1px solid $primary-17;
+	background:$primary-1;
+	clear:both;
+	
+	.footer__inner{
+		margin: 0 auto;
+		width:980px;
+	}
+
+	/*------------------------------------*\
+   			 LEFT FOOTER
+	\*------------------------------------*/
+	.footer-left{
+		display: inline-block;
+		@include proxi-font;
+		width:57%;
+
+		li{
+			float:left;
+			margin:8px 4px 0px 3px;		
+			max-width :165px;
+				
+		}
+
+		.tel-no{
+			.nav-link{
+				color: $primary-76;
+				@include f(13);
+				@include rem('letter-spacing', 1px);
+				border-right:1px solid $primary-17;
+				@include rem('padding', 0 15px 0 0);
+				&:hover{
+					color: $primary-51;
+				}
+			}
+		}
+
+		.newsletter{
+			.nav-link{
+				text-transform: none;
+				@include main-font;
+				@include f(13);
+			}
+		}
+	}
+	.foundation{
+		.nav-link{
+			width:171px;
+			height:36px;
+			@include rem('font-size', 1px);
+			@include rem('letter-spacing', 1px);
+			text-indent: -1999px;
+			float:left;
+
+			&:hover{
+				background-position: 0 -36px;
+			}
+		}
+	}
+
+	.cartier-rouge{
+		.nav-link{
+			background-image: url($path-images +'icons/cartier-rouge.png');
+			width:143px;
+			height:36px;
+			@include rem('font-size', 1px);
+			@include rem('letter-spacing', 1px);
+			text-indent: -1999px;
+			float:left;
+		}
+	}
+	/*------------------------------------*\
+    	RIGHT FOOTER
+	\*------------------------------------*/
+	.footer-right{
+		display: inline-block;
+		vertical-align: top;
+		float:right;
+
+		/*------------------------------------*\
+		    SOCIAL ICONS
+		\*------------------------------------*/
+		.social-icons{
+			display: inline-block;
+			@include rem('margin-top', 12px);
+			@include rem('margin-right', 10px);
+			border-left: 1px solid $primary-17;
+	  		border-right: 1px solid $primary-17;
+	  		@include rem('padding', 0 0 0 15px);
+
+
+			li{
+			display: inline-block;
+			margin:1px 15px 0px 0px;		
+			}
+
+			
+		}
+		.country{
+			display: inline-block;
+			width: 43%;
+			vertical-align: top;
+			
+		}
+		.social-share__facebook{
+			@include setSpriteDesktop(16px, 19px ,-36px,-9px, transparent);
+		}
+		.social-share__twitter{
+			@include setSpriteDesktop(16px, 19px ,-121px,-9px, transparent);
+		}
+		.social-share__pin-it{
+			@include setSpriteDesktop(16px, 19px ,-65px,-9px, transparent);
+		}
+		.social-share__youtube{
+			@include setSpriteDesktop(16px, 19px ,-8px,-9px, transparent);
+		}
+		.social-share__instagram{
+			@include setSpriteDesktop(16px, 19px ,-93px,-9px, transparent);
+		}
+		.social-share__tumblr{
+			@include setSpriteDesktop(16px, 19px ,-332px , -1078px , transparent);
+		}
+	}
+	/*------------------------------------*\
+	    STATIC FOOTER LINKS
+	\*------------------------------------*/
+	.footer-menu{
+		@include set-ulFix;
+		text-align:center;
+		width:100%;
+		float:left;
+		@include rem('margin', 10px 0 10px 0);
+			ul{
+
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+				@include rem('margin-left',-25px);
+			li{
+				display:table-cell;
+				@include main-font;
+				float:none;
+
+				.nav-link{
+					@include f(12);
+					text-transform: none;
+					@include main-font;
+				}
+		
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    COUNTRY SWITCHER
+	\*------------------------------------*/
+	.trigger-sub-menu{
+		display: inline-block;
+		@include rem('padding', 10px 0px);
+		color: $primary-114;
+		@include f(12);
+		width:100%;
+		&:hover{
+			color: $primary-2;
+		}
+	}
+
+	.wrapper-sub-menu{
+		background-color:$primary-113;
+		li{
+			color: $primary-114;
+		}
+		.more-arrow,.less-arrow{
+			background-color:$primary-113;
+		}
+	}
+}
+
+.language-select {
+	@include rem('margin-top', 6px);
+	@include proxi-font;
+	@include rem('letter-spacing', 1px);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-weight: normal;
+	position: relative;
+	width: 170px;
+	background: $primary-113;
+}
+
+
+	/*------------------------------------*\
+    	LIVING HERITAGE FOOTER
+	\*------------------------------------*/
+
+.living-heritage-bg{
+	.footer{
+		background:$primary-2;
+		.footer-left{
+			ul{
+				.foundation{
+					.nav-link{
+						background-image: url($path-images +'icons/foundation-logo-bridal.png');
+					}	
+				}
+			}
+		}
+		
+		.language-select{
+			background: $primary-112;
+			
+			.trigger-sub-menu{
+				color: $primary-115;
+				&:hover{
+					color: $primary-115;
+				}
+			}	
+			.wrapper-sub-menu{
+				color: $primary-115;
+				background-color:$primary-112;
+
+				.va-nav{
+					.less-arrow{
+						@include setSpriteDesktop(170px, 7px ,-203px, -225px, $primary-112);
+						color:$primary-112;
+					}
+					.more-arrow{
+						@include setSpriteDesktop(170px, 7px ,-203px, -250px, $primary-112);
+						color:$primary-112;
+					}
+				}
+
+				.sub-menu{
+					li{
+						border-top:1px solid $primary-63;
+						color: $primary-115;
+						
+						&:first-child{
+							border-top:none;
+						}
+
+						&:hover{
+							color: $primary-115;
+						}	
+					}
+				}
+			}
+		}
+
+		.nav-link{
+			&:hover{
+				color:$primary-40;
+			}
+		}
+	}
+}
+
+
+/*@-moz-document url-prefix() {
+    .footer{
+		margin-top:6px
+	}
+}*/

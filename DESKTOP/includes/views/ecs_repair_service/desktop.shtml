@@ -1,0 +1,17 @@
+<!-- Login Box Starts Here-->
+<h1 class="heading1">
+	MY REPAIR SERVICE
+</h1>
+<p>On April 7th in Hong Kong, the Cartier Collection acquired at auction an exquisite necklace with 27 jadeite beads of exceptional quality and extraordinary cut (from 15.4 to 19.2 mm). The price of $27.44 million represented a new world record for a jadeite jewel. The interest surrounding the acquisition attests to the high international standing of Cartier heritage pieces and their striking desirability at auctions.</p>
+<div class="js-product registration_page">
+<!-- INCLUDING TABS COMPONENT-->
+
+    <!--#set var="tab_1" value="Send my creation to the repair center" -->
+    <!--#set var="tab_2" value="Entrust my creation in a boutique" -->
+    <!--#set var="tab_content_1" value="tab_repair_service" -->
+    <!--#set var="tab_content_2" value="tab_entrust_boutique" -->
+    <!--#include virtual="../../components/tabs/html.shtml" -->
+
+<!-- END OF TABS COMPONENT-->
+</div>
+

@@ -1,0 +1,58 @@
+<!--#set var="product_size" value="on" -->
+<!--Product Detail Box For Shopping Bag Starts Here-->
+<div class="shopping_img_block grid__item one-quarter clearfix">
+    <a href="#" class="js-pdpUrl_image">
+        <img width="250" height="250" src="<!--#echo var="CONTENT_IMG_PATH" -->/W69011Z4_0_cartier_watches.png" alt="COMMITMENTS" class="image"/> 
+    </a>
+</div>
+<!-- Product Detail Box For Shopping Bag Ends Here--> 
+<!-- Product features-->
+<div class="js-accordion  shopping_details grid__item three-quarters">
+    <div class="shopping_details_top clearfix"><h2>
+        <a class="delete-icon  js-close-button"></a>
+        <p class="details_disc js-productDesc"></p>
+        <p class="model_name js-productTitle"></p>
+        <a href="#" class="js-pdpUrl"><span class="model_ref js-refId"></span></a></h2>
+        <div class="shopping_quantity">
+            <!--#set var="select-label-name" value="560 x " --> 
+            <!--#set var="option-component" value="quantity_option" --> 
+            <!--#include virtual="../../components/form_elements/desktop_select.shtml" --> 
+            <span class="exsale_Tax">excl. sales tax</span> <br>
+            <span class="shopping_tax_info js-teaserTotal"></span> 
+        </div>
+    </div>
+    <div class="shopping_details_bottom ">
+        <div class="block_left grid__item one-half">
+            <div class="js-sizerow ">
+                <div class="product-features clearfix sizing-show">
+                    <a href="#">SIZE</a> 
+                    <!-- Select Box Starts Here-->
+                    <select class="form-select select-1 valid" name="fn_varientid">
+                        <option value=""></option>
+                    </select>
+                    <!-- Select Box Ends Here-->
+                    <a href="#" class="more-button"><span class="more-button-arrow"></span>Sizing Guide</a>
+                </div>
+            </div>
+            <div class="js-engravingrow">
+                <div class="product-features clearfix engraving-show" > <a href="#">Engraving<span class="checked-icon js-checked-icon display-none"></span> <span class="crossbutton js-crossbutton display-none"></span><span class="edit-icon"></span></a> </div>
+            </div>
+
+            <div class="js-braceletrow">
+                <div class="product-features clearfix bracelet-show"> <a href="#">Bracelet Adjustment <span class="checked-icon js-checked-icon display-none"></span><span class="crossbutton js-crossbutton display-none"></span><span class="edit-icon"></span></a> </div>
+            </div>
+        </div>
+        <div class="block_right grid__item one-half">
+            <div class="product-features clearfix messagerow-show">
+                <a href="#" class="att-accordion_node__title"> <span class="msg-icon js-msg-icon"></span>A MESSAGE CARD WITH YOUR GIFT
+                <span class="crossbutton js-crossbutton display-none"></span><span class="edit-icon"></span></a>
+            </div>
+            <div class="js-accordion__node">
+                <div class="js-accordion_node__title js-add-selection"><a href="#" class="more-button"><span class="more-button-arrow"></span>SAVE TO MY WISHLIST</a></div>
+                <div class="js-accordion_node__desc">
+                    <!--#include virtual="../../views/copy_to_wishlist/html.shtml" -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

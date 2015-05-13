@@ -1,0 +1,34 @@
+<!-- inlcudes stylesheet and opening document elements-->
+<!--#set var="COUNTRY" value="$QUERY_STRING" -->
+
+<!--#set var="PAGE_TITLE" value="Cartier" -->
+<!--#include virtual="../includes/_doc_open.shtml" -->
+<body class="js-<!--#echo var='MODULE' -->">
+<!-- Global Variables-->
+<!--#set var="CONTENT_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/" -->
+
+
+<!--#set var="ICON_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/" -->
+
+<!--#set var="FLASH_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/flash/" -->
+
+<div class="body-wrapper">
+<!--#if expr="${DEVICE} = 'mobile'"  -->	
+	<!--#include virtual="../includes/global/header/html.shtml" -->
+	<!--#include virtual="../includes/global/header/main_menu_nav.shtml" -->
+<!--#else -->
+	<!--#include virtual="../includes/global/header/desktop.shtml" -->
+<!--#endif -->
+	<!--#if expr="${TEMPLATE}" -->
+		<!--#include virtual="${TEMPLATE}.shtml" -->
+	<!--#endif -->
+
+<!--#if expr="${DEVICE} = 'mobile'"  -->	
+	<!--#include virtual="../includes/global/footer/html.shtml" -->
+<!--#else -->
+	<!--#include virtual="../includes/global/footer/desktop.shtml" -->
+<!--#endif -->
+
+<!-- inlcudes javascripts and closing document elements-->
+</div>
+<!--#include virtual="../includes/_doc_close.shtml" -->

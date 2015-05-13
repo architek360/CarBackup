@@ -1,0 +1,14 @@
+<!-- error page Starts Here-->
+
+<!--#if expr="${DEVICE} = 'mobile'"  -->
+<div class="error-page">
+	<p class="error-page__msg"> Sorry,page you requested could not be found </p>
+</div>
+<!--#else-->
+<div class="error-page">
+	<img src="<!--#echo var="CONTENT_IMG_PATH" -->bg-page-error404.jpg" alt="Cartier - Error 404">
+	<p class="error-page__msg"> Sorry, page you <br>requested could not be found </p>
+</div>
+<!--#endif-->
+
+<!-- error page end  Here-->

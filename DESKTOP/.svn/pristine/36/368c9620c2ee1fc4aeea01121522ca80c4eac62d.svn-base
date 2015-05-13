@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+@import "../_theme_vars";
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+.js-reg-step-3 {
+    .fn_country {
+        text-align: left;
+        .label_fn_country {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    .fn_addrname {
+        float: left;
+    }
+    .regstep3-col4 {
+        width: 100%;
+    }
+    .fn_zip {
+        width: 44%;
+        input#fn_zip {
+            width: 100% !important;
+        }
+    }
+    .fn_region {
+        width: 44%;
+    }
+    .fn_phno {
+        clear: none !important;
+    }
+}
+.js-address-form {
+    .fn_country {
+        .selector {
+            width: 200px!important;
+            span {
+                width: 200px!important;
+            }
+        }
+        .label_fn_country {
+            margin-bottom: 5px;
+        }
+    }
+    .addressform_zip, .fn_region {
+        width: 46%;
+    }
+    .addressform_address7 {
+        clear: none;
+    }
+    .addressform_phone {
+        margin-left: 0px;
+    }
+}

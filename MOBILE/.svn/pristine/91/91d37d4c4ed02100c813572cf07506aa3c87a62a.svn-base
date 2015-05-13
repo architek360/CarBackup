@@ -1,0 +1,153 @@
+/*------------------------------------*\
+    sub collection -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.collection)
+ * COLLECTION LISTING  (.collection__listing)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.collection{
+	width:81.25%;
+	margin:0 auto;
+	@include rem(padding, 20px 0);
+    display:block;
+    @include brand-font;
+    @include font-color($primary-2);
+    .static-text-box {
+    	@include rem(padding-top, 16px);
+    	width:100%;
+    	.heading-white-line{
+    		padding:0;
+    	}
+    	.heading7 {
+    		border-top: 1px solid $primary-2;
+    		width : 100%;
+    	}
+    	.heading6 {
+    		border-bottom: 1px solid $primary-2;
+    	}
+    	.heading3 {
+		 	@include rem(padding, 20px 0px 28px 0px);
+    	}
+    	.heading2 {
+    		@include rem(padding-bottom, 25px);
+    		@include f(34);
+    	}
+    }
+	.collection__image {
+		display:block;
+		img{
+			width:100%;
+			height:auto;
+		}
+	}
+	.subcollection__title{
+		display:block;
+		border-bottom:1px solid $primary-2;
+		border-top:1px solid $primary-2;
+		@include rem(margin, 20px 0 0 0);
+		@include rem(padding, 30px 0);
+		.heading4{
+			@include rem(padding, 0px);
+			@include f(24);
+		}
+		.heading2{
+			@include rem(padding, 30px 0 0 0);
+			border:none;
+			@include f(34);
+		}
+	}
+	.subcollection__desc{
+		@include font-color($primary-3);
+		@include rem(padding, 42px  0 50px 0);
+		@include f(26);
+		@include main-font;
+		text-align:center;
+		@include rem('line-height',31px);
+		@include rem('letter-spacing',2px);
+	}
+	.subcollection__show-product{
+		border-bottom:1px solid $primary-2;
+		border-top:1px solid $primary-2;
+		@include rem(margin, 8px 0 0 0);
+		@include rem(padding, 38px 0);
+		@include f(22);
+		@include font-color($primary-3);
+		text-transform:uppercase;
+		display:block;
+		cursor:pointer;
+		@include bold-font;
+		.more-button{
+			display: inline-block;
+			text-transform:none;
+			width: auto;
+			@include f(26);
+			text-align:right;
+			@include rem(margin-top, -3px);
+			@include rem(padding, 0px);
+			float:right;
+		}
+		.arrow-show{
+			@include setSprite(10px, 15px, -577px, -19px);
+			@include rem('margin-right', 3px);
+		}
+	}
+
+	/*------------------------------------*\
+    	$collection listing CONTAINER
+	\*------------------------------------*/
+
+	.collection__listing{
+		@include set-ulFix;
+		@include rem(margin, 55px 0 0 0);
+		li {
+			.product-push {
+				@include rem(margin-top, 5px);
+				@include rem(margin-bottom, 29px);
+				.heading3 {
+					@include f(24);
+				}
+				.product-push__img {				
+					img {
+						max-width: 100%;
+						max-height: 100%;
+						height: auto;
+					}
+				}		
+			}
+		}
+	}
+	.grid__item{
+		padding:0;
+	}
+	.palm--one-whole {
+		.product-push{
+				width:100%;
+		}	
+	}
+	.product-filter {	
+		@include rem('padding-bottom',  20px);
+		margin : 0;
+		.product-list__listing {
+			@include rem('padding-top',30px);
+		}
+		.slide_switch {
+			@include rem(margin,20px 0);
+			display: block;
+			text-align: center;
+		}
+	}
+}
+.collection{
+	.product-list__listing {
+		@include rem('padding-top',30px);
+		display: inline-block;
+	}
+	.grid{
+		margin-left: 0;
+	}
+}

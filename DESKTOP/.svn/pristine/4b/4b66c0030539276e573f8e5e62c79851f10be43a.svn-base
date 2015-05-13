@@ -1,0 +1,101 @@
+<!-- Login Box Starts Here-->
+<div class="login">
+	<div class="login__title">
+		<h3 class="heading3">my account</h3>
+		<h1 class="heading2">connection</h1>
+	</div>
+	<div class="login-box  js-form-validator js-login js-login-box" data-com="true">
+	    <form name="login" >  
+		    <h3 class="login-box__title">Already Registered?</h3>
+		    <p class="login-box__desc">If your already registered with cartier, login here:</p>
+
+
+		    <p class="login-box__desc js-cor">Country of residence</p>
+		    
+			<!--#set var="style-name" value="country-selector_select" -->
+            <!--#set var="option-component" value="country_option" -->
+			<!--#include virtual="../../components/form_elements/select.shtml" -->
+
+
+
+		    <ul class="login-box__list js-login-box__list">  
+		        <li>
+		        	<!--#set var="label-name" value="E-MAIL ADDRESS" -->
+		        	<!--#set var="input-name" value="j_username" -->        	
+		        	<!--#include virtual="../../components/form_elements/label.shtml" -->
+		        	<span class="mandatory">*</span>
+		        	<!--#set var="input-type" value="email" -->
+		        	<!--#set var="input-prop" value="form-input" -->
+	        		<!--#include virtual="../../components/form_elements/input.shtml" -->
+		        </li>  
+		        <li>
+
+		        	<!--#set var="label-name" value="PASSWORD" -->
+		        	<!--#set var="input-name" value="j_password" -->
+		        	<!--#include virtual="../../components/form_elements/label.shtml" -->
+		        	<span class="mandatory">*</span>
+		        	<!--#set var="input-type" value="password" -->
+		        	<!--#set var="input-prop" value="form-input js-password-input" -->      	
+		    		<!--#include virtual="../../components/form_elements/input.shtml" -->	 
+				</li>
+
+
+		        <li>
+		        	<a href="#" class="login-box__forgot-password js-forgotpass-link" data-isForgotActive="false" >Forgot Our Password?</a>
+		        </li> 
+
+		        <li data-isajax = "true">  
+		        	<!--#set var="cta--varaint" value="cta--red js-login-ajax-button" -->
+	            	<!--#set var="text-detail" value="connection" -->
+	            	<!--#include virtual="../../components/form_elements/button.shtml" -->
+	            	
+		    	</li> 
+				<li>
+			    	<div class="grid__item">
+			        	<!--#set var="label-name" value="word verification" -->
+			            <!--#set var="mandatory" value="no"-->
+			            <!--#set var="input-name" value="fn_wordvef" -->
+			            <!--#include virtual="../../components/form_elements/label.shtml" -->
+			            <!--#set var="input-prop" value="form-input" -->    
+			            <!--#set var="input-type" value="password" -->
+			            <!--#include virtual="../../components/captcha/html.shtml" -->
+
+			        </div>
+		        </li>
+		    </ul>
+		    
+		</form>  
+	</div>
+	
+	<!-- Login Box Ends Here-->
+	
+
+	<!--#include virtual="../../views/forgot_password/html.shtml" -->
+	
+
+	<!--#include virtual="../../views/forgot_password_emailsent/html.shtml" -->
+	
+	<input type="hidden" class="currentPagePath" value="${currentPage.path}"/>
+	<input type="hidden" class="successPagePath" value="${currentPage.path}"/>
+	<button type="submit" class="cta-button cta-button__inner cta--red js-guest-checkout"> 
+	    <span class="input-arrow on"></span>
+	    <span class="cta-button__input on">Guest Checkout</span>
+	</button>
+
+
+	<div class="js-accordion">
+		<div class="js-accordion__node">
+			<div class="js-accordion_node__title">
+				<!--#set var="cta--varaint" value="cta--red" -->
+		        <!--#set var="text-detail" value="create your account" -->
+		        <!--#include virtual="../../components/form_elements/button.shtml" -->  
+			</div>
+			<div class="js-accordion_node__desc">
+	        	<!--#include virtual="../../views/reg_step1/html.shtml" -->
+			</div>
+		</div>
+	</div>  
+
+		        
+</div> 
+<!-- Login Ends Here-->

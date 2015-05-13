@@ -1,0 +1,402 @@
+<div class="overlay-form overlay-form-edit">
+<div class="section Title">
+    <div class="heading-wrapper">
+        <h2 class="heading2"> My Addresses </h2>
+    </div>
+    <div class="system_formbuilder section">
+        <div class="error_message_js-address-form" style="display:none;"></div>
+        <div class="form-layout js-address-form">
+            <div class="start">
+                <form method="POST" action="/ja/services/my-cartier/my-addresses/_jcr_content/par.html" id="js-address-form" name="js-address-form" enctype="multipart/form-data" novalidate="novalidate">
+                    <input type="hidden" name=":formid" value="js-address-form">
+                    <input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/my-cartier/my-addresses/jcr:content/par/formbuilder/start">
+                    <input type="hidden" name="_charset_" value="UTF-8">
+
+                    <div class="form">
+                        <script type="text/javascript">
+                        (function(){
+                        var rulesObjects = {};
+                        var messagesObjects = {};
+                                                        
+                                        if(rulesObjects.address20){
+                                                        rulesObjects.address20.required="true";
+                                                        messagesObjects.address20.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address20= {
+                                                required: true
+                                                }
+                                                messagesObjects.address20 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.label){
+                                                        rulesObjects.label.required="true";
+                                                        messagesObjects.label.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.label= {
+                                                required: true
+                                                }
+                                                messagesObjects.label = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.firstname1){
+                                                        rulesObjects.firstname1.required="true";
+                                                        messagesObjects.firstname1.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.firstname1= {
+                                                required: true
+                                                }
+                                                messagesObjects.firstname1 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.lastname1){
+                                                        rulesObjects.lastname1.required="true";
+                                                        messagesObjects.lastname1.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.lastname1= {
+                                                required: true
+                                                }
+                                                messagesObjects.lastname1 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.address2){
+                                                        rulesObjects.address2.required="true";
+                                                        messagesObjects.address2.required="mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address2= {
+                                                required: true
+                                                }
+                                                messagesObjects.address2 = {
+                                                required: "mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.address5){
+                                                        rulesObjects.address5.required="true";
+                                                        messagesObjects.address5.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address5= {
+                                                required: true
+                                               }
+                                                messagesObjects.address5 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.address6){
+                                                        rulesObjects.address6.required="true";
+                                                        messagesObjects.address6.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address6= {
+                                                required: true
+                                                }
+                                                messagesObjects.address6 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.address12){
+                                                        rulesObjects.address12.required="true";
+                                                        messagesObjects.address12.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address12= {
+                                                required: true
+                                                }
+                                                messagesObjects.address12 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.address7){
+                                                        rulesObjects.address7.required="true";
+                                                        messagesObjects.address7.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address7= {
+                                                required: true
+                                                }
+                                                messagesObjects.address7 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.address9){
+                                                        rulesObjects.address9.required="true";
+                                                        messagesObjects.address9.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.address9= {
+                                                required: true
+                                                }
+                                                messagesObjects.address9 = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.zip){
+                                                        rulesObjects.zip.required="true";
+                                                        messagesObjects.zip.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.zip= {
+                                                required: true
+                                                }
+                                                messagesObjects.zip = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+                                                        
+                                        if(rulesObjects.phone){
+                                                        rulesObjects.phone.required="true";
+                                                        messagesObjects.phone.required="This field is mandatory";
+                                               
+                                                        } else{
+                        rulesObjects.phone= {
+                                                required: true
+                                                }
+                                                messagesObjects.phone = {
+                                                required: "This field is mandatory"
+                                                }
+                                                        }
+
+
+                             $(document).ready(function(){
+                                $("#js-address-form").validate({
+                                    rules: rulesObjects,
+                                    messages: messagesObjects,            
+                                    errorPlacement: function(error, element) {
+                                        return $('#errormessage-' + $(element).attr('name')).append(error);
+                                    }
+                                        });
+                             });
+                           })();
+                        </script>
+                    </div>
+                    <div class="system_form_fieldset">
+                        <fieldset>
+                            <div class="parsys fields">
+                                <div class="borderstart section">
+                                    <div class="my-address-c1">
+                                        <div class="system_form_checkbox section">
+                                            <div class="non-mandatory group-wrapper">
+                                                <label class="label_address20">Title<span class="form-mandatory"></span></label>
+                                                <div class="form-element radio-wrapper address20">   
+                                                    <input type="radio" id="0001" name="address20" value="0001" class="form-radio">
+                                                    <label for="0001" class=" form-radio-label">MR.</label>                              
+                                                </div>
+                                                
+                                                <div class="form-element radio-wrapper address20">   
+                                                    <input type="radio" id="0002" name="address20" value="0002" class="form-radio">
+                                                    <label for="0002" class=" form-radio-label">MRS.</label>                              
+                                                </div>
+                                                
+                                                <div class="form-element radio-wrapper address20">   
+                                                    <input type="radio" id="0003" name="address20" value="0003" class="form-radio">
+                                                    <label for="0003" class=" form-radio-label">MS.</label>                              
+                                                </div>
+                                                
+                                                <div class="errormessage" id="errormessage-address20"></div>
+                                            </div>          
+                                        </div>
+                                        
+                                        <div class="system_form_textbox section">
+                                            <div class="non-mandatory form-element input-wrapper label">
+                                                <label class="label_label">Save Address as<span class="form-mandatory"></span></label>
+                                                <input id="label" type="text" name="label" placeholder="" class="form-input" value="">
+                                                <div class="errormessage" id="errormessage-label"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="system_form_textbox section"><div class="non-mandatory form-element input-wrapper firstname1">
+                                            <label class="label_firstname1">First Name<span class="form-mandatory"></span></label>
+                                            <input id="firstname1" type="text" name="firstname1" placeholder="" class="form-input" value="">
+                                            <div class="errormessage" id="errormessage-firstname1"></div></div>
+                                        </div>
+                                        
+                                        <div class="system_form_textbox section"><div class="non-mandatory form-element input-wrapper lastname1">
+                                            <label class="label_lastname1">Last Name<span class="form-mandatory"></span></label>
+                                            <input id="lastname1" type="text" name="lastname1" placeholder="" class="form-input" value="">
+                                            <div class="errormessage" id="errormessage-lastname1"></div></div>
+                                        </div>
+                                        
+                                        <div class="borderend section"></div>
+                                        <div class="parbase addresscomposite section">
+                                            <div class="form-address-selector js-form-address-selector">
+                                                <div class="form-address-selector__radio">
+                                                    <div class="form-element checkbox-wrapper fn_grpaddr js-first-radio">
+                                                        <label for="homeaddress" class="checkbox  form-radio-label">
+                                                            home address<input type="radio" id="homeaddress" name="fn_grpaddr" value="homeaddress" class="form-radio">
+                                                        </label>
+                                                    </div> 
+                                                    <div class="form-element checkbox-wrapper fn_grpaddr js-second-radio">
+                                                        <label for="poboxaddress" class="checkbox  form-radio-label">po address<input type="radio" id="poboxaddress" name="fn_grpaddr" value="poboxaddress" class="form-radio">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-address-selector__bracket"></div>
+                                            </div>
+                                            
+                                            <div class="my-address-c2">
+                                                <div class="non-mandatory form-element input-wrapper address2">
+                                                    <label class="label_address2">Street number<span class="form-mandatory"></span></label>
+                                                    <input id="address2" type="text" name="address2" placeholder="" class="form-input" value="">
+                                                    <div class="errormessage" id="errormessage-address2"></div>
+                                                </div>
+                                                
+                                                <div class="non-mandatory form-element input-wrapper address5">
+                                                    <label class="label_address5">Street Name<span class="form-mandatory"></span></label>
+                                                    <input id="address5" type="text" name="address5" placeholder="" class="form-input" value="">
+                                                    <div class="errormessage" id="errormessage-address5"></div>
+                                                </div>
+                                                
+                                                <div class="non-mandatory form-element input-wrapper address6">
+                                                    <label class="label_address6">ADDITIONAL ADDRESS INFO (APT./FL./BLDG., ETC.)<span class="form-mandatory"></span></label>
+                                                    <input id="address6" type="text" name="address6" placeholder="" class="form-input" value="">
+                                                    <div class="errormessage" id="errormessage-address6"></div>
+                                                </div>
+                                                
+                                                <div class="non-mandatory form-element input-wrapper address12">
+                                                    <label class="label_address12">P.O Box<span class="form-mandatory"></span></label>
+                                                    <input id="address12" type="text" name="address12" placeholder="" class="form-input" value="">
+                                                    <div class="errormessage" id="errormessage-address12"></div>
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="borderstart section">
+                                                <div class="my-address-c3">
+                                                    <div class="system_form_textbox section"><div class="non-mandatory form-element input-wrapper address7">
+                                                        <label class="label_address7">City<span class="form-mandatory"></span></label>
+                                                        <input id="address7" type="text" name="address7" placeholder="" class="form-input" value="">
+                                                        <div class="errormessage" id="errormessage-address7"></div></div>
+                                                    </div>
+                                                    <div class="system_form_dropdown section">
+                                                        <div class="non-mandatory form-element select-wrapper address9">
+                                                            <label class="label_address9">States<span class="form-mandatory"></span></label>
+                                                            <select name="address9" class=" form-select" id="address9">
+                                                                <option disabled="disabled" value="" selected="">-Select-</option>
+                                                                <option value="AL">AL - Alabama </option>
+                                                                <option value="AK">AK - Alaska </option>
+                                                                <option value="AZ">AZ - Arizona </option>
+                                                                <option value="AR">AR - Arkansas </option>
+                                                                <option value="CA">CA - California </option>
+                                                                <option value="CO">CO - Colorado </option>
+                                                                <option value="CT">CT - Connecticut </option>
+                                                                <option value="DE">DE - Delaware </option>
+                                                                <option value="DC">DC - District Of Columbia </option>
+                                                                <option value="FL">FL - Florida </option>
+                                                                <option value="GA">GA - Georgia </option>
+                                                                <option value="HI">HI - Hawaii </option>
+                                                                <option value="ID">ID - Idaho </option>
+                                                                <option value="IL">IL - Illinois </option>
+                                                                <option value="IN">IN - Indiana </option>
+                                                                <option value="IA">IA - Iowa </option>
+                                                                <option value="KS">KS - Kansas </option>
+                                                                <option value="KY">KY - Kentucky </option>
+                                                                <option value="LA">LA - Louisiana </option>
+                                                                <option value="ME">ME - Maine </option>
+                                                                <option value="MD">MD - Maryland </option>
+                                                                <option value="MA">MA - Massachusetts </option>
+                                                                <option value="MI">MI - Michigan </option>
+                                                                <option value="MN">MN - Minnesota </option>
+                                                                <option value="MS">MS - Mississippi </option>
+                                                                <option value="MO">MO - Missouri </option>
+                                                                <option value="MT">MT - Montana </option>
+                                                                <option value="NE">NE - Nebraska </option>
+                                                                <option value="NV">NV - Nevada </option>
+                                                                <option value="NH">NH - New Hampshire </option>
+                                                                <option value="NJ">NJ - New Jersey </option>
+                                                                <option value="NM">NM - New Mexico </option>
+                                                                <option value="NY">NY - New York </option>
+                                                                <option value="NC">NC - North Carolina </option>
+                                                                <option value="ND">ND - North Dakota </option>
+                                                                <option value="OH">OH - Ohio </option>
+                                                                <option value="OK">OK - Oklahoma </option>
+                                                                <option value="OR">OR - Oregon </option>
+                                                                <option value="PA">PA - Pennsylvania </option>
+                                                                <option value="RI">RI - Rhode Island </option>
+                                                                <option value="SC">SC - South Carolina </option>
+                                                                <option value="SD">SD - South Dakota </option>
+                                                                <option value="TN">TN - Tennessee </option>
+                                                                <option value="TX">TX - Texas </option>
+                                                                <option value="UT">UT - Utah </option>
+                                                                <option value="VT">VT - Vermont </option>
+                                                                <option value="VA">VA - Virginia </option>
+                                                                <option value="WA">WA - Washington </option>
+                                                                <option value="WV">WV - West Virginia </option>
+                                                                <option value="WI">WI - Wisconsin </option>
+                                                                <option value="WY">WY - Wyoming </option>
+                                                            </select>
+                                                            <div class="errormessage" id="errormessage-address9"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="system_form_textbox section"><div class="non-mandatory form-element input-wrapper zip">
+                                                        <label class="label_zip">ZIP/AREA /POST CODE<span class="form-mandatory"></span></label>
+                                                        <input id="zip" type="text" name="zip" placeholder="" class="form-input" value="">
+                                                        <div class="errormessage" id="errormessage-zip"></div></div>
+                                                    </div>
+
+                                                    <div class="system_form_textbox section"><div class="non-mandatory form-element input-wrapper phone">
+                                                        <label class="label_phone">Phone number<span class="form-mandatory"></span></label>
+                                                        <input id="phone" type="text" name="phone" placeholder="" class="form-input" value="">
+                                                        <div class="errormessage" id="errormessage-phone"></div></div>
+                                                    </div>
+                                                    
+                                                    <div class="borderend section"></div>
+                                                    <div class="system_form_hidden section"><input id="id" type="hidden" name="id" value="889165"></div>
+                                                    <div class="system_form_hidden section"><input id="default" type="hidden" name="default" value="false"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="system_form_submit"><div class="form-element button-wrapper submit">
+                        <input class="form-button" type="submit" name="submit" value="Save">
+                    </div>
+
+                    <div class="end">
+                        <div class="form_row">
+                           <div class="form_leftcol"></div>
+                           <div class="form_rightcol">
+                                <script type="text/javascript">RICHEMONT.AjaxCaller.setAjaxOptions({'callType' : 'formType','actionName' : "ECSAddressFormAction",'currentPagePath' : "/content/car/jp/japan/ja/services/my-cartier/my-addresses",'elementId' : "js-address-form",'eventName' : 'submit'});
+                                </script>
+                            </div>
+                        </div>
+                        <div class="form_row_description"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,94 @@
+{
+    "success": true,
+    "serverMessage": "Some Server Message",
+    "content": {
+        "wishlist": {
+            "wishlistNumber": 12,
+            "products": [{
+
+                "product_node": "CRB/404/050/0/CRB4040500",
+                "product_productLine" : "product line",
+                "product_productCollection" : "product collection",
+                "product_sellable" : "product sellable",
+                "product_name": "Love Ring",
+                "product_description": "LOVE RING, WG",
+                "product_price": "EUR 1200.0",
+                "product_reference": "CRB4022600",
+                "product_image": "/etc/designs/richemont-cart/Clientlibs_common/images/product_images/N4227900_1_cartier_rings.png",
+                "variant": [{
+                    "refId": "a1",
+                    "value": "50",
+                    "variantImage": "test",
+                    "variantPrice": "300"
+
+                }, {
+                    "refId": "a2",
+                    "value": "60",
+                    "variantImage": "test",
+                    "variantPrice": "400"
+                }, {
+                    "refId": "a3",
+                    "value": "70",
+                    "variantImage": "test",
+                    "variantPrice": "500"
+                }],
+                "selectedVariant": "70"
+
+            }, {
+                "product_node": "CRB/404/050/0/CRB4040500",
+                "product_productLine" : "product line",
+                "product_productCollection" : "product collection",
+                "product_sellable" : "product sellable",
+                "product_name": "Watches",
+                "product_description": "LOVE RING, WG",
+                "product_price": "EUR 1200.0",
+                "product_reference": "CRB4022600",
+                "product_image": "/etc/designs/richemont-cart/Clientlibs_common/images/product_images/N4227900_1_cartier_rings.png",
+                "variant": [{
+                    "refId": "a1",
+                    "value": "50",
+                    "variantImage": "",
+                    "variantPrice": "200"
+                }, {
+                    "refId": "a2",
+                    "value": "60",
+                    "variantImage": "",
+                    "variantPrice": "300"
+                }, {
+                    "refId": "a3",
+                    "value": "70",
+                    "variantImage": "",
+                    "variantPrice": "400"
+                }],
+                "selectedVariant": "50"
+            }, {
+                "product_node": "CRB/404/050/0/CRB4040500",
+                "product_productLine" : "product line",
+                "product_productCollection" : "product collection",
+                "product_sellable" : "product sellable",
+                "product_name": "Watches",
+                "product_description": "LOVE RING, WG",
+                "product_price": "EUR 1200.0",
+                "product_reference": "CRB4022600",
+                "product_image": "/etc/designs/richemont-cart/Clientlibs_common/images/product_images/N4227900_1_cartier_rings.png",
+                "variant": [{
+                    "refId": "a1",
+                    "value": "50",
+                    "variantImage": "",
+                    "variantPrice": ""
+                }, {
+                    "refId": "a2",
+                    "value": "60",
+                    "variantImage": "",
+                    "variantPrice": ""
+                }, {
+                    "refId": "a3",
+                    "value": "70",
+                    "variantImage": "",
+                    "variantPrice": ""
+                }],
+                "selectedVariant": "60"
+            }]
+        }
+    }
+}

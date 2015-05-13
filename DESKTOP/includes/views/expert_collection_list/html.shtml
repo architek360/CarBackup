@@ -1,0 +1,34 @@
+
+<!-- collection expert start here -->
+
+<!-- collection start Here-->
+<div class="expert-collection-list clearfix">
+    
+    <div class="expert-collection-list__expert-listing ">
+        <ul class="clearfix">
+            <li class="grid__item one-half palm--one-whole">
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="product-push_img" -->                   
+                    <!--#set var="img-src" value="jewelry.png" -->
+                    <!--#set var="more-text" value="learn More" --> 
+                    <!--#set var="product-title" value="leather goods" -->  
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/collection_box/html.shtml" -->
+            </li>
+            <li class="grid__item one-half palm--one-whole">
+                    <!--#set var="links-to" value="#" -->
+                    <!--#set var="class-name" value="product-push_img" -->
+                    <!--#set var="img-src" value="jewelry.png" -->
+                    <!--#set var="product-title" value="fine watchmaking" -->  
+                    <!--#set var="more-text" value="learn More" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    
+                    
+                    <!--#include virtual="../../components/collection_box/html.shtml" -->
+            </li>
+           
+        </ul>
+    </div>
+</div>
+<!-- collection  Ends Here-->
+<!-- collection expert end here -->

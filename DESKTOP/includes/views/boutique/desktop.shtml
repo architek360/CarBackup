@@ -1,0 +1,76 @@
+<div class="boutique-detail-wrapper">
+    <div class="row grid border">
+        <div class="boutique-detail grid__item two-fifths listGradient fixed-height">
+            <div class="boutique-detail-inner-wrapper">
+                <div class="boutique__title" itemscope itemtype="http://schema.org/Store">
+                    <h1 class="boutique_title__t1"><span itemprop="name">boutique cartier</span></h1>
+                </div>
+                <div class="boutique__details" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <div class="boutique_details__add">
+                        <span itemprop="streetAddress">653 Fifth Avenue</span><br /><span itemprop="addresslocality">New York 10022</span><br /> <span itemprop="addressRegion">NEW YORK - NY</span>
+                    </div>
+
+                    <div class="boutique_details__con">
+                        <div>Tel.: <span itemprop="telephone">00(1) 212 446-3400</span></div>
+                        <div> Fax: <span itemprop="faxnumber">00(1) 212 446-3400 </span></div>
+                    </div>
+                    <div class="boutique_details__links">
+                        <!--#set var= "arrow-class"  value= "arrow-show" -->
+                        <!--#set var="more-text" value="Send an email" -->
+                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </div>
+                </div>
+            </div>
+            <div class="grid__item two-fifths">
+                <!--#include virtual="../../components/social_share/html.shtml" -->
+            </div>
+        </div>
+        <div class="grid__item three-fifths fixed-height">
+            <div class="boutique__image">
+                <img src="<!--#echo var="CONTENT_IMG_PATH" -->default-image-boutique.jpg"  alt="store locator">
+            </div>
+        </div>
+    </div>
+    <div class="store-services-wrapper">
+        <div class="row grid">
+            <div class="grid__item two-fifths border-top store-services">
+                <!--#set var= "type"  value= "customtext" -->
+                <!--#set var= "headline"  value= "CREATIONS" -->
+                <!--#include virtual="../../components/heading2/desktop.shtml" -->
+                <ul>
+                    <li class="arrow-show">Accessories</li>
+                    <li class="arrow-show">Bridal</li>
+                    <li class="arrow-show">Eyewear</li>
+                    <li class="arrow-show">Fine Watchmaking</li>
+                    <li class="arrow-show">Fragrance</li>
+                    <li class="arrow-show">Jewelry</li>
+                    <li class="arrow-show">Leather Goods</li>
+                    <li class="arrow-show">Timepieces</li>
+                    <li class="arrow-show">Tradition</li>
+                  </ul>
+            </div>
+            <div class="grid__item two-fifths border-top store-services">
+                <!--#set var= "type"  value= "customtext" -->
+                <!--#set var= "headline"  value= "SET FOR YOU" -->
+                <!--#include virtual="../../components/heading2/desktop.shtml" -->
+
+                <p>
+                    In the grandest jewelry-making tradition, Cartier offers you the opportunity to create a unique diamond solitaire. Expert guidance of the Maison will assist you in selecting your desired setting and the diamond that will illuminate it. A customized and personal service to honor an exceptional event. Exclusively yours, distinctly Cartier.
+                </p>
+            </div>
+        </div>
+        <div class="row grid">
+            <div class="grid__item two-fifths border-top store-services">
+                <!--#set var= "type"  value= "customtext" -->
+                <!--#set var= "headline"  value= "REPAIR SERVICES" -->
+                <!--#include virtual="../../components/heading2/desktop.shtml" -->
+                <p>
+                    Entrust your creations to our experts Cartier, only they have the expertise necessary to analyze and repair your jewelry, whether recent or transmitted from generation to generation
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--#set var="COMP1" value="add_to_favorites" -->
+    <!--#set var="modal-class" value="add_to_favorites" -->
+    <!--#include virtual="../../components/modal/desktop.shtml" -->
+</div>

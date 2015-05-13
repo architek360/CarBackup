@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="bridal_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#set var="VIEWS_1" value="product_list" -->
+<!--#set var="VIEWS_2" value="quick_links" -->
+
+<!--#set var="MODULE" value="productlist" -->
+
+<!--#include virtual="../templates/base_bridal.shtml" -->

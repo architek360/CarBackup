@@ -1,0 +1,2 @@
+<!--#set var="containerClass" value="left" -->
+<!--#include virtual="../../components/mosaic/container.shtml" -->

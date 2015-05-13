@@ -1,0 +1,8 @@
+<div class="billing-form grid js-form-validator js-billing js-data-formdisplay" data-formdisplay="false">
+	<div class="billing-address-form">
+		<form>
+		 <!--#include virtual="../../components/billing_form/desktop.shtml" -->
+		</form>
+	</div>
+	
+</div>

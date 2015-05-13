@@ -1,0 +1,9 @@
+
+{
+	"success":true,
+	"serverMessage":"No variants found for Current Product",
+	"content":{
+		"productavailability":false,
+		"hasVariants":false
+	}
+}

@@ -1,0 +1,42 @@
+<!-- Billing Confirmation Block Starts Here-->
+
+<div class="grid js-form-validator">
+<div class="grid__item three-quarters my-billing-address-content-wrapper">
+  <div class="billing-payment-option main-content">
+    <h1 class="heading1">PROCEED TO PAYMENT</h1>
+    <p class="heading__desc">Please note that person who submits the order must be the cardholder whose name appears on the credit card</p>
+    <p class="billing-payment__desc top-margin full-width">This is a secure 128-bit SSL, encrypted payment. 128-bit SSL encrypted payment.<br/>
+      <br/>
+      Cartier does not save your payment details for future orders. </p>
+    <form >
+      <input name="radio-tab" value="" type="hidden" class="radiotab-hidden">
+     <!-- Tab Container-->
+        <!--#set var="input-name" value="fn_cardpayment" -->
+        <!--#set var="head-label-name" value="" -->
+        <!--#set var="radio-text1" value="card" -->
+        <!--#set var="radio-value1" value="js-card" -->
+        <!--#set var="radio-tab-text1" value="Card Payment" -->
+        <!--#set var="radio-text2" value="bank" -->
+        <!--#set var="radio-value2" value="js-bank" -->
+        <!--#set var="radio-tab-text2" value="Bank Transfer" -->
+        <!--#set var="radio-text3" value="cash" -->
+        <!--#set var="radio-value3" value="js-cash" -->
+        <!--#set var="radio-tab-text3" value="Cash On Delivery" -->
+
+
+        <!--#set var="tab_content_1" value="tab_card_payment" --> 
+        <!--#set var="tab_content_2" value="tab_bank_transfer" --> 
+        <!--#set var="tab_content_3" value="tab_cash_on_delivery" --> 
+        <!--#include virtual="../../components/tabs2/html.shtml" -->
+    </form>
+  </div>
+  </div>
+  <div class="grid__item one-quarter shopping-bag-rt-col">
+    <div class="price-details-bg"><!--#include virtual="../../views/price_details/desktop.shtml" --> </div>
+    <!--#include virtual="../../views/return-exchange/desktop.shtml" --> 
+  </div>
+
+</div>
+<!-- Billing Confirmation Block Ends Here--> 
+
+<!-- tab_billing_address Block Ends Here--> 

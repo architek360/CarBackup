@@ -1,0 +1,15 @@
+<!--EXCEPTIONAL BRIDAL START HERE-->
+<div class="exception-bridal">
+	<img src="<!--#echo var="CONTENT_IMG_PATH" -->bridal/exception_bridal.jpg" class="image" alt="Ring"/>
+</div>
+<div class="exception-bridal__content">
+    <h1 class="heading1">exceptional creations</h1>     
+    <p class="exception-bridal-text">
+        Virtuosity, harmony in the settings, and the perfect cut characterize these exclusive creations. Sharing such exquisite elegance, these solitaires enable the full beauty of the diamonds to be expressed.
+    </p>
+    <!--#set var="arrow-class" value="more-button-arrow " -->
+    <!--#set var="more-text" value="Read More" -->
+    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+</div>
+
+ <!--EXCEPTIONAL BRIDAL LIST START HERE-->

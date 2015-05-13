@@ -1,0 +1,24 @@
+<div class="main-container">
+	
+	<!--#if expr="${COMP_1}=/carousel/" -->
+			<!--#include virtual="../includes/components/${COMP_1}/carousel.shtml" -->
+
+	
+	<!--#elif expr="${COMP_1}" -->
+			<!--#include virtual="../includes/components/${COMP_1}/html.shtml" -->
+	<!--#endif -->
+	<!--#if expr="${VIEWS_1}" -->
+			<!--#include virtual="../includes/views/${VIEWS_1}/html.shtml" -->
+	<!--#endif -->
+	<!--#if expr="${VIEWS_2}" -->
+			<!--#include virtual="../includes/views/${VIEWS_2}/html.shtml" -->
+	<!--#endif -->
+	<!--#if expr="${COMP_2}=/mobile_carousel/" -->
+			<!--#include virtual="../includes/components/carousel/mobile_carousel.shtml" -->
+			
+	<!--#elif expr="${COMP_2}" -->
+			<!--#include virtual="../includes/components/${COMP_2}/html.shtml" -->
+	<!--#endif -->
+	
+
+</div>

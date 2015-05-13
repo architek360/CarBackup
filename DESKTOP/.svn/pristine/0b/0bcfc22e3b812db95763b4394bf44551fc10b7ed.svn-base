@@ -1,0 +1,76 @@
+<!--Engraving Box For Product List Starts Here-->
+<div class="engraving clearfix ">
+  
+        <ul>
+            <li>
+                <h4 class="engraving__heading">1/compose your message</h4>
+                       
+                       <div class="engraving__line">
+                            <!--#set var="label-name" value="line 1" -->
+                            <!--#set var="input-name" value="fn_commsgone" -->         
+                            <!--#include virtual="../../components/form_elements/label.shtml" -->
+
+                            <!--#set var="input-type" value="text" -->
+                            <!--#set var="input-prop" value="form-input js-line-1 js-inputfield" -->
+                            <!--#set var="input-placeholder" value="Type your text" -->
+                            
+                            <!--#include virtual="../../components/form_elements/input.shtml" -->
+                        </div>
+                        <div class="engraving__line">
+                            <!--#set var="label-name" value="line 2" -->
+                            <!--#set var="input-name" value="fn_commsgtwo" -->         
+                            <!--#include virtual="../../components/form_elements/label.shtml" -->
+
+                            <!--#set var="input-type" value="text" -->
+                            <!--#set var="input-prop" value="form-input js-line-2 js-inputfield" -->
+                            <!--#set var="input-placeholder" value="Type your text" -->
+                            <!--#include virtual="../../components/form_elements/input.shtml" -->
+                        </div>
+
+            </li>
+            <li>
+                <h4 class="engraving__heading">2/choose your font</h4>
+
+                <!--#set var="label-first" value="Bold" -->
+                <!--#set var="class-first" value="js-bold-switch" -->
+                <!--#set var="label-class-first" value="js-bold-class" -->
+                <!--#set var="label-second" value="Cursive" -->
+                <!--#set var="class-second" value="js-cursive-switch" -->
+                <!--#set var="label-class-second" value="js-cursive-class" -->
+                <!--#set var="radio-name" value="fn_grpchoosefont"-->
+                <!--#include virtual="../../components/form_elements/slide_switch.shtml" -->
+
+
+            </li>
+            <li>
+                <h4 class="engraving__heading">2/preview</h4>
+                <div class="engraving_preview">
+                    <p class="engraving_preview__line js-engraving-preview-line1 js-bold-class"></p>
+                    <p class="engraving_preview__line js-engraving-preview-line2 js-bold-class"></p>
+                </div>
+
+
+            </li>
+
+            <p class="engraving__desc">
+            Please be aware that personalized products cannot be returned.
+            Please note that engraving may affect the delivery time of your creation. Please carefully read the Conditions of sale and Privacy Notice.
+            </p>
+
+            <!--#set var="cta--varaint" value="cta--grey js-cancel-ac" -->
+            <!--#set var="text-detail" value="cancel" -->
+            <!--#set var="input-type" value="submit" -->
+           
+            <!--#include virtual="../../components/form_elements/button_without_arrow.shtml" --> 
+
+            <!--#set var="cta--varaint" value="cta--red js-confirm-button" -->
+            <!--#set var="text-detail" value="ok" -->
+            <!--#set var="input-type" value="button" -->
+            <!--#include virtual="../../components/form_elements/button_without_arrow.shtml" --> 
+
+        </ul>
+    
+    
+</div>
+
+<!--Engraving Box For Product List Ends Here-->

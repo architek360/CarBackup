@@ -1,0 +1,174 @@
+/*------------------------------------*\
+    reg_step2 -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.pushs)
+ * INNER BLOCK......inner items (ul, etc.)
+ * HEADING BLOCK...... headings styling (.pushs__title)
+ * DESCRIPTION BLOCK...... DESCRIPTION styling (.pushs__desc)
+ * NORTON SECURED BLOCK ..... FOR NORTON SECURED ICON (.pushs__norton-secured)
+ * NORTON ICON ..... ('.norton-icon' FROM /sass/_mobile.scss)
+ * CREDIT CARD ICON ..... (E.G '.mastercard' FROM /sass/_mobile.scss)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+
+
+
+.js-reg-step-2{
+	width: 82.25%;
+	margin: 0 auto;
+	.txt{
+
+		h2{
+			@include f(34);
+			@include brand-font();
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			@include rem('padding',15px 0);
+		}
+
+		p{
+			@include f(24);
+			text-transform: none;
+			@include main-font();
+			@include rem('padding',15px 0);
+			border-bottom: 1px solid $primary-2;
+			@include rem('margin-bottom',15px);
+
+
+			i{
+				font-style: italic;
+			}
+		}
+		ul{
+			display: none;
+		}
+
+		div {
+			text-align: center;
+		}
+
+		a{
+			@include setSpriteMobileDesktop(auto, 15px, -1427px, -270px, transparent);
+			color:$primary-3;
+			text-transform:uppercase;	
+			@include f(18);
+			@include rem('margin-top',30px);
+			@include rem('padding-left',20px);
+			@include bold-font();
+		}
+
+	}
+
+	.heading3{
+		text-align: center;
+		text-transform: uppercase;
+		@include rem('margin',30px 0 30px);
+		@include rem('padding-bottom',20px);
+		color: $primary-2;
+		border: none;
+		@include medium-font();
+		@include f(28);
+	}
+
+	.heading5{
+		@include bold-font();
+		@include rem('margin-top',20px);
+		@include f(20);
+		text-align: left;
+	}
+	.cq-colctrl-lt0{
+		.heading-wrapper{
+				width:100%;
+				display: block;
+			}
+		.cq-colctrl-lt0-c0{
+			border:1px solid $primary-17;
+			width: 100%;
+			display: inline-block;
+			@include rem(padding, 7px 0 15px 24px);
+			@include box-sizing(border-box);
+
+			.heading5{
+				padding-top: 0;
+				@include f(22);
+
+			}
+
+			hr{
+				display: none;
+			}
+			
+		}
+		.cq-colctrl-lt0-c1{
+			
+		    hr{
+		    	display: none;		    }
+			}
+			.interest-product-line,.own-smartphone{
+				@include rem('padding',7px 0 0px 24px);
+				@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+				border:1px solid $primary-17;
+				@include f(20);
+				@include rem('margin-top',30px);
+
+			    display: inline-block;
+			    .checkbox-wrapper{
+			    	display: inline-block;
+					width: 45%;
+					position: relative;
+					vertical-align: top;
+					height: 56px;
+					@include f(22);
+					.checkbox-name{
+						text-transform: uppercase;
+						@include brand-font();
+						@include f(20);
+						color: $primary-2;
+						@include rem('margin-top',7px);
+					}
+			    }
+
+			    .heading5{
+			    	margin: 0;
+			    	@include f(22);
+			    	@include rem('padding',10px 0 30px);
+			    }
+			}
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

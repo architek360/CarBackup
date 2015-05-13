@@ -1,0 +1,33 @@
+<!-- store locater wrapper Starts Here-->
+<div class="boutique-list-wrapper boutique-map">
+<!-- Boutique Lister filter-->
+    <div class="js-filter">
+        <!--#include virtual="../../components/filter/desktop.shtml" -->
+    </div>
+<!-- Boutique Lister Starts Here-->
+    <div class="store-list__title">
+        <h1>
+            SEE ALL CARTIER STORES <br /><span class="js-GeoCity">CZECH REPUBLIC</span>
+        </h1>
+    </div>
+    <div class="boutique-list-detail-wrapper">
+        <div class="grid__item two-fifths list">
+            <!-- VIEW MORE LINK -->
+            <div class="store-locator__view-more js-view-button">
+                <span class="bg">Show more</span>
+                <span class="down-arrow"></span>
+            </div>
+
+            <!--#set var="more-text" value="Find out more" -->
+            <!--#set var="scrollPane" value="true" -->
+            <!--#set var="showmap-text" value="" -->
+
+            <!--#include virtual="../../components/boutique_scrollable/html.shtml" -->
+        </div>
+        <div class="boutique-detail grid__item three-fifths">
+            <!--#include virtual="../../components/google_maps/map.shtml" -->
+        </div>
+
+    </div>
+</div>
+

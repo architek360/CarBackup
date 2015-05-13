@@ -1,0 +1,22 @@
+  <!-- Services Block Starts Here-->
+<div class="quick-links clearfix">
+<!--     <h3>Quick Links</h3> -->
+    <ul>
+    	<!--#if expr="${THEME_1}=/main_theme/" -->
+                              <!--#set var="location" value="location-qa-icon.png" -->
+                             <!--#set var="lock" value="lock-qa-icon.png" -->
+                             <!--#set var="phone" value="phone-qa-icon.png" -->
+                             
+                   
+                    <!--#else-->
+                        <!--#set var="location" value="location-bridal-qa-icon.png" -->
+                        <!--#set var="phone" value="lock-bridal-qa-icon.png" -->
+                        <!--#set var="lock" value="phone-bridal-qa-icon.png" -->
+                    <!--#endif -->
+      <li><a href="#"><img src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var='location' -->" alt="location">lorem ipsum</a></li>
+      <li><a href="#"><img src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var='lock' -->" alt="lock">lorem ipsum</a></li>
+      <li><a href="#"><img src="<!--#echo var="ICON_IMG_PATH" --><!--#echo var='lock' -->" alt="lock">lorem ipsum</a></li>
+    </ul>
+
+</div>
+ <!-- Services Block Ends Here-->

@@ -1,0 +1,17 @@
+<!-- COMPONENT HTML FOR HIGHLIGHT AND PRODUCT LISTING PUSHES -->
+
+<div class="<!--#echo var="PUSH_TYPE" -->_class">
+	<!-- higlight and product line pushes starts -->
+	<a href="#" class="push-link js-search-push-link"> 
+		<div class="pushes-wrapper_push js-pushes-wrapper_push">
+			
+			<div class="push-col">
+				<img class="js-search-product-image" src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="IMG_PATH" -->" alt="<!--#echo var="ALT_TEXT" -->" />
+			</div>
+			
+			<!--#include virtual="../../components/push_hover_highlight/html.shtml" -->
+		</div>
+	</a>	
+	<!-- higlight and product line pushes ends -->
+
+</div>

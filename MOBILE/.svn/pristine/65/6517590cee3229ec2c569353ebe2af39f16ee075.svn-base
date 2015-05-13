@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    Product BOX -- MOBILE CSS
+\*------------------------------------*/
+
+/**
+* MODULE CONATINER.... (.product-listing)
+* IMAGE ....(.product-listing_img)
+* IMAGE DESCRIPTION  ....(.product-listing_desc)
+*/
+
+/*------------------------------------*\
+    MODULE CONTAINER
+\*------------------------------------*/
+.product-listing{
+	@include rem(margin, 8px 0);
+	display: table;
+    width: 100%;
+    position: relative;
+    .tappable{
+		height : 230px;
+		width :  100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	} 
+
+    /*------------------------------------*\
+   			 IMAGE
+	\*------------------------------------*/
+	.product-listing_img{
+		display: table;
+		text-align:center;
+		height: 230px;
+		width: 250px;
+		vertical-align: middle;
+		img{
+			display:block;
+			margin:auto;
+			max-height:90%;
+			max-width:90%;
+			width: auto;
+			height: auto;
+		}
+
+		 > div {
+		 	line-height: 195px;
+		 	display: table-cell;
+		 	height: 195px;
+		 	max-width: 230px;
+		 	vertical-align: middle;
+		 	text-align: center;
+		 }
+	}
+
+    /*------------------------------------*\
+   			 IMAGE DESCRIPTION
+	\*------------------------------------*/
+
+	.product-listing_desc{
+		display:inline-block;
+		vertical-align:middle;
+		display:table-cell;
+		width:50%;
+		text-align:center;
+		line-height:30px;
+		@include rem(padding, 0 15px);
+
+		.heading3{
+			@include font-color($primary-2);
+			@include f(22);
+			@include bold-font;
+			display:inline-block;
+			padding:0;
+			height:85px;
+			overflow:hidden;
+		}
+
+		.heading4{
+			@include font-color($primary-32);
+			@include main-font;
+			@include f(26);
+			text-transform:none;
+			@include rem(padding, 0px);
+		}
+	}
+}

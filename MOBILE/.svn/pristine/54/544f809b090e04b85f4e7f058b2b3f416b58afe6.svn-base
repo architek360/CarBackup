@@ -1,0 +1,469 @@
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+ 
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+
+
+$primary-1 		: #000000;	//Black
+$primary-2		: #FFFFFF;  //White
+$primary-3		: #a0a0a0;  //Text Grey
+$primary-4		: #a09997;  //Border Grey
+$primary-5		: #8f141a;  //Red
+$primary-6		: #b3b3b3;	// Light Grey
+$primary-7		: #9f9f9f;  //Grey
+$primary-8		: #202020;  //Dark Grey (Left Navigation background color)
+$primary-9		: #353e55;  // Carousel font color
+$primary-10		: #a0a0a0;  // Light Grey (Price Detail Text Color)
+$primary-11     : #464646;  // Border grey (Product Box Border)
+$primary-12     : #666666;  // grey (Product Box Text )
+$primary-13     : #191919;  // Grey Button color
+$primary-14     : #565656;  // Border grey (Left Navigation)
+$primary-15     : #330008;  // Red (Gift Wrapper Box background color)
+$primary-16     : #1d1d1d;  // Grey ( Input box background color)
+$primary-17     : #4d4d4d;  // Border Grey 
+$primary-18     : #908988;  // Border Grey(for quick links)
+$primary-20     : #8f141a;  // Red ( Mandatory Field)
+$primary-21     : #1c1e1d;  // Grey 
+$primary-22     : #f3f3f3;  // Grey (Radio Button)
+$primary-23     : #151515;  // Medium Grey (Product Selector)
+$primary-24     : #b80d1d;  // Red (Phone number color)
+$primary-25     : #262628;  // Grey Border (Collection Product Block Border)
+$primary-26     : #808080;  // grey border
+$primary-27     : #460000;  // shade red
+$primary-28     : #010000;  // shade mid red
+$primary-29     : #161616;  // shade mid gray (EnGRAVING BOX)
+$primary-30     : #2a2a2a;  // light grey for engraving input
+$primary-31     : #969595;  // Accordion text Color for product list page
+$primary-32     : #9f9e9e;  // Product list product color
+$primary-33     : #393939;  // light grey for engraving CAncel button
+$primary-34     : #929292;  // Checkbox background
+$primary-35     : #595b58;  // Radio Button Border Grey
+$primary-36     : #969797;  // Top Navigation (Icon right border)
+$primary-37     : #a09f9f;  // Grey Text Contact Us
+$primary-38     : #c7c7c7;  // Grey Background Navigation
+$primary-39		: #6c6969;
+$primary-40		: #333333;
+$primary-41		: #000000;
+$primary-42		: #1d1d1d;
+$primary-43		: #ffffff;
+$primary-44		: #000000;
+$primary-45		: #1d1d1d;  // form element  back-grouund color 
+$primary-46		: #161616;  // form element  back-grouund color 
+$primary-47		: #ffffff;  // radio button select color
+$primary-48		: #a0a0a0;  // input field color text gray
+$primary-49		: #ffffff;  //  white
+$primary-50		: #ffffff;  //  white | gray in bridal
+$primary-51     : #000000;  //  Black || Grey in bridal
+$primary-52     : #8C0114;  // Dark red for buttons || CR
+$primary-53		: #676767;
+$primary-54		: #717171;
+$primary-55		: #cacaca;
+$primary-56		: #626262;
+$primary-57		: #808080;
+$primary-58		: #1E1E1E;
+$primary-59		: #BBBBBB;
+$primary-60		: #ab999c;
+$primary-61		: #595959;
+$primary-62		: #a0a0a0;
+$primary-63		: #D3D3D3;
+$primary-64		: #A0A0A0;
+$primary-65		: #ffffff;
+$primary-66		: #810026;
+$primary-67		: #ffffff;
+$primary-68		: #a0a0a0;
+$primary-69     : #666676;
+$primary-70     : #1C1C1C;
+$primary-71     : #D6D6D6;
+$primary-72		: #454545;
+$primary-73		: #CCC;
+$primary-74		: #BFB1B3;
+$primary-75		: #6F4E53;
+$primary-76		: #8d0115;
+$primary-77		: #2a2a2a;
+$primary-78		: #330007;
+$primary-79		: #724d54;
+$primary-80		: #c899a3;
+$primary-81		: #c4b8b9;
+$primary-82	    : #450408;
+$primary-83		: #262626;
+$primary-84		: #83464B;
+$primary-85		: #330008;
+$primary-88 	: #1E1E1E;
+$primary-89 	: #666666;
+$primary-90 	: #ffffff;
+$primary-86		: #444; // dark grey - Filter disabled
+$primary-87		: #EC0000; // dark grey - Filter enabled & selected inner red
+/*$primary-88     : #472021;*/
+$primary-91     : #472021;
+$primary-92		: #a0a0a0;
+/*$primary-89		: #6D3536;*/
+$primary-94		: #202020;
+$primary-95     : #2a2a2a;
+$primary-96		: #b2b2b2;
+$primary-97		: #dfdfdf;
+$primary-98		: #a8a8a8;
+$primary-99		: #7f7f7f;
+$primary-100	: #262626;
+$primary-101	: #262626;
+$primary-102    : #1d1d1d;
+$primary-103	: #595959;
+$primary-104	: #250007; // message card for shopping bag - SR
+$primary-105	: #461F22;
+$primary-106	: #232323;
+$primary-107	: #A6A6A6;
+$primary-108	: #FBFBFB;
+$primary-109	: #A7A7A7;
+$primary-110	: #C4C4C4;
+$primary-112	: #F2F2F2;
+$primary-113	: #1a1a1a;
+$primary-114	: #A0A0A0;
+$primary-115	: #999999;
+$primary-116	: #262628;
+$primary-117	: #a0a0a0;
+$primary-118	: #000000;
+$primary-119	: #FFFFFF;
+$primary-120	: #282828;
+$primary-121	: #BDBDBD;
+$primary-122	: #3b1112;
+$primary-123	: #A0A0A0;
+$primary-124	: #8f010f;
+$primary-125	: #eeeeee;
+$primary-126	: #4d4d4d;
+$primary-127	: #1d1d1d;
+$primary-128    : #262628;
+$primary-129    : #4a4a4a;
+$primary-130    : #000000;
+$primary-131    : #FFFFFF;
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+
+$primary-font-1 : "CartierRegular";
+$primary-font-2 : "Georgia";
+
+
+$black : $primary-1;
+$white : $primary-2;
+$border_grey : #a09997;
+$button_red : #88131d;
+$text_grey : #a09f9f;
+$dark_grey:#454545;
+$light_black:#1d1d1d;
+$bridal_topnav:#eeeeee;
+$bridal_red:#88131d;
+
+$viewLink : #353e55;
+$red : #b01e23;
+$light_grey: #b3b3b3;
+$footerItemColor: #b3b3b3;
+$select_bg:#1d1d1d;
+
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@font-face {
+	font-family: 'CartierRegular';
+	src: url($path-font+'Gotham-Book.otf');
+}
+
+@font-face {
+	font-family: 'CartierBold';
+	src: url($path-font+'Gotham-Bold_0.otf');
+}
+
+@font-face {
+	font-family: 'CartierMedium';
+	src: url($path-font+'Gotham-Medium.otf');
+}
+
+
+@font-face {
+    font-family: 'CartierLoveTM';
+    src: url($path-font+ 'cartier-tm-love-webfont.eot');
+    src: url($path-font+ 'cartier-tm-love-webfont.woff') format('woff'),url($path-font+ 'cartier-tm-love-webfont.ttf') format('truetype');
+}
+
+//font faces
+@mixin brand-font {
+	font-family: "CartierRegular", sans-serif;
+}
+
+@mixin bold-font {
+	font-family: "CartierBold", sans-serif;
+}
+
+@mixin medium-font {
+	font-family: "CartierMedium", sans-serif;
+}
+
+@mixin main-font {
+	font-family: Georgia, sans-serif;
+}
+
+
+
+/*------------------------------------*\
+    $HEADER COMMON STYLING
+\*------------------------------------*/
+.text-link{
+	@include font-color($primary-6);
+}
+
+.top-nav{
+	.top-nav__menu{
+		float: left;
+		@include rem('padding', 18px 26px);
+		@include rem('margin-top', 10px);
+
+		button{
+
+			@include setSprite(42px, 36px, -452px, -20px);
+			border:none;
+			text-indent: -9999px;
+			overflow:hidden;
+
+		}	
+	}
+}
+
+/*------------------------------------*\
+    $COLLECTION COMMON STYLING
+\*------------------------------------*/
+.main-container {
+	.collection-image {
+		
+		@include rem('padding-top',20px);
+	}
+	.collection-image {		
+		display:block;
+
+
+		img{
+			@include rem('max-height',400px);
+			
+			width: 100%;
+
+			/*@include rem('max-height',370px);
+			@include rem('max-width',640px);*/
+
+			
+
+		}
+	}
+
+
+	.heading7{
+		
+		color: $primary-2;
+		width: 81.25%;
+		margin: 0 auto;
+		/*margin-bottom: 0;
+		@include rem('margin-top', 38px);*/
+		text-align: center;
+		text-transform: uppercase;
+		@include f(24);
+		@include rem('padding', 25px 0px 23px);
+		@include brand-font;
+		font-weight:normal;
+		line-height:27px;
+		/*line-height:1.4em;*/
+	}
+	.heading6{
+		@include brand-font;
+		color: $primary-2;
+		
+		
+		text-align: center;
+		text-transform: uppercase;
+		@include f(32);
+		@include rem('padding', 0px);
+		@include rem('padding-bottom', 26px);
+		/*line-height:1.4em;*/
+		
+	}
+	
+	
+
+}
+
+.collection {
+	
+	.collection__title{
+		
+		display:block;
+		.heading4{
+			@include rem(padding-top, 65px);
+			@include rem(padding-bottom, 22px);
+			@include f(24);
+		}
+		.heading2{
+			@include rem(padding, 0 0 41px 0);
+			border-bottom: 1px solid $primary-2;
+		}
+	}
+}
+
+
+/*------------------------------------*\
+    $LEFT NAV  COMMON STYLING
+\*------------------------------------*/
+// .nav{
+// 	@include linear-gradient(180deg, #0e0e0e 0%,  #393939 5%);
+// 	@include font-color($primary-2);
+// 	ul {
+// 	 	@include linear-gradient(180deg, #0e0e0e 0%,  $primary-14 5%);
+// 	 	li a{
+// 	 		color:$primary-2;
+// 	 	}
+// 	 }
+// 	 li a:first-child {
+// 		border-bottom:1px solid $primary-8;
+// 	}
+// }
+.nav{
+	@include font-color($primary-2);
+}
+
+.nav ul li .nav-arrow {
+		background: url($path-images + 'icons/right-icon.png') no-repeat 97% 49%;
+}
+
+.nav ul li .nav-arrow-down {
+	background: url($path-images + 'icons/down-icon.png') no-repeat 98% 49%;
+}
+
+
+#mobile-nav-search{
+	background-color:$primary-2;
+}
+.product-listing{
+	 background:$primary-1 url($path-images + 'content/product_list_bg.jpg') no-repeat bottom right 0 ;
+}
+
+.country-switcher__filter{
+	.country-switcher__filter_node__title{
+		span{
+			position:absolute;
+			right:0;
+			top:30%;
+			@include setSprite(32px, 32px, -743px, -20px);
+		}
+		span.on{
+			@include setSprite(32px, 32px, -784px, -20px);
+			
+		}
+		span.off{
+			@include setSprite(32px, 32px, -743px, -20px);
+		}
+	}
+}
+
+.select-2 {
+		/*@include setSprite(27px, 29px, -669px, -60px);*/
+		background:$primary-48 url($path-images + 'icons/select_arrow.png') no-repeat right 0; 
+}
+
+.degree360-icon{
+	@include setSprite(112px, 40px, -124px, -284.5px);
+}
+
+.carousel .prev span {
+	@include setSprite(35px, 100px, -19px, -285px);
+}
+
+.carousel .next span {
+	@include setSprite(35px, 100px, -72px, -285px);
+}
+
+.ambassador-cont{
+	.att-accordion{ 
+		.js-accordion_node__title{
+		> span{
+			@include setSprite(22px, 30px, -743px, -20px);
+		}
+		span.on{
+			@include setSprite(22px, 30px, -784px, -20px);
+			
+		}
+		span.off{
+			@include setSprite(22px, 30px, -743px, -20px);
+		}
+	}
+	}
+}
+.form-check{
+	input 
+	{
+		&:checked + span.form-check__icon
+		{
+			@include setSprite(22px, 22px, -702px, -20px);
+			vertical-align: top;	
+		}
+	}
+}
+.js-login-form,.js-reg-step-1,.js-reg-step-2,.js-reg-step-3, .js-personal-info-form, .js-address-form-jp,.js-address-form, .js-forgotpassword, #js-contact-ambassador-form, #js-request-info-form, #js-request-price-form, .send_email, .js-subscription-and-interest-form{
+	.group-wrapper .radio span , .radio span{
+	  background-position: -81px -11px;
+	}
+
+	.group-wrapper .radio .checked, .radio .checked {
+	  background-position: -111px -11px;
+	}
+
+	.group-wrapper .radio span.formerror, .radio span.formerror{
+	  background-position: -139px -11px !important;
+	}
+}
+
+/*------------------------------------*\
+    $MOBILE SELECT ELEMENTS
+\*------------------------------------*/
+.select-wrapper{
+	.selector {
+	    background-position: -1432px -178px;
+
+	    span {
+		     background-position: right -85px;
+		}
+		option {
+		    background-color: $primary-70;
+		    color: $primary-71;
+		}
+	}
+
+	.selector.formerror{
+		background-position: -1432px -588px;
+
+		 span {
+		     background-position: right -495px;
+		}
+	}
+
+
+}
+
+
+.selector {
+    background-position: -1432px -178px;
+
+    span {
+	     background-position: right -85px;
+	}
+	option {
+	    background-color: $primary-70;
+	    color: $primary-71;
+	}
+}
+
+.form-check.formerror .form-check__wrapper{
+	border: 1px solid #8f141a !important;
+	background-color: #3b1112 !important;
+}

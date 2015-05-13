@@ -1,0 +1,610 @@
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+
+
+
+        
+
+        
+
+            <h1 class="heading1"> アドレス帳 </h1>
+
+        
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="js-bobj-section-one">
+<input type="hidden" name="resourcePath" id="resourcePath" value="/content/car/jp/japan/ja/services/my-addresses">
+<div id="address-container">
+<div id="address-select">
+
+  <div class="form-element select-wrapper">
+    <label for="country" class="form-label"></label>
+         </div> 
+
+<div id="address-listing-detail-view" class="addressListingDetailView">
+    </div> 
+    <div class="form-element button-wrapper js-set-default display-none setDefault" href="javascript:void(0);" data-id="0">
+                 <input type="submit" class="form-button" value="Set as default address">
+            </div>
+      </div>
+      </div>
+        <div id="create-text"><h2 class="title-line">
+                    <span>create an address</span>
+                    </h2></div>
+
+          <div id="edit-text" class="display-none"><h2 class="title-line">
+                    <span>edit address</span>
+                    </h2></div>
+
+    </div>
+
+
+<div class="js-bobj-section-two display-none">
+    <ul class="js-bobj-address">
+        <li class="js-bobj-address-li">
+            <div class="radio-bobj">
+              <div class="radio"><span><input type="radio" value="" name="aaaa" id="" class="bobj-radio-input"></span></div>
+            </div>
+            <div class="address-bobj">
+                 <span class="name-row">
+                  <span class="js-add-fname"></span>
+                  <span class="js-add-lname"></span>
+                </span>
+
+
+
+              <span class="address-row">
+                <span class="js-add-snum"></span>
+                <span class="js-add-sname"></span>
+                <span class="js-add-pobox"></span>
+              </span>
+
+
+
+            <span class="js-add-city"></span>
+            <span class="js-add-state"></span>
+            <span class="js-add-info"></span>
+            <span class="js-add-zip"></span>
+          </div>
+      </li>
+    </ul>
+
+  <div class="form-element button-wrapper submit js-bobj-save-botton">
+    <input class="form-button" type="submit" name="submit" value="save">
+  </div>
+</div>
+
+
+
+
+<div class="error_message_js-address-form-jp" style="display:none;"></div>
+<div class="form-layout js-address-form-jp">
+    <script type="text/javascript" src="/etc/clientlibs/foundation/form.min.1409551396574.js"></script>
+<script type="text/javascript">
+  function cq5forms_preCheck_js_address_form_jp(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/ja/services/my-addresses.desktop.html" id="js-address-form-jp" name="js-address-form-jp" enctype="multipart/form-data" novalidate="novalidate"><input type="hidden" name=":formid" value="js-address-form-jp"><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/my-addresses/jcr:content/par/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><input type="hidden" name=":redirect" value="/ja/services/my-cartier/my-preferences/my-addresses.html"><div class="form"><script type="text/javascript">
+var rulesObjects = {};
+var messagesObjects = {};
+    
+  if(rulesObjects.addressform_address20){
+    rulesObjects.addressform_address20.required="true";
+    messagesObjects.addressform_address20.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_address20= {
+          required: true
+          }
+          messagesObjects.addressform_address20 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+    
+  if(rulesObjects.addressform_lastName1){
+    rulesObjects.addressform_lastName1.required="true";
+    messagesObjects.addressform_lastName1.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_lastName1= {
+          required: true
+          }
+          messagesObjects.addressform_lastName1 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+        
+    if(rulesObjects.addressform_lastName1){
+        rulesObjects.addressform_lastName1.isKatakana="true";
+        messagesObjects.addressform_lastName1.isKatakana="Please only enter Katakana characters";
+           
+        } else{
+             rulesObjects.addressform_lastName1= {
+            isKatakana: true
+            }
+            messagesObjects.addressform_lastName1 = {
+            isKatakana: "Please only enter Katakana characters"
+            }
+        }
+
+    
+  if(rulesObjects.addressform_lastName2){
+    rulesObjects.addressform_lastName2.required="true";
+    messagesObjects.addressform_lastName2.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_lastName2= {
+          required: true
+          }
+          messagesObjects.addressform_lastName2 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+        
+    if(rulesObjects.addressform_lastName2){
+        rulesObjects.addressform_lastName2.isKanji="true";
+        messagesObjects.addressform_lastName2.isKanji="Please only enter Kanji characters";
+           
+        } else{
+             rulesObjects.addressform_lastName2= {
+            isKanji: true
+            }
+            messagesObjects.addressform_lastName2 = {
+            isKanji: "Please only enter Kanji characters"
+            }
+        }
+
+    
+  if(rulesObjects.addressform_firstName1){
+    rulesObjects.addressform_firstName1.required="true";
+    messagesObjects.addressform_firstName1.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_firstName1= {
+          required: true
+          }
+          messagesObjects.addressform_firstName1 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+        
+    if(rulesObjects.addressform_firstName1){
+        rulesObjects.addressform_firstName1.isKatakana="true";
+        messagesObjects.addressform_firstName1.isKatakana="Please only enter Katakana characters";
+           
+        } else{
+             rulesObjects.addressform_firstName1= {
+            isKatakana: true
+            }
+            messagesObjects.addressform_firstName1 = {
+            isKatakana: "Please only enter Katakana characters"
+            }
+        }
+
+    
+  if(rulesObjects.addressLabel){
+    rulesObjects.addressLabel.required="true";
+    messagesObjects.addressLabel.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressLabel= {
+          required: true
+          }
+          messagesObjects.addressLabel = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+    
+  if(rulesObjects.addressform_zip1){
+    rulesObjects.addressform_zip1.required="true";
+    messagesObjects.addressform_zip1.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_zip1= {
+          required: true
+          }
+          messagesObjects.addressform_zip1 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+    
+  if(rulesObjects.addressform_zip2){
+    rulesObjects.addressform_zip2.required="true";
+    messagesObjects.addressform_zip2.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_zip2= {
+          required: true
+          }
+          messagesObjects.addressform_zip2 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+    
+  if(rulesObjects.addressform_address9){
+    rulesObjects.addressform_address9.required="true";
+    messagesObjects.addressform_address9.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_address9= {
+          required: true
+          }
+          messagesObjects.addressform_address9 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+    
+  if(rulesObjects.addressform_address7){
+    rulesObjects.addressform_address7.required="true";
+    messagesObjects.addressform_address7.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_address7= {
+          required: true
+          }
+          messagesObjects.addressform_address7 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+    
+  if(rulesObjects.addressform_address1){
+    rulesObjects.addressform_address1.required="true";
+    messagesObjects.addressform_address1.required="この欄は必須項目です";
+         
+    } else{
+       rulesObjects.addressform_address1= {
+          required: true
+          }
+          messagesObjects.addressform_address1 = {
+          required: "この欄は必須項目です"
+          }
+    }
+
+
+    $(document).ready(function(){
+    $("#js-address-form-jp").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+      });
+    });
+</script>
+<fieldset>
+  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="my-address-c1"><div class="group-wrapper">
+                <label>性別</label>
+<div class="form-element radio-wrapper addressform_address20">   
+                                    <div class="radio" id="uniform-0001"><span><input type="radio" id="0001" name="addressform_address20" value="0001" class="form-radio"></span></div>
+                                   <label for="0001" class=" form-radio-label">男性
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper addressform_address20">   
+                                    <div class="radio" id="uniform-0002"><span><input type="radio" id="0002" name="addressform_address20" value="0002" class="form-radio"></span></div>
+                                   <label for="0002" class=" form-radio-label">女性
+</label>                              
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-addressform_address20"></div><div class="form-element input-wrapper addressform_lastName1">
+        <label>お名前（姓　カタカナ） *</label>
+<input id="addressform_lastName1" type="text" name="addressform_lastName1" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_lastName1"></div></div>
+    <div class="form-element input-wrapper addressform_lastName2">
+        <label>お名前(姓漢字)</label>
+<input id="addressform_lastName2" type="text" name="addressform_lastName2" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_lastName2"></div></div>
+    <div class="form-element input-wrapper addressform_firstName1">
+        <label>お名前（名　カタカナ） *</label>
+<input id="addressform_firstName1" type="text" name="addressform_firstName1" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_firstName1"></div></div>
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+</div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="my-address-c2"><div class="form-element input-wrapper addressLabel">
+        <label>この住所に名前を付けて保存</label>
+<input id="addressLabel" type="text" name="addressLabel" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressLabel"></div></div>
+    <div class="form-element input-wrapper addressform_zip1">
+        <label>郵便番号（上3桁 半角数字） *</label>
+<input id="addressform_zip1" type="text" name="addressform_zip1" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_zip1"></div></div>
+    <div class="form-element input-wrapper addressform_zip2">
+        <label>郵便番号（下4桁 半角数字） *</label>
+<input id="addressform_zip2" type="text" name="addressform_zip2" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_zip2"></div></div>
+    <input type="hidden" name="resourcePath" id="resourcePath" value="/content/car/jp/japan/ja/services/my-addresses">
+<div class="form-element button-wrapper show-button">
+           <input type="button" value="OK" name="OK" class="form-button " id="find_addressjapan">
+    </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+</div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="my-address-c3"><div class="form-element input-wrapper addressform_address9">
+        <label>都道府県</label>
+<input id="addressform_address9" type="text" name="addressform_address9" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_address9"></div></div>
+    <div class="form-element input-wrapper addressform_address7">
+        <label>市区郡町村</label>
+<input id="addressform_address7" type="text" name="addressform_address7" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_address7"></div></div>
+    <div class="form-element input-wrapper addressform_address1">
+        <label>地域</label>
+<input id="addressform_address1" type="text" name="addressform_address1" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_address1"></div></div>
+    <div class="form-element input-wrapper addressform_phone">
+        <label>電話番号</label>
+<input id="addressform_phone" type="text" name="addressform_phone" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_phone"></div></div>
+    <div class="form-element input-wrapper addressform_mobile">
+        <label>携帯電話番号</label>
+<input id="addressform_mobile" type="text" name="addressform_mobile" placeholder="" class=" form-input" value="">
+      <div class="errormessage" id="errormessage-addressform_mobile"></div></div>
+    <br>
+<script>
+  RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : "compositeType",
+                'actionName' : "find_address",
+                'currentPagePath' : "/content/car/jp/japan/ja/services/my-addresses",
+                'elementId' : "find_addressjapan",
+                'eventName' : "click",
+        'parameters' : "addressform_zip1,addressform_zip2"
+              });
+</script>
+<br>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+</div><input id="countryCode" type="hidden" name="countryCode" value="JP">    
+    <input id="addressId" type="hidden" name="addressId" value="">    
+    <a href="/ja/services/my-cartier/my-preferences/my-addresses.html" style="color: #7f7f7f; font-family: arial, verdana, sans-serif; font-size: 11px; text-decoration: underline" class="display-none">
+          キャンセル</a>
+      
+</fieldset><div class="form-element button-wrapper submit">
+<input class="form-button" type="submit" name="submit" value="保存する">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+
+<div class="grid breadcrumb clearfix">
+    <h3 class="heading3">you are here :</h3>
+    <ul>
+
+
+
+
+<li class="one-quarter  palm--one-whole heading3"><span></span> <a href="/content/car/jp.html"> .jp </a>
+
+</li>
+
+
+<li class="one-quarter  palm--one-whole heading3"><span></span> <a href="/content/car/jp/japan.html"> Japan </a>
+
+</li>
+
+
+<li class="one-quarter  palm--one-whole heading3"><span></span> <a href="/content/car/jp/japan/ja.html"> Japanese </a>
+
+</li>
+
+
+<li class="one-quarter  palm--one-whole heading3"><span></span> <a href="/ja/services.html"> Services </a>
+
+</li>
+
+    </ul>
+</div>
+
+

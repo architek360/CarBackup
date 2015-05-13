@@ -1,0 +1,38 @@
+
+<!-- MY Orders Block Starts Here-->
+<div class="grid my-orders clearfix">
+    <h1 class="heading2">my cartier</h1>
+    <h2 class="heading3">my orders</h2>
+
+      <!-- MY  ORDER BLOCK-->
+      <div class="clearfix my-orders__detail grid__item palm--one-whole">
+        <div class="order-block">
+            <h3 class="order-block__details">order n°123456</h3>
+            <ul class="listing">
+                <li>Date de la commande :<span class="order-block__details"> 23/05/2013</span></li>
+                <li>status :<span class="order-block__details"> EN COURS</span></li>
+                <li class="order-block__more">
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#set var="more-text" value="plus de details" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </li>
+            </ul>
+        </div>
+      </div>
+
+    <div class="clearfix my-orders__detail grid__item palm--one-whole">
+        <div class="order-block">
+            <h3 class="order-block__details">order n°123456</h3>
+            <ul class="listing">
+                <li>Date de la commande :<span class="order-block__details"> 23/05/2013</span></li>
+                <li>status :<span class="order-block__details"> EN COURS</span></li>
+                <li class="order-block__more">
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#set var="more-text" value="plus de details" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+ <!-- MY Orders Block Ends Here-->

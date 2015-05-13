@@ -1,0 +1,69 @@
+{
+    "success" : true,   // False in case of any server error
+    "serverMessage" : "Some Server Message", // Will be displayed on the page in case of success == false
+
+
+
+    "content" :     // contains the actual json data. This wont be read in case of success == false
+
+
+        //sample data start
+		{ "filterCategories" : [ 
+		     { "filterTagId" : "cartier:category",
+		      "filterTitle" : "Category",
+		      "filters" : [ { "filterTagId" : "cartier:catregory/ring",
+		            "filterTitle" : "Ring",
+		            "isDisabled" : false,
+		            "isSelected" : true
+		          },
+		          { "filterTagId" : "cartier:catregory/earring",
+		            "filterTitle" : "Earring",
+		            "isDisabled" : false,
+		            "isSelected" : true
+		          },
+		          { "filterTagId" : "cartier:catregory/bracelet",
+		            "filterTitle" : "Bracelet",
+		            "isDisabled" : false,
+		            "isSelected" : true
+		          }
+		        ]
+		    },
+		    { "filterTagId" : "cartier:metal",
+		      "filterTitle" : "Metal",
+		      "filters" : [ { "filterTagId" : "cartier:metal/gold",
+		            "filterTitle" : "Gold",
+		            "isDisabled" : false,
+		            "isSelected" : true
+		          },
+		          { "filterTagId" : "cartier:metal/silver",
+		            "filterTitle" : "Silver",
+		            "isDisabled" : false,
+		            "isSelected" : true
+		          },
+		          { "filterTagId" : "cartier:metal/platinum",
+		            "filterTitle" : "Platinum",
+		            "isDisabled" : false,
+		            "isSelected" : true
+		          }
+		        ]
+		    }
+		  ],
+		"products" : [ { "productDescription" : "Product 1 description",
+		      "productImageURL" : "http://www.google.co.in",
+		      "productTitle" : "Product 1",
+		      "productURL" : "http://www.google.co.in"
+		    },
+		    { "productDescription" : "Product 2 description",
+		      "productImageURL" : "http://www.google.co.in",
+		      "productTitle" : "Product 2",
+		      "productURL" : "http://www.google.co.in"
+		    },
+		    { "productDescription" : "Product 3 description",
+		      "productImageURL" : "http://www.google.co.in",
+		      "productTitle" : "Product 3",
+		      "productURL" : "http://www.google.co.in"
+		    }
+		  ]
+		}
+    	//sample data end
+}

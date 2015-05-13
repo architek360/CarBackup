@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="expert_guide_faq" -->
+
+
+<!--- FOR HEADING -->
+
+		<!--#set var="Expert-guide-selected" value="CARTIER AND CORPORATE SOCIAL RESPONSIBILITY" -->
+		<!--#set var="expert-content" value="expert_collection_list" -->
+		<!--#set var="COMP_4" value="static_text_box" -->
+
+<!--  ENDS -->
+
+<!--#if expr="${DEVICE} = 'desktop'"  -->
+	<!--#set var="back-static-text" value="Back"-->
+	<!--#set var="COMP_1" value="back_button" -->
+	<!--#set var="COMP_3" value="breadcrumb" -->
+<!--#endif -->
+
+<!--  FOR SELECTING THE MAIN CONTENT FAQ or EXPERT COLLECTION BOX, ETC -->
+	<!--#set var="maison-tab" value="yes" -->
+	<!--#set var="tab_content_page" value="client_services" -->
+	
+		
+<!--  ENDS -->
+<!--#set var="MODULE" value="product" -->
+
+<!--#set var="VIEWS_1" value="secure_shopping" -->
+<!--#include virtual="../templates/base.shtml" -->

@@ -1,0 +1,583 @@
+/*!
+ * cartier.others.js
+ * This file contains functionalities handling the others module
+ *
+ * @project   cartier mobile
+ * @date      2014-01-03
+ * @author    SapientNitro 
+ * @licensor  cartier mobile
+ * @site      cartier mobile
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+
+;
+(function(window, $, others, undefined) {
+	//this will cause the browser to check for errors more aggressively
+	'use strict';
+
+	//check if jquery is defined, else retun
+	if ($ === undefined) {
+		console.log("jQuery not found");
+		return false;
+	}
+
+	/*
+        private variables
+        */
+
+	window.ytplayerCarousel = [];
+	var _cache = {},
+		_objPropertiesMsg,
+		_objPropertiesPth,
+		_dummyProductClone,
+		/*
+          @private method : caching jquery objects 
+          @param : none 
+        */
+		_cacheObjects = function() {
+
+			_cache = {
+				$others: $(".js-others"),
+				$accordionObject: $(".js-accordion"),
+				$tabsObject: $(".js-tabs"),
+				$videoObject: $(".js-video"),
+				$radioTab: $(".js-radio-tabs"),
+				$videoUrl: $('.js-video-url'),
+				$accesoriesCheckBox: $('.js-acessories'),
+				$accesoriesList: $('.js-accessories-list'),
+				$welcomeMsg: $('.welcome-message'),
+				$searchViewMoreLink: $('.js-view-button-search')
+			};
+
+		},
+
+
+		/*
+          @private method : bind events
+          @param : none
+        */
+
+		_bindEvent = function() {
+
+			// onclick event bind on accessories check box
+			_cache.$accesoriesCheckBox.on('click', _dispalyAccessoriesList);
+		},
+
+		/*
+         @private  method    : show hide accesories list 
+         @param   none
+          
+        */
+		_dispalyAccessoriesList = function() {
+			var checkBoxStatus = $(this).prop('checked');
+			cartier.common.showHideList(checkBoxStatus, _cache.$accesoriesList);
+
+		},
+
+		/*
+          @private method : show load time  Accessories list if check is checked
+          @param : none 
+        */
+		_showAccessoriesList = function() {
+			if (_cache.$accesoriesCheckBox.prop('checked')) {
+				cartier.common.showHideList(_cache.$accesoriesCheckBox, _cache.$accesoriesList);
+			}
+
+		},
+
+		/*
+          @private method : initialize Accordion
+          @param : none 
+        */
+		initializeAccordion = function() {
+
+			_cache.$accordionObject.makeAccordion({
+				showBehaviour: false,
+				scrollBehaviour: false
+			});
+		},
+		/*
+          @private method : initialize Tabs functionality 
+          @param : none 
+        */
+		initializeTabs = function() {
+			_cache.$tabsObject.tabs();
+		},
+
+		initializeMisionHover = function() {
+
+
+
+			$(".maison-nav li").hover(
+				function() {
+					$(this).find(".arrowSecound").addClass("hover");
+					$(this).find(".arrowFirst").addClass("hover");
+				}, function() {
+					$(this).find(".arrowSecound").removeClass("hover");
+					$(this).find(".arrowFirst").removeClass("hover");
+					$(this).find(".arrowSecound").css("background-color", "");
+					$(this).find(".arrowFirst").css("background-color", "");
+				}
+			);
+
+
+		},
+		/*
+          @private method : show top button
+          @param : none 
+        */
+		_addBacktoTopLink = function() {
+			var wWidth = $(window).width(),
+				mainWidth = $('.main-container').width(),
+				gutter = (wWidth - mainWidth) / 2,
+				rightPos = mainWidth + gutter;
+			$('.js-link-to-top a').css('left', rightPos + 'px');
+
+			// Scroll to top when your click on link.
+
+			$('.js-link-to-top a').on('click', function(event) {
+				event.preventDefault();
+				$('.main-container').ScrollTo({
+					top: 0,
+					duration: 800,
+					offsetTop: 140
+				});
+			});
+
+
+			// Function to show and hide the top link when you scroll.
+
+			if ($('.main-container').length > 0) {
+				$(window).scroll(function() {
+					var wScrollTop = $(this).scrollTop(),
+						tOffsetTop = 1000;
+					if (wScrollTop >= (tOffsetTop - 700)) {
+						$('.js-link-to-top a').addClass('is-fixed').fadeIn(100);
+					} else {
+						$('.js-link-to-top a').fadeOut(300, function() {
+							$(this).removeClass('is-fixed');
+						});
+					}
+				});
+			}
+
+		},
+
+		/* ajax request call for wishlist*/
+
+		_checkWishlistStatus = function() {
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				data: {},
+				url: _objPropertiesPth.checkWishlistStatUrl,
+				dataType: "json",
+				contentType: "application/x-www-form-urlencoded",
+			});
+
+
+			if (objXHR) {
+				objXHR.done(function(productData) {
+					// handle failure
+					if (typeof productData.success !== "undefined" && !productData.success) {
+						// handle redirectURL exist if the session expires
+						// data.redirectURL ?  window.location.href = data.redirectURL : $form.find('.server_message').html(data.errorMessage);
+					} else {
+
+						var parsedData = cartier.common.cartierJSONparser({
+							json: productData,
+						});
+
+						if (parsedData !== false) {
+							//callback function
+						}
+					}
+				});
+			}
+		},
+
+		_scrolltop = function() {
+			$(".tabs__title").on('click', function() {
+				if (!$(this).hasClass('js-tab-active')) {
+					_cache.$tabsObject.ScrollTo({
+						duration: 800,
+						offsetTop: 150
+					});
+				}
+			});
+		},
+		_parseAndAddProduct = function($that, parsedData) {
+			var placeToAdd = $that.closest(".js-productlist").find('.js-product-list__listing');
+			var numberOfProducts = parsedData[0].productArray.length;
+			for (var i = 0; i < numberOfProducts; i++) {
+				var productToAdd = _searchProductFiller(_dummyProductClone.clone(true, true), parsedData[0].productArray[i]);
+				placeToAdd.append(productToAdd);
+			}
+			if (parsedData[0].noProduct)
+				$that.addClass('display-none');
+			var newOffset = placeToAdd.data('offset');
+			newOffset++;
+			placeToAdd.data('offset', newOffset);
+			placeToAdd.attr('data-count', parsedData[0].newcount);
+			placeToAdd.data('count', parsedData[0].newcount);
+			//console.log(placeToAdd.data());
+		},
+
+		_searchProductFiller = function(productClone, data) {
+			productClone
+				.find('.js-search-push-link').attr('href', data.productLink).end()
+				.find('.js-search-push-link').attr('title', data.productTitle).end()
+				.find('.js-search-product-image').attr('src', data.productImageLink).end()
+				.find('.js-search-product-image').attr('alt', data.productAlttext).end()
+				.find('.js-search-product-title').html(data.productTitle).end()
+				.find('.js-search-product-desc').html(data.productDesc).end()
+				.find('.js-search-product-price').html(data.productPrice).end()
+				.find('.js-search-product-priceinfo').html(data.productPriceInfo).end();
+			
+			productClone.find('.js-search-product-image').closest('div').find('div').attr('data-src',data.productImageLink).data('src',data.productImageLink);
+			
+			return productClone;
+		},
+
+		_searchViewMoreFunction = function(e) {
+
+			var dataToSend = $(this).closest('.js-productlist').find('.js-product-list__listing').data();
+			dataToSend = $.param(dataToSend) + '&' + $('.js-search-form').serialize();
+			var $that = $(this);
+			_ajaxSubmitHandler($that, _objPropertiesPth.searchViewMoreAjax, dataToSend, function(parsedData) {
+				_parseAndAddProduct($that, parsedData);
+			});
+		},
+
+		_ajaxSubmitHandler = function(that, pathToSend, dataToSend, callback) {
+			var objXHR = cartier.ajaxWrapper.getXhrObj({
+				type: 'POST',
+				url: pathToSend,
+				data: dataToSend,
+				dataType: 'json',
+				contentType: "application/x-www-form-urlencoded",
+				beforeSend: function(objXHR) {
+
+				}
+			});
+			if (objXHR) {
+				objXHR.done(function(data) {
+					if (typeof data === "undefined") {} else {
+						var parsedData = cartier.common.cartierJSONparser({
+							json: data,
+						});
+						if (data !== false) {
+							callback(parsedData);
+						}
+					}
+				});
+			}
+			return false;
+		},
+		/*
+          @private method : initialize Radio Tabs functionality 
+          @param : none 
+        */
+		_initializeRadioTabs = function() {
+
+			_cache.$radioTab.radio_tabs();
+		};
+
+
+	/*
+          @public method : intialize video
+          @param : none 
+        */
+	others.initializeVideo = function() {
+		_cacheObjects();
+
+		if ($('.js-video').closest('.bxslider').length > 0) {
+
+
+			_cache.$videoUrl.each(function() {
+
+				var youtubeTheme = '',
+					videoContainer;
+				if ($(this).closest('li')) {
+					videoContainer = $(this).closest('li');
+				} else
+					videoContainer = $('.videocontainer');
+
+				var videoUrlInfo = videoContainer.find('.js-video-url'),
+					videoUrl = videoUrlInfo.data('url'),
+					loadPolicy = videoUrlInfo.data('load-policy'),
+					langPref = videoUrlInfo.data('lang-pref');
+
+
+
+				if (videoUrlInfo.data('source') === 'youtube' && $('body').css('background-color') === "rgb(255, 255, 255)") {
+					youtubeTheme = '&theme=light';
+				}
+
+				if ($('.js-video')) {
+
+
+					var element = "<iframe id='ytplayer' type='text/html' width='100%' height='100%' src='" + videoUrl + youtubeTheme + "&enablejsapi=1&cc_lang_pref=" + langPref + "&cc_load_policy=" + loadPolicy + "' frameborder='0' />";
+
+					videoContainer.find('.js-video .js-video-url').remove();
+					videoContainer.find('.js-video .js-video-icon').remove();
+					videoContainer.find('.js-video .js-video-poster').remove();
+					videoContainer.find('.js-video').append(element);
+
+
+				}
+
+
+			});
+		} else {
+
+			var youtubeTheme = '',
+				videoContainer;
+
+			videoContainer = $('.videocontainer');
+
+			var videoUrlInfo = videoContainer.find('.js-video-url'),
+				videoUrl = videoUrlInfo.data('url'),
+				loadPolicy = videoUrlInfo.data('load-policy'),
+				langPref = videoUrlInfo.data('lang-pref'),
+				autoplayPref = videoUrlInfo.data('autoplay');
+
+			if (autoplayPref == '1') {
+				videoContainer.find('.js-video-icon').remove();
+				videoContainer.find('.js-video-poster').remove();
+
+				var element = "<iframe id='ytplayer' type='text/html' width='100%' height='100%' src='" + videoUrl + youtubeTheme + "&enablejsapi=1&cc_lang_pref=" + langPref + "&cc_load_policy=" + loadPolicy + "' frameborder='0' />";
+
+				videoContainer.find('.js-video-url').remove();
+				videoContainer.find('.js-video-icon').remove();
+				videoContainer.find('.js-video-poster').remove();
+				videoContainer.parent().find('.js-video').append(element);
+
+			} else {
+
+
+
+				if (videoUrlInfo.data('source') === 'youtube' && $('body').css('background-color') === "rgb(255, 255, 255)") {
+					youtubeTheme = '&theme=light';
+				}
+
+				if ($('.js-video')) {
+
+
+
+					var element = "<iframe id='ytplayer' type='text/html' width='100%' height='100%' src='" + videoUrl + youtubeTheme + "&enablejsapi=1&cc_lang_pref=" + langPref + "&cc_load_policy=" + loadPolicy + "' frameborder='0' />";
+
+					videoContainer.find('.js-video-url').remove();
+					videoContainer.find('.js-video-icon').remove();
+					videoContainer.find('.js-video-poster').remove();
+					videoContainer.parent().find('.js-video').append(element);
+
+
+
+				}
+			}
+
+		}
+
+	};
+
+	others.bindYoutubeIframeEvents = function() {
+
+		$('.js-video').each(function() {
+
+			$(this).find('iframe').load(function() {
+
+				var player = {},
+					playerSrc = $(this).attr('src');
+
+				if (typeof playerSrc !== 'undefined') {
+
+					player = new YT.Player(this, {
+						events: {
+							onStateChange: cartier.others.onPlayerStateChange,
+							onReady: function() {
+								window.ytplayerCarousel.push(player);
+							},
+							onPlaybackQualityChange: cartier.others.onPlaybackQualityChange
+						}
+					});
+				}
+			});
+
+		});
+	};
+
+	others.onPlaybackQualityChange = function(event) {
+
+		var player = event.target;
+
+		if (typeof player !== 'undefined') {
+
+			var videoInteractions = null,
+				hdPossibleValues = ['hd720', 'hd1080', 'highres'],
+				playbackQuality = player.getPlaybackQuality(),
+				nameOfTheVideo = player.getVideoData().title;
+
+			if ($.inArray(playbackQuality, hdPossibleValues) === -1) {
+				videoInteractions = 'Disable HD Video';
+			} else {
+				videoInteractions = 'Enable HD Video';
+			}
+
+			if (videoInteractions !== null) {
+				$('.body-wrapper').data('plugin_analytics').youtubeVideoInteractionGARules({
+					'videoInteractions': videoInteractions,
+					'nameOfTheVideo': nameOfTheVideo
+				});
+			}
+		}
+	};
+
+	others.onPlayerStateChange = function(event) {
+
+		var player = event.target;
+
+		if (typeof player !== 'undefined') {
+
+			var playerState = player.getPlayerState(),
+				videoInteractions = null,
+				videoStatus,
+				videoDuration = player.getDuration(),
+				videoCurrentTime,
+				videoStatus = 0,
+				nameOfTheVideo = player.getVideoData().title;
+
+			// Video Interactions
+
+			// Video Started
+			if (playerState === -1) {
+				videoInteractions = 'Start Video';
+			}
+
+			// Video Paused
+			if (playerState === 2) {
+				videoInteractions = 'Pause Video';
+			}
+
+			// Video Playing
+			if (playerState === 1) {
+
+				videoInteractions = 'Play Video';
+
+				videoCurrentTime = player.getCurrentTime();
+
+				if (videoDuration !== 0 && videoCurrentTime !== 0) {
+
+					videoStatus = Math.floor((videoCurrentTime / videoDuration) * 100);
+
+					if (videoStatus >= 25 && playStatusCount == 1) {
+						videoStatus = 'Played 25%';
+						playStatusCount++;
+					} else if (videoStatus >= 50 && playStatusCount == 2) {
+						videoStatus = 'Played 50%';
+						playStatusCount++;
+					} else if (videoStatus >= 75 && playStatusCount == 3) {
+						videoStatus = 'Played 75%';
+						playStatusCount++;
+					} else {
+						videoStatus = 0;
+					}
+				}
+
+				if (playStatusCount == 0) {
+					playStatusCount++;
+				}
+			}
+
+			// Video Ended
+			if (playerState === 0 && playStatusCount == 4) {
+				videoStatus = 'Played 100%';
+				playStatusCount++;
+				videoInteractions = null;
+			}
+
+			if ((typeof $('.body-wrapper').data('plugin_analytics') !== 'undefined')) {
+
+				if (videoInteractions !== null && !(playerState == 1 && previousState == playerState)) {
+					$('.body-wrapper').data('plugin_analytics').youtubeVideoInteractionGARules({
+						'videoInteractions': videoInteractions,
+						'nameOfTheVideo': nameOfTheVideo
+					});
+				}
+
+				if (videoStatus && (playStatusCount > 1 || playerState === 0)) {
+					$('.body-wrapper').data('plugin_analytics').youtubeVideoStatusGARules({
+						'videoStatus': videoStatus,
+						'nameOfTheVideo': nameOfTheVideo,
+						'playerState': playerState
+					});
+				}
+			}
+
+			if (previousState != playerState) {
+				previousState = playerState;
+			}
+
+			if (playerState === 1) {
+				setTimeout(function() {
+					others.onPlayerStateChange(event);
+				}, 1000);
+			}
+		}
+	};
+
+	/*
+        @public method : To initialize others.js
+        @param : none
+    */
+
+	others.init = function() {
+		_objPropertiesMsg = cartier.properties.messages;
+		_objPropertiesPth = cartier.properties.paths;
+		console.log('Hi');
+		initializeMisionHover();
+		// caching the jquery objects
+		_cacheObjects();
+		_bindEvent();
+		if ($(".site-map-collection").length) {
+			_scrolltop();
+		}
+		if (_cache.$welcomeMsg.length) {
+			_checkWishlistStatus();
+		}
+		if (_cache.$accordionObject.length) {
+
+			// Initializing the accordion
+			initializeAccordion();
+		}
+		if (_cache.$tabsObject.length) {
+			// Initializing the year
+			initializeTabs();
+		}
+		if (_cache.$accesoriesCheckBox.length) {
+			_showAccessoriesList();
+		}
+		_initializeRadioTabs();
+		_addBacktoTopLink();
+
+		$('.links-accordion').vaccordion({
+			visibleSlices: 5,
+			expandedHeight: 130,
+			animOpacity: 0.1,
+			contentAnimSpeed: 300,
+			accordionH: 130
+		});
+		if (_cache.$searchViewMoreLink.length) {
+			$('.js-product-list__listing').data('offset', 1);
+			_dummyProductClone = $('.js-inResult:eq(0)').removeClass('js-hide-content').clone(true, true);
+			$('.js-product-list__listing').data('sampleurl',_dummyProductClone.find('.js-search-product-image').attr('src'));
+			_cache.$searchViewMoreLink.on('click', _searchViewMoreFunction);
+
+		}
+	};
+
+}(window, jQuery, cartier.others));

@@ -1,0 +1,139 @@
+{
+  "success": true,
+  "serverMessage": "Some Server Message",
+  "content": {
+    "updateSuccess": true,
+    "isErrorMessageVisible": false,
+    "errorMessage": "Proceeding to Checkout",
+    "isRedirect": false,
+    "redirectUrl": "http://www.google.com",
+    "subTotal": "5300.15",
+    "currencySymbol": "$",
+    "subTotalInfo": "excl. sales tax",
+    "deliveryCharge": "free",
+    "deliveryChargeInfo": "offered on order over $500",
+    "ifSalesTax": true,
+    "salesTax": "450.15",
+    "total": "5300.15",
+    "totalInfo": "excl. sales tax",
+    "cartCapacity": 5,
+    "teaserArray": [
+      {
+        "teaserID": "timestamp in long",
+        "productTitle": "panthere ringgggggggggggggggg",
+        "productDesc": "Yellow gold",
+        "refId": "HP100480",
+        "sizeValue": "47.15",
+        "imageURL": "../etc/designs/dmp/clientlibs_base/images/content/panthere_ring.png",
+        "currencySymbol": "$",
+        "productPrice": "540.15",
+        "selectedQuantity": "3",
+        "teaserTotal": "5540.15",
+        "hasSize": true,
+        "productPagePath": "/path/to/page",
+        "reservationId": [
+          101,
+          103
+        ],
+        "otherServices": [
+          "WENG",
+          "WRING"
+        ],
+        "sizeInfo": {
+          "sizeInfoOptions": [
+            {
+              "display": "48 (US 4½)",
+              "value": "341.15",
+              "price": "ssdfs",
+              "imageURL": ""
+            },
+            {
+              "display": "51 (US 4½)",
+              "value": "344.15",
+              "price": "ssdfs",
+              "imageURL": ""
+            }
+          ],
+          "selectedOption": "344.15"
+        },
+        "hasEngraving": true,
+        "engravingInformation": {
+          "lineOne": "vaibhav",
+          "lineTwo": "jalan",
+          "textStyle": true
+        },
+        "hasBracelet": true,
+        "braceletInfo": {
+          "lineOne": "10.15",
+          "max": 10.5,
+          "min": 9.5,
+          "textStyle": true
+        },
+        "hasGiftCard": true,
+        "giftCardInfo": {
+          "receiveBlank": false,
+          "cardMessage": "Happy Birthday",
+          "textStyle": true
+        }
+      },
+      {
+        "teaserID": "timestamp in longggggggggggggggggggggggggg",
+        "productTitle": "panthere ring",
+        "productDesc": "tsavoriteffffffffffffffffff",
+        "refId": "HP100480",
+        "sizeValue": "47.15",
+        "imageURL": "../etc/designs/dmp/clientlibs_base/images/content/panthere_ring.png",
+        "currencySymbol": "$",
+        "productPrice": "540.15",
+        "selectedQuantity": "2",
+        "teaserTotal": "5540.15",
+        "hasSize": true,
+        "productPagePath": "/path/to/page",
+        "reservationId": [
+          101,
+          103
+        ],
+        "otherServices": [
+          "WENG",
+          "WRING"
+        ],
+        "sizeInfo": {
+          "sizeInfoOptions": [
+            {
+              "display": "48 (US 4½)",
+              "value": "341.15",
+              "price": "ssdfs",
+              "imageURL": ""
+            },
+            {
+              "display": "51 (US 4½)",
+              "value": "344.15",
+              "price": "ssdfs",
+              "imageURL": ""
+            }
+          ],
+          "selectedOption": "344.15"
+        },
+        "hasEngraving": true,
+        "engravingInformation": {
+          "lineOne": "vaibhav",
+          "lineTwo": "jalan",
+          "textStyle": true
+        },
+        "hasBracelet": true,
+        "braceletInfo": {
+          "lineOne": "10.15",
+          "max": 10.5,
+          "min": 9.5,
+          "textStyle": true
+        },
+        "hasGiftCard": true,
+        "giftCardInfo": {
+          "receiveBlank": true,
+          "cardMessage": "Happy Birthday",
+          "textStyle": true
+        }
+      }
+    ]
+  }
+}

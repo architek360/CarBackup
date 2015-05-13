@@ -1,0 +1,180 @@
+/*------------------------------------*\
+    PDP -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ccontact-ambassador)
+ */ 
+ 
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.home-image-wrapper{
+	min-height: 630px;
+
+	.home-image{
+		position: absolute;
+		width: 100%;
+		overflow: normal;
+		overflow-x: hidden;
+		top: 0;
+		@include rem('min-height', 795px);
+		left: 0;
+		margin-bottom: -18px;
+
+		.image{
+			width: 100%;
+		}
+		.bg-image{
+			height: 795px;
+			width: 100%;
+			display: block;
+		}
+
+		.text-wrapper{
+			position: absolute;
+			width: 100%;
+			top:160px;
+
+			.text-inner{
+				margin: 0 auto;
+				max-width: 1024px;
+				display: block;
+				text-align: center;
+				font-size: 14px;
+
+				h2 {
+					text-align: center;
+					@include f(30);
+					color: $primary-2;
+					line-height: inherit;
+					@include rem('letter-spacing', 1.4px);
+					@include proxi-font;
+					text-align: center;
+					text-transform: uppercase;
+					@include rem('padding', 0 0 20px 0);
+					 
+				}
+				h3 {
+					@include f(13);
+					color: $primary-3;
+					@include rem('line-height', 18px);
+					@include rem('letter-spacing', 1.3px);
+					@include main-font;
+					font-style: italic;
+					text-align: center;
+
+				}
+
+				p {
+					@include f(12);
+					color: $primary-3;
+					@include rem('line-height', 18px);
+					@include main-font;
+					text-align: center;
+					position: relative;
+					@include rem('padding', 0 0 20px 0);
+				}
+
+				a{
+		 	 		
+		 	 		text-decoration:none;
+		 	 		@include f(13);
+					@include proxiBold-font;
+					text-transform: uppercase;
+					color: $primary-2;
+					@include setSpriteDesktop(auto, auto,-431px,-155px,transparent);
+		 	 		@include rem('padding-left', 10px);
+		 	 		@include rem('line-height',13px);
+		 	 		@include rem('letter-spacing', 1.3px);
+
+		 	 		&:hover{
+		 	 			color: $primary-3;
+		 	 		}
+		 	 	}
+			}
+
+			.center{
+				margin: 30px auto;
+				width: 360px;
+				height: 100px;
+			}
+
+			.left{
+				width: 360px;
+				height: 100px;
+				margin-top: 180px;
+				float: left;
+			}
+			.right{
+				width: 360px;
+				height: 100px;
+				margin-top: 180px;
+				float: right;
+			}
+			.subtitle-page{
+				@include f(22);
+				position: relative;
+				@include rem('margin', 14px 0 10px 0);
+				color: $primary-2;
+				text-transform: uppercase;
+			}
+			.subtitle-page:before {
+				border-top: 1px solid $primary-2;
+				content: "";
+				display: block;
+				left: -75px;
+				position: absolute;
+				top: 48%;
+				width: 60px;
+			}
+
+			.subtitle-page:after {
+				left: auto!important;
+				right: -70px;
+				border-top: 1px solid $primary-2;
+				content: "";
+				display: block;
+				left: -75px;
+				position: absolute;
+				top: 48%;
+				width: 60px;
+			}
+		}
+	}
+}
+
+.push-blocks{
+	min-height: 205px;
+	.pushes-wrapper{
+		@include rem('padding', 20px 20px 20px 0);
+		display: inline-block;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		@include box-sizing(border-box);
+
+		.grid__item{
+			width: 22%;
+			@include rem('padding-left', 20px);
+		}
+
+		.grid__item:first-child  {
+			margin-left: 6%;
+		}
+
+		.push-col{
+			img{
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.pushes-wrapper-service-push{
+			.push-col{
+				height: 117px;
+			}
+		}
+	}
+	
+}

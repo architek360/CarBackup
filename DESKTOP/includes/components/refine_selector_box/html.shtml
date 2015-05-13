@@ -1,0 +1,31 @@
+<!--refine-selector Block-->
+
+<div class="refine-selector js-refine-selector">
+    <div class="refine-selector__title js-refine-selector__title">HIGHLIGHTS<span class="double-arrow"></span></div>
+    <div class="refine-selector__content js-refine-selector__content va-accordion">
+    	<div class="va-nav"> <span class="js-less-arrow less-arrow">Previous</span> <span class="js-more-arrow more-arrow">Next</span> </div>
+	    <ul class="sub-menu">
+	        <li class="first"><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li>
+	        <li ><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li>
+	        <li><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li>  
+	        <li ><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li>
+	        <li><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li> 
+	        <li ><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li>
+	        <li><a href="">Gold and steel</a>
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" /></span>
+	        </li>                    
+	    </ul>
+    </div>
+</div>

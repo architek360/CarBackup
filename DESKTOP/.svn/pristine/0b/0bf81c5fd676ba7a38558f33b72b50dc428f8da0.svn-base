@@ -1,0 +1,39 @@
+<div class="pushs clearfix">
+	<ul>
+		<li>
+			<h4 class="pushs__title">easy return and exchange</h4>
+			<p class="pushs__desc">
+				For your convenience, a postage-paid 
+				return label is provided with all orders 
+				Return and Exchange Policy
+			</p>
+		</li>
+		
+		<li>
+			<h3 class="pushs__title">all transaction are safe and secure</h3>
+			<ul class="pushs__credit-cards">
+				<li class="mastercard">MasterCard</li>
+				<li class="visa_card">Visa</li>
+				<li class="discover_network_card">Discover</li>
+				<li class="jsb_card">Jsb</li>
+				<li class="american_express_card">American Express</li>
+				<li class="diners_club_card">Diners</li>
+			</ul>
+			<p class="pushs__desc">
+				128-bit SSL encrypted payment. 
+				Cartier does not save your payment 
+				details for future orders.
+			</p>
+			<div class="norton-icon"></div>
+		</li>
+		<li>
+			<h4 class="pushs__title">authetic cartier guarantee</h4>
+			<p class="pushs__desc">
+				Cartier guarantees the authenticity of all product purchased through Cartier online 
+				<span><a href="#">Read more</a></span>
+			</p>
+			
+		</li>
+
+	</ul>
+</div>

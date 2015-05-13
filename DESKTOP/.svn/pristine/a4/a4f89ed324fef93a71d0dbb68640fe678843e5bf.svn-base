@@ -1,0 +1,26 @@
+<!-- Detail Section Box Starts Here-->
+<!--
+<div class="ecs-video-component" id="details">
+	<div class="comp-rich-text">
+		<h2 class="heading2">Details</h2>
+		<div class="videocontainer js-video">
+			<span class="video-url js-video-url" 
+		                    data-url="http://www.youtube.com/embed/geTgZcHrXTc?enablejsapi=1&version=3&playerapiid=ytplayer?wmode=transparent" 
+		                    data-source="youtube">
+		    </span>
+		</div>
+		<p>Stainless steel case, stainless steel fluted crown set with a blue synthetic spinel cabochon. Sapphire crystal, silvered opaline flinqué dial, Roman numerals, blued-steel sword-shaped hands. Semi-matte black alligator strap.Self winding mechanical movement calibre Cartier 076, water-resistant to 3 bars (30 meters/100 feet).Case dimensions : 36.6 mm diameter, 12.05 mm thick.</p>
+		</div>
+</div>
+-->
+
+<div id="details" class="ecs-video-component">
+    <div class="comp-rich-text">
+	    <div class="videocontainer js-video">
+	        <span class="video-url js-video-url" data-url="https://www.youtube.com/embed/geTgZcHrXTc?enablejsapi=1&version=3&playerapiid=ytplayer?wmode=transparent" data-source="youtube">
+		    </span>
+	    </div>
+
+        <p>Information about video</p>
+    </div>
+</div>

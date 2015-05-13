@@ -1,0 +1,91 @@
+/*------------------------------------*\
+   Tabs Box -- Mobile CSS
+\*------------------------------------*/
+/**
+ * Main CONTAINER.... Wrapper for Tabs (#tabs)
+ * Heading Block for Tab .... Wrapper for Tabs Heading (.tabs__title)
+ * Content CONTAINER for Tab .... Wrapper for Tabs content (.tabs__content)
+ */
+
+/*------------------------------------*\
+    $tabs CONTAINER
+\*------------------------------------*/
+
+
+
+.tabs {
+    @include bold-font;
+    @include font-color($primary-2);  
+    display: block;
+    background: $primary-1; 
+    /*width: 81.25%;*/
+    margin: 0 auto; 
+    @include rem('padding', 20px 0px);  
+
+
+        .tabs__content {
+            margin: 0;
+            padding: 0;
+            background: none repeat scroll 0% 0% $primary-1;
+            @include rem('left', 0px);
+            @include rem('top', 80px);
+            @include rem('bottom', 0px);
+            @include rem('right', 0px);            
+            display: none;
+        }
+        .content-active {
+            display: block;
+        }
+
+
+        .tab-header {
+            position: relative;
+            width: 100%; 
+            margin-bottom: 0;
+            padding-bottom: 0;
+            @include bold-font;
+            @include rem('margin-top', 30px); 
+            @include rem('height', 30px); 
+
+            ul.tabs__nav {
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                bottom: -1px;
+                display: table;
+                width: 100%; 
+
+                li, .tab-active  {
+                    display: inline;
+                    list-style: none;
+                    margin: 0;
+                    display: table-cell;        
+                    @include f(20);
+                    @include rem('padding', 19px 21px); 
+                    display: table-cell;
+                    text-align: center;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                .tab__title-wrapper{
+                    width: 96%;
+                    @include rem('max-width', 207px); 
+                    display: inline-block;
+                    vertical-align:middle;
+                  
+
+                }
+
+                 &, &:hover  {
+                    border: 1px solid $primary-12;
+                    background: $light_black;
+                    @include font-color($primary-2);
+                }
+                }
+                .tab-active, .tab-active:hover {
+                    background: $primary-2;
+                    @include font-color($light_black);
+                }
+            }
+        }
+}

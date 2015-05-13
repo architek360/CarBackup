@@ -1,0 +1,162 @@
+/*------------------------------------*\
+    Contact Us -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.contact)
+ * SERVICE CONTAINER......contact information (.contact__service_cont)
+ * BOUTIQUE BLOCK......Find a boutique block (.contact__push_block)
+ * COUNTRY LABEL...... Country select list (.contact__country_label)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.contact {
+	@include main-font;
+	@include font-color($primary-2);
+	
+	.ambassador-cont-contact-us{
+		padding: 20px 0px;
+		border: solid 1px $primary-11;
+		border-top:none;
+		margin-bottom:50px;
+		button {
+			display:block;
+		}
+	}
+	.ambassador-form {
+		border:none;
+		border-top: 1px solid $primary-11;
+	}
+
+ 	.contact-bridal {
+ 		padding: 20px 0px;
+ 		background-color : $primary-2;
+ 		color: $primary-20 ;
+ 		background:$primary-2 url($path-images + 'icons/bg-tocontact-bridal.jpg') no-repeat top left 0 ;
+ 		background-size: cover;
+ 		.icon-phone {
+ 			background: url("../../etc/designs/dmp/clientlibs_base/images/icons/sprite.png") -20px -20px no-repeat;
+ 		}
+ 		.heading6,.heading5,.heading4,.heading3,.heading2,.heading1 {
+ 			color : $primary-20 ;
+ 		}
+ 	}
+
+ 	.contact-normal {
+ 		padding: 20px 0px;
+ 		background:$primary-2 url($path-images + 'icons/bg-tocontact-conseiller.jpg') no-repeat top left 0 ;
+ 		background-size: cover;
+ 		.icon-phone {
+ 			background: url("../../etc/designs/dmp/clientlibs_base/images/icons/sprite.png") -154px -20px no-repeat;
+ 		}
+ 	} 
+
+
+
+	.contact__contact-cont{
+		width: 81.25%;
+		margin: 0 auto;
+
+
+
+		.heading2{
+			border-bottom: 1px solid $primary-2;
+		}
+
+/*------------------------------------*\
+    $SERVICE CONTAINER
+\*------------------------------------*/
+
+
+		.contact__service-cont{
+			@include rem('margin', 35px 0 0 0);
+			
+			img{
+				width:100%;
+			}
+
+			.heading3{
+				@include bold-font;
+			}
+			.loaderImage{
+				margin: 0 auto;
+				position: static;
+			}
+			
+			.contact__service-cont__number{
+				@include rem('margin', 20px 0 0 0);
+				@include f(22);
+				@include bold-font;
+				text-align:center;
+				display:block;
+			}
+
+			.contact__service-cont__timimgs{
+				text-align:center;
+
+				span{
+					display:block;
+				}
+
+			}
+	
+		}
+
+		.grey-text{
+			  @include f(26);
+ 			  text-align: left;
+ 			  @include rem('padding', 25px 0);
+
+  			  line-height: 30px;
+		}
+		
+	/*------------------------------------*\
+		    $COUNTRY LABEL
+	\*------------------------------------*/
+	
+		.contact__country-label{
+			display:block;
+			
+			> label{
+				text-transform:uppercase;
+				@include rem('padding', 15px 0);
+				float:left;
+			}
+
+			.form-select{
+				@include main-font;
+				color:$primary-3;
+			}
+		}
+	}
+	
+}
+
+	/*------------------------------------*\
+	    $BOUTIQUE BLOCK
+	\*------------------------------------*/
+
+
+	.contact_push-block{
+		border:1px solid $primary-37;
+		margin:35px auto 60px;
+		@include rem('padding', 30px 0);
+		display:block;
+		text-align:center;
+		text-transform:uppercase;
+		width: 81.25%;
+
+		.cta-button{
+			display: block;
+		}
+		.heading3{
+			color:$primary-37;
+			text-align: center;
+			display: inline-block;
+			@include f(20);
+			@include rem(padding, 0 0 20px 0);
+			@include bold-font;
+			width:80%;
+		}
+	}

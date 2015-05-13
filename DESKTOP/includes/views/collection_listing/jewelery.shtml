@@ -1,0 +1,51 @@
+<!--#set var = "image" value="eclectism.jpg" -->
+<!--#set var = "hoverImage" value= "eclectism_red.jpg" -->
+<!--#set var="imagetext" value= "eclectism" -->
+<!--#set var ="imagealt" value = "eclectism" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="garlandstyle.jpg" -->
+<!--#set var = "hoverImage" value= "garlandstyle_red.jpg" -->
+<!--#set var="imagetext" value= "garlandstyle" -->
+<!--#set var ="imagealt" value = "garlandstyle" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="essential.jpg" -->
+<!--#set var = "hoverImage" value= "essential_red.jpg" -->
+<!--#set var="imagetext" value= "essential" -->
+<!--#set var ="imagealt" value = "essential" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="modern_style.jpg" -->
+<!--#set var = "hoverImage" value= "modern_style_red.jpg" -->
+<!--#set var="imagetext" value= "modern_style" -->
+<!--#set var ="imagealt" value = "modern_style" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="indian_influences.jpg" -->
+<!--#set var = "hoverImage" value= "indian_influences_red.jpg" -->
+<!--#set var="imagetext" value= "indian_influences" -->
+<!--#set var ="imagealt" value = "indian_influences" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="floara-orchids.jpg" -->
+<!--#set var = "hoverImage" value= "floara-orchids_red.jpg" -->
+<!--#set var="imagetext" value= "floara-orchids" -->
+<!--#set var ="imagealt" value = "floara-orchids" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="menagerie.jpg" -->
+<!--#set var = "hoverImage" value= "menagerie_red.jpg" -->
+<!--#set var = "imagetext" value= "menagerie" -->
+<!--#set var ="imagealt" value = "menagerie" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="panther.jpg" -->
+<!--#set var = "hoverImage" value= "panther_red.jpg" -->
+<!--#set var="imagetext" value= "panther" -->
+<!--#set var ="imagealt" value = "panther" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value="chimeras.jpg" -->
+<!--#set var = "hoverImage" value= "chimeras_red.jpg" -->
+<!--#set var=" imagetext" value= "chimeras" -->
+<!--#set var ="imagealt" value = "chimeras" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value= "reptiles.jpg" -->
+<!--#set var = "hoverImage" value= "reptiles_red.jpg" -->
+<!--#set var= "imagetext" value= "reptiles" -->
+<!--#set var ="imagealt" value = "reptiles" -->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+

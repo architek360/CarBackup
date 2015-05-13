@@ -1,0 +1,13 @@
+    <!-- Address Wrapper-->
+    <div class="address-details">
+    	<div class="grid__item grid__item--row js-poboxnumber">
+            <!--#set var="label-name" value="po box number" -->
+            <!--#set var="mandatory" value="yes"-->
+            <!--#set var="input-name" value="fn_pobox" -->
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#set var="input-prop" value="form-input" -->    
+            <!--#set var="input-type" value="text" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+             
+    	</div>
+    </div>

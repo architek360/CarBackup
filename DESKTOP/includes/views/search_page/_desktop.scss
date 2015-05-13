@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    SEARCH PAGE -- Desktop CSS
+\*------------------------------------*/
+
+.search-page-wrapper{
+	.search-wrapper{
+		margin:0 auto;
+		@include rem('padding', 0px 0px 20px 45px);
+	}
+	.collection__refine-selection{
+		border-top: none;
+		@include rem('padding-top', 5px);
+		.collection__refine-selection__radio-tabs {
+			padding-bottom:0;
+				.radio-buttons__list{
+					float:left;
+					height:1.8rem;
+				}
+		}
+	}
+
+	.remove-criteria{
+		float:right;
+		margin-left:0;
+	} 
+
+	.total-result{
+		@include f(15);
+		@include proxi-font();
+		text-align: center;
+		display:block;
+		@include rem('padding', 20px 0px 40px);
+		border-bottom: 1px solid $primary-25;
+	}
+
+	.heading2{
+		@include rem('margin', 5px 0px 0px);
+		@include f(18);
+	}
+	.view-items{
+		
+		.product-list-wrapper{
+			@include rem('padding-top', 8px);
+			@include rem('margin-top', 0px);
+
+			.product-list__view-more{
+				@include rem('margin-bottom', 30px);
+			}
+		}
+
+	}
+
+	.jewellery{
+		border-bottom: 1px solid $primary-25;
+	}
+	
+}

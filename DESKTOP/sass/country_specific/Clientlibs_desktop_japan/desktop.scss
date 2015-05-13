@@ -1,0 +1,248 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+@import "../_theme_vars";
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/* Views and components include */
+
+@import "../../../includes/views/my_address_japan/_desktop";
+html, body, button, input, select, textarea {
+    font-family: Georgia, Palatino, "Palatino Linotype", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Times, "Times New Roman", serif;
+}
+div, a, h1, h2, h3, h4, h5, h6, label {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.living-heritage-bg .comp-rich-text .dido-normal, .living-heritage-bg .comp-rich-text .dido- italic, .living-heritage-bg span.mores a {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.primary-nav-container .first-level-nav .nav-show .secondary-nav .mega-menu .col .category-title, .primary-nav-container .first-level-nav .first-level-nav__title .footer .footer-left, .primary-nav-container .first-level-nav .first-level-nav__title h2, .language-select, .quick-links ul li, .quick-links ul li a, .coloumn- wrapper h2, .coloumn-wrapper h3, .nested-carousel-wrapper .carousel .bx-wrapper .bx-caption span {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.sfy-help-carousel .carousel .bx-wrapper .bx-caption span, .bridal-pdp-carousel .carousel .bx-wrapper .bx-caption span, .nested-carousel-wrapper .carousel-product .carousel .bx-wrapper .bx-caption span, .sfy .sfy_check label, .nested-gift- for-you .carousel .bx-wrapper .bx-controls .bx-controls-direction-left a:hover .slide-nav, .nested-gift-for-you .carousel .bx-wrapper .bx-controls .bx-controls-direction-right a:hover .slide-nav, .nested-exceptional-creation .carousel .info__desc h2 {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.billing-address-content-wrapper .delivery-days .delivery-days__list .delivery-days__desc p, .billing-address- content-wrapper .delivery-days .delivery-days__list .delivery-days__desc p, .progressbar li p, .social-share .social-share__favorite, .form-label, .group-wrapper > label, .cta-button .cta-button__input, .form-check-2, .group-wrapper .radio span, .radio span, .input-wrapper label {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.textarea-wrapper label, .button-wrapper .form-button, .select-wrapper label, .form-select-box, .form-label, .js-light-account-form .txt label, .js-light-account-form .heading4, .js-light-account-form .heading5 {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.logout-button, .shoppingBagBg .button-wrapper .form- button, .form-check, .more-button-overlay, .more-button-overlay .cta-button__input, .more-button-overlay, .more-button-overlay .cta-button__input, .js-ask-appointment-form .heading-wrapper .heading2, .comp-rich-text h1, .comp-rich-text h2, .comp-rich- text h3, .breadcrumb .heading3, .breadcrumb h3, .tabs, .tabs .tab-header ul.tabs__nav, .tabs .tab-header ul.tabs__nav li, .tabs .tab-header ul.tabs__nav li .tab__title- wrapper, .error-page .error-page__msg {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif
+}
+.social-share__facebook {
+    background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -197px -1074px no-repeat transparent !important;
+    width: 58px;
+    height: 20px;
+}
+.social-share ul li .social-share__pin-it {
+    background: url("../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -262px -1074px no-repeat transparent;
+}
+/* line 36, ../../../../../../includes/components/error_page/_desktop.scss */
+
+.error-page .error-page__msgtext, .ambassador-form .heading2, .js-request-price-form .heading3, .js-request-price-form .group-wrapper label, .js-request-info-form .heading3 {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif
+}
+#sfy-slideshow, .my-billing-address-content-wrapper .main-content .conf .edit-footer .edit-footer__address, .my-billing-address-content-wrapper .main-content .edit-footer__edit, .radio-btn li {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS  PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif
+}
+.product_listing .more-button, .quick-link-push .content-title, .pushes-wrapper-service-push .push-hover .push-col_title .text-link, .collection-push .collection-link .collection-title {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS  PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif
+}
+.video-pushes-wrapper .video-pushes .close-button, .video-pushes-wrapper .video-pushes .video-pushes__teaser .video-pushes__teaser-desc, .timeLine ul li .timeLineNumber, .OverlayBoxContent h3, .OverlayBoxContent h4 {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS  PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif
+}
+.living-heritage-bg a.more, .assist-wrapper .assistance, .assist-wrapper .assistance .red, .link-to-top a, .refine-selector .refine-selector__title, .refine-selector .refine-selector__content ul li, .refine-selector .refine-selector__content ul li a, .desktop-progressbar li a span, .desktop-progressbar li a p, .sub-collection-teaser .content-wrapper p, .sub-collection-teaser .line_links .heading3, .sub-collection-teaser .line_links .line_links_node__title .line_links_node_title__ques p, .maison-nav li .link- title, .know-more, .know-more .content-more .font-diddot-it, #pop-up-content-wrapper .sub-menu li .description .product-name, #pop-up-content-wrapper .sub-menu li .amount, #pop-up-content-wrapper .price-details .total_in_number span, .boutique- filter-wrapper .boutique_filter_detail, .boutique-filter-wrapper .boutique-single-filter, .personalise-features .att-accordion .heading3, .personalise-features .att-accordion .att-accordion_node__title .att-accordion_node_title__ques p, .add-to-favorites-wrapper .heading3, .shopping_bag .personal-card .logo_section .preview.cursive-class, .redirection .action-button .more-button {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS  PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif
+}
+p.collection-header-desc, #confirmBox p, .loaderDiv, p .newsletter_success .quote, .primary-nav-container .first-level-nav .nav-show .secondary-nav .mega-menu .col ul li > a, .comp-rich-text .subtitle, .coloumn-wrapper .row, .js-ask-appointment-form .group-wrapper .checkbox-wrapper.appointment_policy .form-checkbox-label, .pushes-wrapper-service-push .push- hover .description, .OverlayBoxContent p, .OverlayBoxContent table, .pending-estimate table td, .primary-nav-container .first-level-nav .nav-show .secondary-nav .mega-menu, .footer .footer-left .newsletter .nav-link, .footer .footer-menu ul li, .home-carousel .carousel-wrapper .carousel .bx-wrapper .carousel__pic-desc p, .carousel-wrapper .carousel .bx-wrapper .carousel__pic-desc h3, .billing-address-content-wrapper .privacy-notice, .billing-address-content-wrapper .delivery-days .delivery-days__list .delivery-days__desc .delivery-days__desc__detail, .checkbox-wrapper .form-checkbox-label .checkbox-name, .comp-rich-text h4, .my-billing-address-content-wrapper .billing-payment-option, .quick-link-push .hover-push .text, .sub-collection-teaser .line_links .line_links_node__title, .sub-collection-teaser .sub-menu li a, .know-more .know-more__wrapper .know-more_node__title, .know-more .know- more__wrapper .know-more_node__desc, #pop-up-content-wrapper .sub-menu li .description span, #pop-up-content-wrapper .price- details .subtotal span, .search- wrapper .search__term, .billing-address- content-wrapper .delivery-days .delivery-days__list .delivery-days__desc .delivery- days__desc__detail, .billing-address-content-wrapper .privacy-notice, .more-button {
+    font-family: Georgia, Palatino, "Palatino Linotype", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino  Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Times, "Times New Roman", serif
+}
+/*---------------*/
+
+p.collection-header-desc {
+    text-align: left;
+}
+.primary-nav-container .first-level-nav .first-level-nav__title, .primary-nav-container .first-level-nav .nav-show .secondary-nav, .primary-nav-container .first-level-nav .nav-show .secondary-nav .mega-menu .col .category-title {
+    font-size: 13px;
+}
+.primary-nav-container .first-level-nav .first-level-nav__title {
+    line-height: 6px;
+}
+.shopping_bag .personal-card .logo_section .preview.cursive-class {
+    line-height: 16px;
+    font-family: "MS Gothic", "MS ゴシック", "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif !important;
+}
+.carousel span.h3 {
+    font-weight: bold;
+}
+.piform_fname2, .piform_fname1, .fn_fname1, .fn_fname {
+    margin-left: 2%;
+    width: 49%;
+    clear: none;
+}
+.piform_lname2, .piform_lname1, .fn_lname1, .fn_lname {
+    width: 49%;
+    clear: both;
+    margin-left: 0;
+}
+.shopping_bag .shopping_details .shopping_quantity label, #pop-up-content-wrapper .price-details .total_in_number span {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.shopping_bag .shopping_details .shopping_tax_info {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.price-detail .price-detail__col-right {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+#pop-up-content-wrapper .price-details .total_in_number span {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.shopping_bag .personal-card .logo_section .preview {
+    font-family: "MS Minthe", "MS 明朝", "ＭＳ Ｐ明朝", "MS PMincho", "ＭＳ 明朝", "MS Mincho", Times, "Times New Roman", serif;
+}
+.engraving .col-form .engraving_preview .engraving_preview__line {
+    font-family: Georgia, Palatino, "Palatino Linotype", "ＭＳ Ｐ明朝", "MS PMincho", "ＭＳ 明朝", "MS Mincho", Times, "Times New Roman", serif;
+}
+.engraving .col-form .engraving_preview .js-cursive-class {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+/*--- MY CARTIER PAGE --- */
+
+.main-container .welcome-message, .error-zone, .serverMessage, .error_message, .error-div, span.error, label.error, div.errormessage, .js-login-form a, .js-reg-step-1 .txt p, .js-forgotpassword p, .js-forgotpassword a, .captcha .captcha__description, .checkbox-wrapper .form-checkbox-label .checkbox-name, .captcha__input, .js-reg-step-2 .txt p, .select-wrapper .selector span, .js-reg-step-3 .cq-colctrl-lt0 .cq-colctrl-lt0-c0 p, .js-reg-step-3 .cq-colctrl-lt0 .cq-colctrl-lt0-c1 p, .js-jp-reg-step-3 .cq-colctrl-lt0 .cq-colctrl-lt0-c0 p, .js-jp-reg-step-3 .cq-colctrl-lt0 .cq-colctrl-lt0-c1 p, .js-subscription-and-interest-form .fn_grpinterdin.checkbox-wrapper .checkbox-name, .js-subscription-and-interest-form .fn_grpownsp.checkbox-wrapper .checkbox-name, .wishlist .wishlist__select .wishlist-button-print, .wishlist .product-detail .product-detail__variant, .copy-to-wishlist .select-1, .shoppingBagBg .js-billing-section-one .heading__desc, .select-wrapper .selector select, .billing-form .confirmation .form-check, .shoppingBagBg .heading__desc, .my-billing-address-content-wrapper .billing-payment__desc, .my-billing-address-content-wrapper .billing-payment-option .tab-card-payment .confirmation label, .price-detail .price-detail__row .price-detail--note, .billing-address-content-wrapper .delivery-days .delivery-days__list .delivery-days__amt, .billing-address-content-wrapper .delivery-days .delivery-days__list .delivery-days__desc .delivery-days__desc__detail, .order-review-section-left .product-detail .product-detail__variant, .order-review-section-left .guest-verify .form-check, .order-review-section-right .conf, .order-review__info-notice p, .shopping_bag .shopping_details .shopping_details_top .model_name, .shopping_bag .shopping_details .shopping_quantity span.exsale_Tax, .engraving ul li .slide_switch .js-cursive-class, .engraving .col-form p, .shopping_bag .personal-card .personal-card__message, .shopping_bag .personal-card .message_section .personal-card__compose .message-limit, .shopping_bag .personal-card .message_section .slide_switch label.js-cursive-class, .guest_checkout_details_bg .guest-checkout-wrapper .price-detail__row .price-detail__col .price-detail--note, .guest_checkout_details_bg .guest-checkout-wrapper .message, .product_listing .push-text, .home-carousel .carousel-wrapper .carousel .bx-wrapper .carousel__pic-desc h2, .home-carousel .carousel-wrapper .carousel .bx-wrapper .carousel__pic-desc h3, .home-carousel .carousel-wrapper .carousel .bx-wrapper .carousel__pic-desc p, .pushes-wrapper-service-push .push-hover .description, .pushes-wrapper-service-push .push-hover .more a, .collection-mosaic-wrapper .mosaic-image-wrapper .image-detail-txt, .back-button a, .comp-rich-text, .comp-rich-text p, .comp-rich-text a, .living-heritage-bg .item-list li a, .collection-listing-wrapper .collection-listing .mosaic-image-wrapper .image-detail-txt, #page-modern-style.living-heritage-detail-wrapper .border-wrapped, .coloumn-wrapper p, .expert-collection-list .expert-collection-list__expert-listing ul li .product-push .product-push__desc .more-button, .faq-view .faq-view__wrapper .faq-view_node__title .faq-view_node_title__ques p, .faq-view .faq-view__wrapper .faq-view_node__desc, .body-wrapper .social-share p, .term-of-sale h4, .body-wrapper p, .women-award-teaser .content p, .collection-push .model-count, .repair-service .notification .notification__desc p, .repair-service .notification p, .page-product .product-description, .page-product .column-cart .price-wrapper .product-price, .page-product .column-cart .price-wrapper .product-taxes, .page-product .column-cart .price-wrapper .edit-shipping .product-shipping, .quick-link-push .hover-push .text, .quick-link-push .more .more-button, .sub-collection-teaser .content-wrapper p, .search-wrapper .search__term, .boutique-detail-wrapper .boutique_details__add, .boutique-detail-wrapper .boutique_details__con, .boutique-detail-wrapper .store-services .arrow-show, .boutique-detail-wrapper .store-services p, .store-list__boutique li.store-detail div, .store-list__boutique li.store-detail div.store-detail__title, .store-list__boutique li.store-detail .more-link .read-more, .boutique-list-wrapper .store-list__retailer .store-detail div, .boutique-list-wrapper .store-list__retailer .store-detail sapn, .contact .contact__contact-cont .grey-text, .nested-exceptional-creation .carousel .info__desc h3, .nested-exceptional-creation .carousel .info__desc p, .nested-carousel-wrapper .carousel .info__desc h3, .nested-carousel-wrapper .carousel .info__desc p, .menu li a, .sub-collection-teaser .content-wrapper .heading1, .sfy .more, .sfy #tab2 .previewSlider .material-name {
+    font-family: Georgia, Palatino, "Palatino Linotype", "ＭＳ Ｐ明朝", "MS PMincho", "ＭＳ 明朝", "MS Mincho", Times, "Times New Roman", serif;
+}
+.title-line span, .my-orders .my-orders__detail .order-block .order-block__details, .call-all .more-button, .title-line, .breadcrumb ul .heading3, .primary-nav-container .first-level-nav .first-level-nav__title, .js-reg-step-1 .heading6, .body-wrapper label, .js-reg-step-2 .heading5, .js-reg-step-2 .txt div a, .js-reg-step-2 .comp-rich-text div a, .js-reg-step-3 ul li span, .js-jp-reg-step-3 ul li span, .wishlist .edit-wishlist-name-anonymous .delete-wishlist a.more-button, .wishlist .product-detail .more-button, .wishlist .button-wrapper.js-save .more-button, .price-detail .more-button, .return-exchange > ul > li a.more-button, .billing-address-content-wrapper .delivery-days .delivery-days__list li.date-options label.form-label, .billing-address-content-wrapper .delivery-days .delivery-days__list li.time-options label.form-label, .shopping_options ul li a, .order-review-section-left .product-detail .product-detail__size, .order-review-section-left .order-review__confirm .cta--red, .order-review-section-right .conf .conf-title, .order-review-section-right .conf .js-conf-name, .order-review-section-right .conf .conf-days, .shopping_bag .shopping_details .shopping_details_top, .shopping_bag .shopping_details .shopping_quantity span, .shopping_bag .shopping_details .shopping_details_bottom a.more-button, .shopping_bag .title-line span, .adjust-size ul li .adjust-size__heading, .adjust-size ul li .adjust-size__line .more-button, .adjust-size ul li .slide_switch label, .product_listing .push-col_title .text-link, #cartierfo-pages-section .homepage-content .links-cta a, #cartierfo-pages-event-homepage .homepage-content .links-cta a, .women-award-teaser .heading1, .page-product .more-button, .store-locator-wrapper-map .store-search-wrapper .store-locater__search .store-locater__find-button .more-button, .boutique-list-wrapper .store-list__retailer .store-detail .service-detail .store-detail_bold, .boutique-search-wrapper .store-locater__search .store-locater__find-button .more-button, .gift-landing .action-button .more-button, .highlight_class .push-link .push-col_title, .sfy-heading, .sfy .previewBlockSection .selection-list .selection-criteria .checkbox-wrpper label, .contact .contact-bridal .telephone {
+    font-family: "ProximaNova", "Helvetica Neue", Helvetica, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif;
+}
+.js-reg-step-3 .fn_addrname, .js-reg-step-3 .addressform_address9, .js-reg-step-3 .fn_addrnames, .js-jp-reg-step-3 .fn_addrname, .js-jp-reg-step-3 .addressform_address9, .js-jp-reg-step-3 .fn_addrnames {
+    float: none;
+}
+/* line 859, ../../../../../../includes/components/form_elements/_desktop.scss */
+
+.fn_lname, .fn_lname2, .addressform_lastName1, .addressform_firstName2, .addressform_phone, .addressform_zip2, .addressform_mobile {
+    width: 49%;
+    margin-left: 0rem;
+}
+.js-light-account-form .fn_lname2, .js-reg-step-1 .fn_lname2 {
+    width: 100%;
+}
+.js-light-account-form .fn_lname {
+    margin-left: 0rem !important;
+}
+.js-light-account-form .fn_fname {
+    margin-left: 0.8rem !important;
+}
+.js-jp-reg-step-3 .regstep3-col4 {
+    width: 100%
+}
+.js-jp-reg-step-3 .fn_mobileno {
+    padding-left: 0px;
+}
+.js-address-form-jp .addressform_zip2, .js-address-form-jp .addressform_mobile {
+    margin-left: 0.8rem;
+}
+.piform_lname2 {
+    width: 100%
+}
+.js-light-account-form .captcha .captcha__image__container .verify-audio-text {
+    margin-top: 30px;
+}
+.js-address-form-jp {
+    .addressform_lastName2 {
+        width: 100%;
+    }
+    .addressform_lastName1 {
+        margin-left: 0px;
+    }
+    .addressform_firstName1 {
+        width: 49%;
+        float: left;
+        clear: none;
+        margin-left: 0.8rem;
+    }
+}
+.billing-form-japan .phone-details .js-phonenumber {
+    display: inline-block;
+}
+.billing-address-form-japan, .billing-form-japan {
+    .js-lname {
+        width: 100% !important;
+    }
+    .lname-katakana {
+        width: 48% !important;
+    }
+}
+.js-light-account-form .captcha .captcha__image__container .form-label {
+    min-width: 120% !important;
+}
+.appointment_lastName1 {
+    margin-left: 0px;
+    width: 100%;
+    clear: none
+}
+.billing-form-japan {
+    .js-phonenumber {
+        .tooltip-div {
+            right: 133px;
+        }
+    }
+    .js-mobileno {
+        .tooltip-div {
+            right: 111px;
+        }
+    }
+}
+.sfy .previewBlockSection #pricemax {
+    left: 74%;
+    top: 8px;
+}
+.sfy .previewBlockSection #pricemin {
+    left: -2%;
+    top: 8px;
+}
+.shopping_bag .personal-card .logo_section .logo_section_content {
+    height: 171px;
+    overflow: auto;
+    padding: 0 25px;
+    position: relative;
+    top: -21px;
+}
+.js-request-info-form {
+    .requestInformation_firstName {
+        width: 48% !important;
+        margin-left: 10px !important;
+    }
+    .requestInformation_lastName {
+        width: 48% !important;
+        padding-left: 0px !important;
+    }
+    .requestInformation_lastName2 {
+        width: 100% !important;
+        padding-left: 0px !important;
+    }
+    .cq-colctrl-lt0-c0 {
+        .group-wrapper {
+            display: block;
+        }
+    }
+}
+.price-detail__col {
+    width: 46% !important;
+}

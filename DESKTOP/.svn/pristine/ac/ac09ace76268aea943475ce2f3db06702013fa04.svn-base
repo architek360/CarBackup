@@ -1,0 +1,12 @@
+
+
+
+    <!--#set var="tab_1" value="Browse by collection" -->
+    <!--#set var="tab_2" value="View All" -->
+    <!--#set var="tab_content_1" value="tab_card_payment" -->
+    <!--#set var="tab_content_2" value="tab_cash_on_delivery" -->
+
+
+    <!--#include virtual="../../components/tabs/html.shtml" -->
+
+

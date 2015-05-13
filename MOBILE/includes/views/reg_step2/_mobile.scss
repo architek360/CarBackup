@@ -1,0 +1,295 @@
+/*------------------------------------*\
+    reg_step2 -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.js-reg-step-2)
+ * COLUMN CONTROL ......(.cq-colctrl-lt0)
+ * GROUP WRAPPER ....( .group-wrapper)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.js-reg-step-2{
+	width: 82.25%;
+	margin: 0 auto;
+	.comp-rich-text{
+		h2{
+			@include f(34);
+			@include brand-font();
+			text-transform: uppercase;
+			@include rem('letter-spacing',4px);
+			@include rem('padding',15px 0);
+		}
+		p:first-child{
+			border-bottom: 1px solid $primary-2;
+		}
+		p,ol>li{
+			@include f(24);
+			text-transform: none;
+			@include main-font();
+			@include rem('padding',15px 0);
+			border-bottom: 1px solid $primary-2;
+			@include rem('margin-bottom',15px);
+			text-align: center;
+			border-bottom: none;
+			i{
+				font-style: italic;
+			}
+		}
+		ul{
+			display: none;
+		}
+		div {
+			text-align: center;
+		}
+		a{
+			@include setSpriteMobileDesktop(auto, 23px, -1427px, -264px, transparent);
+			color:$primary-3;
+			text-transform:uppercase;	
+			@include f(18);
+			@include rem('margin-top',30px);
+			@include rem('padding-left',20px);
+			@include rem('padding-top',6px);
+			@include bold-font();
+			border-bottom: none;
+		}
+	}
+	.heading3{
+		text-align: center;
+		text-transform: uppercase;
+		@include rem('margin',30px 0 30px);
+		@include rem('padding-bottom',20px);
+		color: $primary-2;
+		border: none;
+		@include medium-font();
+		@include f(28);
+	}
+
+	.heading5{
+		@include bold-font();
+		@include rem('margin-top',20px);
+		@include f(20);
+		text-align: left;
+	}
+
+	/*------------------------------------*\
+    	COLUMN CONTAINER
+	\*------------------------------------*/
+
+	.cq-colctrl-lt0{
+		.heading-wrapper{
+				width:100%;
+				display: block;
+		}
+		.cq-colctrl-lt0-c0{
+			border:1px solid $primary-17;
+			width: 100%;
+			display: inline-block;
+			@include rem(padding, 7px 24px 15px 24px);
+			@include box-sizing(border-box);
+			@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+			.heading5{
+				padding-top: 0;
+				@include f(22);
+
+			}
+			.owned-creations{
+				@include personal-info-box;
+				@include rem('margin',8px 0 36px 0);
+				@include rem('padding-bottom',38px);
+				@include rem('padding',0px 0px 38px 0px);
+				border: none;
+				display:block;
+				.slide_switch{
+					@include rem( 'margin-top', 20px );
+					@include rem( 'margin-bottom', 30px );
+					@include rem( 'margin-left', 0px );
+				}
+				.owned-creations-label{
+					@include rem( 'margin-top', 40px );
+					@include bold-font;
+				}
+				.form-label{
+					@include brand-font;
+				}
+				li{
+					@include rem('margin-right',140px);
+				}
+				.form-select{
+					@include rem('margin-bottom',17px);
+				}
+				.radio-main-label{
+					@include rem('padding-bottom',12px);
+				}
+				.added-creation {
+					border: 1px solid $primary-3;
+					@include rem( 'margin-top', 20px );
+					.added-creation__name {
+						color : $primary-2;
+						@include f(20);
+						@include bold-font;
+					  	@include rem( 'padding', 10px);
+							width: 86% ;
+							display : inline-block;
+					}
+					.delete-icon {
+						@include setSprite(27px, 29px, -623px, -135px);           
+						display: inline-block;
+						@include rem('height', 15px);
+						@include rem(margin, 11px 0 0 5px);
+						position:relative;
+						@include rem('top',-8px);
+						right: 0;
+					}
+				}
+			}
+			/*------------------------------------*\
+    			GROUP WRAPPER
+			\*------------------------------------*/
+			.group-wrapper{
+				clear: both;
+				@include rem('margin', 0px );
+				@include rem('margin-left',120px);
+				margin-left: 120px;
+				width: auto;
+				.radio-wrapper label {
+					width: auto;
+					font-family: inherit;		
+				}
+				.radio-wrapper .radio span input {
+				 	position: absolute;
+				 	opacity: 0 
+				}
+				.piform_owncreationcheck:first-child .radio + label::after {
+				    content: ".";
+				    @include rem('border-radius', 600px );
+				    @include rem('margin-left', 12px );
+				    @include rem('width', 106px );
+				    @include rem('padding', 10px 0px);
+				    @include rem('margin-right', 10px);
+				    display: inline-block;
+				    @include rem('text-indent', -9999px);
+					border:1px solid $primary-12;
+					background: ($primary-30);
+				}
+				.radio-wrapper .radio{
+					position: static;
+					span{
+						background:transparent;
+					}
+				}
+				.radio-wrapper .radio + label + input + label::after {
+				  	width: 0;
+				  	border-width: 0
+				}
+				.radio-wrapper .radio + label {
+					@include rem('padding-right', 0px);
+				}
+				.radio-wrapper .radio{
+					@include rem('width', 1px );
+				}
+				.radio-wrapper + .radio-wrapper .radio + label {
+				    padding-right: 0;
+				    @include rem('padding-left', 122px);
+				    @include rem('padding-top', 7px);
+				    @include rem('padding-bottom', 14px);
+				    @include rem('margin-left', -122px); 
+				 	background: -webkit-radial-gradient(circle, black 25%, transparent 20%, white 30%, white 61%, transparent 66%, transparent 100%);
+				    background: -moz-radial-gradient(circle, black 25%, transparent 20%, white 30%, white 61%, transparent 66%, transparent 100%);
+				    @include rem('background-position', 0px -1px);
+				    background-repeat: no-repeat;
+				    background-size: 40px 85%;
+				}
+				.group-wrapper  .form-radio-label{
+					padding-right: 0;
+				}
+				.radio-wrapper + .slide-button .radio + label{	 	
+					@include rem('padding-left', 60px);
+					@include rem('margin-left', -60px);
+				}
+				.slide-button + .radio-wrapper .radio + label{	 	
+					@include rem('padding-left', 122px);
+					@include rem('margin-left', -122px);
+				}
+				.radio-wrapper + .slide-button .radio + label,  .slide-button + .radio-wrapper .radio + label{
+				    -webkit-transition: all 0.3s ease;
+				    -moz-transition: all 0.3s ease;
+				    -ms-transition: all 0.3s ease;
+				    -o-transition: all 0.3s ease;
+				    transition: all 0.3s ease;
+				}
+			}
+			hr{
+				display: none;
+			}
+		}
+		.cq-colctrl-lt0-c1{
+		    hr{
+		    	display: none;		    
+		    }
+		}
+		.interest-product-line,.own-smartphone{
+			@include rem('padding',7px 0 0px 24px);
+			@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+			border:1px solid $primary-17;
+			@include f(20);
+			@include rem('margin-top',30px);
+			width: 100%;
+			@include box-sizing(border-box);
+		    display: inline-block;
+		    .checkbox-wrapper{
+		    	display: inline-block;
+				width: 45%;
+				position: relative;
+				vertical-align: top;
+				@include rem('min-height',41px);
+				@include f(22);
+				height: auto;
+				@include rem('padding-bottom',15px);
+				.checkbox-name{
+					text-transform: uppercase;
+					@include brand-font();
+					@include f(20);
+					color: $primary-2;
+					@include rem('margin-top',7px);
+				}
+		    }
+		    .heading5{
+		    	margin: 0;
+		    	@include f(22);
+		    	@include rem('padding',10px 0 30px);
+		    }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    HEADER -- DESKTOP CSS
+\*------------------------------------*/
+/**
+	* MAIN CONTAINER .header--desktop used as main outer container for Header.
+*/
+
+/*------------------------------------*\
+    $HEADER MAIN CONTAINER
+\*------------------------------------*/
+
+	.heading1{
+		@include f(26);
+	}
+
+    .heading2 {
+    	@include f(20);
+    	@include rem('letter-spacing', 1px);
+	}
+
+    .heading__desc {
+	    @include rem('padding', 0px);
+	    text-align: center;
+	    border-bottom: none;
+	    font-weight: bold;
+	}
+
+	.select-wrapper {
+		text-align: center;
+		float: none;
+
+		label{
+			display: inline-block;
+		    @include rem('margin-bottom', 14px);
+		    @include f(11);
+		    vertical-align: middle;
+		    width: 93%;
+            float: right;
+		}
+		
+		.selector {
+    		  float: right;
+			  width: 91% !important;
+			  margin-bottom: 18px;
+
+    		span{
+				width: 184px !important;    			
+    		}
+		}
+	}
+
+	.boutique-item {
+    	border-bottom: 1px solid $primary-84;
+    	border-top: 1px solid $primary-84;
+    	text-align: left;
+		@include rem('padding', 15px 0 15px 20px);
+		margin: 0 auto;
+    	width: 50%;
+
+    	.heading3 {
+		    letter-spacing: 1px;
+		    @include rem('margin', 0px);
+		    @include rem('padding', 0px);
+		    text-align: left;
+		    width: auto;
+		}
+
+		p {
+		    @include proxiBold-font;
+		    @include f(15);
+		    @include rem('margin', 5px 0px 0px 0px);
+		    @include rem('padding', 0px);
+		    text-align: left;
+		    text-transform: uppercase;
+		}
+	}
+
+	.next-btn {
+		.button-wrapper {
+    		@include rem('margin', 0px);
+    		@include rem('padding', 25px 0 0);
+    	}
+    }
+	
+
+	.form-elements .select-wrapper .selector span{
+		width: 134px !important;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		padding-right: 50px;
+
+	}
+

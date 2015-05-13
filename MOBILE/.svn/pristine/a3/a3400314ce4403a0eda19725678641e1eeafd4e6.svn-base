@@ -1,0 +1,129 @@
+  <!-- Review Order  Starts Here-->
+
+<div class="ecs_verify_order ecs_order_acknowledgement order-review clearfix">
+    <h1 class="order-review__title">
+       order acknowledgement
+    </h1>
+    <p class="order-review__text">Dear jean dupont, thank you foryour order. A confirmation e-mailhas been sent to you along with instructions on how to follow the progress of the order.</p>
+	
+	<p class="order-review__text time">August 12th 2014</p>
+    <h1 class="order-review__title order-no">
+       order no 1857
+    </h1>
+    
+
+
+    <!--#set var="product_size" value="on" -->
+    
+    <!--Product Detail Box For Review Order Starts Here-->
+	<div class="order-reconfirm">
+        <ul class="product-filter">
+            <li>
+                <span class="product-filter__left">repair id </span>
+                <span class="product-filter__right">12121230567</span>
+            </li>
+            <li>
+                <span class="product-filter__left">product ref</span>
+                <span class="product-filter__right">ADS12ER971</span>            
+            </li>
+        </ul>
+    </div>
+    <div class="product-detail grid clearfix">
+        <h3 class="heading3">reengraving</h3>
+        <span class="product-detail__variant">lorem ipsun dolor sit amet</span>
+        <div class="product grid__item one-whole">
+            <p class="product__price">
+                <span class="price-text">$ 1,000</span>
+            </p>
+        </div>
+    </div>
+	<div class="product-detail grid clearfix">
+        <h3 class="heading3">component service</h3>
+        <span class="product-detail__variant">lorem ipsun dolor sit amet</span>
+        <div class="product grid__item one-whole">
+            <p class="product__price">
+                <span class="price-text">$ 2,000</span>
+            </p>
+        </div>
+    </div>
+    
+
+<div class="price-detail clearfix">
+    <div class="price-detail__row">
+        <span class="grid__item  three-fifths  price-detail__col">subtotal <span class="price-detail--note js-subtotal-info">before tax</span> </span>
+        <span class="grid__item grid--right two-fifths price-detail__col-right font32 right-zero js-subtotal">$ 3,000</span>
+    </div>
+
+    <div class="price-detail__row">
+        <span class="grid__item three-fifths  price-detail__col">delivery charge <span class="price-detail--note js-deliverycharge-info"></span> </span>
+        <span class="grid__item grid--right two-fifths price-detail__col-right right-zero bold-font js-deliverycharge">free</span>
+
+    </div>
+    
+    <div class="price-detail__row js-saletaxrow">
+        
+        <span class="grid__item three-fifths  price-detail__col right-zero">sale tax  </span>
+        <span class="grid__item grid--right two-fifths  price-detail__col-right font32 right-zero js-saletax">$ 500</span>
+    </div>
+    
+
+
+    <div class="price-detail__row">
+        <span class="grid__item three-fifths  price-detail__col right-zero">total<span class="price-detail--note js-totalprice-info">incl. tax</span> </span>
+        <span class="grid__item grid--right two-fifths  price-detail__col-right font39 right-zero js-totalprice">$ 3,500</span>
+    </div>
+
+</div>
+
+    <!-- ACCORDION PRODUCT INFO-->
+
+    <div class="product-info-accordion clearfix js-ga-purchase-funnel-review-Order">
+        <div class="js-accordion product-info-accordion__wrapper">
+             <div class="js-accordion__node product-info-accordion__node">
+                <div class="js-accordion_node__title product-info-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="product-info-accordion_node_title__ques">
+                        <h2>billing address</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc product-info-accordion_node__desc">
+                    
+                    <!--#include virtual="../../components/edit_footer2/html.shtml" -->
+                    
+                </div>
+            </div>
+
+             <div class="js-accordion__node product-info-accordion__node">
+                <div class="js-accordion_node__title product-info-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="product-info-accordion_node_title__ques">
+                        <h2>shipping address</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc product-info-accordion_node__desc">
+
+                    <!--#include virtual="../../components/edit_footer2/html.shtml" -->
+                    
+                </div>
+            </div>
+            <div class="js-accordion__node product-info-accordion__node">
+                <div class="js-accordion_node__title product-info-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="product-info-accordion_node_title__ques">
+                        <h2>delivery method</h2>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc product-info-accordion_node__desc">
+
+                    <p class="days">Standard delivery </br>(5-7 bussiness days)</p>
+                    <p class="address">If you place your order today, the estimated delivery date is Monday June 13,2014</p>
+                    
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+</div>
+ <!-- review order Ends Here-->

@@ -1,0 +1,23 @@
+<!-- site map collection View Starts Here-->
+<div class="site-map-collection">
+		
+		<h1 class="heading2">jewelry </h1>
+		<!--#include virtual="../faq/html.shtml" -->
+		
+		<h1 class="heading2">timepices </h1>
+		<!--#include virtual="../faq/html.shtml" -->
+		<h1 class="heading2">bridal </h1>
+		<!--#include virtual="../faq/html.shtml" -->
+		<h1 class="heading2">accessories </h1>
+		<!--#include virtual="../faq/html.shtml" -->
+		<h1 class="heading2">fragrances</h1>
+		<!--#include virtual="../faq/html.shtml" -->
+		<h1 class="heading2">gifts </h1>
+		<!--#include virtual="../faq/html.shtml" -->
+	
+    <!--#include virtual="../../components/breadcrumb/html.shtml" -->
+    
+	
+</div>
+
+<!-- site map collection View Ends Here-->

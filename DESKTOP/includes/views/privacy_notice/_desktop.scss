@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    PRIVACY POLICY -- DESKTOP CSS
+\*------------------------------------*/
+/**
+* MAIN CONTAINER ..... main conatiner for privacy notice.(.privacy-notice)
+* HEADING BLOCK .....  for heading tags(.heading2)
+* TEXT BLOCK.......... for paragraphs (p)
+*/
+
+/*------------------------------------*\
+    MAIN CONTAINER
+\*------------------------------------*/
+
+.privacy-notice {
+	width: 100%;
+	margin: 0 auto;
+	display: inline-block;
+	@include rem('padding-bottom',30px);
+
+	/*------------------------------------*\
+    		HEADING BLOCK
+	\*------------------------------------*/
+	.heading2 {
+		@include rem('padding-bottom',5px);
+		border-bottom: none;
+		@include rem('margin-bottom',5px);
+	}
+	.heading4 {
+		@include rem('margin-bottom',20px);
+	}
+	.heading4 + p {
+		padding-top: 0;
+		
+	}
+}

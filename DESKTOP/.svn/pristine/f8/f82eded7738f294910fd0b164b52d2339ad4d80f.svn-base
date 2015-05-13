@@ -1,0 +1,129 @@
+.collection-push{
+	
+	box-sizing: content-box;
+	float: left;
+	@include rem('height',309px);
+	@include rem('margin', 0 15px 15px 0);
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	width: 309px;
+
+	
+	.image-div{
+		
+		height: 309px;
+		line-height: 309px;
+		vertical-align: middle;
+		text-align: center;
+		img{
+			max-height: 100%;
+			max-width: 100%;
+			vertical-align: middle;
+			@include box-sizing(border-box); 
+		}
+	}
+
+	.default_img img{
+  		margin: 7%;
+	}
+
+	.rings_vertical img {
+  		padding: 15% 0;
+	}
+
+	.rings_horizontal img {
+  		padding: 0 15%;
+	}
+	.necklaces_vertical img {
+  		padding: 7% 0;
+	}
+
+	.necklaces_horizontal img {
+  		padding: 0 7%;
+	}
+	.fragrances_vertical_200 img {
+	  padding:8% 0 0;
+	}
+	.fragrances_horizontal_200 img {
+	  padding:0 8%;
+	}
+	.fragrances_vertical_80 img {
+	  padding:40% 0 0;
+
+	}
+	.fragrances_horizontal_80 img {
+	  padding:0 20%;
+	}
+	.fragrances_vertical_50 img {
+	  padding:50% 0 0;
+	}
+	.fragrances_horizontal_50 img {
+	  padding:0 25%;
+	}
+
+	.fragrances_vertical_100 img {
+	  padding:30% 0 0;
+	} 
+	.fragrances_horizontal_100 img {
+	  padding:0 15%;
+	}
+	
+	.collection-link{
+		display: block;
+		@include rem('height',309px);
+		width: 309px;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.collection-title{
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			@include f(12);
+			font-weight: bold;
+			-webkit-backface-visibility: hidden;
+			border-bottom: 1px solid $primary-3;
+			border-top: 1px solid $primary-3;
+			color: $primary-2;
+			left: 30px;
+			line-height: 14px;
+			padding: 6px 0;
+			position: absolute;
+			text-align: center;
+			top: 226px;
+			width: 255px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+	}
+	.model-count{
+		-webkit-backface-visibility: hidden;
+		display:none;
+		color: $primary-3;
+		font-size: 14px;
+		font-style: normal;
+		opacity: 0;
+		position: absolute;
+		text-align: center;
+		top: 282px;
+		width: 314px;
+		@include main-font();
+		font-style: italic;
+	}
+
+	.overlay{
+		display: none;
+		height: 314px;
+		width: 314px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background:url($path-images+'icons/listing-categories.jpg') no-repeat right top;
+		background-size:314px 314px;
+		opacity: 0.4;
+		-ms-filter: "alpha(opacity=40)";
+	}
+}
+

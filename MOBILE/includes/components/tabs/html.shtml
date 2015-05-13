@@ -1,0 +1,31 @@
+<div class='tabs js-tabs'>
+	<div class="tab-header">
+		<ul class="tabs__nav">
+			<!--#if expr="${tab_1}" -->
+			<li class="tabs__title tab-active js-tab-active" ><span class="tab__title-wrapper"><!--#echo var="tab_1" --></span></li>
+			<!--#endif -->
+			<!--#if expr="${tab_2}" -->
+			<li class="tabs__title" ><span class="tab__title-wrapper"><!--#echo var="tab_2" --></span></li>
+			<!--#endif -->
+			<!--#if expr="${tab_3}" -->
+			<li class="tabs__title" ><span class="tab__title-wrapper"><!--#echo var="tab_3" --></span></li>
+			<!--#endif -->
+		</ul>
+	</div>
+
+		<!--#if expr="${tab_1}" -->
+		<div class="tabs__content content-active js-content-active">
+				<!--#include virtual="../../views/${tab_content_1}/html.shtml" -->
+		</div>
+		<!--#endif -->
+		<!--#if expr="${tab_2}" -->
+		<div class="tabs__content">
+				<!--#include virtual="../../views/${tab_content_2}/html.shtml" -->
+		</div>
+		<!--#endif -->
+		<!--#if expr="${tab_3}" -->
+		<div class="tabs__content">
+				<!--#include virtual="../../views/${tab_content_3}/html.shtml" -->
+		</div>
+		<!--#endif -->
+</div>

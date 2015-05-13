@@ -1,0 +1,17 @@
+    <div class="store-search-wrapper js-location">
+        <div class="change-loc__search js-geocoder" data-location="New Delhi"  data-target="boutique_listing_with_map.shtml" <!--#if expr="${standalone}" -->  data-standalone="true"<!--#endif -->>
+            <!--#set var="text-detail" value="geolocate me"-->
+            <div class="store-locater__search">
+                <input type="text" class="form-input js-search-box-1" id="js-search-box-1" placeholder="Enter a location or a zip code" />
+                <input class="js-boutique-listing-page-path" type="hidden" value="boutique_listing_with_map.shtml" name="searchPath">
+                <div class="store-locater__find-button">
+                    <!--#set var="more-text" value="find"-->
+                    <!--#set var="arrow-class" value="arrow-show js-search-but-1"-->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    <!--#set var="text-detail" value="find"-->
+                </div>
+            </div>
+            <div class="js-store-locator_error-msg-1">Please fill a zipcode, city or state </div>
+            <div class="js-store-locator_error-msg-2">There is no result for your search, we suggest the following :</div>
+        </div>
+    </div>

@@ -1,0 +1,7 @@
+<div data-hover-image="<!--#echo var="PRODUCT_IMG_PATH" --><!--#echo var="hoverImage" -->" class="mosaic-image-wrapper<!--#if expr="${imagenum}" --> mosaic-image-wrapper-<!--#echo var="imagenum" --><!--#endif -->">
+    <a class="mosaic-image" href="#" data-element-category="jewellery" data-maison-product="ECLECTISM">
+        <span class="image-detail-txt"><!--#echo var="imagetext" --></span>
+        <img  src="<!--#echo var="PRODUCT_IMG_PATH" --><!--#echo var="image" -->" alt="<!--#echo var="imagealt" -->">
+    </a>
+</div>
+

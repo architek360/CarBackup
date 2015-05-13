@@ -1,0 +1,44 @@
+<!-- Expert Guide View Starts Here-->
+        <div class="exhibitions grid">
+            <div class="grid__item one-quarter">
+                <ul class="item-list">
+                    <li class="active"><h2><a href="#" title="Jewelry">CARTIER. LE STYLE ET L’HISTOIRE</a></h2></li>
+                    <li><h2><a href="#" title="Watches">A Story of Style and Heritage (2013)</a></h2></li>
+                    <li><h2><a href="#" title="Leather Goods">El Arte de Cartier (2012)</a></h2></li>
+                    <li><h2><a href="#" title="Lighters">Royal Style (2012)</a></h2></li>
+                    <li><h2><a href="#" title="Writing Instruments">Cartier Time Art Mechanics of Passion (2011)</a></h2></li>
+                </ul>
+            </div>
+
+        <div class="grid__item three-quarters">
+            <article>
+                <div class="comp-rich-text">
+                    <h3>CARTIER. LE STYLE ET L’HISTOIRE</h3>
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="content-medias-left" alt=""/>
+                    <p><strong>Paris, Grand Palais</strong>
+                    <strong>December 4, 2013 – February 16, 2014</strong></p>
+                    <p><em>Cartier. Le style et l’histoire</em>, presented in the prestigious Salon d’Honneur room of the Grand Palais, is the first exhibition of this scale to be held in Paris since the Cartier retrospective at the Petit Palais in 1989. Commissioned by the Réunion des musées nationaux – Grand Palais, the exhibition explores Cartier's role in the history of style and decorative arts, from the founding of the Maison in 1847 to the mid-1970s.</p>
+                    <p>Cartier's creative genius and artistic flair are presented in a new light under the innovative curatorship of Laurent Salomé, Curating Director of RMN, and his Assistant Director Laure Dalon. Salomé and Dalon approached the exhibition as an art history project, thoughtfully selecting each piece of jewelry, precious accessories, and timepieces for display.</p>
+                    <p>The exhibit's carefully curated collection of jewelry, bejeweled accessories and timepieces is complemented by more than 300 documents from the Cartier archives: notebooks, drawings, order books, inventories, plaster casts, autochromes and photographs that provide insight into the jeweler's creative process.</p>
+                    <p>Spanning several decades of style, the story and legacy of Cartier is revealed through inspirational imagery and iconic figures in this ephemeral setting.</p>
+
+                    <p>
+                    <!--#set var="more-text" value="Visit the Grand Palais - RMN website" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+
+                    <!--#set var="more-text" value="Discover the e-magazine, Rouge Cartier" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+
+                    <!--#set var="more-text" value="View the film" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </p>
+                </div>
+            </article>
+        </div>
+        
+    </div>
+
+<!-- Expert Guide View Ends Here-->

@@ -1,0 +1,24 @@
+
+
+<li class="quick-link-push js-quick-link-push">
+	<article>
+		<a href="#">
+		<div class="content-title">
+			<!--#echo var="TITLE" -->
+		</div>
+		<div class="hover-push">
+			<div class="image">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="IMG"-->"  alt="<!--#echo var="IMG"-->">
+			</div>
+
+			<div class="text">
+				<!--#echo var="TEXT" -->
+			</div>
+
+		</div>
+		<div class="more">
+			<div class="more-button"><span class="more-button-arrow"></span>read more</div>
+		</div>
+		</a>
+	</article>
+</li>

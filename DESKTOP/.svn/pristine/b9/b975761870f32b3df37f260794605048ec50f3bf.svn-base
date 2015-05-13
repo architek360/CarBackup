@@ -1,0 +1,12 @@
+.js-reg-step-3 {
+	.fn_state {
+		width: 44%;
+	}
+	.fn_phno {
+		margin-left: 8px;
+		clear:none !important;
+	}
+	.fn_zip {
+		clear:both !important;
+	}
+}

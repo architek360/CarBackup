@@ -1,0 +1,675 @@
+/*!
+ * cartier.sfy_step1.js
+ * This file contains functionalities handling SFY (Step 1)
+ *
+ * @project   cartier mobile
+ * @date      2014-01-03
+ * @author    Sapient
+ * @licensor  cartier mobile
+ * @site      cartier mobile
+   @dependency responsiveslides.min.js
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+
+;
+(function(window, $, sfy, template, undefined) {
+	'use strict'; //this will cause the browser to check for errors more aggressively
+
+	if ($ === undefined) {
+		cartier.log("jQuery not found");
+		return false;
+	}
+
+	var
+	_templateFiller = template.genericTemplateFiller,
+		_templateProductChanger = template.type.sfy_productProductChangher,
+		_templateProductTxt = template.type.sfy_productText,
+		_templateProductCarousel = template.type.sfy_innerCarousel,
+		_sliderRendered = false,
+		_cache = {},
+		_players = {},
+		_nestedCarouselIdx = 0,
+		_productCarouselViewPort = {
+			h: 355,
+			w: 630
+		},
+		_playersPaying = [],
+		_globalVideoCount = 0;
+	window.ytplayer = [];
+	//--------------------------------------------------------------------------------------------------------
+	//         Bind Events
+	//--------------------------------------------------------------------------------------------------------
+
+	var _bindEvents = function() {
+		_cache.$products.click(function(e) {
+			e.preventDefault();
+			$('.js-link-to-top').removeClass('display-none');
+			if (_sliderRendered === false) {
+				_initializeNestedSlider();
+				_initializeProductSlider();
+			}
+			$("html, body").animate({
+				scrollTop: $(document).height()
+			}, "slow");
+			_sfyCaroselCheckbox();
+			_nestedCarouselIdx = $(this).index('.js-collection-list__listing li');
+			_loadProductImages($('.nested-carousel-wrapper .info__desc').closest('li').not('.bx-clone').eq((_nestedCarouselIdx)), $(this));
+			_handleNestedSliderSlide($('.nested-carousel-wrapper .info__desc').closest('li').not('.bx-clone').eq((_nestedCarouselIdx)), undefined, undefined);
+			_nestedCarousel.goToSlide(_nestedCarouselIdx);
+			_nextpageUrlGenerator($('.nested-carousel-wrapper .info__desc').closest('li').not('.bx-clone').eq((_nestedCarouselIdx)), $(this));
+		});
+		_cache.$products.find('a').on('click', function(e) {
+			e.preventDefault();
+		})
+
+	},
+
+		//--------------------------------------------------------------------------------------------------------
+		//         Caching jQuery object
+		//--------------------------------------------------------------------------------------------------------
+
+		/*
+      @private method : caching jquery objects
+      @param : none
+    */
+		_cacheObjects = function() {
+
+			_cache = {
+				$slider: undefined, // will be set later
+				$productSlider: undefined, // will be set later
+				$products: $('.js-collection-list__listing.js-view-wrapper li'),
+				$tab1: $('#tab1')
+			};
+		}, _nestedCarousel, _productCarousel = [],
+
+
+		/*
+			@private method : Initializes the nexted carousel
+			@param : none
+		*/
+
+		_initializeNestedSlider = function() {
+			_buildSfySliderDom();
+			_bindSFYYoutubeIframeEvents();
+			_nestedCarousel = _cache.$slider.bxSlider({
+				speed: 1200,
+				auto: false,
+				autoHover: true,
+				pager: false,
+				infiniteLoop: true,
+				onSliderLoad: function(currentIndex) {
+					_nestedCarousel.goToSlide(_nestedCarouselIdx);
+
+					if (typeof $('.body-wrapper').data('plugin_analytics') !== 'undefined') {
+						$('.body-wrapper').data('plugin_analytics').nestedCarouselSliderGARules('pageCollectionSFY');
+						_bindSFYYoutubeIframeEvents();
+					} 
+
+					$('.js-nested-slider>li:eq(' + 1 + ')').find('.sfy_check:eq(0) input').trigger('click').trigger('click');
+					$('.js-nested-slider>li:eq(' + 0 + ')').find('.sfy_check:eq(0) input').trigger('click').trigger('click');
+					$.uniform.update();
+					_visibleVideoPlayer();
+				},
+				onSlideBefore: function($el, oldIndex, newIndex) {
+					_handleNestedSliderSlide($el, oldIndex, newIndex);
+					_nextpageUrlGenerator($el, $('.js-collection-list__listing li').eq(newIndex));
+				},
+				onSlideAfter: function($el) {
+					_hideShowProductNavigation($el);
+					$el.find('.sfy_check:eq(0) input').trigger('click').trigger('click');
+					$.uniform.update();
+					_visibleVideoPlayer();
+				},
+				onSlideNext: function($slideElement, oldIndex, newIndex) {
+					_loadProductImages($slideElement, $('.js-collection-list__listing li').eq(newIndex));
+				},
+				onSlidePrev: function($slideElement, oldIndex, newIndex) {
+					_loadProductImages($slideElement, $('.js-collection-list__listing li').eq(newIndex));
+				}
+			});
+		},
+
+				/*
+			@private method : Hides the product navigation
+			@param : none
+		*/
+		_hideShowProductNavigation = function($el) {
+			if ($el === undefined) {
+				$('bx-pager-item').hide();
+				return;
+			}
+			if ($el.hasClass('refreshed')) {
+				$('bx-pager-item').show();
+			} else {
+				$('bx-pager-item').hide();
+			}
+		},
+
+				/*
+			@private method : Init product carousel
+			@param : none
+		*/
+		_initializeProductSlider = function() {
+			$.each(_cache.$productSlider, function(k, v) {
+				_productCarousel[k] = $(v).bxSlider({
+					speed: 0,
+					pager: true,
+					controls: false,
+					autoHover: true,
+					video: true,
+					useCSS: false,
+					infiniteLoop: false,
+					responsive: false,
+	
+					onSliderLoad: function() {
+
+						_setProductCarouselViewPort();
+					},
+					onSlideAfter: function($el) {
+                        if($el.hasClass('js-video'))
+                            _visibleVideoPlayer();
+                        else
+                            _pauseAllVideos();
+					}
+				});
+			})
+
+			$('.bx-pager-link').on('mouseover',function (e) {
+				$(this).trigger('click');
+			})
+		},
+
+
+
+				/*
+			@private method :after the user clicks on a push, init an AJAX to bring the product specific data.
+			@param : none
+		*/
+
+		_loadProductImages = function($el, $elbox) {
+            /*^$el caries the data attribute for the xhr call for production use*/
+
+
+            var objXHR = cartier.ajaxWrapper.getXhrObj({
+                type: 'POST',
+                url: $("input[name=resourcePath]").val() +".sfyStep1" + ".html",
+                data: {currentPagePath:$('input[name="currentPagePath"]').val(), childPagePath:$($elbox).data().sfyChildpagepath},
+                dataType: 'json',
+                contentType: "application/x-www-form-urlencoded"
+            });
+
+            /*var objXHR = cartier.ajaxWrapper.getXhrObj({
+                type: 'GET',
+                url: cartier.properties.paths.sfy_images_url,
+                dataType: 'json',
+            });*/
+			if (objXHR) {
+				objXHR.done(function(data) {
+					var parsedData;
+					var images = {
+						platinum: [],
+						gold: [],
+						whitegold: [],
+						pinkgold: []
+					}
+					// handle failure
+					if (typeof data.success !== 'undefined' && !data.success) {
+						//error handling
+					} else {
+						parsedData = cartier.common.cartierJSONparser({
+							json: data,
+						});
+						if (parsedData !== false) {
+							var _tCount = data.content.length;
+							if (_tCount !== 0) {
+								$('.nested-carousel-wrapper').removeClass('display-none');
+
+								$.each(parsedData, function(i, img) {
+									if (img.typeofProduct === "platinum") {
+										images.platinum.push(img.imgsrc);
+									} else if (img.typeofProduct === "yellow gold") {
+										images.gold.push(img.imgsrc);
+									} else if (img.typeofProduct === "white gold") {
+										images.whitegold.push(img.imgsrc);
+									} else if (img.typeofProduct === "pink gold") {
+										images.pinkgold.push(img.imgsrc);
+									}
+
+								});
+
+								//console.log(images);
+								if(images.platinum.length <= 0)
+									$el.find('.platinum-div').addClass('display-none');
+								else
+									$el.find('.platinum-div').removeClass('display-none');
+
+								if(images.pinkgold.length <= 0)
+									$el.find('.pinkgold-div').addClass('display-none');
+								else
+									$el.find('.pinkgold-div').removeClass('display-none');
+
+								if(images.whitegold.length <= 0)
+									$el.find('.whitegold-div').addClass('display-none');
+								else
+									$el.find('.whitegold-div').removeClass('display-none');
+
+								if(images.gold.length <= 0)
+									$el.find('.yellowgold-div').addClass('display-none');
+								else
+									$el.find('.yellowgold-div').removeClass('display-none');
+
+								// add response to dom
+								$el.find('.platinum-1.needrefresh img').each(function(i, el) {
+									if (typeof(images.platinum[i]) !== "undefined") {
+										$(el).attr('src', images.platinum[i]);
+									}
+								});
+								$el.find('.goldBlock-1.needrefresh img').each(function(i, el) {
+									if (typeof(images.gold[i]) !== "undefined") {
+										$(el).attr('src', images.gold[i]);
+									}
+								});
+								$el.find('.whitegold-1.needrefresh img').each(function(i, el) {
+									if (typeof(images.whitegold[i]) !== "undefined") {
+										$(el).attr('src', images.whitegold[i]);
+									}
+								});
+								$el.find('.pinkgold-1.needrefresh img').each(function(i, el) {
+									if (typeof(images.pinkgold[i]) !== "undefined") {
+										$(el).attr('src', images.pinkgold[i]);
+									}
+								});
+								$el.addClass('refreshed');
+
+
+								var arr = $el.find('.platinum-1.needrefresh li');
+
+								if (arr.length) {
+									if (images.platinum.length === 0)
+										$el.find('.platinum-1 .bx-pager .bx-pager-item').addClass("display-none");
+									else {
+										$.each(arr, function(k, v) {
+											if (k > images.platinum.length) {
+												$(v).remove();
+												$el.find('.platinum-1 .bx-pager .bx-pager-item').eq(k).addClass("display-none");
+											}
+										});
+									}
+								}
+
+
+
+								arr = $el.find('.goldBlock-1.needrefresh li');
+
+								if (arr.length) {
+
+									if (images.gold.length === 0) {
+										$el.find('.goldBlock-1 .bx-pager .bx-pager-item').addClass("display-none");
+									} else {
+										$.each(arr, function(k, v) {
+											if (k > images.gold.length) {
+												$(v).remove();
+												$el.find('.goldBlock-1 .bx-pager .bx-pager-item').eq(k).addClass("display-none");
+											}
+										});
+									}
+								}
+								arr = $el.find('.whitegold-1.needrefresh li');
+								if (arr.length) {
+									if (images.whitegold.length === 0)
+										$el.find('.whitegold-1 .bx-pager .bx-pager-item').addClass("display-none");
+									else {
+										$.each(arr, function(k, v) {
+											if (k > images.whitegold.length) {
+												$(v).remove();
+												$el.find('.whitegold-1 .bx-pager .bx-pager-item').eq(k).addClass("display-none");
+											}
+										});
+									}
+								}
+								arr = $el.find('.pinkgold-1.needrefresh li');
+								if (arr.length) {
+									if (images.pinkgold.length === 0)
+										$el.find('.pinkgold-1 .bx-pager .bx-pager-item').addClass("display-none");
+									else {
+										$.each(arr, function(k, v) {
+											if (k > images.pinkgold.length) {
+												$(v).remove();
+												$el.find('.pinkgold-1 .bx-pager .bx-pager-item').eq(k).addClass("display-none");
+											}
+										});
+									}
+								}
+
+								$el.find('.platinum-1.needrefresh, .gold-1.needrefresh, .whitegold-1.needrefresh, .pinkgold-1.needrefresh').removeClass('needrefresh');
+							} else {
+								$('.nested-carousel-wrapper').addClass('display-none');
+							}
+						}
+					}
+				});
+			}
+
+		},
+
+		/*
+			@private method : Function to handle the nested slider
+			@param : none
+		*/
+		_handleNestedSliderSlide = function($el, oldIndex, newIndex) {
+			$el.find('li.js-video').each(function(i, el) {
+				var $el = $(el);
+				var url = $el.data('videoUrl');
+
+				var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+				var match = url.match(regExp);
+
+				if (typeof match !== 'undefined' && match[1].match('watch') && match[7].length == 11) {
+					url = url.replace('watch?v=', 'embed/');
+				}
+
+				if ($el.find('iframe').attr('src') === undefined) {
+					$el.find('iframe').attr('src', url);
+				}
+			});
+			_hideShowProductNavigation($el);
+		},
+
+				/*
+			@private method : MAkes and AJAX call for get step 2 data
+			@param : none
+		*/
+		_renderProductImageSlider = function(type, data) {
+			data.type = type;
+			return _templateFiller(_templateProductCarousel, data);
+		},
+
+				/*
+			@private method : SFY slider DOM Manager
+			@param : none
+		*/
+		_buildSfySliderDom = function() {
+			if (_sliderRendered === true) {
+				return;
+			}
+
+			var output = "<div class='nested-carousel-wrapper js-ga-carousel sfy'>" +
+				"<div class='carousel'>" +
+				"<ul class='bxslider js-nested-slider'>";
+			_cache.$products.each(function(i, el) {
+				output += "<li>";
+				var $el = $(el);
+				var data = $el.data();
+				var hasPlatinum = typeof(data.sfyVideoPlatinum) !== "undefined";
+				var hasGold = typeof(data.sfyVideoGold) !== "undefined";
+				var hasWhitegold = typeof(data.sfyVideoWhiteGold) !== "undefined";
+				var hasPinkGold = typeof(data.sfyVideoPinkGold) !== "undefined";
+				var multipleProducts = Number(hasGold) + Number(hasPlatinum) + Number(hasWhitegold) + Number(hasPinkGold);
+
+				output += "<div class='info__desc col_1-4'>";
+				output += _templateFiller(_templateProductTxt, data);
+				//if there are two products - render Product Chooser
+				if (multipleProducts > 1) {
+					if (hasPlatinum) {
+						data.metal = "platinum";
+						data.typeofmetal = "platinum";
+						data.randomnum = Math.floor(Math.random() * 100000).toString();
+						output += _templateFiller(_templateProductChanger, data);
+					}
+					if (hasGold) {
+						data.metal = "YELLOW GOLD";
+						data.typeofmetal = "yellowgold";
+						data.randomnum = Math.floor(Math.random() * 100000).toString();
+
+						output += _templateFiller(_templateProductChanger, data);
+					}
+					if (hasWhitegold) {
+						data.metal = "WHITE GOLD";
+						data.typeofmetal = "whitegold";
+						data.randomnum = Math.floor(Math.random() * 100000).toString();
+
+						output += _templateFiller(_templateProductChanger, data);
+					}
+					if (hasPinkGold) {
+						data.metal = "PINK GOLD";
+						data.typeofmetal = "pinkgold";
+						data.randomnum = Math.floor(Math.random() * 100000).toString();
+
+						output += _templateFiller(_templateProductChanger, data);
+					}
+
+				}
+				output += " <div class='form-element button-wrapper'><a  class='form-button js-sfy-select' href='#'>select</a></div></div>"; //end col 1_4
+				output += "<div class='info__pic col_3-4'>";
+				if (hasPlatinum === true) {
+					data.video = data.sfyVideoPlatinum;
+					output += _renderProductImageSlider('platinum', data);
+				}
+				if (hasGold === true) {
+					data.video = data.sfyVideoGold;
+					output += _renderProductImageSlider('goldBlock', data);
+				}
+				if (hasWhitegold === true) {
+					data.video = data.sfyVideoWhiteGold;
+					output += _renderProductImageSlider('whitegold', data);
+				}
+				if (hasPinkGold === true) {
+					data.video = data.sfyVideoPinkGold;
+					output += _renderProductImageSlider('pinkgold', data);
+				}
+				output += " </div>" + // end col_3-4
+				"</li>";
+			});
+			output += "</ul></div></div>";
+			_cache.$tab1.append(output);
+			_cache.$slider = _cache.$tab1.find('.js-nested-slider').first();
+			_cache.$productSlider = _cache.$tab1.find('.js-product-img-slider');
+			_sliderRendered = true;
+
+			$('.info__desc').find('input').uniform();
+		},
+
+
+				/*
+			@private method : Generated the url for the step 2
+			@param : none
+		*/
+		_nextpageUrlGenerator = function($el, $elbox, flag) {
+			var url = "",
+				material,
+				//PAGE PATH WILL BE GLOBAL VARIABLE
+				secondpagePath = $("input[name='secondPagePath']").val(),
+				childpagetitle = $elbox.data().sfyHeadline;
+			if ($($el).find('input[type="radio"]').length == 0) {
+				if ($elbox.data().sfyVideoGold != undefined) {
+					material = "gold";
+				} else if ($elbox.data().sfyVideoPlatinum != undefined) {
+					material = "platinum";
+				}
+			} else {
+				if (flag == undefined) {
+					material = $($el).find('input[type="radio"]').eq(0).val();
+				} else {
+					if ($($el).find('input[type="radio"]:checked').val() === undefined) {
+						material = $($el).find('input[type="radio"]').eq(0).val();
+					} else {
+						material = $($el).find('input[type="radio"]:checked').val();
+					}
+
+				}
+			}
+			url = secondpagePath + ".desktop." + childpagetitle + "." + material + ".html";
+			url = url.replace(/\ /g, "-");
+			$($el).find('.form-button').attr("href", url);
+
+		},
+		_sfyCaroselCheckbox = function() {
+			$(".info__desc input").click(function() {
+				console.log($(this).closest('li').index($(".js-nested-slider>li").not('.bx-clone')));
+
+				var indexLi = $(this).closest('li').index();
+
+				if($(".js-nested-slider>li:eq(0)").hasClass('bx-clone')){
+					indexLi -- ;
+				}
+				_nextpageUrlGenerator($(this).closest('li'), $('.js-collection-list__listing>li').eq(indexLi), "flag");
+				
+				$(this).closest("li").find(".product-carousel__wrapper").css("visibility", "hidden").addClass("heightZero");
+				if ($(this).attr("value") === 'platinum')
+					$(this).closest("li").find(".platinum-1").css("visibility", "visible").removeClass("heightZero");
+				else if ($(this).attr("value") === 'YELLOW GOLD')
+					$(this).closest("li").find(".goldBlock-1").css("visibility", "visible").removeClass("heightZero");
+				else if ($(this).attr("value") === 'PINK GOLD')
+					$(this).closest("li").find(".pinkgold-1").css("visibility", "visible").removeClass("heightZero");
+				else if ($(this).attr("value") === 'WHITE GOLD')
+					$(this).closest("li").find(".whitegold-1").css("visibility", "visible").removeClass("heightZero");
+
+				_visibleVideoPlayer();
+
+			});
+
+            $('.js-nested-slider>li:eq(' + 0 + ')').find('.sfy_check:eq(0) input').trigger('click').trigger('click');
+            $.uniform.update();
+	
+		},
+		_setProductVideoDimensions = function() {
+			$('.js-video').each(function() {
+				if ($(this).data("videoUrl") !== undefined) {
+					var url = $(this).data("videoUrl");
+					var reqChar = "?";
+					if (url.indexOf("?") != -1) {
+						var reqChar = "&";
+					}
+					if (url.indexOf("wmode") != -1) {
+						$(this).data("videoUrl", url + reqChar + "wmode=transparent");
+					}
+					$(this).find('iframe').attr('src', $(this).data("videoUrl"))
+					$(this).removeClass('needUpdate');
+				}
+			});
+		},
+
+		_setProductCarouselViewPort = function() {
+			$(".product-carousel__wrapper").find(".bx-viewport").css("height", _productCarouselViewPort.h + "px").contents("iframe").css("height", _productCarouselViewPort.h + "px");
+			$(".product-carousel__wrapper").find(".bx-viewport").css("height", _productCarouselViewPort.h + "px").contents("iframe").css("width", _productCarouselViewPort.w + "px");
+			$(".product-carousel__wrapper").find(".js-video").contents("iframe").css("height", _productCarouselViewPort.h + "px");
+			$(".product-carousel__wrapper").find(".js-video").contents("iframe").css("width", _productCarouselViewPort.w + "px");
+		},
+
+
+
+		/*
+			@private method : A function to check if the video is in view to star tthe play method of the video
+			@param : none
+		*/
+		_visibleVideoPlayer = function() {
+
+
+			$.each(ytplayer,function(index, val) {
+                    console.log($(ytplayer[index].d).visible(true));
+				if ($(ytplayer[index].d).visible(true) && ($(ytplayer[index].d).css("visibility") != "hidden") && ($(_nestedCarousel.getCurrentSlideElement()).has($(ytplayer[index].d)).length)) {
+
+					if (ytplayer[index].playVideo !== undefined)
+						ytplayer[index].playVideo();
+
+				} else {
+
+					if (ytplayer[index].playVideo !== undefined)
+						ytplayer[index].pauseVideo();
+				}
+
+			});
+		},
+
+
+
+
+				/*
+			@private method : Pauses all the videos
+			@param : none
+		*/
+        _pauseAllVideos = function () {
+
+            $.each(ytplayer,function(index, val) {
+
+                    if (ytplayer[index].playVideo !== undefined)
+                        ytplayer[index].pauseVideo();
+            });
+        },
+
+		_bindSFYYoutubeIframeEvents = function() {
+
+			$('.js-video').each(function() {
+
+				if ($(this).data("videoUrl") !== undefined) {
+
+					var url = $(this).data("videoUrl");
+
+
+					var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+					var match = url.match(regExp);
+
+					if (typeof match !== 'undefined' && match[1].match('watch') && match[7].length == 11) {
+						url = url.replace('watch?v=', 'embed/');
+					}
+
+					if (url.match('enablejsapi') == null) {
+
+						var reqChar = "?";
+
+						if (url.indexOf("?") != -1) {
+							var reqChar = "&";
+						}
+
+						$(this).data("videoUrl", url + reqChar + "enablejsapi=1");
+
+					}
+
+					$(this).find('iframe').load(function() {
+
+						var playerSrc = $(this).attr('src');
+
+						if (typeof playerSrc !== 'undefined') {
+
+							var player = new YT.Player(this, {
+								events: {
+									onStateChange: cartier.others.onPlayerStateChange,
+									onReady: function() {
+										window.ytplayer.push(player);
+										_visibleVideoPlayer();
+									}
+								}
+							});
+						}
+					});
+
+				}
+			});
+		};
+
+	//--------------------------------------------------------------------------------------------------------
+	//          Public functions
+	//--------------------------------------------------------------------------------------------------------
+
+
+
+	/*
+        @pubic method : initailize the module
+    */
+	sfy.init = function() {
+
+		cartier.log('JS-LOG:sfy Init Called');
+		_cacheObjects();
+		_bindEvents();
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	};
+
+}(window, jQuery, cartier.sfy_step1, cartier.template));

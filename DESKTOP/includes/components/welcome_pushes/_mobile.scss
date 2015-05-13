@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    My Cartier Pushes Component -- Mobile CSS
+\*------------------------------------*/
+.welcome-pushes{
+	.grid {
+		margin-left:0;	
+	}
+	.push-col{
+		height:168px;
+		display:table;
+	}
+	.grid__item {
+		padding-left:0;
+	}
+
+	img {
+		background-size: cover;
+		width: 100%;
+		height:100%;
+	}
+	.text-link {
+		@include font-color($primary-2);
+		@include f(16);
+		@include rem('line-height', 18px);
+		vertical-align: middle;
+		display: table-cell;
+	}
+	.push-block {
+		border:1px solid $primary-6;
+	}
+}

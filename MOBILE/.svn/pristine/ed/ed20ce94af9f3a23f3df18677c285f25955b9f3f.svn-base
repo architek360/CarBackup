@@ -1,0 +1,401 @@
+<div class="overlay-form">
+<input type="hidden" name="registrationPath" value="/content/car/jp/japan/ja/services/my-cartier/RegistrationStep1"/>
+<div class ="error_message_js-request-info-form" style="display:none;"></div>
+<div class="form-layout js-request-info-form">
+ 
+<script type="text/javascript">
+  function cq5forms_preCheck_js_request_info_form(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/ja/RequestInformation.mobile.html" id="js-request-info-form" name="js-request-info-form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-request-info-form"/><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/RequestInformation/jcr:content/article-containt-par/formbuilder/start"/><input type="hidden" name="_charset_" value="UTF-8"/><div class="form"><script type="text/javascript">
+(function(){
+var rulesObjects = {};
+var messagesObjects = {};
+        
+    if(rulesObjects.requestInformation_title){
+        rulesObjects.requestInformation_title.required="true";
+        messagesObjects.requestInformation_title.required="This is the required field.";
+           
+        } else{
+             rulesObjects.requestInformation_title= {
+            required: true
+            }
+            messagesObjects.requestInformation_title = {
+            required: "This is the required field."
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_firstName){
+        rulesObjects.requestInformation_firstName.required="true";
+        messagesObjects.requestInformation_firstName.required="This is the required field";
+           
+        } else{
+             rulesObjects.requestInformation_firstName= {
+            required: true
+            }
+            messagesObjects.requestInformation_firstName = {
+            required: "This is the required field"
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_firstName){
+        rulesObjects.requestInformation_firstName.isKatakana="true";
+        messagesObjects.requestInformation_firstName.isKatakana="Please only enter Katakana characters";
+           
+        } else{
+             rulesObjects.requestInformation_firstName= {
+            isKatakana: true
+            }
+            messagesObjects.requestInformation_firstName = {
+            isKatakana: "Please only enter Katakana characters"
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_lastName){
+        rulesObjects.requestInformation_lastName.required="true";
+        messagesObjects.requestInformation_lastName.required="This is the required field";
+           
+        } else{
+             rulesObjects.requestInformation_lastName= {
+            required: true
+            }
+            messagesObjects.requestInformation_lastName = {
+            required: "This is the required field"
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_lastName){
+        rulesObjects.requestInformation_lastName.isKatakana="true";
+        messagesObjects.requestInformation_lastName.isKatakana="Please enter Katakana characters for this field";
+           
+        } else{
+             rulesObjects.requestInformation_lastName= {
+            isKatakana: true
+            }
+            messagesObjects.requestInformation_lastName = {
+            isKatakana: "Please enter Katakana characters for this field"
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_lastName2){
+        rulesObjects.requestInformation_lastName2.required="true";
+        messagesObjects.requestInformation_lastName2.required="This is required field";
+           
+        } else{
+             rulesObjects.requestInformation_lastName2= {
+            required: true
+            }
+            messagesObjects.requestInformation_lastName2 = {
+            required: "This is required field"
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_lastName2){
+        rulesObjects.requestInformation_lastName2.isKanji="true";
+        messagesObjects.requestInformation_lastName2.isKanji="Please only enter Kanji characters";
+           
+        } else{
+             rulesObjects.requestInformation_lastName2= {
+            isKanji: true
+            }
+            messagesObjects.requestInformation_lastName2 = {
+            isKanji: "Please only enter Kanji characters"
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_contactPreference){
+        rulesObjects.requestInformation_contactPreference.required="true";
+        messagesObjects.requestInformation_contactPreference.required="This is the required field.";
+           
+        } else{
+             rulesObjects.requestInformation_contactPreference= {
+            required: true
+            }
+            messagesObjects.requestInformation_contactPreference = {
+            required: "This is the required field."
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_emailAddress){
+        rulesObjects.requestInformation_emailAddress.required="true";
+        messagesObjects.requestInformation_emailAddress.required="This is the required field.";
+           
+        } else{
+             rulesObjects.requestInformation_emailAddress= {
+            required: true
+            }
+            messagesObjects.requestInformation_emailAddress = {
+            required: "This is the required field."
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_phoneNumber){
+        rulesObjects.requestInformation_phoneNumber.required="true";
+        messagesObjects.requestInformation_phoneNumber.required="This is the required field.";
+           
+        } else{
+             rulesObjects.requestInformation_phoneNumber= {
+            required: true
+            }
+            messagesObjects.requestInformation_phoneNumber = {
+            required: "This is the required field."
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_message){
+        rulesObjects.requestInformation_message.required="true";
+        messagesObjects.requestInformation_message.required="This is the required field.";
+           
+        } else{
+             rulesObjects.requestInformation_message= {
+            required: true
+            }
+            messagesObjects.requestInformation_message = {
+            required: "This is the required field."
+            }
+        }
+
+        
+    if(rulesObjects.requestInformation_checkbox_val){
+        rulesObjects.requestInformation_checkbox_val.required="true";
+        messagesObjects.requestInformation_checkbox_val.required="This is the required field.";
+           
+        } else{
+             rulesObjects.requestInformation_checkbox_val= {
+            required: true
+            }
+            messagesObjects.requestInformation_checkbox_val = {
+            required: "This is the required field."
+            }
+        }
+
+
+     $(document).ready(function(){
+        $("#js-request-info-form").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+                });
+     });
+   })();
+</script>
+<fieldset>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+
+
+
+        
+
+        
+
+            <h3 class="heading3"> Request Information </h3>
+
+        
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="parsys_column cq-colctrl-default"><div class="parsys_column cq-colctrl-default-c0"></div></div><div style="clear:both"></div><div class="non-mandatory group-wrapper">
+                <label class="label_requestInformation_title">TITLE<span class="form-mandatory"></span></label>
+<div class="form-element radio-wrapper requestInformation_title">   
+                                    <input type="radio" 
+                                    id="Mr" name="requestInformation_title"  value="0001" class="form-radio">
+                                   <label for="Mr" class=" form-radio-label">Man
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper requestInformation_title">   
+                                    <input type="radio" 
+                                    id="Mrs" name="requestInformation_title"  value="0002" class="form-radio">
+                                   <label for="Mrs" class=" form-radio-label">Woman
+</label>                              
+                            </div>
+                        <div class="errormessage" id="errormessage-requestInformation_title"></div></div>          
+        <div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><div class="non-mandatory form-element input-wrapper requestInformation_firstName">
+        <label class="label_requestInformation_firstName">FIRST NAME<span class="form-mandatory"></span></label>
+<input id="requestInformation_firstName" type="text" name="requestInformation_firstName"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-requestInformation_firstName"></div></div>
+    <div class="non-mandatory form-element input-wrapper requestInformation_lastName">
+        <label class="label_requestInformation_lastName">LAST NAME<span class="form-mandatory"></span></label>
+<input id="requestInformation_lastName" type="text" name="requestInformation_lastName"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-requestInformation_lastName"></div></div>
+    
+<div class="non-mandatory form-element input-wrapper requestInformation_lastName2">
+        <label class="label_requestInformation_lastName2">LAST NAME 2<span class="form-mandatory"></span></label>
+<input id="requestInformation_lastName2" type="text" name="requestInformation_lastName2"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-requestInformation_lastName2"></div></div>
+    <div class="non-mandatory group-wrapper">
+                <label class="label_requestInformation_contactPreference">CONTACT PREFERENCE<span class="form-mandatory"></span></label>
+<div class="form-element radio-wrapper requestInformation_contactPreference">   
+                                    <input type="radio" 
+                                    id="email" name="requestInformation_contactPreference"  value="email" class="form-radio">
+                                   <label for="email" class=" form-radio-label">BY-EMAIL
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper requestInformation_contactPreference">   
+                                    <input type="radio" 
+                                    id="phone" name="requestInformation_contactPreference"  value="phone" class="form-radio">
+                                   <label for="phone" class=" form-radio-label">BY TELEPHONE
+</label>                              
+                            </div>
+                        <div class="errormessage" id="errormessage-requestInformation_contactPreference"></div></div>          
+        <div class="non-mandatory form-element input-wrapper requestInformation_emailAddress">
+        <label class="label_requestInformation_emailAddress">EMAIL<span class="form-mandatory"></span></label>
+<input id="requestInformation_emailAddress" type="text" name="requestInformation_emailAddress"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-requestInformation_emailAddress"></div></div>
+    <div class="non-mandatory form-element input-wrapper requestInformation_phoneNumber">
+        <label class="label_requestInformation_phoneNumber">TELEPHONE<span class="form-mandatory"></span></label>
+<input id="requestInformation_phoneNumber" type="text" name="requestInformation_phoneNumber"
+            placeholder=""
+         class="form-input"  value="" />
+         <div class="errormessage" id="errormessage-requestInformation_phoneNumber"></div></div>
+    </div><div class="parsys_column cq-colctrl-lt0-c1"><input id="pdp_pagepath" type="hidden" name="pdp_pagepath"
+                value=""/>    
+    <div class="non-mandatory form-element select-wrapper requestInformation_mainMessage">
+     <label class="label_requestInformation_mainMessage">MAIN MESSAGE<span class="form-mandatory"></span></label>
+<select name="requestInformation_mainMessage" class=" form-select" 
+             id="requestInformation_mainMessage">
+            <option value="product information" >
+                    PRODUCT INFORMATION </option>
+            <option value="sales policy" >
+                    SALES POLICY </option>
+            <option value="boutique information" >
+                    BOUTIQUE INFORMATION </option>
+            <option value="e boutique information" >
+                    EBOUTIQUE INFORMATION </option>
+            <option value="after sales services" >
+                    AFTER SALES SERVICES </option>
+            <option value="request a catalogue" >
+                    REQUEST A CATALOGUE </option>
+            <option value="other" >
+                    OTHER </option>
+            </select>
+    <div class="errormessage" id="errormessage-requestInformation_mainMessage"></div></div>
+<div class="non-mandatory form-element textarea-wrapper requestInformation_message">
+        <label class="label_requestInformation_message">MESSAGE<span class="form-mandatory"></span></label>
+<textarea id="requestInformation_message" name="requestInformation_message" type="text"
+            placeholder=""
+            class="form-textarea" ></textarea>
+            <div class="errormessage" id="errormessage-requestInformation_message"></div></div>
+    <div class="non-mandatory group-wrapper">
+                <div class="form-element checkbox-wrapper requestInformation_checkbox_val">
+                                <input type="checkbox" 
+                                    id="wishToRecieve" name="requestInformation_checkbox_val"  value="wishToRecieve" class="form-checkbox">
+                                    <label for="wishToRecieve" class=" form-checkbox-label">I would like to receive information from Cartier using any of the communication method(s) that I have provided above.
+</label></div>
+                        <div class="errormessage" id="errormessage-requestInformation_checkbox_val"></div></div>          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+
+
+ <div class="comp-rich-text">  
+
+    
+        <p>By submitting this form, I certify that I have read and accepted the <a href="http://www.cartier.us/privacy-notice">Privacy Notice</a>.</p>
+
+    
+    
+    
+</div></div></div><div style="clear:both"></div>
+</fieldset><div class="form-element button-wrapper SUBMIT">
+<input class="form-button" type="submit"
+    name="SUBMIT" value="SUBMIT" >
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+<script type="text/javascript">
+            RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : 'formType',
+                'actionName' : "RequestInformationAction",
+                'currentPagePath' : "/content/car/jp/japan/ja/RequestInformation",
+                'elementId' : "js-request-info-form",
+                'eventName' : 'submit'
+              });
+        </script>
+
+    </div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div> 
+</div> 
+
+
+
+

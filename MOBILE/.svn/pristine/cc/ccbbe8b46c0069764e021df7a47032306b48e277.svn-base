@@ -1,0 +1,22 @@
+<!-- Login Box Starts Here-->
+<div class="email-sent js-emailsent-box display-none">
+			<span class="cross-button js-emailsent-conf"></span>
+			<div class= "js-successdiv">
+				<h3 class="heading3">your password has just been sent</h3>
+			    <p class="">
+			    	lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			    </p>
+			</div>
+			<div class="js-failurediv">
+				<h3 class="heading3">your password could not be sent</h3>
+			    <p class="">
+			    	lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+			    </p>
+			</div>
+		    <!--#set var="cta--varaint" value="cta--red js-emailsent-conf" -->
+	        <!--#set var="text-detail" value="ok" -->
+	        <!--#include virtual="../../components/form_elements/button.shtml" -->
+
+</div>
+	<!-- forgot Box Ends Here-->
+<!-- Login Ends Here-->

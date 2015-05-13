@@ -1,0 +1,2004 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+/*For Deployement*/
+/*For Local*/
+/*------------------------------------*\
+    Global -- BASE CSS
+\*------------------------------------*/
+/**
+ * BASIC FRAMEWORK STYLES
+ */
+/* 
+ * DEFAULT FONT FAMILY FOR ALL PAGES
+ */
+/*
+ * DEFAULT FONT FAMILY FOR NAVIGATION LINKS
+ */
+/*//For desktop.css*/
+/*$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+ */
+/*
+$path-images : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/'; 
+*/
+/*
+
+Settings FOR DEV TEAM
+====DO NOT DELETE OR UNCOMMENT====
+
+
+.top-nav{
+	position:static !important;
+}
+
+.main-container{
+	background-color:black !important;
+	margin-top:0px !important;
+}
+
+*/
+/* line 54, ../../../../../../sass/_base.scss */
+html, body {
+  font-size: 62.5%;
+  /* Sets up the Base 10 stuff */
+  /*font-size: 100%;*/
+  -webkit-font-smoothing: antialiased;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+/* line 61, ../../../../../../sass/_base.scss */
+div {
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 63, ../../../../../../sass/_base.scss */
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 70, ../../../../../../sass/_base.scss */
+h1, h2, h3 {
+  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 74, ../../../../../../sass/_base.scss */
+h1 {
+  font-size: 30px;
+}
+
+/* line 75, ../../../../../../sass/_base.scss */
+h2 {
+  font-size: 26px;
+}
+
+/* line 76, ../../../../../../sass/_base.scss */
+h3 {
+  font-size: 20px;
+}
+
+/* line 78, ../../../../../../sass/_base.scss */
+html, button, input, select, textarea {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 95, ../../../../../../sass/_base.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 100, ../../../../../../sass/_base.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 109, ../../../../../../sass/_base.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 113, ../../../../../../sass/_base.scss */
+.f-left {
+  float: left;
+}
+
+/* line 117, ../../../../../../sass/_base.scss */
+.f-right {
+  float: right;
+}
+
+/* line 120, ../../../../../../sass/_base.scss */
+.f-none {
+  float: none;
+}
+
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*$primary-88     : #472021;*/
+/*$primary-89		: #6D3536;*/
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'CarteirRegular';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Book.otf");
+}
+
+@font-face {
+  font-family: 'CarteirBold';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Bold_0.otf");
+}
+
+@font-face {
+  font-family: 'CarteirMedium';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/Gotham-Medium.otf");
+}
+
+@font-face {
+  font-family: 'proximanovaBold';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont.eot");
+  src: local("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-bold-webfont.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'proximanova';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont.eot");
+  src: local("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/proximanova-reg-webfont.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: 'EBGaramond';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/EBGaramond-webfont.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'didotromanitalic';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/didotromanitalic.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'didotroman';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/didotroman.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'mb-script';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/mb_script_rund.woff");
+  /*src: local($path-font+'proximanova-reg-webfont'), url($path-font+'proximanova-reg-webfont.woff') format('opentype');*/
+}
+
+@font-face {
+  font-family: 'CartierLoveTM';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.eot");
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.woff") format("woff"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'CartierLoveTM';
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.eot");
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.woff") format("woff"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/cartier-tm-love-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Corsiva W01";
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.eot");
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.eot?#iefix") format("embedded-opentype"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.svg#Corsiva W01") format("svg"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.woff") format("woff"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/monotype-corsiva-regular-latin-1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kuenstler Script W01 Medium";
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.eot");
+  src: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.eot?#iefix") format("embedded-opentype"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.svg#Kuenstler Script W01 Medium") format("svg"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.woff") format("woff"), url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/kuenstler-script-medium-latin-1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------------------*\
+    $HEADER COMMON STYLING
+\*------------------------------------*/
+/* line 318, ../../../../../../sass/main_theme/_theme.scss */
+.text-link {
+  color: #b3b3b3;
+}
+
+/* line 323, ../../../../../../sass/main_theme/_theme.scss */
+.top-nav .top-nav__menu {
+  float: left;
+  padding: 18px 26px;
+  margin-top: 10px;
+}
+/* line 328, ../../../../../../sass/main_theme/_theme.scss */
+.top-nav .top-nav__menu button {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -452px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 36px;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/*------------------------------------*\
+    $COLLECTION COMMON STYLING
+\*------------------------------------*/
+/* line 343, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .collection-image {
+  padding-top: 20px;
+}
+/* line 347, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .collection-image {
+  display: block;
+}
+/* line 351, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .collection-image img {
+  max-height: 400px;
+  width: 100%;
+  /*@include rem('max-height',370px);
+  @include rem('max-width',640px);*/
+}
+/* line 365, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .heading7 {
+  color: white;
+  width: 81.25%;
+  margin: 0 auto;
+  /*margin-bottom: 0;
+  @include rem('margin-top', 38px);*/
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 25px 0px 23px;
+  font-family: "CarteirRegular", sans-serif;
+  font-weight: normal;
+  line-height: 27px;
+  /*line-height:1.4em;*/
+}
+/* line 381, ../../../../../../sass/main_theme/_theme.scss */
+.main-container .heading6 {
+  font-family: "CarteirRegular", sans-serif;
+  color: white;
+  width: 81.25%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  padding: 0px;
+  padding-bottom: 26px;
+  /*line-height:1.4em;*/
+}
+
+/* line 399, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: white;
+}
+/* line 403, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper p {
+  color: white;
+}
+/* line 407, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper label {
+  color: white;
+}
+
+/* line 414, ../../../../../../sass/main_theme/_theme.scss */
+.collection .collection__title {
+  display: block;
+}
+/* line 417, ../../../../../../sass/main_theme/_theme.scss */
+.collection .collection__title .heading4 {
+  padding-top: 65px;
+  padding-bottom: 22px;
+  font-size: 24px;
+}
+/* line 422, ../../../../../../sass/main_theme/_theme.scss */
+.collection .collection__title .heading2 {
+  padding: 0 0 41px 0;
+  border-bottom: 1px solid white;
+}
+
+/*------------------------------------*\
+    $LEFT NAV  COMMON STYLING
+\*------------------------------------*/
+/* line 446, ../../../../../../sass/main_theme/_theme.scss */
+.nav {
+  color: white;
+}
+
+/* line 450, ../../../../../../sass/main_theme/_theme.scss */
+.nav ul li .nav-arrow {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/right-icon.png") no-repeat 97% 49%;
+}
+
+/* line 454, ../../../../../../sass/main_theme/_theme.scss */
+.nav ul li .nav-arrow-down {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/down-icon.png") no-repeat 98% 49%;
+}
+
+/* line 459, ../../../../../../sass/main_theme/_theme.scss */
+#mobile-nav-search {
+  background-color: white;
+}
+
+/* line 462, ../../../../../../sass/main_theme/_theme.scss */
+.product-listing {
+  background: black url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/product_list_bg.jpg") no-repeat bottom right 0;
+}
+
+/* line 468, ../../../../../../sass/main_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+/* line 474, ../../../../../../sass/main_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span.on {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -784px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+/* line 478, ../../../../../../sass/main_theme/_theme.scss */
+.country-switcher__filter .country-switcher__filter_node__title span.off {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+
+/* line 484, ../../../../../../sass/main_theme/_theme.scss */
+.select-2 {
+  /*@include setSprite(27px, 29px, -669px, -60px);*/
+  background: #a0a0a0 url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/select_arrow.png") no-repeat right 0;
+}
+
+/* line 489, ../../../../../../sass/main_theme/_theme.scss */
+.degree360-icon {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -99px -984px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+  height: 23px;
+}
+
+/* line 493, ../../../../../../sass/main_theme/_theme.scss */
+.carousel .prev span {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -19px -285px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 497, ../../../../../../sass/main_theme/_theme.scss */
+.carousel .next span {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -72px -285px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 100px;
+}
+
+/* line 504, ../../../../../../sass/main_theme/_theme.scss */
+.ambassador-cont .att-accordion .js-accordion_node__title > span {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+/* line 507, ../../../../../../sass/main_theme/_theme.scss */
+.ambassador-cont .att-accordion .js-accordion_node__title span.on {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -784px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+/* line 511, ../../../../../../sass/main_theme/_theme.scss */
+.ambassador-cont .att-accordion .js-accordion_node__title span.off {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -743px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 30px;
+}
+
+/* line 521, ../../../../../../sass/main_theme/_theme.scss */
+.form-check input:checked + span.form-check__icon {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -702px -20px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+/* line 528, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper.shoppingBagBg {
+  background: #59010d url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//icons/bg-shoppingbag.png") repeat 0px 0px;
+}
+
+/* line 532, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper.login-bg-image {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//icons/bg-user.png") no-repeat;
+}
+
+/* line 536, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images//icons/bg.jpg") no-repeat;
+}
+/* line 539, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper .header {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 546, ../../../../../../sass/main_theme/_theme.scss */
+.nav-heading-cont .nav-show {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 552, ../../../../../../sass/main_theme/_theme.scss */
+.foundation .nav-link {
+  background-image: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/foundation-logo.png");
+  background-repeat: no-repeat;
+}
+
+/* line 560, ../../../../../../sass/main_theme/_theme.scss */
+.search-form .search__term {
+  background: transparent;
+}
+
+/* line 564, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push {
+  border: 1px solid #4d4d4d;
+}
+/* line 566, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push .push-hover {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie.png");
+}
+/* line 571, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push .push-col_title {
+  color: #A0A0A0;
+}
+/* line 574, ../../../../../../sass/main_theme/_theme.scss */
+.pushes-wrapper-service-push .text-link:hover {
+  color: black;
+}
+
+/* line 578, ../../../../../../sass/main_theme/_theme.scss */
+.listGradient {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/bg-grey.png") no-repeat left top;
+}
+
+/* line 582, ../../../../../../sass/main_theme/_theme.scss */
+.product_listing_class {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/listing-models.jpg") no-repeat left bottom;
+}
+
+/* line 586, ../../../../../../sass/main_theme/_theme.scss */
+.push-over {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie.png");
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+/*.select-wrapper{
+ 	}
+	.selector {
+		background-position: -430px -672px;
+	    span {
+	    	background-position: right -573px;
+		}
+
+		    option {
+			    background-color: $primary-70;
+			    color: $primary-71;
+			}
+		}
+	}
+}*/
+/* line 611, ../../../../../../sass/main_theme/_theme.scss */
+#modalWindow {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/popin-bg.png") no-repeat left top black;
+}
+
+/* line 618, ../../../../../../sass/main_theme/_theme.scss */
+strong {
+  font-weight: bold;
+}
+
+/*------------------------------------*\
+    LIVING HERITAGE SEARCH BOX CHANGES
+\*------------------------------------*/
+/* line 631, ../../../../../../sass/main_theme/_theme.scss */
+.living-heritage-bg .search-form .search__term {
+  background: white;
+}
+/* line 636, ../../../../../../sass/main_theme/_theme.scss */
+.living-heritage-bg .search-wrapper .search__button {
+  background-position: -57px -847px;
+}
+
+/*------------------------------------*\
+    REFINE SELECTOR BOX CHANGES
+\*------------------------------------*/
+/* line 650, ../../../../../../sass/main_theme/_theme.scss */
+.refine-selector .refine-selector__content ul .js-refine-checkbox span {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -30px -415px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 14px;
+}
+
+/*------------------------------------*\
+    $MOBILE SELECT ELEMENTS
+\*------------------------------------*/
+/* line 662, ../../../../../../sass/main_theme/_theme.scss */
+.selector {
+  background-position: -430px -672px;
+}
+/* line 665, ../../../../../../sass/main_theme/_theme.scss */
+.selector span {
+  background-position: right -573px;
+}
+/* line 668, ../../../../../../sass/main_theme/_theme.scss */
+.selector option {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+/* line 677, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper {
+  color: white;
+}
+/* line 681, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper label {
+  color: white;
+}
+/* line 684, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector {
+  background-position: -430px -672px;
+}
+/* line 687, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector span {
+  background-position: right -573px;
+  color: white;
+  font-style: normal;
+}
+/* line 692, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector option {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}
+
+/* line 699, ../../../../../../sass/main_theme/_theme.scss */
+.collection-push {
+  border: 1px solid #262628;
+}
+/* line 701, ../../../../../../sass/main_theme/_theme.scss */
+.collection-push .collection-overlay {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/listing-categories.jpg") no-repeat right top;
+  background-size: 309px 309px;
+  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 711, ../../../../../../sass/main_theme/_theme.scss */
+.primary-nav-container {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.6.png");
+}
+
+/* line 715, ../../../../../../sass/main_theme/_theme.scss */
+.primary-nav-container {
+  /* background-color: $primary-1;
+  -ms-filter: "alpha(opacity=40)"; */
+  /*background:url($path-images+'icons/ie_0.6.png');*/
+}
+/* line 720, ../../../../../../sass/main_theme/_theme.scss */
+.primary-nav-container .first-level-nav .nav-show {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/ie_0.6.png");
+}
+
+/* line 726, ../../../../../../sass/main_theme/_theme.scss */
+.body-wrapper.living-heritage-bg .header {
+  background: white;
+}
+
+/* line 730, ../../../../../../sass/main_theme/_theme.scss */
+.header .right-nav .right-nav__list li.mycartier .nav-link {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -232px -1160px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 58px;
+  height: 15px;
+}
+
+/* line 736, ../../../../../../sass/main_theme/_theme.scss */
+#confirmBox {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/popin-bg.png") no-repeat left top black;
+}
+
+/* line 741, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector.formerror {
+  background-position: -427px -955px;
+}
+/* line 744, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector.formerror span {
+  background-position: right -913px;
+}
+/* line 747, ../../../../../../sass/main_theme/_theme.scss */
+.select-wrapper .selector.formerror option {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}
+
+/*------------------------------------*\
+    $IMPORT - Desktop Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    $IMPORT - Views Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    ECS - Desktop CSS
+\*------------------------------------*/
+/*------------------------------------*\
+	ECS PRE REGISTRATION -- Desktop CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER ..... (.registration_page)
+* FORM CONTAINER ..... (.form)
+* FORM WRAPPER CONTAINER..... (.select-wrapper, .input-wrapper, .group-wrapper)
+*/
+/* line 10, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.heading2 {
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+/* line 16, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.main-container .welcome-message {
+  font-size: 12px;
+  width: 550px;
+  text-align: center;
+  margin: 0px auto;
+  padding: 0px 0px 40px 0px;
+}
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+/* line 29, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page {
+  /*------------------------------------*\
+      $FORM CONTAINER
+  \*------------------------------------*/
+}
+/* line 31, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .heading3 {
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding: 40px 0;
+  font-weight: bold;
+}
+/* line 37, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .tabs {
+  margin-bottom: 100px;
+}
+/* line 39, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .tabs .tabs__content {
+  position: relative;
+  margin-top: 0px;
+}
+/* line 44, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .tabs ul.tabs__nav .tabs__title {
+  width: 480px;
+}
+/* line 46, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .tabs ul.tabs__nav .tabs__title .tab__title-wrapper {
+  max-width: 480px;
+}
+/* line 57, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form {
+  margin-top: 30px;
+  border: 1px solid #666666;
+  	/*------------------------------------*\
+      	$FORM WRAPPER CONTAINER
+  	\*------------------------------------*/
+}
+/* line 60, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .cq-colctrl-lt0 {
+  margin: 0px;
+  border: none;
+}
+/* line 64, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-set-default {
+  display: none;
+}
+/* line 68, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .cq-colctrl-lt0-ecs-pre-registration-1 .cq-colctrl-lt0-c0 {
+  border-right: 1px dotted #595959;
+}
+/* line 71, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .cq-colctrl-lt0-ecs-pre-registration-1 .cq-colctrl-lt0-c1 {
+  border-left: none;
+}
+/* line 76, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .cq-colctrl-lt0-ecs-pre-registration-2 .cq-colctrl-lt0-c1 {
+  border-right: 1px dotted #595959;
+}
+/* line 79, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .cq-colctrl-lt0-ecs-pre-registration-2 .cq-colctrl-lt0-c0 {
+  border-left: none;
+}
+/* line 84, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .parsys_column.cq-colctrl-lt0-c1 label[for="blank"] {
+  display: inline-block;
+  padding: 10px 0px 25px;
+  text-transform: uppercase;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+}
+/* line 89, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .parsys_column.cq-colctrl-lt0-c1 label[for="blank"] .checker {
+  margin-top: -1px;
+}
+/* line 91, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .parsys_column.cq-colctrl-lt0-c1 label[for="blank"] .checker input {
+  cursor: pointer;
+  opacity: 0;
+  filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+/* line 98, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .parsys_column.cq-colctrl-lt0-c1 label[for="blank"] span {
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 1px;
+}
+/* line 104, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .parsys_column.cq-colctrl-lt0-c1 .instruction-text {
+  padding: 0px 0 25px;
+  color: #666666;
+  width: 84.5%;
+  margin: 0px;
+  font-style: italic;
+}
+/* line 117, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .select-wrapper {
+  padding-top: 0px;
+  padding-bottom: 15px;
+  margin: 0px;
+  width: 360px;
+  display: inline-block;
+}
+/* line 123, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .select-wrapper label {
+  margin: 0px;
+  margin-bottom: 5px;
+  padding-top: 0px;
+  display: block;
+  width: auto;
+  float: left;
+  letter-spacing: 3px;
+}
+/* line 132, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .select-wrapper .selector {
+  display: block;
+  width: 100% !important;
+}
+/* line 136, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .select-wrapper .selector select option {
+  font-style: italic;
+  font-size: 11px;
+  color: #a0a0a0;
+}
+/* line 142, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .select-wrapper .selector span {
+  width: 100% !important;
+  font-style: italic;
+  font-size: 11px;
+  color: #a0a0a0;
+}
+/* line 150, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .input-wrapper {
+  padding-bottom: 15px;
+  padding-top: 0px;
+  margin-top: 0px;
+  width: 360px;
+  display: inline-block;
+}
+/* line 156, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .input-wrapper label {
+  margin: 0px;
+  margin-bottom: 5px;
+  padding-top: 0px;
+  display: block;
+  width: auto;
+  float: left;
+  letter-spacing: 3px;
+}
+/* line 165, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .input-wrapper input {
+  display: block;
+  width: 100%;
+}
+/* line 170, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .group-wrapper {
+  margin: 0px;
+  padding-bottom: 5px;
+  width: 360px;
+  display: inline-block;
+}
+/* line 175, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .group-wrapper label {
+  font-size: 11px;
+  font-weight: bold;
+}
+/* line 179, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .group-wrapper .radio-wrapper {
+  padding: 18px 15px 0px 0px;
+}
+/* line 184, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .problem_desc, .registration_page .form .address {
+  clear: both;
+  width: 95%;
+  margin: 0 auto;
+  border-top: 1px solid #666666;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 194, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .textarea-wrapper {
+  clear: both;
+  padding-bottom: 50px;
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+/* line 200, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .textarea-wrapper label {
+  font-size: 11px;
+}
+/* line 203, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .textarea-wrapper textarea {
+  width: 100%;
+  max-width: 930px;
+  max-height: 130px;
+  line-height: 25px;
+  text-indent: 6px;
+  font-style: italic;
+  font-weight: bold;
+  color: #666666;
+}
+/* line 217, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .button-wrapper {
+  padding-bottom: 30px;
+}
+/* line 220, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .address_heading {
+  padding-top: 40px;
+  border-top: 1px solid #666666;
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 226, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .address {
+  border-top: none;
+}
+/* line 229, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .address h3.address-name-view {
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 25px;
+  padding: 1.5px;
+  text-transform: uppercase;
+}
+/* line 240, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .address .addressrow p {
+  display: inline;
+  padding: 1.5px;
+}
+/* line 246, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .address p.address-name-view {
+  font-style: normal;
+}
+/* line 251, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .ecsaddress2 {
+  display: none;
+}
+/* line 254, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-address-select .select-wrapper {
+  width: 313px;
+  padding-bottom: 10px;
+}
+/* line 257, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-address-select .select-wrapper .selector {
+  padding: 0px 0px 0px 5px;
+}
+/* line 259, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-address-select .select-wrapper .selector span, .registration_page .form .js-address-select .select-wrapper .selector option {
+  color: white;
+  font-weight: bold;
+}
+/* line 264, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-address-select .select-wrapper .heading1, .registration_page .form .js-address-select .select-wrapper .heading2, .registration_page .form .js-address-select .select-wrapper .heading3, .registration_page .form .js-address-select .select-wrapper .heading4, .registration_page .form .js-address-select .select-wrapper .heading5 {
+  text-align: left;
+  padding: 0px 0px 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+/* line 270, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-address-select .select-wrapper p {
+  padding: 0px 0px 5px;
+}
+/* line 273, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-address-select .select-wrapper label {
+  display: none;
+}
+/* line 277, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form #create-text, .registration_page .form #edit-text, .registration_page .form .js-message {
+  display: none;
+}
+/* line 280, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .js-bobj-section-one {
+  display: inline-block;
+}
+/* line 283, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .addressListingDetailView {
+  padding-bottom: 20px;
+  display: inline-block;
+}
+/* line 286, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .addressListingDetailView .js-add, .registration_page .form .addressListingDetailView .js-edit {
+  color: #a0a0a0;
+}
+/* line 289, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .addressListingDetailView .edit-icon {
+  border: none;
+}
+/* line 292, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .addressListingDetailView .add-icon {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite.png") -1017px -262px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 29px;
+  display: inline-block;
+  height: 15px;
+  margin: 0 0 0 5px;
+  position: relative;
+}
+/* line 302, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .heading-wrapper .heading-white-line {
+  width: 95%;
+  margin: 0 auto;
+  border-color: #666666;
+}
+/* line 308, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .instruction-text, .registration_page .form .rte-wrapper {
+  padding: 0px 0 5px;
+  color: #666666;
+  width: 94.5%;
+  margin: 0 auto;
+  font-style: italic;
+}
+/* line 315, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .rte-wrapper {
+  padding: 0px;
+}
+/* line 318, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .textarea-wrapper {
+  padding-bottom: 0px;
+}
+/* line 321, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .serialProduct {
+  padding-bottom: 5px;
+}
+/* line 324, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.registration_page .form .serialProduct + p.instruction-text {
+  width: 86%;
+  margin: 0px;
+  padding-bottom: 25px;
+}
+
+/* line 331, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+.form-loader {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/bx_loader.gif") 5px 0 no-repeat;
+  height: 25px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* line 339, ../../../../../../includes/views/registration_ecs/_desktop.scss */
+#confirmButtons .cta--grey.secondrycta {
+  width: auto;
+  padding: 10px;
+}
+
+/*------------------------------------------------------------------------------------*\
+    ECS REVIEW REPAIR ORDER -- Desktop CSS
+\*------------------------------------------------------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ecs-review-repair-order)
+ * PRODUCT CONTAINER.........(.product-detail)
+ */
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+/* line 13, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order {
+  margin-top: 9px;
+  /*------------------------------------*\
+      $PRODUCT CONTAINER
+  \*------------------------------------*/
+}
+/* line 15, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .order-review__title {
+  font-size: 18px;
+}
+/* line 18, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .heading__desc {
+  padding: 0 0 10px;
+}
+/* line 21, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .info {
+  font-size: 11px;
+  font-style: italic;
+  padding-bottom: 30px;
+}
+/* line 25, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .info .telno {
+  color: #8d0115;
+}
+/* line 35, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid {
+  width: 95%;
+}
+/* line 38, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .price-detail__row .price-detail__col {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 41, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .price-detail__row .price-detail__col .price-detail--note {
+  font-size: 14px;
+  font-style: normal;
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #a0a0a0;
+  text-transform: uppercase;
+}
+/* line 49, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .price-detail__row .right-zero {
+  font-size: 16px;
+}
+/* line 52, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .price-detail__row .price-detail--note.js-subtotal-info {
+  display: inline-block;
+}
+/* line 56, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .product-info {
+  padding-bottom: 60px;
+}
+/* line 58, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .product-info .price-detail__col {
+  font-size: 11px;
+}
+/* line 60, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .product-detail .price-detail.clearfix.grid .product-info .price-detail__col .price-detail--note {
+  font-size: 12px;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  font-style: italic;
+  text-transform: uppercase;
+}
+/* line 70, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.ecs-review-repair-order .cta-button {
+  margin-bottom: 60px;
+}
+
+/* line 75, ../../../../../../includes/views/ecs_review_repair_order/_desktop.scss */
+.shoppingBagBg.ecs-payment .form {
+  width: 100%;
+}
+
+/*---------------------------------------------------*\
+    ECS REPAIR PRICE DETAILS -- Desktop CSS
+\*---------------------------------------------------*/
+/**
+ * PRICE DETAIL CONTAINER..... main block (.order-review-price-detail)
+ */
+/*------------------------------------*\
+    $PRICE DETAIL CONTAINER
+\*------------------------------------*/
+/* line 14, ../../../../../../includes/views/ecs_repair_price_details/_desktop.scss */
+.order-review-price-detail .price-detail .price-detail__row .price-detail__col {
+  font-size: 12px;
+}
+/* line 17, ../../../../../../includes/views/ecs_repair_price_details/_desktop.scss */
+.order-review-price-detail .price-detail .price-detail__row .right-zero {
+  font-weight: bold;
+}
+/* line 20, ../../../../../../includes/views/ecs_repair_price_details/_desktop.scss */
+.order-review-price-detail .price-detail .price-detail__row:nth-child(4) {
+  border-top: 1px solid #a0a0a0;
+}
+/* line 23, ../../../../../../includes/views/ecs_repair_price_details/_desktop.scss */
+.order-review-price-detail .price-detail .price-detail__row .js-totalprice {
+  font-size: 21px;
+  font-weight: normal;
+}
+/* line 27, ../../../../../../includes/views/ecs_repair_price_details/_desktop.scss */
+.order-review-price-detail .price-detail .price-detail__row .final-total {
+  border-top: 1px solid #a0a0a0;
+}
+
+/*------------------------------------*\
+    ECS REPAIR ORDER ACKNOWLEDGEMENT -- DESKTOP CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ecs-review-repair-order)
+ */
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+/* line 13, ../../../../../../includes/views/ecs_repair_order_acknowledgement/_desktop.scss */
+.ecs-review-repair-order .order-header {
+  padding: 40px 10px 5px;
+}
+/* line 15, ../../../../../../includes/views/ecs_repair_order_acknowledgement/_desktop.scss */
+.ecs-review-repair-order .order-header h2 {
+  text-align: center;
+  font-size: 15px;
+  padding-right: 100px;
+}
+/* line 20, ../../../../../../includes/views/ecs_repair_order_acknowledgement/_desktop.scss */
+.ecs-review-repair-order .order-header .order-date {
+  float: left;
+  font-size: 11px;
+  letter-spacing: 0.1rem;
+  padding-left: 10px;
+  text-transform: capitalize;
+  color: #a0a0a0;
+  line-height: 20px;
+}
+
+/*------------------------------------*\
+    ECS BILLING PAYMENT PAGE -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..... main container (.ecs-payment-page)
+ * CARD FIELD CONTAINER..... payment card fields block(.payment_card_number, .payment_card_month.... , .payment_card_name)
+ */
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+/* line 13, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page {
+  background: none;
+  height: auto;
+  margin-top: 9px;
+}
+/* line 17, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form {
+  width: 100%;
+  /*------------------------------------*\
+      $CARD FIELD CONTAINER
+  \*------------------------------------*/
+}
+/* line 19, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form ul {
+  margin-left: 105px;
+}
+/* line 21, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form ul li {
+  display: inline-block;
+  padding: 8px 15px 0 0;
+}
+/* line 25, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form ul li:first-child .formerror {
+  top: 0px;
+  position: relative;
+}
+/* line 32, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  display: block;
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+}
+/* line 41, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label.error {
+  width: 250px;
+  position: absolute;
+  top: -26px;
+  left: 89px;
+}
+/* line 48, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .radio-title {
+  display: inline-block;
+}
+/* line 51, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .form-input {
+  border: 1px solid #ab999c;
+  background: #461f22;
+}
+/* line 56, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .checker input {
+  -moz-opacity: "0"/100;
+  opacity: "0"/100;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=$value);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+/* line 60, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .form-element {
+  display: inline-block;
+}
+/* line 63, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .button-wrapper {
+  padding-bottom: 30px;
+}
+/* line 71, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_number {
+  margin-left: 105px;
+  width: 170px;
+}
+/* line 75, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_month {
+  margin: 0px 0 10px;
+  padding: 0px;
+  margin-left: 20px;
+}
+/* line 79, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_month #uniform-payment_card_month {
+  width: 120px !important;
+}
+/* line 81, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_month #uniform-payment_card_month span {
+  width: 115px !important;
+}
+/* line 86, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_year {
+  margin-left: 30px;
+  padding: 0px;
+}
+/* line 89, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_year #uniform-payment_card_year {
+  width: 100px !important;
+}
+/* line 91, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_year #uniform-payment_card_year span {
+  width: 105px !important;
+}
+/* line 96, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_cvv {
+  width: 95px;
+  padding: 0px;
+  margin-right: 60px;
+  clear: left;
+  margin-left: 105px;
+}
+/* line 102, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_cvv input {
+  width: 85px;
+}
+/* line 106, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_name {
+  width: 300px;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+/* line 110, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .payment_card_name #payment_card_name {
+  width: 300px;
+}
+/* line 114, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form p.instruction-text {
+  text-align: center;
+}
+/* line 117, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label[for="blank"] {
+  clear: both;
+  letter-spacing: 0px;
+  padding-top: 30px;
+  border-top: 1px solid #724d54;
+  text-align: center;
+}
+/* line 123, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label[for="blank"] .checker {
+  display: inline-block;
+  float: none;
+}
+/* line 126, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label[for="blank"] .checker input {
+  cursor: pointer;
+}
+/* line 129, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label[for="blank"] .checker span {
+  margin-top: 0px;
+}
+/* line 133, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form label[for="blank"] span {
+  text-transform: none;
+  font-weight: normal;
+  letter-spacing: 0px;
+  font-size: 13px;
+}
+/* line 141, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .heading-wrapper .heading-white-line {
+  border-bottom: 1px solid #724d54;
+  margin-bottom: 20px;
+  padding-top: 0px;
+}
+/* line 146, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .heading-wrapper .heading4 {
+  text-align: center;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 11px;
+}
+/* line 155, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .form-element.checkbox-wrapper {
+  width: 100%;
+  text-align: center;
+}
+/* line 158, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .form-element.checkbox-wrapper .form-checkbox-label {
+  text-align: center;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 11px;
+  float: none;
+  display: inline-block;
+  width: auto;
+}
+/* line 167, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .form-element.checkbox-wrapper .form-checkbox-label a {
+  text-decoration: underline;
+  color: #a0a0a0;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+}
+/* line 173, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .form .form-element.checkbox-wrapper .checker {
+  float: none;
+  display: inline-block;
+}
+/* line 182, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page fieldset .rte-wrapper:first-child {
+  border-bottom: 1px solid #724d54;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+/* line 189, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment-page .card_type {
+  margin: 0 0 0 105px;
+  padding-bottom: 0px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+/* line 203, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.left-payment-sec .comp-rich-text.rte-wrapper p {
+  color: white !important;
+  padding: 0px;
+}
+
+/* line 212, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.right-payment-sec .price-detail .price-detail__row.line {
+  border-top: 1px solid #83464b;
+  margin: 19px 0px;
+}
+/* line 216, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.right-payment-sec .price-detail .price-detail__row .price-detail--note {
+  padding: 0px;
+}
+
+/* line 224, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+#ecs-payment-page .ecs-payment-dummy-username, #ecs-payment-page .ecs-payment-dummy-password {
+  display: none;
+}
+
+/* line 228, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment .progressbar {
+  margin-left: 24px;
+  width: 87.4%;
+}
+
+/* line 232, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-payment .ecs-review-order-terms-section .error {
+  background: none;
+  position: absolute;
+  top: 35px;
+  width: 201px;
+  left: -12px;
+}
+
+/* line 239, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-review-order-terms-section {
+  width: 92%;
+  position: relative;
+}
+/* line 243, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-review-order-terms-section label {
+  float: left;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+/* line 254, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-review-order-terms-section li {
+  height: 20px;
+}
+/* line 257, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.ecs-review-order-terms-section li span {
+  float: left;
+  margin-top: 2px;
+}
+
+/* line 263, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.order-review__confirm {
+  width: 95%;
+}
+/* line 265, ../../../../../../includes/views/ecs_billing_payment/_desktop.scss */
+.order-review__confirm .js-orderack-confirm {
+  float: right;
+}
+
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+/* line 5, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.tab-collection-list {
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 12, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service .notification.ecs-repair-send-creation {
+  padding: 0px;
+}
+/* line 16, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service h2 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #a0a0a0;
+  text-transform: uppercase;
+}
+/* line 23, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service h3 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 15px 0;
+}
+/* line 28, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service h3 span {
+  color: #a0a0a0;
+}
+/* line 35, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service p {
+  padding: 5px 0;
+  font-style: italic;
+}
+/* line 40, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service .address-box {
+  padding: 15px 0;
+}
+/* line 42, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service .address-box h3 {
+  font-size: 11px;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  padding: 0 0;
+  font-weight: normal;
+}
+/* line 49, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service .address-box p {
+  color: #a0a0a0;
+  padding: 0 0;
+  font-style: normal;
+}
+/* line 55, ../../../../../../includes/views/tab_send_my_creation_repair_service/_desktop.scss */
+.repair-service a.telno {
+  color: #8d0115;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+}
+
+/*------------------------------------------------------------------------------*\
+    ECS REPAIR SERVICE 
+    TAB : SEND MY CREATION TO THE REPAIR CENTER -- DESKTOP CSS
+\*------------------------------------------------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.tab_repair_service)
+ */
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+/* line 15, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service .notification.ecs-repair-send-creation {
+  padding: 0px;
+}
+/* line 18, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service h2 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #a0a0a0;
+  text-transform: uppercase;
+}
+/* line 24, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service h3 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 15px 0;
+}
+/* line 29, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service h3 span {
+  color: #a0a0a0;
+}
+/* line 35, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service p {
+  padding: 5px 0;
+  font-style: italic;
+}
+/* line 39, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service .address-box {
+  padding: 15px 0;
+}
+/* line 41, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service .address-box .address-box__name {
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/* line 46, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service .address-box p {
+  color: #a0a0a0;
+  padding: 0 0;
+}
+/* line 51, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.tab_repair_service .repair-service a.telno {
+  color: #8d0115;
+  font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+}
+
+/* line 59, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.registration_page .ecsstep2 .notification {
+  padding-top: 5px;
+}
+
+/* line 66, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.repair-service .address-box p {
+  font-style: normal;
+}
+/* line 70, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.repair-service .address-box .addressrow p {
+  display: inline;
+  margin-right: 5px;
+}
+
+/* line 77, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.address-box *:first-child {
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px !important;
+  text-transform: uppercase;
+}
+
+/* line 82, ../../../../../../includes/views/tab_repair_service/_desktop.scss */
+.address-box + .comp-rich-text p b {
+  color: #8d0115;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------------------*\
+    ECS REPAIR SERVICE 
+    TAB : ENTRUST MY CREATION IN A BOUTIQUE -- DESKTOP CSS
+\*------------------------------------------------------------------------------*/
+/**
+ * MODULE CONTAINER ..... main container (.tab-entrust-boutique)
+ * BOUTIQUE SEARCH CONTAINER ...... search box and find button block(.boutique-search)
+ * BOUTIQUE SEARCH RESULT CONTAINER ..... search result including google map and boutique list block(.boutique-search-result)
+ */
+/*------------------------------------*\ 
+    $MODULE CONTAINER
+\*------------------------------------*/
+/* line 16, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .js-ga-cartier-boutiques {
+  margin-top: -35px !important;
+}
+/* line 19, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service {
+  border: 0 none;
+  padding-top: 0px;
+}
+/* line 22, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper {
+  border-bottom: 1px solid #595959;
+  /*------------------------------------*\
+      $BOUTIQUE SEARCH CONTAINER
+  \*------------------------------------*/
+  /*------------------------------------*\
+      $BOUTIQUE SEARCH RESULT CONTAINER
+  \*------------------------------------*/
+}
+/* line 23, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .heading3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: normal;
+}
+/* line 30, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .breadcrumb .heading3 {
+  padding-top: 0px;
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  display: inline;
+  padding-bottom: 0.4rem;
+}
+/* line 37, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .breadcrumb .heading3.selected {
+  font-weight: bold;
+  color: white;
+  line-height: 1.4em;
+}
+/* line 46, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .store-search-wrapper {
+  display: inline;
+}
+/* line 55, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .see-all.result {
+  display: inline;
+  position: relative;
+}
+/* line 60, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .tabparsys2 .boutique-search-wrapper {
+  border: 0 none;
+}
+/* line 65, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .result .store-locater__search {
+  width: 400px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+/* line 69, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .result .store-locater__search input {
+  width: 300px;
+  float: left;
+}
+/* line 73, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .result .store-locater__search .store-locater__find-button {
+  display: inline;
+}
+/* line 75, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .result .store-locater__search .store-locater__find-button .more-button {
+  background: none;
+  margin-top: 0px;
+}
+/* line 78, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search .result .store-locater__search .store-locater__find-button .more-button .arrow-show.js-search-but-1 {
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -431px -154px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 13px;
+}
+/* line 91, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search-result {
+  display: none;
+  margin-bottom: 80px;
+}
+/* line 92, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search-result .back-button {
+  margin-top: -101px;
+}
+/* line 94, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search-result .back-button a {
+  font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  background: url("/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/icons/sprite-desktop.png") -423px -155px no-repeat transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 13px;
+}
+/* line 104, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search-result .boutique-filter-wrapper {
+  border: 0 none;
+  display: inline-block;
+}
+/* line 107, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.tab-entrust-boutique .repair-service .boutique-search-wrapper .boutique-search-result .boutique-filter-wrapper .js-store-locator_error-msg-2 {
+  display: none;
+}
+
+/* line 116, ../../../../../../includes/views/tab_entrust_boutique/_desktop.scss */
+.js-ecsV3Registration .boutique-search-wrapper {
+  margin-top: 0px !important;
+  margin-left: -27px;
+}
+
+/* line 2, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .addressform_lastName1, .overlay-form-edit .js-address-form .addressform_address5 {
+  margin-top: 15px;
+}
+/* line 5, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form {
+  background: none;
+  border: 0 none;
+  margin: 0 0 0 20px;
+}
+/* line 9, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .label, .overlay-form-edit .js-address-form .form-element.input-wrapper.firstname1, .overlay-form-edit .js-address-form .form-element.input-wrapper.address7 {
+  width: 46%;
+  clear: left;
+}
+/* line 13, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-element.input-wrapper.lastname1 {
+  width: 49%;
+  margin-left: 8px;
+}
+/* line 18, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-element.input-wrapper.address2 {
+  float: left;
+  width: 46%;
+}
+/* line 23, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-element.input-wrapper.address5 {
+  width: 49%;
+  margin-left: 8px;
+}
+/* line 27, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-element.input-wrapper.address12 {
+  width: 21%;
+}
+/* line 30, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .non-mandatory.form-element.input-wrapper.phone {
+  width: 46%;
+  margin-left: 8px;
+}
+/* line 34, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-element.input-wrapper.zip {
+  clear: left;
+  width: 49%;
+}
+/* line 38, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-address-selector__radio {
+  margin-top: 41px;
+}
+/* line 41, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-address-selector__bracket {
+  margin-top: 34px;
+}
+/* line 45, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .radio span {
+  background-position: -54px -461px;
+}
+/* line 48, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .radio .checked {
+  background-position: -70px -460px;
+}
+/* line 52, ../../../../../../includes/views/my_address_popup/_desktop.scss */
+.overlay-form-edit .js-address-form .form-address-selector {
+  height: 202px;
+}
+
+/* line 1, ../../../../../../includes/components/video_content/_desktop.scss */
+.ecs-video-component {
+  display: block;
+  min-height: 180px;
+  padding-bottom: 15px;
+}
+/* line 6, ../../../../../../includes/components/video_content/_desktop.scss */
+.ecs-video-component .heading2 {
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 11, ../../../../../../includes/components/video_content/_desktop.scss */
+.ecs-video-component p {
+  color: white;
+  letter-spacing: 0px;
+}
+/* line 17, ../../../../../../includes/components/video_content/_desktop.scss */
+.ecs-video-component .comp-rich-text .content-medias {
+  max-width: 30%;
+}
+/* line 20, ../../../../../../includes/components/video_content/_desktop.scss */
+.ecs-video-component .comp-rich-text .videocontainer {
+  border: 1px solid #666666;
+  float: right;
+  height: 180px;
+  margin: 0px;
+  padding: 0px;
+  width: 320px;
+}
+/* line 28, ../../../../../../includes/components/video_content/_desktop.scss */
+.ecs-video-component .comp-rich-text p {
+  display: inline-block;
+  width: 645px;
+  position: relative;
+  font-size: 12px;
+}

@@ -1,0 +1,62 @@
+/*------------------------------------*\
+   Captcha Select Box -- Mobile CSS
+\*------------------------------------*/
+/**
+ * Captcha CONTAINER.... (.captcha)
+ * INPUT TEXT BOX CONTAINER.... (.captcha_input)
+ * IMAGE BOX CONTAINER.... (.captcha_image_container)
+ * CAPTCHA INFORMATION BOX .... (.captcha__description, .userinfo)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.captcha{
+
+    @include brand-font;
+    @include font-color($primary-2);  
+    display: block;
+    background: $primary-1; 
+    margin: 0 auto; 
+    @include rem('padding', 20px 0px);  
+
+  
+
+    .captcha__image__container {
+        display: block;
+        @include rem('height', 60px); 
+        @include rem('margin-top', 20px);
+        position: relative;
+
+        > .captcha__input{
+            background:$primary-16;
+            border: 1px solid $primary-14;
+            @include font-color($primary-2); 
+            @include f(24); 
+            display: inline-block;
+            float: left;
+            @include rem('margin-right', 10px); 
+            @include rem('width' ,165px); 
+        }
+
+        .img {
+            
+            float: left;
+        }
+         span.error {
+            position: absolute;
+            @include rem('top' , 55px);
+
+        }
+    }
+    
+    .captcha__description{
+    @include font-color($primary-3); 
+    @include rem('margin-top' , 25px);
+    
+
+    
+    }
+
+}

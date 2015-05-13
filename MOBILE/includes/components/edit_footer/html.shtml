@@ -1,0 +1,28 @@
+<!-- back button Starts Here-->
+<div class="edit-footer">
+
+	<div class="edit-footer__address">
+			
+			<span class="address">
+					<span>jean dupont</span>
+					250 fifth Avenue<br/>
+					New york <br/>
+					NY<br/>
+					10170-0001<br/>
+					011111111
+			</span>
+
+	</div>
+	<div class="edit-footer__edit">
+				
+				<div class="edit-address">
+						<span > edit</span> 
+						<a class="edit-icon"> </a>
+				</div>
+				<!-- <div style="float:left;">aaa</div>
+				<div style="float:right;">aaa</div> -->
+	</div> 
+
+</div>
+
+<!-- back Button  Ends Here-->

@@ -1,0 +1,61 @@
+/*------------------------------------*\
+   condtion of sale -- MOBILE CSS
+\*------------------------------------*/
+/**
+	* condtion of sale template css
+
+*/
+
+.condition-of-sale {
+	width: 81.25%;
+	margin: 0 auto;
+	@include f(26);
+	.heading2 {
+		@include rem('padding-bottom',50px); 
+		border-bottom: 1px solid $primary-3;
+		@include rem('line-height',37px);
+		
+	}
+	.faq-view {
+		width: 100%;
+		ol {
+				@include f(40);
+				margin-bottom: 0;
+				color: $primary-3;
+				li {
+						@include rem('margin-left',0px);
+						@include rem('padding-left',13px);
+					}
+			
+		}
+		.faq-view__wrapper {
+			.faq-view_node__title {
+				display: inline-table;
+				width: 92%;
+				@include rem('padding',18px 0);
+				@include rem('top',2px);
+				.faq-view_node_title__ques {
+					@include rem('min-height',56px);
+					
+						p,h2{
+							@include bold-font;
+							color: $primary-3;
+						}
+						h2 {
+							@include f(26);
+						}
+				}
+			}
+
+		}
+	} 
+}
+
+
+.condition-of-sales{
+	.faq-view-rte{
+		width: 81.25%;
+		word-wrap: break-word;
+		margin: 10px auto;
+	}
+}

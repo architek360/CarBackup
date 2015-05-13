@@ -1,0 +1,7 @@
+<div class="form-element input-wrapper <!--#echo var="class-name" -->">
+  	<label for="<!--#echo var="input-name" -->" class="form-label"><!--#echo var="label-name" --></label>
+  	<input type="<!--#echo var="input-type" -->" name="<!--#echo var="input-name" -->" id="<!--#echo var="input-name" -->" value="" autocomplete="" class="form-input <!--#echo var="input-class-name" -->">
+</div>
+
+
+

@@ -1,0 +1,12 @@
+<!-- Billing Confirmation Block Starts Here-->
+
+<div class="grid js-billing">
+  <div class="grid__item three-quarters">
+    <!--#include virtual="../../components/billing_confirmation/desktop.shtml" -->
+  </div>
+  <div class="grid__item one-quarter shopping-bag-rt-col"> 
+    <div class="price-details-bg"><!--#include virtual="../../views/price_details/desktop.shtml" --> 	</div>
+    <!--#include virtual="../../views/return-exchange/desktop.shtml" --> 
+  </div>
+</div>
+<!-- Billing Confirmation Block Ends Here-->

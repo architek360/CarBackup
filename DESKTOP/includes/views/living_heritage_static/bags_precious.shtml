@@ -1,0 +1,69 @@
+<div class="row grid clearfix pb98">
+    <div class="column grid__item w448">
+        <div class="column grid__item nomargin one-whole">
+            <!--#set var="imgclass" value="left" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}precious_bags.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+        <div class="column grid__item one-whole">
+            <p class="border-wrapped bold">
+            From the 1920s, Louis Cartier's closest collaborator, Jeanne Toussaint, led the company to pay more attention to evening bags and pouches. These quintessential feminine accessories began to show touches of the jeweler's art, inspiration and expertise. Decorative clasps and closures, in particular, were made with as much care as the pieces of jewelry that often accompanied them. Other bags were distinguished by the brocade or the Chinese and Persian embroidery associated with dresses by Poiret, Lelong or Lanvin.
+            </p>
+        </div>
+    </div>
+    <div class="grid__item fright w448">
+        <div class="row grid relative clearfix">
+            <div class="column grid__item">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}clutch_bag.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole nomargin align-right box-absolute w286">
+                <h2>CLUTCH BAG</h2>
+                <h3>CARTIER PARIS, 1927</h3>
+                <p>
+                Silver, yellow gold, mother-of-pearl, coral, rose-cut diamonds, jade, onyx, red enamel (clasp), black enamel, green suede.
+                </p>
+                <p class="productdata">
+                17.0 x 28.0 cm
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row grid">
+    <div class="column grid__item w445 mt92">
+        <div class="column grid__item one-whole">
+            <!--#set var="imgclass" value="left" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}evening_bag.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+        <div class="column grid__item">
+            <h2>EVENING BAG</h2>
+            <h3>CARTIER NEW YORK, 1957</h3>
+            <p>
+            14 karat yellow gold, platinum, carved coral, old-, baguette- and brilliant-cut diamonds, emerald and sapphire cabochons, black velvet.<br><br> Bark-gold satin lining, four pockets.<br><br>Provenance: María Félix (1914-2002). Mexican diva and archetypal Latin femme fatale, Félix was well known in Mexico and France for films by Emilio Fernandez, Jean Renoir, and Luis Buñuel. She was a true reptile lover.                    </p>
+            <p class="productdata">
+            18.0 x 17.0 cm
+            </p>
+        </div>
+
+    </div>
+    <div class="column grid__item w483 fright">
+        <div class="column grid__item one-whole ">
+            <!--#set var="imgclass" value="left" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}handbag.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+
+        <div class="column grid__item">
+            <h2>HANDBAG</h2>
+            <h3>CARTIER PARIS, COMMISSIONED IN 1961</h3>
+            <p>
+            Yellow gold, marquise-shaped emeralds (eyes), black enamel (stripes), brilliant- and single-cut diamonds, black satin.<br><br>This handbag features the initial of Princess Nina Mdivani, to whom it was given as a gift.<br><br>Black satin lining, six pockets, a mirror, and a black satin card holder.<br><br>Commissioned by Barbara Hutton.<br>Barbara Hutton (1912–1979) was the granddaughter of the founder of the Woolworth’s retail chain, and one of the richest women in the world. On June 23, 1933,she married the Russian prince Alexis Mdivani, the first of her seven husbands. For her wedding, she wore an extraordinary pearl necklace and a diamond-studded tortoiseshell tiara, both made by Cartier. An enthusiast for magnificent jewelry, she became one of the firm’s most loyal clients.                  </p>
+            <p class="productdata mb20">
+            26.9 x 20.0 cm
+            </p>
+        </div>
+    </div>
+</div>

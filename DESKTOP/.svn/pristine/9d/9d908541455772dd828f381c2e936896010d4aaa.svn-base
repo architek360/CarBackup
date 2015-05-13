@@ -1,0 +1,3 @@
+<button type="submit" class="cta-button cta-button__inner <!--#echo var="cta--varaint" -->">
+	<span class="cta-button__input"><!--#echo var="text-detail" --></span>
+</button>

@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "serverMessage": "Some Server Message",
+    "content": {
+        "Label": "product line 2",
+        "list": [
+            "jewelry",
+            "timepices"
+
+        ]
+    }
+}

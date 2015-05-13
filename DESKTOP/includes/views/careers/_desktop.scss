@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    CAREERS -- DESKTOP CSS
+\*------------------------------------*/
+/**
+	
+*/
+
+/*------------------------------------*\
+   CAREERS
+\*------------------------------------*/
+
+
+.careers {
+	width: 100%;
+	margin: 0 auto;
+	display: inline-block;
+	.heading2 {
+		@include rem('padding-bottom',0px);
+		border-bottom:none;
+		@include rem('margin-bottom',20px);
+	}
+	h4 {
+		@include rem('margin-bottom',10px);
+		padding: 0;
+		@include f(11);
+		color:$primary-3;
+		@include main-font;
+		@include rem('letter-spacing', 1px);
+	}
+	p {
+		@include rem('margin-bottom',10px);
+		padding: 0;
+		color:$primary-3;
+		@include f(11);
+	}
+	
+	p:last-child{
+		@include rem('margin-bottom',64px);
+	}
+
+	.careers__image{
+		float:left;
+		@include rem('margin-right',15px);
+
+		img{
+			border:1px solid $primary-17;
+		 }
+	}
+
+	a{
+		color:$primary-2;
+		text-decoration:none;
+		font-weight:100;
+
+		&:hover{
+			color:$primary-3;
+		}
+	}
+
+	.careers__content{
+		@include rem('margin-bottom',30px);
+	}
+}

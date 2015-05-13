@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    Services-pushes Component -- Desktop CSS
+\*------------------------------------*/
+.services-pushes{
+	width: 100%; 
+	
+	@include rem('margin', 33px 0px 0px 0px);
+	.pushes-wrapper {
+		display: inline-block;
+		width: 100%;
+		li {
+			@include rem('margin-bottom', 20px);
+		}
+		.grid {
+			margin-left:0;	
+		}
+
+		.grid__item {
+			padding-left:0;
+		}
+		img {
+			background-size: cover;
+			max-width: 100%;
+			max-height:100%;
+			vertical-align: middle;
+		}
+
+		.one-third {
+   			@include rem('margin-right', 15px);
+			width: 32.3%;
+		}
+		.one-third:nth-child(3n){
+			margin-right: 0;
+		}
+
+	}
+}
+
+.services-pushes.c-pushes-480 .pushes-wrapper .one-third{
+	width:480px;
+	@include rem('margin-right', 10px);
+	 height:187px;	
+	 img{
+	 	height:187px;	
+	 }
+}
+.home-carousel + .services-pushes{
+	@include rem('margin', 32px 0 100px);
+}
+
+

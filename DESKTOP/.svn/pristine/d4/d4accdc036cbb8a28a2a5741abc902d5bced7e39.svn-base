@@ -1,0 +1,123 @@
+<div class="social-share js-social-share">
+	<p>Share</p>
+	<ul>
+		<li> <a href="#" class="social-share__facebook" target="_blank">Facebook</a> </li>
+		<li> <a href="#" class="social-share__twitter" target="_blank">Twitter</a><input type="hidden" class="twitterPagePath" value="pagepath"> </li>
+		<li> <a href="#" class="social-share__pin-it" target="_blank">Pinterest</a> </li>
+		<li> 
+			<a href="#" class="social-share__email js-social-share__email" >Mail</a> 
+			<div class="social-share__email-form js-social-share__email-form">
+				<div class="js-form-validator">
+				<form>
+				<div class="email-form__wrapper ">
+					<h3 class="email-form__heading">Send to a friend</h3>
+					<h4 class="email-form__sub-heading">Your personal information</h4>
+					
+		            <div class="grid__item grid__item--row one-whole palm--one-whole">
+		                <!--#set var="label-name" value="first name" -->
+		                <!--#set var="mandatory" value="yes"-->
+		                <!--#set var="input-name" value="fn_fname" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="input-prop" value="form-input" -->    
+		                <!--#set var="input-type" value="text" -->
+		                <!--#include virtual="../../components/form_elements/input.shtml" -->
+		                
+		            </div>
+
+		            <div class="grid__item grid__item--row one-whole palm--one-whole">
+		                <!--#set var="label-name" value="last name" -->
+		                <!--#set var="mandatory" value="yes"-->
+		                <!--#set var="input-name" value="fn_lname" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="input-prop" value="form-input" -->    
+		                <!--#set var="input-type" value="text" -->
+		                <!--#include virtual="../../components/form_elements/input.shtml" -->
+		                
+		            </div>
+
+
+		            <div class="grid__item grid__item--row one-whole palm--one-whole">
+		                <!--#set var="label-name" value="email address" -->
+		                <!--#set var="mandatory" value="yes"-->
+		                <!--#set var="input-name" value="j_username" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="input-prop" value="form-input" -->    
+		                <!--#set var="input-type" value="email" -->
+		                <!--#include virtual="../../components/form_elements/input.shtml" -->
+		                
+		            </div>
+
+
+
+
+		            <div class="grid__item receive-message">
+		                <!--#set var="checkbox-value" value="true" -->
+		                <!--#set var="checkbox-label-name" value="I wish to receive a copy of my message" -->
+		                <!--#set var="checkbox-name" value="fn_recvmessage" -->
+		                <!--#set var="checkbox-class" value="receive-message__label js-validation-ignore" -->
+		                <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+		            </div>
+
+		            <h4 class="email-form__sub-heading">information about your friend</h4>
+
+	 				<div class="grid__item grid__item--row one-whole palm--one-whole">
+		                <!--#set var="label-name" value="first name" -->
+		                <!--#set var="mandatory" value="yes"-->
+		                <!--#set var="input-name" value="fn_fname_recv" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="input-prop" value="form-input" -->    
+		                <!--#set var="input-type" value="text" -->
+		                <!--#include virtual="../../components/form_elements/input.shtml" -->
+		                
+		            </div>
+
+		            <div class="grid__item grid__item--row one-whole palm--one-whole">
+		                <!--#set var="label-name" value="last name" -->
+		                <!--#set var="mandatory" value="yes"-->
+		                <!--#set var="input-name" value="fn_lname_recv" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="input-prop" value="form-input" -->    
+		                <!--#set var="input-type" value="text" -->
+		                <!--#include virtual="../../components/form_elements/input.shtml" -->
+		                
+		            </div>
+
+
+		            <div class="grid__item grid__item--row one-whole palm--one-whole">
+		                <!--#set var="label-name" value="email address" -->
+		                <!--#set var="mandatory" value="yes"-->
+		                <!--#set var="input-name" value="j_username_recv" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="input-prop" value="form-input" -->    
+		                <!--#set var="input-type" value="email" -->
+		                <!--#include virtual="../../components/form_elements/input.shtml" -->
+		                
+		            </div>
+
+
+		             <div class="grid__item grid__item--pad one-whole palm--one-whole">
+		                <!--#set var="label-name" value="message" -->
+		                <!--#set var="mandatory" value="no"-->
+		                <!--#set var="input-name" value="fn_msgdesc1" -->
+		                <!--#include virtual="../../components/form_elements/label.shtml" -->
+		                <!--#set var="textarea-name" value="" -->
+		                <!--#include virtual="../../components/form_elements/text_area.shtml" -->
+		                
+		            </div>
+
+		             <div class="next-step-cta clearfix">
+		                <!--#set var="text-detail" value="send" -->
+		                <!--#set var="cta--varaint" value="cta--red-width-auto" -->
+		                <!--#include virtual="../../components/form_elements/button.shtml" -->
+		            </div>
+		            <input type="hidden" name="fn_title" value=""/>
+					<input type="hidden" name="fn_titleimgsrc" value=""/>
+					<input type="hidden" name="fn_titleurl" value=""/>
+					<textarea class="hidden-textarea" name="fn_titledesc"></textarea>
+	            </div>
+	            </form>
+	            </div>
+			</div>
+		</li>
+	</ul>
+</div>

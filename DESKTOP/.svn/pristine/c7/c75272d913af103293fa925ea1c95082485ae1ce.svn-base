@@ -1,0 +1,211 @@
+/*------------------------------------*\
+    highlight-pushes Component -- Desktop CSS
+\*------------------------------------*/
+.highlight-pushes{
+
+	width: 100%; 
+	@include rem('padding-top', 20px );
+	@include rem('margin', 20px 0px 1px 0px);
+
+	color: $primary-2;
+	.title-pushes {
+		font-size: 11px;
+    	font-weight: bold;
+    	letter-spacing: 0.1em;
+    	text-transform: uppercase;
+    	margin-bottom: 1em;
+    	@include proxiBold-font();
+    	text-align: center;
+		padding: 0;
+		line-height: normal;
+	}
+	.pushes-wrapper {
+
+		li {
+			@include rem('margin-bottom', 20px);
+			display: inline-block;
+
+			.highlight_class{
+				width: 100%;
+			}
+		}
+		.grid {
+			margin-left:0;	
+		}
+		
+		.grid__item {
+			padding-left:0;
+		}
+
+		.one-half{
+			width: 48%;
+		}
+
+		.one-third{
+			margin-right: 15px;
+			width: 31.5%;
+		}
+
+		.one-quarter{
+			width: 23.3%;
+			margin-right: 15px;
+		}
+
+		.one-whole{
+			width: 97.3%;
+		}
+	}
+}
+
+.highlight_class{
+	.push-link{
+		display: block;
+
+		.push-col_title{
+			@include proxi-font();
+			font-weight: bold;
+			@include f(10);
+			@include rem('padding-top', 25px);
+			@include rem('line-height', 14px);
+			@include rem('letter-spacing', 1px);
+			text-transform: uppercase;
+		}
+
+		.push-over .more-button{
+			@include rem('margin-top', 5px);
+		}
+	}
+}
+
+.editorial-pushes{
+	width: 100%;
+
+	.heading1{
+		@include f(25);
+		@include rem('padding-bottom', 5px);
+	}
+
+	.ecomm{
+		color: #b4b3B3;
+		@include f(12);
+		font-style: italic;
+		@include main-font();
+		text-align: center;
+	}
+
+	.highlight_class{
+		width: 100%;
+	}
+
+	.listing-header-pushes{
+		display: block;
+		@include rem('margin', 20px 0 10px);
+		
+		.grid__item{
+			padding-left: 16px;
+		}
+
+		.highlight_class{
+			height: auto;
+			margin-right: 0;
+
+			.pushes-wrapper_push img{
+				height: 173px;
+				padding:0;
+			}
+		}
+
+		.push-over{
+			height: 173px;
+			background: none;
+
+			.push-col_title{
+				@include proxi-font();
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				@include f(15);
+				font-weight: normal;
+				@include rem('padding-top', 65px);
+
+			}
+
+			.more-button{
+				color: $primary-2;
+				@include f(11);
+				@include rem('margin-top', 10px);
+			}
+		}
+	}
+
+	.grid {
+		margin-left:-16px;	
+	}
+}
+
+.push-highlight{
+	display: inline-block;
+	width: 100%;
+	@include rem('margin-bottom', 30px);
+
+	.title-pushes {
+		@include f(11);
+    	letter-spacing: 1px;
+    	text-transform: uppercase;
+    	@include rem('margin-bottom', 10px);
+    	@include proxiBold-font();
+    	text-align: center;
+		padding: 0;
+		line-height: normal;
+	}
+	.pushes-wrapper{
+
+		.grid__item{
+			padding-left: 16px;
+			margin-right: 0;
+		}
+
+		.one-half{
+			width: 50%;
+		}
+
+		.one-third{
+			width: 33.333%;
+		}
+
+		.one-quarter{
+			width: 25%;
+		}
+
+		.one-whole{
+			width: 100%;
+		}
+
+		.pushes-wrapper-service-push{ 
+			.push-col{
+				height: 116px;
+			}
+
+			.push-hover{
+				height: 35px;
+
+				.push-col_title{
+					height: 35px;
+
+					.text-link{
+						@include f(14);
+					}
+				}
+
+				.more a{
+					letter-spacing: 0;
+					padding-top: 10px;
+					color: $primary-2;
+				} 
+			}
+		}
+	}
+
+	.grid {
+		margin-left:-16px;	
+	}
+}

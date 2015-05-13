@@ -1,0 +1,265 @@
+/*------------------------------------*\
+    PERSONAL INFO -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.personal-info)
+ * PERSONAL DETAILS....personal details (.personal-details)
+ * BIRTHDAY DETAILS....birthday details (.personal-details)
+ * MOBILE DEVICES DETAILS....(.mobile-device)
+*  OWNED CREATIONS DETAILS (.owned-creations)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+@mixin personal-info-box(){
+	@include f(20);
+	border:1px solid $primary-17;
+	@include rem('padding',24px 24px 0px 24px);
+	@include rem('margin',0px 0 22px 0);
+	display:inline-block;
+	text-transform:uppercase;
+	@include bold-font;
+	@include box-sizing(border-box);
+}
+
+.personal-info-c1{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	margin: 0 auto;
+	width:82.25%;
+
+	.heading2{
+		@include f(28);
+		@include rem(padding, 20px 0 20px 0);
+	}
+
+	.profile-message{
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		display:table;
+		margin:0 auto;
+		@include f(28);
+		@include main-font;
+		font-style:italic;
+		@include rem('padding', 20px 0);
+	}
+
+	.personal-info__heading{
+		@include f(28);
+		@include rem(padding, 25px 0 10px 0);
+		text-transform:uppercase;
+		text-align:center;
+		@include medium-font;
+	}
+
+	.personal-info__welcome-image{
+		height: 100%;
+ 		width: 100%;
+ 		height: 238px;
+  		background:url($path-images+"/content/personal-information.jpg") no-repeat;
+  		background-position: top center;
+	}
+
+	.grid__item{
+			@include rem('padding',0px);
+			label{
+				@include bold-font;
+				@include f(20);
+			}
+
+			/*&:last-child{
+				padding:0;
+			}*/
+			.radio-btn{
+				@include rem('padding',0 0 33px);
+				@include rem('margin',15px 0 0px);
+			}
+			.radio-btn + span {
+				@include rem('margin',-29px 0 0px);
+			}
+	}
+
+	.grid__item--row{
+
+		@include rem('min-height',120px);
+
+		input + span {
+			height: 35px
+		}
+	}
+	.two-row-line{
+		@include rem('margin-bottom',20px);
+	}
+	
+	.grid__item--pad{
+		@include rem('padding',0 0 20px 0);
+	}
+
+	/*------------------------------------*\
+	    $PERSONAL DETAILS
+	\*------------------------------------*/
+	.personal-details{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		@include personal-info-box;
+
+		.form-select{
+			@include main-font;
+		}
+		.newpass{
+			display:none;
+		}
+	}
+	/*------------------------------------*\
+	    $BIRTHDAY DETAILS
+	\*------------------------------------*/
+	.birthday-details{
+		@include personal-info-box;
+		@include rem('padding-bottom',35px );
+
+		.birthday-details__heading{
+			color:$primary-3;
+			@include f(22);
+			@include rem('padding',0 0 25px 0);
+			@include main-font;
+			text-transform:none;
+		}
+		.birthday-details__form-select{
+			@include set-ulFix;
+
+			li{
+				display:inline-block;
+				width:32.2%;
+			}
+		}
+
+		.form-select{
+			text-transform:uppercase;
+			@include main-font;
+		}
+	}
+	
+	/*------------------------------------*\
+	    $MOBILE DEVICES DETAILS
+	\*------------------------------------*/
+
+	.mobile-device{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		@include personal-info-box;
+		@include rem('margin',8px 0 22px 0);
+		@include rem('padding-bottom',12px);
+		.grid__item:last-child {
+			@include rem('margin',35px 0 0 0);
+		}
+
+
+		.mobile-device__list{
+			@include set-ulFix;
+
+			li{
+				display:inline-block;
+				vertical-align: top;
+    			width: 49%;
+
+				.form-check{
+					@include brand-font;
+					display:block;
+					width:100%;
+					@include f(20);
+					label{
+						display:inline-block;
+						width:100%;	
+					}
+
+					.form-check-label{
+						width:72%;
+					}
+				}
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $OWNED CREATIONS DETAILS
+	\*------------------------------------*/
+	.owned-creations{
+		.slide_switch{
+			@include rem( 'margin-top', 20px );
+			@include rem( 'margin-bottom', 30px );
+			@include rem( 'margin-left', 0px );
+		}
+
+		.owned-creations-label{
+			@include rem( 'margin-top', 40px );
+			@include bold-font;
+		}
+		.form-label{
+			@include brand-font;
+		}
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		@include personal-info-box;
+		@include rem('margin',8px 0 36px 0);
+		@include rem('padding-bottom',38px);
+		li{
+			margin-right:140px;
+		}
+		.form-select{
+			@include rem('margin-bottom',17px);
+		}
+		.radio-main-label{
+			@include rem('padding-bottom',12px);
+		}
+			.added-creation {
+		
+		border: 1px solid $primary-3;
+		@include rem( 'margin-top', 20px );
+		.added-creation__name {
+			@include f(20);
+			@include bold-font;
+		  	@include rem( 'padding', 10px);
+				width: 86% ;
+				display : inline-block;
+		}
+		.delete-icon {
+			@include setSprite(27px, 29px, -623px, -135px);           
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			position:relative;
+			top:-8px;
+			right: 0;
+			}
+
+	}
+			
+	}
+	.creation-link {
+		display: inherit;
+		@include brand-font;
+		@include f(12);
+		.creation-arrow {
+				@include setSprite(10px, 20px ,-577px,-17px);
+		}
+			
+	}
+	.action-button{
+		text-align:center;
+		@include rem(margin, 20px 0 0 0);
+		clear:both;
+
+		.cta-button{
+			@include rem('margin-bottom',0px);
+		}
+	}
+
+	.slide_switch label {
+		@include rem(padding-top, 3px);
+	}
+}
+
+.creation-link { 
+	@include brand-font!important;
+	@include f(12)!important; 
+}

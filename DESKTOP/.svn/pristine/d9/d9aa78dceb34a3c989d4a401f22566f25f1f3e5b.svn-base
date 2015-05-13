@@ -1,0 +1,36 @@
+<div id="pop-up-content-wrapper" class="js-pop-up-content-wrapper">
+	<span class="header_bag js-bag-item">
+		ITEMS IN YOUR SHOPPING BAG
+	</span>
+	<div class="wrapper-items va-accordion-bag">
+	  <div class="va-nav"> <span class="js-less-arrow less-arrow"></span> <span class="js-more-arrow more-arrow"></span></div>
+	  <ul class="sub-menu js-teaseure-container">
+	    <li class="first js-teasure">
+	      <img  class="js-img" src="<!--#echo var="CONTENT_IMG_PATH" -->double_c_logo_belt.png" class="image" alt=""/>
+			<div class="description">
+				<span class="total-product js-total-product ">1x</span>
+				<span class="product-name js-product-name">double c logo belt</span>
+				<span class="product-description js-product-description">Black cowhide, palladium-finish</span>
+				<span class="refer-no js-refer-no">Ref: <a href="#">L5000523</a> </span>
+				<span class="amount js-amount">$580</span>
+			</div>
+		</li>
+
+	  </ul>
+	</div>
+	<div class="price-details">
+		<div class="subtotal">
+			<span class="js-sub-total">Subtotal: </span>
+			<span class="js-total-info">excl. sales tax</span>
+		</div>
+
+		<div class="total_in_number">
+			<span class="js-total">$1,200.00</span>
+		</div>
+
+	</div>
+		 <!--#set var="text-detail" value="CHECKOUT" -->
+         <!--#include virtual="../../components/form_elements/desktop_button.shtml" -->
+
+	
+</div>

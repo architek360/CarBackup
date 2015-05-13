@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+
+<!--#set var="back-static-text" value="Back" -->
+<!--#set var="COMP_1" value="back_button" -->
+
+<!--#set var="VIEWS_1" value="repair_service_registered" -->
+
+<!--#set var="MODULE" value="" -->
+<!--#set var="PAGE" value="repair_service" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#include virtual="../templates/base.shtml" -->

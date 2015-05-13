@@ -1,0 +1,5 @@
+<!-- Select Box Starts Here-->
+    <select class="form-select <!--#echo var="style-name" -->" name="<!--#echo var="input-name" -->">
+        <!--#include virtual="../form_elements/${option-component}.shtml" -->
+    </select>
+<!-- Select Box Ends Here-->

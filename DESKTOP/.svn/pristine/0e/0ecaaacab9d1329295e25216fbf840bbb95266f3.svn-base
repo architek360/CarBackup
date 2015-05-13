@@ -1,0 +1,99 @@
+<!-- tab cash on delivery Block Starts Here-->
+<div class="cash-delivery">
+	<div class="message-box">
+		<h3 class="heading3">cash on delivery (daibiki)</h3>
+		<p class="message">We offer this means of payment on purchases up to 1 million Yen (including tax).</p>
+		<p class="message">Please note that credit or debit card cannot be accepted for Cash on Delivery purchases.</p>
+	</div>
+
+<!--   	<div class="my-address__box">
+            <h3 class="heading3">shipping address</h3>
+            <p class="address"> 
+                Gerald J. Baker
+                </br>86 Pheasant Ridge Road
+                </br>12144 43234234
+                </br>Tokyo, Japan
+            </p>
+            <div class="address-button"><a href="#">edit <span class="edit-icon"></span></a></div>
+    </div>
+
+    <div class="my-address__box">
+            <h3 class="heading3">delivery method</h3>
+            <p class="message">Express Shipping (5-7 days)</p>
+            <p class="address">If you place your order today, the estimated delivery date is Monday June 13,2014</p>
+            <div class="address-button"><a href="#">edit <span class="edit-icon"></span></a></div>
+    </div>
+
+ -->
+    <!-- ACCORDION PRODUCT INFO-->
+
+    <div class="cash-delivery-accordion clearfix">
+        <div class="js-accordion cash-delivery-accordion__wrapper">
+             <div class="js-accordion__node cash-delivery-accordion__node">
+                <div class="js-accordion_node__title cash-delivery-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="cash-delivery-accordion_node_title__ques">
+                        <p>shipping address</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc cash-delivery-accordion_node__desc">
+                    <p class="address"> 
+                        Gerald J. Baker
+                        </br>86 Pheasant Ridge Road
+                        </br>12144 43234234
+                        </br>Tokyo, Japan
+                    </p>
+                    <div class="address-button"><a href="#">edit <span class="edit-icon"></span></a></div>
+                </div>
+            </div>
+
+             <div class="js-accordion__node cash-delivery-accordion__node">
+                <div class="js-accordion_node__title cash-delivery-accordion_node__title heading3">
+                    <span class=""></span>
+                    <div class="cash-delivery-accordion_node_title__ques">
+                        <p>description</p>
+                    </div>
+                </div>
+                <div class="js-accordion_node__desc cash-delivery-accordion_node__desc">
+                    <p class="address">Express Shipping (5-7 days)<br/>If you place your order today, the <br/>estimated delivery date is<br/> Monday June 13,2014</p>
+                    <div class="address-button"><a href="#">edit <span class="edit-icon"></span></a></div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="terms-condition">
+        <!--#set var="checkbox-value" value="value" -->
+        <!--#set var="checkbox-label-name" value="I agree the terms and conditions of this site." -->
+        <!--#set var="checkbox-name" value="fn_chktnc" -->
+
+        <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+    </div>
+
+
+
+
+
+
+
+
+	<div class="placeorder-btn clearfix">
+		<!--#set var="text-detail" value="place order now" -->
+    	<!--#set var="cta--varaint" value="cta--red" -->
+    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+	</div>
+</div>
+ <!-- tab cash on delivery Block Ends Here-->

@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    Services -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.services)
+ * SERVICE BLOCK.... (.services__block)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.services{
+	@include font-color($primary-2);
+	text-align: center;
+	width:81.25%;
+	margin:0 auto;
+	.heading3{
+		@include bold-font;
+	}
+	.grid {
+		margin-left:0;
+	}
+	.grid__item {
+		padding-left:0;
+	}
+
+    img {
+		width: 100%;
+		@include rem(height,148px);
+	}
+	.services_block__text{
+		display:table;
+		@include rem(height,148px);
+		width:41%;
+		a{
+			@include font-color($primary-2);
+			display: table-cell;
+			vertical-align: middle;
+			@include f(16);
+			word-break: break-all;
+			word-wrap: break-word;
+
+			p{
+				@include f(16);
+				text-align: center;
+				padding:0;
+				@include rem(line-height,22px);
+				width: 75%;
+				margin: 0 auto;
+			}
+		}
+	}
+	.services__block {
+		border:1px solid $primary-6;
+		@include rem(margin-bottom, 24px);
+		position:relative;
+		height: 168px;
+	}
+	.image-right{
+		.services_block__image{
+			float:right;
+		}
+		.services_block__text{
+			float:left;
+		}
+
+
+
+
+	}
+
+	.services_block__image{
+		display: block;
+		vertical-align: middle;
+		line-height: 170px;
+		@include rem('height', 170px);
+		width: 61%;
+		img{
+			background-size: cover;
+			max-width: 100%;
+			max-height: 100%;
+			vertical-align: middle;
+			width: auto;
+			height: auto;
+		}
+	}
+}
+.servicegrid{
+		display: table;
+		.clearfix{
+			&:before, &:after{
+				content: " ";
+    			display: table;
+			}
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+			@include rem('max-height', 148px);
+			width: auto;
+		}
+		.services_block__image{
+			display: table;
+			width:59%; 
+			height:148px; 
+			a{
+				@include rem('height', 148px);
+				@include rem('line-height', 148px);
+				vertical-align: middle;
+				display: table-cell;
+				text-align:center;
+			}
+		}
+		.services__block{
+			height: auto;
+		}
+	}

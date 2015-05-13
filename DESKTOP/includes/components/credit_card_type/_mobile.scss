@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    Credit card_type -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.card-type)
+ * LIST CONTAINER .... (ul)
+ * CLASSES FOR CREDIT CARD ICONS ( e.g. mastercard ) are in /sass/_mobile.scss
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.card-type {
+
+	@include brand-font;
+	color:white;
+	display: block;
+	background: $primary-1;
+	margin: 0 auto;
+	@include rem('padding', 48px 0px 9px);
+	width:100%;
+	height:304px;
+	.card-type__title {
+		@include f(22);
+		@include bold-font;
+		text-align: left;
+		@include rem('margin', 10px 0px);
+	}
+
+	ul {
+		@include set-ulFix;
+		display : inline-block;
+		
+		li {
+					width: 49%;
+					float: left;
+					border: 1px solid #b3b3b3;
+					background: $light_black;
+					@include rem('padding', 14px 0px);
+					@include rem('margin', 0px -1px 0px 0px);
+					border-bottom:none;
+					
+
+					span {			
+						@include rem('margin-left', 81px);
+						@include rem('width', 77px);
+						@include f(10);
+						
+					}
+					> label {
+						
+						position: relative;
+						left: 15%;
+						top:2px;
+						@include rem(padding, 10px 0 0);
+						display: inline-block;
+					}
+
+			}
+		}
+		li:nth-last-of-type(-n+2){
+			border: 1px solid #b3b3b3;
+		}
+}

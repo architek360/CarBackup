@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    SITE MAP COLLECTION -- Mobile CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER....main container (.site-map-collection )
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.site-map-collection {
+	.faq-view {
+		width: 100%;
+		margin: 0;
+	}
+	.faq-view__wrapper:last-child {
+		@include rem('padding-bottom',0px);
+	}
+	.heading2 {
+		@include rem('padding',0px 0px 30px);
+		@include rem('margin',34px 0px 0px);
+	}
+}
+
+

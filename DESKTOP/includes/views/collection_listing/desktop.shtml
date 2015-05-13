@@ -1,0 +1,11 @@
+<div class="collection-listing-wrapper clearfix"  id="page-<!--#echo var="pageId" -->">
+      <div class="collection-listing clearfix">
+            <div class="row">
+                  <!--#include virtual="../../views/collection_listing/${pageId}.shtml" -->
+            </div>
+      </div>
+</div>
+<!-- INCLUDING LINK TO TOP COMPONENT-->
+<!--#set var="link-text" value="Top" -->
+<!--#set var="link-class" value="" -->
+<!--#include virtual="../../components/link_to_top/html.shtml" -->

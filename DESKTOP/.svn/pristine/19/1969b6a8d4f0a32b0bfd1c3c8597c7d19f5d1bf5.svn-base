@@ -1,0 +1,77 @@
+<div class="comp-rich-text">
+	
+	<h3>privacy notice</h3>
+	<hr/>
+	
+	
+	
+		<p> 
+			<b>Lorem</b> ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum.
+		</p>
+		<p> 
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum.
+		</p>
+		<h4>bold font </h4>
+		<p> 
+			
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum.
+		</p>
+		<p> 
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum.
+		</p>
+	
+		<h4>personal Information</h4>
+			<p>cartier will give therr</p>
+			<ul>
+				<li> list row one</li>
+				<li>list row two</li>
+			</ul>
+
+		<h4>Joint use of personal informatiom</h4>
+			<ol>
+				<li> ordered list one</li>
+				<li> ordered list two</li>
+
+
+			</ol>
+
+		
+<table cellpadding="1" cellspacing="0" border="1">
+	<tbody><tr><th>dsfsdfdfsd</th>
+	<th>dfsdf</th>
+	<th>jklbkbj</th>
+	<th>kk</th>
+	<th>bkb</th>
+	</tr><tr><td>kb</td>
+	<td>kbk</td>
+	<td>bjkb</td>
+	<td>kbj</td>
+	<td>kbjk</td>
+	</tr><tr><td>bk</td>
+	<td>bb</td>
+	<td>k</td>
+	<td>bkj</td>
+	<td>kjb</td>
+	</tr><tr><td>kbj</td>
+	<td>kbj</td>
+	<td>kbk</td>
+	<td>bk</td>
+	<td>b</td>
+	</tr><tr><td>k</td>
+	<td>kjbkbbj</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr></tbody>
+</table>
+
+<img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_0_cartier_rings.png" alt="" class="image">
+
+
+
+
+
+
+</div>	
+	
+	

@@ -1,0 +1,631 @@
+/*------------------------------------*\
+    MY ADDRESS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.. main container(.my-address)
+ * ADDRESS BLOCK.... address block container(.my-address__box)
+ * BREADCRUMB..... breadcrumbs block(.breadcrumb)
+ * ADDRESS FORM JAPAN.... address form japan(.js-address-form-jp, .js-address-form , .js-address-form-uk)
+ * ADDRESS LIST.... address list(addressList)
+ * $BOB J BOLOCK.. bob j block( .js-bobj-section-two, .js-bobj-address)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER BLOCK
+\*------------------------------------*/
+
+.my-address{
+	display: block;
+	margin: 0 auto; 
+	width: 81.25%;
+	@include font-color($primary-2);
+	text-align:center;
+	.heading2{
+		@include f(28);
+		@include rem(padding, 20px 70px 23px);
+		margin:0 auto;
+		display:inline-block;
+		border-bottom:1px solid $primary-2;
+	}
+	.heading3{
+		@include medium-font;
+		@include f(28);
+		@include rem(padding, 26px 0 46px);
+	}
+	.welcome-image{
+		height: 100%;
+ 		width: 100%;
+ 		height: 238px;
+  		background:url($path-images+"/content/subscription_welcome.jpg") no-repeat;
+  		background-size:cover;
+		img{
+			height:auto;
+			width:100%;
+		}
+	}
+
+	/*------------------------------------*\
+	    $ADDRESS BLOCK
+	\*------------------------------------*/
+
+	.my-address__box{
+		border:1px solid $primary-3;
+		@include rem(margin, 0 0 30px);
+		@include rem(padding, 5px 28px 20px);
+		.heading3{
+			@include bold-font;
+			@include f(22);
+			@include rem(padding, 16px 0);
+		}
+		.message{
+			text-align: center;
+			font-style: italic;
+			@include f(22);
+			@include rem(padding, 0 0 30px);
+			@include main-font;
+		}
+		.address{
+			vertical-align: middle;
+			text-align: center;
+			font-style: italic;
+			line-height: 23px;
+			@include f(22);
+			@include main-font;
+			@include rem(padding, 0 0 17px);
+			.address__uppercase{
+				text-transform: uppercase;;
+			}
+		}
+		.edit-icon {
+         	@include setSprite(27px, 29px, -730px, -134px);         
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			border-left:1px solid $primary-8;
+			position:relative;
+			top:-1px;
+        }
+        .delete-icon {
+       		@include setSprite(27px, 29px, -623px, -135px);           
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			border-left:1px solid $primary-8;
+			position:relative;
+			top:-1px;
+         }
+		.address-button{
+			border-top:1px solid $primary-3;
+			display:block;
+			.col{
+        		width:49%;
+        		@include f(20);
+        		@include bold-font;
+        		text-transform:uppercase;
+        		display:inline-block;
+        		@include box-sizing(border-box);
+        		@include rem(padding, 20px 0 0);
+            }
+        	.col--left{
+        		text-align:left;
+        	}
+        	.col--right{
+        		text-align:right;
+        	}
+		}
+	}
+	.my-address__form{
+		@include rem('padding',2px 0 0);
+		.heading2{
+			@include rem(margin, 68px 0 0);
+			border-top:1px solid $primary-2;
+			@include rem(padding, 28px 0 41px);
+			@include medium-font;
+			border-bottom:none;
+			display: block;
+		}
+		.form-select{
+			text-transform:uppercase;
+		}
+		.address-name-radio{
+			text-transform:uppercase;
+			text-align:center;
+			.radio-main-label{
+				display:none;
+			}
+			ul{
+				margin-top:0;
+				.radio-btn-li {
+					@include rem(margin, 0px 8px 0px 0px);
+				}
+			}
+			.address-name-radio__tab{
+				.one-half{
+					text-align:center;
+				}
+			}
+			label {
+				display:inline;
+				@include brand-font;
+			}
+		}
+		.submitbutton{
+		 	@include rem(padding,40px 0 7px);
+			text-align: center;
+			clear: both;
+			.cta--red-width-auto-pad-20{
+				@include rem(padding,15px 50px 15px 30px);
+				@include bold-font;
+			}
+		}
+		.form-label{
+			@include brand-font;
+		}
+		.address-name-radio{
+			border:1px solid $primary-17;
+			border-bottom:none;
+			@include rem('margin-bottom',-34px);
+			padding:0;
+			ul{
+				li{
+					border-right:1px solid $primary-17;
+					@include rem('min-height',74px);
+					position: relative;
+					@include rem(padding, 16px 16px 6px);
+					.radio-title {
+						@include bold-font;
+					}
+					.radio-title:after {
+						position: absolute;
+						left: 40%;
+						top: 56%;
+					}
+				}
+				li:last-child{
+					border:none;
+					position: relative;
+					@include rem('padding',16px);
+				}
+			}
+		}
+		.personal-details{
+			text-align:left;
+			border:1px solid $primary-17;
+			@include f(20);
+			@include rem('padding',24px 24px 0px 24px);
+			@include rem('margin',22px 0);
+			display:inline-block;
+			text-transform:uppercase;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			.radio-btn{
+				@include rem('padding',0 0 33px);
+				@include rem('margin',15px 0 0px);
+			}
+			.radio-btn + span {
+				@include rem('margin',-29px 0 0px);
+			}
+			.grid__item{
+				@include rem('padding',0px);
+				label{
+					@include bold-font;
+				}
+				button {
+					display : block;
+				}
+				&:last-child{
+					padding:0;
+				}
+			}
+		}
+		.js-radio-tabs{
+			.radio-btn{
+				.radio-btn-li{
+				 width: 49%;
+				  .radio-title{
+					 	height: 72px;
+					 	@include rem('padding', 16px 0px 0px);
+					}
+				}
+			}
+		}
+		.address-details{
+			background:$primary-1;
+			width: 100%;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			@include rem('padding-top', 0px);
+			@include rem('margin-bottom', 10px);
+			text-align:left;
+			border:1px solid $primary-17;
+			@include f(20);
+			@include rem('padding',24px 24px 0px 24px);
+			display:inline-block;
+			text-transform:uppercase;
+			 -moz-box-sizing: border-box;
+			box-sizing: border-box;
+			.radio-btn{
+				@include rem('padding',0 0 33px);
+				@include rem('margin',15px 0 0px);
+			}
+			.radio-btn + span {
+				@include rem('margin',-29px 0 0px);
+			}
+			.grid__item{
+				@include rem('padding',0px);
+				label{
+					@include bold-font;
+				}
+				&:last-child{
+					padding:0;
+				}
+			}
+		}
+		.top-gradient{
+			@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		}
+		.bot-gradient{
+			@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+		}
+	}
+	.grid__item--row{
+		@include rem('min-height',120px);
+		input + span {
+			height: 35px
+		}
+	}
+	.grid__item--pad{
+		@include rem('padding',0 0 20px 0);
+	}
+	.grid__item{
+		@include rem('padding', 0px);
+	}
+}
+
+/*------------------------------------*\
+    	$BREADCRUMB
+\*------------------------------------*/
+
+/*.breadcrumb{
+	.heading3{
+		@include f(18);
+	}
+	li{
+		@include rem(padding,36px 0 43px);
+		span{
+			bottom:-1px;
+			left:49%;
+		}
+	}
+}*/
+
+/*------------------------------------*\
+    	$ADDRESS FORM JAPAN
+\*------------------------------------*/
+
+.js-address-form-jp, .js-address-form , .js-address-form-uk{
+	text-align: left;
+	margin: 0 auto;
+	width: 82.25%;
+	fieldset {
+	    position : relative;
+	    a {
+	    	position : absolute;
+	    	bottom :  -113px;
+	    	right :  46%;
+	    }
+	}
+	.my-address-c1{
+	    @include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+	    border: 1px solid #464646;
+	    @include rem('padding', 20px);
+	    display: inline-block;
+	    width: 100%;
+	    @include box-sizing(border-box);
+	}
+	.my-address-c2{
+	    border: 1px solid #464646;
+	    @include rem('padding', 0 20px 30px);
+	    @include rem('margin-top', 25px);
+	    display: inline-block;
+	    width: 100%;
+	    @include box-sizing(border-box);
+	}
+	.my-address-c3{
+	    @include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+	    border: 1px solid #464646;
+	    @include rem('padding', 0 20px 30px);
+	    display: inline-block;
+	    @include rem('margin-top', 25px);
+	    width: 100%;
+	    @include box-sizing(border-box);
+	}
+    .js-form-address-selector{
+	    width: 100%;
+	    @include rem('margin-top', 25px);
+	    display: inline-block;
+	    @include box-sizing(border-box);
+	    border:1px solid $primary-17;
+	    border-bottom: none;
+	    .js-first-radio{
+	    	width: 49%;
+	    	display: inline-block;
+		    label{
+		    	text-transform: uppercase;
+		        @include bold-font();
+		        color: $primary-2;
+		        @include f(22);
+		        width: 100%;
+		        text-align: center;
+		        display: inline-block;
+		        @include rem(padding, 10px 0);
+		        .radio{
+			        @include rem(padding, 10px 0);
+			        position: static;
+			        display: block;
+		        }
+		    }
+	    }
+	    .checkbox-wrapper{
+	   		margin: 0;
+	    }
+		.js-second-radio{
+	    	width: 49%;
+	    	border-left: 1px solid $primary-17;
+	    	display: inline-block;
+	    	label{
+		        text-transform: uppercase;
+		        @include bold-font();
+		        @include f(22);
+		        width: 100%;
+		        text-align: center;
+		        display: inline-block;
+		        @include rem(padding, 10px 0);
+		        color: #FFF;
+		        .radio{
+		        	@include rem(padding, 10px 0);
+		        	position: static;
+		        	display: block;
+		        }
+	    	}
+	    }
+	}
+}
+
+/*------------------------------------*\
+    	$ADDRESS LIST
+\*------------------------------------*/
+
+.addressList{
+	@include box-sizing(border-box);
+	border:1px solid $primary-3;
+	@include rem(margin, 0 0 30px);
+	@include rem(padding, 5px 28px 20px);
+	width: 82.25%;
+	margin: 0 auto 30px;
+	.address{
+		text-align: center;
+		padding-bottom:15px;
+	}
+	.address-name-view{
+		color: $primary-2;
+		@include f(22);
+		text-align: center;
+		font-style: italic;
+		line-height: 23px;
+		@include main-font();
+		padding: 0;
+	}
+	.firstName1, .lastName1, .lastName2, .nameTitle{
+		display: inline-block;
+		text-transform: uppercase;
+	}
+	.address2, .address5, .address7, .address9, .addresscomma{
+		display: inline-block;
+	}
+	.lastName2{
+		padding-left: 5px;
+	}
+	.heading3{
+		@include bold-font;
+		@include f(22);
+		@include rem(padding, 16px 0);
+	}
+	.message{
+		text-align: center;
+		font-style: italic;
+		@include f(22);
+		@include rem(padding, 0 0 30px);
+		@include main-font;
+		color: $primary-2;
+	}
+	.addressAction{
+		border-top: 1px solid $primary-3;
+		display: block;
+		.button{
+			color: $primary-2;
+			.edit-icon {
+         	@include setSprite(27px, 29px, -730px, -134px);         
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			border-left:1px solid $primary-8;
+			position:relative;
+			top:-1px;
+	        }
+	        .delete-icon {
+	       		@include setSprite(27px, 29px, -623px, -135px);           
+				display: inline-block;
+				@include rem('height', 15px);
+				@include rem(margin, 0 0 0 5px);
+				border-left:1px solid $primary-8;
+				position:relative;
+				top:-1px;
+	        }
+	        a {
+				@include f(20);
+				@include bold-font();
+				text-transform: uppercase;
+				display: inline-block;
+				@include box-sizing(border-box);
+				@include rem(padding, 20px 0 0);
+	        }
+	        .delete_add{
+	        	float: right;
+	        }
+		}
+	}
+}
+#address-select{
+	.select-wrapper{
+		display: none;
+	}
+	.js-message{
+		display: none;
+	}
+}
+#create-text, #edit-text{
+	width: 82.25%;
+	margin: 0 auto;
+	.title-line{
+		border:none;
+		span{
+			position: static;
+			@include rem(margin, 68px 0 0);
+			border-top:1px solid $primary-2;
+			@include rem(padding, 28px 0 41px);
+			@include medium-font;
+			border-bottom:none;
+			display: block;
+			@include f(28);
+		}
+	}
+}
+#cq-image-jsp-\/content\/car\/jp\/japan\/ja\/services\/my-cartier\/my-preferences\/my-addresses\/jcr\:content\/par\/image,
+#cq-image-jsp-\/content\/car\/langmaster\/global\/en\/services\/my-cartier\/my-addresses-jp\/jcr\:content\/par\/image{
+	height: 100%;
+	width: 82.25%;
+	height: 238px;
+	margin: 0 auto;
+	img{
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
+/*------------------------------------*\
+    	$BOB J BOLOCK
+\*------------------------------------*/
+
+.js-bobj-section-two{
+	.button-wrapper {
+	  	display: inline-block;
+	  	@include rem('margin-top', 30px);
+	  	text-align: center;
+	  	width: 100%;
+		margin-top:0px;
+		margin-bottom:30px;
+		.form-button {
+		 	@include setSpriteMobileDesktop(auto, auto, -1371px, 1px, #8f141a);
+		 	display: inline-block;
+		 	vertical-align: middle;
+		 	color: white;
+		 	@include bold-font();
+		 	@include rem('padding', 15px 38px 17px 57px);
+		 	@include f(20);
+		 	text-transform: uppercase;
+		 	letter-spacing: 1px;
+		 	border: none;
+		 	cursor: pointer;
+		}
+	}
+}
+.js-bobj-address{
+	padding: 30px;
+	.js-bobj-address-li {
+		border:solid 1px $primary-11 ;
+		width: 350px;
+		margin: 0 auto;
+		@include medium-font;
+		font-size:18px;
+		padding:20px;
+		margin-top: 10px;
+		@include font-color($primary-2);
+		span {
+			display: block;
+			text-align: center;
+			padding: 7px;
+			&.js-add-city, &.js-add-state{
+			display:inline;
+			}
+		}
+		.radio-bobj{
+			display:inline-block;
+			margin:0;
+			vertical-align:top;
+			.radio{
+				line-height:160px;
+				vertical-align:middle;
+				span{
+					width:4px;
+				}
+				input{
+					width: 17px;
+					height: 27px;
+					margin-top: -11px;
+					margin-left: -6px;
+				}
+			}
+			span{
+				display:inline-block;
+			}
+		}
+		.address-bobj{
+			display:inline-block;
+			width:89%;
+			text-align:center;
+		}
+		span.js-add-fname{
+			text-align: right;			
+			font-size:22px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		span.js-add-lname{
+			text-align: left;			
+			font-size:22px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		span.js-add-snum {
+			text-align: right;			
+			display: inline-block;
+		}
+		span.js-add-sname {
+			text-align: left;
+			display: inline-block;
+		}
+		span.js-add-pobox {
+			text-align: left;
+			display: inline-block;
+		}
+		span.name-row , span.address-row {
+			display:block;
+			padding: 0px;
+		}
+	}	
+}
+.visibility-none {
+	visibility: hidden !important;
+}
+.js-address-form{
+	.my-address-c2{
+		margin-top: 0;
+	}
+}
+
+.addressform_address9{
+	label{
+		padding-top: 36px;
+	}
+}

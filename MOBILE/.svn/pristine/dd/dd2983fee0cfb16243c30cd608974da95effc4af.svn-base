@@ -1,0 +1,162 @@
+/*------------------------------------*\
+    ENGRAVING -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.engraving)
+ * HEADER STYLES...... Styles for Heading (.engraving__heading)
+ * INPUT STYLES...... Stlyes for input boxes (.form-input)
+ * INPUT PREVIEW STYLES...... Styles for preview (.engraving_preview)
+ * SLIDE SWITCH STYLING .....styles for slide switch(.slide_switch)
+ * SUBMIT BUTTON STYLING.....styles for submit buttons(.cta--red, .cta--grey)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.engraving{
+	display:block;
+	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	background: $primary-46;
+	text-align:center;
+	margin: 0 auto;
+	@include rem('padding', 0px 0px 25px);
+	
+	/* FOR AUTO HIDE PLACEHOLDER IN CHROME & FF USING ONLY CSS*/
+	input:focus::-webkit-input-placeholder { color:transparent; }
+	input:focus::-moz-placeholder { color:transparent; }
+	ul {
+		@include set-ulFix;	/* For normalizing margins, padding*/
+		li {
+			display: block;
+			@include rem('margin', 0px 0px 30px);
+			.js-bold-class {
+				@include bold-font;
+				font-style: normal;
+				text-transform: none;
+			}
+			.js-cursive-class {
+				@include main-font;
+				font-style: italic;	
+				text-transform: none;			
+			}
+
+			/*------------------------------------*\
+			    $HEADER STYLES
+			\*------------------------------------*/
+
+			.engraving__heading{
+				@include rem('padding', 0px 30px);
+				@include rem('margin', 30px 0px);
+				text-transform:uppercase;
+				@include brand-font;
+				text-align: left;
+				letter-spacing: 2px;
+				@include font-color($primary-26);
+
+			}
+			.engraving__line {
+				display: block;
+				text-align: left;
+				@include rem('padding', 0px 0px 30px 40px);
+				@include bold-font;
+				span {
+					margin-left: 18%;
+				}
+			}
+
+			label {
+				@include bold-font;
+				display: inline-block;
+				width: 16%;
+				text-transform:uppercase;
+			}
+
+			/*------------------------------------*\
+			    $INPUT STYLES
+			\*------------------------------------*/
+
+			.form-input{
+				width: 66%;
+				display: inline-block;
+				@include rem('margin-left', 20px);		
+				@include main-font;
+				background: ($primary-30);	
+			}
+
+			/*------------------------------------*\
+			    $INPUT PREVIEW STYLES
+			\*------------------------------------*/
+
+			.engraving_preview {
+				width: 81.1%;
+				margin: 0 auto;
+				@include rem('height', 120px);
+				display: table;
+				background: ($primary-30);
+				@include font-color($primary-26);
+				text-align: center;
+				@include rem('padding', 20px);
+				@include rem('padding-top', 42px);
+				.engraving_preview__line {
+					text-align: center;
+					@include f(20);
+					padding: 0px;
+					word-wrap: break-word;
+					vertical-align: middle;
+					width: 100%;
+					@include rem('line-height', 42px);
+				}
+			}
+
+			/*------------------------------------*\
+			    $SLIDE SWITCH STYLING
+			\*------------------------------------*/
+
+			.slide_switch {
+				label {
+					width: auto;
+					text-transform: none;
+				}
+			}
+		}
+	}
+	.product-detail__size{
+		display:block;
+		@include f(16);
+		@include brand-font;
+		text-transform:uppercase;
+		font-weight:bold;
+		@include rem('margin', 6px 0);
+		@include rem('line-height', 20px);
+	}
+	.engraving__desc {
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: inline-block; 
+			text-align: center;
+			width: 81.25%;
+			@include rem('padding', 10px 0px 15px);
+	}
+
+	/*------------------------------------*\
+	    $SUBMIT BUTTON STYLING
+	\*------------------------------------*/
+
+	.cta--red, .cta--grey {
+		width: 30%;
+		margin: 0 auto;
+		text-align: center;
+		@include bold-font;
+		@include rem('margin', 40px 10px 10px);
+		display: inline-block;
+		vertical-align: top;
+		@include rem('padding', 15px 0px);
+	}
+	.cta--grey {
+		background: $primary-33;
+	}
+}

@@ -1,0 +1,198 @@
+/* modern style hero template css*/
+.living-heritage-detail-wrapper{
+    /* reset some values*/
+    .coloumn-wrapper{
+        @include rem(width, 971px);
+        @include rem(margin, 0 4.5px);
+    }
+    .grid__item{
+        padding-left:0;
+    }
+    .header-image{
+        text-align: center;
+    }
+    /* helpers */
+    .align-right{
+        text-align: right;
+        a,p, h3, h2{
+            text-align: right;
+        }
+    }
+    /* margins */
+    .margin20{
+        margin-right: 20px;
+    }
+    .mr21{
+        @include rem(margin-right,21px);
+    }
+    .mt92{
+        @include rem(margin-top,92px);
+    }
+    .mt65{
+        @include rem(margin-top,65px);
+    }
+    .mt39{
+        @include rem(margin-top,39px);
+    }
+    .mb20{
+        @include rem(margin-bottom,20px);
+    }
+    /* padding */
+    .pr56{
+        @include rem(padding-right,56px);
+    }
+    .pb164{
+        @include rem(padding-bottom,164px);
+    }
+    .pb141{
+        @include rem(padding-bottom,141px);
+    }
+    .pb98{
+        @include rem(padding-bottom,98px);
+    }
+    .pb89{
+        @include rem(padding-bottom,89px);
+    }
+    .pb59{
+        @include rem(padding-bottom,59px);
+    }
+
+    /* width */
+    .w1000{
+        @include rem(width,1000px);
+    }
+    .w960{
+        @include rem(width,960px);
+    }
+    .w677{
+        @include rem(width,677px);
+    }
+    .w650{
+        @include rem(width,650px);
+    }
+    .w522{
+        @include rem(width,522px);
+    }
+    .w489{
+        @include rem(width,489px);
+    }
+    .w483{
+        @include rem(width,483px);
+    }
+    .w445{
+        @include rem(width,445px);
+    }
+    .w440{
+        @include rem(width,440px);
+    }
+    .w448{
+        @include rem(width,448px);
+    }
+    .w422{
+        @include rem(width,422px);
+    }
+    .w417{
+        @include rem(width,417px);
+    }
+    .w328{
+        @include rem(width,328px);
+    }
+    .w323{
+        @include rem(width,323px);
+    }
+    .w320{
+        @include rem(width,320px);
+    }
+    .w312{
+        @include rem(width,312px);
+    }
+    .w290{
+        @include rem(width,290px);
+    }
+    .w286{
+        @include rem(width,286px);
+    }
+    .w260{
+        @include rem(width,260px);
+    }
+    .w252{
+        @include rem(width,252px);
+    }
+    .w210{
+        @include rem(width,210px);
+    }
+    .w183{
+        @include rem(width,183px);
+    }
+    /* float*/
+    .fleft{
+        float: left;
+    }
+    .fright{
+        float: right;
+    }
+    .relative{
+        position:relative;
+    }
+    .box-absolute{
+        position: absolute;
+    }
+    .relative.clearfix{
+        overflow: visible;
+    }
+    &#page-chimera{
+        .coloumn-wrapper{
+            @include rem(width, 962px);
+            @include rem(padding-bottom,65px);
+        }
+        .box-absolute{
+            position: absolute;
+            right: 0;
+            bottom: -140px;
+        }
+    }
+    &#page-enameled_objects{
+        .box-absolute{
+            right: 0;
+            bottom: -98px;
+        }
+    }
+    &#page-modern-style{
+        .coloumn-wrapper{
+            @include rem(margin, 40px 4.5px);
+        }
+        .firstrow{
+            width: 462px;
+            float: right;
+            .align-right{
+                position: relative;
+                @include rem(top, -50px);
+				@include rem(right, 25px);
+            }
+        }
+        .border-wrapped{
+            margin-right: 58px;
+        }
+        .row2{
+            .text{
+                p, h3, h2{
+                    margin-right: 38px;
+                }
+                &.text2{
+                    position: relative;
+                    left: -10px;
+                }
+            }
+        }
+    }
+    &#page-bags_precious{
+        .coloumn-wrapper{
+            @include rem(width, 965px);
+            @include rem(padding-bottom,65px);
+        }
+        .box-absolute{
+            right: 0;
+            margin-top: 230px;
+        }
+    }
+}

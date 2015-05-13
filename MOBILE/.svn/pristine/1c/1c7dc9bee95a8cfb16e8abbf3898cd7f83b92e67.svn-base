@@ -1,0 +1,49 @@
+.tooltip-div{
+    float:left;
+    position:relative;
+	@include rem('margin' ,0 0 0 10px);
+    width: 20px;
+	a.tooltip {outline:none; }
+	a.tooltip strong {@include rem('line-height' ,30px);}
+	a.tooltip:hover {text-decoration:none;} 
+	a.tooltip .tool-tip-details-wrapper{
+    	z-index:10;
+    	display:none;
+        background:#fff;
+    	padding:14px 20px;
+        border:1px solid $primary-12;
+        border-bottom:none;
+    	margin-top: 0;
+    	margin-left:0;
+    	width:220px;
+    	@include rem('line-height' ,15px);
+        position: absolute;
+        bottom: 21px;
+        left:-124px;
+        position:absolute;
+        
+        text-align: center;
+        font-style: italic;
+
+    }
+	/* a.tooltip:hover div{
+    	display:inline;
+    } */
+    a.tooltip p {
+        @include rem('line-height' ,12px);
+        @include f(10); 
+        text-align:center;
+        padding:0;
+        @include rem('padding-bottom' , 2px);
+        color:$primary-3;
+        
+    }
+	.callout {
+		z-index:20;
+		position:absolute;
+		bottom:-4px;
+		border:0;
+		left:126px;  
+	}
+    
+}

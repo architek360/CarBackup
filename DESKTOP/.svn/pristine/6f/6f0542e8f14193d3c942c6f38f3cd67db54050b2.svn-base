@@ -1,0 +1,104 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+		"updatesuccess" 		: true,
+		"errorMessage"			: "The update was not successful.",
+		"subtotal" 				: "$5,400.00",
+		"subtotal_info" 		: "excl. sales tax",
+		"deliveryCharge" 		: "free",
+		"deliveryCharge_info"	: "offered on order over $500",
+		"total"					: "$5,400.00",
+		"total_info"			: "excl. sales tax",
+		"teaserArray" 			: [
+			{	
+				"teaserID"      		: "",
+				"productTitle" 			: "",
+				"productDesc"  			: "",
+				"refId"					: "",
+				"productId"    			: "",
+				"imageURL"				: "",
+				"productPrice"  		: "",
+				"availableQuantities"	: [{"display" : "","value" : ""},{"display" : "","value" : ""}],
+				"selectedQuantity" 		: "",
+				"teaserTotal"			: "",
+
+
+				"hasSize"				: true,
+				"sizeInfo"				:
+				{
+					"availableQuantities"	: [{"display" : "","value" : ""},{"display" : "","value" : ""}],
+					"selectedQuantity" 		: ""
+				},
+
+
+				"hasEngraving"			: true,
+				"engravingInfo"			:
+				{
+					"lineone" 	: "",
+					"linetwo" 	: "",
+					"textstyle" : ""
+				},
+
+				"hasBracelet"			: true,
+				"braceletInfo"			:
+				{
+					"lineone"	: "",
+					"textstyle"	: ""
+				},
+
+
+				"hasGiftcard"			: true,
+				"giftcardInfo"			:
+				{
+
+				}
+
+			},
+			{	
+				"teaserID"      		: "",
+				"productTitle" 			: "",
+				"productDesc"  			: "",
+				"refId"					: "",
+				"productId"    			: "",
+				"imageURL"				: "",
+				"productPrice"  		: "",
+				"availableQuantities"	: [{"display" : "","value" : ""},{"display" : "","value" : ""}],
+				"selectedQuantity" 		: "",
+				"teaserTotal"			: "",
+
+
+				"hasSize"				: true,
+				"sizeInfo"				:
+				{
+					"availableQuantities"	: [{"display" : "","value" : ""},{"display" : "","value" : ""}],
+					"selectedQuantity" 		: ""
+				},
+
+
+				"hasEngraving"			: true,
+				"engravingInfo"			:
+				{
+					"lineone" 	: "",
+					"linetwo" 	: "",
+					"textstyle" : ""
+				},
+
+				"hasBracelet"			: true,
+				"braceletInfo"			:
+				{
+					"lineone"	: "",
+					"textstyle"	: ""
+				},
+
+
+				"hasGiftcard"			: true,
+				"giftcardInfo"			:
+				{
+
+				}
+
+			}
+		]
+	}
+}

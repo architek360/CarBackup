@@ -1,0 +1,95 @@
+  <!-- Order Detail  Starts Here-->
+
+<div class="order-detail clearfix">
+
+
+    <div class="assist-wrapper">
+    	<p class="assistance">More information is available
+    		<span class="red">telefonisch unter +49 (0)89 559 84 221</span>
+    	</p>
+    </div>
+    <!-- HEADING AREA-->
+    <div class="order-detail__title">
+        <h4 class="heading4">details of the order</h4>
+    </div>
+
+    <div class="grid clearfix">
+	    <div class="grid__item three-quarters">
+	    	<div class="order-products">
+	    		<div class="order-header">
+				   	<div class="order-date">Freitag 02 Mai 2014</div>
+				    <div class="print"><a href="#" class="print-link" rel="nofollow" target="_blank" >Printing</a></div>
+				    <h2 class="order-number">Bestellnr.206323</h2>
+  				</div>
+
+  				<div class="product-wrapper">
+  					<div class="col1">
+  						<div class="field-content"><img src="<!--#echo var="CONTENT_IMG_PATH" -->panthere_ring.png" class="image" alt="image"/></div>
+  					</div>
+
+  					<div class="col2">
+  						<div class="name">Brieftasche, internationales Format 12 Kreditkarten</div>
+  						<div class="material"><p>Yellow gold, semi-precious stones</p></div>
+  						<div class="sku">Ref: L3001299</div>
+  						<div class="size">Size : 52</div>
+
+  						<div class="price-container">
+  							<div class="unit-price">530,00 €</div>
+  							<div class="quantity">X 2</div>
+  							<div class="price">1.060,00 €</div>
+  						</div>  
+
+  						
+
+  					</div>
+  				</div>
+	    	</div>
+
+		    <!--#set var="sales_tax" value="on" -->
+		    <!--#set var="subtotal" value="cartier_desktop" -->
+	        <!--#include virtual="../../views/price_details/html.shtml" -->
+	    </div>
+
+	    <!-- ADDRESS DETAILS -->
+	    <div class="grid__item one-quarter">
+
+	    	<!-- BILLING ADDRESS-->
+	    	<div class="address-block">
+	    		<h2 class="title-block">BIlling address</h2>
+	    		<div class="address-box">
+	    			<h3 class="address-box__name">Alok Shama</h3>
+	    			<p>Long Chausee 600</p>
+	    			<p>22419 Hamburg</p>
+	    			<p>Germany</p>
+	    			<p>2020202020</p>
+	    		</div>
+	    	</div>
+
+	    	<!-- DELIVERY ADDRESS-->
+	    	<div class="address-block">
+	    		<h2 class="title-block">Delivery address</h2>
+	    		<div class="address-box">
+	    			<h3 class="address-box__name">Alok Shama</h3>
+	    			<p>Long Chausee 600</p>
+	    			<p>22419 Hamburg</p>
+	    			<p>Germany</p>
+	    			<p>2020202020</p>
+	    			<div class="billing-mention">How billing address</div>
+	    		</div>
+	    	</div>
+
+	    	<!-- SHIPPING-->
+	    	<div class="address-block">
+	    		<h2 class="title-block">Shipping</h2>
+	    		<div class="address-box">
+	    			<p>Standard Shipping</p>
+	    			<div class="delivery-number-days">(5-7 business days)</div>
+	    			<div class="billing-mention">Estimated delivery to you: <br> Tuesday, May6, 2014</div>
+	    		</div>
+	    	</div>
+	    </div>
+
+
+    </div>
+</div>
+ <!-- Order Detail Ends Here-->

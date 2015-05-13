@@ -1,0 +1,49 @@
+/*------------------------------------*\
+   Breadcrumb -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.breadcrumb{
+	width: 81.25%;
+	margin:0 auto;
+
+	.heading3{
+		@include font-color($primary-2);
+		padding-bottom:0px;
+		@include medium-font;
+		@include f(18);
+
+	}
+
+	ul{
+		@include set-ulFix;
+		@include font-color($primary-3);
+
+		.heading3{
+			@include medium-font;
+			@include rem(padding, 36px 0 47px);
+		}
+		
+		li{
+			margin: 0 auto;
+			position:relative;
+			text-align:center;
+			&:last-child span{
+			display: none;
+			}
+		}
+
+		span{
+			position:absolute;
+			bottom:0px;
+			left: 48%;
+			@include setSprite(15px, 10px, -666px, -20px);
+		}
+	}
+}

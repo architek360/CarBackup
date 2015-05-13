@@ -1,0 +1,57 @@
+/*------------------------------------------------*\
+    DO YOU OWN A CARTIER CREATION -- Desktop CSS
+\*------------------------------------------------*/
+.do-you-own{
+	display: block;
+
+	.select-wrapper {				
+		display: block;
+		float: left;
+		height: 50px;
+		width: 100%;
+		.selector {
+			width: 210px !important;
+			text-transform: none;
+
+			span {
+				width: 210px !important;
+			}
+		}
+
+		}
+		.add-button {
+
+		@include rem('margin',0 0 15px);
+		@include rem('padding',5px 0 10px);
+		display:inline-block;
+		width:100%;
+
+		a {
+			@include setSpriteDesktop(auto, auto ,-431px ,-157px, $primary-1);
+			color: $primary-2;
+			float: left;
+			@include main-font;
+			@include f(12);
+			font-style: normal;
+			letter-spacing: normal;
+			@include rem('margin-top', 5px);
+			@include rem('padding-left', 10px);
+			text-transform: none;
+		}
+	}
+	.add-creation{
+		background: $primary-52;
+		@include rem(margin-bottom, 10px);
+		@include rem(padding, 10px 15px);
+	    position: relative;
+
+	    .added-creation__name{
+	    @include proxiBold-font();
+	    @include f(10);
+	    @include rem(letter-spacing, 1px);
+	    @include rem(line-height, 20px);
+	    text-transform: uppercase;
+	    }
+	}
+}
+	

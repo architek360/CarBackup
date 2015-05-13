@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    REQUEST INFO BLOCK -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.request_info)
+
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.request_price{
+	@include rem('padding-top',45px);
+	.add-message{
+		margin-bottom: 20px;
+		.mobile-device__list{
+			margin-top:-60px;
+		}
+	}
+	.radio-main-label {
+		.form-label {
+			display: inline-block;
+		}
+	}
+
+	.form-check.text-only{
+		width: 90%;
+		margin-left: 20px;
+		margin-top: 30px;
+	}
+}
+
+.request_info.request_price .grid__item .radio-btn {
+	@include rem('padding',0 0 15px);
+}
+
+.js-emaildiv{
+	margin-top:22px;
+}

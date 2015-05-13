@@ -1,0 +1,71 @@
+<div class="row grid w960 pb141">
+    <div class="column grid__item w417">
+        <div class="row grid">
+            <div class="column grid__item one-whole nomargin">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}enameled_objects.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole mr21">
+                <p class="border-wrapped bold">
+                Paris 1900: the Russian Jeweler Pierre Karl Fabergé exhibited his famous Easter Eggs and other decorative objects in guilloché enamel. He started a fashion for Russian taste in France. The Cartiers were captivated. Pierre Cartier personally visited Russia several times. He ordered the finest enamelers to produce objects that had been designed in his workshops, without the figurative overloading of the Russian jeweler. Always ahead of his time, the jeweler offered new combinations of contrasting colors like blue and green, and new shades of opalescent enamel. In 1908, Cartier sold a pair of cufflinks and a belt buckle in guilloché enamel to the Dowager Empress, Marie Fedorovna. Two years later, Cartier became the official supplier to the Russian Imperial Court. Cartier enamel was already famous around the world.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="column grid__item w522">
+        <div class="row grid relative clearfix">
+            <div class="column grid__item one-whole image mt39">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}cigarette_case.jpg" -->
+                <!--#include virtual="../../components/column/content.shtml" -->
+            </div>
+            <div class="column grid__item one-whole nomargin align-right box-absolute w286">
+                <h2>CIGARETTE CASE</h2>
+                <h3>CARTIER PARIS, 1907</h3>
+                <p>
+                Yellow gold, silver, translucent royal blue enamel over guilloché ground decoration, white and green enamel, rose-cut diamonds. <br><br>On the left side, a compartment for matches with external striking surface.
+                </p>
+                <p class="productdata">
+                1.3 x 9.8 x 5.9 cm
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row grid w1000">
+    <div class="column grid__item w677">
+        <div class="column grid__item w417">
+            <h2>DESK CLOCK ON INKSTAND</h2>
+            <h3>CARTIER PARIS, 1908</h3>
+            <p>
+            Silver, silver-gilt, yellow gold, platinum, translucent gray, mauve and green enamel over guilloché ground, white enamel, sapphire cabochons, rose-cut diamonds.<br><br>The clock with platinum and rose-cut diamond monogram.<br><br>Rectangular 8-day movement, gold-plated, Swiss lever escapement, bimetallic balance, flat balance spring.
+            </p>
+            <p class="productdata">
+            18.5 x 7.0 x 8.3 cm
+            </p>
+        </div>
+        <div class="column grid__item one-whole">
+            <!--#set var="imgclass" value="right margin20" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}desk_click_inkstand.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+    <div class="column grid__item align-right w320">
+        <div class="column grid__item w290 pr56">
+            <h2>SPRAY</h2>
+            <h3>CARTIER PARIS, 1912</h3>
+            <p class="w290 fright">
+                Yellow gold, platinum, silver-gilt, translucent royal blue enamel over guilloché ground decoration, rose-cut diamonds, button pearls.
+            </p>
+            <p class="productdata mb20">
+                7.45 x 2.54 cm
+            </p>
+        </div>
+        <div class="column grid__item one-whole ">
+            <!--#set var="imgclass" value="right" -->
+            <!--#set var="image" value="${PRODUCT_IMG_PATH}spray.jpg" -->
+            <!--#include virtual="../../components/column/content.shtml" -->
+        </div>
+    </div>
+</div>

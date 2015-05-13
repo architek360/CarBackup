@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <title>RegistrationStep2</title>
+    <!--Start SEO Code-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width =640">
+ <meta content="" name="keywords">
+    <meta content="" name="description" >
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="http://m.preprod.cartier.com/ja/services/my-cartier/registrationstep2.html"/>
+    <link rel="shortcut icon" type="image/ico" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_common/images/icons/favicon.ico.resource.1403106981830.ico">
+
+<script type="text/javascript">
+    //base tracking vars for all pages
+    
+    var uri = "ja/Cartier/Services/私のカルティエ/RegistrationStep2";
+
+        var type = "already_logged_in";
+        
+                var visitorStatus = "loggedWithoutAddress";
+            
+var accountCreationStatus = "accountNotCreatedGuest";
+var productsarr = [];
+    //Additional vars for specific pages
+    </script>
+
+<!-- end SEO-->
+    
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery.min.1389716042813.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/utils.min.1389716042861.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.min.1389716042791.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/jquery.min.1389716138659.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/shared.min.1389716158399.js"></script>
+<script type="text/javascript" src="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_common.min.1406878080404.js"></script>
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop.min.1407774718937.css" type="text/css">
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop_view.min.1407774718975.css" type="text/css">
+<link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_countryspecific/Clientlibs_desktop_japan.min.1407262165114.css" type="text/css">
+<script type="text/javascript">
+    {
+        window.setTimeout(function() {
+            $CQ.getScript("http://localhost:4502/libs/wcm/stats/tracker.js?path=/content/car/jp/japan/ja/services/my-cartier/registrationstep2");
+        }, 1);
+    }
+    </script>
+<script type="text/javascript">function trackMVTImpression() {
+    
+    }</script>
+
+
+
+
+
+
+
+<!--[if IE]><link rel="stylesheet" href="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/ie.css"><![endif]--> 
+  <script>  
+    var dataLayer = [{}];
+    var countryCode ="JP";
+    var lang = "ja";
+    var I18nJson = {};
+    var i18nxhr;
+  </script>
+</head>
+<body>
+    <script type="text/javascript" src="/etc/designs/richemont-car/richemont-base/clientlibs/author.prerequisite.min.js"></script>
+<script type="text/javascript" src="/etc/designs/richemont-base/clientlibs/author.prerequisite.min.js"></script>
+<h1 class="display-none">Cartier-RegistrationStep2</h1>
+         <div class="body-wrapper">
+            <!-- Top Navigation Starts Here-->
+            <header class="header">
+
+   <nav class="left-nav">
+      <ul class="left-nav__list">
+        <li>
+  <a class="nav-link" href="/ja/contact-us.html" target="_self">お問い合わせ</a>
+                </li>
+<li>
+  <a class="nav-link" href="/ja/boutiques-authorized-retailers-customer-service.html" target="_self">店舗検索</a>
+                </li>
+</ul>
+   </nav>
+   <nav class="right-nav">
+      <ul class="right-nav__list">
+                <li>
+  <ul>
+       <li class="connection">
+       <a class="nav-link" href="/ja/services/my-cartier/RegistrationStep1.html" target="_self">ログイン</a>
+           </li>
+           <li class="display-none mycartier">
+       <a class="nav-link" href="/ja/services/my-cartier1.html" target="_self">My Cartier</a>
+       </li>
+       </ul>
+   </li>
+<li>
+    <div class="js-shopping-bag">
+                <a href="/ja/shopping-cart1.html" class="iconbox" target="_self" data-gtm="headerCartClick">
+                    <img src="/bin/richemont/public/dam.HgPrLezuWODQXYortUBd1TBPaOWtPzLB30oxArDiYuM.spool/content/dam/cartier_dam/small_carticon.png" alt="">
+                    <span class="iconbox__number js-cart-update display-none">
+                        <span></span>
+                    </span>
+                </a>
+                <div id="pop-up-content-wrapper" class="js-pop-up-content-wrapper" style="display: none;">
+                    <span class="header_bag js-bag-item"> 1 ITEMS IN YOUR SHOPPING BAG</span>
+                                    <div class="wrapper-items va-accordion-bag" style="width: 170px; height: 280px;">
+                                        <div class="va-nav"> <span class="js-less-arrow less-arrow"></span> <span class="js-more-arrow more-arrow"></span></div>
+                                        <ul class="sub-menu js-teaseure-container"><li class="first js-teasure" style="top: 0px; height: 140px; line-height: 140px;">
+                                            <img class="js-img" src="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/double_c_logo_belt.png" alt="">
+                                            <div class="description">
+                                                <span class="total-product js-total-product ">2</span>
+                                                <span class="product-name js-product-name">panthere ring</span>
+                                                <span class="product-description js-product-description">Yellow gold, tsavorite, lacquer</span>
+                                                <span class="refer-no js-refer-no">Ref: <a href="#">panthere ring</a> </span>
+                                                <span class="amount js-amount">5540.15</span>
+                                            </div>
+                                            </ul>
+                                    </div>
+                                    
+                                    
+                                    <div class="price-details">
+                                        <div class="subtotal">
+                                            <span class="js-sub-total">Subtotal: </span>
+                                            <span class="js-total-info">excl. sales tax</span>
+                                        </div>
+                                        
+                                        <div class="total_in_number">
+                                            <span class="js-total">5300.15</span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                        <a class="form-element button-wrapper (none)" href="/ja/shopping-cart1.html">
+                                            <input type="submit" value="CHECKOUT" class="form-button" href="/content/car/jp/japan/ja/shopping-cart1.html"/>
+                                        </a>
+                                    
+                                    
+                                    
+                </div>
+            </div>
+            </li>
+    <li class="js-my-wishlist">
+     <a class="nav-link" href="/ja/services/my-cartier1/my-preferences/my-wishlists.html" target="_self">Wishlist</a>
+                </li>
+<li>
+  <a class="nav-link" href="/ja/shopping-cart1.html" target="_self"> オンライン ショッピング</a>
+                </li>
+</ul>
+         <form class="search-form" method="get" action="/ja/search-result-page.desktop.html">
+             <fieldset>
+                <!-- SEARCH CONTAINER -->
+                <div class="search-wrapper">
+                  <legend class="display-none">Search with in the catalogue...</legend>
+                   <label class="search__label" for="search">Search</label>
+                   <input type="text" class="search__term" placeholder="Search with in the catalogue..."  name="q">
+                   <input type="submit" class="search__button">
+                </div>
+             </fieldset>
+          </form>
+       </nav>
+   <div class="site-logo">
+    
+
+
+
+
+
+
+
+<a class="top-nav__logo" href="/ja/home/homepage.html"><img title="Cartier_jeweller-watchmaker-leather-goods" alt="Home" src="/etc/designs/richemont-car/Japanese/jp/_jcr_content/mobilehomepage/DesktopHeader/DesktopLogo.img.png/1406294766549.png"></a>
+</header>
+ <div class="primary-nav-container">
+  <!-- MAIN NAVIGATION STARTS HERE-->
+  <ul class="first-level-nav-container">
+      <li class="first-level-nav">
+      <!--NAVIGATION LEVEL ONE-->
+  <a class="first-level-nav__title " href="/ja/Collection0.html" title="Collections">Collections</a>
+     <!--NAVIGATION LEVEL TWO-->
+
+         </li>
+
+<li class="first-level-nav">
+      <!--NAVIGATION LEVEL ONE-->
+  <a class="first-level-nav__title " href="/ja/maison.html" title="Maison">Maison</a>
+     <!--NAVIGATION LEVEL TWO-->
+
+         </li>
+
+<li class="first-level-nav">
+      <!--NAVIGATION LEVEL ONE-->
+  <a class="first-level-nav__title active" href="/ja/services.html" title="Services">Services</a>
+     <!--NAVIGATION LEVEL TWO-->
+
+         <ul class="nav nav-show">
+       <li class="test secondary-nav">
+             <a href="/ja/services/client-services.html" class="sec-nav-link js-sec-nav" title="Client Services">Client Services</a>
+ <!-- MEGA MENU STARTS HERE -->
+                <ul class="mega-menu service__mycartier" style="background-image: url(test.jpeg ); display: none; background-position: -110px 50%; background-repeat: no-repeat no-repeat;">           
+      <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/client-services/after-sales-service.html" class="category-title" title="AFTER-SALES SERVICE">AFTER-SALES SERVICE</a>
+              <ul>
+                   <li><a href="/ja/services/client-services/after-sales-service/jewelry.html" title="Jewelry">Jewelry</a></li>
+                  <li><a href="/ja/services/client-services/after-sales-service/watches.html" title="Watches">Watches</a></li>
+                  <li><a href="/ja/services/client-services/after-sales-service/fine-watchmaking.html" title="Fine Watchmaking">Fine Watchmaking</a></li>
+                  <li><a href="/ja/services/client-services/after-sales-service.html" title="View All" class="view-all-arrow">View All</a></li>
+                       </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/client-services/warranty.html" class="category-title" title="WARRANTY">WARRANTY</a>
+              <ul>
+                   <li><a href="/ja/services/client-services/warranty/watches.html" title="Watches">Watches</a></li>
+                  <li><a href="/ja/services/client-services/warranty/clocks.html" title="Clocks">Clocks</a></li>
+                  <li><a href="/ja/services/client-services/warranty/lighters.html" title="Lighters">Lighters</a></li>
+                  <li><a href="/ja/services/client-services/warranty.html" title="View All" class="view-all-arrow">View All</a></li>
+                       </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/client-services/secure-shopping.html" class="category-title" title="SECURE SHOPPING">SECURE SHOPPING</a>
+              <ul>
+                   <li><a href="/ja/services/client-services/secure-shopping/order-information.html" title="Order information">Order information</a></li>
+                  </ul>
+            </li>
+            </ul>
+  <!-- MEGA MENU ENDS HERE -->
+        </li>
+         
+       <li class="test secondary-nav">
+             <a href="/ja/services/expertise-guide.html" class="sec-nav-link js-sec-nav" title="Expertise Guide">Expertise Guide</a>
+ <!-- MEGA MENU STARTS HERE -->
+                <ul class="mega-menu service__mycartier" style="background-image: url(test.jpeg ); display: none; background-position: -110px 50%; background-repeat: no-repeat no-repeat;">           
+      <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/expertise-guide/sizing-guide.html" class="category-title" title="Sizing Guide">Sizing Guide</a>
+              <ul>
+                   <li><a href="/ja/services/expertise-guide/sizing-guide/rings.html" title="Rings">Rings</a></li>
+                  <li><a href="/ja/services/expertise-guide/sizing-guide/bracelets.html" title="Bracelets">Bracelets</a></li>
+                  <li><a href="/ja/services/expertise-guide/sizing-guide/necklaces.html" title="Necklaces,Necklaces">Necklaces,Necklaces</a></li>
+                  <li><a href="/ja/services/expertise-guide/sizing-guide.html" title="View All" class="view-all-arrow">View All</a></li>
+                       </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/expertise-guide/other-resources.html" class="category-title" title="Other resources">Other resources</a>
+              <ul>
+                   <li><a href="/ja/services/expertise-guide/other-resources/user-guide.html" title="User Guide">User Guide</a></li>
+                  <li><a href="/ja/services/expertise-guide/other-resources/glossary.html" title="Glossary">Glossary</a></li>
+                  <li><a href="/ja/services/expertise-guide/other-resources/Fine-watchmaking.html" title="Fine Watchmaking">Fine Watchmaking</a></li>
+                  </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/expertise-guide/care-recommendations.html" class="category-title" title="Care recommendations">Care recommendations</a>
+              <ul>
+                   <li><a href="/ja/services/expertise-guide/care-recommendations/jewelry.html" title="Jewelry">Jewelry</a></li>
+                  <li><a href="/ja/services/expertise-guide/care-recommendations/watches.html" title="Watches">Watches</a></li>
+                  <li><a href="/ja/services/expertise-guide/care-recommendations/leather-goods.html" title="Leather Goods">Leather Goods</a></li>
+                  <li><a href="/ja/services/expertise-guide/care-recommendations.html" title="View All" class="view-all-arrow">View All</a></li>
+                       </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col last-col">    
+                <a href="/ja/services/expertise-guide/your-cartier-creations-faq.html" class="category-title" title="Your Cartier Creations FAQ">Your Cartier Creations FAQ</a>
+              <ul>
+                   <li><a href="/ja/services/expertise-guide/your-cartier-creations-faq/watches.html" title="Watches">Watches</a></li>
+                  <li><a href="/ja/services/expertise-guide/your-cartier-creations-faq/leather-goods.html" title="Leather goods">Leather goods</a></li>
+                  <li><a href="/ja/services/expertise-guide/your-cartier-creations-faq/lighters.html" title="Lighters">Lighters</a></li>
+                  <li><a href="/ja/services/expertise-guide/your-cartier-creations-faq.html" title="View All" class="view-all-arrow">View All</a></li>
+                       </ul>
+            </li>
+            </ul>
+  <!-- MEGA MENU ENDS HERE -->
+        </li>
+         
+       <li class="test secondary-nav">
+             <a href="/ja/services/my-cartier.html" class="sec-nav-link js-sec-nav active" title="私のカルティエ">私のカルティエ</a>
+  <!-- MEGA MENU STARTS HERE -->
+                <ul class="mega-menu service__mycartier" style="background-image: url(test.jpeg ); display: none; background-position: -110px 50%; background-repeat: no-repeat no-repeat;">           
+      <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/my-cartier/my-orders.html" class="category-title" title="My Orders">My Orders</a>
+              <ul>
+                   <li><a href="/ja/services/my-cartier/my-orders/my-orders.html" title="My Orders">My Orders</a></li>
+                  </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/my-cartier/my-services.html" class="category-title" title="My Services">My Services</a>
+              <ul>
+                   <li><a href="/ja/services/my-cartier/my-services/my-repair-services.html" title="My Repair Services">My Repair Services</a></li>
+                  </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col">
+                <a href="/ja/services/my-cartier/my-preferences.html" class="category-title" title="My Preferences">My Preferences</a>
+              <ul>
+                   <li><a href="/ja/services/my-cartier/my-preferences/my-addresses.html" title="My Addresses">My Addresses</a></li>
+                  <li><a href="/ja/services/my-cartier/my-preferences/my_personal_information01.html" title="My Personal Information">My Personal Information</a></li>
+                  <li><a href="/ja/services/my-cartier/my-preferences/my-wishlist.html" title="My wishlist">My wishlist</a></li>
+                  <li><a href="/ja/services/my-cartier/my-preferences.html" title="View All" class="view-all-arrow">View All</a></li>
+                       </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <li class="col last-col">    
+                <a href="/ja/services/my-cartier/LightAccountPage.html" class="category-title" title="LightAccountPage">LightAccountPage</a>
+              <ul>
+                   </ul>
+            </li>
+            <!-- COLOUMN STARTS -->
+   <!-- COLOUMN STARTS -->
+   <!-- COLOUMN STARTS -->
+   <!-- COLOUMN STARTS -->
+   <!-- COLOUMN STARTS -->
+   </ul>
+  <!-- MEGA MENU ENDS HERE -->
+        </li>
+         
+       <li class="test secondary-nav">
+             <a href="/ja/services/LightAccountPage.html" class="sec-nav-link js-sec-nav" title="LightAccountPage">LightAccountPage</a>
+ <!-- MEGA MENU STARTS HERE -->
+                <ul class="mega-menu service__mycartier" style="background-image: url(test.jpeg ); display: none; background-position: -110px 50%; background-repeat: no-repeat no-repeat;">           
+      </ul>
+  <!-- MEGA MENU ENDS HERE -->
+        </li>
+         
+       </ul>
+      </li>
+
+</ul>
+</div><div class="left-push-menu" style="left:-450px; display:none; overflow-y:scroll;">
+                <form class="search-form" method="get" action="/ja/search-result-page.html">
+                    <fieldset>
+                        <!-- SEARCH CONTAINER -->
+                        <div class="search">
+                            <label for="mobile-nav-search" class="search__label"></label>
+                            <input type="text" id="mobile-nav-search" name="q" class="search__term" placeholder="">
+                        </div>
+                          <!-- CONNECTION BUTTON -->                        
+                    </fieldset>    
+                </form>             
+            </div>
+            <div class="main-container">
+
+    <div class ="error_message_js-reg-step-2" style="display:none;"></div>
+<div class="form-layout js-reg-step-2">
+    <form method="POST" action="/ja/services/my-cartier/registrationstep2.desktop.html" id="js-reg-step-2" name="js-reg-step-2" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-reg-step-2"/><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/my-cartier/registrationstep2/jcr:content/par/formbuilder/start"/><input type="hidden" name="_charset_" value="UTF-8"/><input type="hidden" name=":redirect" value="&#x2f;ja&#x2f;services&#x2f;my-cartier&#x2f;registrationstep3.html"/><div class="form"><fieldset>
+    <div class="comp-rich-text">  
+<h2 style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; text-align: center;">ありがとうございます。お客様の情報を登録いたしました。</h2>
+<p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; text-align: center;">2分ほどのお時間で、お客様のプロフィールを登録していただけます</p>
+<p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">&nbsp; &nbsp; &nbsp; 1. マイカルティエ</p>
+<p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">&nbsp; &nbsp; &nbsp; 2. 登録情報＆お気に入り</p>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;"><a adhocenable="false" href="/ja/services/my-cartier.html">このステップをスキップ</a></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created</span></div>
+<div style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px; position: absolute; left: -10000px; width: 9000px; top: 0px; text-align: center;"><span style="color: rgb(34, 34, 34); font-family: Consolas, 'Lucida Console', monospace; white-space: pre-wrap; background-color: rgb(255, 255, 255);">Thank you, your account was successfully created </span></div>
+</div><div class="heading-wrapper">
+
+<h3 class="heading3"> マイカルティエ</h3>
+
+        </div>
+
+
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><hr/><div class="heading-wrapper">
+
+<h5 class="heading5"> カルティエ商品をお持ちですか？</h5>
+
+        </div>
+
+
+<div class="owned-creations js-radiobox"> 
+
+
+<div class="group-wrapper">
+                <div class="form-element radio-wrapper piform_owncreationcheck">   
+                                    <input type="radio" 
+                                    id="no" name="piform_owncreationcheck"  value="no" class="form-radio">
+                                   <label for="no" class=" form-radio-label">NO
+</label>                              
+                            </div>
+                        <div class="form-element radio-wrapper piform_owncreationcheck">   
+                                    <input type="radio" 
+                                    id="yes" name="piform_owncreationcheck"  value="yes" class="form-radio">
+                                   <label for="yes" class=" form-radio-label">YES
+</label>                              
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-piform_owncreationcheck"></div><div class="js-owncreation-container">
+    <div class="js-own-dropone">
+
+        <div class="form-element select-wrapper piform_prodline">
+            <label>PRODUCT LINE</label>
+     <select name="piform_prodline" class=" form-select" 
+             id="piform_prodline">
+            <option value="ZZJEWELRY" >
+                    JEWELRY </option>
+            <option value="ZZFRAGRANCE" >
+                    FRAGRANCE </option>
+            <option value="ZZBRIDAL" >
+                    BRIDAL </option>
+            <option value="ZZTIMEPIECES" >
+                    TIMEPIECES </option>
+            <option value="ZZACCESSORIES" >
+                    ACCESSORIES </option>
+            </select>
+    <div class="errormessage" id="errormessage-piform_prodline"></div></div>
+</div>
+    <div class="js-own-droptwo">
+
+        <div class="form-element select-wrapper piform_productCategory">
+            <label>PRODUCT LINE</label>
+     <select>
+           <option value="">Please configure dropdown</option>
+       </select>
+    <div class="errormessage" id="errormessage-piform_productCategory"></div></div>
+</div>
+    <div class="js-own-dropthree">
+            <div class="form-element select-wrapper piform_clientOwnFrom">
+                <label>PRODUCT LINE </label>
+     <select name="piform_clientOwnFrom" class=" form-select" 
+             id="piform_clientOwnFrom">
+            <option value="BOUTIQUE" >
+                    BOUTIQUE </option>
+            <option value="RETAILER" >
+                    RETAILER </option>
+            <option value="GIFT" >
+                    GIFT </option>
+            <option value="ONLINE" >
+                    ONLINE </option>
+            </select>
+    <div class="errormessage" id="errormessage-piform_clientOwnFrom"></div></div>
+</div>  
+<a class="more-button creation-link"><span class="arrow-show"></span>Add this creation</a>
+</div>
+
+
+
+
+
+
+</div>
+</br>
+<script>
+    RICHEMONT.AjaxCaller.setAjaxOptions({
+                'callType' : "fieldType",
+                'actionName' : "OwnCreationAction",
+                'currentPagePath' : "/content/car/jp/japan/ja/services/my-cartier/registrationstep2",
+                'elementId' : "yes",
+                'eventName' : "click",
+                'parameters' : ""
+              });
+</script>
+</br><hr/></div><div class="parsys_column cq-colctrl-lt0-c1"><hr/>
+
+<div class="interest-product-line">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+
+
+
+        
+
+        
+
+            <h5 class="heading5 "> Which product lines are you interested in? </h5>
+
+        
+
+
+
+
+
+
+
+
+</div>
+<div class="non-mandatory group-wrapper">
+                <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-JEWELRY"><span><input type="checkbox" class="form-checkbox" value="JEWELRY" name="fn_grpinterdin" id="JEWELRY"></span></div>
+                  <label class=" form-checkbox-label" for="JEWELRY">Jewelry
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-TIMEPIECES"><span><input type="checkbox" class="form-checkbox" value="TIMEPIECES" name="fn_grpinterdin" id="TIMEPIECES"></span></div>
+                  <label class=" form-checkbox-label" for="TIMEPIECES">Timepieces
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-BRIDAL"><span><input type="checkbox" class="form-checkbox" value="BRIDAL" name="fn_grpinterdin" id="BRIDAL"></span></div>
+                  <label class=" form-checkbox-label" for="BRIDAL">Bridal
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-LOVE"><span><input type="checkbox" class="form-checkbox" value="LOVE" name="fn_grpinterdin" id="LOVE"></span></div>
+                  <label class=" form-checkbox-label" for="LOVE">LOVE
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-TRINITY"><span><input type="checkbox" class="form-checkbox" value="TRINITY" name="fn_grpinterdin" id="TRINITY"></span></div>
+                  <label class=" form-checkbox-label" for="TRINITY">Trinity
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-FRAGRANCE"><span><input type="checkbox" class="form-checkbox" value="FRAGRANCE" name="fn_grpinterdin" id="FRAGRANCE"></span></div>
+                  <label class=" form-checkbox-label" for="FRAGRANCE">Fragrance
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdin">
+                <div class="checker" id="uniform-ACCESSORIES"><span class=""><input type="checkbox" class="form-checkbox" value="ACCESSORIES" name="fn_grpinterdin" id="ACCESSORIES"></span></div>
+                  <label class=" form-checkbox-label" for="ACCESSORIES">ACCESSORIES</label></div>
+                        <div id="errormessage-fn_grpinterdin" class="errormessage"></div></div>          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+<div class="heading-wrapper">
+
+
+
+
+
+
+        
+
+        
+
+            <h5 class="heading5 "> Accessories </h5>
+
+        
+
+
+
+
+
+
+
+
+</div>
+<div class="non-mandatory group-wrapper">
+                <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0001"><span><input type="checkbox" class="form-checkbox" value="0001" name="fn_grpinterdinacc" id="0001"></span></div>
+                  <label class=" form-checkbox-label" for="0001">Handbag
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0002"><span><input type="checkbox" class="form-checkbox" value="0002" name="fn_grpinterdinacc" id="0002"></span></div>
+                  <label class=" form-checkbox-label" for="0002">Small Leather Goods
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0003"><span><input type="checkbox" class="form-checkbox" value="0003" name="fn_grpinterdinacc" id="0003"></span></div>
+                  <label class=" form-checkbox-label" for="0003">Belt
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0004"><span><input type="checkbox" class="form-checkbox" value="0004" name="fn_grpinterdinacc" id="0004"></span></div>
+                  <label class=" form-checkbox-label" for="0004">Bags
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0005"><span><input type="checkbox" class="form-checkbox" value="0005" name="fn_grpinterdinacc" id="0005"></span></div>
+                  <label class=" form-checkbox-label" for="0005">Sunglasses
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0006"><span><input type="checkbox" class="form-checkbox" value="0006" name="fn_grpinterdinacc" id="0006"></span></div>
+                  <label class=" form-checkbox-label" for="0006">Prescription glasses
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0007"><span><input type="checkbox" class="form-checkbox" value="0007" name="fn_grpinterdinacc" id="0007"></span></div>
+                  <label class=" form-checkbox-label" for="0007">Pen
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0008"><span><input type="checkbox" class="form-checkbox" value="0008" name="fn_grpinterdinacc" id="0008"></span></div>
+                  <label class=" form-checkbox-label" for="0008">Scarf
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0009"><span><input type="checkbox" class="form-checkbox" value="0009" name="fn_grpinterdinacc" id="0009"></span></div>
+                  <label class=" form-checkbox-label" for="0009">Cufflinks
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0010"><span><input type="checkbox" class="form-checkbox" value="0010" name="fn_grpinterdinacc" id="0010"></span></div>
+                  <label class=" form-checkbox-label" for="0010">Lighter
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0011"><span><input type="checkbox" class="form-checkbox" value="0011" name="fn_grpinterdinacc" id="0011"></span></div>
+                  <label class=" form-checkbox-label" for="0011">Key Ring
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0012"><span><input type="checkbox" class="form-checkbox" value="0012" name="fn_grpinterdinacc" id="0012"></span></div>
+                  <label class=" form-checkbox-label" for="0012">Card holder
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0013"><span><input type="checkbox" class="form-checkbox" value="0013" name="fn_grpinterdinacc" id="0013"></span></div>
+                  <label class=" form-checkbox-label" for="0013">Money Clip
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0014"><span><input type="checkbox" class="form-checkbox" value="0014" name="fn_grpinterdinacc" id="0014"></span></div>
+                  <label class=" form-checkbox-label" for="0014">Clock
+</label></div>
+                        <div class="form-element checkbox-wrapper fn_grpinterdinacc" style="display: none;">
+                <div class="checker" id="uniform-0000"><span><input type="checkbox" class="form-checkbox" value="0000" name="fn_grpinterdinacc" id="0000"></span></div>
+                  <label class=" form-checkbox-label" for="0000">Other
+</label></div>
+                        <div id="errormessage-fn_grpinterdinacc" class="errormessage"></div></div>          
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        
+        
+        
+    
+
+
+</div>
+
+            <hr/><div class="own-smartphone"><div class="heading-wrapper">
+
+<h5 class="heading5"> スマートフォン、またはタブレットコンピュータをお持ちですか？</h5>
+
+        </div>
+
+
+<div class="group-wrapper">
+                <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" 
+                                    id="iphone" name="fn_grpownsp"  value="iphone" class="form-checkbox">
+                                    <label for="iphone" class=" form-checkbox-label">IPHONE
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" 
+                                    id="ipad" name="fn_grpownsp"  value="ipad" class="form-checkbox">
+                                    <label for="ipad" class=" form-checkbox-label">IPAD
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" 
+                                    id="Other smartphone" name="fn_grpownsp"  value="Other smartphone" class="form-checkbox">
+                                    <label for="Other smartphone" class=" form-checkbox-label"><p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">その他スマートフォン
+</label>
+                            </div>
+                        <div class="form-element checkbox-wrapper fn_grpownsp">
+                                <input type="checkbox" 
+                                    id="Other smartphone2" name="fn_grpownsp"  value="Other smartphone2" class="form-checkbox">
+                                    <label for="Other smartphone2" class=" form-checkbox-label"><p style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 12px;">その他タッチパネル式タブレット端末
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_grpownsp"></div></div><hr/></div></div><div style="clear:both"></div>
+</fieldset><div class="form-element button-wrapper submit">
+<input class="form-button" type="submit"
+    name="submit" value="2月2日に進み" >
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>
+</div>
+
+<div id="modalOverlay" class="positionChange js-modal-overlay">
+    <div id="modalWindow" class="js-modal-window">
+
+    </div>
+</div>
+
+<footer class="footer clearfix" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+   <section class="footer__inner clearfix">
+      <nav class="footer-left">
+         <ul>
+<!--Retreiveing Phone Number Using DTO and setting it-->
+                    <li class="tel-no">
+               <!--Html for navigation icon-->
+               <a href="/ja/contact-us.html" class="nav-link" title="0120-301-757">
+                  0120-301-757</a>
+               <!--Html for navigation icon-->
+            </li>
+
+<li class="foundation">
+  <a class="nav-link" href="/ja/contact-us.html" target="_self">Foundation</a>
+                </li>
+<li class="cartier-rouge">
+  <a class="nav-link" href="http://rouge.cartier.jp/036/.html" target="_self">Rouge</a>
+                </li>
+<li>
+  <a class="nav-link" href="/ja/services/my-cartier/LightAccountPage.html" target="_self"> ニュースレター</a>
+                </li>
+</ul>
+      </nav>
+      <nav class="footer-right">
+         <!-- Social networking navigation starts here-->
+
+
+             <ul class="social-icons">
+    <li> <a href="http://www.facebook.com/cartier" class="social-share__facebook" title="Facebook" target="_blank"></a></li>
+            <li> <a href="http://www.twitter.com/cartier" class="social-share__twitter" title="Twitter" target="_blank"></a> </li>
+            <li > <a href="http://www.instagram.com/cartier" class="social-share__instagram" title="Instagram" target="_blank"></a> </li>
+            <li > <a href="http://www.youtube.com/cartier" class="social-share__youtube" title="Youtube" target="_blank"></a> </li>
+            <li> <a href="http://www.pinterest.com/cartier" class="social-share__pin-it" title="Pin Intrest" target="_blank"></a> </li>
+            </ul>
+<!-- Social networking navigation ends here-->
+         <!-- Country Switcher starts here-->
+          <div class="country">
+            <div class="language-select">
+    <a href="/ja/services/my-cartier.html" class="trigger-sub-menu"> All Cartier Websites</a>
+
+         </div><!-- Country Switcher ends here-->
+      </nav>
+      <!-- Static footer links starts here-->
+      <nav class="footer-menu">
+         <ul>
+  <li>
+  <a class="nav-link" href="/ja/others/terms-of-use.html" target="_self">Terms of Use</a>
+                </li>
+<li>
+  <a class="nav-link" href="/ja/sitemap.html" target="_self">Sitemap</a>
+                </li>
+<li>
+  <a class="nav-link" href="/ja/others/conditions-of-sale.html" target="_self">Conditions of Sale</a>
+                </li>
+<li>
+  <a class="nav-link" href="/ja/language-selector.html" target="_self">Language Selector</a>
+                </li>
+</ul>
+      </nav>
+      <!-- Static footer links ends here-->
+   </section>
+     </footer>
+
+
+   </div>
+
+        <script type="text/javascript" src="/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop.min.1407826768901.js"></script>
+<script type="text/javascript">
+            //$.noConflict();
+
+
+            $(document).ready(function(){ 
+                // cartier.init(); 
+                RICHEMONT.AjaxCaller.init();
+                cartier.init();
+
+
+
+
+
+
+                //                $("input:checkbox, input:radio, select").not('.no-uniform').uniform(); 
+            }); 
+
+        </script>  
+    </body>
+</html>
+

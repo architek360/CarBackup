@@ -1,0 +1,145 @@
+/*------------------------------------*\
+    FAQ VIEW  -- Desktop CSS
+\*------------------------------------*/
+
+/**
+* MAIN CONTAINER.... (.faq-view)
+* HEADING BLOCK ....(.faq-view_node__title)
+* DESCRIPTION BLOCK ....(.faq-view_node__desc)
+* ARROW BLOCK i.e. expand and collapse of the accordion (.on, .off) 
+*/
+
+
+
+.faq-view{
+	display:block;
+	margin-top: 0;
+	border-top: 1px solid $primary-17;
+	width:100%;
+	clear:both;
+	@include rem('padding-bottom', 20px);
+	color:$primary-3;
+	@include main-font;
+
+	.faq-view__wrapper{
+		border: none;
+		color: $primary-3;
+		@include rem('padding-top', 5px);
+
+		&:last-child{
+			@include rem('padding-bottom', 0px);
+		}
+		.faq-view__node{
+			border: none;
+		}
+
+
+		/*------------------------------------*\
+   			 HEADING BLOCK 
+		\*------------------------------------*/
+
+		.faq-view_node__title{
+			@include rem('padding', 0px);
+			text-align:left;
+			position:relative;
+			@include main-font;
+			@include rem('letter-spacing', 1px);
+			text-transform: none;
+			cursor: pointer;
+
+
+			.faq-view_node_title__ques{
+				@include rem('min-height', 20px);
+				@include rem('padding', 6px 30px 6px 0);
+				display: block;
+
+				p, h2 {
+					@include main-font;
+					color: $primary-3;
+				}
+
+			}
+			
+			p{
+				@include rem('padding', 0 0 0 15px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include f(13);
+		 	 	
+			}
+
+			/*------------------------------------*\
+   					 ARROW BLOCK 
+			\*------------------------------------*/
+
+			span{
+				position:absolute;
+				left:0px;
+				top:30%;
+				@include setSpriteDesktop(100%, 15px ,-431px ,-58px, transparent);
+			}
+			span.off:hover{
+				@include setSpriteDesktop(100%, 15px ,-430px ,-245px, transparent);
+				color: white;
+				
+			}
+			span.on{
+				@include setSpriteDesktop(100%, 15px ,-430px ,-245px, transparent);
+				@include rotate(0deg);
+				color: white;
+				
+			}
+
+			p:hover, h2:hover{
+				color: white;
+			}
+
+			span.off{
+				@include setSpriteDesktop(100%, 15px ,-431px ,-58px, transparent);
+			}
+		}
+
+		.faq-view_node__title:hover p {
+			color: $primary-2;
+		}
+		.faq-view_node__title.active {
+			.faq-view_node_title__ques {
+				p {
+					color: $primary-2;
+				}
+			}
+
+		}
+		.faq-view_node__title.inactive{
+			.faq-view_node_title__ques {
+				p {
+					color: $primary-3;
+				}
+			}
+		}
+
+		/*------------------------------------*\
+   			 DESCRIPTION BLOCK
+		\*------------------------------------*/
+		.faq-view_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color(#d4d4d4);
+		 	
+		 	p,ul,ol {
+		 		@include rem(padding, 0px 0 20px 15px);
+		 	}
+		 	ul,ol {
+		 		/*@include rem(margin-top, -30px);*/
+		 		line-height: 32px;
+		 	}
+		 	li {
+		 		@include rem(padding-left, 25px);
+		 	}
+
+		}
+	}
+}
+
+ .faq-view__para{margin-top:30px;}
+ .faq-view__para .faq-view__para-title p{font-size:16px; text-transform:uppercase;font-weight:bold;}

@@ -1,0 +1,39 @@
+<!--Carousel start-->
+<div class="suggestion-carousel">
+	<div class="carousel">
+	    <ul class="rslides js-slider">
+			<li class="clearfix">
+				<a href="#">
+					<div><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_0_cartier_rings.png" alt="" class="image"></div>
+					<div class="carousel__pic-desc">
+						<h3 class="product-name">panthere ring</h3>
+						<p class="product-varaint">yellow gold, tsavorite, lacquer,dsfdsf dsfdsf dsfdsfds, dsafsdfdsf, dsfdsfdsfdsf  sdfds,  sdf dsf ds yellow gold, tsavorite, lacquer,dsfdsf dsfdsf dsfdsfds, dsafsdfdsf, dsfdsfdsfdsf  sdfds,  sdf dsf ds</p>
+						
+					</div>
+				</a>
+			</li>
+
+			<li class="clearfix">
+				<a href="#">
+					<div><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_1_cartier_rings.png" alt="" class="image"></div>
+					<div class="carousel__pic-desc">
+						<h3 class="product-name">panthere ring</h3>
+						<p class="product-varaint">yellow gold</p>
+						
+					</div>
+				</a>
+			</li>
+
+			<li class="clearfix">
+				<a href="#">
+					<div><img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_2_cartier_rings.png" alt="" class="image"></div>
+					<div class="carousel__pic-desc">
+						<h3 class="product-name">panthere ring</h3>
+						<p class="product-varaint">yellow gold, tsavorite, lacquer,dsfdsf dsfdsf dsfdsfds, dsafsdfdsf</p>
+					</div>	
+				</a>
+			</li>
+	   </ul>
+	</div>
+</diV>
+<!--Carousel end-->

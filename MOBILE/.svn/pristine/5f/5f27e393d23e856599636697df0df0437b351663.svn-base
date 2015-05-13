@@ -1,0 +1,5 @@
+<input id="<!--#echo var="radio-value" -->" type="radio" name="<!--#echo var="radio-name" -->" value="<!--#echo var="radio-text" -->" class="radio-input <!--#echo var="radio-class" -->"  data-cardname = "<!--#echo var="attr-value" -->">
+
+<!--#if expr="${radio-text}" -->
+<label for="<!--#echo var="radio-value" -->" class="radio-title"><!--#echo var="radio-text" --></label>  
+<!--#endif -->

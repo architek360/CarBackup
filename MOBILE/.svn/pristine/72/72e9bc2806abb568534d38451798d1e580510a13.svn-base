@@ -1,0 +1,283 @@
+/*------------------------------------*\
+	ECS PRE REGISTRATION -- Mobile CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER ..... (.js-pre-registration)
+* JS VALIDATOR CONTAINER ..... (.js-form-validator)
+* ACCORDIAN CONTAINER..... (.att-accordion)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.js-pre-registration {
+    .js-ga-store-geolocatore-page{
+        margin-top:0px !important;
+    }
+    @include brand-font;
+    @include font-color($primary-2);
+    border-top: 1px solid $primary-2;
+    @include rem("margin", 35px 62px 0px);
+    display: block;
+    .welcome-message {
+        text-align: center;
+    }
+    .ecs-entrust-boutique .store-locator-wrapper .store-list {
+        width: 100%;
+    }
+    .details-section {
+        @include rem(margin-bottom, 40px);
+        border: 1px solid $primary-89;
+        .comp-rich-text {
+            margin: 0 auto;
+            width: 90%;
+            p {
+                width: 100%;
+            }
+            .videocontainer {
+                width: 100%;
+                @include rem(height, 250px);
+                @include rem(padding-bottom, 40px);
+            }
+        }
+    }
+    .instruction-text {
+        font-family: Georgia,sans-serif;
+        font-size: 1.8rem;
+        color: #a0a0a0;
+        font-style: italic;
+        display: inline-block;
+        @include rem("padding", 0px);
+    }
+    .address-container {
+        h3 {
+            text-align: left;
+            font-weight: bold;
+            @include brand-font;
+            @include f(20);
+            @include rem(padding-bottom, 0px);
+        }
+        .address {
+            h3 {
+                text-align: center;
+            }
+        }
+        p {
+            @include rem(padding-top, 0px);
+            font-family: Georgia,sans-serif;
+        }
+    }
+    .rte-wrapper {
+        width: 100%;
+    }
+    /*------------------------------------*\
+    	$JS VALIDATOR CONTAINER
+    \*------------------------------------*/
+    .js-form-validator {
+        form {
+            border: 1px solid $primary-89;
+            .form {
+                width: 90%;
+                margin: 0 auto;
+                .form-element {
+                    margin: 0;
+                }
+                .heading-wrapper {
+                    width: 100%;
+                    .heading3 {
+                        @include rem(padding, 0px);
+                    }
+                    .heading-white-line {
+                        @include rem(padding, 0px);
+                        @include rem(margin, 40px 0px);
+                    }
+                }
+                .cq-colctrl-lt0-ecs-pre-registration-1 {
+                    @include rem(padding-bottom, 45px);
+                }
+                .problem_desc,.address_heading {
+                    border-top: 1px solid $primary-89;
+                }
+                .collection {
+                    width: 100%;
+                }
+                .select-wrapper {
+                    @include rem(padding-top, 20px);
+                    .heading3 {
+                        @include rem(padding, 45px 0 2px);
+                    }
+                }
+                .addressListingDetailView {
+                    @include rem(margin-top, 20px);
+                }
+                .productType, .creationName, .serialProduct, .select-wrapper.year {
+                    width: 100% !important;
+                    padding-top: 0;
+                    float: none;
+                }
+                label {
+                    @include rem("font-size", 20px);
+                }
+                .input-wrapper, .data-picker-wrapper, .select-wrapper {
+                    min-height: 0;
+                    padding-top: 0;
+                    label {
+                        padding: 0;
+                        @include rem(margin, 30px 0 5px);
+                        display: block;
+                    }
+                }
+                .group-wrapper {
+                    @include rem(padding-top, 30px);
+                }
+                .radio-wrapper {
+                    @include rem(padding, 20px 0px 10px);
+                }
+                .addressList {
+                    width: 100%;
+                    margin-top: 10px;
+                    .address {
+                        @include rem(margin, 50px 0);
+                    }
+                }
+                .default-button {
+                    display: none;
+                }
+                .billing-shipping {
+                    width: 100%;
+                }
+                .add-icon {
+                    @include setSprite(27px, 29px, -1026px, -114px);
+                    display: inline-block;
+                    @include rem("height", 15px);
+                    @include rem(margin, 0 0 0 5px);
+                    position: relative;
+                }
+                .js-create {
+                    display: none;
+                }
+                a.js-edit {
+                    display: inline-block;
+                }
+                a.js-add {
+                    float: right;
+                }
+                .confirm {
+                    @include rem(margin, 10px 0 40px 0);
+                }
+                .problemDescription {
+                    @include rem(margin-bottom, 40px);
+                }
+                .description {
+                    margin-bottom: 0px;
+                }
+                .js-edit-text, .js-create-text {
+                    .cross-button {
+                        float: right;
+                    }
+                }
+                label[for="blank"] {
+                    display: block;
+                    @include rem("margin", 40px 0 0px);
+                    .checker {
+                        @include rem("margin-right", 10px);
+                    }
+                }
+                .ecsaddress2 {
+                    display: none;
+                }
+                .addressList .addressAction {
+                    text-align: center;
+                    @include rem("padding", 0 80px);
+                    .button {
+                        display: inline-block;
+                    }
+                    .marginL {
+                        float: left !important;
+                    }
+                    .marginR {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ecsstep2 {
+    .repairservice.section {
+        border: 1px solid $primary-89;
+        @include rem("margin-bottom", 35px);
+        .cost-estimate {
+            @include rem("padding", 20px 22px);
+            text-align: left;
+            width: auto;
+            .cost-estimate__filter {
+                padding: 0;
+            }
+            .cost-estimate__filter__wrapper {
+                border: none;
+            }
+            .cost-estimate__filter_node__desc {
+                padding: 0;
+            }
+            .notification {
+                text-align: left;
+                h3, p {
+                    text-align: left;
+                }
+                p {
+                    @include rem("margin-bottom", 14px);
+                }
+            }
+        }
+        .ecs-bottom-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .back-button {
+        display: none;
+    }
+}
+
+#ecspre-registration_form {
+    @include rem("padding-top", 35px);
+    .field-tooltip {
+        display: none;
+    }
+}
+
+.repair-service .address-box .addressrow p {
+    display: inline;
+    @include rem("margin-right", 5px);
+}
+
+#ecspre-registration_form .js-address-form .js-form-address-selector {
+    border-bottom: 1px solid #4d4d4d;
+}
+
+.ecs-nodata {
+    display: none;
+    &.ecsaddress3 {
+        display: block;
+        .js-address-select-hide {
+            display: none;
+        }
+    }
+}
+
+.js-pre-registration .js-form-validator form .form .ecsaddress3.ecs-nodata .js-edit-text .cross-button {
+    display: none;
+}
+
+.ecsservice.page.basepage.mobilehomepage {
+    h1 {
+        @include rem("padding", 45px 0px 25px);
+        @include rem("font-size", 30px);
+        @include brand-font;
+        font-weight: bold;
+    }
+}

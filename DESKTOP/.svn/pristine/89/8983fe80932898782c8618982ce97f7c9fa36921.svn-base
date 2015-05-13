@@ -1,0 +1,271 @@
+/*------------------------------------*\
+    bridal view -- MOBILE CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.bridal-home)
+ * QA CONTAINER    (.bridal-home__qa)
+ * bridal description link CONTAINER (.bridal-home__desc__link)
+ * bridal description CONTAINER (.bridal-home__desc)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.bridal-home {
+	width: 100%;
+	position: static;
+
+
+	.bridal-teaser{
+		height:634px;
+
+		.bridal-teaser-wrapper{
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 100%;
+			max-width: 1424px;
+			min-width: 980px;
+		}
+	}
+
+	.bridal-home__bg-image {
+			height:800px;
+			overflow: hidden;
+			@include rem('min-height',592px);
+	}
+	.comp-rich-text {
+		position: absolute;
+		top: 285px;
+		right: 0;
+
+		/*------------------------------------*\
+    		$bridal description CONTAINER
+		\*------------------------------------*/
+		.bridal-home__desc {
+					
+					color: $primary-4;
+					@include f(22);
+					position: absolute;
+					@include main-font;
+					/*@include rem('right',);*/
+					right: 0;
+					@include rem('width',340px);
+					@include rem('margin',0 280px 0 310px);
+					@include rem('height',495px);
+					
+					z-index: 5;
+					.bridal-home__desc__img {
+						@include rem('width',200px);
+						@include rem('padding-bottom',10px);
+						margin-bottom: 0;
+						display: inline-block;
+					   	img {
+					   			height: auto;
+								width: auto;
+								border: none;
+								margin-bottom: 0;
+					   	}
+					}
+					.bridal-home__desc_text {
+						color: #fff !important;
+						padding-top: 0;
+						@include f(13);
+						padding-bottom: 0;
+						@include rem('letter-spacing',0px);
+						@include rem('line-height',18px);
+						@include main-font;
+						@include rem('width',364px);
+						margin : 0;
+					}
+					
+				.bridal-home__desc_heading {
+					 @include f(13);
+					 @include rem('margin-top',30px);
+					 @include rem('max-width',400px);
+					 color :#88131d;
+					 @include proxiBold-font;
+					  @include rem('letter-spacing',1px);
+					 text-transform: uppercase;
+					 text-align :left;
+
+				}
+			/*------------------------------------*\
+    				$ bridal description link CONTAINER
+			\*------------------------------------*/
+				.bridal-home__desc__link {
+					display:inline-block;
+					@include rem(margin-top, 20px);
+					max-width:96%;
+
+
+					a {
+						
+						 @include rem('margin-top',15px);
+						 margin-left: 0;
+						 color: $primary-1;						 
+						 @include bold-font;
+						 background-color: #88131d;
+						 @include rem('padding',20px 20px 20px 35px);
+						 text-decoration: none;
+						 line-height:25px;
+						 position: relative;
+					}
+					
+					.cta--red-width-auto{
+						@include rem(padding, 3px 14px 9px 16px);
+						color: $primary-2;
+						background: #8f010f;
+
+						&:hover{
+							background: $primary-66;
+						}
+
+						.cta-button__input{
+							letter-spacing: normal;
+						}
+					}
+					.cta--red{
+						width: auto;
+					}
+
+					.cta-button__input{
+						color: $primary-1;
+						@include f(13);
+					}
+				}
+		}
+		.cta {
+			@include rem('padding-left' ,20px);
+
+			.arrow-icon{
+				position: absolute;
+				left:17px;
+				top:26px;
+			}
+		}
+	}
+	/*------------------------------------*\
+    		$QA CONTAINER
+	\*------------------------------------*/
+
+	.bridal-home__qa {
+		@include f(24);
+		@include brand-font;
+		text-align: center;
+		color: $primary-3;
+		text-transform: uppercase;
+		@include rem('margin-bottom',38.4px);
+		font-weight: bold;
+		position: absolute;
+		@include rem('bottom',-106px);
+		left: 32%;
+	}
+
+	.bridal-expertise{
+		height:167px;
+		clear:both;
+		position: relative;
+ 		width:81.25%;
+ 		margin:0 auto;
+		@include rem('margin-top',30px);
+
+		img{
+			height:100%;
+			width:100%;
+			position:absolute;
+
+		}
+
+		.bridal-expertise__desc{
+			position: absolute;
+			border:1px solid $primary-25;
+			display:block;
+			width:100%;
+			@include box-sizing(border-box);
+			@include rem('padding',15px 10px);
+			background: rgba(255, 255, 255, 0.5);
+
+			.heading2{
+				@include f(20);
+				padding:0;
+				@include bold-font;
+				@include font-color($primary-39);
+				text-align:left;
+			}
+
+			.more-button{
+				@include rem('padding',10px 0 0);
+				@include font-color($primary-39);
+				@include f(18);
+				font-style:italic;
+				.arrow-show{
+					@include setSprite(14px, 15px, -670px, -52px);
+					position: relative;
+					@include rem('top', -2px);
+				}
+			}
+		}
+	}
+
+	.services-pushes{
+	width: 100%; 
+	margin: 0;
+	@include rem('margin', 10px 0 30px);
+	color: $primary-1;
+
+		.pushes-wrapper {
+			@include rem('margin', 30px 0 40px);
+
+			img{
+				vertical-align: top;
+			}
+
+			.grid {
+				@include rem('margin-bottom', 0px);
+			}
+
+
+			.pushes-wrapper-service-push{
+				border:1px solid $primary-63;
+				.push-col{
+					height: 182px;
+				}
+
+				.push-hover{
+					background:url($path-images+'icons/ie_0.4.png');
+				}
+
+				.push-col_title .text-link{
+					color:#ffffff;
+				}
+			}
+
+		}
+
+		.more-button{
+			color: $primary-1;
+		}
+
+		.even{
+			@include rem('margin-right', 20px);
+		}
+		.one-half{
+			width: 48%;
+		}
+
+	}
+}
+
+.quick-links {
+	.quick-link-wrapper {
+		border: none;
+	}
+}
+
+.heading4{
+		@include bold-font;
+		@include rem(padding, 60px 0 0);
+	}
+/*bridal css end here */

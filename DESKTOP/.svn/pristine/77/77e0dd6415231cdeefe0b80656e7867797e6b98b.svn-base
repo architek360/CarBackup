@@ -1,0 +1,127 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "../_theme_vars"; 
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+
+ 
+.body-wrapper .header .left-nav .left-nav__list li .nav-link {
+    font-family: proximanova,sans-serif;
+    font-size: 12px;
+}
+.body-wrapper .header .right-nav .right-nav__list li .nav-link {
+    font-family: proximanova,sans-serif;
+    font-size: 12px;
+}
+.primary-nav-container .first-level-nav .first-level-nav__title {
+    font-family: proximanova,sans-serif;
+    font-size: 12px;
+}
+
+.primary-nav-container .first-level-nav .nav-show .secondary-nav a.sec-nav-link {
+    font-family: proximanova,sans-serif;
+    font-size: 11px;
+}
+
+
+.js-reg-step-1 .fn_lname {
+    margin-left: 0rem;
+}
+
+.js-reg-step-1 .fn_fname {
+    clear:none;
+    margin-left: 0.8rem;
+}
+
+.js-reg-step-1 .fn_lname2 {
+    margin-left: 0rem;
+}
+
+.js-reg-step-1 .fn_fname2 {
+    clear:none;
+    margin-left: 0.8rem;
+}
+
+.regstep3-col4{
+    .fn_city{
+        width: 44% !important;
+    }
+}
+
+.js-jp-reg-step-3 .input-wrapper .form-input#fn_zip, .js-jp-reg-step-3 .input-wrapper .form-input#fn_phno, .js-reg-step-3 .input-wrapper .form-input#fn_zip, .js-reg-step-3 .input-wrapper .form-input#fn_phno {
+  width: 100%;
+}
+
+
+.addressform_lastName2 {
+position: relative;
+top: 10px;
+margin-left: -173px;
+}
+.addressform_firstName2 {
+position: relative;
+top: 10px;
+}
+.addressform_lastName1 {
+    position: relative;
+display: inline-table;
+margin-left: 0px;
+}
+
+.addressform_firstName1{
+    float: left;
+margin-left: -5px;
+clear: none;
+}
+#addressform_lastName1{
+    width:94%
+}
+.piform_lname1 {
+    margin-left: 0;
+}
+.piform_fname1 {
+    margin-left:0.8rem;
+}
+
+#js-light-account-form {
+    .fn_lname2 , .fn_lname {
+        margin-left:0px;
+    }
+    .fn_fname2 , .fn_fname {
+        clear: none;
+        margin-left: 0.8rem;    
+    }
+}
+
+.js-light-account-form .captcha .captcha__image__container .verify-audio-text{margin-top:30px}
+
+.js-light-account-form .captcha .captcha__image__container .form-label {
+    min-width: 120% !important;
+}
+
+.js-reg-step-3 {
+    .fn_strname {
+        clear:both !important; 
+    }
+    .fn_addrinfo {
+        width: 44% !important;
+    }
+}

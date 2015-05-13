@@ -1,0 +1,90 @@
+/*------------------------------------*\
+   QUICK LINKS -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....(.quick-links)
+ * QUICK LINKS LISTING... (ul)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.quick-links{
+	color: $primary-2;
+	display: block;
+	width: 100%;
+	@include rem('height', 205px);
+    overflow: hidden;
+	h3{
+		color:$primary-2;
+		@include rem('margin-top' , 50px);
+		@include f(22);
+	}
+
+	.quick-link-wrapper {
+		@include rem('margin', 0px );
+		display: block;
+		@include rem('height', 180px);
+		left: 0;
+		@include rem('padding', 25px 0px 0px);
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		border-top: 1px solid $primary-17;
+
+	    .grid {
+	    	width: 980px;
+	    }
+
+
+	}
+
+	/*------------------------------------*\
+	    $QUICK LINKS LISTING
+	\*------------------------------------*/
+	ul{
+		@include set-ulFix;
+		width:100%;
+		margin: 0 auto;
+		border: none;
+		text-transform: uppercase;
+
+		li{
+			font-weight: bold;
+			@include f(10);
+			border-bottom: 1px solid $primary-17;
+		    @include proxi-font;
+		    @include rem('line-height', 10px);
+		    text-align: center;
+			
+			a{	    
+				color: $primary-3;
+			    display: block;
+			    @include f(12);
+			    font-style: italic;
+			    letter-spacing: 0;
+			    @include rem('padding', 0px);
+			    width: 100%;
+
+				&:hover{
+				 	text-decoration:none;
+				}
+
+				img{
+					@include rem('margin-left', 29px);
+					@include rem('padding-right', 16px);
+					@include rem('width', 41px );
+					width:41px;
+					height:41px;
+					vertical-align:middle;
+					position: absolute;
+					@include rem('top' , 25px);
+					@include rem('left' ,1px);
+				}
+			}
+			&:last-child{
+				border: 1px solid $primary-17;
+			}
+		}	
+	}
+}

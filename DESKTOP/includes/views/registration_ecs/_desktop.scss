@@ -1,0 +1,343 @@
+/*------------------------------------*\
+	ECS PRE REGISTRATION -- Desktop CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER ..... (.registration_page)
+* FORM CONTAINER ..... (.form)
+* FORM WRAPPER CONTAINER..... (.select-wrapper, .input-wrapper, .group-wrapper)
+*/
+
+.heading2{
+	@include rem('padding-top', 50px);
+	@include rem('font-size', 30px);
+}
+
+.main-container{ 
+	.welcome-message{
+		@include rem('font-size', 12px);
+		@include rem('width', 550px);
+		text-align: center;
+		margin:0px auto;
+		@include rem('padding', 0px 0px 40px 0px);
+	}
+}
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.registration_page {
+
+	.heading3{
+		@include rem('letter-spacing', 1px);
+		@include f(18);
+		@include rem('padding', 40px 0);
+		@include font-weight(bold);
+	}
+	.tabs{
+		@include rem('margin-bottom', 100px);
+		.tabs__content{
+			position: relative;
+			@include rem('margin-top', 0px);
+		}
+		ul.tabs__nav{
+			.tabs__title{
+				@include rem('width', 480px);
+				.tab__title-wrapper{
+					@include rem('max-width', 480px);
+				}
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $FORM CONTAINER
+	\*------------------------------------*/
+
+	.form{
+		@include rem('margin-top', 30px);
+		border: 1px solid $primary-12;
+		.cq-colctrl-lt0{
+			@include rem('margin', 0px);
+			border: none;
+		}
+		.js-set-default{
+			display: none;
+		}
+		.cq-colctrl-lt0-ecs-pre-registration-1{
+			.cq-colctrl-lt0-c0 {
+				border-right: 1px dotted $primary-61;
+			}
+			.cq-colctrl-lt0-c1 {
+				border-left: none;
+			}
+		}
+		.cq-colctrl-lt0-ecs-pre-registration-2{
+			.cq-colctrl-lt0-c1 {
+				border-right: 1px dotted $primary-61;
+			}
+			.cq-colctrl-lt0-c0 {
+				border-left: none;
+			}
+		}
+		.parsys_column.cq-colctrl-lt0-c1{
+			label[for="blank"]{
+				display: inline-block;
+				@include rem('padding', 10px 0px 25px);
+    			text-transform: uppercase;
+    			@include main-font;
+    			.checker{
+					@include rem('margin-top', -1px);
+					input{
+						cursor: pointer;
+						opacity:0;
+						filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+						-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+					}
+				}
+    			span{
+    				@include f(11);
+    				@include rem('letter-spacing', 1px);
+    				@include rem('margin-top', 1px);
+    			}
+			}
+			.instruction-text{
+				@include rem('padding', 0px 0 25px);
+				color: $primary-12;
+				width: 84.5%;
+				@include rem('margin', 0px);
+				font-style: italic;
+			}
+		}
+
+		/*------------------------------------*\
+	    	$FORM WRAPPER CONTAINER
+		\*------------------------------------*/
+
+		.select-wrapper{
+			@include rem('padding-top', 0px);
+			@include rem('padding-bottom', 15px);
+			@include rem('margin', 0px);
+			@include rem('width', 360px);
+			display: inline-block;
+			label{
+				@include rem('margin', 0px);
+				@include rem('margin-bottom', 5px);
+				@include rem('padding-top', 0px);
+				display: block;
+				width:auto;
+				float: left;
+				@include rem('letter-spacing', 3px);
+			}
+			.selector{
+				display: block;
+				width:100% !important;
+				select{
+					option{
+						font-style: italic;
+						@include f(11);
+						color: $primary-3;
+					}
+				}
+				span{
+					width:100% !important;
+					font-style: italic;
+					@include f(11);
+					color: $primary-3;
+				}
+			}
+		}
+		.input-wrapper{
+			@include rem('padding-bottom', 15px);
+			@include rem('padding-top', 0px);
+			@include rem('margin-top', 0px);
+			@include rem('width', 360px);
+			display: inline-block;
+			label{
+				@include rem('margin', 0px);
+				@include rem('margin-bottom', 5px);
+				@include rem('padding-top', 0px);
+				display: block;
+				width:auto;
+				float: left;
+				@include rem('letter-spacing', 3px);
+			}
+			input{
+				display: block;
+				width:100%;
+			}
+		}
+		.group-wrapper{
+			@include rem('margin',0px);
+			@include rem('padding-bottom', 5px);
+			@include rem('width', 360px);			
+			display: inline-block;
+			label{
+				@include rem('font-size',11px);
+				@include font-weight(bold);
+			}
+			.radio-wrapper{
+				@include rem('padding',18px 15px 0px 0px);
+			}
+		}
+		
+		.problem_desc,.address{
+			clear:both;
+			width: 95%;
+			margin: 0 auto;
+			border-top: 1px solid $primary-12;
+			@include rem('padding-top' , 30px);
+			@include rem('padding-bottom' , 30px);
+		}
+
+
+		.textarea-wrapper{
+			clear:both;
+			@include rem('padding-bottom' , 50px);
+			width: 95%;
+			margin: 0 auto;
+			display: block;
+			label{
+				@include rem('font-size',11px);
+			}
+			textarea{
+				width: 100%;
+				@include rem('max-width' , 930px);
+				@include rem('max-height' , 130px);
+				@include rem('line-height', 25px);
+				@include rem('text-indent', 6px);
+				font-style: italic;
+				@include font-weight(bold);
+				color: $primary-12;
+			}
+		}
+
+
+
+		.button-wrapper{
+			@include rem('padding-bottom' , 30px);
+		}
+		.address_heading {
+			@include rem('padding-top' , 40px);
+			border-top: 1px solid $primary-12;
+			width: 95%;
+			margin:0 auto;
+		}
+		.address{
+			border-top: none;
+			h3{
+				&.address-name-view{
+					@include proxi-font;
+					font-style: normal;
+					@include rem('letter-spacing', 1px);
+					@include f(12);
+					@include rem('line-height', 25px);
+					@include rem('padding', 1.5px);
+					text-transform: uppercase;
+				}
+			}
+			.addressrow{
+				p{
+					display: inline;
+					@include rem('padding', 1.5px);
+				}
+			}
+			p{
+				&.address-name-view{
+					font-style: normal;
+				}
+			}
+		}
+		.ecsaddress2{
+			display: none;
+		}
+		.js-address-select .select-wrapper{
+			@include rem('width' , 313px);
+			@include rem('padding-bottom' , 10px);
+			.selector{
+				@include rem('padding' , 0px 0px 0px 5px);
+				span, option{
+					color: $primary-2;
+					@include font-weight(bold);
+				}
+			}
+			.heading1, .heading2, .heading3, .heading4, .heading5{
+				text-align: left;
+				@include rem('padding', 0px 0px 5px);
+				@include f(11);
+				@include font-weight(bold);
+			}
+			p{
+				@include rem('padding', 0px 0px 5px);
+			}
+			label{
+				display: none;
+			}
+		}
+		#create-text,#edit-text,.js-message{
+			display: none;
+		}
+		.js-bobj-section-one{
+			display: inline-block;
+		}
+		.addressListingDetailView{
+			@include rem('padding-bottom' , 20px);
+			display: inline-block;
+			.js-add, .js-edit{
+				color: $primary-3;
+			}
+			.edit-icon{
+			border:none; 
+			}
+			.add-icon{
+				@include setSprite(27px, 29px, -1017px, -262px);           
+				display: inline-block;
+				@include rem('height', 15px);
+				@include rem(margin, 0 0 0 5px);
+				
+				position:relative;
+						}
+		}
+		.heading-wrapper{
+			.heading-white-line{
+				width: 95%;
+				margin: 0 auto;
+				border-color: $primary-12;
+			}
+		}
+		.instruction-text, .rte-wrapper{
+			@include rem('padding', 0px 0 5px);
+			color: $primary-12;
+			width: 94.5%;
+			margin: 0 auto;
+			font-style: italic;
+		}
+		.rte-wrapper {
+			@include rem('padding', 0px);
+		}
+		.textarea-wrapper{
+			@include rem('padding-bottom', 0px);
+		}
+		.serialProduct{
+			@include rem('padding-bottom', 5px);
+		}
+		.serialProduct + p.instruction-text{
+			width: 86%;
+			@include rem('margin', 0px);
+			@include rem('padding-bottom', 25px);
+		}
+	}
+}
+.form-loader{
+	background: url($path-images + 'icons/bx_loader.gif') 5px 0 no-repeat;
+	@include rem('height', 25px);
+	@include rem('width', 20px);
+	display:inline-block;
+	vertical-align:bottom
+}
+#confirmButtons {
+	.cta--grey.secondrycta{
+		width: auto;
+		@include rem('padding', 10px);
+	}
+}

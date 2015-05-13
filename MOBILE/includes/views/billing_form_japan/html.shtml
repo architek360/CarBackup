@@ -1,0 +1,178 @@
+ <!--Billing FORM Block Starts Here-->
+<div class="billing-form-japan grid js-form-validator js-billing js-data-formdisplay" data-formdisplay="false">
+
+  <!--#if expr="${form_type}=billing-address" -->   
+  <h1 class="heading2 js-billing-section-one display-none">enter your billing address</h1>
+   <!--#endif -->
+  <form>
+    <div class='js-billing-section-one display-none'>
+      	<!-- Personal Info Wrapper-->
+        <div class="personal-details">
+            <div class="grid__item grid__item--pad">
+            <!--#set var="input-name" value="fn_grptitle" -->
+            <!--#include virtual="../../components/radio_buttons_group/html.shtml" -->
+            </div>
+
+        	<div class="grid__item grid__item--row js-fname">
+        		<!--#set var="label-name" value="name (Last name)" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_fname" -->
+        		<!--#include virtual="../../components/form_elements/label.shtml" -->
+        		<!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+        		<!--#include virtual="../../components/form_elements/input.shtml" -->
+
+        	</div>
+
+        	<div class="grid__item grid__item--row js-lname">
+                <!--#set var="label-name" value="name" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_lname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+        	</div>
+            <div class="grid__item grid__item--row js-lname">
+                <!--#set var="label-name" value="name (last katakana)" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_lname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+            </div>
+            <div class="grid__item grid__item--row js-lname">
+                <!--#set var="label-name" value="name (name katakana)" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_lname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+            </div>
+            <div class="grid__item grid__item--row">
+                <!--#set var="label-name" value="Email" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_addrname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="email" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+               
+            </div>
+            <div class="grid__item grid__item--row ">
+                <!--#set var="label-name" value="postal code (above 3 digit)" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_lname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="number" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+            </div>
+            <div class="grid__item grid__item--row ">
+                <!--#set var="label-name" value="zip code  (4 digit numeric charatcers)" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_lname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="number" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+            </div>
+              
+            
+            <div class="grid__item grid__item--row js-lname">
+                <!--#set var="text-detail" value="ok" -->
+                <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-billingform-ok" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>
+
+        </div>
+
+     <div class="phone-details">
+        	
+
+        	<div class="grid__item grid__item--row js-statename">
+        		<!--#set var="label-name" value="state" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_state" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+        	</div>
+            <div class="grid__item grid__item--row js-cityname">
+                <!--#set var="label-name" value="correctly country town and village" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_city" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+            </div>
+
+        	<div class="grid__item grid__item--row ">
+                <!--#set var="label-name" value="Region" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_region" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+        	</div>
+            <div class="grid__item grid__item--row ">
+                <!--#set var="label-name" value="address" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_address" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+            </div>
+
+        	<div class="grid__item grid__item--row js-phonenumber">
+        		<!--#set var="label-name" value="phone number" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_phno" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+               
+        	</div>
+            <div class="grid__item grid__item--row js-mobilenumber">
+                <!--#set var="label-name" value="mobile number" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_phno" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+               
+            </div>
+        </div>
+
+        <!--#if expr="${form_type}=billing-address" -->   
+    	<div class="grid__item confirmation">
+            <!--#set var="checkbox-value" value="value" -->
+    		<!--#set var="checkbox-label-name" value="I do not want to receive an invoice to the billing address." -->
+            <!--#set var="checkbox-name" value="fn_chkinvoice" -->
+
+    		<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+    	</div>
+        <!--#endif -->
+
+    	<div class="next-step-cta clearfix js-billing-ajax-button">
+    		<!--#set var="text-detail" value="continue to next step" -->
+        	<!--#set var="cta--varaint" value="cta--red" -->
+        	<!--#include virtual="../../components/form_elements/button.shtml" -->
+    	</div>
+    </div>
+    <div class='js-billing-section-two display-none'>
+        <!--#include virtual="../../views/billing_confirmation/html.shtml" -->
+    </div>
+
+  </form>
+
+</div>
+ <!-- Billing FORM Block Ends Here-->

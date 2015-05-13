@@ -1,0 +1,50 @@
+<div class="main-container">
+	<!--#set var="PRODUCT_IMG_PATH" value="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/maison/" -->
+	<!--#if expr="${COMP_1}=/carousel/" -->
+			<div class="home-carousel">
+				<!--#include virtual="../includes/components/${COMP_1}/carousel.shtml" -->
+			</div>
+
+	<!--#elif expr="${COMP_1}" -->
+			<!--#include virtual="../includes/components/${COMP_1}/desktop.shtml" -->
+	<!--#endif -->
+		<!--#if expr="${COMP_2}=/mobile_carousel/" -->
+			<!--#include virtual="../includes/components/carousel/mobile_carousel.shtml" -->
+
+	<!--#elif expr="${COMP_2}" -->
+			<!--#include virtual="../includes/components/${COMP_2}/html.shtml" -->
+	<!--#endif -->
+
+
+	<!--#if expr="${VIEWS_1}" -->
+
+		<!--#if expr="${DEVICE} = 'mobile'"  -->
+			<!--#include virtual="../includes/views/${VIEWS_1}/html.shtml" -->
+		<!--#else-->
+			<!--#include virtual="../includes/views/${VIEWS_1}/desktop.shtml" -->
+		<!--#endif -->
+
+		<!--#if expr="${COMP_4}" -->
+			<!--#include virtual="../includes/components/${COMP_4}/html.shtml" -->
+		<!--#endif -->
+
+	<!--#endif -->
+
+	<!--#if expr="${VIEWS_2}" -->
+
+		<!--#if expr="${DEVICE} = 'mobile'"  -->
+			<!--#include virtual="../includes/views/${VIEWS_2}/html.shtml" -->
+		<!--#else-->
+			<!--#include virtual="../includes/views/${VIEWS_2}/desktop.shtml" -->
+		<!--#endif -->
+	<!--#endif -->
+
+
+
+	<!--#if expr="${COMP_3}" -->
+			<!--#include virtual="../includes/components/${COMP_3}/html.shtml" -->
+	<!--#endif -->
+
+
+
+</div>

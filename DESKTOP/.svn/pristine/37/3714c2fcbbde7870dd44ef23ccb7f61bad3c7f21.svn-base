@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    FOOTER  -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....collection__listing (.product-push)
+ * FOOTER LISTING......footer list styling (.footer__menu)
+ */
+
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.footer{
+	@include rem('padding-top', 20px);
+
+	/*------------------------------------*\
+	    $FOOTER LISTING
+	\*------------------------------------*/
+	.footer__menu{
+		@include set-ulFix;
+		li.footer_social__icon{
+			border-top:none;
+		}
+
+		li{
+			border-top: solid 1px $primary-6;
+			text-align: center;
+			line-height: 92px;
+			height:92px;
+			@include main-font;
+			@include f(30);
+
+			a{
+				display:block;
+				@include font-color($primary-10);
+				text-decoration:none;
+			 
+				&:hover{
+				 	text-decoration:none;
+				}
+			}
+
+			.telephone_number{
+				@include font-color($primary-5);
+				@include rem('margin-left', 14px);
+			}
+			
+			.icon-phone {
+				@include setSprite(13px, 36px, -155px, -20px);
+			}
+		}
+	}
+}
+
+
+

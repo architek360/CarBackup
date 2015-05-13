@@ -1,0 +1,18 @@
+<!-- My Cartier Pushes Component  -->
+<div class="video-pushes-wrapper js-video-pushes-wrapper">
+	<div class="video-pushes js-video-pushes">
+		<a href="#" class="close-button">CLOSE</a>
+		<div class="video-pushes__inner js-video-pushes__inner">
+			<div class="video-pushes__teaser js-video-pushes__teaser opened">
+				<div class="video-pushes__teaser-desc">View the Film</div>
+				<img src="<!--#echo var="CONTENT_IMG_PATH" -->tank-mc-reply-v3.jpg" alt="" class="video-teaser-image">
+			</div>
+			<div class="video-pushes__slideshow js-video-pushes__slideshow closed">
+				<!--#include virtual="../../components/jwplayer/html.shtml" -->
+
+
+
+			</div>		
+		</div>
+	</div>
+</div>

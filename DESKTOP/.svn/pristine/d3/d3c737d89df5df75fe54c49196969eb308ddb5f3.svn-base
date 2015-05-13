@@ -1,0 +1,57 @@
+/*------------------------------------*\
+  Error page  COMPONENT  -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.error-page)
+ * main message ....(.error-page__msg)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+ 
+.error-page {
+	width: 100%;
+	position: static;
+	min-height:555px;
+
+	img{
+		max-width: 100%;
+		max-height: 768px;
+	}
+
+	> div{
+		position: absolute;
+		margin-left: -167px;
+		top: 0;
+		width: 93%;
+		text-align: center;
+	}
+
+	.error-page__msg {
+		font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		font-size: 22px;
+		font-weight: bold;
+		color: white;
+		font-weight: normal;
+		margin: 206px 0 0 43px;
+		position: absolute;
+		text-align: center;
+		width: 430px;
+		line-height: 30px;
+		position: absolute;
+		top: 150px;
+	}
+	.error-page__msgtext {
+		  text-transform: uppercase;
+		  color: white;
+		  text-align: center;
+		  font-size: 16px;
+		  width:100%;
+	}
+
+}
+
+/* error page css end here */

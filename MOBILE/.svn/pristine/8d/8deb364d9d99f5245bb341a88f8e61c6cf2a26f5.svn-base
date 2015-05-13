@@ -1,0 +1,92 @@
+
+  <!-- MY CARTIER Block Starts Here-->
+<div class="grid my-account clearfix">
+    <h1 class="heading2">my cartier</h1>
+    <p class="welcome-message">Dear <br><span>Pierre-Eric Boulland</span> <br>welcome to your personal account </p>
+    <form><button class="logout-button">Log out<span class="logout-icon"></span></button></form>
+
+    
+    <form method="POST" action="/content/car/jp/japan/ja/services/my-cartier.mobile.html" id="logout-wrapper" name="logout-wrapper" enctype="multipart/form-data"><input type="hidden" name=":formid" value="logout-wrapper"><input type="hidden" name=":formstart" value="/content/car/jp/japan/ja/services/my-cartier/jcr:content/logout/formbuilder_2d7b/start"><input type="hidden" name="_charset_" value="UTF-8"><input type="hidden" name=":redirect" value="/content/car/jp/japan/ja/services/my-cartier/RegistrationStep1.html"><div class="form"><fieldset>
+                
+    </fieldset><div class="form-element button-wrapper logout">
+    <input class="form-button" type="submit" name="logout" value="ログアウト">
+    </div><div class="form_row">
+       <div class="form_leftcol"></div>
+       <div class="form_rightcol">
+    </div>
+      </div><div class="form_row_description"></div>
+    </div></form>
+
+
+      <!-- MY LAST ORDER BLOCK-->
+      <div class="clearfix my-account__orders grid__item palm--one-whole">
+        <!--#set var="title-line" value="my last orders" -->
+        <!--#include virtual="../../components/heading_line/html.shtml" -->
+        <div class="order-block">
+            <h3 class="order-block__details">order n°123456</h3>
+            <p>Day of order : <span class="order-block__details"> 23/05/2013</span></p>
+            <p>status :<span class="order-block__details"> pending</span></p>
+            <div class="order-block__more">
+                <!--#set var="arrow-class" value="arrow-show" -->
+                <!--#set var="more-text" value="more details" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </div>
+        </div>
+
+        <!-- SHOW ALL YOUR ORDERS BLOCK-->
+        <div class="order-block__allorders">
+           <!--#set var="arrow-class" value="arrow-show" -->
+           <!--#set var="more-text" value="all your orders" -->
+          <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+        </div>
+      </div>
+
+      <!-- MY CARTIER SERVICE BLOCK-->
+      <div class="clearfix my-account__services grid__item palm--one-whole js-form-validator">
+          <!--#set var="title-line" value="my services" -->
+          <!--#include virtual="../../components/heading_line/html.shtml" -->
+          <p class="services__message">To follow your repair service progress online, please enter your Repair Service Notification Number.</p>
+          <form class="form-element">
+            <div class="noti-number-cont"><!--#set var="label-name" value="Notification number" -->
+            <!--#set var="mandatory" value="no" -->
+            <!--#set var="input-name" value="notification-number" --> 
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#set var="input-prop" value="form-input" -->  
+            <!--#set var="input-name" value="fn_notifnum" -->      
+            <!--#set var="input-type" value="text" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+          </div>
+            <!--#set var="text-detail" value="validate" -->
+            <!--#set var="cta--varaint" value="cta--red-pad-30" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+          </form>
+      </div>
+
+     <!-- MY CARTIER PUSHES BLOCK-->
+      <div class="my-account__push clearfix grid__item palm--one-whole">
+          <!--#set var="title-line" value="settings and preferences" -->
+          <!--#include virtual="../../components/heading_line/html.shtml" -->
+          <ul class="push-wrapper">
+              <!--#set var="pushes-img-src" value="personal_info.jpg" -->
+              <!--#set var="pushes-title" value="my Personal information" -->
+              <li class="grid__item one-third palm--one-whole" ><!--#include virtual="../../components/welcome_pushes/html.shtml" --></li>
+              <!--#set var="pushes-img-src" value="address.jpg" -->
+              <!--#set var="pushes-title" value="my addresses" -->
+              <li class="grid__item one-third palm--one-whole" ><!--#include virtual="../../components/welcome_pushes/html.shtml" --></li>
+              <!--#set var="pushes-img-src" value="subscription.jpg" -->
+              <!--#set var="pushes-title" value="my subscriptions and intrests" -->
+              <li class="grid__item one-third palm--one-whole" ><!--#include virtual="../../components/welcome_pushes/html.shtml" --></li>
+              <!--#set var="pushes-img-src" value="stores.jpg" -->
+              <!--#set var="pushes-title" value="my cartier stores" -->
+              <li class="grid__item one-third palm--one-whole" ><!--#include virtual="../../components/welcome_pushes/html.shtml" --></li>
+              <!--#set var="pushes-img-src" value="wishlist.jpg" -->
+              <!--#set var="pushes-title" value="my whislists" -->
+              <li class="grid__item one-third palm--one-whole" ><!--#include virtual="../../components/welcome_pushes/html.shtml" --></li>
+          </ul>
+      </div>
+
+      <hr>
+      <!-- BREADCRUMBS BLOCK-->
+      <!--#include virtual="../../components/breadcrumb/html.shtml" -->
+</div>
+ <!-- MY CARTIER Block Ends Here-->

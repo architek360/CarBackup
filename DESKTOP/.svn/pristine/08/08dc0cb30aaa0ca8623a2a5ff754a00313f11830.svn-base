@@ -1,0 +1,154 @@
+/*------------------------------------*\
+    RTE -- Mobile CSS
+\*------------------------------------*/
+/**
+ * RICH TEXT COMPONENT....main container (.comp-rich-text)
+ * DOWNLOAD-RTE.......rte__download (.rte__download)
+ * THEME BLUE RICH TEXT.......rich text component style for theme blue (.theme--blue .comp-rich-text)
+ */
+/*------------------------------------*\
+    $RICH TEXT COMPONENT
+\*------------------------------------*/
+.comp-rich-text {
+		
+		color:$primary-3;
+		@include main-font;
+
+		h3{
+			text-align: center;
+			text-transform: uppercase;
+			@include proxi-font;
+			color:$primary-2;
+			a{
+
+			}
+		}
+	
+		h4 {
+				font-weight: bold;
+				display: block;
+				
+				@include main-font;
+				
+				padding: 0;
+				
+				text-align: left;
+				text-transform: none;
+				a{
+
+				}
+
+			}
+		
+		
+		p{
+			
+			
+			
+			
+			@include rem(letter-spacing, 1px);
+			text-align: left;
+			a{
+
+			}
+
+			b {
+				font-weight: bold;
+			}
+
+
+		}
+		ul {
+			list-style-type: disc;
+			
+			@include rem(font-size, 11px);
+			
+			
+			li{
+				
+				@include rem(letter-spacing, 1px);
+				list-style-position: inside;
+			}
+		}
+
+		ol {
+			list-style-type: decimal ;
+			
+			list-style-position: inside;
+			
+			
+			li{
+				@include rem(font-size, 11px);
+				list-style-position: inside;
+				@include rem(letter-spacing, 1px);
+				@include rem(line-height, 15px);
+			}
+		}
+		dl {
+			
+			
+			
+			
+			@include rem('line-height',30px);
+			dt {
+				
+				width :95%;
+				
+			}
+			dd {
+				
+				
+
+			}
+		}
+		a{
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		span{
+
+			
+		}
+		a:hover {
+
+		}
+
+			 .intro-copy {
+		@include f(25);
+		line-height: 2.7rem; 
+	}
+	.pull-out-quote {
+		@include f(25);
+		line-height: 2.7rem; 
+	}
+	
+	span.icon--pd__title{
+		@include f(25);
+		margin: 0;
+	}
+	span.icon--pd__desc{
+		margin-top: -1em;
+		padding-left: 36px;
+	}
+
+		
+	.content-medias{
+		float:right;
+		@include rem('margin-left',30px);
+		@include rem('margin-bottom',30px);
+    	max-width: 732px;
+	}
+
+}
+
+.service-article{
+	width:580px;
+	margin:0 auto;
+	clear:both;
+
+	p{
+		@include rem('padding-bottom',0px );
+	}
+}
+

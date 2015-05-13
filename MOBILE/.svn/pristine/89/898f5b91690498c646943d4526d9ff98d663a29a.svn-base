@@ -1,0 +1,237 @@
+/*!
+ * cartier.template.js
+ * This file contains the code for common methods.
+ *
+ * @project   mohegun sun
+ * @date      2012-12-06
+ * @author    YOUR NAME, SapientNitro <YOUREMAIL@sapient.com>
+ * @licensor  mohegun sun
+ * @site      mohegun sun
+ *
+ */
+
+(function(window, $, template) {
+
+
+
+    /* public function */
+
+    template.init = function() {
+
+        //cartier.log('template init');
+
+    };
+
+    var $this = template;
+    /*
+        type object containing all the templates 
+    */
+    template.type = {
+        //Sample template 
+
+
+        "BoutiqueTemplate":
+
+        "<li class='store-detail js-store-detail {TAGS}' data-sid='{SID}' >" +
+            "<h2 class='store-detail__title'>" +
+            "{NAME1} " +
+            "<\/h2>" +
+            "<div class='image-text'>" +
+            "<img src='{IMGSRC}' alt='{NAME2}'>" +
+            "<div class='image-text__details'>" +
+            "<div class='boutique_details__add'>{STREET} , {ZIPCODE}<br\/> {CITY} {STATE}<\/div>" +
+            "<div class='boutique_details__con'>" +
+            "<span class='arrow-red'></span><a href='tel:{PHONE1}' data-gtm='{NAME3}'>Tel.:{PHONE2}<\/a>" +
+            "<div> Fax: {FAX} <\/div>" +
+            "<\/div>" +
+            "<\/div>" +
+            "<\/div>" +
+            "<div class='more-link'>" +
+            "<a href='{URL}' class='read-more' data-gtm='{NAME4}'><span class='arrow-red'> <\/span>{READMORE}<\/a>" +
+            "<a target='_blank' href='http://maps.google.com/?q={LAT},{LNG}({NAME5})' class='show-map' data-gtm='{NAME6}' class='show-map' data-gtm='{NAME6}'>" +
+            "<span class='arrow-red'> <\/span>{SHOWMAP}" +
+            "<\/a> " +
+            "<\/div>" +
+            "<\/li>",
+
+
+        "BoutiqueTemplateHidden":
+
+        "<li class='store-detail js-store-detail js-hide-content {TAGS}' data-sid='{SID}' >" +
+            "<h2 class='store-detail__title'>" +
+            "{NAME1} " +
+            "<\/h2>" +
+            "<div class='image-text'>" +
+            "<img class='loading js-lazy-load' src='' data-linksrc='{IMGSRC}' alt='{NAME2}'>" +
+            "<div class='image-text__details'>" +
+            "<div class='boutique_details__add'>{STREET} , {ZIPCODE} <br\/>  {CITY} {STATE}<\/div>" +
+            "<div class='boutique_details__con'>" +
+            "<span class='arrow-red'></span><a href='tel:{PHONE1}' data-gtm='{NAME3}'>Tel.:{PHONE2}<\/a>" +
+            "<div> Fax: {FAX} <\/div>" +
+            "<\/div>" +
+            "<\/div>" +
+            "<\/div>" +
+            "<div class='more-link'>" +
+            "<a href='{URL}' class='read-more' data-gtm='{NAME4}'><span class='arrow-red'> <\/span>{READMORE}<\/a>" +
+            "<a target='_blank' href='http://maps.google.com/?q={LAT},{LNG}({NAME5})' class='show-map' data-gtm='{NAME6}' class='show-map' data-gtm='{NAME6}'>" +
+            "<span class='arrow-red'> <\/span>{SHOWMAP}" +
+            "<\/a> " +
+            "<\/div>" +
+            "<\/li>",
+
+
+
+        "RetailerTemplate":
+
+        "<li class='store-detail js-store-detail {TAGS1}' data-sid='{SID}' >" +
+            "<h2 class='store-detail__title'>" +
+            "{NAME1}</span>" +
+            "<\/h2>" +
+            "<div class='image-text'>" +
+            "<div class='image-text__details auth-dealer'>" +
+            "<div class='boutique_details__add'>{STREET} , {ZIPCODE}<br\/> {CITY} {STATE}<\/div>" +
+            "<div class='boutique_details__con'>" +
+            "<span class='arrow-red'></span><a href='tel:{PHONE1}' data-gtm='{NAME2}'>Tel.:{PHONE2}<\/a>" +
+            "<div> Fax: {FAX} <\/div>" +
+            "<\/div>" +
+            "<div class='service-detail'>" +
+            "<span class='store-detail_bold'>Services: <\/span>{TAGS2}" +
+            "<\/div>" +
+            "<\/div>" +
+            "<\/div>" +
+            "<div class='more-link'>" +
+            "<a target='_blank' href='http://maps.google.com/?q={LAT},{LNG}({NAME4})' class='show-map' data-gtm='{NAME5}'>" +
+            "<span class='arrow-red'> <\/span>{SHOWMAP}" +
+            "<\/a> " +
+            "<\/div>" +
+            "<\/li>",
+
+
+        "RetailerTemplateHidden":
+
+        "<li class='store-detail js-store-detail js-hide-content {TAGS1}' data-sid='{SID}' >" +
+            "<h2 class='store-detail__title'>" +
+            "{NAME1}" +
+            "<\/h2>" +
+            "<div class='image-text'>" +
+            "<div class='image-text__details auth-dealer'>" +
+            "<div class='boutique_details__add'>{STREET} , {ZIPCODE}<br\/> {CITY} {STATE}<\/div>" +
+            "<div class='boutique_details__con'>" +
+            "<span class='arrow-red'></span><a href='tel:{PHONE1}' data-gtm='{NAME2}'>Tel.:{PHONE2}<\/a>" +
+            "<div> Fax: {FAX} <\/div>" +
+            "<\/div>" +
+            "<div class='service-detail'>" +
+            "<span class='store-detail_bold'>Services: <\/span>{TAGS2}" +
+            "<\/div>" +
+            "<\/div>" +
+            "<\/div>" +
+            "<div class='more-link'>" +
+            "<a target='_blank' href='http://maps.google.com/?q={LAT},{LNG}({NAME4})' class='show-map' data-gtm='{NAME5}'>" +
+            "<span class='arrow-red'> <\/span>{SHOWMAP}" +
+            "<\/a> " +
+            "<\/div>" +
+            "<\/li>",
+
+
+
+
+    };
+
+    /*
+     *    @public  method   : Boutique Template Filler
+     *    @param :
+     */
+
+    template.BoutiqueTemplateFiller = function(strTemplate, objData) {
+
+        strTemplate = strTemplate.replace(/\{SID\}/, objData.sid);
+        strTemplate = strTemplate.replace(/\{TAGS\}/, objData.tags);
+        strTemplate = strTemplate.replace(/\{NAME1\}/, objData.name);
+        strTemplate = strTemplate.replace(/\{NAME2\}/, objData.name);
+        strTemplate = strTemplate.replace(/\{NAME3\}/, objData.nameen);
+        strTemplate = strTemplate.replace(/\{NAME4\}/, objData.nameen);
+        strTemplate = strTemplate.replace(/\{NAME5\}/, objData.name);
+        strTemplate = strTemplate.replace(/\{NAME6\}/, objData.nameen);
+        strTemplate = strTemplate.replace(/\{STREET\}/, objData.street);
+
+        strTemplate = strTemplate.replace(/\{ZIPCODE\}/, objData.zipcode);
+        if (typeof objData.city !== "undefined") {
+            var city = objData.city;
+            if (typeof objData.state !== "undefined") {
+                city += ",";
+            }
+            strTemplate = strTemplate.replace(/\{CITY\}/, objData.city);
+        } else {
+            strTemplate = strTemplate.replace(/\{CITY\}/, "");
+        }
+
+        strTemplate = strTemplate.replace(/\{STATE\}/, objData.state);
+        if (objData.phone) {
+            strTemplate = strTemplate.replace(/\{PHONE1\}/, objData.phone);
+            strTemplate = strTemplate.replace(/\{PHONE2\}/, objData.phone);
+        } else
+            strTemplate = strTemplate.replace("<span class='arrow-red'></span><a href='tel:{PHONE1}' data-gtm='"+ objData.nameen +"'>Tel.:{PHONE2}<\/a>", "");
+
+        if (objData.fax) {
+            strTemplate = strTemplate.replace(/\{FAX\}/, objData.fax);
+        } else
+            strTemplate = strTemplate.replace("<div> Fax: {FAX} <\/div>", "");
+
+        strTemplate = strTemplate.replace(/\{URL\}/, objData.url);
+        strTemplate = strTemplate.replace(/\{LAT\}/, objData.latitude);
+        strTemplate = strTemplate.replace(/\{LNG\}/, objData.longitude);
+        strTemplate = strTemplate.replace(/\{IMGSRC\}/, objData.imgsrc);
+        strTemplate = strTemplate.replace(/\{READMORE\}/, objData.readmore);
+        strTemplate = strTemplate.replace(/\{SHOWMAP\}/, objData.showmap);
+
+        return strTemplate;
+    };
+
+    /*
+     *    @public  method   : Retailer Template Filler
+     *    @param :
+     */
+    template.RetailerTemplateFiller = function(strTemplate, objData) {
+
+        strTemplate = strTemplate.replace(/\{SID\}/, objData.sid);
+        strTemplate = strTemplate.replace(/\{NAME1\}/, objData.name);
+        strTemplate = strTemplate.replace(/\{NAME2\}/, objData.nameen);
+        strTemplate = strTemplate.replace(/\{NAME3\}/, objData.nameen);
+        strTemplate = strTemplate.replace(/\{NAME4\}/, objData.name);
+        strTemplate = strTemplate.replace(/\{NAME5\}/, objData.nameen);
+        strTemplate = strTemplate.replace(/\{STREET\}/, objData.street);
+
+        strTemplate = strTemplate.replace(/\{ZIPCODE\}/, objData.zipcode);
+        if (typeof objData.city !== "undefined") {
+            var city = objData.city;
+            if (typeof objData.state !== "undefined") {
+                city += ",";
+            }
+            strTemplate = strTemplate.replace(/\{CITY\}/, objData.city);
+        } else {
+            strTemplate = strTemplate.replace(/\{CITY\}/, "");
+        }
+        strTemplate = strTemplate.replace(/\{STATE\}/, objData.state);
+        if (objData.phone) {
+            strTemplate = strTemplate.replace(/\{PHONE1\}/, objData.phone);
+            strTemplate = strTemplate.replace(/\{PHONE2\}/, objData.phone);
+        } else
+            strTemplate = strTemplate.replace("<span class='arrow-red'></span><a href='tel:{PHONE1}' data-gtm='"+objData.nameen+"'>Tel.:{PHONE2}<\/a>", "");
+
+        if (objData.fax) {
+            strTemplate = strTemplate.replace(/\{FAX\}/, objData.fax);
+        } else
+            strTemplate = strTemplate.replace("<div> Fax: {FAX} <\/div>", "");
+
+        strTemplate = strTemplate.replace(/\{TAGS1\}/, objData.tags);
+        strTemplate = strTemplate.replace(/\{TAGS2\}/, objData.tags);
+        strTemplate = strTemplate.replace(/\{URL\}/, objData.url);
+        strTemplate = strTemplate.replace(/\{LAT\}/, objData.latitude);
+        strTemplate = strTemplate.replace(/\{LNG\}/, objData.longitude);
+        strTemplate = strTemplate.replace(/\{READMORE\}/, objData.readmore);
+        strTemplate = strTemplate.replace(/\{SHOWMAP\}/, objData.showmap);
+        return strTemplate;
+    };
+
+
+}(window, jQuery, cartier.template));

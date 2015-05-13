@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    BILLING ADDRESS CONFIRMATION -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER (.billing-confirmation)
+ * HEADING CONTAINER (.heading2)
+ * ADDRESS DETAILS (.billing-confirmation__address)
+ * ACTION BUTTON (.cta--red)
+ */
+
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.billing-confirmation{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	@include rem('margin', 0 62px);
+	text-align: center;
+
+	/*------------------------------------*\
+    		$HEADING CONTAINER 
+	*------------------------------------*/
+	.heading2{
+		border:none;
+		letter-spacing:3px;
+		@include rem(padding, 24px 0 30px);
+		line-height:39px;
+	}
+
+	.billing-confirmation__desc {
+		@include main-font;
+		letter-spacing:2px;
+		display: inline-block;
+		text-align: center;
+		@include f(26);
+		@include rem('padding', 0 0 40px 0);
+	}
+
+	/*------------------------------------*\
+    		$ADDRESS DETAILS
+	\*------------------------------------*/
+	.billing-confirmation__address{
+		display: inline-block;
+		text-align: center;
+		border:1px solid $primary-3;
+		background: $primary-16;
+		width: 100%;	
+		@include rem('margin', 2px 0 39px 0);
+		@include rem('padding', 38px 0);
+		@include rem('line-height', 30px);
+		@include f(22);
+		@include main-font;
+	}
+
+	/*------------------------------------*\
+    			$ACTION BUTTON
+	\*------------------------------------*/
+	.cta--red {
+		@include rem('margin-top', 20px);
+		@include rem('margin-bottom', 40px);
+		clear:both;
+		width:68%;
+		
+	}
+	
+}
+

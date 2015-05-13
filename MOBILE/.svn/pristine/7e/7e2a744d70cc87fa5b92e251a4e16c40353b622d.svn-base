@@ -1,0 +1,121 @@
+<div class="regform-step1">
+	<div class="account-error"></div>
+	<div class="regform-step1__regbox js-form-validator">
+		<h1 class="heading2">create your account</h1>
+		<p class="userinfo">This space allows you to manage your personal information, news updates and newsletter subscriptions.</p>
+		<h4 class="heading4">aLL FIELDS ARE REQUIRED</h4>
+
+		<form>
+			<div class="grid__item">
+				<!--#set var="input-name" value="fn_grptitle" -->
+		    	<!--#include virtual="../../components/radio_buttons_group/html.shtml" -->
+			</div>
+
+            <div class="grid__item">
+	    		<!--#set var="label-name" value="first name katakana" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_fname" -->
+	    		<!--#include virtual="../../components/form_elements/label.shtml" -->
+	    		<!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="text" -->
+	    		<!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+
+
+
+	    	<div class="grid__item">
+	            <!--#set var="label-name" value="last name katakana" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_lname" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="text" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+
+	    	<div class="grid__item">
+	    		<!--#set var="label-name" value="last name kanji" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_lname2" -->
+	    		<!--#include virtual="../../components/form_elements/label.shtml" -->
+	    		<!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="text" -->
+	    		<!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+
+	    	<div class="grid__item">
+	            <!--#set var="label-name" value="email address" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="j_username" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="email" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+	    	<div class="grid__item">
+	            <!--#set var="label-name" value="email confirmation" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_emailcon" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="email" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+	    	<div class="grid__item">
+	            <!--#set var="label-name" value="Password" -->
+	            <!--#set var="mandatory" value="yes"-->
+				<!--#set var="input-name" value="j_password" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="password" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+	    	<div class="grid__item">
+	            <!--#set var="label-name" value="password confirmation" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_passcon" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="password" -->
+	            <!--#include virtual="../../components/form_elements/input.shtml" -->
+	    	</div>
+
+	    	<div class="grid__item">
+	            <!--#set var="label-name" value="word verification" -->
+	            <!--#set var="mandatory" value="yes"-->
+	            <!--#set var="input-name" value="fn_wordvef" -->
+	            <!--#include virtual="../../components/form_elements/label.shtml" -->
+	            <!--#set var="input-prop" value="form-input" -->    
+	            <!--#set var="input-type" value="password" -->
+	            <!--#include virtual="../../components/captcha/html.shtml" -->
+	    	</div>
+
+
+	    	<div class="grid__item communi-check">
+	    		<!--#set var="checkbox-value" value="value" -->
+                <!--#set var="checkbox-name" value="fn_chkonlinecom" -->
+                <!--#set var="checkbox-label-name" value="I wish to receive online communications from Cartier" -->   
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+            </div>
+
+			<div class="grid__item privacy-check">                   
+                <label class="form-check">
+                	<input type="checkbox" value="value" name="fn_chkprivnotc">
+                	<span class="form-check__icon"></span>
+                	<span class="form-check__wrapper"></span>
+                	<span class="form-check-label">I have read and accepted the <a href="#">Privacy Notice</a></span>
+                </label>
+            </div>
+
+			<div class="submitbutton js-create-account">
+				<!--#set var="text-detail" value="create an account" -->
+                <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+			</div>
+ 
+		</form>
+	</div>
+
+	
+</div>
+

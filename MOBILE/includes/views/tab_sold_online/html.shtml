@@ -1,0 +1,14 @@
+<!-- tab_shipping_address Block Starts Here-->
+<div class="tab_shipping_address">
+	
+	<p class="tab_shipping_address__desc top-margin full-width">
+	Cartier recognizes the importance of 
+	protectingyour information. Privacy notice
+	Please note that Cartier does not ship 
+	orders to P.O Boxes
+	</p>
+
+	<!--#include virtual="../../views/billing_form/html.shtml" -->
+
+</div>
+ <!-- tab_shipping_address Block Ends Here-->

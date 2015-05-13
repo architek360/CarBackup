@@ -1,0 +1,388 @@
+/*!
+ * date.picker.js
+ * This file contains plugins for date month year selector
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-21
+ * @author    SapientNitro
+ * @licensor  Cartier Desktop
+ * @site      Cartier Desktop
+ * USAGE :
+ * 
+ * Initialize date picker Plugin with pluginName "date_picker".
+    date_picker();
+
+ * This contains three variables for Date , Month and Year
+ */
+;
+(function($, window, document, undefined) {
+    'use strict';
+
+    //check if jquery is defined, else retun
+    if ($ === undefined) {
+        console.log("jQuery not found");
+        return false;
+    }
+    /*
+        setting default parameter
+    */
+    var pluginName = "date_picker",
+        defaults = {
+            startYear: 1991,
+            endYear: 2016,
+            validationRequired : false,
+
+
+            // storing class name in variable
+            styleClass: {
+                dateSelector: ".js-date select",
+                monthSelector: ".js-month select",
+                yearSelector: ".js-year select"
+
+            }
+
+
+        },
+        pageLoading = true,
+        validationRequired,
+        $this;
+
+    function Plugin(element, options) {
+
+        $this = this;
+        this.element = element;
+        this.$elem = $(this.element);
+        this.options = $.extend({}, defaults, options);
+        validationRequired = this.options.validationRequired;
+
+        this.init();
+    }
+
+    Plugin.prototype = {
+
+        //Settings the initial system
+        init: function() {
+            this.getingDomElement();
+        },
+
+        /*
+          @public  method   : binding change event to year month dropdown
+          @param :dateElement- point date object in dom,
+                  monthElement-point month object in dom,
+                  yearElement -point year  object in dom
+        */
+        bindEvent: function(dateElement, monthElement, yearElement) {
+            monthElement.on("change", {
+                date: dateElement,
+                month: monthElement,
+                year: yearElement,
+                prototypeRef: this.__proto__,
+            }, this._changeHandler);
+            yearElement.on("change", {
+                date: dateElement,
+                month: monthElement,
+                year: yearElement,
+                prototypeRef: this.__proto__,
+            }, this._changeHandler);
+        },
+
+        /*
+          @public  method   : geting element from DOM
+          @param :none
+        */
+        getingDomElement: function() {
+            var datePicker = this.$elem,
+                $children = datePicker.children(),
+                dateEl, monthEl, yearEl;
+
+
+            var dropDowns = $children.find('select');
+            dropDowns.each(function() {
+                var nameFieldValue = $(this).attr('name');
+                if (typeof nameFieldValue !== "undefined") {
+                    if (nameFieldValue.toLowerCase().indexOf("month") >= 0) {
+                        monthEl = $(this);
+                    } else if (nameFieldValue.toLowerCase().indexOf("date") >= 0) {
+                        dateEl = $(this);
+                    } else if (nameFieldValue.toLowerCase().indexOf("year") >= 0) {
+                        yearEl = $(this);
+                    }
+                }
+
+            })
+
+            if (typeof dateEl !== "undefined" && typeof monthEl !== "undefined" && typeof yearEl !== "undefined") {
+                this.bindEvent(dateEl, monthEl, yearEl);
+                this.addYear(dateEl, monthEl, yearEl);
+            }
+
+        },
+        /*
+          @public  method   : seting the no of day in date object acording month and year
+          @param :dateElement- point date object in dom,
+                  monthElement-point month object in dom,
+                  yearElement -point year  object in dom
+        */
+        setDate: function(dateElement, monthElement, yearElement) {
+
+
+            var year = yearElement.val(),
+                month = monthElement.val(),
+                selecteDate = parseInt(dateElement.data('selecteddate')) ? parseInt(dateElement.data('selecteddate')) : 0,
+                existingSelectedDate = selecteDate;
+
+            // cache selected date if page loading is false
+            if (dateElement.find('option').length > 0) {
+                existingSelectedDate = parseInt(dateElement.val()) ? parseInt(dateElement.val()) : selecteDate;
+            }
+
+            var monthStatrt = 1,
+                monhthEnd;
+            if (month === 'feb' || month === '1') {
+                if (year % 4 === 0) {
+
+                    monhthEnd = 29;
+                } else {
+                    monhthEnd = 28;
+
+                }
+
+            } else {
+                if (month === "jan" || month === "mar" || month === "may" || month === "july" || month === "aug" || month === "oct" || month === "dec") {
+                    monhthEnd = 31;
+
+                } else if (month === "0" || month === "2" || month === "4" || month === "6" || month === "7" || month === "9" || month === "11") {
+                    monhthEnd = 31;
+
+                } else {
+                    monhthEnd = 30;
+                }
+            }
+            dateElement.empty();
+            dateElement.append('<option value="-1" selected="selected"> Day</option>');
+            for (var i = monthStatrt; i <= monhthEnd; i++) {
+                if (i < 10) {
+                    if (pageLoading === true && selecteDate === i) {
+                        pageLoading = false;
+                        dateElement.append('<option value="' + i + '" selected="selected">' + "0" + i + '</option>');
+                    } else {
+                        dateElement.append('<option value="' + i + '" >' + "0" + i + '</option>');
+                    }
+                } else {
+                    if (pageLoading === true && selecteDate === i) {
+                        pageLoading = false;
+                        dateElement.append('<option value="' + i + '" selected="selected">' + i + '</option>');
+                    } else {
+                        dateElement.append('<option value="' + i + '">' + i + ' </option>');
+                    }
+                }
+
+
+            }
+            // check select date exist in calender
+            if (existingSelectedDate > monhthEnd) {
+                existingSelectedDate = monhthEnd;
+            }
+            if (existingSelectedDate !== 0) {
+                dateElement.val(existingSelectedDate);
+            }
+
+            $this.disableDateFunction(dateElement, monthElement, yearElement);
+
+            // trigger validation 
+            if(validationRequired){
+                monthElement.closest('form').validate();
+                monthElement.valid();
+
+            }
+        },
+        /*
+          @public  method   : seting the year acording the "data-startYear" and "data-endYear" veriable
+          @param :dateElement- point date object in dom,
+                  monthElement-point month object in dom,
+                  yearElement -point year  object in dom
+        */
+        addYear: function(dateElement, monthElement, yearElement) {
+
+
+            var prototype = this.__proto__,
+                dateContainer = yearElement.closest('.js-date-picker'),
+                startYear = parseInt($(dateContainer).data("startyear")),
+                endYear = parseInt($(dateContainer).data("endyear")),
+                yearFromDataAtirbute = true,
+                strOptionTag = "";
+
+            if (isNaN(startYear)) {
+                yearFromDataAtirbute = false;
+
+            }
+            if (isNaN(endYear)) {
+                yearFromDataAtirbute = false;
+            }
+
+            // disable date functionality 
+
+
+            if (yearFromDataAtirbute == true) {
+                yearElement.empty();
+                strOptionTag += '<option value="-1"> Year </option>';
+                for (var i = startYear; i <= endYear; i++) {
+                    strOptionTag += '<option value="' + i + '">' + i + '</option>';
+
+                }
+                yearElement.append(strOptionTag);;
+            }
+
+
+
+
+            this.setDate(dateElement, monthElement, yearElement);
+
+        },
+
+        _changeHandler: function(event) {
+
+            event.data.prototypeRef.setDate(event.data.date, event.data.month, event.data.year);
+
+        },
+        /* date drop down disable start here  function  */
+
+        disableDateFunction: function(dateElement, monthElement, yearElement) {
+
+            var fullDateContainer = $($this.element),
+                noOfDayDisable = fullDateContainer.data("noofdisableday"),
+                selectedYear = parseInt(yearElement.find("option:selected").val()),
+                selectedMonth = parseInt(monthElement.find("option:selected").val()),
+                fullDate = new Date(),
+                currentYear = fullDate.getFullYear(),
+
+                disablePastDate = fullDateContainer.data("disbalepastdate");
+
+            if (disablePastDate === "past") {
+
+                //disable past date
+                if (currentYear >= selectedYear && selectedYear !== -1) {
+                    $this._disablePastDate(dateElement, monthElement, noOfDayDisable, selectedMonth, selectedYear);
+                } else {
+                    $this._removeDisabledFiled(dateElement);
+                    $this._removeDisabledFiled(monthElement);
+
+                }
+            } else if (disablePastDate === "future") {
+                if (currentYear <= selectedYear && selectedYear !== -1) {
+                    $this._disableFutureDate(dateElement, monthElement, noOfDayDisable, selectedMonth, selectedYear);
+                } else {
+                    $this._removeDisabledFiled(dateElement);
+                    $this._removeDisabledFiled(monthElement);
+                }
+            }
+
+        },
+        /*
+          @private  method   : remove disable attribute from option filed
+          @param : selectEl- dropdown dom object
+                  
+        */
+        _removeDisabledFiled: function(selectEl) {
+            selectEl.find('option').removeAttr("disabled");
+        },
+        /*
+          @private  method   : disable past date from drop down
+          @param :dateElement- point date object in dom,
+                  monthElement-point month object in dom
+                  
+        */
+        _disablePastDate: function(dateElement, monthElement, noOfDisableDay, selectedMonth, selectedYear) {
+
+            var fullDate = new Date(),
+                currentMonth = fullDate.getMonth(),
+                currentDate = fullDate.getDate(),
+                currentYear = fullDate.getFullYear(),
+                dateOption = dateElement.find('option'),
+                monthOption = monthElement.find('option'),
+                lastDisableDate = currentDate + parseInt(noOfDisableDay);
+
+            //disable date
+            if (selectedMonth < currentMonth || selectedYear < currentYear) {
+
+
+                $(dateOption).attr("disabled", "disabled");
+
+
+            } else if (selectedMonth === currentMonth) {
+
+                for (var i = 1; i <= lastDisableDate; i++) {
+                    $(dateOption[i]).attr("disabled", "disabled");
+                }
+
+            }
+
+            //disable month
+            if (selectedYear < currentYear) {
+                $(monthOption).attr("disabled", "disabled");
+            } else {
+                for (var i = 0; i < currentMonth; i++) {
+                    $(monthOption[i + 1]).attr("disabled", "disabled");
+                }
+            }
+
+
+
+
+        },
+        /*
+          @private  method   : disable future date
+          @param :dateElement- point date object in dom,
+                  monthElement-point month object in dom,
+                  
+        */
+        _disableFutureDate: function(dateElement, monthElement, noOfDisableDay, selectedMonth, selectedYear) {
+
+            var fullDate = new Date(),
+                currentMonth = fullDate.getMonth(),
+                currentDate = fullDate.getDate(),
+                currentYear = fullDate.getFullYear(),
+                dateOption = dateElement.find('option'),
+                monthOption = monthElement.find('option'),
+                lastEnabledDate = currentDate + parseInt(noOfDisableDay),
+                noOfDayInMonth = dateOption.length - 1;
+
+            //disable date
+            if (selectedMonth > currentMonth || selectedYear > currentYear || selectedMonth === -1) {
+
+                $(dateOption).attr("disabled", "disabled");
+
+            } else if (selectedMonth === currentMonth) {
+                for (var i = lastEnabledDate + 1; i <= noOfDayInMonth; i++) {
+                    $(dateOption[i]).attr("disabled", "disabled");
+                }
+            }
+            //disable month
+            if (currentYear < selectedYear) {
+                $(monthOption).attr("disabled", "disabled");
+            } else {
+                for (var i = currentMonth + 2; i < 13; i++) {
+                    $(monthOption[i]).attr("disabled", "disabled");
+                }
+            }
+
+        }
+
+
+        /* date on change function end here*/
+
+    };
+
+
+
+    $.fn[pluginName] = function(options) {
+        return this.each(function() {
+
+            if (!$.data(this, "plugin_" + pluginName)) {
+                $.data(this, "plugin_" + pluginName,
+                    new Plugin(this, options));
+            }
+        });
+    };
+
+})(jQuery, window, document);

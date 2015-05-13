@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+
+
+<!--#set var="COMP_1" value="progress_bar" -->
+<!--#set var="VIEWS_1" value="ecs_verify_order" -->
+<!--#set var="VIEWS_2" value="pushs" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#set var="MODULE" value="billing" -->
+
+<!--#include virtual="../templates/base.shtml" -->

@@ -1,0 +1,34 @@
+<div class="copy-to-wishlist">
+    <div class="input-field display-none js-copytowishlist-input">
+        <!--#set var="label-name" value="add to my wish list" -->
+        <!--#set var="mandatory" value="no"-->
+        <!--#set var="input-name" value="fn_copywishlistname" -->
+        <!--#include virtual="../../components/form_elements/label.shtml" -->
+        <div class="single-line">
+            <!--#set var="style-name" value="select-1 js-select-addtomywishlist" -->
+            <!--#set var="option-component" value="wishlist_options" -->
+            <!--#include virtual="../../components/form_elements/select.shtml" -->
+            <!--#set var="text-detail" value="ok" -->
+            <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-addtomywishlist-ok" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+        </div>
+    </div>
+    <div class="input-field">
+        <!--#set var="label-name" value="create a new wishlist occasion" -->
+        <!--#set var="mandatory" value="no"-->
+        <!--#set var="input-name" value="fn_newwishlistname" -->
+        <!--#include virtual="../../components/form_elements/label.shtml" -->
+        <div class="single-line">
+           
+            <!--#set var="input-prop" value="form-input js-newwishlistname" -->    
+            <!--#set var="input-type" value="text" -->
+            <!--#set var="input-placeholder" value="" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+            <!--#set var="text-detail" value="ok" -->
+            <!--#set var="cta--varaint" value="cta--red-width-auto-pad-20 js-createnewwishlist-ok" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+          
+
+        </div>
+    </div>
+</div>  

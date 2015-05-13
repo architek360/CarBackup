@@ -1,0 +1,138 @@
+/*------------------------------------*\
+    country-switcher -- MOBILE CSS
+\*------------------------------------*/
+/**
+* TITLE BLOCK.... (.product-list__title)
+* PRODUCT LIST BLOCK ....(.product-list__listing)
+* VIEW MORE BUTTON ....(.product-list__view-more)
+*/
+
+/*------------------------------------*\
+    WRAPPER
+\*------------------------------------*/
+.cost-estimate {	
+	@include brand-font;
+	@include font-color($primary-2);  
+	@include rem('padding', 34px 0px 20px);  
+	background: $primary-1; 
+	display: block;
+	margin: 0 auto; 
+	width: 81.25%;
+
+}
+
+/*------------------------------------*\
+    cost estimate filter AREA
+\*------------------------------------*/
+.cost-estimate__filter{
+	@include rem('padding', 0px 0 50px);
+		margin:0 auto;
+		width:100%;
+		.timeLine , .title , .side-image{ display:none}
+		.cost-estimate__filter__wrapper{
+			border-top:solid 1px $primary-43;
+		}
+		.inactive .cost-estimate__filter_node__desc{
+			display: none;
+			}
+		.inactive .cost-estimate__filter_node__title  
+			{
+				opacity: 0.4;
+				p{
+				color: #d4d4d4;
+
+				}
+			}
+		.cost-estimate__filter__node {
+			border-bottom:solid 1px $primary-43;
+			overflow:hidden;
+			
+
+		}
+
+	
+		.cost-estimate__filter_node__title {
+			@include rem('padding', 15px 0px 15px);
+			position:relative;
+			text-align:left;
+			background:#1D1D1D;
+			span{
+				position:absolute;
+				right:20px;
+				top:30%;
+				background: url($path-images + 'icons/buttons.png') no-repeat scroll -30px -450px rgba(0, 0, 0, 0);
+				color: #000000;
+				display: inline-block;				    
+				font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+				@include f(14);
+				@include rem('line-height', 25px);
+			    font-weight: bold;
+				height: 25px;
+				letter-spacing: normal;
+				text-align: center;
+				text-transform: uppercase;
+				width: 25px;
+				}
+
+			span.on{
+				 background-position: 0 -450px;
+				color:#6F4E53;
+				
+				
+			}
+			.cost-estimate__filter_node_title__ques{
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table;
+
+			}
+			
+			p{
+				@include rem('padding', 0px 20px 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+		 	 	@include bold-font;
+		 	 	@include f(20);
+			}
+		}
+
+		.cost-estimate__filter_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color(#d4d4d4);
+		 	@include rem(padding,20px 20px 0 20px);
+		 	.my-orders__detail{
+		 		@include rem(padding,0 0 0 0);
+		 		.order-block{
+		 			text-align: center;
+		 		}
+
+		 	}
+
+
+			
+		}
+
+	.text-wrapper{
+		@include rem(padding,0 30px 30px 45px);
+		@include font-color($primary-1);
+		@include bold-font;
+		@include f(22);
+	}
+
+
+
+
+	.cost-estimate__filter__wrapper:last-child {
+			@include rem('padding-bottom', 10px);
+	}
+	.closeButton { display:none;}
+
+
+
+}
+
+
+
+

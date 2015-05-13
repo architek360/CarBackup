@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    Social Sharing -- Desktop CSS
+\*------------------------------------*/
+
+.social-share{
+	width:238px;
+	@include rem(margin, 0px);
+	color:white;
+	height: auto;
+	background-color:$primary-1;
+	float: right;
+	.social-share__favorite{
+        @include proxiBold-font;
+        @include rem(font-size, 12px);
+        @include rem(padding, 16px 0 15px 10px);
+		@include rem(margin,16px 0 0 16px);
+		@include setSpriteDesktop(auto, auto ,-431px ,-137px, transparent);
+        font-weight: bold;
+        color: $primary-48;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+   	}
+	.share-tabs{
+		.share-link-container{
+		    float: left;
+		    height: auto;
+		    @include f(13);
+		    @include rem(margin-top, 0px);
+		    @include rem(padding, 5px 0);
+		    text-align: center;
+		    @include rem(width, 118px);
+		    @include main-font;
+		    font-style: italic;
+
+			&:first-child{
+				background-color:$primary-46;
+				border-right: 1px solid $primary-46;
+			}
+			.share-tabs__social{
+			color: $primary-3;
+		    @include setSpriteDesktop(auto, 20px, -54px, -35px, transparent);
+		    @include rem(padding, 10px 0 0 10px);
+
+		    &:hover{
+		    	color:$primary-2;
+		    	}
+			}
+
+			.share-tabs__print{
+			color: $primary-3;
+		    @include setSpriteDesktop(auto, 20px, -429px, -48px, transparent);
+		    @include rem(padding, 10px 0 0 10px);
+
+		    &:hover{
+		    	color:$primary-2;
+		    	}
+			}
+			a{
+				@include main-font();
+			}
+		}
+
+	}
+
+	ul{
+		position: static;
+		width: 218px;
+		display: inline-block;
+		background-color:$primary-46;
+		@include rem(padding, 10px 10px 15px);
+		li{
+			padding-right: 9px;
+			height : auto;
+			width : auto;
+			display: inline-block;
+
+			.social-share__facebook{
+				@include setSpriteDesktop(57px, 20px, -154px, -7px, transparent);
+				@include rem('text-indent', -9999px);
+			}
+			.social-share__twitter{
+				@include setSpriteDesktop(55px, 20px, -227px, -7px, transparent);
+				@include rem('text-indent', -9999px);
+			}
+			.social-share__pin-it{
+				@include setSpriteDesktop(40px, 20px, -303px, -7px, transparent);
+				@include rem('text-indent', -9999px);
+			}
+			.social-share__email{
+				@include setSpriteDesktop(19px, 20px, -101px, -811px, transparent);
+				@include rem('text-indent', -9999px);
+			}
+
+			&:last-child{
+				padding-right: 0;
+			}
+			.social-share__email-form {
+				display: none;
+			}
+
+		}
+	}
+}
+
+#send_email .textarea-wrapper .form-textarea{
+	width: 456px;
+}

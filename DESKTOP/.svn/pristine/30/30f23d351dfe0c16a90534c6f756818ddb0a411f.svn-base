@@ -1,0 +1,73 @@
+<!-- tab card payment Block Starts Here-->
+<div class="tab-card-payment">
+
+<div class="tab_card_inner-block">
+	
+	<!--#include virtual="../../components/credit_card_type/html.shtml" -->
+
+
+
+	<div class="first-name">
+		<div class="one-whole grid__item">
+			<!--#set var="label-name" value="card Number" -->
+		    <!--#set var="mandatory" value="yes"-->
+		    <!--#set var="input-name" value="payment_card_number" -->
+			<!--#include virtual="../../components/form_elements/label.shtml" -->
+			<!--#set var="input-prop" value="form-input" -->    
+		    <!--#set var="input-type" value="text" -->
+			<!--#include virtual="../../components/form_elements/input.shtml" -->
+			
+		</div>
+	</div>
+
+
+	<!--#include virtual="../../components/expiration_date/html.shtml" -->
+
+
+	<div class="one-whole ccv clearfix">
+		<div class="ccv_block one-half grid__item">
+		<!--#set var="label-name" value="ccv" -->
+	    <!--#set var="mandatory" value="yes"-->
+	    <!--#set var="input-name" value="payment_card_cvs" -->
+		<!--#include virtual="../../components/form_elements/label.shtml" -->
+		<!--#set var="input-prop" value="form-input" -->    
+	    <!--#set var="input-type" value="text" -->
+		<!--#include virtual="../../components/form_elements/input.shtml" -->
+		
+		</div>
+		
+	</div>
+
+	<div class="temp name-on-card"> 
+		<div class="one-whole grid__item">
+			<!--#set var="label-name" value="Name appears on card" -->
+		    <!--#set var="mandatory" value="yes"--> 
+		    <!--#set var="input-name" value="payment_card_name" -->
+			<!--#include virtual="../../components/form_elements/label.shtml" -->
+			<!--#set var="input-prop" value="form-input" -->    
+		    <!--#set var="input-type" value="text" -->
+			<!--#include virtual="../../components/form_elements/input.shtml" -->
+			
+		</div>
+	</div>
+	</div>
+
+	<p class="tab-card-payment__info clearfix">Your credit card will not be charged until your order is dispatched</p>
+
+	<div class="grid__item confirmation">
+		<!--#set var="checkbox-value" value="value" -->
+		<!--#set var="checkbox-label-name" value="I agree the terms and conditions of this site." -->
+        <!--#set var="checkbox-name" value="fn_chktnc" -->
+
+		<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	</div>
+  
+
+	<div class="next-step-cta clearfix">
+		<!--#set var="text-detail" value="confirm and place order" -->
+    	<!--#set var="cta--varaint" value="cta--red" -->
+    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+	</div>
+
+</div>
+ <!-- tab card payment Block Ends Here-->

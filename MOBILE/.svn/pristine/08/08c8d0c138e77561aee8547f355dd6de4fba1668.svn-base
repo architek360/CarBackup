@@ -1,0 +1,18 @@
+<!-- Expert Guide View Starts Here-->
+
+		
+	<div class="expert-guide__select">
+	    <!--#set var="mandatory" value="no"-->
+	    <!--#include virtual="../../components/form_elements/label.shtml" -->
+	    <!--#set var="style-name" value="select-1" -->
+	    <!--#include virtual="../../components/form_elements/select.shtml" -->
+    </div>
+    
+    <!--#if expr="${expert-content}" -->
+			<!--#include virtual="../${expert-content}/html.shtml" -->
+	<!--#endif -->
+
+	
+
+
+<!-- Expert Guide View Ends Here-->

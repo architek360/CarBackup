@@ -1,0 +1,167 @@
+<!--#if expr="${maison-tab}=yes" -->
+<div class="carousel-wrapper">
+	<div class="carousel">
+		<ul class="bxslider js-slider">
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->HP_COMMITMENTS_FPP_1.jpg" alt="COMMITMENTS" class="image"/>
+		  	<div class="carousel__pic-desc title-color-1 col__1 row__1">
+		  		<h1 class="heading1">COMMITMENTS</h1>
+				<p class="carousel_pic-desc__header">l'odyssee</p>
+				<p>de cartier</p>
+				<a href="#"><span></span>view the film</a>
+			</div>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+<!--#elif expr="${gift-for-you}=yes"-->
+
+<div class="carousel-wrapper gift-for-you">
+	<div class="carousel">
+		<ul class="bxslider js-slider">
+		  <li class="active">
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N4245000_0_cartier_rings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N4245000_0_cartier_rings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		</ul>
+	</div>
+</div>
+<!--#elif expr="${multiple_video}=yes"-->
+
+<div class="carousel-wrapper multiple_video_wrapper">
+	<div class="carousel">
+		<ul class="bxslider js-slider">
+		  <li class="active">
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N4245000_0_cartier_rings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N4245000_0_cartier_rings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		</ul>
+	</div>
+</div>
+<!--#elif expr="${type}=bridal-sfy-preview"-->
+
+
+
+<div class="carousel-wrapper bridal-sfy-preview js-bridal-sfy-preview">
+	<div class="carousel">
+		<ul class="bxslider js-slider-bridal">
+		  <li >
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N8044000_0_cartier_earrings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N7058300_0_cartier_necklaces.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		 <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->N4245000_0_cartier_rings.png" alt="COMMITMENTS" class="image"/>
+		  </li>
+		  
+		</ul>
+	</div>
+</div>
+<!--#elif expr="${type}=bridal-sfy-help"-->
+
+<div class="carousel-wrapper bridal-sfy-help js-bridal-sfy-help">
+	<div class="carousel">
+		<ul class="bxslider js-slider-help">
+		  <li ><h3>MORE INFORMATION ABOUT CARTIER DIAMONDS</h3>
+		  		<div class="content">
+		  			<img src="<!--#echo var="CONTENT_IMG_PATH" -->collectio-_watch.png" alt="COMMITMENTS"/>
+				  	<p>The GIA (Gemological Institute of America) is an independent, international certification organization favored by Cartier for its impartial judgement in diamond selection. While the 4Cs (carat, color, clarity and cut) are excellent indications of the rarity of a diamond, they can never be used to determine the beauty of a stone. A large number of diamonds that conform to the 4Cs do not meet the selection criteria set out by Cartier. For this reason, each central stone is examined by one of our diamond experts, the only in-house specialists authorized to select Cartier diamonds. The diamond experts constitute an independent team at Cartier. They are gemologists who, in addition to their technical expertise, master the Cartier diamond selection criteria perfectly. This knowledge results from many years of experience, sensitivity and a genuine understanding of the high standards applied at Cartier. They possess that precious talent and that unique.</p>
+				  	
+				</div>
+		  </li>
+		  <li><h3>MORE INFORMATION ABOUT CARTIER DIAMONDS</h3>
+		  	<div class="content">
+		  			<img src="<!--#echo var="CONTENT_IMG_PATH" -->collectio-_watch.png" alt="COMMITMENTS"/>
+				  	<p>The GIA (Gemological Institute of America) is an independent, international certification organization favored by Cartier for its impartial judgement in diamond selection. While the 4Cs (carat, color, clarity and cut) are excellent indications of the rarity of a diamond, they can never be used to determine the beauty of a stone. A large number of diamonds that conform to the 4Cs do not meet the selection criteria set out by Cartier. For this reason, each central stone is examined by one of our diamond experts, the only in-house specialists authorized to  stone, from a 0.18 carat diamond to much larger gems, the diamond experts apply Cartier’s beauty criteria one by one. First, they evaluate the stone as a whole, examining its generous proportions, structure and the symmetry of its facets. They then meticulously consider its degree of finishing in relation to its cut, radiance and reflections. A Cartier diamond must play with light in a magnificent manner, thus creating a perfect balance between brilliance, fire and sparkle. Its unique color, varying from colorless to nuanced clarity, brings the stone’s splendor to life. The selection work carried out by the Cartier diamond experts guarantees the beauty of a stone, with its harmonious proportions and incomparable charm.</p>
+				  	
+				</div>
+		  </li>
+		 <li>
+		 	<h3>MORE INFORMATION ABOUT CARTIER DIAMONDS</h3>
+		  	<div class="content">
+		  			<img src="<!--#echo var="CONTENT_IMG_PATH" -->collectio-_watch.png" alt="COMMITMENTS"/>
+				  	<p>The GIA (Gemological Institute of America) is an independent, international certification organization favored by Cartier for its impartial judgement in diamond selection. While the 4Cs (carat, color, clarity and cut) are excellent indications of the rarity of a diamond, they can never be used to determine the beauty of a stone. A large number of diamonds that conform to the 4Cs do not meet the selection criteria set out by Cartier. For this reason, each central stone is examined by one of our diamond experts, the only in-house specialists authorized to select Cartier diamonds. The diamond experts constitute an independent team at Cartier. They are gemologists who, in addition to their technical expertise, master the Cartier diamond selection criteria perfectly. This knowledge results from many years of experience, radiance and reflections. A Cartier diamond must play with light in a magnificent manner, thus creating a perfect balance between brilliance, fire and sparkle. Its unique color, varying from colorless to nuanced clarity, brings the stone’s splendor to life. The selection work carried out by the Cartier diamond experts guarantees the beauty of a stone, with its harmonious proportions and incomparable charm.</p>
+				  	
+				</div>
+		  </li>
+		  
+		</ul>
+	</div>
+</div>
+<!--#else-->
+<div class="carousel-wrapper">
+	<div class="carousel">
+		<ul class="bxslider js-slider">
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->carousel-new-1.jpg" alt="" class="image"/>
+		  	<div class="carousel__pic-desc title-color-1 col__1 row__4">
+				<h2>l'odyssee</h2>
+				<p>de cartier</p>
+				<br/>
+				<a href="#"><span></span>view the film</a>
+			</div>
+		  </li>
+		  <li>
+		  	<img src="<!--#echo var="CONTENT_IMG_PATH" -->carousel-new-2.jpg" alt="" class="image"/>
+		  	<div class="carousel__pic-desc title-color-1 col__2 row__2 center-aligned">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" -->hp_trinity-ruban_en-us_6.png" alt="title"/>
+				<br/>
+				<br/>
+				<a href="#"><span></span>view the film</a>
+			</div>
+		  </li>
+		  <li>
+
+		  	<div class="videocontainer js-video">
+                        
+                
+                       
+                    </div>
+           <span class="video-url js-video-url" 
+            data-url="https://www.youtube.com/embed/geTgZcHrXTc?enablejsapi=1&version=3&playerapiid=ytplayer?wmode=transparent&enablejsapi=1" 
+            data-source="youtube"></span>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+<!--#endif-->

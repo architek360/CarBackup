@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    expert collection list -- MOBILE CSS
+\*------------------------------------*/
+/**
+	* collection template css
+
+*/
+
+.expert-collection-list {
+	width:100%;
+    .collection-list__bg {
+		img {
+			width:100%;
+		}
+	}
+	.expert-collection-list__title {
+		color: $primary-2;
+		text-align: center;
+		h2{
+			@include f(24);
+			@include rem('margin-bottom',50px);
+			text-transform: uppercase;
+		}
+		h4{
+			@include f(16);
+			text-transform: uppercase;
+		}
+	}
+	.expert-collection-list__expert-listing {
+		ul {
+			.grid__item {
+					padding-left: 0;
+			}
+			li {
+				@include rem('margin-top',20px);
+				border: none;
+					
+				img {			
+					text-align: right;
+					display: inline-block;
+				}
+				.product-push {
+					border: 1px solid $primary-40;
+					background: $primary-1;
+					margin: 0;
+					height:157px;
+					@include rem('padding',15px);
+					width: 90%;
+					display: table;
+					.product-push__desc{
+						
+						vertical-align: top;
+						@include rem(padding, 0 0 0 11px);
+						text-align: left;
+						display : inline-block;
+
+						.heading3{
+							@include f(25);
+							width:227px;
+							word-wrap:break-word;
+							@include rem(letter-spacing, 2px);
+							padding : 0;
+							text-align: left;
+						}
+						.more-button{
+							@include f(12);
+							@include rem(padding, 30px 0 0 0px);
+							text-transform:capitalize;
+						}
+
+						.arrow-show{
+							@include rem(margin-right, 0px);
+						}
+					}
+					.product-push_img {
+						border: 1px solid $primary-40;
+					    display: block;
+						text-align: right;
+						@include rem('height',157px);
+						@include rem('width',197px);
+						display : table-cell;
+						vertical-align: middle;
+						
+
+						img{
+							max-height:100%;
+							max-width:100%;
+							max-width:197px;
+							max-height:156	px;
+						}
+					}
+				}
+			}
+					
+
+		}
+		ul:last-child{
+			@include rem('margin-bottom',67px);
+		}
+
+		}
+
+		
+		
+	}
+
+
+.expert-collection-list .expert-collection-list__expert-listing .social-share ul:last-child {
+  @include rem('margin-bottom',0px);
+}

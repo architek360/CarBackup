@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    Progress bar -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.progressbar)
+ * TITLE CONTAINER......headings for component (.progressbar__title)
+ * CIRCLUAR BLOCK......NUMBERED 1,2,3,4 block (.progressbar__circle-on, progressbar__circle-off)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.progressbar{
+	color: white;
+	width: 90.25%;
+	@include set-ulFix;
+	margin:0 auto;
+	/*height: 260px;*/
+	text-transform:uppercase;
+	@include f(31);
+	@include rem(padding-top,25px);
+	@include rem('margin-bottom',10px);
+	text-align: center;
+	
+		li{
+			display: inline-block;
+			width:22%;	
+			vertical-align: top;
+			
+
+			span{
+				@include rem(width,56px);
+				@include rem(height,56px);
+				line-height: 56px;
+				border-radius: 50%;
+				display: inline-block;
+				text-align: center;
+				color:$primary-1 ;
+				@include rem('margin-bottom',25px);
+				@include bold-font;
+
+			}
+
+			 p{
+				vertical-align:middle;
+				height: 45px;
+				@include bold-font;
+				font-weight:bold;
+				letter-spacing:2px;
+				@include rem(font-size,15px);
+				background: none;
+				text-align: center;
+				padding:  0px;
+				line-height: inherit;
+			}
+		}
+	}
+
+	h3{
+		text-align: center;
+		@include rem(font-size,34px);
+	}
+	.progressbar__title {
+		border: none;
+	}
+
+	.progressbar__circle-on{
+		span{
+			background-color: $white;
+		}
+		h4{
+			color: $white;
+		}
+
+	}
+	.progressbar__circle-off{
+		pointer-events: none;
+        cursor: default;
+		span{
+		background-color: $light_grey;
+		}
+		h4{
+			color: $light_grey;
+		}
+
+	
+}
+

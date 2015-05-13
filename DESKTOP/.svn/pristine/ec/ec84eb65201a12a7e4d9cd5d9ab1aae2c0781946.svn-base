@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  Error page  COMPONENT  -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.error-page)
+ * main message ....(.error-page__msg)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+ 
+.error-page {
+	width: 100%;
+	position: static;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.error-page__msg {
+	color: #FFFFFF;
+	@include proxi-font;
+	text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin:-50px 0 0 20px 0;
+	font-size: 22px;
+	}
+	.error-page__msgtext {
+		  text-transform: uppercase;
+		  color: white;
+		  text-align: center;
+		  font-size: 16px;
+		  width:100%;
+	}
+
+}
+
+/* error page css end here */

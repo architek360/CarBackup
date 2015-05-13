@@ -1,0 +1,20 @@
+<!-- store locater wrapper Starts Here-->
+<div class="boutique-list-wrapper store-locator-wrapper grid" itemscope itemtype="http://schema.org/Store">
+<!-- Boutique Lister Starts Here-->
+    <div class="store-list__title">
+        <h1>
+            SEE ALL CARTIER STORES - <span class="js-GeoCity">CZECH REPUBLIC</span>
+        </h1>
+    </div>
+    <div class="boutique-list-detail-wrapper">
+        <div class="grid__item two-fifths">
+            <!--#set var="more-text" value="Find out more" -->
+            <!--#set var="showmap-text" value="show map" -->
+            <!--#set var="scrollPane" value="true" -->
+            <!--#include virtual="../../components/boutique_scrollable/html.shtml" -->
+        </div>
+        <div class="boutique-detail grid__item three-fifths">
+
+        </div>
+    </div>
+</div>

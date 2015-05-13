@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+
+<!--#set var="VIEWS_1" value="ecs_review_repair_service_order" -->
+<!--#set var="VIEWS_2" value="pushs" -->
+<!--#set var="MODULE" value="billing js-checkout" -->
+
+<!--#include virtual="../templates/base.shtml" -->

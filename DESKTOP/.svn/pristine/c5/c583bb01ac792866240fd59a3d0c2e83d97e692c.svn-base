@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    Redirection -- Desktop CSS
+\*------------------------------------*/
+/*
+* MODULE CONTAINER.... (.redirection)
+* ANCHOR CONTAINER...... (.action-button)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.redirection{
+  z-index: 100; 
+  background:$primary-1; 
+  top: 0px; 
+  position: relative;
+  border-bottom: 1px solid $primary-2;
+  display:none;
+
+  .content{
+    @include rem('padding', 10px );
+  }
+
+  p{
+    font-style: italic;
+    @include f(11);
+    letter-spacing: 0;
+    color: $primary-2;
+    @include rem('padding', 0px );
+     @include rem('line-height', 20px );
+    text-align: center;
+    a{
+      color:$primary-20;
+    }
+  }
+
+  .cross-button{
+    color: $primary-1;
+  }
+  .action-button{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+
+      .more-button{
+      display: inline-block;
+      width: auto;
+      text-transform: uppercase;
+      @include rem('margin-right', 30px );
+      @include rem('padding-top', 10px );
+      @include bold-font();
+      }
+  }
+}

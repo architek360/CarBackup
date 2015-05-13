@@ -1,0 +1,40 @@
+<!--#set var = "image" value = "enameled_objects_img.jpg"-->
+<!--#set var = "hoverimage" value = "enameled_objects_red.jpg"-->
+<!--#set var = "imagealt" value = "enameled_objects"-->
+<!--#set var = "imagetext" value = "enameled_objects"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "distant_worlds.jpg"-->
+<!--#set var = "hoverimage" value = "distant_worlds_red.jpg"-->
+<!--#set var = "imagealt" value = "distant_worlds"-->
+<!--#set var = "imagetext" value = "distant_worlds"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "ordinary_items_transformed.jpg"-->
+<!--#set var = "hoverimage" value = "ordinary_items_transformed_red.jpg"-->
+<!--#set var = "imagealt" value = "ordinary_items_transformed"-->
+<!--#set var = "imagetext" value = "ordinary_items_transformed"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "art_of_writing.jpg"-->
+<!--#set var = "hoverimage" value = "art_of_writing_red.jpg"-->
+<!--#set var = "imagealt" value = "art_of_writing"-->
+<!--#set var = "imagetext" value = "art_of_writing"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "optical_jewelry.jpg"-->
+<!--#set var = "hoverimage" value = "optical_jewelry_red.jpg"-->
+<!--#set var = "imagealt" value = "optical_jewelry"-->
+<!--#set var = "imagetext" value = "optical_jewelry"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "vanity_cases.jpg"-->
+<!--#set var = "hoverimage" value = "vanity_cases_red.jpg"-->
+<!--#set var = "imagealt" value = "vanity_cases"-->
+<!--#set var = "imagetext" value = "vanity_cases"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "masculine_elegance.jpg"-->
+<!--#set var = "hoverimage" value = "masculine_elegance_red.jpg"-->
+<!--#set var = "imagealt" value = "masculine_elegance"-->
+<!--#set var = "imagetext" value = "masculine_elegance"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->
+<!--#set var = "image" value = "precious_bags_img.jpg"-->
+<!--#set var = "hoverimage" value = "precious_bags_red.jpg"-->
+<!--#set var = "imagealt" value = "precious_bags"-->
+<!--#set var = "imagetext" value = "precious_bags"-->
+<!--#include virtual="../../components/mosaic/image.shtml" -->

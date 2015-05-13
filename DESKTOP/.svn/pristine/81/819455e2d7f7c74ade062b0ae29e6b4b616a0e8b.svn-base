@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    boutique -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.pushs)
+ * INNER BLOCK......inner items (ul, etc.)
+ * HEADING BLOCK...... headings styling (.pushs__title)
+ * DESCRIPTION BLOCK...... DESCRIPTION styling (.pushs__desc)
+ * NORTON SECURED BLOCK ..... FOR NORTON SECURED ICON (.pushs__norton-secured)
+ * NORTON ICON ..... ('.norton-icon' FROM /sass/_mobile.scss)
+ * CREDIT CARD ICON ..... (E.G '.mastercard' FROM /sass/_mobile.scss)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+
+.boutique 
+{
+	width:81.25%;
+	margin:0 auto;
+	@include rem('padding',39px 0);
+    background:$primary-1 url($path-images + 'content/boutique_texture.jpg') no-repeat bottom right 0 ;	 
+	background-size:100%;
+
+	.boutique__title {
+			text-transform:uppercase;
+			letter-spacing:4px;
+			@include brand-font;
+			text-align:center;
+			border-top: solid 1px $primary-2;
+			border-bottom:solid 1px $primary-2;
+		.boutique_title__t1 {
+			@include rem('margin-top',23px);
+			@include f(24);
+			color: $primary-2;
+			border: none;
+		}
+
+		.boutique_title__t2 {
+			@include f(34);
+			@include rem('line-height',34px);
+			color: $primary-2;
+			border: none;
+			padding: 2rem 0;
+		}
+
+	}
+
+	.boutique__image{
+		height:362px;
+		width:100%;
+		@include rem('margin-top',30px);
+		position:relative;
+		overflow:hidden;
+		img{
+			position:absolute;
+			left:0px;
+			top:0px;
+			height:100%;
+			width: 100%;
+		}
+		
+	}
+
+	.boutique__details{
+		text-align:center;
+		@include rem('margin-top',30px);
+		
+		padding-bottom: 40px;
+
+		.boutique_details__add{
+			@include brand-font;
+			color:$primary-2;
+			@include f(24);
+			line-height:34px;
+		}
+
+		.boutique_details__con{
+			@include rem('margin-top',10px);
+			@include main-font;
+			@include f(22);
+			color:$primary-3;
+			line-height:52px;
+
+			a{
+				border-bottom:solid 1px;
+			}
+		}
+		.boutique_details__open{
+			color: $primary-2;
+			line-height:35px;
+			@include f(20);
+			div:first-child{
+				text-transform:uppercase;
+			}
+			div:last-child{
+				@include f(15);
+			}
+		}
+		.boutique_details__links{
+			margin-top:20px;
+			.location-button{
+				margin-right:37px;
+				@include setSprite(38px, 38px, -173px, -20px);
+			}
+			.cta{
+				@include rem('margin-top',15px);
+				margin-left: 0;
+				color: white;
+				width: 80%;
+				@include bold-font;
+				background-color: $primary-52;
+				margin:0 auto;
+				@include rem('padding-top',10px);
+				@include rem('padding-bottom',10px);
+				@include f(19);
+			}
+			.send-email{
+				position:relative;
+				top:25px;
+				@include f(25);
+				@include main-font;
+				font-style:italic;
+				color:#a5a5a5;
+			}
+		}
+	}
+
+	.arrow-red{
+		@include setSprite(10px, 15px, -577px, -20px);
+	 	position: relative;
+	 	@include rem('top', -2px);
+	 	@include rem('margin-left', -10px);
+	 	@include rem('margin-right', 8px);
+	 	left:-10px;
+	}
+
+	
+
+	
+
+}
+

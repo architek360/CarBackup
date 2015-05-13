@@ -1,0 +1,296 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+/*------------------------------------*\
+    $THEME CSS - Main
+\*------------------------------------*/
+/**
+ * VARIABLES, FONTS
+ * COMMON STYLING
+ * THEMES
+*/
+/*------------------------------------*\
+    $COLOR VARIABLES
+\*------------------------------------*/
+/* DESKTOP VARIABLES */
+/*$primary-88     : #472021;*/
+/*$primary-89		: #6D3536;*/
+/*------------------------------------*\
+    $FONT VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    Global -- Helper CSS
+\*------------------------------------*/
+/**
+ * FONT MIXINS for font size ,color, weight
+
+ */
+/*------------------------------------*\
+    $FONT MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT SIZE
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT COLOR
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR FONT WEIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR OPACITY
+\*------------------------------------*/
+/*------------------------------------*\
+    $FUNCTION FOR PX to EM CONVERSION
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/* Default font size in pixels if not overridden. */
+/* Convert PX units to EMs.
+Ex: margin-right: pem(10);
+*/
+/*
+ * 'rem' is a Sass mixin that converts pixel values to rem values for whatever property is passed to it.
+ * It returns two lines of code one of the regular pixel values (for IE), and another with the
+ * converted rem values (for everyone else). Special thanks to Chris Epstein (http://chriseppstein.github.com)
+ * and Martin Bavio (http://martinbavio.com) for the help and code!
+ *
+ * Sample input:
+ * .element {
+ *   @include rem('padding',10px 0 2px 5px);
+ * }
+ *
+ * Sample output:
+ * .element {
+ *   padding: 10px 0 2px 5px;
+ *   padding: 1rem 0 0.2rem 0.5rem;
+ * }
+ *
+ */
+/*------------------------------------------*\
+    $MIXIN FOR CONVERTING PIXELS INTO REM
+\*-------------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR IMAGE SPRITE
+\*------------------------------------*/
+/* Create Sprites using this one-line mixin
+setSprite(width, height, x-pos, y-pos)
+*/
+/*----------------------------------------------*\
+    $MIXIN FOR OVERRIDING DEFAULT PROPERY OF UL
+\*----------------------------------------------*/
+/* one-line mixin to override the ul property */
+/*------------------------------------*\
+    $MIXIN FOR TEXT ELIPSIS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR GRADIENT
+\*------------------------------------*/
+/* Create Linear Gradient
+@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+*/
+/*------------------------------------*\
+    $MIXIN FOR BORDER RADIUS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXIN FOR ROTATE
+\*------------------------------------*/
+/*eg - @include rotate(0deg);*/
+/*------------------------------------*\
+    $MIXIN FOR TIMING
+\*------------------------------------*/
+/* eg @include transition(0.2s);*/
+/*------------------------------------*\
+    $MIXIN FOR BOX SIZING
+\*------------------------------------*/
+/* @include box-sizing(border-box); */
+/*------------------------------------*\
+    $MIXIN FOR TRANSITION
+\*------------------------------------*/
+/* eg @include transition(width, 0.2s, linear);*/
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+/* line 23, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.body-wrapper .header .left-nav .left-nav__list li .nav-link {
+  font-family: proximanova, sans-serif;
+  font-size: 12px;
+}
+
+/* line 27, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.body-wrapper .header .right-nav .right-nav__list li .nav-link {
+  font-family: proximanova, sans-serif;
+  font-size: 12px;
+}
+
+/* line 31, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.primary-nav-container .first-level-nav .first-level-nav__title {
+  font-family: proximanova, sans-serif;
+  font-size: 12px;
+}
+
+/* line 35, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.primary-nav-container .first-level-nav .nav-show .secondary-nav a.sec-nav-link {
+  font-family: proximanova, sans-serif;
+  font-size: 11px;
+}
+
+/* line 39, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-reg-step-1 .fn_lname {
+  margin-left: 0rem;
+}
+
+/* line 42, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-reg-step-1 .fn_fname {
+  clear: none;
+  margin-left: 0.8rem;
+}
+
+/* line 46, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-reg-step-1 .fn_lname2 {
+  margin-left: 0rem;
+}
+
+/* line 49, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-reg-step-1 .fn_fname2 {
+  clear: none;
+  margin-left: 0.8rem;
+}
+
+/* line 54, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.regstep3-col4 .fn_city {
+  width: 44% !important;
+}
+
+/* line 58, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-jp-reg-step-3 .input-wrapper .form-input#fn_zip, .js-jp-reg-step-3 .input-wrapper .form-input#fn_phno, .js-reg-step-3 .input-wrapper .form-input#fn_zip, .js-reg-step-3 .input-wrapper .form-input#fn_phno {
+  width: 100%;
+}
+
+/* line 62, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-reg-step-3 .fn_strname {
+  clear: both !important;
+}
+/* line 65, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-reg-step-3 .fn_addrinfo {
+  width: 44% !important;
+}
+
+/* line 69, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.addressform_lastName2 {
+  position: relative;
+  top: 10px;
+  margin-left: -173px;
+}
+
+/* line 74, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.addressform_firstName2 {
+  position: relative;
+  top: 10px;
+}
+
+/* line 78, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.addressform_lastName1 {
+  position: relative;
+  display: inline-table;
+  margin-left: 0px;
+}
+
+/* line 83, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.addressform_firstName1 {
+  float: left;
+  margin-left: -5px;
+  clear: none;
+}
+
+/* line 88, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+#addressform_lastName1 {
+  width: 94%;
+}
+
+/* line 91, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.piform_lname1 {
+  margin-left: 0;
+}
+
+/* line 94, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.piform_fname1 {
+  margin-left: 0.8rem;
+}
+
+/* line 98, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+#js-light-account-form .fn_lname2, #js-light-account-form .fn_lname {
+  margin-left: 0px;
+}
+/* line 101, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+#js-light-account-form .fn_fname2, #js-light-account-form .fn_fname {
+  clear: none;
+  margin-left: 0.8rem;
+}
+
+/* line 106, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-light-account-form .captcha .captcha__image__container .verify-audio-text {
+  margin-top: 30px;
+}
+
+/* line 109, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-light-account-form .captcha .captcha__image__container .form-label {
+  min-width: 120% !important;
+}
+
+/* line 112, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressLabel {
+  width: 46% !important;
+}
+/* line 114, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressLabel .form-input {
+  width: 100% !important;
+}
+
+/* line 119, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressform_address2 {
+  margin-top: 15px;
+  margin-left: 8px;
+}
+/* line 123, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressform_address5 {
+  clear: both;
+  width: 46%;
+}
+/* line 127, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressform_address6 {
+  width: 44%;
+  margin-top: 18px;
+  margin-left: 8px;
+}
+/* line 132, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressform_zip {
+  width: 48%;
+}
+/* line 135, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressform_address7 {
+  clear: none;
+}
+/* line 138, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-address-form .addressform_phone {
+  margin-left: 0px;
+}
+
+/* line 143, ../../../../../../../sass/country_specific/Clientlibs_desktop_taiwan/desktop.scss */
+.js-request-info-form .requestInformation_lastName2, .js-request-info-form .requestInformation_lastName {
+  margin-right: 8px;
+  padding-left: 0px;
+}

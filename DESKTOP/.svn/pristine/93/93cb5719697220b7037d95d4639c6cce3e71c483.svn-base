@@ -1,0 +1,18 @@
+.js-reg-step-3 .fn_addrname .form-input{
+	width:100%;
+}
+.js-reg-step-3 {
+	.fn_addrname{
+		width:44%;
+		float:left;
+	}
+	.fn_state {
+		width:44%;
+	}
+	.fn_addrinfo{
+		width:44%;
+	}
+	.fn_phno {
+		clear:none;
+	}
+}

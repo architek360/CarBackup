@@ -1,0 +1,1882 @@
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+.carousel{
+		.bx-wrapper{
+			
+			.bx-controls-direction-left, .bx-controls-direction-right{
+				display: block;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				width: 50px;
+				cursor: pointer;
+				a{
+					cursor: pointer;
+					position: absolute;
+					top: 0;
+					outline: 0;
+					width: 100%;
+					height: 100%;
+					text-indent: -9999px;
+					z-index: 99;
+					display: block;
+				}
+			}
+			.bx-controls-direction-left{
+				left:0;
+				&:link .bx-prev {
+						background:red;
+					}
+
+				&:visited .bx-prev {
+				 	background:none;	
+				}
+
+				&:hover .bx-prev {
+		    		@include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+	    			position: absolute;
+					left: 10px;
+					top: 44%;
+				}
+			}
+
+			.bx-controls-direction-right{
+				right:0;
+				&:hover .bx-next {
+		    		@include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+					position: absolute;
+					left: 22px;
+					top: 44%;	
+			    	}
+			}
+
+		}
+	}
+
+
+.gift-for-you{
+	@include rem('margin', 10px 0 30px 0);
+	.bx-wrapper{
+		.bx-controls-direction-left{
+			.bx-prev{
+				@include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+				position: absolute;
+				left: 10px;
+				top: 44%;
+			}
+		}
+
+		.bx-controls-direction-right{
+			.bx-next {
+	    		@include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+				position: absolute;
+				left: 22px;
+				top: 44%;	
+			}
+		}
+
+		.bxslider{
+			li{
+				background:url($path-images+'icons/bg_vignette.jpg')no-repeat;
+				opacity: 0.3;
+				height: 200px;
+				-ms-filter: "alpha(opacity=30)";
+				text-align: center;
+				line-height: 200px;
+  				vertical-align: middle;
+
+				img{
+					max-width: 100%;
+					max-height: 100%;
+					width: auto;
+				}
+
+			}
+			li.active{
+				opacity:1;
+				-ms-filter: "alpha(opacity=100)";
+			}
+		}
+	}
+}
+
+
+
+.multiple_video_wrapper{
+	@include rem('margin', 10px 0 10px 0);
+	.carousel{
+		background: rgba(255, 255, 255, .1);
+		@include rem('padding-bottom', 8px);
+		@include rem('padding-top', 8px);
+		position:relative;	
+	}
+	.bx-wrapper{
+		.bx-controls-direction-left{
+			.bx-prev{
+				@include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+				position: absolute;
+				left: 10px;
+				top: 44%;
+			}
+		}
+
+		.bx-controls-direction-right{
+			.bx-next {
+	    		@include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+				position: absolute;
+				left: 22px;
+				top: 44%;	
+			}
+		}
+
+		.bxslider{
+			li{
+				background:url($path-images+'icons/bg_vignette.jpg')no-repeat;
+				opacity: 0.3;
+				height: 120px;
+				-ms-filter: "alpha(opacity=30)";
+
+			}
+			li.active{
+				opacity:1;
+				-ms-filter: "alpha(opacity=100)";
+			}
+		}
+	}
+}
+
+
+.maison-carousel{
+	.home-carousel{
+		.carousel{
+			.carousel__pic-desc{
+				h2{
+					@include proxi-font;
+					@include f(30);
+					text-transform: uppercase;
+					font-weight: normal;
+					display: block;
+				}
+				h3{
+					font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+					font-size: 20px;
+					font-style: italic;
+					letter-spacing: .1em;
+					display: inline-block;
+					letter-spacing: .2em;
+					position: relative;
+					font-style: normal;
+					text-transform: uppercase;
+				}
+				h3:before,h3:after{
+					border-top: 1px solid #ffffff;
+					content: "";
+					display: block;
+					left: -75px;
+					position: absolute;
+					top: 48%;
+					width: 60px;
+				}
+				h3:after{
+					left: auto;
+					right: -70px;
+				}
+
+				p{
+		 	 		@include f(13);
+		 	 		@include main-font;
+		 	 		@include rem('padding', 10px 0px);
+		 	 		letter-spacing:3px;
+		 	 		@include rem('line-height', 15px);
+		 	 	}
+
+			}
+		}
+	}
+}
+
+.home-carousel{
+	.carousel-wrapper {
+		@include rem('min-height', 630px);
+		//border-bottom: solid 1px $primary-3;
+		.carousel {
+			position: absolute;
+			width:100%;
+			overflow: normal;
+			overflow-x: hidden;
+			top: 0;
+			
+			@include rem('min-height', 630px);
+			left:0;
+			@include rem('margin-bottom', -18px);
+
+
+			
+
+
+			/* BELOW SNIPPET STILL NEEDS WORK FOR IE. TRANSPARENCY NOT WORKING AS EXPRECTED*/
+	/*		.prev {
+				&:link span {
+					background:transparent;
+	       			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00990000,endColorstr=#00990000); 
+	       			zoom: 1;
+				}
+				&:visited span {
+				 	background:none;	
+				}
+				&:hover span {
+					
+					@include setSpriteDesktop(75px, 75px, -10px, -200px, transparent);
+
+				}
+			}
+			.next {
+				&:link span {
+					background:transparent;
+					filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50990000,endColorstr=#50990000); 
+					zoom: 1;
+				}
+				&:visited span {
+				 	background:none;	
+				}
+				&:hover span {
+					@include setSpriteDesktop(75px, 75px, -95px, -200px, transparent);
+				}
+
+			}*/
+
+			.bx-wrapper {
+			  position: relative;
+			  margin: 0 auto;
+			  padding: 0;
+			  *zoom: 1;
+			 .bx-controls{
+			 	margin: 0 auto;
+				width: 140px;
+			 }
+			  .image{
+			  	@include rem('height',795px);
+			  	/*max-width: 100%;*/
+			    display: block;
+			  }
+			  .bx-viewport {
+			   
+			    /*left: -5px;*/
+			    /*fix other elements on the page moving (on Chrome)*/
+			    -webkit-transform: translatez(0);
+			    -moz-transform: translatez(0);
+			    -ms-transform: translatez(0);
+			    -o-transform: translatez(0);
+			    transform: translatez(0);
+			  }
+			.carousel__pic-desc{
+				@include main-font;
+		 	 	position:absolute;
+		 	 	top:0px;
+		 	 	text-transform: uppercase;
+		 	 	
+		 	 	
+		 	 	p{
+		 	 		padding:0;
+
+		 	 		.subtitle{
+		 	 			@include f(29);
+			 	 		@include main-font;
+			 	 		@include rem('padding', 0 0 20px);
+			 	 		letter-spacing:.1em;
+			 	 		line-height: 35px;
+			 	 		@include rem('line-height', 35px);
+			 	 		display: inline-block;
+		 	 		}
+
+		 	 		img{
+		 	 			@include rem('padding', 0 0 20px);
+		 	 		}
+		 	 	}
+		 	 	h2,h3{
+		 	 			@include f(42);
+		 	 			
+		 	 			@include main-font;
+
+		 	 		}
+		 	 	a{
+		 	 		
+		 	 		text-decoration:none;
+		 	 		@include f(13);
+					font-weight: bold;
+					text-transform: uppercase;
+					color: $primary-2;
+					@include setSpriteDesktop(auto, auto,-431px,-155px,transparent);
+		 	 		@include rem('padding-left', 10px);
+		 	 		@include rem('line-height',13px);
+		 	 		letter-spacing: 2px;
+		 	 	}
+		 	 	a:hover{
+		 	 		color: $primary-3;
+		 	 	}
+		 	 }
+			.title-color-1{
+		 	 	@include font-color($primary-9);
+		 	}
+
+		 	.title-color-2{
+		 	 	@include font-color($primary-2);
+		 	}
+
+		 	.display-left{
+		 	 	@include rem('left', 90px);
+		 	}
+
+		 	.display-right{
+		 	 	@include rem('right', 90px);
+		 	}
+
+		 	.display-mid{
+		 		right:35%;
+		 	}
+
+		 	.display-top{
+		 	 	top:30%;
+		 	}
+		 	.display-middle{
+		 	 	top:45%;
+		 	}
+		 	.display-bottom{
+		 	 	top:62%;
+		 	}
+
+		 	.col__1{
+		 		left:5%;
+		 	}
+
+		 	.col__2{
+		 		left:25%;
+		 	}
+
+		 	.col__3{
+		 		width: auto;
+		 		top: 0 ;
+				right: 0 ;
+				bottom : 0 ;
+				left : 0 ;
+				text-align: center;
+				margin : auto;
+
+		 		p{
+		 			text-align: center;
+		 		}
+		 	}
+
+		 	.col__4{
+		 		left:65%;
+		 	}
+
+		 	.col__5{
+		 		left:80%;
+		 	}
+
+		 	.row__1{
+		 		top:20%;
+		 	}
+
+		 	.row__2{
+		 		top:30%;
+		 	}
+
+		 	.row__3{
+		 		top:45%;
+		 	}
+
+		 	.row__4{
+		 		top:60%;
+		 	}
+		 	.center-aligned{
+		 		text-align: center;
+		 	}
+
+			.bx-controls-auto {
+			    position: absolute;
+			    bottom: -30px;
+			    width: 100%;
+			  } 
+			  .bx-loading {
+			    min-height: 50px;	    
+			    background: url($path-images + 'icons/bx_loader.gif') center center no-repeat white;
+			    height: 100%;
+			    width: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    z-index: 2000;
+			  }
+			  .bx-pager {
+			    text-align: center;
+			  	font-size: .85em;
+			  	font-family: Arial;
+			  	font-weight: bold;
+			  	color: #666;
+			  	bottom: 10px;
+			  	display: inline-block;
+			  	position: absolute;
+			  	margin: 0 auto;
+			    .bx-pager-item {
+			      display: inline-block;
+			      *zoom: 1;
+			      *display: inline;
+			    }
+			  }
+			  .bx-controls-auto .bx-controls-auto-item {
+			    display: inline-block;
+			    *zoom: 1;
+			    *display: inline;
+			  }
+			  .bx-pager.bx-default-pager a {
+				    text-indent: -9999px;
+				    display: block;
+				    outline: 0;
+					/*@include rem('width', 10px);
+					@include rem('height', 10px);*/
+					@include rem('margin', 0px 2px);
+					@include border-radius(9px); 
+					@include rem('margin', 0px 10px);
+					/*box-shadow: none;
+					background: $primary-56; 
+					border:1px solid $primary-56; */
+					@include setSpriteDesktop(10px, 10px, -6px ,-165px, transparent);
+				   
+				    &:hover {
+					     /* background: $primary-57; 
+						  border:1px solid $primary-57; */
+						  @include setSpriteDesktop(10px, 10px, -26px ,-165px, transparent);
+				    }
+				    &.active {
+				  		/*background: $primary-2; 
+				  		border: 1px solid red;*/
+				  		@include setSpriteDesktop(10px, 10px, -46px , -165px, transparent);
+				    }
+
+
+			  }
+			  .bx-prev {
+			    background: none;
+
+			  }
+			  .bx-next {
+			    background: none;
+			  }
+
+			  .bx-controls{
+
+			  }
+			  .bx-controls-direction-left {	  	
+				    display: block;
+				    height: 73%;
+				    position: absolute;
+				    top: 175px;
+				    width: 100px;
+				    left: 0;
+				    
+				  	a,span {
+				  		cursor: pointer;
+					    position: absolute;
+					    top: 0;
+					   
+					    outline: 0;
+					    width: 100%;
+					    height: 90%;
+					    text-indent: -9999px;
+					    z-index: 99;
+					    display: block;
+				    	&.disabled {
+				    	  display: none;
+				    	}	    	
+				  	}
+
+
+					&:link .bx-prev {
+						background:red;
+
+					}
+					&:visited .bx-prev {
+					 	background:none;	
+					}
+					&:hover .bx-prev {
+			    		@include setSpriteDesktop(75px, 75px, -10px, -200px, transparent);
+		    			position: absolute;
+						left: 10px;
+						top: 44%;
+
+					}
+
+
+				}
+				.bx-controls-direction-right {
+				    display: block;
+				    height: 73%;
+				    position: absolute;
+				    top: 175px;
+				    width: 100px;
+				    right: 0;
+				    
+				  	a,span {
+				  		cursor: pointer;
+					    position: absolute;
+					    top: 0;
+					   
+					    outline: 0;
+					    width: 100%;
+					    height: 90%;
+					    text-indent: -9999px;
+					    z-index: 99;
+					    display: block;
+				    	&.disabled {
+				    	  display: none;
+				    	}
+
+				    	
+				  	}
+
+				  	&:hover .bx-next {
+			    		@include setSpriteDesktop(75px, 75px, -95px, -200px, transparent);
+		    			position: absolute;
+						left: 10px;
+						top: 44%;
+			    	}
+				}
+			  .bx-controls-auto {
+			    text-align: center;
+			    .bx-start {
+			      display: block;
+			      text-indent: -9999px;
+			      width: 10px;
+			      height: 11px;
+			      outline: 0;
+			      background: url($path-images + 'icons/controls.png') -86px -11px no-repeat;
+			      margin: 0 3px;
+			      &:hover, &.active {
+			        background-position: -86px 0;
+			      }
+			    }
+			    .bx-stop {
+			      display: block;
+			      text-indent: -9999px;
+			      width: 9px;
+			      height: 11px;
+			      outline: 0;
+			      background: url($path-images + 'icons/controls.png') -86px -44px no-repeat;
+			      margin: 0 3px;
+			      &:hover, &.active {
+			        background-position: -86px -33px;
+			      }
+			    }
+			  }
+			  .bx-controls.bx-has-controls-auto.bx-has-pager {
+			    .bx-pager {
+			      text-align: left;
+			      width: 80%;
+			    }
+			    .bx-controls-auto {
+			      right: 0;
+			      width: 35px;
+			    }
+			  }
+			  .bx-caption {
+			    position: absolute;
+			    bottom: 0;
+			    left: 0;
+			    background: #666\9;
+			    background: rgba(80, 80, 80, 0.75);
+			    width: 100%;
+			    span {
+			      color: #fff;
+			      font-family: Arial;
+			      display: block;
+			      font-size: .85em;
+			      padding: 10px;
+			    }
+			  }
+			}
+
+
+		}
+
+	}
+}
+
+
+
+.nested-carousel-wrapper , .sfy-help-carousel,.bridal-pdp-carousel,.nested-carousel-wrapper .carousel-product{
+	@include rem('margin-top', 40px);
+	@include rem('min-height', 380px);
+	border-bottom:1px solid $primary-1;
+
+	.bridal-pdp-carousel:before {
+		content: "";
+background: #b3b3b3;
+display: inline-block;
+width: 30%;
+height: 1px;
+margin: 0 35%;
+	}
+	.carousel {
+		/*position: absolute;*/	
+		width:100%;
+		display: inline-block;
+		overflow: hidden;
+		@include rem('min-height', 380px);
+		.rslides{
+			border-bottom: none;
+		 	.display-top{
+		 	 	top:30%;
+		 	}
+		 	.carousel__pic-desc a {
+		 		@include f(13);
+		 	}
+
+		}
+
+		.bxslider li{
+			vertical-align: top;
+		}
+		.rslides_tabs {
+			width:100%;
+			text-align:center;
+			display: inline-block;
+			position: relative;
+			@include rem('top', -92px);
+			@include set-ulFix;
+			z-index: 5;
+			display: none;
+
+			li {
+		 	 display: inline;
+		  	}
+
+		  	a {
+				@include rem('width', 10px);
+				@include rem('height', 10px);
+				@include rem('margin', 0px 2px);
+				@include border-radius(9px); 
+				@include rem('margin', 0px 10px);
+				box-shadow: none;
+
+				background: $primary-56; 
+				border:1px solid $primary-56; 
+				text-indent:-9000px; 
+				display:inline-block; 
+				overflow:hidden; 
+				outline:none;
+				
+		 	}
+
+		 	a:hover {
+		 		background: $primary-57; 
+				border:1px solid $primary-57; 
+		 	}
+
+		 	.rslides_here a{
+		  		background: $primary-2; 
+		  		border: 1px solid $primary-2;
+			 }
+
+		 }
+		a.rslides_nav {
+			display: block;
+		}
+		.prev, .next {
+			top: 0;
+			span {
+				width: 100%;
+				background: none;
+				top: 50%;
+			}
+		}
+
+
+
+		/* BELOW SNIPPET STILL NEEDS WORK FOR IE. TRANSPARENCY NOT WORKING AS EXPRECTED*/
+		.prev {
+			&:link span {
+				@include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+			}
+			&:visited span {
+			 	background:red;	
+			}
+			&:hover span {
+				/*background:url($path-images+'icons/slideshow-arrow-left.png') no-repeat scroll center center transparent;*/
+				@include setSpriteDesktop(14px, 27px, -10px, -307px, transparent);
+
+			}
+/*			&:active span {
+				background:url($path-images+'icons/slideshow-arrow-left.png') no-repeat scroll center center transparent;
+			}*/
+		}
+		.next {
+			&:link span {
+				@include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+			}
+			&:visited span {
+			 	background:red;	
+			}
+			&:hover span {
+				/*background:url($path-images+'icons/slideshow-arrow-right.png') no-repeat scroll center center transparent;	*/
+				@include setSpriteDesktop(14px, 27px, -24px, -307px, transparent);
+			}
+/*			&:active span {
+				background:url($path-images+'icons/slideshow-arrow-right.png') no-repeat scroll center center transparent;				
+			}*/
+		}
+
+
+		.bx-wrapper {
+		  position: relative;
+		  /*margin: 0 auto 60px;*/
+		  padding: 0;
+		  *zoom: 1;
+		  img {
+		    max-width: 100%;
+		    display: block;
+		  }
+		  .bx-viewport {
+		   
+		    /*left: -5px;*/
+		   
+		   /* @include rem('min-height', 380px);*/
+		    /*fix other elements on the page moving (on Chrome)*/
+		    -webkit-transform: translatez(0);
+		    -moz-transform: translatez(0);
+		    -ms-transform: translatez(0);
+		    -o-transform: translatez(0);
+		    transform: translatez(0);
+		  }
+		  .bx-pager, .bx-controls-auto {
+		    position: absolute;
+		    bottom: -30px;
+		    width: 100%;
+		  }
+		  .bx-loading {
+		    min-height: 50px;
+		    background: url($path-images + 'icons/bx_loader.gif') center center no-repeat white;
+		    height: 100%;
+		    width: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    z-index: 2000;
+		  }
+		  .bx-pager {
+		    text-align: center;
+		    font-size: .85em;
+		    font-family: Arial;
+		    font-weight: bold;
+		    color: #666;
+		    padding-top: 20px;
+		    bottom: 80px;
+		    .bx-pager-item {
+		      display: inline-block;
+		      *zoom: 1;
+		      *display: inline;
+		    }
+		  }
+		  .bx-controls-auto .bx-controls-auto-item {
+		    display: inline-block;
+		    *zoom: 1;
+		    *display: inline;
+		  }
+		  .bx-pager.bx-default-pager a {
+			    text-indent: -9999px;
+				    display: block;
+				    outline: 0;
+					
+					@include rem('margin', 0px 2px);
+					@include border-radius(9px); 
+					
+					
+					@include setSpriteDesktop(11px, 10px, -6px ,-165px, transparent);
+				   
+				    &:hover {
+					     /* background: $primary-57; 
+						  border:1px solid $primary-57; */
+						  @include setSpriteDesktop(10px, 10px, -26px ,-165px, transparent);
+				    }
+				    &.active {
+				  		
+				  		@include setSpriteDesktop(10px, 10px, -46px , -165px, transparent);
+				    }
+
+
+		  }
+		  .bx-prev {
+		   @include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+			position: absolute;
+			left: 10px;
+			top: 44%;		   
+
+		  }
+		  .bx-next {
+		    @include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+			position: absolute;
+			left: 22px;
+			top: 44%;	    
+		  }
+
+		  .bx-controls-direction-left {
+
+			  	/*border: thin solid #FF0000;*/
+			    display: block;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    width: 30px;
+			    left: 0;
+			    cursor: pointer;
+			  	a {
+			  		cursor: pointer;
+				    position: absolute;
+				    top: 0;		 
+				    outline: 0;
+				    width: 100%;
+				    height: 100%;
+				    text-indent: -9999px;
+				    z-index: 99;
+				    display: block;
+			    	&.disabled {
+			    	  display: none;
+			    	}		    
+			  	}
+			  	span {
+			  		text-indent: -9999px;
+				    z-index: 99;
+				    cursor: pointer;
+			  	}
+			  	&:hover .bx-prev {
+		    		@include setSpriteDesktop(14px, 27px, -10px, -307px, transparent);
+	    			position: absolute;
+					left: 10px;
+					top: 44%;
+		    	}
+			}
+			.bx-controls-direction-right {
+
+			  	/*border: thin solid #FF0000;*/
+			    display: block;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    width: 30px;
+			    right: 0;
+			    cursor: pointer;
+			  	a {
+			  		cursor: pointer;
+				    position: absolute;
+				    top: 0;		 
+				    outline: 0;
+				    width: 100%;
+				    height: 100%;
+				    text-indent: -9999px;
+				    z-index: 99;
+				    display: block;
+			    	&.disabled {
+			    	  display: none;
+			    	}		    
+			  	}
+			  	span {
+			  		text-indent: -9999px;
+				    z-index: 99;
+				    cursor: pointer;
+			  	}
+
+			  	&:hover .bx-next {
+		    		@include setSpriteDesktop(14px, 27px, -24px, -307px, transparent);
+	    			position: absolute;
+					left: 22px;
+					top: 44%;
+		    	}
+			}
+		  .bx-controls-auto {
+		    text-align: center;
+		    .bx-start {
+		      display: block;
+		      text-indent: -9999px;
+		      width: 10px;
+		      height: 11px;
+		      outline: 0;
+		      background: url($path-images + 'icons/controls.png') -86px -11px no-repeat;
+		      margin: 0 3px;
+		      &:hover, &.active {
+		        background-position: -86px 0;
+		      }
+		    }
+		    .bx-stop {
+		      display: block;
+		      text-indent: -9999px;
+		      width: 9px;
+		      height: 11px;
+		      outline: 0;
+		      background: url($path-images + 'icons/controls.png') -86px -44px no-repeat;
+		      margin: 0 3px;
+		      &:hover, &.active {
+		        background-position: -86px -33px;
+		      }
+		    }
+		  }
+		  .bx-controls.bx-has-controls-auto.bx-has-pager {
+		    .bx-pager {
+		      text-align: left;
+		      width: 80%;
+		    }
+		    .bx-controls-auto {
+		      right: 0;
+		      width: 35px;
+		    }
+		  }
+		  .bx-caption {
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    background: #666;
+		    background: rgba(80, 80, 80, 0.75);
+		    width: 100%;
+		    span {
+		      color: #fff;
+		      font-family: Arial;
+		      display: block;
+		      font-size: .85em;
+		      padding: 10px;
+		    }
+		  }
+		}
+
+		.col_full{width: 100%}
+		.col_1-4 { width: 24%;}
+		.col_3-4 { width: 65%;}
+		.info__desc {
+			display: inline-block;
+			margin: 20px 50px;
+			text-align: left;
+			float: left;
+
+			h2 {
+				@include f(14);
+				color: $primary-3;
+				@include rem('line-height', 20px);
+				@include rem('letter-spacing', 1.4px);
+				font-weight: bold;
+				text-align: center;
+				text-transform: uppercase;
+				 
+			}
+			h3 {
+				@include f(13);
+				color: $primary-3;
+				@include rem('line-height', 18px);
+				@include rem('letter-spacing', 1.3px);
+				@include main-font;
+				font-style: italic;
+				text-align: center;
+			}
+
+			p {
+				@include f(12);
+				color: $primary-3;
+				@include rem('line-height', 18px);
+				@include main-font;
+			}
+
+
+		}
+		.info__pic {
+			display: block;
+			float: left;
+			@include rem('height', 380px);
+
+			.product-carousel__wrapper {
+				@include rem('height', 380px);
+				width: 100%;
+
+
+				.bx-wrapper {
+					  position: relative;
+					  /*margin: 0 auto 60px;*/
+					  @include rem('height', 380px);
+					  padding: 0;
+					  *zoom: 1;
+					  img {
+					    max-width: 100%;
+					    max-height: 100%;
+					   /* width: auto;*/
+					    display: inline-block;	
+
+					  }
+					  .bx-viewport {
+					    /*left: -5px;*/
+					   height: 380px !important;
+					    min-height: 0;
+
+
+					    /*fix other elements on the page moving (on Chrome)*/
+					    -webkit-transform: translatez(0);
+					    -moz-transform: translatez(0);
+					    -ms-transform: translatez(0);
+					    -o-transform: translatez(0);
+					    transform: translatez(0);
+
+					    .bxslider li {
+					    	text-align: center;
+					    	vertical-align: middle;
+					    }
+					  }
+					  .bx-pager, .bx-controls-auto {
+					    position: absolute;
+					    bottom: -30px;
+					    width: 100%;
+					  }
+					  .bx-loading {
+					    min-height: 50px;
+					    background: url($path-images + 'icons/bx_loader.gif') center center no-repeat white;
+					    height: 100%;
+					    width: 100%;
+					    position: absolute;
+					    top: 0;
+					    left: 0;
+					    z-index: 2000;
+					  }
+					  .bx-pager {
+					    text-align: center;
+					    font-size: .85em;
+					    font-family: Arial;
+					    font-weight: bold;
+					    color: #666;
+					    padding-top: 20px;
+					    bottom: 40px;
+					    .bx-pager-item {
+					      display: inline-block;
+					      *zoom: 1;
+					      *display: inline;
+					    }
+					  }
+					  .bx-controls-auto .bx-controls-auto-item {
+					    display: inline-block;
+					    *zoom: 1;
+					    *display: inline;
+					  }
+					  .bx-pager.bx-default-pager a {
+					    	text-indent: -9999px;
+						    display: block;
+						    outline: 0;
+						    overflow : hidden;
+							/*@include rem('width', 10px);
+							@include rem('height', 10px);*/
+							@include rem('margin', 0px 2px);
+							@include border-radius(9px); 
+							@include rem('margin', 0px 10px);
+							/*box-shadow: none;
+							background: $primary-56; 
+							border:1px solid $primary-56; */
+							@include setSpriteDesktop(11px, 10px, -6px ,-165px, transparent);
+						    &.active {
+						  		/*background: $primary-2; 
+						  		border: 1px solid red;*/
+						  		@include setSpriteDesktop(10px, 10px, -46px , -165px, transparent);
+						    }
+
+
+					  }
+					
+					  .bx-controls-auto {
+					    text-align: center;
+					    .bx-start {
+					      display: block;
+					      text-indent: -9999px;
+					      width: 10px;
+					      height: 11px;
+					      outline: 0;
+					      background: url($path-images + 'icons/controls.png') -86px -11px no-repeat;
+					      margin: 0 3px;
+					      &:hover, &.active {
+					        background-position: -86px 0;
+					      }
+					    }
+					    .bx-stop {
+					      display: block;
+					      text-indent: -9999px;
+					      width: 9px;
+					      height: 11px;
+					      outline: 0;
+					      background: url($path-images + 'icons/controls.png') -86px -44px no-repeat;
+					      margin: 0 3px;
+					      &:hover, &.active {
+					        background-position: -86px -33px;
+					      }
+					    }
+					  }
+					  .bx-controls.bx-has-controls-auto.bx-has-pager {
+					    .bx-pager {
+					      text-align: left;
+					      width: 80%;
+					    }
+					    .bx-controls-auto {
+					      right: 0;
+					      width: 35px;
+					    }
+					  }
+					  .bx-caption {
+					    position: absolute;
+					    bottom: 0;
+					    left: 0;
+					    background: #666\9;
+					    background: rgba(80, 80, 80, 0.75);
+					    width: 100%;
+					    span {
+					      color: #fff;
+					      font-family: Arial;
+					      display: block;
+					      font-size: .85em;
+					      padding: 10px;
+					    }
+					  }
+					}
+
+			}
+
+
+		}
+	}
+}
+
+.sfy{
+
+	.carousel-product .bx-pager.bx-default-pager a,.nested-carousel-wrapper .carousel .info__pic .product-carousel__wrapper .bx-pager.bx-default-pager a{
+		@include setSpriteDesktop(10px, 10px, -368px, -956px, transparent);
+		margin: 0 5px;
+		&.active{
+			@include setSpriteDesktop(10px, 10px, -43px, -956px, transparent);
+		}	
+	}
+	.carousel{
+		
+		.js-degree360  , .zoom-icon{
+					display: none;
+				}
+		.bxslider{
+				.cta-button__input {
+					color: #fff;
+				}	
+				.cta-button {
+					.input-arrow {
+						background-position: -124px -43px;
+					}
+				}	
+			.info__desc{
+				margin-right: 20px;
+				.cta--red{
+					width: 50%;
+				}
+			}
+			.zoom-cursor {
+				.image {
+			width: auto;
+			height: auto;
+			float: none;
+			margin: auto;
+			}
+				}
+
+			
+			.sfy_content {
+				margin: 0 auto;
+				width: 900px;
+				p{
+					color: #a0a0a0;
+				}
+				a{
+					//@include setSpriteDesktop(auto, auto,-431px,-153px,transparent);
+					color: #a0a0a0;
+					@include f(13);
+					@include rem('line-height', 18px);
+					@include rem('padding-left',7px);
+				}
+			}
+			li {
+				h2, .carousel-heading {
+					color: #810026;
+					@include f(14);
+					margin: 20px 0;
+					text-align: left;
+					@include proxi-font();
+					font-weight: bold;
+					font-size: 18px;
+					text-align: center;
+				}
+			}
+		}
+		.bx-wrapper{
+			border-bottom:none;
+		.bx-controls{
+			.bx-controls-direction-right{
+				@include rem('right',10px);
+			}
+		}
+	
+		}
+
+	}
+
+	.sfy_check {
+		width: 150px;
+		label{
+				float: left;
+				@include f(12);
+				@include rem('letter-spacing',2px);
+				@include rem('padding-top',3px);
+				@include rem('padding-left',5px);
+				@include rem('margin',0px);
+				color: $primary-25;
+				@include proxi-font();
+				text-transform: uppercase;
+			}
+		.radio {
+			float: left;
+			span{
+				background-position: -266px -432px;
+				height: 18px;
+			}
+			span.checked {
+				background-position: -246px -432px;
+			}
+			
+		}
+		div.platinum{
+			background: #bebebe;
+			float: right;
+			@include rem('height',10px);
+			@include rem('width',10px);
+			@include rem('margin-top',3px);
+		
+			
+		}
+		div.YELLOW{
+			background: #e0b570;
+			float: right;
+			@include rem('height',10px);
+			@include rem('width',10px);
+			@include rem('margin-top',3px);
+		}
+		div.WHITE{
+			background: #e0b570;
+			float: right;
+			@include rem('height',10px);
+			@include rem('width',10px);
+			@include rem('margin-top',8px);
+		}
+		div.PINK{
+			background: #e0b570;
+			float: right;
+			@include rem('height',10px);
+			@include rem('width',10px);
+			@include rem('margin-top',8px);
+		}
+		
+
+	}
+ #tab2 {
+
+ 		.previewSlider {
+ 			width: 32%;
+			border:1px solid $primary-111;
+			float: right;
+			.bxslider {
+
+					li{
+						line-height: 275px;
+						text-align: center;
+					}
+
+					.image {
+						max-width: 100%;
+						max-height: 300px;
+						vertical-align: middle;
+					}
+			}
+			.bx-viewport {
+				height: 280px!important;
+			}
+		}
+
+		 	.previewBlockSection {
+		 		width: 66%;
+		 		border:1px solid $primary-111;
+		 		@include rem('min-height',600px);
+		 	}
+		 	.bx-controls {
+		 		.bx-pager {
+		 			@include rem('padding-bottom',20px);
+		 		}
+		 	}
+
+ }
+
+
+
+		#tab2 .sfyTabTwoCrousel ,#tab3 .sfyTabThreeCrousel  {
+			.bx-viewport {
+			
+			overflow: visible!important;
+		}
+
+		}
+		 #tab3 {
+		 	.bx-viewport {
+		 		height: 350px!important;
+		 	}
+		 	.bx-controls {
+		 		margin-bottom: 20px;
+		 	} 
+		 	
+		 		.bridal-sfy-preview {
+				.bxslider {
+					li {
+					.image {
+			width: auto;
+			height: auto;
+			float: none;
+			margin: auto;
+			}	
+					}
+
+				}
+				
+				}
+		 }
+
+		 #tab1 {
+		 h2 {
+		 	text-align: center;
+		 	color: #a0a0a0;
+		 }
+		 	h2.product-name {
+		 		
+		 		font-size: 14px;
+				line-height: 20px;
+				margin:10px 10px 5px 10px;
+				}
+		 	h2.product-description {
+		 		font-style: italic;
+		 		@include main-font();
+		 		font-size: 13px;
+		 		text-transform: none;
+		 		margin: 0px;
+				font-weight: normal;
+		 		}
+			 	p {
+			 		letter-spacing: 0px;
+			 	}
+		 	.platinum-1 , .goldBlock-1 {
+		 	.bx-controls-direction-left  ,.bx-controls-direction-right {
+		 		display: none;
+		 	}
+		 }
+		 	
+		 }
+}
+
+.nested-gift-for-you{
+.carousel{
+	background-color: $primary-1;
+	.bx-wrapper{
+		border: 1px solid #595959;
+		.bx-controls{
+			.bx-controls-direction-left, .bx-controls-direction-right{
+				a:hover{
+					.slide-nav{
+						font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+						letter-spacing: .1em;
+						text-transform: uppercase;
+						font-size: 14px;
+						background: #3D3F3B;
+						color: #a0a0a0;
+						display: block;
+						padding: 5px;
+						position: absolute;
+						top: 50%;
+						text-indent: 1px;
+						z-index: 10;
+					}
+				}
+			}
+			.bx-controls-direction-left{
+				a{
+					left:30px;
+				}
+			}
+			.bx-controls-direction-right{
+				a{
+					right:30px;
+				}
+			}
+		}
+		.bx-viewport{
+			//background-color:none;
+			.bxslider{
+				li{
+					height: 550px;
+					width: 980px;
+					background:url($path-images+'icons/bg_slide.jpg')no-repeat;
+					.info__pic{
+						.bx-wrapper{
+							.bx-controls{
+								.bx-pager-item{
+									a.active{
+										background: #bbbbbb;
+										border: 1px solid #bbbbbb;
+									}
+									a{
+										background: #fff;
+										border: 1px solid #fff;
+									}
+								}
+							}
+						}
+					}
+					.info__desc{
+						float:right;
+						margin: 100px 165px 0 0;
+						h2,h3{
+							text-align: left;
+							color: white;
+						}
+						p{
+							color:white;
+						}
+					}
+					.col_3-4{
+						width:420px;
+						height:420px;
+						@include rem('margin',70px 0 0 120px);
+					}
+					.info__pic{
+						float:left;
+					}
+					.product-carousel__wrapper{
+						.zoom-trigger-link{
+							right:50%;
+						}
+						.bx-wrapper{
+							border:none;
+							background:none;
+
+							.bxslider{
+								li{
+									width:420px !important;
+									height:420px;
+									background:none;
+									vertical-align: middle;
+									line-height: 420px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+}
+
+.carousel-product{
+.carousel .image{
+	max-height: 410px;
+	max-width: 100%;
+	width: auto;
+
+}
+.carousel .bx-wrapper {
+	border-bottom: none;
+}
+
+.bxslider{
+	li{
+		text-align: center;
+
+		a{
+			line-height: 420px;
+			.image{
+				vertical-align: middle;
+			}
+		}
+	}
+}
+  .bx-pager.bx-default-pager a {
+					text-indent: -9999px;
+				    display: block;
+				    outline: 0;
+					/*@include rem('width', 10px);
+					@include rem('height', 10px);*/
+					@include rem('margin', 0px 2px);
+					@include border-radius(9px); 
+					@include rem('margin', 0px 5px);
+					/*box-shadow: none;
+					background: $primary-56; 
+					border:1px solid $primary-56; */
+					@include setSpriteDesktop(7px, 7px, -12px ,-958px, transparent);
+				  
+				    &.active {
+				  		/*background: $primary-2; 
+				  		border: 1px solid red;*/
+
+				  		@include setSpriteDesktop(7px, 7px, -43px , -958px, transparent);
+				    }
+	}
+	.bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+	bottom: 80px;
+		.bx-pager-item {
+		  display: inline-block;
+		  *zoom: 1;
+		  *display: inline;
+		}
+	}
+
+	.zoom-trigger-link{
+		
+	}
+}
+
+
+
+.nested-exceptional-creation{
+	.carousel{
+		@include rem('height',600px);
+		background:none;
+
+		.zoom-icon{
+			display: block;
+			bottom: -65px;
+			right: 100px;
+			left: inherit;
+		}
+		.info__desc{
+			margin: 100px 0 0 63px;
+			h2,h3{
+				text-align: left;
+				color: white;
+				@include proxi-font;
+			}
+			h2{
+				@include f(23);
+			}
+			
+			h3{
+				@include f(13);
+			}
+			h3{
+				font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+				padding:20px 10px 10px 0;
+			}
+			p{
+				color:white;
+				letter-spacing: 0;
+				@include rem('padding-bottom', 30px);
+			}
+
+			.more-button{
+				letter-spacing: 1.11px;
+				@include f(11);
+				.arrow-show{
+					width: 5px;
+				}
+			}
+		}
+		.bx-wrapper{
+
+			min-height: 490px;
+			height: auto;
+
+			.bx-viewport {
+				min-height: 490px;
+				height: 585px !important;
+			}
+			.bx-controls{
+				.bx-controls-direction-left{
+					a{
+						top:9%;
+					}
+				}
+				.bx-controls-direction-right{
+					a{
+						top:9%;
+					}
+				}
+			}
+		}
+		.info__pic{
+			float: right;
+			.product-carousel__wrapper{
+				.zoom-trigger-link{
+					bottom:-25%;
+				}
+				.bxslider{
+					>li{
+						cursor: url($path-images +'icons/zoom-cursor-plus.png'), pointer;
+					}
+				}
+			}
+		}
+
+		.col_3-4{
+			width:54%;
+			margin-right:60px;
+		}
+	}
+
+	.carousel-product{
+  .bx-pager.bx-default-pager a {
+					text-indent: -9999px;
+					@include rem('margin', 0px 10px);
+					@include setSpriteDesktop(11px, 10px, -6px ,-165px, transparent);
+				&:hover {
+				 @include setSpriteDesktop(10px, 10px, -26px ,-165px, transparent);
+				}
+				&.active {
+					@include setSpriteDesktop(10px, 10px, -46px , -165px, transparent);
+				}
+
+	}
+	.bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+	bottom: 80px;
+		.bx-pager-item {
+		  display: inline-block;
+		  *zoom: 1;
+		  *display: inline;
+		}
+	}
+
+	.zoom-trigger-link{
+		
+	}
+}
+
+}
+
+.nested-exceptional-creation .carousel .info__pic .product-carousel__wrapper .bx-wrapper .bx-pager.bx-default-pager a:hover{
+	/*background: #626262;
+	border: 1px solid #626262;*/
+}
+.nested-exceptional-creation .carousel .info__pic .product-carousel__wrapper .bx-wrapper .bx-pager.bx-default-pager a.active{
+	/*background: #fff;
+	border: 1px solid #fff;*/
+}
+.carousel .bx-wrapper .bx-controls-direction-left a.disabled, .carousel .bx-wrapper .bx-controls-direction-right a.disabled{
+	display: none;
+	cursor: none;
+}
+
+
+
+
+
+
+
+
+
+.bridal-sfy-preview{
+	.carousel{
+		.bx-wrapper{
+			 .bx-pager.bx-default-pager {
+			 	text-align:center;
+			 	.bx-pager-item{
+			 		display: inline-block;
+			 	}
+			 	a {
+				    text-indent: -9999px;
+				    display: block;
+				    outline: 0;
+					@include rem('width', 6px);
+					@include rem('height', 6px);
+					@include rem('margin', 0px 2px); 
+					@include rem('margin', 0px 10px);
+					box-shadow: none;
+					@include setSpriteDesktop(10px, 10px, -388px, -956px, transparent);
+				    &.active {
+				  		@include setSpriteDesktop(10px, 10px, -378px, -956px, transparent);
+				    }
+		  		}
+
+			 }
+		}
+	}
+}
+
+
+.bridal-sfy-help{
+	.bx-wrapper{
+		.bx-controls{
+			.bx-controls-direction-left{
+				& .bx-prev{
+					@include setSpriteDesktop(14px, 27px, -10px, -280px, transparent);
+	    			position: absolute;
+					left: 10px;
+					top: 44%;
+				}
+			}
+			.bx-controls-direction-right{
+				right: -10px;
+				& .bx-next{
+					@include setSpriteDesktop(14px, 27px, -24px, -280px, transparent);
+					position: absolute;
+					left: 22px;
+					top: 44%;
+				}
+			}
+		}
+	}
+	.bxslider{
+		li{
+			@include rem('margin',20px);
+		}
+		.sfy_content{
+			img{
+
+				float:right;
+				@include rem('margin', 0 0 30px 30px);
+			}
+		}
+	}
+}
+
+.maison-landing {
+				text-align: center;
+				.home-carousel .carousel-wrapper .carousel .bx-wrapper .row__1 {
+					top: 22%;
+				}
+				.home-carousel .carousel-wrapper .carousel .bx-wrapper .col__1 {
+					left: 40%;
+				}
+				.home-carousel .carousel-wrapper .carousel .bx-wrapper .carousel__pic-desc a {
+					text-transform: capitalize;
+					font-weight: normal!important;
+					margin-top: 20px;
+				}
+			.comp-rich-text h2 {
+				position: relative;
+			}
+}
+.home-carousel .carousel-wrapper .carousel .bx-wrapper .maison-landing .carousel__pic-desc {
+	p {
+		color: #fff!important;
+		font-size: 13px;
+		text-transform: none;
+		line-height: normal;
+		letter-spacing: normal;
+		word-spacing: 1px;
+		padding: 0 172px;
+	}
+	h2 {
+		padding-bottom: 30px;
+	}
+	a {
+		text-transform: none;
+		font-family: proximanovaNormal, sans-serif;
+		font-weight: normal;
+	}
+}
+.home-carousel .carousel-wrapper,  x:-moz-any-link, x:default  { @include rem('min-height',624px);  }
+
+
+
+.sfy-help-carousel .carousel .bx-wrapper,.bridal-pdp-carousel .carousel .bx-wrapper{
+	border-top: 1px solid #a0a0a0;
+  	margin-top: 10px;
+ 	li{
+ 		.sfy_content{
+ 			h2{
+ 				text-align: center;
+ 			}
+ 		}
+ 	}
+ 	.image{
+		width:auto;
+		max-width: 730px;
+		max-height: 430px;
+	}
+	.sfy-left{
+		.image{
+			float: left;
+			margin-right: 30px;
+		}
+	}
+	.sfy-right{
+		.image{
+			float: right;
+			margin-left: 30px;
+		}
+	}
+	.sfy-center{
+		.image{
+			display: block;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.multiple_video_wrapper .bx-has-controls-direction .bx-default-pager{display: none;}
+
+.carousel-product{
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.bridal-pdp-carousel:before {
+		content: "";
+background: #b3b3b3;
+display: inline-block;
+width: 30%;
+height: 1px;
+margin: 0 35%;
+	}
+.bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content h2{
+color: #b3b3b3;
+text-transform: uppercase;
+font-size: 14px;
+letter-spacing: 1px;
+    margin-top: 5px;
+}
+.sfy-help-carousel .carousel .bx-wrapper li .sfy_content > h2, .bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content > h2 {
+left: 0;
+position: absolute;
+right: 0;
+top: 0;
+text-align: center;
+}
+.bridal-pdp-carousel .carousel .bx-wrapper li .sfy_content > div {
+  margin-top: 30px;
+}
+
+.bridal-pdp-carousel .carousel .bx-wrapper{border:none; padding-bottom:10px;}
+.bridal-pdp-carousel.sfy .carousel .bxslider .sfy_content p{padding-top: 0;font-size: 12px;}
+.bridal-pdp-carousel.sfy .carousel .bxslider .sfy_content a{ font-family:georgia;letter-spacing:normal;}
+.bridal-pdp-carousel.sfy.js-sfy{margin-bottom:20px;}
+.bridal-pdp-carousel .carousel .bx-wrapper .bx-pager, .nested-carousel-wrapper .carousel-product .carousel .bx-wrapper .bx-pager{bottom:0;}
+.bridal-pdp-carousel .carousel .bx-wrapper .image{max-height:400px;}
+.bridal-pdp-carousel .carousel .bx-wrapper .bx-pager.bx-default-pager a{background: #7d7d7d; width:10px;}
+.bridal-pdp-carousel .carousel .bx-wrapper .bx-pager.bx-default-pager a.active{
+    background: #000;
+}
+.bridal-pdp-carousel .carousel .bx-wrapper .bx-pager.bx-default-pager a:hover{
+    background: #626262;
+}
+.bridal-pdp-carousel .carousel .bx-wrapper .bx-viewport{min-height:380px;height: inherit !important;}
+.bridal-pdp-carousel .carousel .bx-wrapper .bx-pager .bx-pager-item{padding:0 5px;}

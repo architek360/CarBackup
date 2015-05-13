@@ -1,0 +1,30 @@
+{
+    "success": "true",
+    "serverMessage": "stores found",
+    "content": {
+        "AR": {
+            "continent": "Europe",
+            "boutiques": [{
+                "name": "Europtica",
+                "id": "BTQ12144",
+                "email": " "
+            }]
+        },
+        "GB": {
+            "continent": "Europe",
+            "boutiques": [{
+                "BTQ10000": "John Lewis",
+                "email": " "
+            }, {
+                "BTQ10003": "Le Parfum",
+                "email": " "
+            }, {
+                "BTQ10012": "House of Fraser",
+                "email": " "
+            }, {
+                "BTQ10300": "Royal Perfumery",
+                "email": " "
+            }]
+        }
+    }
+}

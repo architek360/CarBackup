@@ -1,0 +1,18 @@
+ <!--Billing FORM Block Starts Here-->
+<div class="billing-form grid js-form-validator js-billing js-data-formdisplay" data-formdisplay="false">
+
+    <div class="grid__item three-quarters">
+        <div class="billing-address-form">
+
+  <form>
+     <!--#include virtual="../../components/billing_form/desktop.shtml" -->
+
+  </form>
+</div>
+</div>
+<div class="grid__item one-quarter shopping-bag-rt-col"> 
+    <div class="price-details-bg"><!--#include virtual="../../views/price_details/desktop.shtml" -->    </div>
+    <!--#include virtual="../../views/return-exchange/desktop.shtml" --> 
+</div>
+</div>
+ <!-- Billing FORM Block Ends Here-->

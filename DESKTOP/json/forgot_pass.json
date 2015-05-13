@@ -1,0 +1,7 @@
+{
+    "success" : true,   
+    "serverMessage" : "Some Server Message", 
+    "content" : {
+    	"wasEmailSent" : true
+    }
+}

@@ -1,0 +1,193 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+ 
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "../_theme_vars"; 
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    MY ADDRESS FORM
+\*------------------------------------*/
+/*  uk form css start here */
+/* line 233, ../../../../../../sass/main_theme/temp.scss */
+
+.js-address-form-uk {
+  .select-wrapper {
+    &.addressform_country {
+      display: inline-block;
+      margin: 10px auto;
+      width: 313px;
+      color: white;
+      text-align: center;
+      float: left;
+      height: 60px;
+      .selector {
+        width: 201px !important;
+        span {
+          width: 201px !important;
+        }
+      }
+    }
+    height: 50px;
+  }
+  .addressLabel {
+    width: 49%;
+    clear: both;
+    .form-input {
+      width: 96%;
+    }
+  }
+  .addressform_phone {
+    margin-left: 0;
+    clear: left;
+    ~ .addressform_phone {
+      margin-left: 0;
+      clear: none;
+    }
+  }
+  .addressform_zip, .addressform_address7 {
+    clear: both;
+  }
+  .addressform_zip {
+    clear: left;
+  }
+  .addressform_address2 {
+    margin-right: 0;
+    width: 49%;
+    display: block;
+    clear: left;
+  }
+  .addressform_address9 {
+    width: 49%;
+    margin-left: 0.8rem;
+  }
+  .findaddress, .reset {
+    float: left;
+    left: 20px;
+    left: 2rem;
+    position: relative;
+    text-decoration: underline;
+    top: 39px;
+    font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+    font-size: 13px;
+    font-size: 1.3rem;
+    color: #a0a0a0;
+    font-style: italic;
+  }
+  .findaddress:hover {
+    text-decoration: none;
+  }
+  .reset {
+    &:hover {
+      text-decoration: none;
+    }
+    left: 35px;
+    left: 3.5rem;
+  }
+  .group-wrapper {
+    margin: 2.5rem 0rem 1rem 0;
+    > label {
+      display: block;
+      width: 100%;
+      font-family: proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 10px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      letter-spacing: 0.1rem;
+      margin-bottom: 5px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      text-align: left;
+    }
+    .radio-wrapper {
+      margin: 0.5rem 1rem 1rem 0;
+    }
+  }
+  .select-wrapper {
+    &.addressform_address5, &.addressform_address2 {
+      width: 208px;
+    }
+    &.addressform_address5 .selector, &.addressform_address2 .selector, &.addressform_address5 .selector span {
+      width: 200px !important;
+    }
+    &.addressform_address2 {
+      .selector span {
+        width: 200px !important;
+      }
+      margin-left: 0.8rem;
+      clear: none;
+    }
+    &.addressform_address4 {
+      width: 427px;
+      .selector {
+        width: 416px !important;
+        span {
+          width: 416px !important;
+        }
+      }
+    }
+  }
+  .addressform_address2 ~ .addressform_address2 {
+    margin-right: 0;
+    width: 49%;
+    display: block;
+    clear: left;
+  }
+  .addressform_address7 {
+    clear: left;
+    ~ .addressform_address7 {
+      clear: none;
+    }
+  }
+  .addressform_phone ~ .addressform_phone {
+    clear: none;
+  }
+  .addressform_address9 ~ .addressform_address9 {
+    margin-left: 0;
+    clear: left;
+  }
+  div.errormessage {
+    color: #8F141A !important;
+    display: block;
+    font-family: Georgia,sans-serif !important;
+    font-size: 12px !important;
+    font-style: italic !important;
+    letter-spacing: 0 !important;
+    padding-top: 0.5rem;
+    text-align: left;
+    text-transform: none !important;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}

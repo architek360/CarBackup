@@ -1,0 +1,39 @@
+<!-- Login Box Starts Here-->
+<div class="repair-service ">
+	<div class="title">	
+		<h3 class="heading2">MY REPAIR SERVICE</h2>
+	</div>
+	<div class="notification  js-form-validator">
+	    
+		    <p class="notification__desc">To follow your repair service progress online, please enter your Repair Service Notification Number:</p>
+
+			<form name="notification-number" class="notification-number" >
+				<!--#set var="input-name" value="savNumber" -->
+			    <!--#set var="label-name" value="notification number" -->
+			    <!--#include virtual="../../components/form_elements/label.shtml" -->
+			    <div class="one-whole ">
+			    	<div class="from_row ">
+			    <!--#set var="input-type" value="text" -->
+			    <!--#set var="input-name" value="savNumber" -->
+			    <!--#set var="input-prop" value="form-input" -->
+			    <!--#include virtual="../../components/form_elements/input.shtml" -->
+				</div>
+
+			    <!--#set var="links-to" --" value="#" -->
+			    <!--#set var="img-src" value="../etc/designs/dmp/clientlibs_base/images/icons/tooltip_icon.gif" -->
+			    <!--#include virtual="../../components/tool_tip/html.shtml" -->
+				</div>
+				<!--#set var="cta--varaint" value="cta--red" -->
+			    <!--#set var="text-detail" value="validate" -->
+			    <!--#include virtual="../../components/form_elements/button.shtml" -->
+			</form>  
+	</div>
+	
+	<div class="side-image">
+		<!--#set var="link-to" value="#" -->
+		<!--#set var="class-name" value="image-link" -->
+		<!--#set var="img-src" value="../etc/designs/dmp/clientlibs_base/images/icons/3.jpg" -->
+		<!--#include virtual="../../components/nav_icon/top_nav_icon.shtml" -->
+	</div>  
+		   
+</div> 

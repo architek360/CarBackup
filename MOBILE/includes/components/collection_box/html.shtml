@@ -1,0 +1,19 @@
+<!--Html for collection list -->
+			
+		<div class="product-push">
+			<a href="#" class="tappable"> </a>
+			<a href="<!--#echo var="links-to" -->" class="<!--#echo var="class-name" -->">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" --><!--#echo var="img-src" -->"/>
+			</a>
+			<div class="product-push__desc ">
+					<h3 class="heading3"><!--#echo var="product-title" --></h3>
+		            <a href="#" class="more-button">
+		            	<span class="arrow-show"></span>
+		            	<span class="js-count">8 </span>
+		            	<span class="js-model">models</span>
+		            </a>
+			</div>
+		
+		</div>
+
+<!--Html for collection list-->

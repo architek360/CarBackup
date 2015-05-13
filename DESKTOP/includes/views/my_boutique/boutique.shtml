@@ -1,0 +1,38 @@
+    <div class="row listGradient js-fav-boutique">
+        <a class="close cross-button" title ="remove" href="#"></a>
+        <div class="boutique__image">
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->default-image-boutique.jpg" width = "383"  alt="store locator">
+        </div>
+        <div class="boutique-detail">
+            <div class="boutique-detail-inner-wrapper">
+                <div class="boutique__title">
+                    <h1>cartier boutique</h1>
+                    <h2>boca raton</h2>
+                </div>
+                <div class="boutique__details">
+                    <div class="boutique_details__add boutique__detail">
+                        653 Fifth Avenue - New York, 10022
+                        <br/>
+                        NEW YORK - NY
+                        <br/>
+                        United States
+                    </div>
+                    <div class="boutique_details__con boutique__detail">
+                        <div>Tel.: 00(1) 212 446-3400</div>
+                        <div> Fax: 00(1) 212 446-3400 </div>
+                    </div>
+                    <div class="boutique_details__link border-bottom boutique__detail">
+                        <!--#set var= "arrow-class"  value= "arrow-show" -->
+                        <!--#set var="more-text" value="Send an e-mail" -->
+                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </div>
+                    <div class="boutique_details__links boutique__detail">
+                        <!--#set var= "arrow-class"  value= "arrow-show" -->
+                        <!--#set var="more-text" value="Boutique details" -->
+                        <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#include virtual="../../components/social_share/html.shtml" -->
+    </div>

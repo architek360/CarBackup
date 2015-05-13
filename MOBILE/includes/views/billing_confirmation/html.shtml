@@ -1,0 +1,41 @@
+<!-- Billing Confirmation Block Starts Here-->
+<div class="billing-confirmation grid js-billing">
+  <h1 class="heading2">confirm your billing address</h1>
+    <p class="billing-confirmation__desc">Our address verification system finds some matches with your information. Please confirm that it is yours.</p>
+    <div class="billing-confirmation__address grid__item one-whole palm--one-whole">
+    	<b>
+    		<span class="js-conf-name">JEAN DUPONT</span>
+    	</b>
+        <span class="js-conf-address">250 Fifth Avenue</span>
+    	<span class="js-conf-addinfo"></span>
+    	<span class="js-conf-city">New York</span>
+    	<span class="js-conf-state">NY</span>
+    	<span class="js-conf-zip">10179-0001</span>
+    	<span class="js-conf-phonenum">01111111</span>
+            <div class="edit-footer__edit">
+                <div class="edit-address addnew-address js-addnew-address">
+                        <span> Add new</span> 
+                        
+                </div>         
+                <div class="edit-address js-edit-address">
+                        <span> Edit</span> 
+                        <a class="edit-icon"> </a>
+                </div>
+            </div> 
+    </div>
+    
+    <!--#if expr="${form_type}=billing-address" -->   
+    <div class="grid__item confirmation checkboxconf js-billing-invoice-checkbox">
+        <!--#set var="checkbox-value" value="value" -->
+        <!--#set var="checkbox-label-name" value="I do not want to receive an invoice to the billing address." -->
+        <!--#set var="checkbox-name" value="fn_chkinvoice" -->
+        <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+    </div>
+    <!--#endif --> 
+
+    <!--#set var="text-detail" value="continue to next step" -->
+    <!--#set var="cta--varaint" value="cta--red js-confirm-shipping" -->
+    <!--#include virtual="../../components/form_elements/button.shtml" -->
+
+</div>
+ <!-- Billing Confirmation Block Ends Here-->

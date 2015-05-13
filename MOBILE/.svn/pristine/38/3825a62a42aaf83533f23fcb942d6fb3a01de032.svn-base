@@ -1,0 +1,135 @@
+
+<!-- tab_shipping_address Block Starts Here-->
+<div class="tab_shipping_address" data-addr-available="false">
+	<div class="js-shipping-section-one">
+	<p class="tab_shipping_address__desc top-margin full-width">
+	Cartier recognizes the importance of 
+	protectingyour information. Privacy notice
+	Please note that Cartier does not ship 
+	orders to P.O Boxes
+	</p>
+
+	<!--#include virtual="../../views/billing_form_japan/html.shtml" -->
+	</div>
+	<div class="js-shipping-section-two" style="display:none;">
+		<p class="tab_billing_address__desc top-margin full-width">	
+		Please note that Cartier does not ship 
+		orders to P.O Boxes.
+		</p>
+
+		<form>
+
+			<!--#set var="style-name" value="shipping-addr-selector" -->
+            <!--#set var="option-component" value="shipping_addr_option" -->
+			<!--#include virtual="../../components/form_elements/select.shtml" -->
+			
+			<div class="edit-footer" data-addr-id="default">
+				<div class="edit-footer__address">
+					
+					<span class="address">
+					<span>jean dupont</span>
+					250 fifth Avenue<br>
+					New york <br>
+					NY<br>
+					10170-0001<br>
+					011111111
+					</span>
+				</div>
+				<div class="edit-footer__edit">
+					
+					<div class="edit-address">
+						<span> Edit</span>
+						<a class="edit-icon"> </a>
+					</div>
+					<div class="add-address">
+						<span> Add New</span>
+						<a class="edit-icon"> </a>
+					</div>
+				</div>
+			</div>
+			<div class="edit-footer" data-addr-id="1">
+				<div class="edit-footer__address">
+					
+					<span class="address">
+					<span>Rohan1</span>
+					250 fifth Avenue<br>
+					New york <br>
+					NY<br>
+					10170-0001<br>
+					011111111
+					</span>
+				</div>
+				<div class="edit-footer__edit">
+					
+					<div class="edit-address">
+						<span> Edit</span>
+						<a class="edit-icon"> </a>
+					</div>
+					<div class="add-address">
+						<span> Add New</span>
+						<a class="edit-icon"> </a>
+					</div>
+
+				</div>
+			</div>
+			<div class="edit-footer" data-addr-id="2">
+				<div class="edit-footer__address">
+					
+					<span class="address">
+					<span>Rohan2</span>
+					321 fifth Avenue<br>
+					New york <br>
+					NY<br>
+					10170-0001<br>
+					011111111
+					</span>
+				</div>
+				<div class="edit-footer__edit" >
+					
+					<div class="edit-address">
+						<span> Edit</span>
+						<a class="edit-icon"> </a>
+					</div>
+					<div class="add-address">
+						<span> Add New</span>
+						<a class="edit-icon"> </a>
+					</div>
+				</div>
+			</div>
+			<div class="edit-footer" data-addr-id="3">
+				<div class="edit-footer__address">
+					
+					<span class="address">
+					<span>Rohan 3</span>
+					123 fifth Avenue<br>
+					New york <br>
+					NY<br>
+					10170-0001<br>
+					011111111
+					</span>
+				</div>
+				<div class="edit-footer__edit">
+					
+					<div class="edit-address">
+						<span> Edit</span>
+						<a class="edit-icon"> </a>
+					</div>
+					<div class="add-address">
+						<span> Add New</span>
+						<a class="edit-icon"> </a>
+					</div>
+					<!-- <div style="float:left;">aaa</div>
+					<div style="float:right;">aaa</div> -->
+				</div>
+			</div>
+			<!--#include virtual="../../components/delivery_date/html.shtml" -->
+
+			<div class="next-step-cta clearfix">
+				<!--#set var="text-detail" value="continue to next step" -->
+		    	<!--#set var="cta--varaint" value="cta--red js-shipping-final" -->
+		    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+			</div>
+		</form>
+	</div>
+</div>
+ <!-- tab_shipping_address Block Ends Here-->

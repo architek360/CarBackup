@@ -1,0 +1,1550 @@
+ /*------------------------------------------*\
+//     Form Elements- Mobile CSS
+  
+// \*------------------------------------------*/
+
+
+.cta{
+	display:block; 
+	margin:0 auto;
+	cursor:pointer;
+	@include f(20);
+	@include bold-font;
+	@include font-color($primary-49);
+	text-decoration:none;
+	text-transform:uppercase;
+	border:none; 
+}
+
+.cta--red{
+	background:$primary-52 !important;
+	@include rem('padding', 15px 0);
+	width:80%; 
+}
+
+a.cta--red{
+	display:block;
+	margin:0 auto;
+}
+
+.cta--red-width-auto{
+	background:$primary-52;
+	@include rem('padding', 15px 50px 15px 30px);
+	display:inline-block;
+}
+.cta--red-width-auto-pad-20{
+	background:$primary-52;
+	@include rem('padding', 15px 50px 15px 30px);
+	display:inline-block;
+}
+.cta--red-width-30{
+	background:$primary-52;
+	@include rem('padding', 15px 0);
+	width:80%;
+}
+.cta--grey{
+	background:$primary-13;
+	@include rem('padding', 15px 0);
+	width:80%;
+}
+.cta--grey-pad-30{
+	background:$primary-13;
+	@include rem('padding', 15px 0);
+	width:80%;
+	text-align:center;
+}
+.cta--red-pad-30{
+	background:$primary-52;
+	@include rem('padding', 15px 0);
+	width:80%;
+	text-align:center;
+}
+
+.arrow-icon{
+	@include setSprite(19px, 16px, -604px, -21px);
+	text-transform: uppercase;  
+}
+.cta--grey-cancel{
+	background:$primary-13;
+	padding: 15px 50px 15px 30px;
+}
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+
+.form-select{
+   background: transparent;
+   @include rem('padding', 5px);
+   @include rem('font-size', 24px);
+   outline:none;
+   border: 0;
+   width:100%;
+   color:$primary-3;
+   @include rem('height', 56px);
+	clear: both;
+	overflow: hidden; 
+	@include brand-font;
+	background:$primary-42 url($path-images + 'icons/select_arrow.png') no-repeat right 0 ;	 
+	border: 1px solid $primary-12;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	font-style:italic;
+	option{
+   		background:$primary-1;
+   		@include rem('font-size', 22px);
+   		@include rem('padding', 3px 5px);
+   		color:$primary-3;
+	   }
+}
+
+.select-1{
+	width:100%;
+	text-indent: 5px;
+	@include rem('padding-right', 75px);
+}
+
+.select-2{
+	max-width:240px;
+	/*background:$primary-1 url($path-images + 'icons/select_arrow.png') no-repeat right 0 ;*/
+	color:$primary-3;
+	border: 1px solid $primary-2; 
+}
+
+.select-3{
+	width:45%;
+}
+.select-4{
+	width:25%;
+}
+
+/*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+
+.form-input{
+	width:100%;
+	clear:both;
+	background:$primary-45;
+	@include rem('padding', 14px);
+    @include rem('font-size', 26px);
+	border:1px solid $primary-12;
+	@include font-color($primary-3);
+	@include main-font;
+    @include f(24);
+	font-style:italic;
+	display:block;
+	@include box-sizing(border-box);
+
+}
+.j_password, .registration_j_password, .fn_passcon , .piform_password , .piform_new_password{
+	#no-border{
+		border: none ;
+		background: none;
+		margin: 0;
+		padding: 0;
+		.js-show-password{
+		
+		  font-size: 2rem;
+		  margin: -5.5rem 0.3rem -1.2rem 0px;
+		  padding: 1.5rem;
+		  padding-left: 3rem;
+		  padding-right: 2.3rem;
+		  /*width: 6rem;*/
+		  background: $primary-48 url($path-images + 'icons/white_arrow.png') no-repeat 14px 18px;
+		  border: none;
+		  color: white;
+		  font-family: "CartierBold", sans-serif;
+		  cursor: pointer;
+		  float: right;
+		  overflow: visible;
+		  position: relative;
+		  text-transform: uppercase;
+		  font-style: normal;
+		}
+	}
+
+	
+}
+
+.form-input1{
+	width:310px;
+	clear:both;
+	background:$primary-1;
+	@include rem('padding', 14px);
+    @include rem('font-size', 26px);
+	border:1px solid $primary-2;
+	@include font-color($primary-3);
+	@include main-font;
+    @include f(24);
+	display:block;
+
+}
+
+
+/*------------------------------------*\
+    $TEAXTAREA ELEMENTS
+\*------------------------------------*/
+
+.form-textarea{
+	@include rem('height', 176px);
+	width:100%;
+	clear:both;
+	background:$primary-45;
+	@include rem('padding', 18px);
+    @include rem('font-size', 26px);
+	border:1px solid $primary-12;
+	@include font-color($primary-3);
+	@include main-font;
+    @include f(24);
+	font-style:italic;
+	display:block;
+	width:100%;
+	@include box-sizing(border-box);
+
+}
+
+
+/*------------------------------------*\
+    $RADIO BUTTON ELEMENTS
+\*------------------------------------*/
+//.radio-title{border:1px solid red;}
+.radio-input[type=radio] {  
+    display: inline-block;
+    opacity: 0;
+    position: absolute;  
+}
+
+.radio-title:after {  
+    content: "";  
+    display: inline-block;  
+    width: 17px;  
+    height:17px;
+    @include rem(line-height, 20px);        
+    background-color: $primary-45; 
+    @include rem(margin, 0 0 0 18px);
+    padding:2px;
+    @include border-radius(11px); 
+	border: 1px solid $primary-35;
+	vertical-align:bottom;
+}  
+ 
+.radio-input[type=radio]:checked + .radio-title:after {  
+    content: "\2022";  
+    color: $primary-47 ;  
+    @include f(28);
+    text-align: center;        
+} 
+
+.radio-input {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;    
+    @include f(22);
+    vertical-align: middle;
+	text-transform:uppercase;
+	@include brand-font;
+}
+.radio-btn label{
+	display:block;
+}    
+
+/*------------------------------------*\
+    $CHECKBOX ELEMENTS
+\*------------------------------------*/
+
+.form-check{
+	float:left;
+	width:50%;
+	@include f(22);
+	@include rem(margin, 12px 0 12px 0px);
+	text-indent: 0px;
+
+	.form-check__icon{
+		position:relative;
+		left:6px;
+	    width: 22px;
+	    @include rem(height, 20px); 
+	    display:inline-block;
+	    z-index:10;
+	    vertical-align:top;
+	}
+
+	input[type=checkbox] {  
+       	opacity:0;
+       	height:1px;
+       	width:1px;
+       	display:inline-block;
+		filter:alpha(opacity=0); /* For IE8 and earlier */
+		position: absolute;
+    }
+
+	input 
+	{
+		&:checked + span.form-check__icon
+		{
+			@include setSprite(22px, 20px, -746px, -46px);
+			vertical-align: top;
+
+		}
+	}
+
+	.form-check__wrapper {	
+		position:relative;
+		left:-20px;
+	    width: 20px;
+	    @include rem(height, 20px); 
+	    display: inline-block;
+	   	    background-color: $primary-34;
+	    border:solid 1px $primary-12;
+	    vertical-align:top;
+	}
+	.form-check-label{
+		display:inline-block;
+		width:83%;
+	} 
+}
+
+.form-check-2{
+	display:block;
+	@include f(22);
+	@include brand-font;
+	text-transform:uppercase;
+	line-height:31px;
+	vertical-align:middle;
+
+	.form-check__icon{
+		position:relative;
+		left:6px;
+	    width: 32px;
+	    @include rem(height, 32px); 
+	    display:inline-block;
+	    z-index:10;
+	    vertical-align:top;
+	    background-color: $primary-34;
+	    border:solid 1px $primary-12;
+	    float:right;
+	}
+
+	input[type=checkbox] {  
+        display: none;  
+    }
+
+	input 
+	{
+		&:checked + span.form-check__icon
+		{
+			@include setSprite(32px, 32px, -457px, -83px);
+			background-color: $primary-34;
+			border:solid 1px $primary-12;
+		}
+	    /*  &[disabled=""] + span.form-check__icon
+		{	
+			@include setSprite(32px, 32px, -633px, -135px);
+			background-color: transparent;
+			border:solid 1px transparent;
+		}
+		&[disabled="disabled"] + span.form-check__icon
+		{	
+			@include setSprite(32px, 32px, -735px, -14px);
+			@include rotate(45deg);
+			background-color: transparent;
+			border:solid 1px transparent;
+		}*/
+	}
+
+}
+
+
+
+/*------------------------------------*\
+    $MORE BUTTON ELEMENTS
+\*------------------------------------*/
+
+.more-button{
+	@include main-font;
+	@include f(20);
+	display:block;
+	width:100%;
+	@include rem('padding', 50px 0 0 0);
+	text-transform:capitalize;
+}
+
+.arrow-show{
+	@include setSprite(14px, 15px, -577px, -20px);
+	position: relative;
+	@include rem('top', -2px);
+	@include rem('margin-right', 8px);
+}
+.arrow-hide{
+	@include setSprite(15px, 15px, -633px, -20px);
+	position: relative;
+	@include rem('top', 2px);
+	@include rem('margin-right', 8px);
+}
+
+
+/*------------------------------------*\
+    $LABEL  ELEMENTS
+\*------------------------------------*/
+
+.form-label{
+	@include rem('padding', 0 0 5px 0);
+	display:inline-block;
+	@include bold-font;
+}
+
+
+/*------------------------------------*\
+    SWITCH
+\*------------------------------------*/
+
+.slide_switch
+{
+	clear: both;
+	@include rem('margin', 0 50px );
+
+
+	label {
+		width: auto;
+		font-family: inherit;		
+	}
+	
+	input { position: absolute; opacity: 0 }
+
+	input + label::after {
+	    content: ".";
+
+	    @include rem('border-radius', 600px );
+	    @include rem('margin-left', 12px );
+	    /* “ DATE 04-11-2014 |  DEFECT- CARE-5485 | BRANCH 2.0.0”  
+    		START width updated
+        */
+	    @include rem('width', 100px );
+	    /*END*/
+	    @include rem('padding', 10px 0px);
+	    display: inline-block;
+	    @include rem('text-indent', -9999px);
+		border:1px solid $primary-12;
+		background: ($primary-30);
+	}
+
+	input + label + input + label::after {
+	  width: 0;
+	  border-width: 0
+	}
+
+	input + label + input + label {
+	    padding-right: 0;
+	    @include rem('padding-left', 112px);
+	    @include rem('padding-top', 0px);
+	    @include rem('padding-bottom', 10px);
+	    @include rem('margin-left', -112px);
+	    /* “ DATE 04-11-2014 |  DEFECT- CARE-5485 | BRANCH 2.0.0”  
+    		START margin added
+        */
+    
+	    @include rem('margin-right', -20px);
+
+	    /*END */
+	    
+	 	background: -webkit-radial-gradient(circle, black 25%, transparent 20%, white 30%, white 61%, transparent 66%, transparent 100%);
+	    background: -moz-radial-gradient(circle, black 25%, transparent 20%, white 30%, white 61%, transparent 66%, transparent 100%);
+	    
+
+	    background-position: 0px 0px;
+	    background-size: 40px 85%;
+	    background-repeat: no-repeat;
+
+	}
+
+	input + label:checked{
+	  color: red;
+	}
+
+	input + label + input:checked + label {	 	
+		@include rem('padding-left', 50px);
+		@include rem('margin-left', -50px);
+		/* “ DATE 04-11-2014 |  DEFECT- CARE-5485 | BRANCH 2.0.0”  
+    		START margin added
+        */
+		@include rem('margin-right', -20px);
+		 /*END */
+	}
+
+	input + label + input + label {
+	    -webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+
+}
+
+
+/*------------------------------------*\
+    END
+\*------------------------------------*/
+
+
+.cta-button {
+    margin: 20px auto;
+    cursor: pointer;  
+    vertical-align: middle;   
+    border: 0px none;   
+    text-align: center;
+
+	.input-arrow {
+	    display:inline;
+	    @include setSprite(17px, 16px, -663px, -214px);
+		position: relative;
+		@include rem('top', -4px);
+		@include rem('margin-right', 5px);
+	}
+	.cta-button__input {
+	    display:inline;
+	    border:none;
+	    background:none;
+	    @include f(20);
+		@include bold-font;
+	    color: white;
+	    text-decoration: none;
+			text-transform: uppercase; 
+			padding: 0px;
+	    
+	} 
+}
+.device-s3 .select-1{
+	text-indent: 12px;
+	height:60px;
+}
+.device-s4 .select-1{
+	text-indent: 12px;
+	height:60px;
+}
+
+
+
+.js-login-form,.js-reg-step-1, .js-light-account-form{
+
+	 width:81.25%;
+	 margin:0 auto;
+	
+}
+.js-login-form{
+	a {
+		margin-top:26px;
+	}
+	.img img {
+		margin-bottom: -17px;
+		margin-left: 27px;
+	}
+	.form-element.captcha-form-element label{
+		display:block;
+	}
+	.form-input.captcha__input {
+	width: 47%;
+	display: inline;
+	}
+
+} 
+
+#js-forgotpassword i {
+	font-family: Georgia, sans-serif;
+	color: #7f7f7f;
+	font-style: italic;
+}
+
+#js-forgotpassword a {
+	font-family: "CartierBold", sans-serif !important; /*overriding form builder's styling*/
+	margin-left: -27px;
+}
+
+#js-contact-ambassador-form,.js-contact-ambassador-form{
+	.group-wrapper{
+		margin-top: 28px;
+		.form-element{
+			width:100%;
+		}
+	}
+}
+
+/*------------------------------------*\
+    form builder CSS for multiple forms
+\*------------------------------------*/
+.js-light-account-form,.js-pre-registration,.js-login-form,.js-reg-step-1,.js-reg-step-2,.js-reg-step-3, .js-personal-info-form, .js-address-form-jp, .js-address-form, .js-forgotpassword, #js-contact-ambassador-form,.js-contact-ambassador-form, #js-request-info-form, #js-request-price-form, .send_email, .js-subscription-and-interest-form, .js-jp-reg-step-3{
+	.creation-link{
+		color:$primary-2;
+	}
+	.textarea-wrapper{
+		display: inline-block;
+		width: 100%;
+
+		label{
+			  text-transform: uppercase;
+			  text-align: left;
+			  color: $primary-2;
+			  @include rem('padding',45px 0 5px 0);
+			  display: inline-block;
+			  @include bold-font();
+			  @include f(20);
+		}
+
+		label.error{
+			text-transform: uppercase;
+			padding-top: 3px;
+		}
+
+		.form-textarea{
+			background: $primary-127;
+			border: 1px solid $primary-126;
+		}
+	}
+
+	.cta{
+		display:block; 
+		margin:0 auto;
+		cursor:pointer;
+		@include f(20);
+		@include bold-font;
+		@include font-color($primary-49);
+		text-decoration:none;
+		text-transform:uppercase;
+		border:none; 
+	}
+
+	.cta--red{
+		background:$primary-52 !important;
+		@include rem('padding', 15px 0);
+		width:80%; 
+	}
+
+	.cta--red-width-auto{
+		background:$primary-52;
+		@include rem('padding', 15px 50px 15px 30px);
+		display:inline-block;
+	}
+
+	.cta--red-width-auto-pad-20{
+		background:$primary-52;
+		@include rem('padding', 15px 50px 15px 30px);
+		display:inline-block;
+	}
+
+	.cta--red-width-30{
+		background:$primary-52;
+		@include rem('padding', 15px 0);
+		width:80%;
+	}
+
+	.cta--grey{
+		background:$primary-13;
+		@include rem('padding', 15px 0);
+		width:80%;
+	}
+
+	.cta--grey-pad-30{
+		background:$primary-13;
+		@include rem('padding', 15px 0);
+		width:80%;
+		text-align:center;
+	}
+	.cta--red-pad-30{
+		background:$primary-52;
+		@include rem('padding', 15px 0);
+		width:80%;
+		text-align:center;
+	}
+
+	.arrow-icon{
+		@include setSprite(19px, 13px, -604px, -21px);
+		text-transform: uppercase;  
+	}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+
+.form-select{
+   background: transparent;
+   @include rem('padding', 5px);
+   @include rem('font-size', 24px);
+   outline:none;
+   border: 0;
+   width:100%;
+   color:$primary-3;
+   @include rem('height', 56px);
+	clear: both;
+	overflow: hidden; 
+	@include brand-font;
+	background:$primary-42 url($path-images + 'icons/select_arrow.png') no-repeat right 0 ;	 
+	border: 1px solid $primary-12;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	font-style:italic;
+	option{
+   		background:$primary-1;
+   		@include rem('font-size', 22px);
+   		@include rem('padding', 3px 5px);
+   		color:$primary-3;
+	   }
+}
+
+.select-1 {
+  width: 100%;
+}
+
+.select-2 {
+  max-width: 240px;
+  color: $primary-3;
+  border: 1px solid $primary-2;
+}
+
+.select-3 {
+  width: 45%;
+}
+
+.select-4 {
+  width: 25%;
+}
+
+/*------------------------------------*\
+    $INPUT ELEMENTS
+\*------------------------------------*/
+
+
+.form-input {
+  width: 100%;
+  clear: both;
+  background: $primary-127;
+  @include rem('padding', 14px);
+  @include f(24);
+  border: 1px solid $primary-126;
+  color: $primary-3;
+  @include main-font();
+  font-style: italic;
+  display: block;
+  @include box-sizing(border-box);
+}
+
+.form-input1 {
+  width: 310px;
+  clear: both;
+  background: black;
+  @include rem('padding', 14px);
+  @include f(24);
+  border: 1px solid white;
+  color: $primary-3;
+  @include main-font();
+  display: block;
+}
+
+/*------------------------------------*\
+    $TEAXTAREA ELEMENTS
+\*------------------------------------*/
+
+.form-textarea {
+  height: 176px;
+  width: 100%;
+  clear: both;
+  background: $primary-16;
+  @include rem('padding', 18px);
+  @include f(24);
+  border: 1px solid $primary-12 ;
+  color: $primary-3;
+  @include main-font();
+  font-style: italic;
+  display: block;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+
+/*------------------------------------*\
+    $RADIO BUTTON ELEMENTS
+\*------------------------------------*/
+
+.radio-input[type=radio] {
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-btn label {
+  display: block;
+}
+.radio-btn li {
+  position: relative;
+  margin-right: 0;
+}
+/*------------------------------------*\
+    $CHECKBOX ELEMENTS
+\*------------------------------------*/
+
+.form-check {
+  float: left;
+  width: 50%;
+  @include f(22);
+  @include rem('margin', 12px 0 12px 0px);
+  text-indent: 0px;
+
+  .form-check__icon {
+	  position: relative;
+	  left: 6px;
+	  width: 22px;
+	  height: 20px;
+	  display: inline-block;
+	  z-index: 10;
+	  vertical-align: top;
+	}
+}
+ 
+.form-check input[type=checkbox] {
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+  display: inline-block;
+  filter: alpha(opacity=0);
+  /* For IE8 and earlier */
+  position: absolute;
+}
+
+.form-check input:checked + span.form-check__icon {
+  background: url($path-images + 'icons/sprite.png') -746px -46px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  height: 20px;
+  vertical-align: top;
+}
+
+.form-check .form-check__wrapper {
+  position: relative;
+  left: -20px;
+  height: 20px;
+  display: inline-block;
+  background-color: $primary-34 ;
+  border: solid 1px $primary-12;
+  vertical-align: top;
+}
+
+.form-check .form-check-label {
+  display: inline-block;
+  width: 83%;
+}
+
+
+.form-check-2 input[type=checkbox] {
+  display: none;
+}
+
+
+.form-check-2 input:checked + span.form-check__icon {
+  background: url($path-images + 'icons/sprite.png') -457px -83px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  background-color: $primary-34 ;
+  border: solid 1px $primary-12 ;
+}
+
+/*------------------------------------*\
+    $MORE BUTTON ELEMENTS
+\*------------------------------------*/
+
+.more-button {
+  @include main-font();
+  @include f(20);
+  display: block;
+  width: 100%;
+  @include rem('padding', 50px 0 0 0);
+  text-transform: capitalize;
+}
+
+.arrow-show{
+	@include setSprite(14px, 15px, -577px, -20px);
+	position: relative;
+	@include rem('top', -2px);
+	@include rem('margin-right', 8px);
+}
+.arrow-hide{
+	@include setSprite(15px, 15px, -633px, -20px);
+	position: relative;
+	@include rem('top', 2px);
+	@include rem('margin-right', 8px);
+}
+
+/*------------------------------------*\
+    $LABEL  ELEMENTS
+\*------------------------------------*/
+
+.form-label{
+	@include rem('padding', 0 0 5px 0);
+	display:inline-block;
+	@include bold-font;
+}
+
+
+/*------------------------------------*\
+    $INPUT PLATFORM ELEMENTS
+\*------------------------------------*/
+
+.input-wrapper {
+  min-height: 120px;
+  float: left;
+  width: 100%;
+   label {
+	  text-transform: uppercase;
+	  text-align: left;
+	  color: $primary-2;
+	  @include rem('padding', 36px 0 5px 0);
+	  display: inline-block;
+	  @include bold-font();
+	  @include f(20);
+	}
+}
+
+.checkbox-wrapper, .group-wrapper .checkbox-wrapper {
+  display: block;
+  float: left;
+  @include rem('margin', 5px 0);
+	
+  .form-checkbox-label{
+	display: block;
+	float: left;
+	color: white;
+	@include rem('padding-left', 20px);
+	@include brand-font();
+	@include f(20);
+	width: 80%;
+
+  }
+}
+
+
+.checkbox-wrapper .checker, .group-wrapper .checkbox-wrapper .checker, .checker {
+  float: left;
+
+  span{
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	zoom: 1;
+	text-align: center;
+  }
+
+  input{
+	  display: inline-block;
+	  margin-top: 2px;
+	  opacity: 0;
+	  filter: alpha(opacity=0);
+	  -moz-opacity: 0;
+	  border: none;
+	  background: none;
+	  display: inline-block;
+	  zoom: 1;
+  }
+}
+
+.checkbox-wrapper .form-checkbox-label .checkbox-name, .group-wrapper .checkbox-wrapper .form-checkbox-label .checkbox-name, .form-checkbox-label .checkbox-name {
+  @include main-font();
+  @include f(12);
+  line-height: 16.8px;
+  margin-top: 1px;
+  width: 87%;
+  text-align: left;
+  float: left;
+}
+
+.checkbox-wrapper .form-radio-label, .form-radio-label{
+	@include rem('padding-right', 40px);
+}
+
+.checkbox-wrapper .form-radio-label .radio-name {
+  text-transform: uppercase;
+  @include rem('margin-top', 5px);
+  color: $primary-2;
+  text-transform: uppercase;
+  @include bold-font();
+  @include f(20);
+}
+
+.checkbox-wrapper .form-radio-label .form-radio {
+  margin-top: -3px;
+}
+
+.radio-wrapper {
+  float: none;
+  display: table-cell;
+  width: 29%;
+  @include rem('padding-top', 30px);
+	.radio-name {
+	  text-transform: uppercase;
+	  margin-top: -0.5px;
+	  color: white;
+	}
+
+	.form-radio {
+	  margin-top: -3px;
+
+	  margin-top: -0.3rem;
+	}
+}
+
+
+/*------------------------------------*\
+      $RADIO ELEMENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $COMMON PROPERTIES FOR SPRITE
+\*------------------------------------*/
+
+
+.selector, .selector span, .checker span, .radio span, .uploader, .uploader span.action {
+  background-image: url($path-images + 'icons/sprite-mobile-desktop.png');
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+}
+.group-wrapper{
+	display: inline-block;
+	width: 100%;
+
+	 label {
+	  @include bold-font();
+	  text-transform: uppercase;
+	  color: $primary-2;
+	}
+
+	.radio-wrapper {
+	  position: relative;
+	  width: auto;
+	  color: white;
+	}
+
+	.form-radio-label, .radio-title {
+	  @include rem('padding-right', 70px);
+	}
+}
+
+
+.group-wrapper .radio, .radio {
+  display: inline-block;
+  line-height: 0px;
+  vertical-align: top;
+  position: absolute;
+  right: 30px;
+}
+
+.group-wrapper .radio span , .radio span{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  color: white;
+  @include f(10);
+  text-transform: uppercase;
+  display: inline-block;
+  zoom: 1;
+  text-align: center;
+}
+
+/*.group-wrapper .radio .checked, .radio .checked {
+  background-position: -111px -11px;
+}*/
+
+.group-wrapper .radio input, .radio input {
+  width: 17px;
+  height: 10px;
+  display: inline-block;
+  @include rem('margin-top', 2px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  border: none;
+  background: none;
+  display: inline-block;
+  zoom: 1;
+  text-align: center;
+}
+
+/*------------------------------------*\
+    $BUTTON ELEMENTS
+\*------------------------------------*/
+
+.button-wrapper {
+  display: inline-block;
+  @include rem('margin-top', 30px);
+  text-align: center;
+  width: 100%;
+
+  .form-button {
+	  @include setSpriteMobileDesktop(auto, auto, -1371px, 1px, #8f141a);
+	  display: inline-block;
+	  vertical-align: middle;
+	  color: white;
+	  @include bold-font();
+	  @include rem('padding', 15px 38px 17px 57px);
+	  @include f(20);
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  border: none;
+	  cursor: pointer;
+	}
+}
+
+
+/*------------------------------------*\
+    $CHECKBOX ELEMENTS
+\*------------------------------------*/
+
+.checkbox-wrapper {
+  display: block;
+  float: left;
+  @include rem('margin', 5px 15px 5px 0);
+  position: relative;
+
+  .form-checkbox-label {
+	  display: block;
+	  float: left;
+	  color:$primary-3;
+	  .checker{
+	  	float: left;
+
+	  	span{
+	  	  width: 22px;
+	  	  height: 22px;
+	  	  display: inline-block;
+	  	  @include rem('margin-top', 2px);
+		  display: inline-block;
+		  zoom: 1;
+		  text-align: center;
+	  	}
+
+	  	 input {
+		  display: inline-block;
+		  @include rem('margin-top', 2px);
+		  opacity: 0;
+		  filter: alpha(opacity=0);
+		  -moz-opacity: 0;
+		  border: none;
+		  background: none;
+		  display: inline-block;
+		  zoom: 1;
+		}
+	  }
+
+	  .checkbox-name {
+		  @include main-font();
+		  @include f(22);
+		  @include rem('margin-top', 8px);
+		  @include rem('margin-left', 20px);
+		  width: auto;
+		  text-align: left;
+		  float: left;
+		  text-transform: none;
+		}
+	}
+
+	.form-radio-label {
+	  position: relative;
+	  text-transform: uppercase;
+	  @include bold-font();
+
+	}
+}
+
+.checkbox-wrapper .form-radio-label .radio-name {
+  text-transform: uppercase;
+  margin-top: -0.5px;
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  @include rem('margin-right', 10px);
+}
+
+.checkbox-wrapper .form-radio-label .form-radio {
+  margin-top: -3px;
+  margin-top: -0.3rem;
+}
+
+/*------------------------------------*\
+    $SELECT ELEMENTS
+\*------------------------------------*/
+
+.select-wrapper {
+  @include rem('margin', 15px 0 10px);
+  color: white;
+  clear: both;
+  @include rem('padding-top', 12px);
+
+  label {
+	  display: block;
+	  width: 100%;
+	  @include bold-font();
+	  @include f(20);
+	  letter-spacing: 1px;
+	  @include rem('margin-bottom', 5px);
+	  text-transform: uppercase;
+	  text-align: left;
+	  color: white;
+	}
+}
+
+
+.select-wrapper .selector, .selector {
+  height: 58px;
+  line-height: 28px;
+  overflow: hidden;
+  @include rem('padding', 0 0 0 8px);
+  position: relative;
+  max-width: 640px;
+  width: 98%!important;
+  display: inline-block;
+}
+
+.select-wrapper .selector span, .selector span {
+  cursor: pointer;
+  display: block;
+  height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 95%;
+  text-align: left;
+  color:$primary-3;
+  font-style: italic;
+  max-width: 635px;
+  width: 99%!important;
+  @include f(18);
+  @include main-font();
+  @include rem('padding', 15px 5px);
+}
+
+.select-wrapper .selector select, .selector select {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  height: 58px;
+  @include f(24);
+  @include main-font();
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  filter: alpha(opacity=0);
+}
+
+.select-wrapper .selector select option, .selector select option {
+  @include rem('padding', 1px 0 1px 5px);
+  @include f(13);
+}
+.form-label{
+  display: inline-block;
+}
+
+.js-state .form-label{
+  width: 100%;
+}
+/*------------------------------------*\
+    COLUMN CONTROL ELEMENTS
+\*------------------------------------*/
+.cq-colctrl-lt0 {
+  display: block;
+  width: 82.25%;
+  margin: 0 auto;
+}
+
+
+/* line 860, ../../../../../../includes/components/form_elements/_mobile.scss */
+
+fieldset {
+  clear: both;
+}
+
+/* line 865, ../../../../../../includes/components/form_elements/_mobile.scss */
+.input-wrapper .form-input {
+  color: $primary-3;
+}
+
+.cost-estimate__filter .closeButton {
+  display: none;
+}
+.checkbox-wrapper .form-checkbox-label .checker .wrapper-error{
+    border: 1px solid #8f141a!important;
+    background: #3b1112!important;
+    height:21px;
+    width:21px;
+}
+
+.group-wrapper .radio-wrapper .wrapper-error span {
+  background-position: -139px -11px;
+}
+
+.cq-colctrl-lt0{
+	width:100%;
+}
+
+.js-request-info-form, .js-request-info-form, #_content_car_global_langmaster_en_services_contactbyambasador_jcr_content_navigationBlock_formbuilder_start{
+	width:82.25%;
+	margin:0 auto;
+	border:1px solid $primary-17;
+	padding:60px 24px 30px 24px;
+}
+
+.requestInformation_checkbox_val .form-checkbox-label, .requestPrice_checkbox_val .form-checkbox-label{ 
+    color:$primary-2 ;
+    width:auto;
+
+}
+
+.js-request-info-form .heading-wrapper , .js-request-info-form .heading-wrapper, .js-ga-search-error .heading-wrapper{
+  display:none;
+}
+
+.cq-dd-image{
+    width:82.25%;
+    margin:0 auto;
+   display:block;
+    }
+
+}
+
+.mobile-create-btn{
+	text-align: center;
+	margin-top: 30px;
+		.button-wrapper {
+	  display: inline-block;
+	  margin-top: 30px;
+	  margin-top: 3rem;
+	  text-align: center;
+	  width: 100%;
+	}
+
+.form-button {
+  background: url($path-images + 'icons/sprite-mobile-desktop.png') -1371px 1px no-repeat #8f141a;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  color: white;
+  @include bold-font();
+  font-size: 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  padding: 15px 38px 17px 57px;
+  padding: 1.5rem 3.8rem 1.7rem 5.7rem;
+  border: none;
+  cursor: pointer;
+}
+}
+
+.js-personal-info-form {
+	width: 82.25%;
+	margin: 10px auto 0;
+	@include f(20);	
+	display:block;
+	text-transform:uppercase;
+	@include bold-font;
+
+	.cq-colctrl-lt0-c0{
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		border:1px solid $primary-17;
+		@include rem('padding',24px 24px 0px 24px);
+		@include box-sizing(border-box);
+	}
+
+	div.piform\.countryName{
+		display: inline-block;
+		@include rem('margin',28px 0 10px);
+		width: 100%;
+	}
+
+	.input-wrapper.piform\.new_password , .input-wrapper.piform_password{
+		min-height: inherit;
+		@include rem('margin-top',45px);
+
+		label{
+			@include rem('padding-top',0px);
+		}
+	}
+	.select-wrapper{
+		@include rem(margin, 0px);
+		@include rem(margin-bottom, 33px);
+
+
+		.selector{
+			width: 99%!important;
+			max-width: 640px;
+
+			span{
+				width: 99%!important;
+				text-transform: uppercase;
+				max-width: 640px;
+			}
+		}
+	}
+
+	hr{
+		display: none;
+	}
+
+	.personal-info-c1{
+		border:1px solid $primary-17;
+		@include rem('margin',25px 0 0);
+		@include rem('padding',24px);
+
+		p{
+			@include main-font();
+			color: $primary-3;
+			@include f(22);
+			text-transform: none;
+			@include rem('padding-top',0px);
+			@include rem('padding-bottom',0px);
+		}
+
+		.js-date-picker{
+			.select-wrapper{
+				display: inline-block;
+				width: 32%;
+				padding: 0;
+				@include rem(margin, 0px);
+
+
+				.selector{
+					width: 100%!important;
+					padding-right: 2px;
+					@include box-sizing(border-box);
+
+					span{
+						width: 100%!important;
+						padding-right: 2px;
+						@include box-sizing(border-box);
+						text-transform: uppercase;
+						height: inherit;
+					}
+				}
+			}
+		}
+
+		.data-picker-wrapper{
+			.form-label{
+				padding-top: 20px;
+			}
+		}
+	}
+
+	.personal-info-c2{
+		@include rem('margin',25px 0 0);
+		@include rem('padding',24px 24px 0);
+		@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+		border:1px solid $primary-17;
+		@include box-sizing(border-box);
+		display: inline-block;
+		width: 100%;
+
+		.checkbox-wrapper{
+	    	display: inline-block;
+			width: 45%;
+			position: relative;
+			vertical-align: top;
+			height: 56px;
+			@include f(22);
+			.checkbox-name{
+				text-transform: uppercase;
+				@include brand-font();
+				@include f(20);
+				color: $primary-2;
+				@include rem('margin-top',7px);
+			}
+	    }
+
+		.heading-wrapper{
+			width: 100%;
+
+			.heading3{
+				margin: 0;
+		    	@include f(20);
+		    	@include rem('padding',10px 0 30px);
+		    	@include bold-font();
+		    	text-align: left;
+			}
+
+		}
+	}
+
+	fieldset{
+		min-width: 100%;
+	}
+
+
+
+}
+
+.default-button{
+	width: 100%;
+	text-align: center;
+	display: block;
+	@include rem('margin',30px 0 20px);
+}
+
+.setDefault{
+	background: $primary-52 !important;
+	@include rem('padding',15px);
+	text-align: center;                                                                                                                                 font-size: 2rem;
+	@include bold-font();
+	color: $primary-2;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: none;
+	display: inline-block;
+
+	.button-arrow{
+		display:inline;
+		@include setSprite(22px, 15px, -663px, -214px);
+		position: relative;
+		@include rem('top', -1px);
+		@include rem('margin-right', 5px);
+	}
+}
+
+.js-address-form-jp fieldset, .js-address-form fieldset {
+	position:relative;
+}
+
+.js-address-form-jp fieldset a, .js-address-form fieldset a{
+	position:absolute;
+	font-size: 18px !important;
+	bottom:-119px;
+	right: 47%;
+}
+
+.js-address-form-jp .submit, .js-address-form .submit{
+	margin-bottom:35px;
+}
+#js-request-price-form .group-wrapper .form-radio-label {
+	display: inline-block;
+}
+
+.ambassador-cont .slide_switch input + label::after{ width: 110px;}
+.ambassador-cont .slide_switch input + label + input + label::after{width: 0;}
+.ambassador-cont .slide_switch input + label + input + label{padding-left: 120px;}
+.ambassador-cont .slide_switch input + label + input:checked + label{padding-left: 58px;}
+
+.shopping-bag .slide_switch input + label::after{ width: 107px;}
+.shopping-bag .slide_switch input + label + input + label::after{width: 0;}
+.shopping-bag .slide_switch input + label + input + label{padding-left: 120px;}
+.shopping-bag .slide_switch input + label + input:checked + label{padding-left: 58px;}
+.shopping-bag .slide_switch label{display: inline-block;}
+
+.search-result .slide_switch input + label + input + label{margin-left: -111px;padding-left: 111px;}
+.search-result .slide_switch input + label + input:checked + label{margin-left: -56px;padding-left: 56px;}
+.product-list .slide_switch input + label::after{margin-right: 0 !important;margin-left: 9px;}
+.product-list .slide_switch input + label + input + label{margin-left: -104px;padding-left: 104px;}
+.product-list .slide_switch input + label + input:checked + label{margin-left: -5rem;padding-left: 5rem;}

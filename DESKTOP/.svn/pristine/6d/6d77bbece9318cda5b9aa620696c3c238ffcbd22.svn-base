@@ -1,0 +1,392 @@
+/*------------------------------------*\
+    Billing FORM -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER (.billing-form)
+ * HEADING CONTAINER (.heading2)
+ * PERSONAL DETAILS (.personal-details)
+ * ADDRESS DETAILS (.address-details)
+ * ACTION BUTTON (.next-step-cta)
+  
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.billing-form-japan {
+	@include proxi-font;
+	@include font-color($primary-2);
+	display: block;
+	@include rem('margin', 0px);
+	float: left;
+	width: 100%;
+
+	.billing-address-form-japan {
+	    background: none repeat scroll 0 0 #450408;
+	    color: #FFFFFF;
+	    display: block;
+	    margin: 0 auto 25px;
+	    padding: 0 5%;
+	    vertical-align: top;
+	    overflow: hidden;
+	}
+	#fn_building {
+		clear:both;
+	}
+
+	.heading1 {
+		background: url($path-images + 'icons/lock-big.png') no-repeat scroll 84px 22px transparent;
+	}
+
+	.heading2 {
+		border:none;
+		@include rem('padding-top',24px);
+		@include rem('padding-bottom',35px);
+		@include rem('line-height',38px);
+	}
+
+	
+	/*------------------------------------*\
+    	$PERSONAL DETAILS
+	\*------------------------------------*/
+	.personal-details {
+		background: none;
+		border: none;
+		@include f(20);
+		@include rem('padding', 0px);
+		margin: 20px auto 0;
+		display:block;
+		text-transform:uppercase;
+		width: 440px;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: hidden;
+
+
+
+		.form-label{
+			color: #FFFFFF;
+    		display: inline-block;
+    		font-family: proximanova,sans-serif !important;
+    		@include f(10);
+    		@include rem('letter-spacing', 1px);
+    		@include rem('margin', 0px);
+    		text-align: left;
+    		text-transform: uppercase;
+    		width: auto;
+    		float: left;
+		}
+
+		.mandatory {
+			@include f(14);
+			font-weight: bold;
+			position: relative;
+		}
+
+		.radio{
+			display: inline-block;
+		}
+
+		.radio-title {
+			display: inline;
+    		font-family: proximanova,sans-serif !important;
+    	}
+
+		.js-fname,.js-lname,.lname-last-katakana,.lname-katakana,.addr-name,.zip-code1,.zip-code2 {
+			width: 48%;
+		}
+
+		.addr-name{
+			margin-bottom: 0px !important;
+		}
+
+		.js-lname,.lname-katakana,.zip-code2{
+			float: right;
+			@include rem('margin-left', 8px);
+		}
+
+		.grid__item{
+			@include rem('padding',0px);
+
+			&:last-child{
+				padding:0;
+			}
+			.radio-btn {
+				@include rem('padding',0 0 20px);
+				@include rem('margin',15px 0 0);
+			}
+			.radio-btn + span {
+				@include rem('margin',-19px 0 0px);
+			}
+		}
+
+		.grid__item--row{
+
+			min-height: inherit;
+			@include rem('margin-bottom', 20px);
+
+			input + span {
+				height: auto;
+			}
+		}
+	
+		.grid__item--pad {
+			@include rem('padding', 0px);
+		}
+
+		
+
+		.billingform-ok{
+			width: 100%;
+			text-align: center;
+		}
+
+		.width-one {
+			width : 100%;
+		}
+
+	}
+
+	.form-input {
+		background:#461F22;
+	    border: 1px solid $primary-79;
+	    box-sizing: border-box;
+	    color: #FFFFFF;
+	    font-style: normal;
+	    display: block;
+	    @include f(11);
+	    height: 28px;
+	    @include rem('padding', 0px 0px 0px 3px);
+	    width: 100%;
+    }
+
+	/*------------------------------------*\
+    	$ADDRESS DETAILS
+	\*------------------------------------*/
+	.address-details{
+		background:none;
+		@extend .personal-details;
+		width: 440px;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		@include rem('padding', 0px);
+		@include rem('margin', 0px);
+		
+	}
+
+	.phone-details {
+		background: none;
+		border: none;
+		@extend .personal-details;
+		@include rem('padding', 0px);
+		@include rem('margin-top', 0px);
+
+		.js-phonenumber,.js-mobileno {
+			width: 48%;
+			float: left;
+		}
+
+		.js-mobileno{
+			float: right;
+			@include rem('margin-left', 8px);
+		}
+	}
+
+	.confirmation {
+		border-top: 1px solid $primary-84;
+		display:block;
+		color:$primary-6;
+		@include rem('padding', 26px 0 10px 0);
+		@include rem('margin', 25px 0 0);
+		@include main-font;
+		text-align: center;
+
+		#uniform-checbox,#uniform-fn_chkinvoice {
+			span {
+				background-position: -13px -415px;			
+			}
+		}
+
+		#uniform-checbox,#uniform-fn_chkinvoice {
+			span.checked {
+				background-position: -89px -415px;			
+			}
+		}
+
+		.form-check {
+			line-height: 7px;
+			width: auto;
+			@include rem('padding', 4px 0 0 0);
+			@include rem('margin', 0px);
+			@include main-font;
+			@include f(12);
+		}
+		
+	}
+
+	.tabs__nav{
+		@include bold-font;
+		li{
+			width:50%;
+		}
+	}
+
+	/*------------------------------------*\
+    	$ACTION BUTTON
+	\*------------------------------------*/
+
+	.next-step-cta{
+		text-align:center;
+		clear:both;
+		.cta {
+			@include bold-font;
+		}
+		.cta--red{
+			width:auto;
+			@include rem('margin', 20px 0px);
+		}
+	}
+
+	.tabs__nav{
+		@include bold-font;
+		li{
+			width:50%;
+		}
+	}
+
+	.radio-tabs{
+    	margin: 0 auto;
+    	width: 100%;
+    	position: relative;
+
+    	.radio-btn {
+    		position: absolute;
+    		left: 32px;
+    		@include rem('margin', 0px);
+    		top: 73px;
+
+			.radio-btn-li{
+				display: block;
+				width: 18%;
+				@include rem('margin-bottom', 74px);
+
+			  .radio-title {
+				 	height: 72px;
+				 	display: none;
+				 }
+			}
+
+			span {
+    			background-position: -195px -432px;
+    			width: 20px;
+    			height: 20px;
+			}	
+
+			span.checked {
+    			background-position: -218px -432px;
+			}
+
+		}
+
+    	#homeaddress.tab_content {
+    		@include rem('margin-top', 20px);
+    	}
+
+    	.js-streetnumber {
+    		width: 30%;
+    	}
+
+    	.js-streetname{
+    		width: 48%;
+    		float: right;
+    	}
+
+    	.js-poboxnumber{
+    		width: 30%;
+    	}
+
+    	.form-address-selector__bracket {
+	    	border: 1px solid $primary-79;
+	    	border-right: none;
+    		height: 94px;
+    		width: 10px;
+    		left: 32px;
+    		top: -45px;
+    		position: absolute;
+    	}
+
+    	.radio-tab_container {
+    		margin: 0 auto;
+    		width: 440px;
+    	}
+
+	}
+
+	.terms-condition {
+    	display: inline-block;
+	}
+
+	#uniform-country.selector {
+		background-position: -430px -635px;
+
+		span {
+    		background-position: right -536px;
+    	}
+	}
+
+	/* Billing confirmation component CSS overriding */
+
+	.billing-confirmation {
+		@include rem('padding', 0px);
+    	width: 100%;
+		
+		.heading1 {
+			background-position: 64px 22px;
+		}
+
+		.form-checkbox-label {
+			span{
+				background-position: -13px -415px;
+				width: auto;
+			}
+
+			span.checked {
+    			background-position: -89px -415px;
+			}
+
+			.checker{
+				@include rem('margin-top', 0px);
+			}
+		}
+	}
+
+	span.error{
+		width: 190px;
+	}
+
+	.form-input.error {
+    	border: 1px solid #B10000;
+	}
+
+	/* CSS changes for Tool Tip*/
+
+	.js-lname,.js-phonenumber, .js-mobileno{
+		position: relative;
+	}
+
+	.tooltip-div {
+		position: absolute;
+		top: 0;
+		right: 107px;
+		margin: 0; 
+	}
+
+	.js-phonenumber, .js-mobileno{
+		.tooltip-div {
+			right: 83px;
+		}
+	}
+
+
+}
+

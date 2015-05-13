@@ -1,0 +1,26 @@
+<!-- Login Box Starts Here-->
+<div class="repair-service ">
+	<!-- <div class="title">	
+		<h3 class="heading2">MY REPAIR SERVICE</h2>
+	</div> -->
+	<!--#include virtual="../../components/time_line/html.shtml" -->
+	<div class="heading">
+				<h4>REPAIR N° 12345678</h4>
+				<h5>Registered on 2013/09/05</h5>
+				<h5>Boutique : Cartier 5 th Avenue, NY</h5>
+			</div>
+	<div class="notification">
+			
+
+			
+				<h4>REGISTERED</h4>
+		    	<p class="leftdiv__desc">Your Cartier item is registered and currently being examined by one of our service exeperts. You will be contacted shortly with next steps.</p>
+	</div>
+			<div class="side-image">
+				<!--#set var="link-to" value="#" -->
+				<!--#set var="class-name" value="image-link" -->
+				<!--#set var="img-src" value="3.jpg" -->
+				<!--#include virtual="../../components/nav_icon/top_nav_icon.shtml" -->
+			</div>  
+		   
+</div> 

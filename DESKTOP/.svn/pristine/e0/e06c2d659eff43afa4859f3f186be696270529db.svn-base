@@ -1,0 +1,17 @@
+<div class="row column-control col100">
+
+        <!--#if expr="${image1}" -->
+            <!--#set var="image" value="${image1}" -->
+        <!--#endif -->
+        <!--#if expr="${colclass1}" -->
+            <!--#set var="colclass" value="${colclass1}" -->
+        <!--#endif -->
+        <!--#if expr="${text1}" -->
+            <!--#set var="text" value="${text1}" -->
+        <!--#endif -->
+
+    <!--#if expr="${column100}" -->
+        <!--#set var="content" value="${column100}" -->
+        <!--#include virtual="../../components/column/column.shtml" -->
+    <!--#endif -->
+</div>

@@ -1,0 +1,62 @@
+<!--refine-selector Block-->
+
+<div class="refine-selector js-refine-selector">
+	
+    <div class="refine-selector__title js-refine-selector__title">HIGHLIGHTS<span class="double-arrow"></span></div>
+    <div class="refine-selector__content js-refine-selector__content va-accordion-plp">
+    	<div class="va-nav"> <span class="js-less-arrow less-arrow">Previous</span> <span class="js-more-arrow more-arrow">Next</span> </div>
+	    <ul class="sub-menu">
+	        <li><label>pink gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-pink-gold" /></span>
+	        	</label>
+	        </li>  
+	        <li ><label>Steel
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-steel" /></span>
+	        	</label>
+	        </li>
+	        <li><label>white gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-white-gold" /></span>
+	        	<label>
+	        </li>
+
+	        <li><label>pink gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-pink-gold" /></span>
+	        	</label>
+	        </li>  
+	        <li ><label>Steel
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-steel" /></span>
+	        	</label>
+	        </li>
+	        <li><label>white gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-white-gold" /></span>
+	        	<label>
+	        </li>
+
+	        <li><label>pink gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-pink-gold" /></span>
+	        	</label>
+	        </li>  
+	        <li ><label>Steel
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-steel" /></span>
+	        	</label>
+	        </li>
+	        <li><label>white gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-white-gold" /></span>
+	        	<label>
+	        </li>
+	        <li><label>pink gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-pink-gold" /></span>
+	        	</label>
+	        </li>  
+	        <li ><label>Steel
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-steel" /></span>
+	        	</label>
+	        </li>
+	        <li><label>white gold
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-white-gold" /></span>
+	        	<label>
+	        </li>
+	        
+	    </ul>
+    </div>
+</div>

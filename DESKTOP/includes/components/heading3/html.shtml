@@ -1,0 +1,9 @@
+<!--#if expr="${type} = 'text'" -->
+<h3 class="heading3">Heading 3</h3>
+<!--#endif -->
+<!--#if expr="${type} = 'image'" -->
+<h3 class="heading3"><img src="<!--#echo var="ICON_IMG_PATH" -->logo_US.png" alt="" class="image"></h3>
+<!--#endif -->
+<!--#if expr="${type} = 'blank'" -->
+<h3 class="heading3">&nbsp;</h3>
+<!--#endif -->

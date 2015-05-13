@@ -1,0 +1,148 @@
+<!-- Billing Confirmation Block Starts Here-->
+
+<div class=" grid js-billing">
+  <div class="grid__item three-quarters">
+  <div class="billing-confirmation-edit-address">
+    <h1 class="heading1">ENTER YOUR BILLING ADDRESS</h1>
+    <p class="heading__desc">Cartier recognizes the importance of protecting your information. Privacy Notice
+Please note that person who submits the order must be the cardholder whose name appears on the credit card</p>
+   <div class="form-layout js-billing-address-form" id="js-billing-address-form">
+    <form method="POST" action="/content/car/na/usa/en_us/home/homepage/checkout.desktop.html" id="js-billing-address-form" name="js-billing-address-form" enctype="multipart/form-data"><input type="hidden" name=":formid" value="js-billing-address-form"><input type="hidden" name=":formstart" value="/content/car/na/usa/en_us/home/homepage/address/jcr:content/AddressForm/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8">
+    <div class="form">
+    <fieldset>
+        <div class="form-element input-wrapper title ">
+        <label>Title</label>
+</div>
+    <div class="form-element checkbox-wrapper address20">
+                    <label for="Mr" class="checkbox  form-radio-label">
+                         <div class="radio" id="uniform-Mr">
+                        
+                         <input type="radio" checked="" id="Mr" name="address20" value="001" class="form-radio">
+                         </div>
+                        <span class="radio-name">Mr</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper address20">
+                    <label for="Mrs" class="checkbox  form-radio-label">
+                         <div class="radio" id="uniform-Mrs"><input type="radio" id="Mrs" name="address20" value="002" class="form-radio"></div>
+                        <span class="radio-name">Mrs
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element checkbox-wrapper address20">
+                    <label for="Ms" class="checkbox  form-radio-label">
+                         <div class="radio" id="uniform-Ms"><input type="radio" id="Ms" name="address20" value="003" class="form-radio"></div>
+                        <span class="radio-name">Ms
+</span>
+                    </label>
+                 </div>
+                    <div class="form-element input-wrapper firstName1">
+        <label>First Name</label>
+<input id="firstName1" type="text" name="firstName1" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-firstName1"></div></div>
+    <div class="form-element input-wrapper lastName1">
+        <label>Last Name</label>
+<input id="lastName1" type="text" name="lastName1" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-lastName1"></div></div>
+    <div class="form-element input-wrapper emailAddress">
+        <label>E-Mail Address</label>
+<input id="emailAddress" type="text" name="emailAddress" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-emailAddress"></div></div>
+    <!--<div class="address-composite-wrapper js-address-composite-wrapper">-->
+    <div class="form-address-selector js-form-address-selector">
+        <div class="form-address-selector__radio">
+            <div class="form-element checkbox-wrapper fn_grpaddr js-first-radio">
+                <label for="homeaddress" class="checkbox  form-radio-label">
+                    <div class="radio" id="uniform-homeaddress">
+                  
+                    <input type="radio" id="homeaddress" name="fn_grpaddr" value="homeaddress" class="form-radio">
+                    </div>
+                </label>
+            </div> 
+            <div class="form-element checkbox-wrapper fn_grpaddr js-second-radio">
+                <label for="poboxaddress" class="checkbox  form-radio-label">
+                <div class="radio" id="uniform-poboxaddress"><input type="radio" id="poboxaddress" name="fn_grpaddr" value="poboxaddress" class="form-radio"></div>
+                </label>
+            </div>
+        </div>
+        <div class="form-address-selector__bracket"></div>
+       </div>
+        <div class="form-element input-wrapper address2">
+        <label>Street Number</label>
+<input id="address2" type="text" name="address2" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-address2"></div></div>
+    <div class="form-element input-wrapper address5">
+        <label>Street Name</label>
+<input id="address5" type="text" name="address5" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-address5"></div></div>
+    <div class="form-element input-wrapper address6">
+        <label>ADDITIONAL ADDRESS INFO (APT./FL./BLDG., ETC.)</label>
+<input id="address6" type="text" name="address6" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-address6"></div></div>
+    <div class="form-element input-wrapper address12">
+        <label>PO Box</label>
+<input id="address12" type="text" name="address12" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-address12"></div></div>
+    <!--</div>--><div class="form-element input-wrapper address7">
+        <label>City</label>
+<input id="address7" type="text" name="address7" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-address7"></div></div>
+    <div class="form-element select-wrapper state">
+ 
+
+<!--#set var="select-label-name" value="State" --> 
+        
+        <!--#set var="option-component" value="state_option" -->
+        <!--#include virtual="../../components/form_elements/desktop_select.shtml" --> 
+    
+    </div>
+    <div class="form-element input-wrapper zip">
+        <label>ZIP/AREA /POST CODE</label>
+<input id="zip" type="text" name="zip" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-zip"></div></div>
+    <div class="form-element input-wrapper phone">
+        <label>Phone Number</label>
+<input id="phone" type="text" name="phone" placeholder="" class=" form-input" value="">
+        <div class="errormessage" id="errormessage-phone"></div></div>
+  
+                    
+</fieldset>
+
+
+
+
+
+</div>
+<div class="form-element button-wrapper button">
+<hr>
+<div class="form-element checkbox-wrapper termsCondition">
+                    <label for="termsCondition" class="checkbox  form-checkbox-label">
+                         <div class="checker" id="uniform-termsCondition">
+
+                <input type="checkbox" id="termsCondition" name="termsCondition" value="termsCondition" class="form-checkbox">
+                         </div>
+                        <span class="checkbox-name">&nbsp;I do not want to receive an invoice to the billing address.
+</span>
+                    </label>
+                 </div>
+<input class="form-button" type="submit" name="button" value="Continue to Next Step">
+</div>
+
+<div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+
+</form>
+</div>
+   
+    </div>
+    
+    </div>
+  <div class="grid__item one-quarter"> 
+    <div class="price-details-bg"><!--#include virtual="../../views/price_details/desktop.shtml" -->    </div>
+    <!--#include virtual="../../views/return-exchange/desktop.shtml" --> 
+  </div>
+</div>
+<!-- Billing Confirmation Block Ends Here-->

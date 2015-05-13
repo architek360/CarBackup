@@ -1,0 +1,62 @@
+/*------------------------------------*\
+   PRICE DETAILS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.price-detail)
+ * PRICE DETAIL ROW...... price detail row(.price-detail__row)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.price-detail{
+	display:block;
+	@include f(22);
+	@include bold-font;
+	color:$white;
+	text-align:left;
+	@include rem('padding', 15px 0);
+	text-transform:uppercase;
+	margin-left: 0;
+	
+	/*------------------------------------*\
+	    $PRICE DETAIL ROW
+	\*------------------------------------*/
+
+	.price-detail__row{
+		display:inline-block;
+		width:100%;
+		.right-zero {
+			margin-left: 0;
+		}
+		.font39{
+			@include f(39);
+		}
+	}
+	.price-detail__col{
+		display:inline-block;
+	}
+	.price-detail__col-right{
+		display:inline-block;
+		@include main-font
+	}
+	.bold-font {
+		@include bold-font;
+	}
+	.price-detail--note{
+		@include font-color($primary-10);
+		@include f(22);
+		@include main-font;
+		font-style:italic;
+		text-transform:lowercase;
+		display:block;
+		@include rem('padding', 7px 0 0);
+	}
+	.grid__item{
+		@include rem('padding', 19px 0 11px);
+	}
+	.price-detail__cta{
+		@include rem('margin', 20px 0 0 0);
+	}
+}

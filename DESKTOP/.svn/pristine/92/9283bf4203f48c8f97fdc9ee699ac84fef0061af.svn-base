@@ -1,0 +1,25 @@
+  <!-- PRODUCT CAROUSEL-->
+  <div class="carousel-product-detail">
+        <h2 class="heading2 js-share-title">panthere ring</h2>
+        <span class="product-detail__variant js-share-caption">Yellow gold, tsavorite, lacquer</span>
+        <span class="product-detail__size">ref:<span class="js-product-detail__size">HPI00480</span></span>
+        <div class="carousel js-product-carousel">
+            <ul class="rslides js-slider js-share-img">
+                <li class="clearfix">
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_0_cartier_rings.png" alt="" class="image js-zoom">
+                </li>
+
+                <li class="clearfix">
+                     <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_1_cartier_rings.png" alt="" class="image .js-zoom">
+                </li>
+                <li class="clearfix">
+                    <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_2_cartier_rings.png" alt="" class="image .js-zoom">
+                </li>
+                <li class="clearfix">
+                     <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_1_cartier_rings.png" alt="" class="image .js-zoom">
+                </li>
+           </ul>
+            <a class="zoom-icon js-zoom" href="#"></a>
+            <a class="degree360-icon js-degree360" href="#"></a>
+        </div>
+  </div>

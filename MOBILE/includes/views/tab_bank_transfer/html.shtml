@@ -1,0 +1,27 @@
+<!-- tab bank transfer Block Starts Here-->
+<div class="bank-transfer">
+	<div class="message-box">
+		<h3 class="heading3">bank transfer</h3>
+		<p class="message">Should you choose this payment method, you will receive the required Cartier banking information by email.</p>
+		<p class="message">Your bank may change a small fee for the transfer</p>
+		<hr>
+		<p class="message">We send invoice separately from the package if the billing name and delivery name are different</p>
+		<p class="message">Your account won't be debited until your order dispatch</p>
+	</div>
+
+	<div class="terms-condition">
+		<!--#set var="checkbox-value" value="value" -->
+		<!--#set var="checkbox-label-name" value="I agree the terms and conditions of this site." -->
+        <!--#set var="checkbox-name" value="fn_chktnc" -->
+
+		<!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+	</div>
+  
+	<div class="confirm-btn clearfix">
+		<!--#set var="text-detail" value="confirm and place order" -->
+    	<!--#set var="cta--varaint" value="cta--red" -->
+    	<!--#include virtual="../../components/form_elements/button.shtml" -->
+	</div>
+
+</div>
+ <!-- tab bank transfer Block Ends Here-->

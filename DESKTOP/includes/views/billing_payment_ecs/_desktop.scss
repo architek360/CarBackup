@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    ECS PAYMENT PAGE -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ecs-payment-page)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.ecs-payment-page{
+	background: none;
+	height: auto;
+	@include rem('margin-top', 9px);
+	.form{
+		width:100%;
+		ul{
+			@include rem('margin-left', 105px);
+			li{
+				display: inline-block;
+				@include rem('padding', 8px 15px 0 0);
+			}
+		}
+		label{
+			@include font-weight(bold);
+			@include rem('letter-spacing', 1px);
+			@include rem('margin-bottom', 5px);
+			text-transform: uppercase;
+			display: block;
+			@include proxi-font;
+			@include f(11);
+			@include rem('line-height', 11px);
+		}
+		.radio-title{
+			display: inline-block;
+		}
+		.form-input{
+			border: 1px solid $primary-60;
+			background: $primary-105;
+		}
+		.checker{
+			input{
+				@include opacity('0');
+			}
+		}
+		.form-element{
+			display: inline-block;
+		}
+		.button-wrapper{
+			@include rem('padding-bottom', 30px);
+		}
+		.payment_card_number{
+			@include rem('margin-left', 105px);
+			@include rem('width', 170px);
+		}
+		.payment_card_month{
+			@include rem('margin', 0px 0 10px);
+			@include rem('padding', 0px);
+			@include rem('margin-left', 20px);
+			#uniform-payment_card_month{
+				width: 120px !important;
+				span{
+					width :115px !important;
+				}
+			}
+		}
+		.payment_card_year{
+			@include rem('margin-left', 30px);
+			@include rem('padding', 0px);
+			#uniform-payment_card_year{
+				width: 100px !important;
+				span{
+					width :105px !important;
+				}
+			}
+		}
+		.payment_card_cvv{
+			@include rem('width', 95px);
+			@include rem('padding', 0px);
+			@include rem('margin-right', 60px);
+			clear: left;
+			@include rem('margin-left', 105px);
+			input{
+				@include rem('width', 85px);
+			}
+		}
+		.payment_card_name{
+			@include rem('width', 300px);
+			@include rem('padding', 0px);
+			@include rem('margin-bottom', 30px);
+			#payment_card_name{
+				@include rem('width', 300px);
+			}
+		}
+		.checkbox_field{
+			clear:both;
+			@include rem('letter-spacing', 0px);
+			@include rem('padding-top', 30px);
+			border-top: 1px solid $primary-79;
+			text-align: center;
+			.checker{
+				float:none;
+				display:inline;
+			}
+			label{
+				span{
+					text-transform: none;
+					@include font-weight(normal);
+					@include rem('letter-spacing', 0px);
+					@include f(13);
+				}
+			}
+			.instruction-text{
+				@include rem('letter-spacing', 0px);
+				@include f(13);
+				text-align: center;
+			}	
+		}
+	}
+}
+

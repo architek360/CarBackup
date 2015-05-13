@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="expert_guide_faq" -->
+
+<!--#set var="back-static-text" value="Back to your cartier creation FAQ" -->
+
+	<!--#set var="COMP_1" value="back_button" -->
+	<!--#set var="COMP_2" value="social_share" -->
+
+<!--- FOR HEADING -->
+
+		<!--#set var="Expert-guide-title" value="expertise guides care recommendations" -->
+		<!--#set var="Expert-guide-selected" value="jewelry" -->
+
+<!--  ENDS -->
+<!--#set var="expert_list" value="yes" -->
+
+
+<!-- - FOR SELECT INPUT AND ITS LABEL -->
+
+		<!--#set var="input-name" value="fn_jumpsec" -->
+		<!--#set var="label-name" value="Jump to another section" -->
+		<!--#set var="option-component" value="expert_section_option" -->
+
+<!-- ENDS-->
+
+
+<!--  FOR SELECTING THE MAIN CONTENT FAQ or EXPERT COLLECTION BOX, ETC -->
+
+		<!--#set var="expert-content" value="faq" -->
+
+<!-- ENDS  -->
+
+
+<!--#set var="MODULE" value="others" -->
+
+
+<!--#set var="VIEWS_1" value="expert_guide" -->
+	<!--#if expr="${DEVICE} = 'desktop'"  -->
+		<!--#set var="COMP_3" value="breadcrumb" -->
+	<!--#endif -->
+<!--#include virtual="../templates/base.shtml" -->

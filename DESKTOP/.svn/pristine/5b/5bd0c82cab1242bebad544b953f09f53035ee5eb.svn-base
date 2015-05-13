@@ -1,0 +1,20 @@
+{
+    "success": true,
+    "serverMessage": "Some Server Message",
+    "filters": "fine watchmaking, Repair Service, vintage, set for your cartier",
+    "content": [{
+        "sid": "123",
+        "name": "Johnson Delhi",
+        "latitude": 40.759738,
+        "longitude": -73.976067,
+        "street": "653 Fifth Ave - New York",
+        "zipcode": "10022",
+        "state": "New York, NY",
+        "phone": "+1 212-753-0111",
+        "fax": "1-800-3333-222",
+        "typeofstore": "Boutique",
+        "url": "/content/bem/website-co...-delhi/johnson_274.html",
+        "tags": "fine-watchmaking repair-service vintage"
+
+    }]
+}

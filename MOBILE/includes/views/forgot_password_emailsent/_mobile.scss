@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    FORGOT PASSWORD EMAIL SENT -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.email-sent)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.email-sent{
+	display: block;
+	width: 82.25%;
+	margin: 0px auto 0;
+	text-align: center;
+	padding-bottom:20px;
+	position:relative;
+	@include brand-font;
+	@include font-color($primary-2);
+	p{
+		@include main-font;
+		margin:8%;
+		margin-top:0px;
+		@include f(20);
+		text-align: center;
+		text-transform: none;
+		padding: 0;
+	}
+	.heading3 {
+		@include f(22);
+		@include rem('padding', 50px 20px 30px);
+		line-height: 30px;
+	}
+	.cross-button{
+		position:absolute;
+		top:7px;
+		right:7px;
+		width:20px;
+		height:20px;
+		@include setSprite(27px, 29px, -630px, -128px );  
+		background-repeat: no-repeat;
+	}
+	.cta{
+		width:200px;
+	}
+	.cta--red{
+		width:21%;
+	}
+	border: 1px solid #464646;
+	@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+}

@@ -1,0 +1,51 @@
+  <!-- PRODUCT CAROUSEL-->
+  <div class="carousel-product">
+        <div class="carousel js-product-carousel">
+          
+          <div class="image-tab 360-image clearfix display-none">
+              <img src="<!--#echo var="CONTENT_IMG_PATH" -->/cartier_images/W1556242_360_0_9459.png" id="my-image-360" height="420" width="420">
+          </div>
+            <ul class="bxslider js-pdp-slider">
+                <li class="clearfix">
+                 <a class="zoom-cursor js-zoom js-share-img">
+                   <img src="http://m.preprod.cartier.com/content/dam/rcq/car/62/59/65/625965.png.scale.1280.high.png" alt="" class="image" itemprop="image">
+                 </a>
+
+                </li>
+
+                <li class="clearfix">
+                 <a class="zoom-cursor js-zoom">
+                      
+                      <img src="<!--#echo var="CONTENT_IMG_PATH" -->N4227900_0_cartier_rings.png" alt="" class="image" itemprop="image">
+                 </a>
+                
+                </li>
+                <li class="clearfix">
+                <a class="zoom-cursor js-zoom">
+                   <img src="http://assets.cartier.com/sites/assets/files/styles/cartier-1000-1000/public/catms/images/B6035516_0_cartier_bracelets.png?itok=DlYND_3A" alt="" class="image" itemprop="image">
+                </a>
+                
+                </li>
+
+           </ul>
+
+
+           <script>
+            var product360 = { files360 : [] };
+            if ($('.bxslider li img').attr('src'))
+                  var imgPath = ($('.bxslider li img').attr('src')).substring(0, 82);
+                  for (var i = 0; i != 72; i++) {
+                    product360.files360.push(imgPath + 'cartier_images/W1556242_360_' + i + '_9459.png');
+                  }
+          </script>
+
+
+     <!--  <a class="zoom-trigger zoom-trigger-link" href="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/cartier_exceptional_pieces_large.png">Zoom</a> -->
+           <!--  <a class="degree360-icon js-degree360" href="#"></a>  -->
+
+        
+
+            
+        </div>
+  </div>
+

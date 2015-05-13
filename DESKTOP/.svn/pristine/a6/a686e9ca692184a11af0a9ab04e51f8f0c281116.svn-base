@@ -1,0 +1,989 @@
+/* cartier.productlist.js
+ * This file contains functionalities handling the refine search module
+ *
+ * @project   cartier desktop
+ * @date      2014-01-03
+ * @author    Sapient 
+ * @licensor  cartier desktop
+ * @site      cartier desktop
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+
+;
+(function(window, $, productlist, undefined) {
+	//this will cause the browser to check for errors more aggressively
+	'use strict';
+
+	//check if jquery is defined, else retun
+	var _cacheObjects;
+	if ($ === undefined) {
+		console.log("jQuery not found");
+		return false;
+	}
+
+	/*
+        private variables
+    */
+	var _cache = {},
+		_objPropertiesMsg,
+		_objPropertiesPth,
+		_productPerPage,
+
+		previousFilterStatus = new Array(),
+		priceList = new Array(),
+		showAllProductList,
+		flterClass = "",
+		//check page is product list or sub collection
+		onProductListPage = true,
+		arr = [],
+		minPrice, maxPrice,
+		refineSerachedActivated = false,
+		slide = false;
+
+	/*
+      @private method : caching jquery objects 
+      @param : none 
+    */
+	_cacheObjects = function() {
+
+		_cache = {
+			$accordionObject: $(".js-accordion"),
+			$listOfproducts: $(".js-view-wrapper li"),
+			$collectionList: $(".js-view-wrapper-collection li"),
+			$lazyLoader: $(".js-lazy-load"),
+			$viewWrapper: $('.js-view-wrapper'),
+			$viewWrapperCollection: $('.js-view-wrapper-collection'),
+			$viewMoreLink: $('.js-view-button'),
+			$viewMoreCollection: $('.js-view-more-collection'),
+			$productFilterForm: $(".js-product-filter"),
+			$productListSelectCount: $(".js-product-list__selection-num"),
+			$productListing: $(".js-product-list__listing"),
+			$showAll: $(".js-show-all"),
+			$subCollection: $(".js-subcollection-list"),
+			$searchResultPage: $(".js-searchresult-page"),
+			$tabTitle: $(".tabs__title"),
+			$removeCriteria: $(".js-remove-criteria"),
+			$tabList: $(".js-tab-list"),
+			$vCrodionTitle: $('.js-refine-selector__title'),
+			$searchPage: $('.js-searchpage'),
+			$sortPrice: $('.js-sort'),
+			$refineSelectionContent: $('.js-refine-selector__content'),
+			$radioButtoninput: $(".js-product-filter").find("input[name='fn_radiocategory']"),
+			$radioButtonState: $("input[name='searchRadio']")
+
+		};
+
+	};
+
+	/*
+          @private method : binding the event 
+          @param : none 
+    */
+	var _bindEvent = function() {
+
+		$(".main-container").on("click", function() {
+			$('.js-refine-selector__title').removeClass('is-deployed');
+			$('.js-refine-selector__content').hide();
+		});
+		if (_cache.$vCrodionTitle.length > 0) {
+
+			$(_cache.$vCrodionTitle).on('click', _refineSelectorDisplayHandler);
+		}
+		if (_cache.$refineSelectionContent.length) {
+			_cache.$refineSelectionContent.on('click', function(e) {
+				e.stopPropagation();
+			});
+		}
+
+		if (_cache.$radioButtonState.length) {
+			setTimeout(function() {
+				if ((!$('.js-search-form').length)) {
+					$('input[name="fn_radiocategory"]#view-all').prop("checked", true).trigger('click');
+					$.uniform.update();
+				}
+			}, 100);
+		}
+
+
+		var productFilterForm = _cache.$productFilterForm,
+			$submitButton = productFilterForm.find("input[type='checkbox']"),
+			$radioButton = productFilterForm.find("input[name='fn_radiocategory']");
+
+		// binding function call
+
+		//_cancelButtonBind($cancelButton);
+		if (!($('.search-page-wrapper').length)) {
+			_viewMoreSelection();
+		} else {
+			cartier.common.viewmoreSearchResult($('.js-productlist'));
+		}
+		_submitButtonBind($submitButton);
+		_radioButtonBind($radioButton);
+		if ($('.js-collection__listing').length) {
+			_viewMoreCollection();
+		}
+
+		_cache.$tabTitle.on('click', function() {
+
+			if ($('.js-content-active').find('.tab-collection-list').length) {
+				_viewMoreSelection();
+			} else if ($('.js-content-active').find('.js-tab-collection-view-all').length) {
+
+				_viewMoreCollection();
+
+			}
+		});
+
+		_cache.$removeCriteria.on("click", function(e) {
+			e.preventDefault();
+			_resetDom1($(".js-product-list__listing"), _cache.$viewWrapper.data('maxlimit'));
+		});
+	};
+
+	var getParameterByName = function(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	};
+
+	var _searchPageRadioFix = function() {
+		if(getParameterByName('fn_radiocategory') === 'false'){
+			$(_cache.$productFilterForm.find('input[value=false][name=fn_radiocategory]')).prop('checked', true);
+			_cache.$productFilterForm.find('input[value=false][name=fn_radiocategory]').trigger('click');
+		} else {
+			$(_cache.$productFilterForm.find('input[value=true][name=fn_radiocategory]')).prop('checked', true);
+			_cache.$productFilterForm.find('input[value=true][name=fn_radiocategory]').trigger('click');			
+		}
+	};
+
+
+	/*
+	 *  @private method : bind click event on radio button
+	 * @param : radioButton :- radio button DOM Element
+	 */
+	var _radioButtonBind = function(radioButton) {
+		if (_cache.$searchResultPage.length > 0) {
+
+			radioButton.each(function() {
+
+				/*				
+				var $form = $(this).closest('form');
+				$(this).on('click', {
+					'form': $form
+				}, _submitForm);*/
+
+
+			});
+
+		} else {
+			radioButton.each(function() {
+				$(this).on('click', {
+					'eventType': 'radio'
+				}, _productListClickHandler);
+
+
+			});
+		}
+
+	},
+
+		/*
+      @private method : show hide vaccordion bar
+      @param : none
+    */
+		_refineSelectorDisplayHandler = function(e) {
+			e.stopPropagation();
+			if ($(this).hasClass('is-deployed')) {
+				$('.js-refine-selector__title').removeClass('is-deployed');
+				$('.js-refine-selector__content').hide();
+			} else {
+				$('.js-refine-selector__title').removeClass('is-deployed');
+				$('.js-refine-selector__content').hide();
+				$(this).toggleClass('is-deployed');
+				$(this).parent().find('.js-refine-selector__content').toggle();
+			}
+		},
+
+		/*
+          @private method : view more event binding
+          @param : none
+    */
+		_viewMoreSelection = function() {
+			var clickEventbinded = false,
+				_productPerPage = _cache.$viewWrapper.data('maxlimit');
+			// if refineSerachedActivated  is false then pass new product list
+		
+			if (refineSerachedActivated === false) {
+
+				var newProductList = $(showAllProductList).find('li').clone(true, true);
+				// remove existing element in dom
+				newProductList.splice(0, _productPerPage);
+				cartier.common.viewMoreSelection(_productPerPage, _cache.$viewMoreLink, _cache.$listOfproducts, newProductList);
+			} else {
+				cartier.common.viewMoreSelection(_productPerPage, _cache.$viewMoreLink, _cache.$listOfproducts);
+			}
+
+		},
+
+		/*
+          @private method : view more collection event binding
+          @param : none
+    */
+		_viewMoreCollection = function() {
+			var _collectionPerPage = _cache.$viewWrapperCollection.data('maxlimit');
+			// if refineSerachedActivated  is false then pass new product list
+
+			cartier.common.viewMoreSelection(_collectionPerPage, _cache.$viewMoreCollection, _cache.$collectionList);
+			_cache.$viewWrapper.unbind("click");
+		},
+
+		/*
+		 *  @private method : bind clcik event on submit button
+		 * @param : submitButton :- submit DOM Element
+		 */
+		_submitButtonBind = function(submitButton) {
+			submitButton.each(function() {
+				$(this).on('click', {
+					'eventType': 'button'
+				}, _productListClickHandler);
+			});
+		},
+
+		/*
+         @public  method   :  refine filter confirm button handler
+         @param : event  - event  element
+    */
+		_productListClickHandler = function(event) {
+
+
+
+			// remove display none form view more button
+			_cache.$viewMoreLink.css('display', "");
+			$(this).closest('.js-refine-selector').find('.js-refine-selector__title').trigger("click");
+
+			/* “ DATE 06-10-2014 |  DEFECT-  | BRANCH Develop”  
+    			START refine title color change class added
+    		*/
+        
+
+			var  refineSelector =$(this).closest('.js-refine-selector'),
+
+			isAnyFilterActive = refineSelector.find('.js-refine-checkbox span.checked').length > 0;
+					
+			if(isAnyFilterActive) {
+					$(refineSelector).find('.js-refine-selector__title').addClass('refine-selector__title__active');
+
+			} else {
+					$(refineSelector).find('.js-refine-selector__title').removeClass('refine-selector__title__active');
+			}
+
+			/*	END */
+			_productFilter(this, minPrice, maxPrice);
+			$('.va-accordion-plp').vaccordion({
+				accordionH: "auto",
+				animSpeed: 400,
+				animOpacity: 0.7,
+				visibleSlices: 5,
+				accordionW: 250
+			});
+
+			$(this).attr('disabled', false);
+			$(this).removeLoader();
+		},
+
+
+		/*
+		 *   @private  method   : set filter  Attribute
+		 *   @param :   none
+		 */
+		_setFilterList = function() {
+
+			var $inputFiledElement = _cache.$productFilterForm.find("input[name=fn_rfnChk]"),
+				filterCaregoryList = new Array();
+			$inputFiledElement.each(function() {
+				filterCaregoryList.push($(this).attr('value'));
+			});
+
+			_setFilterInput(filterCaregoryList);
+		},
+
+		/*
+          @private  method   : set the filter attribute according new json of a particular categories
+          @param :  filterList :- filter list
+    */
+		_setFilterInput = function(filterList) {
+
+			var inputFiled,
+				productList = _cache.$productListing,
+				inputDisabled = true;
+			$.each(filterList, function(key, value) {
+				inputFiled = filterList[key];
+
+				inputDisabled = (productList.find("." + inputFiled + '.js-inResult')).length > 0 ? false : true;
+				var inputFiledElement = _cache.$productFilterForm.find("input[value=" + inputFiled + "]");
+				if (inputDisabled) {
+					inputFiledElement.closest('li').hide();
+				} else {
+					inputFiledElement.closest('li').show();
+				}
+				if (inputFiledElement.prop('checked')) {
+					inputFiledElement.closest('li').show();
+				}
+
+			});
+		},
+
+
+		/*
+          @private method : product filter
+          @param : none
+    */
+		_productFilter = function(category, minPrice, maxPrice) {
+
+			//check if search result page then submit form else use refine search
+			if (_cache.$searchPage.length > 0) {
+
+				$('.js-search-form').submit();
+
+			} else {
+
+				var
+				radioButtonValue,
+					maxProduct = $('.js-view-wrapper').data('maxlimit'),
+					productList,
+					filterResult,
+					availcriteria = [],
+					radioCategory = ($(category).attr('name') === 'fn_radiocategory');
+				if (!radioCategory) {
+					if ($(category).prop('checked')) {
+						flterClass += "." + $(category).attr('value');
+					} else {
+						flterClass = flterClass.replace("." + $(category).attr('value'), "");
+					}
+				}
+
+
+				// adding radio button status in filter class
+				radioButtonValue = $(_cache.$productFilterForm.find('input[name=fn_radiocategory]:checked'));
+				radioButtonValue = radioButtonValue.attr('value');
+
+				//To Keep the Filter selected in PLP, to re enable when coming from PDP to PLP
+				localStorage.setItem('plpviewallselected', radioButtonValue);
+
+
+				if (radioButtonValue === 'false') {
+					flterClass += '.js-true';
+					var regex = /(.js\-true)/g;
+					flterClass = flterClass.match(regex, '').removeDuplicates();
+					flterClass = flterClass.toString();
+				} else {
+					flterClass = flterClass.replace('.js-true', '');
+				}
+				productList = _cache.$productListing;
+				if (flterClass.trim() === '') {
+					filterResult = productList.find('li.one-product');
+				} else {
+					filterResult = productList.find(flterClass);
+
+				}
+
+				if ($('.js-range-slider').length && slide) {
+					_refineAcordingPrice(filterResult, minPrice, maxPrice);
+					filterResult = productList.find('.js-in-price-result');
+				}
+
+				_resetDom(productList, maxProduct, filterResult.length);
+
+
+				$.each(filterResult, function(value, obj) {
+					$(obj).removeClass('js-not-in-result');
+
+				});
+
+
+				_displayFilterProductCount(filterResult.length);
+				_setProductList(filterResult);
+				_setFilterList();
+				//reinitialize view more
+				_cache.$viewMoreLink.unbind('click');
+				cartier.common.viewMoreSelection(_productPerPage, _cache.$viewMoreLink, filterResult);
+
+				_cacheObjects();
+			}
+
+		},
+
+		/*
+		 *     @private  method   : set product content according to the new product list
+		 *    @param : productList :- list product exist in JSon file
+		 */
+		_setProductList = function(productList) {
+
+			//  maximum no. of product that display first time (before click on view more)
+			var maxProduct = $('.js-view-wrapper').data('maxlimit'),
+
+				//product display or not after ajax call
+				productDisplayProperty = true;
+
+			// if search result hava result less then max product the hide view more button
+			if (productList.length > maxProduct) {
+				_cache.$viewMoreLink.removeClass('display-none');
+			} else {
+				_cache.$viewMoreLink.addClass('display-none');
+			}
+			if (onProductListPage === false) {
+				_cache.$productListing.empty()
+					.append(productList);
+			}
+
+			// iterate the product list in json
+			$.each(productList, function(key, value) {
+
+				if (key >= maxProduct) {
+					productDisplayProperty = false;
+				}
+
+				// set the Attribute of current product according new Json Result
+				_setProductAttribute(productList[key], productDisplayProperty);
+
+			});
+
+			// hide  extra product from DOM
+			if (onProductListPage === true) {
+				_removeExtraProduct();
+			}
+
+		},
+
+		/*
+		 *    @private  method   : hide extra product after refine filter those are not in result
+		 *    @param : productListing
+		 */
+		_removeExtraProduct = function() {
+			var listOfProducts = _cache.$productListing.find('.js-not-in-result');
+			$.each(listOfProducts, function(key, value) {
+
+				$(this).removeClass('js-hide-content js-not-in-result')
+					.addClass('display-none');
+
+			});
+		},
+
+		/*
+         @private  method   : set the Attribute of given  product element
+         @param :  pageElement :-  product element holder in dom
+                   productDisplayProperty :- product display or not in Dom before on click on view more button
+    */
+		_setProductAttribute = function(pageElement, productDisplayProperty) {
+			var pageChildElements = $(pageElement).children();
+
+			// cashing atribute element of a product
+			var productImageUrl = pageChildElements.find("img");
+			if (productDisplayProperty === true) {
+				productImageUrl.attr("src", productImageUrl.data("linksrc"));
+				$(pageElement).removeClass('js-hide-content')
+					.removeClass('display-none')
+					/* “ DATE  17-10-2014|  DEFECT- CARE-5508 | BRANCH 2.0.0”  
+    					START In result  class added 
+        			*/
+    
+					.addClass('js-inResult');
+					/*END */
+			} else {
+
+				$(pageElement).removeClass('display-none')
+					.addClass('js-hide-content  js-inResult');
+			}
+
+		},
+
+		/*
+          @private method : display product count after filter result if count is 1 then hide count element
+          @param : count - no of product in result
+    */
+		_displayFilterProductCount = function(count) {
+			if (count >= 1) {
+				_cache.$productListSelectCount.removeClass("display-none")
+					.html(count);
+			} else {
+				if (count === 0) {
+					_cache.$productListSelectCount.html(_objPropertiesMsg.productRefineNoResult);
+				} else {
+					_cache.$productListSelectCount.addClass('display-none');
+				}
+
+			}
+		},
+
+		/*
+          @private method : Reset DOM
+          @param : productList - Product list
+          			maxProduct - total number of products.
+    */
+		_resetDom1 = function($productList, maxProduct) {
+			$productList = $($productList).find('li');
+			$.each($productList, function(key, obj) {
+				$(obj).removeClass('js-not-iniresult')
+					.removeClass('js-inResult')
+					.removeClass('js-in-price-result')
+					.removeClass('display-none')
+					.removeClass('js-hide-content');
+				if (key >= maxProduct) {
+					$(obj).addClass('js-hide-content');
+				}
+
+			});
+
+			if ($productList.length > maxProduct) {
+				$('.js-view-button').removeClass('display-none')
+					.removeAttr('style');
+			}
+
+			_viewMoreSelection();
+			flterClass = "";
+			$.each(_cache.$productFilterForm.find('.sub-menu li'), function(key, obj) {
+				if ($(this).css('display') === 'none') {
+					$(this).show();
+				}
+			});
+
+			$('.va-accordion-plp').vaccordion({
+				accordionH: "auto",
+				expandedHeight: 20,
+				animSpeed: 400,
+				animOpacity: 0.7,
+				visibleSlices: 5,
+				accordionW: 250
+			});
+
+
+			$('.js-refine-checkbox .checked').trigger('click');
+			$.uniform.update('.js-refine-checkbox input');
+		},
+
+		/*
+          @private method : Reset DOM
+          @param : productList - Product list
+          			maxProduct - total number of products
+          			resultLength - Total number of results
+    */
+		_resetDom = function($productList, maxProduct, resultLength) {
+			var i = 0;
+			$productList = $($productList).find('li');
+			$.each($productList, function(key, obj) {
+
+				if ($(obj).hasClass('display-none') === true) {
+
+					$(obj).addClass('js-not-in-result')
+						.removeClass('display-none')
+						.removeClass('js-inResult')
+						.removeClass('js-in-price-result');
+
+				} else {
+
+					$(obj).addClass('js-not-in-result')
+						.removeClass('js-inResult')
+						.removeClass('js-in-price-result');
+				}
+
+				if (i >= maxProduct || key > resultLength) {
+					$(this).addClass('js-hide-content');
+				}
+
+				i++;
+			});
+		},
+
+		/*
+          @private method : refine product in price list
+          @param : newProductList - product list
+		           minPrice - Minimum Price
+		           maxPrice - Maximum Price
+    */
+		_refineAcordingPrice = function(newProductList, minPrice, maxPrice) {
+
+			var minPriceValue = minPrice,
+				maxPriceValue = maxPrice,
+				productIsInFilter = false,
+				priceList;
+
+			newProductList.each(function(key, value) {
+				productIsInFilter = false;
+				if (typeof $(newProductList[key]).data('price') !== "undefined") {
+					// extracr price array and convert it into integer
+					priceList = $(newProductList[key]).data('price').split(',').map(Number);
+					//check product is in selected price range
+					productIsInFilter = checkProductInPirceFilter(minPriceValue, maxPriceValue, priceList);
+				}
+				if (productIsInFilter) {
+					$(newProductList[key]).addClass('js-in-price-result');
+				}
+
+			});
+
+		},
+
+		/*
+          @private method : check min and max price range exist in given price list
+          @param : minPrice - min price,
+                   maxPrice- max price,
+                   priceList - max price
+    */
+		checkProductInPirceFilter = function(minPrice, maxPrice, priceList) {
+
+			var productIsInResult = false;
+			priceList = priceList.sort();
+
+			$.each(priceList, function(index, val) {
+
+				if (minPrice <= val && maxPrice >= val) {
+
+					productIsInResult = true;
+				}
+
+			});
+
+			return productIsInResult;
+		},
+
+		/*
+          @private method : initialize range slider
+          @param : None
+    */
+		_initializerRangeSlider = function() {
+			$(function() {
+				var currencySymbol = $('.js-range-slider').data('currency');
+				$(".js-range-slider").slider({
+					range: true,
+					min: 0,
+					max: (arr.length) - 1,
+					values: [0, (arr.length) - 1],
+					animate: true,
+					slide: function(event, ui) {
+						slide = true;
+						_productFilter(_cache.$productFilterForm.find("input[name=fn_radiocategory]"), arr[ui.values[0]], arr[ui.values[1]]);
+						$('.js-range-slider').closest('.js-refine-selector__content').find('p').html(currencySymbol + "" + arr[ui.values[0]] + " to " + currencySymbol + arr[ui.values[1]]);
+					}
+				});
+
+			});
+
+		},
+
+
+		/*
+          @private method : initialize range slider search
+          @param : None
+    */
+		_initializerRangeSliderSearch = function() {
+			$(function() {
+				var lb, ub;
+				if ($("input[name='priceRangeLowerBound']").val() === "null" || $("input[name='priceRangeUpperBound']").val() === "null") {
+					lb = 0;
+					ub = (arr.length) - 1;
+				} else {
+					lb = arr.indexOf(parseInt($("input[name='priceRangeLowerBound']").val()));
+					ub = arr.indexOf(parseInt($("input[name='priceRangeUpperBound']").val()));
+
+				}
+				var currencySymbol = $('.js-range-slider').data('currency');
+				$(".js-range-slider").slider({
+					range: true,
+					min: 0,
+					max: (arr.length) - 1,
+					values: [lb, ub],
+					animate: true,
+					slide: function(event, ui) {
+						slide = true;
+						$("input[name='minPrice']").val(arr[ui.values[0]]);
+						$("input[name='maxPrice']").val(arr[ui.values[1]]);
+
+						$('.js-range-slider').closest('.js-refine-selector__content').find('p').html(currencySymbol + "" + arr[ui.values[0]] + " to " + currencySymbol + arr[ui.values[1]]);
+					},
+					stop: function(event, ui) {
+						$(".js-search-form").submit();
+					}
+				});
+
+			});
+		},
+
+		/*
+          @private method : Get the price points
+          @param : None
+    */
+		_getPricepoints = function() {
+			var str = $("input[name='priceSlab']").val().replace('[', '').replace(']', '').split(',');
+			arr = str.map(function(x) {
+				return parseInt(x, 10);
+			});
+			minPrice = arr[0];
+			maxPrice = arr[(arr.length) - 1];
+		},
+
+		/*
+          @private method : Scroll to top
+          @param : None
+    */
+		_scrolltop = function() {
+			_cache.$tabTitle.on('click', function() {
+				if (!$(this).hasClass('js-tab-active')) {
+					_cache.$tabList.ScrollTo({
+						duration: 800,
+						offsetTop: 40
+					});
+				}
+			});
+		},
+
+		/*
+      @private method : Add to top link
+      @param : None
+    */
+		_addBacktoTopLink = function() {
+			var wWidth = $(window).width(),
+				mainWidth = $('.main-container').width(),
+				gutter = (wWidth - mainWidth) / 2,
+				rightPos = mainWidth + gutter;
+			$('.js-link-to-top a').css('left', rightPos + 'px');
+
+			// Scroll to top when your click on link.
+
+			$('.js-link-to-top a').on('click', function(event) {
+				event.preventDefault();
+				$('.main-container').ScrollTo({
+					top: 0,
+					duration: 800,
+					offsetTop: 140
+				});
+			});
+
+
+			// Function to show and hide the top link when you scroll.
+			if ($('.main-container').length > 0) {
+				$(window).scroll(function() {
+
+
+					var wScrollTop = $(this).scrollTop(),
+						tOffsetTop = $('.search-page-wrapper').offset().top;
+					if (wScrollTop >= (tOffsetTop - 100)) {
+						$('.js-link-to-top a').addClass('is-fixed').fadeIn(100);
+					} else {
+						$('.js-link-to-top a').fadeOut(300, function() {
+							$(this).removeClass('is-fixed');
+						});
+					}
+				});
+			}
+
+		},
+
+		/*
+          @private method : Bind event for sorting price list
+          @param : None
+    */
+		_sortList = function() {
+			var toggle = 0;
+			_cache.$sortPrice.on('click', function() {
+				toggle = (toggle + 1) % 2;
+				$.each(_cache.$productListing.find("li"), function(k, v) {
+					if ($(this).data('price')) {
+						$(this).addClass('has-price');
+					}
+				});
+				_cache.$productListing.find("li.has-price").sort(function(a, b) {
+					if (toggle) {
+						return (parseInt($(b).data('price').split(',')[0]) - parseInt($(a).data('price').split(',')[0]));
+					} else {
+						return (parseInt($(a).data('price').split(',')[0]) - parseInt($(b).data('price').split(',')[0]));
+					}
+				}).appendTo('.js-product-list__listing');
+			});
+		},
+
+		/*
+      @private method : On page load to update collections
+      @param : product id
+    */
+ 	  _collectionOnPageLoadCalls = function() {
+
+ 			var objXHR = cartier.ajaxWrapper.getXhrObj({
+ 				type: 'GET',
+ 				//data: 'path=' + $('#pagePath').val(),
+ 				url: _objPropertiesPth.collectionJson,
+ 				dataType: 'json',
+ 				contentType: "application/x-www-form-urlencoded"
+ 			});
+
+
+ 			if (objXHR) {
+ 				objXHR.done(function(data) { 
+ 					// handle failure
+ 					if (typeof data.success !== "undefined" && !data.success) {
+ 						// handle redirectURL exist if the session expires
+ 						// data.redirectURL ?  window.location.href = data.redirectURL : $form.find('.server_message').html(data.errorMessage);
+ 					} else {
+ 						var parsedData = cartier.common.cartierJSONparser({
+ 							json: data
+ 						});
+
+ 						if (parsedData !== false) {
+
+ 							var collectionList = $('.js-collection__listing li'),
+ 								i=0,
+ 								model= CQ.I18n.getMessage("model"),
+ 								models= CQ.I18n.getMessage("models"),
+ 								sum=0;
+
+ 							$.each(parsedData, function(key, value){
+
+
+ 								$("." + key).find('.js-count').html(parsedData[key]);
+								 	value = parseInt(value);
+									sum += parseInt(value);
+ 								if( value === 1){
+ 									$("." + key).find('.js-model').html('&nbsp;' + model);
+ 								}
+ 								else if( value === 0){
+ 									$("." + key).addClass('display-none').remove();
+ 								}
+ 								else{
+ 									$("." + key).find('.js-model').html('&nbsp;' + models);
+ 								}
+ 								i++;
+ 							});
+
+                            var maxCount = $('.js-view-wrapper-collection').data('maxlimit');
+
+                            for(var i = 0 ; i< maxCount ; i++) {
+
+                                if($('.js-view-wrapper-collection').find('li:eq(' + i + ')').hasClass('js-hide-content'))
+                                    $('.js-view-more-collection').trigger('click');
+
+                            };
+
+                            $('.js-collection-sum').text($('.js-view-wrapper-collection').find('li').length);
+
+                            var textkey = "";
+
+							if($('.js-view-wrapper-collection').find('li').length === 1)
+                                textkey = "one.";
+
+                            if($('.js-is-collection').data('iscollection')){
+								textkey = textkey + "collection.text";
+                            }
+                            else {
+								textkey = textkey + "category.text";
+                            }
+
+                            $('.js-collection-cat-text').text(" " + CQ.I18n.getMessage(textkey));
+
+                            $('.tab-collection-list').removeClass('display-none');
+ 						}
+
+ 					}
+ 				});
+ 			}
+
+
+ 		},
+
+ 		viewAllCollectionLink = function(){
+
+                $('.js-viewcollection').on('click', function(){
+
+						_viewAllCollectionAjaxCall();
+                })
+            },
+
+            _viewAllCollectionAjaxCall = function(action) {
+
+			//$('.js-viewcollection').closest('div').addLoader();
+ 			var objXHR = cartier.ajaxWrapper.getXhrObj({
+ 				type: 'GET',
+ 				url: _objPropertiesPth.viewAllCollection,
+ 				dataType: 'html',
+ 				contentType: "application/x-www-form-urlencoded",
+ 				beforeSend: function(jqXHR) {
+ 						$('.js-viewcollection').unbind( "click" );
+ 						$(".js-tab-collection-view-all").addLoader();
+ 					}
+ 			});
+
+
+        if (objXHR) {
+            objXHR.done(function(data) {
+               $(".js-tab-collection-view-all").removeLoader();
+               $(".js-tab-collection-view-all").html(data);
+                $("input:checkbox, input:radio, select").not('.no-uniform').uniform();
+                productlist.init();
+
+            });
+
+        }
+
+
+
+ 		};
+
+	/*
+	 *    @public   method   : initialize all method
+	 *    @param : none
+	 */
+	productlist.init = function() {
+		if ($("input[name='priceSlab']").length) {
+			_getPricepoints();
+		}
+
+		console.log('JS-LOG:Product list Init Called');
+		_objPropertiesPth = cartier.properties.paths;
+		_objPropertiesMsg = cartier.properties.messages;
+		_cacheObjects();
+		if($('.js-search-form').length){
+			_searchPageRadioFix();
+		}
+		_bindEvent();
+		_sortList();
+		$('.va-accordion-plp').vaccordion({
+			accordionH: "auto",
+			expandedHeight: 20,
+			animSpeed: 400,
+			animOpacity: 0.7,
+			visibleSlices: 5,
+			accordionW: 250
+		});
+
+		if ($('.js-range-slider').length > 0 && $('.js-searchpage').length) {
+			_initializerRangeSliderSearch();
+		} else if ($('.js-range-slider').length > 0) {
+			_initializerRangeSlider();
+		}
+
+		_collectionOnPageLoadCalls();
+		_addBacktoTopLink();
+
+
+		if (_cache.$tabTitle.length) {
+			_scrolltop();
+		}
+		viewAllCollectionLink();
+		//For Handling/persisting PLP view-all/Sold Online filters
+		if (localStorage.getItem('plpviewallselected') !== '' && (!$('.js-search-form').length)) {
+			if (localStorage.getItem('plpviewallselected') === 'false') {
+				$(_cache.$productFilterForm.find('input[value=false][name=fn_radiocategory]')).prop('checked', true);
+				_cache.$productFilterForm.find('input[value=false][name=fn_radiocategory]').trigger('click');
+			} else {
+				$(_cache.$productFilterForm.find('input[value=true][name=fn_radiocategory]')).prop('checked', true);
+				_cache.$productFilterForm.find('input[value=true][name=fn_radiocategory]').trigger('click');
+			}
+			localStorage.removeItem('plpviewallselected');
+		}
+	};
+
+}(window, jQuery, cartier.productlist));

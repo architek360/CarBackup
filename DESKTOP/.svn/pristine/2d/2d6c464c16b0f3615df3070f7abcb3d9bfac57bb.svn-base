@@ -1,0 +1,13 @@
+<div class="billing-form-japan grid js-form-validator js-billing js-data-formdisplay" data-formdisplay="false">
+        <div class="billing-address-form-japan">
+          <form>
+            <!--#include virtual="../../components/billing_form_japan/desktop.shtml" -->
+
+            <div class='js-billing-section-two display-none'>
+                <!--#include virtual="../../components/billing_confirmation/desktop.shtml" -->
+            </div>
+
+          </form>
+        </div>
+	
+</div>

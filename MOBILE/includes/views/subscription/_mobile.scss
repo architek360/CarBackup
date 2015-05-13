@@ -1,0 +1,244 @@
+/*------------------------------------*\
+    SUBSCRIPTION AND INTRESTS -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.subscription)
+ * RECEIVE CARTIER NEWS BLOCK....personal details (.receive-news)
+ * PRODUCT INTRESTED BLOCK....birthday details (.product-int)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+@mixin common-style(){
+	border:1px solid $primary-17;
+	@include f(20);
+	@include rem('padding',20px 20px 10px);
+	display:inline-block;
+	text-transform:uppercase;
+	@include box-sizing(border-box);
+	@include rem(line-height,22px);
+}
+
+@mixin sub-form(){
+	display:block;
+	width:100%;
+	@include f(20);
+	display:inline-block;
+}
+.subscription{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	width: 81.25%;
+	margin: 0 auto;
+	.heading2{
+		@include f(28);
+		border-bottom:none;
+		@include rem(padding, 20px 0 22px 0);
+	}
+	.heading3{
+		@include medium-font;
+		@include f(28);
+		@include rem(padding, 25px 20px 10px);
+		text-transform:uppercase;
+		text-align:center;
+		border-top:1px solid $primary-3;
+		display:table;
+		margin:0 auto;
+		@include rem(line-height,32px);
+		width: 60%;
+	}
+	.subscription__welcome-image{
+		height: 100%;
+ 		width: 100%;
+ 		@include rem(height,238px);
+  		background:url($path-images+"/content/subscription_welcome.jpg") no-repeat;
+  		background-size:cover;
+		img{
+			height:auto;
+			width:100%;
+		}
+	}
+	.grid__item{
+		@include bold-font;
+		@include rem('padding',0px);
+		label{
+			@include brand-font;
+		}
+		&:last-child{
+			padding:0;
+		}
+	}
+	.grid__item--row{
+		@include rem('min-height',120px);
+		input + span {
+			@include rem(height,35px);
+		}
+	}
+	.grid__item--pad{
+		@include rem('padding',0 0 30px 0);
+	}
+	
+	/*------------------------------------*\
+	    $RECEIVE CARTIER NEWS BLOCK
+	\*------------------------------------*/
+
+	.receive-news{
+		@include linear-gradient(135deg, $primary-1 0%, $primary-28  73%,$primary-27 100%);
+		@include common-style;
+		@include rem('margin',5px 0 24px 0);
+		.receive-news__list{
+			@include set-ulFix;
+			@include rem(padding, 50px 0 0);
+			li{
+				display:inline-block;
+				vertical-align: top;
+				@include rem(line-height,22px);
+				.form-check{
+					@include sub-form;
+				}
+				.form-check-label{
+					width:84%;
+				}
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $RODUCT INTRESTED BLOCK
+	\*------------------------------------*/
+
+	.product-int{
+		@include linear-gradient(135deg, $primary-1 0%, $primary-28  73%,$primary-27 100%);
+		@include common-style;
+		@include rem('margin',5px 0 27px 0);
+		.product-int__list{
+			@include set-ulFix;
+			@include rem(padding, 24px 0 0);
+			li{
+				display:inline-block;
+				vertical-align: top;
+    			width: 49%;
+    			@include rem(height,69px);
+    			@include rem(line-height,22px);
+				.form-check{
+					@include sub-form;
+				}
+				.form-check-label{
+					width:70%;
+				}
+			}
+			li:last-child{
+				@include rem(height,54px);
+			}
+		}
+	}
+	.form-check-label{
+		@include rem(padding-top, 2px);
+	}
+	.button-wrapper{
+		text-align:center;
+		clear:both;
+		.cta-button{
+			margin: 10px auto;
+		}
+	}
+}
+.device-s4{
+	.subscription{
+		.form-check-label{
+			@include rem(padding-top, 3px);
+		}
+	}
+}
+.js-subscription-and-interest-form{
+	.cq-colctrl-lt0-c0{
+		@include linear-gradient(135deg, $primary-1 0%, $primary-28  73%,$primary-27 100%);
+		border:1px solid $primary-17;
+		@include rem(padding, 20px 20px 10px);
+		@include f(20);
+		display: inline-block;
+  		text-transform: uppercase;
+  		@include box-sizing(border-box);
+  		@include rem(margin, 5px 0 24px 0);
+  		width: 100%;
+  		@include rem(line-height,22px);
+		.group-wrapper{
+			display:inline-block;
+		}
+		.heading-wrapper{
+			width:100%;
+		}
+		.heading4{
+			@include bold-font();
+			@include f(20);
+			text-align: left;
+			padding: 30px 0 15px 0;
+		}
+		.checkbox-wrapper .form-checkbox-label{
+    		width:90%;
+		}
+	}
+	.cq-colctrl-lt0-c1{
+		@include linear-gradient(135deg, $primary-1 0%, $primary-28  73%,$primary-27 100%);
+		border:1px solid $primary-17;
+		@include f(20);
+		@include rem(padding, 20px 20px 10px);
+		display: inline-block;
+  		text-transform: uppercase;
+  		@include box-sizing(border-box);
+  		@include rem(line-height,22px);
+  		@include rem(margin, 5px 0 24px 0);
+  		width: 100%;
+  		.heading-wrapper{
+			width:100%;
+		}
+		.group-wrapper .checkbox-wrapper{
+			width:50%;
+			@include rem(padding, 0 0 10px);
+			min-height: 45px;
+		}
+		.heading4{
+			@include bold-font();
+			@include f(20);
+			text-align: left;
+			padding: 10px 0 25px;
+		}
+		.checkbox-wrapper .form-checkbox-label{
+    		width:81%;
+		}
+	}
+	.checkbox-wrapper{
+		padding:8px 0;
+		.form-checkbox-label {
+			width:100%;
+			color:$primary-2;
+			text-transform:uppercase;
+			@include brand-font();
+			@include rem(font-size,20px);
+			@include rem(line-height,25px);
+			@include rem(margin-top,2px);
+			width:90%;
+		}
+	}
+	.fn_grpinterdinacc.checkbox-wrapper{
+		display:none;
+	}
+	hr{
+   		display:none;
+	}
+}
+
+.exhibitions.welcome_image .comp-rich-text{margin: 0 auto;}
+.welcome_image img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.coloumn-wrapper .grid .grid__item:first-child {
+	padding-left: 0;
+}
+
+.coloumn-wrapper .row .rte-wrapper{width:100%;}

@@ -1,0 +1,255 @@
+/*------------------------------------*\
+    Order Detail -- Desktop CSS
+\*------------------------------------*/
+.order-detail {
+	width: 100%;
+
+	.assist-wrapper{
+		float: right;
+		text-align: right;
+
+		.assistance{
+		@include proxiBold-font;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		font-size: 11px;
+		@include setSpriteDesktop(100%, auto ,-43px ,-119px, transparent);
+		padding: 4px 0 0 30px;
+		height: 31px;
+		display: block;
+		margin: 0;
+
+			.red{
+				color: $primary-5;
+				@include proxi-font;
+			}
+		}
+	}
+
+	.order-detail__title{
+		border: none;
+		clear: both;
+		@include rem(padding, 0 0 25px);
+
+		.heading4{
+			text-align: center;
+
+		}
+	}
+
+	@mixin order-common-prop(){
+		border:1px solid $primary-11;
+		@include rem(padding, 25px 20px);
+		@include rem(margin, 0 0 15px 15px);
+		text-align: center;
+		@include main-font;
+	}
+	.address-block{
+		@include order-common-prop();
+
+		.title-block{
+			@include proxi-font;
+			text-transform: uppercase;
+			@include rem(padding-bottom, 10px);
+			@include f(18);
+			@include rem(letter-spacing, 1px);
+		}
+
+		.address-box__name{
+			@include proxi-font;
+			@include rem(padding, 10px 0 15px);
+			text-transform: uppercase;
+			@include f(15);
+		}
+
+		p{
+			@include rem(padding, 1px 0);
+			text-align: center;
+			@include f(13);
+			@include rem(letter-spacing, 0px);
+		}
+
+		.billing-mention{
+			color: $primary-59;
+			@include f(11);
+			font-style: italic;
+			@include rem(line-height, 15px);
+		}
+
+		.delivery-number-days{
+			@include proxiBold-font();
+			text-transform: uppercase;
+			@include f(13);
+			@include rem(letter-spacing, 1px);
+			@include rem(padding-bottom, 30px);
+		}
+	}
+
+	
+	.grid__item{
+		padding: 0;
+	}
+
+	.order-products{
+		@include linear-gradient(99deg, #000000 47%, #010000 0%, #460000 100%);
+		@include rem(padding, 20px);
+		display: inline-block;
+		border-top: 1px solid $primary-11;
+		border-bottom: 1px solid $primary-11;
+
+
+		.order-header{
+
+			.order-date{
+				@include proxi-font;
+				@include rem(letter-spacing, 1px);
+				text-transform: capitalize;
+				@include f(13);
+				color: $primary-2;
+				float: left;
+			}
+
+			.print{
+				@include main-font;
+				@include f(13);
+				font-style: italic;
+				@include rem(letter-spacing, 1px);
+				float: right;
+				letter-spacing: normal;
+				@include rem(padding-left, 12px);
+				@include rem(margin-left, 15px);
+				@include setSpriteDesktop(50px, 50px ,-431px ,-59px, transparent);
+				color:$primary-3;
+			}
+
+			.order-number {
+				@include proxi-font;
+				@include rem(letter-spacing, 1px);
+				text-transform: uppercase;
+				@include f(17);
+				color:$primary-2;
+				@include rem(margin, -4px 0 0);
+				text-align: center;
+			}
+		}
+	}
+
+	.product-wrapper{
+		display: block;
+
+		.col1{
+		width: 35%;
+		float: left;
+		@include rem(margin, 5px 0);
+		text-align: center; 
+
+		img{
+			height: 100%;
+			width: 100%;
+			}
+		}
+
+		.col2{
+		width: 65%;
+		float: left;
+		@include rem(margin, 25px 0);
+		@include f(15);
+		@include proxiBold-font;
+		text-align: left;
+
+			.price-container{
+				@include proxi-font;
+				text-align: center;
+				@include rem(letter-spacing, 1px);
+
+				.unit-price, .quantity, .price{
+					display: inline-block;
+				}
+			}
+
+			.name {
+				@include proxiBold-font;
+				@include rem(letter-spacing, 1px);
+				text-transform: uppercase;
+				@include f(14);
+				@include rem(margin, 0 0 5px);
+			}
+
+			.material{
+				color: $primary-3;
+				@include main-font;
+				font-style: italic;
+
+				p{
+					@include f(15);
+				}
+
+			}
+			.sku, .size{
+				text-transform: uppercase;
+				@include f(11);
+				@include rem(letter-spacing, 1px);
+				@include rem(line-height, 15px);
+			}
+		}
+	}
+
+	.price-detail{
+		width: 50%;
+		float: right;
+		@include rem(padding, 50px 0 5px);
+		color: $primary-3;
+
+		.price-detail__row{
+			@include f(13);
+			@include proxiBold-font;
+			@include rem(padding, 8px 0 8px);
+
+
+			.price-detail--note{
+				@include f(11);
+				@include rem(padding, 1px 0 0);
+
+			}
+
+			.price-detail__col-right{
+				@include f(13);
+				@include proxi-font;
+			}
+		}
+
+		.subtotal__row{
+			@include f(17);
+			@include proxiBold-font;
+			border-top:1px solid $primary-3;
+			@include rem(padding, 10px 0 0);
+			color: $primary-2;
+
+			.price-detail--note{
+				@include f(11);
+				color: $primary-2;
+				@include rem(padding-top, 2px);
+			}
+
+			.price-detail__col-right{
+				@include proxi-font;
+				@include f(17);
+			}
+		}
+		.grid__item{
+			@include rem(padding, 0 0 10px 0);
+		}
+
+		.price-detail__col{
+			@include rem(padding, 5px 0 0);
+		}
+
+		.right-zero{
+			@include f(15);
+		}
+	}
+
+	.grid{
+		@include rem(margin-left, 0px);
+	}
+}

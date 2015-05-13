@@ -1,0 +1,394 @@
+/*!
+ * storelocator.js
+ * This file contains application namespace and initializing the other modules
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-21
+ * @author    SapientNitro
+ * @licensor  Cartier Desktop
+ * @site      Cartier Desktop
+ *
+ * USAGE :
+ *  
+ * Initialize tabs Plugin with pluginName "storelocator" to top container after Main-container"
+ * While passing values for
+    errorMsgClass2,
+    suggestionErrorClass,
+    textForNear,
+    textForIn
+
+        initializeStoreLocator = function() {
+            _cache.$storeObject.storelocator({
+                errorMsgClass2: _cache.errorMsgClass2,
+                suggestionErrorClass: _cache.suggestionErrorClass,
+                textForNear: _cache.textForNear,
+                textForIn: _cache.textForIn
+            });
+        },
+
+
+     * * * * *
+
+    Then use the _geocodeMe function to send a Autocomplete Object or an Address String
+    and get a string with N-E-S-W Bounds of the Address String.
+
+    NOTE: KEEP _geocodeCallback and  _geoCityCallback as 3rd and 4th arguments for _geocodeMe respectively.
+          DO NOT REMOVE OR CHANGE THERE POSITIONS
+
+    E.g..
+
+    _cache.$storeObject.data('plugin_storelocator')._geocodeMe(autocomplete1, null, _geocodeCallback, _geoCityCallback);
+
+
+ */
+
+;
+(function($, window, document, undefined) {
+	'use strict';
+	//check if jquery is defined, else retun
+	if ($ === undefined) {
+		console.log("jQuery not found");
+		return false;
+	}
+
+	var pluginName = "storelocator",
+		defaults = {
+			errormsg2Class: "js-store-locator_error-msg-2",
+			suggestionerrorClass: "js-store-locater__error-suggest",
+			textForNear: "near",
+			textForIn: "in"
+		},
+		GeoUrl = "";
+
+	function Plugin(element, options) {
+
+
+		this.element = element;
+		this.$elem = $(this.element);
+		this.options = $.extend({}, defaults, options);
+		this.init();
+		this._geocodeMe();
+
+	}
+
+	Plugin.prototype = {
+		/*@Static  method   :   init function
+          @param            :   None
+        */
+
+		init: function() {
+
+		},
+		/* END of init*/
+		_geocodeSender: function() {
+			return GeoUrl;
+		},
+
+		_geocodeMe: function(AutocompleteObj, GeoAddr, _geocodeCallback, _geoCityCallback) {
+			var errormsg2Class = this.options.errormsg2Class,
+				suggestionerrorClass = this.options.suggestionerrorClass,
+				textForNear = this.options.textForNear,
+				textForIn = this.options.textForIn,
+				geoCity = '',
+				isGeolocated = false,
+				geocoder = new google.maps.Geocoder(),
+				// Function to Geocode Searched Addr into Bounds. Returns GeoUrl using ' cartier.boutique.setGeoUrl(GeoUrl) '
+				keyword,
+				place,
+				data,
+				geoResponse,
+				sw, ne,
+				parameters,
+				i = 0;
+			if (AutocompleteObj && AutocompleteObj !== '') {
+				// Get the place details from the autocomplete object.
+				if (AutocompleteObj.types && AutocompleteObj.types[0] == "geocode") {
+					place = AutocompleteObj.getPlace();
+					keyword = place.formatted_address;
+				} else {
+					keyword = AutocompleteObj;
+				}
+			};
+
+			if (GeoAddr != null) {
+				if (typeof(GeoAddr) === "string") {
+					data = {
+						'address': GeoAddr
+					}
+				} else {
+					data = {
+						'bounds': GeoAddr
+					};
+				}
+				isGeolocated = true;
+			} else {
+				data = {
+					'address': keyword
+				};
+			}
+
+			geocoder.geocode(data, function(response, status) {
+				// defaults
+				var distance = 0.05,
+					center = {},
+					centerStr = "0,0"
+				if (status == google.maps.GeocoderStatus.OK && response[0]) {
+					$('.' + errormsg2Class + '').hide();
+					$('.' + suggestionerrorClass + '').hide();
+					geoResponse = response[0];
+					if (typeof(geoResponse.geometry.viewport) != "undefined" && geoResponse.geometry.viewport !== null) {
+						var lat0 = geoResponse.geometry.viewport.getNorthEast().lat(),
+							lng0 = geoResponse.geometry.viewport.getNorthEast().lng(),
+							lat1 = geoResponse.geometry.viewport.getSouthWest().lat(),
+							lng1 = geoResponse.geometry.viewport.getSouthWest().lng();
+						distance = Math.sqrt(Math.pow(lat1 - lat0, 2) + Math.pow(lng1 - lng0, 2)) / 2;
+						center = geoResponse.geometry.viewport.getCenter()
+						centerStr = center.toUrlValue();
+					}
+
+
+					var addrCounter = 0,
+						geoResponseCity = '',
+						geoResponseState = '',
+						setCity = '',
+						setState = '';
+
+
+					$.each(geoResponse.address_components, function(index, val) {
+						if (geoResponse.address_components[index].types[0] === 'administrative_area_level_1') {
+							geoResponseState = geoResponse.address_components[index].long_name;
+						}
+						if (geoResponse.address_components[index].types[0] === 'administrative_area_level_2') {
+							geoResponseCity = geoResponse.address_components[index].long_name;
+						}
+					});
+
+
+
+					if (geoResponseCity === '')
+						setCity = '';
+					else
+						setCity = '/city-' + geoResponseCity;
+
+
+					if (geoResponseState === '')
+						setState = '';
+					else
+						setState = '/state-' + geoResponseState;
+
+					// GA rules -- Finding selected city name from ge0code location hierarchy
+
+					var locality, level1, level2, city, country;
+
+					$.each(geoResponse.address_components, function(index, component) {
+
+						if ($.inArray('country', component.types) === 0) {
+							country = component.long_name;
+						}
+
+						if ($.inArray('locality', component.types) === 0) {
+							locality = component.long_name;
+						} else if ($.inArray('administrative_area_level_1', component.types) === 0) {
+							level1 = component.long_name;
+						} else if ($.inArray('administrative_area_level_2', component.types) === 0) {
+							level2 = component.long_name;
+						}
+					});
+
+					if (typeof locality !== 'undefined') {
+						city = locality;
+					} else if (typeof level1 !== 'undefined') {
+						city = level1;
+					} else {
+						city = level2;
+					}
+
+					$.jStorage.set('boutiqueSearchLocation', {
+						'country': country,
+						'city': city
+					});
+
+					// GA End
+
+
+					/* THIS IS FOR RECTANGULAR SCRIPT FOR STORELOCATOR: TEMPORARY | THIS WILL BE REMOVED FOR CIRCULAR SEARCHING */
+
+					if (geoResponse.geometry.bounds !== undefined) {
+						sw = geoResponse.geometry.bounds.getSouthWest();
+						ne = geoResponse.geometry.bounds.getNorthEast();
+					} else {
+						sw = geoResponse.geometry.viewport.getSouthWest();
+						ne = geoResponse.geometry.viewport.getNorthEast();
+					}
+
+
+
+					if (typeof data.bounds !== "undefined") {
+
+
+						sw = data.bounds.getSouthWest();
+						ne = data.bounds.getNorthEast();
+					}
+
+					parameters = {
+						s: sw.lat(),
+						w: sw.lng(),
+						n: ne.lat(),
+						e: ne.lng(),
+					};
+
+					var center = geoResponse.geometry.viewport.getCenter();
+
+
+					if (typeof data.bounds !== "undefined") {
+
+						center = data.bounds.getCenter();
+					}
+
+
+
+					var distance = Math.sqrt(Math.pow(parameters.s - parameters.n, 2) + Math.pow(parameters.w - parameters.e, 2)) / 2;
+
+					if (distance < 0.05)
+						distance = 0.05;
+
+					parameters.x = center.lat();
+					parameters.y = center.lng();
+					parameters.r = distance;
+
+					GeoUrl = '';
+					GeoUrl += '/s' + parameters.s;
+					GeoUrl += '/w' + parameters.w;
+					GeoUrl += '/n' + parameters.n;
+					GeoUrl += '/e' + parameters.e;
+					GeoUrl += '/x' + parameters.x;
+					GeoUrl += '/y' + parameters.y;
+					GeoUrl += '/r' + parameters.r;
+
+					/* END OF RECTANGULAR SCRIPT */
+					var GLOBE_WIDTH = 256; // a constant in Google's map projection
+					var angle = parameters.e - parameters.w;
+					if (angle < 0) {
+						angle += 360;
+					}
+					var newZoom = Math.round(Math.log(588 * 360 / angle / GLOBE_WIDTH) / Math.LN2);
+					var zoomLevel = newZoom;
+
+
+					_geocodeCallback(center, zoomLevel);
+
+					var displayGeoCity = $('#js-search-box-1').val();
+					while (i < 5) {
+						if (geoResponse.address_components[i].types[0] === 'administrative_area_level_3') {
+							geoCity = geoResponse.address_components[i].long_name;
+							if (isGeolocated === true) {
+								_geoCityCallback(' ' + textForNear + ':<br>' + displayGeoCity, keyword);
+							} else {
+								_geoCityCallback(' ' + textForIn + ':<br>' + displayGeoCity, keyword);
+							}
+
+							return (null);
+						} else if (geoResponse.address_components[i].types[0] === 'administrative_area_level_2') {
+							geoCity = geoResponse.address_components[i].long_name;
+							if (isGeolocated === true) {
+								_geoCityCallback(' ' + textForNear + ':<br>' + displayGeoCity, keyword);
+							} else {
+								_geoCityCallback(' ' + textForIn + ':<br>' + displayGeoCity, keyword);
+							}
+
+							return (null);
+						} else if (geoResponse.address_components[i].types[0] === 'administrative_area_level_1') {
+							geoCity = geoResponse.address_components[i].long_name;
+							if (isGeolocated === true) {
+								_geoCityCallback(' ' + textForNear + ':<br>' + displayGeoCity, keyword);
+							} else {
+								_geoCityCallback(' ' + textForIn + ':<br>' + displayGeoCity, keyword);
+							}
+
+							return (null);
+						} else if (geoResponse.address_components[i].types[0] === 'country') {
+							geoCity = geoResponse.address_components[i].long_name;
+							if (isGeolocated === true) {
+								_geoCityCallback(' ' + textForNear + ':<br>' + displayGeoCity, keyword);
+							} else {
+								_geoCityCallback(' ' + textForIn + ':<br>' + displayGeoCity, keyword);
+							}
+							return (null);
+						}
+
+						i++;
+					}
+
+
+				} else {
+					if (!AutocompleteObj && !GeoAddr) {
+						status = "EMPTY";
+					};
+					//If The location isn't recognized by google services
+					if (status == 'ZERO_RESULTS') {
+						$('.' + errormsg2Class + '').show();
+						$('.' + suggestionerrorClass + '').show();
+					};
+				}
+			});
+
+			/** Round up the rectangle: make a bigger rectangle with round limits,
+            /* so that requests repeat more often. */
+			function roundUp(p) {
+				// Must detect which face of the earth we are on.
+				// We are on the date line when east < west.
+				// Example: s=-52.78874169508182 w=97.54270394775392 n=42.82852863934756 e=-44.48854605224608
+				// rectangle covers date line, the other side of the world
+				var onDateLine = p.e < p.w;
+				p.s = down(-90, p.s);
+				p.n = up(+90, p.n);
+				if (onDateLine) {
+					p.e = down(-180, p.e);
+					p.w = up(+180, p.w);
+				} else {
+					p.w = down(-180, p.w);
+					p.e = up(+180, p.e);
+				}
+				return p;
+			};
+
+			/** Increases x to a round number, at most limit.
+			 * Rounds to full 10s. */
+			function up(limit, x) {
+				x = x / 10;
+				x = Math.ceil(x);
+				x = x * 10;
+				if (limit < x)
+					x = x - 10;
+				return x;
+			};
+
+			/** Decreases x to a round number, at least limit.
+			 * Rounds to full 10s. */
+			function down(limit, x) {
+				x = x / 10;
+				x = Math.floor(x);
+				x = x * 10;
+				if (x < limit)
+					x = x + 10;
+				return x;
+			};
+
+
+		}
+
+	};
+
+
+	$.fn[pluginName] = function(options) {
+		return this.each(function() {
+
+			if (!$.data(this, "plugin_" + pluginName)) {
+
+				$.data(this, "plugin_" + pluginName,
+					new Plugin(this, options));
+			}
+		});
+	};
+
+})(jQuery, window, document);

@@ -1,0 +1,35 @@
+.ecs-video-component{
+	display: block;
+	@include rem('min-height', 180px);
+	@include rem('padding-bottom', 15px);
+
+	.heading2{
+		@include f(12);
+		font-weight:bold;
+	}
+
+	p{
+		color:$primary-2;
+		letter-spacing: 0px;
+	}
+
+	.comp-rich-text{
+		.content-medias{
+			max-width: 30%;
+		}
+		.videocontainer{
+			border: 1px solid $primary-12;
+			float: right;
+			@include rem('height', 180px);
+			@include rem('margin', 0px);
+			@include rem('padding', 0px);
+			@include rem('width', 320px);
+		}
+		p{
+			display: inline-block;
+			@include rem('width', 645px);
+			position: relative;
+			@include f(12);
+		}
+	}
+}

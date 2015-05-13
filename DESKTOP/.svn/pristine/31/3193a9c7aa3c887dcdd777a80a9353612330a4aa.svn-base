@@ -1,0 +1,35 @@
+/* progress bar starts */
+.progress {
+    border-bottom-color: #C6C6C6;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 22px;
+    @include rem('margin', 0 0 40px 0);
+    text-align: center;
+    font-weight: bold;
+
+
+
+
+ li {
+    background: #fff;
+
+    display: inline-block;
+    font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    @include f(21);
+    @include rem('margin', 0 45px 0 45px);
+    @include rem('padding', 0 4px 0 0);
+    line-height: 1;
+    vertical-align: middle;
+    color: #A0A0A0;
+    font-style: italic;
+
+}
+ li.active a {
+    color: #810026 ;
+    @include f(44);
+
+
+}
+
+}

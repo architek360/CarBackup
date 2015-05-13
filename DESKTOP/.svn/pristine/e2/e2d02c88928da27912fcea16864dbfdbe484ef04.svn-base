@@ -1,0 +1,158 @@
+<!--LIST OF HIGHLIGHT PUSHES-->
+<!--#if expr="${editorial_pushes}=yes" -->
+<div class="editorial-pushes clearfix">
+    <h1 class="heading1">Leather Goods</h1>
+    <div class="ecomm">Complimentary standard shipping on all Cartier e-Boutique orders</div>
+    <ul class="listing-header-pushes grid">
+        <li class="grid__item one-whole">
+            <!--#set var="IMG_PATH" value="100-jeanne_toussaint_1.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Jeanne Toussaint" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="Shop the collection" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li> 
+        <li class="grid__item two-thirds">
+            <!--#set var="IMG_PATH" value="100-jeanne_toussaint_1.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Jeanne Toussaint" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="Shop the collection" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li> 
+        <li class="grid__item one-third">
+            <!--#set var="IMG_PATH" value="100-jeanne_toussaint_1.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Jeanne Toussaint" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="Shop the collection" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li> 
+        
+    </ul>
+</div>
+<div class="push-highlight">
+    <p class="title-pushes">HIGHLIGHTS</p>
+    <ul class="pushes-wrapper grid">
+        <!--#set var="no-read-more" value="yes" -->
+        <li class="grid__item one-quarter palm--one-whole" >
+        <!--#set var="pushes-img-src" value="hh.jpg" -->
+        <!--#set var="pushes-title" value="Fine Watchmaking" -->
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="more-text" value="Discover the collection" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="tank-feminine.jpg" -->
+        <!--#set var="pushes-title" value="Tank Anglaise" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="calibre-chrono.jpg" -->
+        <!--#set var="pushes-title" value="Calibre de Cartier" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="bb-femme.jpg" -->
+        <!--#set var="pushes-title" value="Ballon Bleu" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+                
+    </ul>
+</div>
+
+<!--#else-->
+<div class="highlight-pushes clearfix">
+    <p class="title-pushes">HIGHLIGHTS</p>
+    <ul class="pushes-wrapper grid">
+        <li class="grid__item one-whole">
+            <!--#set var="IMG_PATH" value="highlight_push_1.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="fine watch making" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+        <li class="grid__item one-half">
+            <!--#set var="IMG_PATH" value="highlight_push_1.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="fine watch making" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-half">
+            <!--#set var="IMG_PATH" value="highlight_push_2.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Cartier, Jeweler to Kings" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+                <li class="grid__item one-third">
+            <!--#set var="IMG_PATH" value="highlight_push_2.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Cartier, Jeweler to Kings" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+                <li class="grid__item one-third">
+            <!--#set var="IMG_PATH" value="highlight_push_2.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Cartier, Jeweler to Kings" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+                <li class="grid__item one-third">
+            <!--#set var="IMG_PATH" value="highlight_push_2.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Cartier, Jeweler to Kings" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+
+        <li class="grid__item one-quarter">
+            <!--#set var="IMG_PATH" value="highlight_push_3.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="The Panther" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter">
+            <!--#set var="IMG_PATH" value="highlight_push_4.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Flora" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter">
+            <!--#set var="IMG_PATH" value="highlight_push_3.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="The Panther" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+        <li class="grid__item one-quarter">
+            <!--#set var="IMG_PATH" value="highlight_push_4.jpg" -->
+            <!--#set var="ALT_TEXT" value="highlight images" -->
+            <!--#set var="PUSH_TYPE" value="highlight" -->
+            <!--#set var="FIRST_SPAN_CONTENT" value="Flora" -->
+            <!--#set var="SECOND_SPAN_CONTENT" value="read more" -->
+            <!--#include virtual="../../components/desktop_pushes/html.shtml" -->
+        </li>
+        
+        
+        
+    </ul>
+</div>
+<!--#endif-->

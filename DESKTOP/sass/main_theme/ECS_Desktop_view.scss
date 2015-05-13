@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+/*For Deployement*/
+$path-images : '/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '/etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+
+/*For Local*/
+//$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+//$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+
+@import "../_base";
+@import "../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+@import "_theme";
+
+/*------------------------------------*\
+    $IMPORT - Desktop Styles
+\*------------------------------------*/
+
+ 
+
+/*------------------------------------*\
+    $IMPORT - Views Styles
+\*------------------------------------*/
+
+/*------------------------------------*\
+    ECS - Desktop CSS
+\*------------------------------------*/
+@import "../../includes/views/registration_ecs/_desktop";
+@import "../../includes/views/ecs_review_repair_order/_desktop";
+@import "../../includes/views/ecs_repair_price_details/_desktop";
+
+@import "../../includes/views/ecs_repair_order_acknowledgement/_desktop";
+@import "../../includes/views/ecs_billing_payment/_desktop";
+@import "../../includes/views/tab_send_my_creation_repair_service/_desktop";
+
+@import "../../includes/views/tab_repair_service/_desktop";
+@import "../../includes/views/tab_entrust_boutique/_desktop";
+@import "../../includes/views/my_address_popup/_desktop";
+
+@import "../../includes/components/video_content/_desktop";

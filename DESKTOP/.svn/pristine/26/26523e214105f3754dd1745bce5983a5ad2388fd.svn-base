@@ -1,0 +1,114 @@
+<!-- Footer starts here -->
+<footer class="footer clearfix">
+	<section class="footer__inner clearfix">
+		<h6 class="display-none">Footer Links</h6>
+		<!--#if expr="${404_error} != 'yes'"-->
+		<nav class="footer-left">
+			<ul> 
+				<li class="tel-no">
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="1-800-227-8437" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				</li>	
+				<li class="foundation">
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Fondation Cartier pour l'Art Contemporain" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li class="cartier-rouge">
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Rouge Cartier" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li class="newsletter">
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Newsletter" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+			</ul>
+		</nav>
+
+		<nav class="footer-right">
+			<!-- Social networking navigation starts here-->
+	        <ul class="social-icons">
+	              <li class="first"> <a href="#" class="social-share__youtube" title="Youtube" target="_blank"></a> </li> 
+				  <li> <a href="#" class="social-share__facebook" title="Facebook"  target="_blank"></a> </li>
+				  <li> <a href="#" class="social-share__pin-it" title="Pin Intrest" target="_blank"></a> </li>
+				  <li> <a href="#" class="social-share__twitter" title="Twitter" target="_blank"></a> </li>
+				  <li> <a href="#" class="social-share__instagram" title="Instagram" target="_blank"></a> 
+				  </li>
+				  <li><a href="#" class="social-share__tumblr" title="Tumblr" target="_blank"></a> 
+				  </li>
+			</ul>
+			<!-- Social networking navigation ends here-->
+
+			<!-- Country Switcher starts here-->
+			 <div class="country">
+		        <div class="language-select"> <a href="#" class="trigger-sub-menu"> Other Countries</a>
+		           <!--#include virtual="../../components/vaccordion/desktop.shtml" -->
+		        </div>
+      		</div>
+
+	        <!-- Country Switcher ends here-->
+		</nav>
+
+		<!--#endif-->
+
+		<!-- Static footer links starts here-->
+		<nav class="footer-menu">
+		     <ul>
+		         <li>
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Terms of Use" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li>
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Sitemap" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li>
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Careers" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li>
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Credits" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li>
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Privacy Notice" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+				  <li>
+					<!--#set var="links-to" value="#" -->
+					<!--#set var="class-name" value="nav-link" -->
+					<!--#set var="link-name" value="Conditions of Sale" -->
+					<!--#include virtual="../../components/nav_link/nav_link.shtml" -->
+				  </li>
+			  </ul>			  
+		</nav>
+		<!-- Static footer links ends here-->
+	</section>
+	
+	<!--#if expr="${collection-footer}=yes"-->	
+		<!--#include virtual="../../components/collection_footer/html.shtml" -->
+	<!--#endif -->
+	 
+
+
+
+	
+</footer>
+<!-- Footer ends here -->

@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    Order Review -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.ecs_verify_order)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.ecs_verify_order{
+	.telephone_number{
+		color: $primary-5;
+	}
+	.order-reconfirm .product-filter li{
+		border: 1px solid $primary-11;
+	}
+	.product-detail{
+		border-top: 0 none;
+		.product-detail__variant{
+			text-transform: uppercase;
+			@include brand-font();
+			font-style: normal;
+		}
+	}
+	.order-review__info-notice{
+		font-style: italic;
+	}
+}

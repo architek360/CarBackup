@@ -1,0 +1,62 @@
+<div class="js-radio-tabs" data-samecountry="false">  
+    <ul class="radio-btn">
+        <!--#if expr="${radio-text1}" -->       
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="${input-name}" -->
+            <!--#set var="radio-text" value="${radio-text1}" -->
+            <!--#set var="radio-value" value="${radio-value1}" -->
+            <!--#set var="radio-tab-text" value="${radio-tab-text1}" -->
+            <!--#set var="is-checked" value="" -->
+            <!--#include virtual="../../components/form_elements/radio3.shtml" -->
+        </li> 
+        <!--#endif -->
+
+        <!--#if expr="${radio-text2}" -->           
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="${input-name}" -->
+            <!--#set var="radio-text" value="${radio-text2}" -->
+            <!--#set var="radio-value" value="${radio-value2}" -->
+             <!--#set var="radio-tab-text" value="${radio-tab-text2}" -->
+            <!--#set var="is-checked" value="" -->
+            <!--#include virtual="../../components/form_elements/radio3.shtml" -->
+
+        </li> 
+        <!--#endif -->
+
+        <!--#if expr="${radio-text3}" -->      
+        <li class="radio-btn-li">
+            <!--#set var="radio-name" value="${input-name}" -->
+            <!--#set var="radio-text" value="${radio-text3}" -->
+            <!--#set var="radio-value" value="${radio-value3}" -->
+             <!--#set var="radio-tab-text" value="${radio-tab-text3}" -->
+            <!--#set var="is-checked" value="" -->
+            <!--#include virtual="../../components/form_elements/radio3.shtml" -->
+
+        </li> 
+        <!--#endif -->
+    
+    </ul>   
+    <div class="radio-tab_container">   
+
+
+
+        <!--#if expr="${radio-text2}" -->       
+        <div class="tab_content" id="<!--#echo var="radio-text2" -->">
+            <!--#include virtual="../../views/${tab_content_2}/html.shtml" -->
+        </div>  
+        <!--#endif -->
+
+        <!--#if expr="${radio-text1}" -->          
+        <div class="tab_content" id="<!--#echo var="radio-text1" -->">
+            <!--#include virtual="../../views/${tab_content_1}/html.shtml" -->
+        </div> 
+        <!--#endif -->
+        
+        <!--#if expr="${radio-text3}" -->
+        <div class="tab_content" id="<!--#echo var="radio-text3" -->">
+            <!--#include virtual="../../views/${tab_content_3}/html.shtml" -->
+        </div> 
+        <!--#endif -->
+
+    </div> <!--End tab container-->
+</div>

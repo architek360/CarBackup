@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  Date Picker -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+	.date-picker{
+			@include set-ulFix;
+
+			li{
+				display:inline-block;
+				width:32%;
+			}
+	}

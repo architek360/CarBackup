@@ -1,0 +1,48 @@
+<!-- bridal view  Starts Here-->
+<div class="bridal-home">
+    <img  class="bridal-home__bg-image" src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_bg.png">
+    <div class="comp-rich-text">
+
+        <div class="bridal-home__desc clearfix ">
+           
+                <div class="bridal-home__desc__img">
+                    <img   src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_home_heading.png">
+                </div>
+                <p class="bridal-home__desc_text"> 
+                    In the great jewellery tradition, Cartier offers a service that can meet your dreams.
+                </p>
+                <p class="bridal-home__desc_text">
+                   Choose the design of ring you want and the diamond to illuminate it. 
+                    
+                </p>
+                
+                <p class="bridal-home__desc_text">
+                    Let this exclusive service guide you as you move towards a uniquely emotional moment.
+                </p>
+                <h3 class="bridal-home__desc_heading">create your very own  cartier solitaire </h3>
+           
+                <div class="bridal-home__desc__link">
+                           <!--#set var="text-detail" value="proceed to checkout checkoutcheckoutcheckout" -->
+        <!--#set var="cta--varaint" value="cta--red-width-auto" -->
+        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                </div>
+          
+            
+        </div>
+
+        <!--<h2 class="bridal-home__qa">Quick Access</h2> -->
+    </div>
+    <div class="bridal-expertise">
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_expertise.jpg">
+            <div class="bridal-expertise__desc">
+                <h1 class="heading2">Expertise</h1>
+                <!--#set var="arrow-class" value="arrow-show" -->
+                <!--#set var="more-text" value="know more" -->
+                <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </div>
+    </div>   
+        
+ 
+</div>
+        
+<!-- bridal vien Ends Here-->

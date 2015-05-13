@@ -1,0 +1,30 @@
+
+<div class="gift-landing">
+	<img src="<!--#echo var="CONTENT_IMG_PATH" -->sel_in_the_pink.jpg" alt="In The Pink" class="image"/>
+	<h2 class="heading1">In the pink</h2> 
+	<div class="action-button">
+		<!--#set var="more-text" value="discover the selection"-->
+		<!--#set var="arrow-class" value="arrow-show"-->
+		<!--#set var="cta-class" value="js-discover-selection"-->
+		<!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+	</div>
+</div>
+
+<div class="js-selection-wrapper display-none">
+	<!-- <h2 class="gift-for-you-heading">In the pink</h2>  -->
+	<!--#set var="nested-carousel-type" value="gift-for-you" -->
+	<!--#include virtual="../../components/carousel/content_carousel.shtml" -->
+	<h2 class="all-creation"><span>all creations</span></h2>
+	<!--#set var="gift-for-you" value="yes" -->
+	 <!--#include virtual="../../components/carousel/carousel.shtml" -->
+	 <div class='js-overlay'>
+    <div class='js-close-button'>
+        <a href='#'></a>
+    </div>
+    <div class="img-container">
+        <img src="" alt="Overlay image" class="image">     
+    </div>
+</div>
+
+</div>
+

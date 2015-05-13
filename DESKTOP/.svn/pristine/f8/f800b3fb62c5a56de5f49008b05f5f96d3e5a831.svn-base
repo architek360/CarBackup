@@ -1,0 +1,238 @@
+/*!
+ * cartier.giftforyou.js
+ * This file contains functionalities handling the gift for you module
+ *
+ * @project   cartier desktop
+ * @date      2014-01-03
+ * @author    Sapient
+ * @licensor  cartier desktop
+ * @site      cartier desktop
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+ 	$last) call to init() method
+ */
+
+;
+(function(win, $, gift_for_you, undefined) {
+    'use strict'; //this will cause the browser to check for errors more aggressively
+
+    if (typeof $ === "undefined" ) {
+        cartier.log("jQuery not found");
+        return false;
+    }
+
+    var
+    _cache = {};
+
+    //--------------------------------------------------------------------------------------------------------
+    //         Caching jQuery object
+    //--------------------------------------------------------------------------------------------------------
+
+    /*
+      @private method : caching jquery objects 
+      @param : none 
+    */
+    var _cacheObjects = function() {
+
+        _cache = {
+            $slider: $('.js-slider'),
+            $productSlider: $('.js-product-img-slider'),
+            $nestedSlider: $('.js-nested-slider'),
+            $discoverSelection: $('.js-discover-selection'),
+            $selectionWrapper: $('.selection-wrapper')
+        };
+    }, _nestedSlider, _showCaseSlider, _liveslide = 0,
+        _onetimeshow = 4,
+
+    /*
+      @private method : bind event on page load
+      @param : none 
+    */
+    _bindEvents = function() {
+        $('.js-slider li').on('click', function() {
+            _nestedSlider.goToSlide(($(this).index()) % (_nestedSlider.getSlideCount()));
+            _liveslide = ($(this).index()) % (_nestedSlider.getSlideCount());
+            _highlightSelected();
+            _updateNavNumber();
+            
+
+        });
+    },
+
+
+    /*
+      @private method : discover Selection handler 
+      @param : none 
+    */
+        _discoverSelectionHandler = function() {
+            _cache.$discoverSelection.on('click', function() {
+                $('.js-selection-wrapper').removeClass('display-none').addClass('display-block');
+                $('.gift-landing').addClass('display-none');
+            });
+        },
+        /*
+          @private method : initialize show case slider using bxslider
+          @param : none 
+        */
+        _initializeShowcase = function() {
+            _showCaseSlider = _cache.$slider.bxSlider({
+                mode: 'horizontal',
+                speed: 1000,
+                auto: false,
+                pager: false,
+                infiniteLoop: false,
+                //preloadImages:'visible',
+                minSlides: 2,
+                maxSlides: _onetimeshow,
+                autoHover: true,
+                slideWidth: 180,
+                slideMargin: 20
+            });
+        },
+        /*
+          @private method : initialize nested slider  usign bxslider
+          @param : none 
+        */
+        _initializeNestedSlider = function() {
+            _nestedSlider = _cache.$nestedSlider.bxSlider({
+                mode: 'horizontal',
+                speed: 1200,
+                auto: false,
+                pager: false,
+                autoHover: true,
+                infiniteLoop: false,
+                onSliderLoad: function() {
+                    _initializeShowcase();
+                    _initializeProductSlider();
+                    $('.js-nested-gift-for-you .carousel .bx-controls .bx-controls-direction-left a').append("<span class='slide-nav js-slide-prev-num'> - /" + _showCaseSlider.getSlideCount() + "</span>");
+                    $('.js-nested-gift-for-you .carousel .bx-controls .bx-controls-direction-right a').append("<span class='slide-nav js-slide-next-num'> 2 /" + _showCaseSlider.getSlideCount() + "</span>");
+                },
+                onSlideNext: function() {
+                    _liveslide = (_liveslide + 1) % (_showCaseSlider.getSlideCount());
+
+                
+                    if ((_liveslide) % _onetimeshow === 0) {
+
+                        _showCaseSlider.goToSlide((_liveslide) / _onetimeshow);
+                    }
+                    _highlightSelected();
+                    _updateNavNumber();
+                },
+                onSlidePrev: function() {
+                    _liveslide = ((_liveslide - 1) % (_showCaseSlider.getSlideCount()) + (_showCaseSlider.getSlideCount())) % (_showCaseSlider.getSlideCount());
+                  
+                    if ((_liveslide) % _onetimeshow === 3) {
+                        _showCaseSlider.goToPrevSlide();
+                    }
+                    _highlightSelected();
+                    _updateNavNumber();
+
+                }
+            });
+        },
+        
+
+        /*
+          @private method : highlight selected element
+          @param : none 
+        */
+        _highlightSelected = function() {
+            $('.js-slider li').removeClass('active');
+            $($('.js-slider li')[_liveslide]).addClass('active');
+        },
+        
+        /*
+          @private method : update nav number in slider 
+          @param : none 
+        */
+        _updateNavNumber = function() {
+            $('.js-slide-next-num').html(_liveslide + 2 + "/" + _nestedSlider.getSlideCount());
+            if (_liveslide + 1 <= 1) {
+                $('.js-slide-prev-num').html("- /" + _nestedSlider.getSlideCount());
+            } else {
+                $('.js-slide-prev-num').html(_liveslide + "/" + _nestedSlider.getSlideCount());
+            }
+        },
+        /*
+          @private method : initialize product slider 
+          @param : none 
+        */
+        _initializeProductSlider = function() {
+            _cache.$productSlider.bxSlider({
+                mode: 'fade',
+                speed: 1000,
+                pager: true,
+                controls: false,
+                autoHover: true,
+                useCSS: false
+            });
+        },
+
+        /*
+            @private method : Function to initialize the Overlay
+            @param : none 
+        */
+        initializeOverlay = function() {
+
+            $($(".js-zoom")[0]).openOverlay({
+                callback: initializingImageInOverLay
+            });
+        },
+        /*
+            @private method : initialize Image overlay 
+            @param : none 
+        */
+        initializingImageInOverLay = function(clickedEl) {
+
+            var winHeight = $(window).height(),
+                winWidth = $(window).width();
+            $(".js-overlay .img-container img").attr('src', "#");
+
+            var currentElement = $(clickedEl).closest('.product-carousel__wrapper').find('.js-product-img-slider');//.data('sliderindex');
+            //var currentElement = arrayOfExceptionalCarousel[sliderNumber].getCurrentSlideElement();
+
+            var imgPath = currentElement.find('img:visible').attr('data-original');
+
+            if (typeof imgPath === "undefined")
+                imgPath = currentElement.find('img:visible').attr('src');
+
+            imgPath = imgPath.replace(/\.scale\.(.*?)\./, ".scale.2000.");
+
+
+            winHeight = (winHeight < winWidth) ? winHeight : winWidth;
+            $(".js-overlay .img-container img").attr('src', imgPath).css('opacity', '0').load(function() {
+                var h = $(".js-overlay .img-container img").height();
+                $(".js-overlay .img-container")
+                    .height(winHeight)
+                    .width('100%');
+                var itop = ((winHeight - h)) > 0 ? (winHeight - h) / 2 : 20;
+                $(".js-overlay .img-container img")
+                    .css('position', 'absolute')
+                    .css('top', itop).css('opacity', '1');
+            });
+
+            $(".js-overlay .img-container img").ready(function() {
+                $(".js-overlay .img-container img").css('opacity', '1');
+            });
+
+        };
+
+    //--------------------------------------------------------------------------------------------------------
+    //          Public functions
+    //--------------------------------------------------------------------------------------------------------
+
+    /*  @pubic method : initailize the module */
+
+    cartier.gift_for_you.init = function() {
+        cartier.log('JS-LOG: gift_for_you Init Called');
+        _cacheObjects();
+        _discoverSelectionHandler();
+        _initializeNestedSlider();
+        _bindEvents();
+        initializeOverlay();
+
+    };
+}(window, jQuery, cartier.gift_for_you));

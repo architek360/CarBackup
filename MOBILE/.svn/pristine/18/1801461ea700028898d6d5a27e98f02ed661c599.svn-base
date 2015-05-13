@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#set var="back-static-text" value="Back" -->
+<!--#set var="COMP_1" value="back_button" -->
+<!--#set var="VIEWS_1" value="forgot_password" -->
+<!--#set var="VIEWS_2" value="forgot_password_emailsent" -->
+<!--#set var="COMP_2" value="breadcrumb" -->
+<!--#set var="MODULE" value="myaccount" -->
+
+<!--#include virtual="../templates/base.shtml" -->

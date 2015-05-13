@@ -1,0 +1,235 @@
+<div class="boutique_list">
+	<div class="boutique_list__title">
+		<h1 class="heading2">
+			ALL BOUTIQUEs NEAR NEW YORK
+		</h1>
+	</div>
+
+	<a class="boutique_list__change-loc">
+		<span class="arrow-show"></span>Change location
+	</a>
+
+	<!-- Accordion For boutique filter starts here-->
+	 <div class="js-accordion boutique_filter_detail">
+		<div class="js-accordion__node boutique_filter_detail__node">
+			<div class="js-accordion_node__title boutique_filter_detail_node__title heading3">
+		        <span class="off"></span>
+		        <div class="boutique_filter_detail_node_title__ques">
+		            <p class="text-wrapper">refine by services and product offered</p>
+		        </div>
+		    </div>
+		    <div class="js-accordion_node__desc boutique_filter_detail_node__desc">
+		            <!-- REFINE MODULE CATEGORISATION AREA-->
+		        <ul class="category-wrapper">
+	                <li>
+	                    <!--#set var="checkbox-value" value="fine watchmaking" -->
+	                    <!--#set var="checkbox-label-name" value="fine watchmaking" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="fine watchmaking" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                    <!--#set var="checkbox-value" value="alpha" -->
+	                    <!--#set var="checkbox-label-name" value="alpha" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="alpha" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                    <!--#set var="checkbox-value" value="beta" -->
+	                    <!--#set var="checkbox-label-name" value="beta" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="beta" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                    <!--#set var="checkbox-value" value="gamma" -->
+	                    <!--#set var="checkbox-label-name" value="gamma" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="gamma" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                    <!--#set var="checkbox-value" value="delta" -->
+	                    <!--#set var="checkbox-label-name" value="delta" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="delta" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                    <!--#set var="checkbox-value" value="epsilon" -->
+	                    <!--#set var="checkbox-label-name" value="epsilon" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="epsilon" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>		                
+		        </ul>
+		    </div>
+		</div>
+	</div>
+	<!-- Accordion For boutique filter ends here-->
+
+
+
+
+
+	<!-- Cartier boutique list starts here-->
+
+	<ul class="boutique_list__c-boutique">
+		<li class= "store_detail">
+			<div class="store_detail__title">
+				<span class="store_detail_bold">boutique cartier</span> new york fifth avenue
+			</div>
+				
+			<div class="image-text">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" -->boutique_small.jpg"  alt="store locator">
+				<div class="image-text__details">
+					<div class="boutique_details__add">
+						653 Fifth Avenue - New York, 10022 <br/>NEW YORK - NY
+					</div>
+
+					<div class="boutique_details__con">
+						<span class="arrow-red"> </span>
+						<a href="tel:1001010">Tel.: 00(1) 212 446-3400</a>
+						<div> Fax: 00(1) 212 446-3400 </div>
+					</div>
+				</div>
+			</div>
+			<div class="more-link">
+				<a class="read-more" href="#"><span class="arrow-red"> </span>Read more</a>
+				<a class="show-map" href="#"><span class="arrow-red"> </span>Show map</a>
+			</div>
+		</li>
+
+		<li class= "store_detail">
+			<div class="store_detail__title">
+				<span class="store_detail_bold">boutique cartier</span> new york fifth avenue
+			</div>
+				
+			<div class="image-text">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" -->boutique_small.jpg"  alt="store locator">
+				<div class="image-text__details">
+					<div class="boutique_details__add">
+						653 Fifth Avenue - New York, 10022 <br/>NEW YORK - NY
+					</div>
+
+					<div class="boutique_details__con">
+						<span class="arrow-red"> </span>
+						<a href="tel:1001010">Tel.: 00(1) 212 446-3400</a>
+						<div> Fax: 00(1) 212 446-3400 </div>
+					</div>
+				</div>
+			</div>
+			<div class="more-link">
+				<a class="read-more" href="#"><span class="arrow-red"> </span>Read more</a>
+				<a class="show-map" href="#"><span class="arrow-red"> </span>Show map</a>
+			</div>
+		</li>
+
+		<li class= "store_detail">
+			<div class="store_detail__title">
+				<span class="store_detail_bold">boutique cartier</span> new york fifth avenue
+			</div>
+				
+			<div class="image-text">
+				<img src="<!--#echo var="CONTENT_IMG_PATH" -->boutique_small.jpg"  alt="store locator">
+				<div class="image-text__details">
+					<div class="boutique_details__add">
+						653 Fifth Avenue - New York, 10022 <br/>NEW YORK - NY
+					</div>
+
+					<div class="boutique_details__con">
+						<span class="arrow-red"> </span>
+						<a href="tel:1001010">Tel.: 00(1) 212 446-3400</a>
+						<div> Fax: 00(1) 212 446-3400 </div>
+					</div>
+				</div>
+			</div>
+			<div class="more-link">
+				<a class="read-more" href="#"><span class="arrow-red"> </span>Read more</a>
+				<a class="show-map" href="#"><span class="arrow-red"> </span>Show map</a>
+			</div>
+		</li>
+	</ul>
+
+
+	<!-- Cartier boutique list ends here-->
+
+
+	<h3 class="heading3">authorized retailers</h3>
+
+
+
+
+
+	<!-- Authorized retailer list starts here-->
+
+	<ul class="boutique_list__c-boutique">
+		<li class= "store_detail">
+			<div class="store_detail__title">
+				<span class="store_detail_bold">cellini</span>
+			</div>
+				
+			<div class="image-text">
+				<div class="image-text__details auth-dealer">
+					<div class="boutique_details__add">
+						653 Fifth Avenue - New York, 10022 <br/>NEW YORK - NY
+					</div>
+
+					<div class="boutique_details__con">
+						<span class="arrow-red"> </span>
+						<a href="tel:1001010">Tel.: 00(1) 212 446-3400</a>
+						<div> Fax: 00(1) 212 446-3400 </div>
+					</div>
+					<div class="service-detail">
+						<span class="store_detail_bold">Services:</span> Jewelry - Watchmaking
+					</div>
+				</div>
+			</div>
+			<div class="more-link">
+				<a class="read-more" href="#"><span class="arrow-red"> </span>Read more</a>
+				<a class="show-map" href="#"><span class="arrow-red"> </span>Show map</a>
+			</div>
+		</li>
+
+
+
+
+		<li class= "store_detail">
+			<div class="store_detail__title">
+				<span class="store_detail_bold">cellini</span>
+			</div>
+				
+			<div class="image-text">
+				<div class="image-text__details auth-dealer">
+					<div class="boutique_details__add">
+						653 Fifth Avenue - New York, 10022 <br/>NEW YORK - NY
+					</div>
+
+					<div class="boutique_details__con">
+						<span class="arrow-red"> </span>
+						<a href="tel:1001010">Tel.: 00(1) 212 446-3400</a>
+						<div> Fax: 00(1) 212 446-3400 </div>
+					</div>
+					<div class="service-detail">
+						<span class="store_detail_bold">Services:</span> Jewelry - Watchmaking
+					</div>
+				</div>
+			</div>
+			<div class="more-link">
+				<a class="read-more" href="#"><span class="arrow-red"> </span>Read more</a>
+				<a class="show-map" href="#"><span class="arrow-red"> </span>Show map</a>
+			</div>
+		</li>
+	</ul>
+
+	<!-- Authorized retailer list ends here-->
+
+
+
+</div>

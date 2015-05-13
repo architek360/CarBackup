@@ -1,0 +1,9 @@
+<!--Html for navigation icon-->
+<a href="<!--#echo var="links-to" -->" class="<!--#echo var="class-name" --> iconbox" data-gtm="">
+	<img src="<!--#echo var="img-src" -->" alt="<!--#echo var="img-alt" -->"/>
+	<span class="iconbox__number js-cart-update display-none">
+		<span><!--#echo var="things-in-cart" --></span>
+	</span>
+</a>
+
+<!--Html for navigation icon-->

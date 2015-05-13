@@ -1,0 +1,223 @@
+/*------------------------------------*\
+    Order Review -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.order_review)
+ * TITLE CONTAINER...... (.order-review__title)
+ * PRODUCT CONTAINER.........(.product-detail)
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.order-review{
+	position: relative;
+ 	width:81.25%;
+ 	margin:0 auto;
+ 	@include f(22);
+	@include main-font;
+	@include font-color($primary-2);
+	@include rem('margin-top',32px);
+	text-align:center;
+	
+	.order-reconfirm {
+		width: 100%;
+	}
+
+	/*------------------------------------*\
+           $TITLE CONTAINER
+	\*------------------------------------*/
+	.order-review__title {
+		@include f(34);
+		text-transform: uppercase;
+		@include brand-font;
+		@include rem('padding-bottom',10px);
+	}
+
+	.order-review__text{
+
+		text-align: center;
+		@include rem('padding-top',31px);
+	}
+
+
+	.order-review__info-notice{
+		@include rem('padding-bottom', 30px);
+		@include rem('padding-top', 25px);
+		@include f(24);
+		@include rem('word-spacing',6px);
+		@include rem('line-height',29px);
+		
+	}
+	.product-info-accordion{
+		@include rem('padding', 14px 0);
+		width:100%;
+		margin:0 auto;
+		.edit-footer{
+			@include rem('margin-bottom', 50px);
+		}
+		.product-info-accordion__wrapper{
+			border-top:solid 1px $primary-6;
+		}
+
+		.product-info-accordion__node{
+			border-bottom:solid 1px $primary-6; 
+		}
+
+		.product-info-accordion_node__title{
+			@include rem('padding', 11px 0px);
+			text-align:left;
+			position:relative;
+			.product-info-accordion_node_title__ques{
+				@include bold-font;
+				@include rem('min-height', 50px);
+				@include rem('padding-right', 30px);
+				display: table;
+			}
+			
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+		 	 	@include font-color($primary-2);
+			}
+
+			span{
+				position:absolute;
+				right:0;
+				top:30%;
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+			span.on{
+				@include setSprite(22px, 30px, -784px, -20px);
+				
+			}
+			span.off{
+				@include setSprite(22px, 30px, -743px, -20px);
+			}
+
+
+		}
+
+		.product-info-accordion_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	@include font-color($primary-31);
+		}
+
+	}
+	.order-review__confirm {
+			text-align: center;
+			.cta {
+				@include bold-font;
+			}
+			@include rem(margin, 32px 0 50px 0);
+	}
+
+	.days{
+		@include brand-font;
+		@include font-color($primary-2);
+		@include f(22);
+		text-align: center;
+	}
+
+	.address{
+		font-style: italic;
+		@include font-color($primary-2);
+		@include f(22);
+		text-align: center;
+		@include rem(padding, 5px 0 25px);
+		width: 63%;
+		margin: 0 auto;
+	}
+
+	/*------------------------------------*\
+	    $PRODUCT DETAIL CONTAINER
+	\*------------------------------------*/
+
+	.product-detail{
+		display:block;
+		@include f(22);
+		@include main-font;
+		@include font-color($primary-2);
+		border: 1px solid $primary-11;
+		background: $primary-1; /* Old browsers */
+		text-align:center;
+		margin: 0 auto;
+		@include rem('padding', 20px 0 0 0);
+		@include linear-gradient(135deg, #000000 73%, #010000 0%, #460000 100%);
+
+		h3{
+			@include rem('padding', 2px 0 0 0);
+			@include rem('margin', 6px 0);
+		}
+
+		.product-detail__variant{
+			display:block;
+			@include f(24);
+			@include main-font;
+			font-style:italic;
+			font-weight:normal;
+			@include rem('margin', 6px 0);
+		}
+		.product-detail__size{
+			display:block;
+			@include f(16);
+			@include bold-font;
+			text-transform:uppercase;
+
+			@include rem('margin', 6px 0);
+			@include rem('line-height', 20px);
+		}
+	/*------------------------------------*\
+	    $PRODUCT CONTAINER
+	\*------------------------------------*/
+		.product{
+			display:block;
+			padding: 0;
+			.product__image{
+				display: inline-block;	
+				width:50%;
+				margin-bottom: 30px;
+				.image{
+					background-size: cover;
+					max-width: 100%;
+					max-height: 240px;
+					vertical-align: middle;
+				}
+			}
+			.product__price{
+				@include rem('margin', 30px 0);
+				@include f(40);
+				text-transform: uppercase;
+				text-align: center;
+				width: 48%;
+				display: inline-block;
+				vertical-align: top;
+
+				.price-text {
+					@include rem('margin-top' ,30px);
+					display: block;
+				}
+
+			
+
+				.select-2 {
+				    width: 54%;
+				    @include rem('margin' ,35px 0px 0px);
+				}
+
+			}
+			.total-price-text {
+				@include rem('margin-top', 50px);
+				display: inline-block;
+				@include f(50);
+				@include main-font;
+				width: 100%
+
+			}
+		}
+	}
+
+}

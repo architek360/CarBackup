@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    Carousel -- Desktop CSS
+\*------------------------------------*/
+
+.tab-collection-list {
+	width: 100%;
+	display: inline-block;
+}
+
+.repair-service{
+
+	.notification.ecs-repair-send-creation{
+		@include rem('padding', 0px);
+	}
+
+	h2{
+		@include f(13);
+		@include font-weight(bold);
+		color: $primary-3;
+		text-transform: uppercase;
+	}
+
+	h3{
+		text-align: left;
+		text-transform: uppercase;
+		@include f(15);
+		@include font-weight(bold);
+		span{
+			color: $primary-3;
+		}
+		color: $primary-47;
+		@include rem('padding', 15px 0);
+	}
+
+	p{
+		@include rem('padding', 5px 0);
+		font-style: italic;
+	}
+	
+	.address-box{
+		@include rem('padding', 15px 0);
+		h3{
+			@include f(11);
+			color: $primary-3;
+			text-transform: uppercase;
+			@include rem('padding', 0 0);
+			@include font-weight(normal);
+		}
+		p{
+			color: $primary-3;
+			@include rem('padding', 0 0);
+			font-style: normal;
+		}
+	}
+	a.telno{
+		color: $primary-76;
+		@include main-font;
+	}
+}
+

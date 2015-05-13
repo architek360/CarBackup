@@ -1,0 +1,20 @@
+<div class="closeButton close">X</div>
+<div class="OverlayBoxContent">
+<h3>Estimate Partial Agreement- RO number 123456789</h3>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+
+		<div class="buttonRight">
+					<button type="submit" id="approve-btn" class="cta-button cta-button__inner cta--red js-close"><span class="input-arrow"></span>
+					<span class="cta-button__input">Yes</span></button>
+					<button type="submit" class="cta-button cta-button__inner cta--grey-pad-30 js-close"><span class="input-arrow"></span>
+					<span class="cta-button__input">No</span></button>
+					
+				</div>
+		<div class="image">
+			<a href="#" class="image-link">
+				<img src="../etc/designs/dmp/clientlibs_base/images/icons/3.jpg">
+			</a>
+
+		</div>
+</div>
+	

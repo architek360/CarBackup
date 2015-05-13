@@ -1,0 +1,52 @@
+<!-- site map collection View Starts Here-->
+<div class="site-map-collection">
+		
+		<ul class="menu">
+    <li class="menu-level-2"><a href="#"  title="">
+      <h3>Jewelry</h3>
+      </a>
+      <ul class="menu">
+        <li class="menu-level-3"><a href="#"  title="">EXCEPTIONAL CREATIONS</a>
+          <ul class="menu">
+            <li class="menu-level-4"><a href="#"  title="">L’Odyssée de Cartier  - Parcours d’un Style</a></li>
+          </ul>
+        </li>
+        <li class="menu-level-3"><a href="#"  title="">COLLECTIONS</a>
+          <ul class="menu">
+            <li class="menu-level-4"><a href="#"  title="">Panthère de Cartier</a></li>
+            <li class="menu-level-4"><a href="#"  title="">LOVE</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Trinity de Cartier</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Amulette de Cartier</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Juste un Clou</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Paris Nouvelle Vague</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Diamants Légers de Cartier</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Jewelry for Men</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Caresse d'orchidées par Cartier</a></li>
+            <li class="menu-level-4"><a href="#"  title="">C de Cartier</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Entrelacés</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Cartier Fauna and Flora</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Evasions Joaillières</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Classic Diamonds</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Tank</a></li>
+          </ul>
+        </li>
+        <li class="menu-level-3"><a href="#"  title="">Categories</a>
+          <ul class="menu">
+            <li class="menu-level-4"><a href="#"  title="">Rings</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Bracelets</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Necklaces</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Earrings</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Chains</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Pendants</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Brooches</a></li>
+            <li class="menu-level-4"><a href="#"  title="">Charms</a></li>
+          </ul>
+        </li>
+        
+   
+  </ul>
+    
+	
+</div>
+
+<!-- site map collection View Ends Here-->

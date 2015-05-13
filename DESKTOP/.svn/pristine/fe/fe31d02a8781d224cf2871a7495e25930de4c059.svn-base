@@ -1,0 +1,14 @@
+<!-- <ul class="progressbar">
+		<li><a class="progressbar__circle-on" href="#"><span>1</span><h4>Billing</h4></a></li>
+		<li><a class="progressbar__circle-on" href="#"><span>2</span><h4>Delivery</h4></a></li>
+		<li><a class="progressbar__circle-off" href="#"><span>3</span><h4>Review Order</h4></a></li>
+		<li><a class="progressbar__circle-off" href="#"><span>4</span><h4>Payment and Summary</h4></a></li>
+</ul> -->
+
+
+<ul class="progressbar">
+		<li><a class="progressbar__circle-on" href="#"><span>1</span><p>Billing</p></a></li>
+		<li><a class="progressbar__circle-on" href="#"><span>2</span><p>Delivery</p></a></li>
+		<li><a class="progressbar__circle-off" href="#"><span>3</span><p>Review Order</p></a></li>
+		<li><a class="progressbar__circle-off" href="#"><span>4</span><p>Payment and Summary</p></a></li>
+</ul>

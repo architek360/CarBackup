@@ -1,0 +1,42 @@
+
+<div class="boutique">
+	<div class="boutique__title">
+		<h1 class="boutique_title__t1">boutique cartier</h1>
+		<h2 class="boutique_title__t2 js-share-title">
+			new your fifth avenue
+		</h2>
+	</div>
+
+	<div class="boutique__image js-share-img">
+		<img src="<!--#echo var="CONTENT_IMG_PATH" -->boutique.jpg"  alt="store locator">
+	</div>
+
+	<div class="boutique__details">
+		<div class="boutique_details__add js-share-desc">
+			653 Fifth Avenue - New York, 10022 <br/>NEW YORK - NY
+		</div>
+
+		<div class="boutique_details__con">
+			<span class="arrow-show"></span>
+			<a href="tel:1001010">Tel.: 00(1) 212 446-3400</a>
+			<div> Fax: 00(1) 212 446-3400 </div>
+		</div>
+
+		<div class="boutique_details__open">
+			<div>opening hours</div>
+			<div>
+				Monday to Friday, from 10:00 to 19:00<br/>
+				Saturday, from 10:00 to 19:00
+			</div>
+		</div>
+		<div class="boutique_details__links">
+			<a class="cta cta-red js-showmaplink" href="#"><span class="location-button"> </span>show on map </a>
+			<a class="send-email" href="#"><span class="arrow-red"> </span>Send an email </a>
+		</div>
+		
+
+	</div>
+
+</div>
+
+<!--#include virtual="../../components/social_share/html.shtml" -->

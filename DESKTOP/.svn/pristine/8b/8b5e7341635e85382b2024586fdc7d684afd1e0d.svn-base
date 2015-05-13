@@ -1,0 +1,227 @@
+<!-- tab card payment Block Starts Here-->
+<div class="tab-card-payment">
+
+<div class="pushs">
+	<ul>
+
+		
+		<li>
+			<h3 class="pushs__title">You can make the payment using the following cards</h3>
+			<ul class="pushs__credit-cards">
+				<li class="mastercard">MasterCard</li>
+				<li class="visa_card">Visa</li>
+				<li class="jsb_card">Jsb</li>
+				<li class="american_express_card">American Express</li>
+
+			</ul>
+
+		</li>
+
+
+	</ul>
+</div>
+
+ <!-- <iframe id="iframe" class="payment-iframe js-payment-iframe" src="myframe.html"></iframe>  -->
+<div class="payment-iframe">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Cartier - Web sales - Visa Online</title>
+<meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="/orb/css/global.css" />
+
+<link href='https://secure.fr.release.cartier.publicis-modem.fr/sites/all/themes/cartierfotheme/css/psp/files/style.css' rel='stylesheet' type='text/css' />
+
+
+<link rel="stylesheet" type="text/css" href="/orb/css/CVVHelp.css" />
+<script language="JavaScript1.2" type="text/javascript" src="/orb/script/GetMissingDataAll.js"></script>
+<script language="JavaScript1.2" type="text/javascript">
+
+var m_bIsAlreadySubmitted   = false;
+var m_sMessageFormSubmitted = "Already processing.... Just a moment.";
+
+function init()
+{
+    formValidation = new FormValidation();
+    formValidation.validateHiddenFields = true;   // expirydate (aggregate field)
+    formValidation.iErrorHandling = 2;
+//  SJN: hidden is not what should be used, but style="display: none;" => as in CCA
+
+    formValidation.language["accept"]    = "The terms and conditions must be accepted!";
+    formValidation.language["start"]     = "";
+    formValidation.language["header"]    = "Attention!";
+    formValidation.language["require"]   = "<!-0->";
+    formValidation.language["positions"] = "Field {0} must exist of a minimum of {1} and a maximum of {2} characters.";
+    formValidation.language["numeric"]   = "Field {0} must contain a number.";
+    formValidation.language["invalid"]   = "{0} is invalid!";
+    formValidation.language["minlength"] = "Field {0} has a minimum length of {1} characters.";
+    formValidation.language["maxlength"] = "Field {0} has a maximum length of {1} characters.";
+    formValidation.language["minvalue"]  = "Field {0} must be at least {1}.";
+    formValidation.language["maxvalue"]  = "Field {0} may not exceed {1}.";
+    formValidation.language["cvv"]       = "Field {0} is required.";
+
+    m_hBBAN_IBAN = new Array();
+
+
+    formValidation.define("F1009", "CREDITCARDNUMBER"
+                        , 10001, true, "Card No.:"
+                        , 12, 19
+                        , null, null, document, 0);
+
+    formValidation.define("F1010", "EXPIRYDATE"
+                        , 10221, true, "Expiration date:"
+                        , 4, 4
+                        , null, null, document, 0);
+
+    formValidation.define("F1136", "CVV"
+                        , 10063, true, "Security code:"
+                        , 3, 4
+                        , null, null, document, 0);
+
+
+    if ( m_hBBAN_IBAN != null ) { setBBAN_IBAN('BBAN'); }
+
+
+        setFocus("F1009");
+
+}
+</script>
+
+
+</head>
+
+<div id="pageGetMissingData" onload="init();">
+
+<div id="MISSING">
+<div class="ORB_INSTRUCTIONS">Payment details:</div>
+<form id="formGetMissingData" method="post" action="/orb/orb;jsessionid=6779B2C9C7FAFE5734841E5E4A72A444" onsubmit="return doContinuePayment();">
+<input type="hidden" name="ACTION"           id="ACTION"           value="DO_CONTINUE" />
+<input type="hidden" name="PAYMENTPRODUCTID" id="PAYMENTPRODUCTID" value="1" />
+<input type="hidden" name="REF"              id="REF"              value="000000779510674491960000100001" />
+
+
+
+
+<table id="tableMissingFields" class="ORB_TABLE_FIELDS">
+
+
+
+
+<tr id="FIELD_F1009" class="ORB_TR_FIELD" style="display: '';">
+<td class="ORB_TD_FIELDELEMENT">
+<span id="LABEL_F1009">Card No.:</span>
+<br /><input id="F1009" class="ORB_INPUT" type="text" name="CREDITCARDNUMBER" size="20" maxlength="19"autocomplete="off" value="" /><input id="F1009_OBFUSCATED" class="ORB_INPUT" type="hidden" name="CREDITCARDNUMBER_OBFUSCATED" size="20" maxlength="19" value="" /><input id="F1009_CLEAR" class="ORB_INPUT" type="hidden" name="CREDITCARDNUMBER_CLEAR" size="20" maxlength="19" value="" />
+
+<span id="MANDATORY_F1009">*</span>
+<br />
+<div id="ERROR_F1009" style="display:none">
+<table class="ORB_TABLE_ERRORMESSAGE" cellpadding="0" cellspacing="0" border="0">
+<tr class="ORB_TR_ERRORROW">
+<td class="ORB_TD_ERRORLEFT" width="15">!</td>
+<td id="ERRORMESSAGE_F1009" class="ORB_TD_ERRORRIGHT">Please enter the card number correctly before submitting your details</td>
+</tr></table></div></td></tr>
+
+
+
+<tr id="FIELD_F1010" class="ORB_TR_FIELD" style="display: '';">
+<td class="ORB_TD_FIELDELEMENT">
+<span id="LABEL_F1010">Expiration date:</span>
+<br /><select id="F1010_MM" class="ORB_SELECT" name="EXPIRYDATE_MM">
+<option value="">Month</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option></select><select id="F1010_YY" class="ORB_SELECT" name="EXPIRYDATE_YY">
+<option value="">Year</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option></select><input id="F1010" type="hidden" name="EXPIRYDATE" value="" />
+
+<span id="MANDATORY_F1010">*</span>
+<br />
+<div id="ERROR_F1010" style="display:none">
+<table class="ORB_TABLE_ERRORMESSAGE" cellpadding="0" cellspacing="0" border="0">
+<tr class="ORB_TR_ERRORROW">
+<td class="ORB_TD_ERRORLEFT" width="15">!</td>
+<td id="ERRORMESSAGE_F1010" class="ORB_TD_ERRORRIGHT">Please enter the expiration date correctly before submitting your details</td>
+</tr></table></div></td></tr>
+
+
+
+<tr id="FIELD_F1136" class="ORB_TR_FIELD" style="display: '';">
+<td class="ORB_TD_FIELDELEMENT">
+<span id="LABEL_F1136">Security code:</span>
+<br /><input id="F1136" class="ORB_INPUT" type="text" name="CVV" size="3" maxlength="4"autocomplete="off" value="" /><input id="F1136_OBFUSCATED" class="ORB_INPUT" type="hidden" name="CVV_OBFUSCATED" size="3" maxlength="4" value="" /><input id="F1136_CLEAR" class="ORB_INPUT" type="hidden" name="CVV_CLEAR" size="3" maxlength="4" value="" /><a href="#" class="Normal" onclick="javascript: openCVVHelpWindow('/CVVHelp.jsp;jsessionid=6779B2C9C7FAFE5734841E5E4A72A444'); return false;">What is a security code?</a>
+
+<span id="MANDATORY_F1136">*</span>
+<br />
+<div id="ERROR_F1136" style="display:none">
+<table class="ORB_TABLE_ERRORMESSAGE" cellpadding="0" cellspacing="0" border="0">
+<tr class="ORB_TR_ERRORROW">
+<td class="ORB_TD_ERRORLEFT" width="15">!</td>
+<td id="ERRORMESSAGE_F1136" class="ORB_TD_ERRORRIGHT">Please enter correctly your Security code:</td>
+</tr></table></div></td></tr>
+
+
+
+</table>
+<div class="ORB_BUTTONELEMENT">
+<input id="btnSubmit" type="submit" value="Continue" class="ORB_BUTTON" onclick="return onSubmit(false);" />
+<span class="ORB_BUTTONHELPTEXT"></span>
+<input id="btnCancel" type="button" value="Cancel" class="ORB_BUTTON" onclick="return returnToMerchant('formGetMissingData');"/>
+<span class="ORB_BUTTONHELPTEXT">Press this button to return to the shop...</span>
+</div>
+
+</form></div>
+
+<div class="hidden" id="PROGRESS">
+<table>
+<tr><td>Please wait while we process your payment</td></tr>
+<tr>
+<td>
+<img src="/orb/images/progress_globalcollect.gif" alt="Your payment is now being processed..." />
+</td>
+</tr>
+</table>
+</div>
+
+
+</div>
+</html>   
+</div>
+	
+	
+
+</div>
+ <!-- tab card payment Block Ends Here-->

@@ -1,0 +1,110 @@
+.collection-listing-wrapper{
+    color:$primary-2;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .collection-listing{
+        width: 100%;
+        display: inline-block;
+        @include rem(padding, 26px 0 10px 0);
+        text-align: center;
+        .row{
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            .mosaic-image-wrapper{
+                display: inline-block;
+				z-index: 0!important;
+                img{
+                    border-right: 1px solid $primary-110;
+                    border-bottom: 1px solid $primary-110;
+                }
+                &:last-child{
+                    img{
+                        border-right:0 none;
+                    }
+                }
+                &.lastimage{
+                    img{
+                        border-right: 0 none;
+                    }
+                }
+                &.bottom{
+                    img{
+                        border-bottom: 0 none;
+                    }
+                }
+                &.lastinrow{
+                    img{
+                        border-right: 0 none;
+                    }
+                }
+                &.lastrow{
+                    img{
+                        border-bottom: 0 none;
+                    }
+                }
+            }
+            &.left{
+                display: inline-block;
+                text-align: center;
+                float: none;
+                width: auto;
+                .mosaic-image-wrapper{
+                    float: right;
+                    clear: right;
+                }
+            }
+            &.right{
+                display: inline-block;
+                text-align: center;
+                float: none;
+                width: auto;
+                .mosaic-image-wrapper{
+                    float: left;
+                }
+            }
+        }
+        .mosaic-image-wrapper{
+            overflow: hidden;
+            position: relative;
+            .image-detail-txt{
+                @include transition-full(opacity);
+                @include f(14);
+                @include rem(line-height, 20px);
+                opacity: 0;
+                z-index: 1;
+                color: $primary-2;
+                @include main-font;
+                left:0;
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .mosaic-image{
+                img{
+                    display: table-cell;
+                    vertical-align: top;
+                }
+            }
+            &:hover{
+                .image-detail-txt{
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                    color: $primary-49;
+                }
+            }
+        }
+    }
+    &#page-timepieces .row{
+        width: 863px;
+    }
+    &#page-objects .row{
+        width: 685px;
+    }
+    &#page-jewelery .row{
+        width: 623px;
+    }
+}

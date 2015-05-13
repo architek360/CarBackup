@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    TimeLine -- Mobile CSS
+
+\*------------------------------------*/
+
+/**
+ * Main CONTAINER.... Wrapper for timeLine (.timeLine)
+ * List element for time line (UL LI)
+ * timeLine Icon (.timeLineIcon)
+ */
+
+/*------------------------------------*\
+    $tabs CONTAINER
+\*------------------------------------*/
+
+.timeLine{
+	@include rem('padding', 10px 10px 10px 10px);
+	@include rem('margin', 0 0 40px 0);
+	border-top: 1px dotted #666;
+	border-bottom: 1px dotted #666;
+	ul{
+		display: inline-flex;
+		li{
+		   	color: #6F4E53;
+    		display: inline;
+    		@include f(10);
+    		@include rem('line-height' , 25px);
+    		font-weight: bold;
+   			text-transform: uppercase;
+			@include rem('margin', 0 55px 0 0);
+			.timeLineNumber{
+				    background: url($path-images + 'icons/buttons.png') no-repeat scroll -30px -450px;
+				    color: #000000;
+				    display: inline-block;
+				    font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+				    @include f(14);
+				    font-weight: bold;
+				    height: 25px;
+				    letter-spacing: normal;
+				    @include rem('margin', 0 7px 0 0);
+				    padding: 0;
+				    text-align: center;
+				    text-transform: uppercase;
+				    width: 25px;
+
+			}
+				
+	
+		}
+
+		.timeLineIcon.active{
+				.timeLineNumber{
+				    background-position: 0 -450px;
+				    color:#6F4E53;
+				}	
+				.timeLineTitle{
+				 color:#BFB1B3;
+				}
+			}
+	}
+}

@@ -1,0 +1,54 @@
+/*------------------------------------*\
+   GUEST CHECKOUT Component -- Mobile CSS
+\*------------------------------------*/
+.checkout-wrapper{
+	border:1px solid $primary-11;
+	@include linear-gradient(315deg, #000000 0%, #010000 73%, #460000 100%);
+	@include rem(padding, 20px);
+
+	.guest-checkout{
+		display: block;
+		border-bottom:1px solid $primary-3;
+		
+
+		.heading3{
+			@include bold-font;
+			@include f(24);
+			@include rem(padding, 20px 0);
+		}
+
+		.message{
+			text-align: center;
+			@include main-font;
+			@include rem(padding, 5px 0 15px);
+			font-style: italic;
+			@include f(28);
+		}
+
+		.cta-button{
+			margin: 20px auto 50px;
+		}
+	}
+
+	.registered-checkout{
+		display: block;
+		
+		.heading3{
+			@include f(24);
+			@include bold-font;
+			@include rem(padding, 60px 0 20px);
+		}
+
+		.message{
+			text-align: center;
+			@include main-font;
+			@include rem(padding, 5px 0 15px);
+			font-style: italic;
+			@include f(28);
+		}
+
+		.cta-button{
+			margin: 20px auto 10px;
+		}
+	}
+}

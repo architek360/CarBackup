@@ -1,0 +1,122 @@
+ 	<!-- BEGIN: all library and custom javascripts -->
+  <!--Lib files-->
+   	<script src="../js/libs/jquery-1.10.2.min.js"></script>
+
+    <!--plugin files-->
+    <!--[if lte IE 8]>
+
+    <![endif]-->
+
+    <script src="../js/richemont_base/jquery.lazyload.js"></script>
+
+
+    <script src="../js/plugins/analytics.js"></script>
+    <script src="../js/plugins/jquery.validate.min.js"></script>
+    <script src="../js/plugins/accordion.js"></script>
+    <script src="../js/plugins/jquery.bxslider.js"></script>
+    <script src="../js/plugins/jquery.fitvids.js"></script>
+    <script src="../js/plugins/date.picker.js"></script>
+    <script src="../js/plugins/tabs.js"></script>
+
+    <script src="../js/plugins/overlay.js"></script>
+    <script src="../js/plugins/reel.js"></script>
+    <script src="../js/plugins/imagelazyloader.js"></script>
+    <script src="../js/plugins/product-zoom.js"></script>
+
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCfRRGowVUnkquuaAujaJQZYsfV770gvxg&amp;sensor=false&amp;language=en&amp;version=3.8&amp;libraries=places,geometry"></script>
+    <script src="../js/plugins/markerclusterer.js"></script>
+    <script src="../js/plugins/jstorage.js"></script>
+    <script src="../js/plugins/storelocator.js"></script>
+    <script src="../js/plugins/jquery.scrollto.js"></script>
+    <script src="../js/plugins/radio.tabs.js"></script>
+    <script src="../js/plugins/jquery.confirm.js"></script>
+
+   <!--  <script src="../js/plugins/jwplayer.html5.js"></script> -->
+    <script src="../js/plugins/jquery.modalwindow.js"></script>
+    <script src="../js/plugins/easing.1.3.js"></script>
+    <script src="../js/plugins/jquery.vaccordion.js"></script>
+    <script src="../js/plugins/jquery.uniform.js"></script>
+    <script src="../js/plugins/jquery.ui.core.min.js"></script>
+    <script src="../js/plugins/jquery.ui.widget.min.js"></script>
+    <script src="../js/plugins/jquery.ui.mouse.min.js"></script>
+    <script src="../js/plugins/jquery.ui.sortable.min.js"></script>
+    <script src="../js/plugins/jquery-ui.min.js"></script>
+    <script src="../js/plugins/jquery.visibility.js"></script>
+
+
+
+    <!--
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+-->
+    <script src="../js/plugins/jquery.cookie.js"></script>
+    <script src="../js/plugins/jquery.mousewheel.js"></script>
+    <script src="../js/plugins/jquery.jscrollpane.js"></script>
+
+    <!--application core files-->
+   	<script src="../js/cartier.core.js"></script>
+
+    <!--common files-->
+    <script src="../js/common/cartier.properties.js"></script>
+    <script src="../js/common/cartier.template.js"></script>
+    <script src="../js/common/cartier.form.validation.wrapper.js"></script>
+    <script src="../js/common/cartier.ajax.wrapper.js"></script>
+    <script src="../js/common/cartier.common.js"></script>
+    <script src="../js/common/cartier.country.handler.js"></script>
+
+     <!--modules files-->
+    <script src="../js/modules/cartier.maison.js"></script>
+    <script src="../js/modules/cartier.location.datastore.js"></script>
+    <script src="../js/modules/cartier.location.hasmore.js"></script>
+    <script src="../js/modules/cartier.location.filter.js"></script>
+    <script src="../js/modules/cartier.location.boutiquelist.js"></script>
+    <script src="../js/modules/cartier.location.js"></script>
+    <script src="../js/modules/cartier.location.geocodedinput.js"></script>
+    <script src="../js/modules/cartier.location.googlemap.js"></script>
+
+    <script src="../js/modules/cartier.home.js"></script>
+    <script src="../js/modules/cartier.login.js"></script>
+    <script src="../js/modules/cartier.myaccount.js"></script>
+    <script src="../js/modules/cartier.billing.js"></script>
+    <script src="../js/modules/cartier.product.js"></script>
+    <script src="../js/modules/cartier.boutique.js"></script>
+    <script src="../js/modules/cartier.boutiqueDispatch.js"></script>
+
+    
+     <script src="../js/modules/cartier.ecsRegistration.js"></script>
+    <script src="../js/modules/cartier.others.js"></script>
+    <script src="../js/modules/cartier.productlist.js"></script>
+    <script src="../js/modules/cartier.wishlist.js"></script>
+    <script src="../js/modules/cartier.shoppingbag.js"></script>
+    <script src="../js/modules/cartier.pendingestimatelist.js"></script>
+
+    <script src="../js/modules/cartier.sfy.js"></script>
+    <script src="../js/modules/cartier.sfy_step1.js"></script>
+
+    <script src="../js/modules/cartier.giftforyou.js"></script>
+    <script src="../js/modules/cartier.multiplevideo.js"></script>
+
+    <script>
+      (function(t,r,a,c,k,i,n,g){t["AnalyticsBy55"]=c;t[c]=t[c]||function(){(t[c].q=t
+      [c].q||[]).push(arguments)};t[c]("config","dataLayer",k);t[c].dln=k;if((n||[]).
+      length)t[c].r=n;t[c].dl=t[k]=t[k]||[];t[k]=[{event:"core.js"}];(function(w,d,s,
+      l,i){var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?
+      "&l="+l:"";j.async=true;j.src="//www.googletagmanager.com/gtm.js?id="+i+dl;f.
+      parentNode.insertBefore(j,f)})(t,r,a,k,i)})(window,document,"script",
+      "_55","dataLayer","GTM-WPHH33",[]);
+    </script>
+
+   	<script type="text/javascript">
+			$(document).ready(function(){
+      				cartier.init();
+                    $("input:checkbox, input:radio, select").not('.no-uniform').uniform();
+      			});
+
+            function onYouTubeIframeAPIReady() {
+                cartier.others.bindYoutubeIframeEvents();
+            };
+
+
+      </script>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+
+
+/* line 233, ../../../../../../sass/main_theme/temp.scss */
+
+.js-address-form-jp, .js-address-form {
+  .checkbox-wrapper {
+    width: 14%;
+  }
+  .addressform_lastName2, .addressform_phone {
+    margin-left: 0px;
+    margin-left: 0rem;
+    clear: left;
+    width: 49%;
+  }
+  .addressform_lastName1 {
+    width: 49%;
+    margin-left: 8px;
+    margin-left: 0.8rem;
+    clear: none;
+  }
+  .addressform_firstName1, .addressform_address7 {
+    width: 100%;
+  }
+  .addressform_zip1 {
+    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
+  }
+  .form-input {
+    width: 100%;
+  }
+}

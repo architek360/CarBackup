@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    BILLING SHIPPING -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..... billing shipping address block(.billing-shipping)
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.billing-shipping{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	width:81.25%;
+	margin:0 auto;
+	text-align: center;
+	.loaderDiv{
+		margin-top: -6px;
+		margin-bottom: -20px;
+	}
+	.billing-form .loaderDiv .loaderImage{
+		margin-top:0px;
+	}
+	.heading2{
+		border:none;
+		letter-spacing:3px;
+		@include rem(padding, 0px 0 30px);
+		@include rem(margin, 34px 0 0px);
+	}
+	.js-radio-tabs{
+		.radio-btn{
+			.radio-btn-li{
+				width: 49%;
+				.radio-title{
+				 	height: 170px;
+				 	padding-bottom: 30px;
+				 	display: table-cell;
+                	vertical-align: middle;
+				}
+				.radio-title:after {
+					bottom: 10%;
+				}
+			}
+		}
+	}
+}
+.js-shipping-section-one {
+	.personal-details {
+		.radio-btn {
+			.radio-btn-li{
+				border:none;
+				width:auto;
+				.radio-title{
+					height:auto;
+					padding:0 16px 0 0;
+				}
+				.radio-title:after{
+					margin:0 0 0 18px;
+					position:static;
+				}
+			}
+		}
+	}
+}

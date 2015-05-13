@@ -1,0 +1,31 @@
+<!-- Billing Confirmation Component Block Starts Here-->
+
+  <div class="billing-confirmation">
+    <h1 class="heading1">CONFIRM YOUR BILLING ADDRESS</h1>
+    <p class="heading__desc">Please note that person who submits the order must be the cardholder whose name appears on the credit card</p>
+    <div class="conf">
+        <span class="conf-title">OMAXE HEUGHTS</span>
+        <span class="js-conf-name">JEAN DUPONT</span>
+        <span class="js-conf-address">250 Fifth Avenue</span>
+        <span class="js-conf-addinfo"></span>
+        <span class="js-conf-city">New York</span>
+        <span class="js-conf-state">NY</span>
+        <span class="js-conf-zip">10179-0001</span>
+        <span class="js-conf-phonenum">01111111</span>
+    </div>
+	  <div class="address-button">
+ 
+           <a href="#" class="edit-link js-edit-address" title="edit">edit <span class="edit-icon"></span></a>
+           <a href="#" class="replace-link js-addnew-address" title="replace">replace <span class="replace-icon"></span>	 </a>
+     </div>
+     <input type="hidden" class="js-dynamic-delievery-path" value="/DESKTOP/pages/dynamic_delievery_content.html">
+      <div class="js-dynamic-delievery">
+      </div>
+    <!--#set var="text-detail" value="continue to next step" --> 
+    <!--#set var="cta--varaint" value="cta--red js-confirm-shipping" --> 
+    <!--#set var="checkbox-label-name" value="I do not want to recieve an invoice to the billing address" -->
+     <!--#include virtual="../../components/form_elements/desktop_checkbox.shtml" -->
+    <!--#include virtual="../../components/form_elements/button.shtml" -->
+  </div>
+
+<!-- Billing Confirmation Component Block Ends Here-->

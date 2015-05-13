@@ -1,0 +1,601 @@
+/*
+ * cartier.ecsRegistration.js
+ * This file contains functionalities handling the Pre Registration Module module
+ *
+ * @project   cartier Mobile	
+ * @date      2014-09-20
+ * @author    Sapient 
+ * @licensor  cartier Mobile
+ * @site      cartier Mobile
+   @dependency cartier.core.js
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+    2) caching jquery wrapper objects and messages
+    $last) call to init() method
+ */
+;
+(function(win, $, ecsRegistration, undefined) {
+	/*
+		this will cause the browser to check for errors more aggressively
+	*/
+	'use strict';
+
+	/*
+		check if jquery is defined, else retun
+	*/
+	if ($ === undefined) {
+		//console.log("jQuery not found");
+		return false;
+	}
+
+	/*
+    	private variables
+    */
+
+	var	EDIT=0,
+		ADD=0,
+		clickType=0,
+		selectedAddress,
+        selectedAddressGlobal,
+		selectHtml,
+        selectedOptionValue,
+        addBilling = false,
+		selectedOptionEl,
+		addressfield,
+		selectedOptionHtml,	
+		_cache = {},
+		_objPropertiesMsg,
+		_objPropertiesPath,
+		addressCountryName,
+		_bobjaddressList = [],
+		_initialNewsLetterCheck = false,
+		_initialCatalogeCheck = false,
+		clickedText,
+
+
+	/*
+		@private method : caching jquery objects 
+		@param : none 
+	*/
+	_cacheObjects = function() {
+
+		_cache = {
+			$addressDropDown: $('.js-address-select').find('select'),
+			$addAddress: $('.js-add'),
+			$editAddress: $('.js-edit'),
+            $addressCheckBox: $('#ecspre-registration_form fieldset label[for="blank"]').find('input:checkbox'),
+            $accordionObject: $('.js-accordion'),
+            $editAddressPath: $('#actionURL').val() + "/jcr:content/par.html",
+            $submitForm: $('.submit').find('.form-button'),
+            $selectAddress: $('.address-container').find('select'),
+			$selectDropdown: $('select')
+
+		};
+
+	},
+
+	/*
+      @private method : bind events
+      @param : none
+    */
+	_bindEvent = function() {
+		/*
+			Onclick bind event for address change Event
+		*/
+          $('.ecsaddress1').find('.heading3').data('atlernateText',_objPropertiesMsg.ecsBillingAddressAlternateText);
+        
+        _cache.$addressDropDown.on('change', _addressChangehandler);
+        _cache.$addAddress.on('click', _addText);
+        _cache.$editAddress.on('click', _editText);
+        _cache.$addressCheckBox.on('click', _toggleShipping);
+        $.each(_cache.$addressDropDown.find('option'), function(key,value){
+                if($(value).attr('data-default') === 'true'){
+                    $(value).attr('selected', 'selected');
+                }
+            });
+        _cache.$addressDropDown.trigger('change');
+        _cache.$submitForm.on('click', _validate);
+        _cache.$selectAddress.on('change', _validate);
+		
+		_removeDisabled();
+		
+		/* ********************************************************************** */
+	   	/* *********** uncomment below line to run on local machine *********** */
+	   	/* ********************************************************************** */
+    		/*$('.js-confirm input').on('click', function(){
+                _postCodeAjaxCallHandler(_objPropertiesPath.confirmAddressPath, _confirmAjaxCallBack);
+            });
+			*/
+			
+        /* ********************************************************************** */
+        /* ********************************************************************** */
+	},
+	
+	/*
+        this function removes disabled attribute from dropdowns. 
+    */
+    _removeDisabled = function(){
+        _cache.$selectDropdown.find('option').removeAttr('disabled');
+    },
+
+    /*
+        this function hides the edit address link. 
+    */
+    _hideEdit = function(obj){
+        obj.closest('.address-container').find('.js-edit').hide();
+    },
+
+    /*
+        this function shows the edit address link. 
+    */
+    _showEdit = function(obj){
+        obj.closest('.address-container').find('.js-edit').show();
+    },
+
+    /*
+        this function adds extra validation for address component selectbox. 
+    */
+    _validate = function(){
+        var response = true;
+        $.each(_cache.$selectAddress, function(key, value){
+            if(typeof $(value).val() === 'object' && $.isEmptyObject($(value).val()) === true){
+                _hideEdit($(value));
+            }else{
+                _showEdit($(value));
+            }
+            var p = '#errormessage-'+$(value).attr('id');
+            if($(value).attr('id') !== 'address2'){
+                if($(value).val() === '' || $(value).val() === null )
+                {
+                    $(p).find('label.error').show();
+                    response = false;
+                }else{
+                    $(p).find('label.error').hide();
+                }
+            }
+            else if(_cache.$addressCheckBox.closest('span').hasClass('checked')){
+                if($(value).val() === '' || $(value).val() === null){
+                    $(p).find('label.error').show();
+                    response = false;
+                }else{
+                    $(p).find('label.error').hide();
+                }
+            }
+        });
+        return response;
+    },
+
+    /*
+        function to Disable / Enable fields according to pobox number or street info. 
+    */
+    _disableAddressFiledPopUp = function() {
+        var $this = $('.js-address-form').find('input[name = fn_grpaddr]');
+        $this.on('change', function(){
+            var radioChecked = $('.js-address-form').find('input[name = fn_grpaddr]:checked');
+            if (radioChecked.val() === 'homeaddress') {
+                _disableFields(false);
+            } else {
+                _disableFields(true);
+            }
+        });
+        
+    },
+
+    /*
+        this function is a part of _disableAddressFiledPopUp function. 
+    */
+    _disableFields = function(state){
+        var addressContainer = $('.js-address-form').find('.js-address-form'),
+            streetNumber = addressContainer.find('input[name = address2]'),
+            streetName = addressContainer.find('input[name = address5]'),
+            streetDetail = addressContainer.find('input[name = address6]'),
+            poBox = addressContainer.find('input[name = address12]');
+
+        streetNumber.prop('disabled', state);
+        streetName.prop('disabled', state);
+        streetDetail.prop('disabled', state);
+		
+		if(state === false){
+			$('.address12').addClass('display-none');
+			$('.address2').removeClass('display-none');
+			$('.address5').removeClass('display-none');
+			$('.address6').removeClass('display-none');
+			state = true;
+        }
+        else{
+			$('.address12').removeClass('display-none');
+			$('.address2').addClass('display-none');
+			$('.address5').addClass('display-none');
+			$('.address6').addClass('display-none');
+			state = false;
+        }
+        poBox.prop('disabled', state);
+        return;
+    },
+
+    /*
+        function to handle name titles MR. MRS. MS.
+    */
+    _nameTitle =function(value){
+        if (value === '0002')
+            value = 'MRS. ';
+        else if (value === '0003')
+            value = 'MS. ';
+        else
+            value = 'MR. ';
+
+        return value;
+    },
+
+    /*
+        Function to show error message when objXHR.done is not working.
+    */
+    _showError = function(msg){
+        $('.error-div').remove();
+        $('.overlay-form').prepend('<div class="error-div">' + msg + '</div>');
+        $('.error-div').ScrollTo({
+            duration: 800,
+            offsetTop: 140
+        });
+    },
+
+    /*
+        function to display succes message for successful submission of form
+    */
+    _successmessage = function(data, addressData) {
+        $('.error-div').remove();
+        $('.tabparsys1 .ecsstep1').css('display', 'none');
+        $('.tabparsys1 .ecsstep2').html(data);
+        $('.ecsstep2').find('h3').find('span').html(addressData.username);
+        $('.ecsstep2').find('.address-box').html('<p>'+addressData.username+'</p><div class="addressrow"><p>'+addressData.address2+'&nbsp;'+addressData.address5+'</p></div><div class="addressrow"><p>'+addressData.address7+'</p><p>'+addressData.address9+'&nbsp;'+'</p><p>'+addressData.zip+'</p></div>');
+        $('.repair-service').find('.side-image').css('display', 'block');
+       
+    },
+
+    /*
+        Common function to handle _addText and _editText
+    */
+    _clickedAction = function(obj){
+        clickedText = $(obj).closest(".address-container").find(".js-edit-text");
+
+        if(EDIT === 1)
+            $(obj).closest(".address-container").find(".js-edit-text").html('');
+        else
+            $(obj).closest(".address-container").find(".js-create-text").html('');
+
+
+        selectedAddress = $(obj).closest(".js-address-select");
+        selectedAddressGlobal = $(".js-address-select");
+        selectHtml = selectedAddress.find('select');
+        selectedOptionHtml = selectHtml.find('option:selected');
+        if(selectedOptionHtml.length){
+            selectedOptionEl = selectedOptionHtml.data();
+        }
+        else{
+            selectedOptionEl = {'default':'false'};
+        }
+        if(EDIT === 1){
+            selectedOptionValue = selectHtml.find('option:selected').html();
+        }
+        if (selectHtml.attr('id') === 'address1') {
+            addBilling = true;
+            if(ADD === 1){
+                selectedOptionEl["default"] = true;
+            }
+        } else {
+            addBilling = false;
+            if(ADD === 1){
+                selectedOptionEl["default"] = false;
+            }
+        }
+        _dataLoad(_cache.$editAddressPath, _modalWindowPopUp);
+    },
+
+	/*
+		OnChange function for address change Event
+	*/
+    _addressChangehandler = function() {
+        selectedOptionEl  = $(this).find('option:selected').data();
+        if(selectedOptionEl ===  null){
+            selectedOptionEl = $(this).find('option:eq(0)').data();
+        }
+        if(selectedOptionEl !== null){
+            addressfield = $(this).closest(".js-address-select").find('.js-address-field');
+            $.each(selectedOptionEl, function(key,value){
+                if (key === 'address20') {
+                    value = _nameTitle(value);
+                }
+                addressfield.find('.'+ key).text(value);
+            });
+            $(this).closest(".js-address-select").find(".js-hiddenfield").val(JSON.stringify(selectedOptionEl));
+        }
+    },
+
+    /*
+        Onclick function for toggeling shipping address
+    */
+    _toggleShipping = function(){
+        var $addressHeading = $('.ecsaddress1').find('.heading3');
+        var toggleText = $addressHeading.text();
+          $addressHeading.text($addressHeading.data('atlernateText')).data('atlernateText', toggleText);
+		setTimeout(function(){
+			_validate();
+			if(_cache.$addressCheckBox.closest('span').hasClass('checked'))
+				$('.ecsaddress2').slideDown();
+			else
+				$('.ecsaddress2').slideUp();
+		},100);
+    },
+
+    /*
+    	Onclick function for address edit Event
+    */
+	_editText = function() {
+        ADD = 0;
+        EDIT = 1;
+        _clickedAction(this);
+	},
+
+	/*
+		Onclick function for address add Event
+	*/
+    _addText = function() {
+		ADD = 1;
+		EDIT = 0;
+		_clickedAction(this);
+    },
+
+    /*
+    	Callback function when user finally submit the form
+    */
+    _confirmAjaxCallBack = function(data){
+    	if (typeof data === "object") {  
+	        if (typeof(data.success) !== 'undefined' && data.success === 'true') {
+                data.shippingAddress['username'] = data.username;
+                _dataLoad(data.path + "/jcr:content/par.html", _successmessage, data.shippingAddress);
+                        }
+                        else {
+                                /*
+                                Not able to check in local environment as objXHR.done is not working.
+                */
+                _showError(data.errorMessage);
+	        }
+	    }
+    },
+
+	/*
+        ajax handler  for Form load
+    */
+    _dataLoad = function(url, action, arg) {
+        var objXHR = cartier.ajaxWrapper.getXhrObj({
+            type: 'GET',
+            url: url,
+            dataType: 'html',
+            contentType: "application/x-www-form-urlencoded",
+        });
+        if (objXHR) {
+            objXHR.done(function(data) {
+                var parsed = $($.parseHTML(data, document, true)).find('.overlay-form').addBack('.overlay-form');
+                if(arg === 'undefined')
+                    action(data);
+                else
+                    action(data, arg);
+            });
+        }
+    },
+
+    /*
+        function to add cross button in the edit/add toggle div
+    */
+	_addCrossButton = function(obj) {
+        obj.find('.my-address-c1').before("<span class='cross-button js-close'></span>");
+    },
+
+	/*
+		Modal Window pop up \/not a pop up for mobile\/ function defined for ECS registration page
+	*/
+    _modalWindowPopUp = function(result) {
+    	/* append html in the edit or add section on the page */
+    	clickedText.html(result);
+        clickedText.slideDown();
+    	
+    	if(EDIT){
+        	$.each(selectedOptionEl, function(key,value){
+				clickedText.find("#"+key).val(value);
+				if(key === 'address20' || key === 'fn_grpaddr'){
+					clickedText.find("#"+value).attr('checked', 'checked');
+				}
+
+                if (key === 'address20') {
+                    clickedText.find("#" + value).attr('checked', 'checked');
+                }
+                if (key === 'fn_grpaddr') {
+                    clickedText.find("#" + value).attr('checked', 'checked');
+                }
+                if (key === 'addcountry') {
+                    clickedText.find('div.submit').append('<input id="addcountry" type="hidden" value="' + value + '" name="addcountry">');
+                }
+                if (key === 'default') {
+                    clickedText.find('div.submit').append('<input id="default" type="hidden" value="' + value + '" name="default">');
+                }
+                if (key === 'id') {
+                    clickedText.find('div.submit').append('<input id="id" type="hidden" value="' + value + '" name="id">');
+                }
+
+                /* select composit address radio box */
+                if( (key === 'address2' && value !== '') || (key === 'address5' && value !== '') || (key === 'address6' && value !== '') ){
+                    clickedText.find("#homeaddress").attr('checked', 'checked');
+                    _disableFields(false);
+                }
+                else if( (key === 'address12' && value !== '') ){
+                    clickedText.find("#poboxaddress").attr('checked', 'checked');
+                    _disableFields(true);
+                }
+			});
+        }else{
+        	clickType = 1;
+            clickedText.find('#default').val(addBilling);
+            clickedText.find('div.submit').append('<input id="default" type="hidden" value="' + addBilling + '" name="default">');
+            clickedText.find("#homeaddress").attr('checked', 'checked');
+            _disableFields(false);
+        }
+        /*
+        	#ecs-action is a hidden field, required by backend to identify ADD or EDIT operation
+        */
+        clickedText.find('div.submit').append('<input type="hidden" name="ecs-action" id="ecs-action" value="'+clickType+'"/>');
+        _addCrossButton(clickedText);
+        $("input:checkbox, input:radio, select").not('.no-uniform').uniform().end().uniform();	
+        _disableAddressFiledPopUp();
+
+        /* ********************************************************************** */
+       	/* *********** uncomment this function to run on local machine *********** */
+       	/* ********************************************************************** */
+            /*
+			clickedText.find('.submit .form-button').on('click', function(e){
+			 	e.preventDefault();
+			 	_postCodeAjaxCallHandler(_objPropertiesPath.jsonAddressPath , _submitAjaxCallBack);
+			});
+			*/
+		/* ********************************************************************** */
+		/* ********************************************************************** */
+
+		/*
+			function to close popup when user clicks the cross button
+		*/
+      	$(".cross-button").on("click", function() {
+            clickedText.slideUp();
+            clickedText.html('');
+      	});
+    },
+
+    /*
+	Function is to pre populate Json object into _submitAjaxCallBack function.
+    */
+    /* ********************************************************************** */
+   	/* *********** uncomment this function to run on local machine *********** */
+   	/* ********************************************************************** */
+        /*
+		_postCodeAjaxCallHandler = function(url,callBackFunction) {
+            var objXHR = cartier.ajaxWrapper.getXhrObj({
+                type: 'GET',
+                url: url,
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded",
+            });
+
+            if (objXHR) {
+                objXHR.success(function(data) {
+                    // handle failure
+                    if (typeof data.success !== "undefined" && data.success) {
+                    	callBackFunction(data);
+                    } else {
+                        callBackFunction(data);
+                    }
+                });
+            }
+        },
+		*/
+    /* ********************************************************************** */
+	/* ********************************************************************** */
+
+
+	/*
+    	callback Function called after submit address popup form
+	*/
+    _submitAjaxCallBack = function(data) {	
+		if (typeof data === "object") {  
+			var labelName = selectedOptionEl.label;
+			var shippingName = selectedOptionEl['default'];
+			var billingAddress;
+			addressfield = selectedAddress.find('.js-address-field');
+			labelName = data.content.newAddress ;
+	        if (typeof(data.success) !== 'undefined' && data.success === 'true') {
+            	$('.error-div').remove();
+            	if(shippingName){
+            		billingAddress = data.content.billing;
+            	}	
+            	else{
+            		billingAddress = data.content.shipping;
+            	}
+            	var label = labelName;
+                billingAddress = billingAddress[label];
+            	if(EDIT){
+            		/*
+            			code to update option fields od address dropdown in case of EDIT
+            		*/
+                    selectedAddressGlobal.find('select').find('option:contains("'+selectedOptionValue+'")').data(billingAddress).text(billingAddress.label);
+	            	$.each(selectedAddressGlobal, function(key, value) {
+                        if ($(value).find('select').find('option:selected').val() === billingAddress.label) {
+                            $(value).find('.js-address-field');
+                            $.each($(value).find('.js-address-field'), function(key, value) {
+                                $.each(selectedOptionEl, function(key2, value2) {
+                                    key2 = key2.toLowerCase();
+                                    if (key2 === 'address20') {
+                                        value2 = _nameTitle(value2);
+                                    }
+                                    $(value).find('.' + key2).text(value2);
+                                });
+                            });
+                        }
+                    });
+                    
+                    selectedAddress.find(".js-hiddenfield").val(JSON.stringify(selectedOptionEl));
+				}
+				else{
+					/*
+                        code to append new option fields of address dropdown in case of ADD
+                    */
+                    selectedAddressGlobal.find('select').append('<option></option>');
+                    selectedAddressGlobal.find('select').find('option:last').data(billingAddress).text(billingAddress.label);
+                    if((addBilling === true) || (!temp)){
+                        selectedAddressGlobal.find('select').find('option:last').attr('selected', 'selected');
+                        _cache.$addressDropDown.trigger('change');
+                        _validate();
+                    }
+            	}
+            	$('.form-select-box').uniform();
+            	clickedText.empty();
+                clickedText.closest('.address-container').find('select').focus();
+	        }
+	        else {
+	        	/*
+	        		Not able to check in local environment as objXHR.done is not working.
+	        	*/
+               	_showError(data.errorMessage);
+	        }
+	    }
+	},
+
+	/*
+      @private method : initialize Accordion
+      @param : none 
+    */
+                _initializeAccordion = function() {
+                                _cache.$accordionObject.makeAccordion({
+                                                showBehaviour: true
+                                });
+                                                if(!$('#revieworder_form ').length){
+                                                                $("input:checkbox, input:radio, select").not('.no-uniform').uniform().end().uniform();
+                                                }
+        };
+
+    /*
+    @pubic method : initailize the module
+    */
+	ecsRegistration.init = function() {
+		// caching the jquery objects
+		_objPropertiesMsg = cartier.properties.messages;
+		_objPropertiesPath = cartier.properties.paths;
+		_cacheObjects();
+		_bindEvent();
+		_initializeAccordion();
+        _validate();
+		//RICHEMONT.AjaxCaller.listOfCallbackFun.CartierSubmitRegistrationForm = _submitAjaxCallBack;
+		//RICHEMONT.AjaxCaller.listOfCallbackFun.CartierConfirmRegistrationForm = _confirmAjaxCallBack;
+            RICHEMONT.AjaxCaller.listOfCallbackFun.ECSAddressFormAction = _submitAjaxCallBack; //use for pop up submit
+        RICHEMONT.AjaxCaller.listOfCallbackFun.ECSPreRegistrationAction = _confirmAjaxCallBack; //used for submit or continue button
+
+	};
+
+}(window, jQuery, cartier.ecsRegistration));

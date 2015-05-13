@@ -1,0 +1,380 @@
+
+/*------------------------------------*\
+    HEADER -- DESKTOP CSS
+\*------------------------------------*/
+header{
+	height:auto;
+
+}
+
+.body-wrapper .header{
+	/*overflow:hidden;*/
+	position:relative;
+	top:0;
+	left:0;
+    z-index: 12;
+    max-width: 1600px;
+    min-width: 980px;
+	@include rem('padding-bottom', 10px);
+	.site-logo {
+		margin-top: 0;
+		margin-left: 0px !important;
+		text-align: center;
+		clear: both;
+		@include rem('padding-top', 3px);
+		height: 66px;
+		img{
+			margin-top: 0px;
+		 
+		}
+	}
+	.left-nav{
+			@include set-ulFix;
+			@include rem('margin', 0px 0px 0px 15px);
+			.left-nav__list{
+				float:left;
+				@include rem('padding-top', 2px);
+				@include rem('padding-left', 13px);
+				li{
+					
+					height:0;
+					vertical-align:top;
+					border:0;
+					display:inline;
+					@include rem('margin-left', 10px);
+					width: 40%;
+					text-align: left;
+
+					a.nav-link{
+		                @include f(10);
+						@include rem('line-height', 22px);
+		              	@include rem('letter-spacing', 1px);
+
+		              	&:hover{
+		              		color:$primary-67;
+		              	}
+         			}  
+				}
+			}
+	}
+
+	.right-nav{
+			@include set-ulFix;
+			@include rem('margin', 0px 15px 0px 0px);
+			.right-nav__list{
+				float:right;
+				@include rem('padding-top', 2px);
+				width: 50%;
+				text-align: right;
+
+				li.mycartier .nav-link{
+				    text-align: left;
+				    text-indent: -500em;
+				}
+
+				li{
+					
+					
+					vertical-align:top;
+					border:0;
+					display:inline-block;
+					@include rem('margin-right', 10px);
+
+					img{
+						max-height: 21px;
+					}
+					
+					.nav-link{
+		                @include f(10);
+		                @include rem('letter-spacing', 1px);
+						@include rem('line-height', 22px);
+
+						&:hover{
+		              		color:$primary-67;
+		              	}
+         			}
+
+         			.cart-icon{
+         				width:23px;
+         				height: 20px;
+         				position: absolute;
+         				background:url($path-images+'icons/bag.png') no-repeat;
+         				left: 0;
+         			} 
+				}
+				.shopping-bag{
+					width : auto;
+					.nav-link {
+
+						@include rem('margin-left',3px);
+					}
+
+				}
+
+				
+			}
+			.search-form{
+				position:absolute;
+				top:47px;
+				right: 0px;
+				}
+
+			.shopping-bag{
+				position: relative;
+				
+				.nav-link{
+					padding-left: 25px;
+				}
+			}
+
+
+	}
+
+
+}
+
+/*Desktop navigation scss starts */
+
+
+	.primary-nav-container{
+		position: relative ;
+		text-align: center;
+		width:100%;
+		z-index:1;
+		margin:0 auto;
+		height: 27px;
+		border-bottom: 1px solid $primary-17;
+
+		> ul{
+			display: inline-block;
+		}
+
+		.first-level-nav{
+			.nav{
+				display: none;
+			}
+			.nav-show{
+				display:inline-block;
+				height:auto;
+				position:absolute;
+				left:0;
+				top:28px;
+				width:100%;
+				border-bottom: solid 1px $primary-17;
+				.secondary-nav{
+					display: inline-block;
+					border:none;
+					font-weight: normal;
+					letter-spacing: .1em;
+					text-transform: uppercase;
+					@include proxi-font;
+					@include f(10);
+					a.sec-nav-link{
+						background:none;
+						@include font-color($primary-68);
+						@include rem('margin', 0 40px);
+						@include rem('padding', 7px 0);
+						line-height: 25px;
+						font-size: 10px;
+					}
+					a.sec-nav-link.active,a.sec-nav-link.activesec{
+						@include font-color($primary-67);
+						line-height: 25px;
+						border-bottom:1px solid $primary-67;
+						padding:0;
+					}
+
+					a.sec-nav-link.activesec{
+						@include font-color($primary-67);
+						line-height: 25px;
+						border-bottom:1px solid $primary-67;
+						@include rem('padding', 7px 0);
+					}
+					a.sec-nav-link.nonhovered{
+						@include font-color($primary-67);
+						border:none;
+						padding:0;
+					}
+				.mega-menu {
+	                position: absolute;
+	                min-height: 238px;
+	                width: 100%;
+	                left: 0;
+	                background:#fff;
+	                top: 26px;
+	                border-bottom: 1px solid #a0a0a0;
+	                display: none;
+	                z-index: 10;
+	                height: 258px;
+	                @include main-font;
+	                box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+	                -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+	                -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+
+	                .col{
+	                	border:none;
+	                	@include font-color($primary-1);
+	                    margin:0;
+	                    padding:0;
+	                    position:relative;
+	                    width:17%;
+	                    display:inline-block;
+	                    vertical-align: top;
+	                    .category-title{
+	                    	@include proxiBold-font;
+	                    	@include f(11);
+							letter-spacing: .1em;
+							text-transform: uppercase;
+							border-bottom: 1px solid $primary-55;
+							@include font-color($primary-53);
+							display: block;
+							@include rem('margin',10px 10px 4px 0);
+							text-align:left;
+							padding:0;
+							padding-bottom: 6px;
+							padding-top: 10px;
+	                    }
+	                    .view-all-arrow{
+	                    	@include rem('margin-top', 20px);
+	                    	background:url($path-images+'icons/arrows-light.png') 0px 6px no-repeat;
+	                    	@include rem('padding-left', 10px);
+	                    	color: #676767;
+	                    	@include f(11);
+	                    	font-weight:700;
+	                    	display: inline-block;
+	                    	line-height: 17px;
+	                    	:hover{
+	                    		@include font-color($primary-53);
+
+	                    	}
+	                    	a{
+	                    		padding-left:10px;
+	                    		font-weight: bold;
+	                    		color: #555;
+	                    		@include f(11);
+	                    	}
+
+	                    	a:hover{
+	                    		@include font-color($primary-53);
+	                    	}
+	                    }
+
+	                    ul{
+	                    	
+	                    	position:relative;
+	                    	left:0;
+	                    	text-align:left;
+	                    	li{
+	                    		border:none;
+	                    		@include font-color($primary-54);
+	                    		@include rem('padding', 5px 5px 1px 0px);
+	                    		line-height: 1.3rem;
+	                    		@include f(13);
+	                    		line-height: 13px;
+	                    		text-transform: none;
+	                    		>a{
+	                    			padding:0;
+	                    			font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+	                    			line-height: 13px;
+	                    			letter-spacing: normal;
+	                    		}
+	                    		:hover{
+	                    			color:#555
+	                    		}
+
+	                    	}
+	                    }
+
+	                }
+
+	                .last-col{
+	                	border-left: 1px solid $primary-55;
+	                	height: 100%;
+						@include rem('padding', 0 0 0 12px);
+	                }
+
+            }
+            .service__mycartier{
+            	.col{
+            		>ul{
+            			li{
+            				 background:url($path-images+'icons/private.png') 0 5px no-repeat;
+            				 padding-left:20px;
+            				 a{
+            				 	padding-top:5px;
+            				 }
+            			}
+            		}
+            	}
+            	.last-col{
+            		>ul{
+            			li{
+            				background:none;
+            				padding-left:0;
+            				a{
+            					padding-top:0;
+            				}
+            			}
+            		}
+            	}
+            }
+
+            .maison-menu{
+	                	.col{
+	                		width:70%;
+	                		>ul{
+	                		@include rem('margin-top', 25px);
+	                	}
+	                	}
+
+	                }
+
+            	.active{
+            		display: block;
+            	}
+
+				}
+			}
+			.first-level-nav__title h2{
+				height: 13px;
+				line-height: 6px;
+				font: none;
+				font-style: normal;
+				@include font-color($primary-68);
+				@include proxi-font;
+				letter-spacing: .1em;
+				text-transform: uppercase;
+				font-size: 12px;
+				@include rem('margin', 0px 20px 0 20px);
+				@include rem('padding', 0px 0px 4px 0px);
+				z-index:5;
+			}
+			.first-level-nav__title:hover h2{
+				border-bottom:1px solid $primary-67;
+				/*@include font-color($primary-67);*/
+			}
+			.nav-heading-cont__title:hover{
+					border-bottom:1px solid $primary-67;
+					/*@include font-color($primary-67);*/
+				}
+			
+			a.active h2{ 
+				@include font-color($primary-67);
+				border-bottom:1px solid $primary-67;
+			}
+
+			margin:0px;
+			margin-top:10px;
+			display: inline-block;
+			text-align: center;
+		}
+			.main-menu{.
+		display: inline-block;
+		border: 1px solid red;
+	}
+	}
+
+
+.body-wrapper .header .right-nav .right-nav__list li.js-my-wishlist{margin-right:0;}
+.body-wrapper .header .right-nav .right-nav__list li.js-my-wishlist .connection{margin-right:0;}
+.body-wrapper .header .right-nav .right-nav__list li.js-my-wishlist .nav-link{margin-right:20px; background:none; width: auto;}

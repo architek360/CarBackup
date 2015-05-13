@@ -1,0 +1,12 @@
+<!-- timeline Starts Here-->
+<div class="timeLine clearfix">
+	<ul>
+		<li class="timeLineIcon active"><span class="timeLineNumber">1</span><span class="timeLineTitle">REGISTRATION</span></li>
+		<li class="timeLineIcon"><span class="timeLineNumber">2</span><span class="timeLineTitle">DIAGNOSIS</span></li>
+		<li class="timeLineIcon"><span class="timeLineNumber">3</span><span class="timeLineTitle">COST ESTIMATE</span></li>
+		<li class="timeLineIcon"><span class="timeLineNumber">4</span><span class="timeLineTitle">REPAIR SERVICE</span></li>
+		<li class="timeLineIcon"><span class="timeLineNumber">5</span><span class="timeLineTitle">WAITING FOR COLLECTION</span></li>
+	</ul>
+</div>
+
+<!-- timeline Ends Here-->

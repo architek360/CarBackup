@@ -1,0 +1,11 @@
+<!-- tab card payment Block Starts Here-->
+<div class="tab-collection-list">
+
+<!--#include virtual="../../views/collection_pushes/html.shtml" -->
+	
+<div class="collection-list__view-more js-view-more-collection">
+        <span class="down-arrow"></span>
+        <span class="view-more">View more</span>
+    </div>
+</div>
+ <!-- tab card payment Block Ends Here-->

@@ -1,0 +1,11 @@
+<footer class="footer clearfix">
+    <ul class="footer__menu">
+	    <li><a href="tel:1-800-227-8437" title="Telephone number"><span class="icon-phone"></span><span class="telephone_number">1-800-227-8437</span></a> </li>
+	    <li><a href="#" title="Change Country">Change Country</a></li>
+	    <li><a href="#" title="Terms of use">Terms of use</a></li>
+	    <li><a href="#" title="Sitemap">Sitemap</a></li>
+	    <li><a href="#" title="Privacy Notice">Privacy Notice</a></li>
+	    <li><a href="#" title="Conditions of sale">Conditions of sale</a></li>
+	    <li><a href="#" title="Go to the desktop site">Go to the desktop site</a></li>
+    </ul>
+</footer>

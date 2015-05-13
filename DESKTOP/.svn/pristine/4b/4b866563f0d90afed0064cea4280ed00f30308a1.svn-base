@@ -1,0 +1,37 @@
+<!-- ON HOVER SHOWN PUSHES COMPONENT -->
+
+<div class="<!--#echo var="PUSH_TYPE" -->  push-over ">
+	<!--#if expr="${PUSH_TYPE} = 'highlight'"-->
+		<span class="push-col_title">
+			<!--#echo var="FIRST_SPAN_CONTENT" -->
+		</span>
+
+		<span class="more-button"><span class="more-button-arrow"></span>read more</span>
+	<!--#endif -->
+
+	<!--#if expr="${PUSH_TYPE} = 'product_listing'"-->
+		<a href="http://www.cartier.us/collections/timepieces/mens-watches/tank/tank-louis-cartier/w1529756-tank-louis-cartier-watch-large-model" title="<!--#echo var="FIRST_SPAN_CONTENT" -->" class="product-link">
+		<span class="push-col_title">
+			<h3 class="text-link"><!--#echo var="FIRST_SPAN_CONTENT" --></h3>
+		</span>
+
+		<span class="push-text">
+			<!--#echo var="PRODUCT_DESC" -->
+		</span>
+
+		<span class="price push-text">
+			<!--#echo var="PRICE" -->
+		</span>
+
+		<span class="push-text">
+			excl. sales tax
+		</span>
+
+		<span class="more-button">
+			<span class="more-button-arrow"></span>
+			read more
+		</span>
+		</a>
+
+	<!--#endif -->
+</div>

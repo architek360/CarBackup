@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=mobile/)" -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#endif -->
+
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="expert_guide_faq" -->
+
+
+<!--- FOR HEADING -->
+
+		<!--#set var="Expert-guide-selected" value="CLIENT SERVICES AFTER-SALES SERVICE" -->
+
+		<!--#set var="COMP_4" value="static_text_box" -->
+
+<!--  ENDS -->
+
+
+<!-- - FOR SELECT INPUT AND ITS LABEL -->
+
+		<!--#set var="input-name" value="fn_theme" -->
+		<!--#set var="label-name" value="Select one theme" -->
+		<!--#set var="option-component" value="expert_themes_option" -->
+
+<!--  ENDS -->
+
+<!--#if expr="${DEVICE} = 'desktop'"  -->
+	<!--#set var="back-static-text" value="Back"-->
+	<!--#set var="COMP_1" value="back_button" -->
+	<!--#set var="COMP_2" value="assistance" -->
+	<!--#set var="COMP_3" value="breadcrumb" -->
+<!--#endif -->
+
+<!--  FOR SELECTING THE MAIN CONTENT FAQ or EXPERT COLLECTION BOX, ETC -->
+
+	<!--#set var="expert-content" value="expert_collection_list" -->
+	
+		
+<!--  ENDS -->
+<!--#set var="MODULE" value="product" -->
+
+<!--#set var="VIEWS_1" value="expert_guide" -->
+<!--#include virtual="../templates/base.shtml" -->

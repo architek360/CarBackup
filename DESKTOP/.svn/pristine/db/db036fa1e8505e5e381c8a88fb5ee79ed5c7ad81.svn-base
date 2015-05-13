@@ -1,0 +1,71 @@
+.wrapper-sub-menu {
+	    background:$primary-52;
+	    bottom: 28px;
+	    display: none;
+	    margin: 0;
+	    overflow: hidden;
+	    @include rem('padding', 0 0 10px);
+	    position: absolute;
+	    @include rem('width',  170px);
+	    z-index: 9999;
+	}
+
+	.more-arrow {
+		@include setSpriteDesktop(170px, 7px ,69px,-90px, $primary-52);
+		
+	    bottom: 0;
+	    color:  $primary-52;
+	    cursor: pointer;
+	    display: block;
+	    left: 0;
+	    @include rem('padding', 5px 0 15px);
+	    position: absolute;
+	    text-align: left;
+	    width: 100%;
+	}
+
+	.less-arrow {
+	    @include setSpriteDesktop(170px, 7px ,69px,-67px, $primary-52);
+	    cursor: pointer;
+	    display: none;
+	    color:  $primary-52;
+	    left: 0;
+	    @include rem('padding', 15px 0 5px);
+	    position: absolute;
+	    text-align: left;
+	    top: 0;
+	    width: 100%;
+	    z-index: 2;
+	}
+
+	.sub-menu {
+	    background:$primary-52;
+	    margin: 0;
+	    @include rem('padding', 10px 10px 0);
+	    padding: 0 10px;
+	    position: absolute;
+	    width: 140px;
+
+	    li {
+	    	border-top:1px solid $primary-17;
+		    margin: 0;
+		    color: $primary-2;
+		    @include rem('padding', 0 0);
+		    width: 95%;
+		    text-transform: uppercase;
+		    @include f(12);
+		    color: $primary-48;
+			position:absolute;
+		    &:hover{
+				color: $primary-2;
+			}
+		}
+		.first {
+				border-top: none;
+		}
+	}	
+	
+/* Vertical Accordion Style */
+	.va-nav span {
+		z-index:100;
+	}

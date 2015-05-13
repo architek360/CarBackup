@@ -1,0 +1,26 @@
+#send_email{
+    width: 460px;
+    
+    .fn_fname{
+        width: 100%;
+    }
+    .fn_lname{
+        width: 100%;
+        @include rem('margin-left',0px);
+    }
+
+    .checkbox-name{
+        @include rem('letter-spacing',0px);
+    }
+
+    .fn_msgdesc1{
+        clear: both;
+        @include rem('margin',15px 0 0);
+        float: left;
+        width: 100%;
+    }
+
+    #fn_titledesc{
+        display: none;
+    }
+}

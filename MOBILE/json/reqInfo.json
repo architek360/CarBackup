@@ -1,0 +1,10 @@
+{
+	"success": "true",
+	"serverMessage": "Some Server Message",
+	"content": {
+		"isSubmitSuccess": true,
+		"showCaptcha" : true,
+		"errorMessage": "Internal Server Error",
+		"inlineErrorMessages": ["fn_state","fn_fname"]
+	}
+}

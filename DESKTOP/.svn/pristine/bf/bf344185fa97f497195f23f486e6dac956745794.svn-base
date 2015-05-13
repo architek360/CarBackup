@@ -1,0 +1,10 @@
+<div class="conf">
+        <span class="conf-title">OMAXE HEUGHTS</span>
+        <span class="js-conf-name">JEAN DUPONT</span>
+        <span class="js-conf-address">250 Fifth Avenue</span>
+        <span class="js-conf-city">New York</span>
+        <span class="js-conf-state">NY</span>
+        <span class="js-conf-zip">10179-0001</span>
+        <span class="js-conf-phonenum">01111111</span>
+        <span class="conf-same-text js-conf-phonenum">same as billing</span>
+    </div>

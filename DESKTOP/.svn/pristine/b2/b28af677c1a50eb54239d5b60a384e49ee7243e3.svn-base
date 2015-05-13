@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+@import "../_theme_vars";
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+.js-reg-step-1 {
+    .fn_lname2, .fn_lname {
+        margin-left: 0px;
+        margin-right: 8px;
+    }
+    .fn_fname2, .fn_fname {
+        clear: none;
+    }
+}
+.js-reg-step-3 {
+    .regstep3-col4 {
+        float: left;
+        .fn_strname {
+            clear: left;
+        }
+        .fn_addrinfo, .fn_city, .fn_strnum, .fn_strname {
+            width: 46%;
+        }
+        .fn_phno {
+            clear: none !important;
+        }
+    }
+}
+.js-address-form {
+    .addressform_lastName2, .addressform_address5 {
+        clear: left;
+    }
+    .addressform_firstName2 {
+        width: 46%;
+        input#addressform_firstName2 {
+            width: 100%;
+        }
+    }
+    .addressform_firstName1 {
+        clear: none;
+        margin-left: 8px;
+    }
+    .addressform_address6 {
+        clear: none;
+        margin-left: 8px;
+        margin-top: 18px;
+        width: 46%;
+        input#addressform_address6 {
+            width: 100%;
+        }
+    }
+    .addressform_lastName1, .addressform_address5 {
+        margin-left: 0px;
+        width: 46%;
+        input#addressform_lastName1 {
+            width: 100%;
+        }
+    }
+}

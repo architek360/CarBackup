@@ -1,0 +1,5 @@
+<div class="google_maps_wrapper use-location">
+    <div class="js-map js-map-cluster" data-marker-image = "<!--#echo var="ICON_IMG_PATH" -->marker.png">
+
+    </div>
+</div>

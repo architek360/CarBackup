@@ -1,0 +1,22 @@
+<!-- INCLUDING LINK TO TOP COMPONENT-->
+
+<!--#set var="link-text" value="Top" -->
+<!--#set var="link-class" value="" -->
+<!--#include virtual="../../components/link_to_top/html.shtml" -->
+
+
+
+<!--#include virtual="../../components/carousel/content_carousel.shtml" -->
+<!-- END OF TOP COMPONENT-->
+
+<!-- INCLUDING TABS COMPONENT-->
+
+    <!--#set var="tab_1" value="Browse by collection" -->
+    <!--#set var="tab_2" value="View All" -->
+    <!--#set var="tab_content_1" value="tab_collection_list" -->
+    <!--#set var="tab_content_2" value="tab_collection_view_all" -->
+    <!--#include virtual="../../components/tabs/html.shtml" -->
+
+<!-- END OF TABS COMPONENT-->
+
+

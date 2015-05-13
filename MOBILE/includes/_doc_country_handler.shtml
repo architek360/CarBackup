@@ -1,0 +1,14 @@
+<!--#if expr="${COUNTRY} = 'JP'"  -->
+<script type="text/javascript">
+        window.countryCode = "JP";
+        window.lang = "ja"
+</script>
+ <!--#endif -->
+
+
+<!--#if expr="${COUNTRY} = 'US'"  -->
+<script type="text/javascript">
+        window.countryCode = "US";
+        window.lang = "en"
+ </script>
+ <!--#endif -->

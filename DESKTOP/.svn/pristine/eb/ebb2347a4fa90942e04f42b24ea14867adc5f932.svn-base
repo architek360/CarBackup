@@ -1,0 +1,74 @@
+/*------------------------------------*\
+   COLLECTION FOOTER -- Desktop CSS
+\*------------------------------------*/
+/**
+ * Main container.... Wrapper for footer bottom (.footer__bottom)
+ * Listing .......... First level listing (.menu)
+				      Second level listing (.sub-menu) 
+ */
+
+/*------------------------------------*\
+    $MAIN CONTAINER
+\*------------------------------------*/
+
+.footer__bottom{
+	position: absolute;
+	width:100%;
+	left:0;
+	border-top: 1px solid $primary-17;
+	border-bottom: 1px solid $primary-17;
+	clear:both;
+	@include font-color($primary-2);
+	@include rem('padding-bottom', 40px);
+	@include rem('margin-bottom', 5px);
+
+	/*------------------------------------*\
+	    $FIRST LEVEL LISTING
+	\*------------------------------------*/
+	> .collection-menu{
+		margin: 20px auto 0;
+		width: 520px;
+		@include proxi-font;
+
+		> li{
+			display: inline-block;
+			width: 170px;
+			@include f(12);
+			vertical-align: top;
+			@include rem('letter-spacing', 1px);
+			
+			a{
+				text-transform: uppercase;
+				@include rem('margin', 0 0 15px 0);
+				display: block;
+			}
+		}
+	}
+
+	/*------------------------------------*\
+	    $SECOND LEVEL LISTING
+	\*------------------------------------*/
+	.footer-sub-menu{
+		display: block;
+
+
+		li{
+			@include rem('line-height', 14px);
+			color: $primary-114;
+			@include f(12);
+			@include main-font;
+			letter-spacing:normal;
+			
+			a{	
+				text-transform: none;
+				@include rem('margin', 0 0 2px 0);
+				@include main-font();
+
+			 	&:hover{
+					color: $primary-2;
+				}
+			}
+
+		}
+	}		
+}

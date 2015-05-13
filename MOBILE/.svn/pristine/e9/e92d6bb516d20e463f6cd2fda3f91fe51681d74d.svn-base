@@ -1,0 +1,312 @@
+/*------------------------------------*\
+    Product List -- MOBILE CSS
+\*------------------------------------*/
+/**
+* MODULE CONTAINER ..... (.product-list)
+* TITLE BLOCK.... (.product-list__title)
+* PRODUCT LIST BLOCK ....(.product-list__listing)
+* VIEW MORE BUTTON ....(.product-list__view-more)
+* PRODUCT FILTER AREA....(.product-filter)
+* PRICE FILTER AREA....(.price-wrapper)
+* CATEGORY FILTER AREA....(.category-wrapper)
+* BUTTON AREA.....(.cta)
+* VIEW MORE AREA.......(.product-list__view-more)
+* NUMBER OF SLEECTION AREA....(.product-list__selection-num )
+*/
+
+/*------------------------------------*\
+    MODULE CONTAINER 
+\*------------------------------------*/
+
+.product-list {	
+	@include brand-font;
+	@include font-color($primary-2);  
+	@include rem('padding', 34px 0px 20px);  
+	background: $primary-1; 
+	display: block;
+	margin: 0 auto; 
+	width: 81.25%;
+
+	/*------------------------------------*\
+                 TITLE BLOCK
+	\*------------------------------------*/
+	.product-list__title {
+		display:block;
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		@include rem(padding, 27px 0);
+		.heading4{
+			@include f(24);
+			@include rem(padding, 0px);
+		}
+		.heading2{
+			@include f(34);
+			@include rem(padding, 21px 0 0 0);
+			border:none;
+		}
+	}
+
+	/*------------------------------------*\
+            Selection Slider AREA
+	\*------------------------------------*/	
+
+	.slide_switch {
+	    clear: both;
+	    @include rem('margin', 60px 0 20px);
+	    text-align: center;
+	    border-bottom:solid 2px $primary-1;
+		background:$primary-23;
+		@include bold-font;
+		@include rem(padding, 15px 0);
+		input + label::after {
+			@include rem(margin-right, -2px);
+		}
+	}
+	.slide_switch label {
+		@include rem(padding-top, 0px);
+	    @include rem('padding-bottom', 8px);
+		display: inline-block;
+	}
+
+	/*------------------------------------*\
+                PRODUCT ITEM AREA
+	\*------------------------------------*/
+
+	.product-list__listing {
+		@include set-ulFix;
+		display:block;
+		@include rem(padding, 30px 0 0 0);
+		.product-listing {
+			@include rem('padding-bottom',6px);
+		}
+		.grid__item {
+			padding-left: 0;
+		}
+		> li{
+			@include rem('margin', 0px);
+		}
+	}	
+}
+
+/*------------------------------------*\
+         PRODUCT FILTER AREA
+\*------------------------------------*/
+
+.product-filter{
+	@include rem('margin-top', 40px);
+	@include f(22);
+	.product-filter__wrapper{
+		.product-filter__node{
+		border-bottom:solid 2px $primary-1;
+		background:$primary-23;
+		}
+		.product-filter_node__title{
+			@include rem('padding', 24px);
+			text-align:left;
+			position:relative;
+			.product-filter_node_title__ques{
+				@include rem('padding-right', 30px);
+				display: table;
+			}
+			p{
+				@include rem('padding', 0px);
+				display: table-cell;
+	    		vertical-align: middle;
+	    		@include f(22);
+		 	 	@include font-color($primary-2);
+		 	 	@include bold-font;
+			}
+			span{
+				position:absolute;
+				@include rem('right', 25px);
+				top:30%;
+				@include setSprite(22px, 30px, -363px, -20px);
+			}
+			.on{
+				@include rotate(90deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+			.off{
+				@include rotate(0deg);
+				@include transition(0.2s);
+				transition-timing-function:linear;
+				-webkit-transition-timing-function:linear;
+			}
+		}
+		.product-filter_node__desc{
+		 	@include f(26);
+		 	@include main-font;
+		 	.filter_detail{
+		 		@include font-color($primary-3);
+		 		.filter_detail__node{
+					background:$primary-23;
+				}
+
+			.filter_detail_node__title{
+				border-top:2px solid $primary-1;
+				@include rem('padding', 22px 45px);
+				text-align:left;
+				position:relative;
+				.filter_detail_node_title__ques{
+					@include rem('padding-right', 30px);
+						display: table;
+					}
+					p{
+						@include rem('padding', 0px);
+						display: table-cell;
+			    		vertical-align: middle;
+				 	 	@include f(22);
+				 	 	@include bold-font;
+					}
+					span{
+						position:absolute;
+						@include rem('right', 25px);
+						top:30%;
+						@include setSprite(22px, 30px, -363px, -20px);
+					}
+					.on{
+						@include rotate(90deg);
+						@include transition(0.2s);
+						transition-timing-function:linear;
+						-webkit-transition-timing-function:linear;
+					}
+					.off{
+						@include rotate(0deg);
+						@include transition(0.2s);
+						transition-timing-function:linear;
+						-webkit-transition-timing-function:linear;
+					}
+				}
+		 	}
+		}
+		.active {
+			@include font-color($primary-5);
+		}
+	}
+	.text-wrapper{
+		@include rem(padding,0 30px 30px 45px);
+	}
+
+	h2.text-wrapper{
+		@include bold-font();
+		@include f(22);
+		padding:0;
+	}
+
+	/*------------------------------------*\
+             PRICE FILTER AREA
+	\*------------------------------------*/
+
+	.price-wrapper{
+		@include font-color($primary-2);
+		@include rem(padding,0 30px 0 65px);
+		li{
+			display:table;
+			@include rem(padding, 9px 0 44px 0);
+		}
+		li:last-child{
+			@include rem(margin, -10px 0 0);
+			display: block;
+		}
+		ul:last-child {
+			@include rem(padding-top,1px);
+			@include rem(padding-left,1px);
+		}
+		.select-2{
+			background:$primary-23 url($path-images + 'icons/select_arrow.png') no-repeat right 0 ;
+			@include rem(width,300px);
+			@include rem(max-width,300px);
+		}
+		.form-label{
+			vertical-align:middle;
+			display:table-cell;
+			text-transform:uppercase;
+			@include rem(width,130px);
+			@include brand-font;
+			@include f(20);
+		}
+	}
+
+	/*------------------------------------*\
+             CATEGORY FILTER AREA
+	\*------------------------------------*/
+
+	.category-wrapper{
+		@include font-color($primary-2);
+		@include rem(padding,0 20px);
+		display:block;
+		@include f(22);		
+		li{
+			border-top:1px solid $primary-40;
+			@include rem(padding, 30px 22px 30px 45px);
+			label{
+				@include brand-font;
+			}
+		}
+		li:last-child{
+			border:none;
+		}
+	}
+	.product-filter__wrapper:last-child {
+			@include rem('padding-bottom', 10px);
+	}
+
+	/*------------------------------------*\
+                 BUTTON AREA
+	\*------------------------------------*/
+
+	.cta{
+			font-weight:300;
+			text-align: center;
+		}
+		.cta--red{	
+			display:inline-block;
+			width:45%;
+		}
+		.cta--grey { 
+			display:inline-block;
+			background:$primary-25;
+			width:48%;
+			@include rem(margin, 0 20px 0 0);
+		}
+
+}
+
+/*------------------------------------*\
+            VIEW MORE AREA
+\*------------------------------------*/
+
+.product-list__view-more{
+	display: block;
+	width: 100%;
+	@include f(22);
+	@include rem('margin', 45px 0 35px 0);
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	@include font-color($primary-31);
+	position:relative;
+	.down-arrow{
+		position:absolute;
+		@include rem('bottom', -18px);
+		left: 48%;
+		@include setSprite(15px, 10px, -666px, -20px);
+	}
+}
+
+/*------------------------------------*\
+         NUMBER OF SLEECTION AREA
+\*------------------------------------*/
+
+.product-list__selection-num {
+	display: block;
+	width: 100%;
+	@include f(22);
+	@include rem('margin', 30px 0 0 0);
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	@include font-color($primary-31);
+}

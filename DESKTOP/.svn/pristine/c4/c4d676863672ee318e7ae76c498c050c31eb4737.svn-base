@@ -1,0 +1,102 @@
+.tooltip-div{
+    float:left;
+    position:relative;
+	@include rem('margin' ,0 0 0 10px);
+    width: 20px;
+	a.tooltip {outline:none; }
+	a.tooltip strong {@include rem('line-height' ,30px);}
+	a.tooltip:hover {text-decoration:none;} 
+	a.tooltip .tool-tip-details-wrapper{
+    	z-index:10;
+    	display:none;
+        background:#fff;
+    	padding:14px 20px;
+        border:1px solid $primary-12;
+        border-bottom:none;
+    	margin-top: 0;
+    	margin-left:0;
+    	width:220px;
+    	@include rem('line-height' ,15px);
+        position: absolute;
+        bottom: 21px;
+        left:-124px;
+        position:absolute;
+        
+        text-align: center;
+        font-style: italic;
+
+    }
+	/* a.tooltip:hover div{
+    	display:inline;
+    } */
+    a.tooltip p {
+        @include rem('line-height' ,12px);
+        @include f(10); 
+        text-align:center;
+        padding:0;
+        @include rem('padding-bottom' , 2px);
+        color:$primary-3;
+        
+    }
+	.callout {
+		z-index:20;
+		position:absolute;
+		bottom:-4px;
+		border:0;
+		left:126px;  
+	}
+    
+}
+
+.field-tooltip{
+    float:left;
+    position:relative;
+    @include rem('margin' ,0 0 0 5px);
+    width: 20px;
+    top:-48px;
+    display: none;
+
+    .tooltip-details{
+        z-index:10;
+        display:none;
+        background: $primary-2;
+        padding:14px 20px;
+        border:1px solid $primary-12;
+        border-bottom:none;
+        margin-top: 0;
+        margin-left:0;
+        width:220px;
+        @include rem('line-height' ,15px);
+        position: absolute;
+        bottom: 21px;
+        left:-124px;
+        position:absolute;     
+        text-align: center;
+        color: $primary-3;
+        @include f(11);
+        @include main-font();
+        letter-spacing: 1px;
+        word-break: break-word;
+
+        p{
+            color: $primary-3;
+            padding: 0;
+        }
+    }
+
+    .tooltip-details:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background:url($path-images + 'icons/bottom-arrow.png') no-repeat;
+        bottom: -10px;
+        position: absolute;
+        display: inline-block;
+    }
+
+    .tooltip-icon{
+       /* background:url($path-images + 'icons/tooltip_icon.png') no-repeat;*/
+        height: 16px;
+        width: 16px;
+    }
+}

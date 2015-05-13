@@ -1,0 +1,31 @@
+
+<div class='js-owncreation-container'>
+	<div class="js-own-dropone display-none">
+		<label class='form-label own-creation'>Product Line</label>
+	    <select class='form-select select-1'>
+	    	<option value='default'>-Select-</option>
+	    	<option value='jewelry'>Jewellery</option>
+	    	<option value='jewelry1'>Watchmaking</option>
+	    	<option value='jewelry2'>Bridal</option>
+	    	<option value='jewelry3'>Accessories</option>
+	    	<option value='jewelry4'>Fragrances</option>
+		</select>
+	</div>
+	<div class="js-own-droptwo display-none">
+		<label class='form-label own-creation'>Product category / collection</label>
+	    <select class='form-select select-1'> 
+	    	<option value='jewellery'>Jewellery</option>
+		</select>
+	</div>
+	<div class="js-own-dropthree display-none">
+		<label class='form-label own-creation'>Order Location</label>
+	    <select class='form-select select-1'>
+	    	<option value='default'>-Select-</option>
+	    	<option value='boutique'>Cartier Boutique</option>
+	    	<option value='retailer'>Authorized Cartier retailer</option>
+	    	<option value='gift'>Gift</option>
+	    	<option value='online'>Online</option>
+		</select>
+	</div>	
+</div>
+

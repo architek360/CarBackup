@@ -1,0 +1,147 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+$path-images : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/';
+$path-font : '../../../../../../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/fonts/';
+ 
+@import "../_base";
+@import "../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+@import "_theme";
+
+/*------------------------------------*\
+    $IMPORT - Desktop Styles
+\*------------------------------------*/
+
+ 
+
+/*------------------------------------*\
+    $IMPORT - Views Styles
+\*------------------------------------*/
+@import "../../includes/views/quick_links/_desktop";
+@import "../../includes/views/site_map/_desktop";
+@import "../../includes/views/site_map_service/_desktop";
+@import "../../includes/views/site_map_collection/_desktop";
+@import "../../includes/views/site_map_service_desktop/_desktop";
+@import "../../includes/views/contact_us/_desktop";
+@import "../../includes/views/site_map_collection_desktop/_desktop";
+@import "../../includes/views/contact_ambassador/_desktop";
+@import "../../includes/views/tab_pdp_suggestion/_desktop";
+
+@import "../../includes/views/collection_listing/_desktop";
+@import "../../includes/views/living_heritage_static/_desktop";
+@import "../../includes/views/collection_mosaic/_desktop";
+@import "../../includes/views/wishlist/_desktop";
+@import "../../includes/views/copy_to_wishlist/_desktop";
+@import "../../includes/views/store_locater_1/_desktop";
+@import "../../includes/views/boutique_search/_desktop";
+@import "../../includes/views/boutique_list_with_map/_desktop";
+@import "../../includes/views/my_boutique/_desktop";
+@import "../../includes/views/boutique_list/_desktop";
+@import "../../includes/views/boutique/_desktop";
+@import "../../includes/views/login/_desktop";
+@import "../../includes/views/services/_desktop";
+@import "../../includes/views/billing-address-edit-address/_desktop";
+@import "../../includes/views/billing_confirmation/_desktop";
+@import "../../includes/views/review_order/_desktop";
+@import "../../includes/views/shopping_bag/_desktop";
+
+
+@import "../../includes/views/collection_list/_desktop";
+@import "../../includes/views/sub_collection_list/_desktop";
+@import "../../includes/views/welcome/_desktop";
+@import "../../includes/views/expert_collection_list/_desktop";
+@import "../../includes/views/faq/_desktop";
+@import "../../includes/views/pushs/_desktop";
+@import "../../includes/views/price_details/_desktop";
+@import "../../includes/views/billing_form/_desktop";
+@import "../../includes/views/manual_product_list/_desktop";
+@import "../../includes/views/product_list/_desktop";
+@import "../../includes/views/personal_info/_desktop";
+@import "../../includes/views/reg_step2/_desktop";
+@import "../../includes/views/reg_step1/_desktop";
+@import "../../includes/views/reg_step3/_desktop";
+@import "../../includes/views/billing_payment/_desktop";
+@import "../../includes/views/tab_bank_transfer/_desktop";
+@import "../../includes/views/tab_card_payment/_desktop";
+@import "../../includes/views/tab_cash_on_delivery/_desktop";
+@import "../../includes/views/billing_shipping/_desktop";
+@import "../../includes/views/tab_billing_address/_desktop";
+@import "../../includes/views/tab_shipping_address/_desktop";
+@import "../../includes/views/forgot_password/_desktop";
+@import "../../includes/views/expert_guide/_desktop";
+@import "../../includes/views/engraving/_desktop";
+@import "../../includes/views/order_reconfirmation/_desktop";
+@import "../../includes/views/condition_of_sale/_desktop";
+@import "../../includes/views/privacy_notice/_desktop";
+@import "../../includes/views/event_article/_desktop";
+@import "../../includes/views/store_locater/_desktop";
+@import "../../includes/views/adjust_bracelet_size/_desktop";
+@import "../../includes/views/forgot_password_emailsent/_desktop";
+@import "../../includes/views/search_result/_desktop";
+@import "../../includes/views/tab_all_selection/_desktop";
+@import "../../includes/views/my_orders/_desktop";
+@import "../../includes/views/order_detail/_desktop";
+@import "../../includes/views/subscription/_desktop";
+@import "../../includes/views/term_of_use/_desktop";
+@import "../../includes/views/gift_for_you/_desktop";
+@import "../../includes/views/country_switcher/_desktop";
+@import "../../includes/views/country_list/_desktop";
+@import "../../includes/views/my_address/_desktop";
+@import "../../includes/views/do_you_own/_desktop";
+@import "../../includes/views/title/_desktop";
+@import "../../includes/views/careers/_desktop";
+@import "../../includes/views/contact_us_bridal/_desktop";
+@import "../../includes/views/collection_pushes/_desktop";
+@import "../../includes/views/repair_service/_desktop";
+
+@import "../../includes/views/repair_service_registered/_desktop";
+@import "../../includes/views/pending_estimateList/_desktop";
+@import "../../includes/views/tab_collection_list/_desktop";
+@import "../../includes/views/secure_shopping/_desktop";
+@import "../../includes/views/tab_collection_view_all/_desktop";
+@import "../../includes/views/collection_view_all_pushes/_desktop";
+@import "../../includes/views/refine_selection/_desktop";
+@import "../../includes/views/exceptions_slider_view/_desktop";
+@import "../../includes/views/womens_initiative_awards/_desktop";
+@import "../../includes/views/choose_delievery_option/_desktop";
+@import "../../includes/views/return-exchange/_desktop";
+@import "../../includes/views/boutique_pick/_desktop";
+@import "../../includes/views/receive_boutique/_desktop";
+@import "../../includes/views/multiple_video_carousel/_desktop";
+@import "../../includes/views/shipping_address/_desktop";
+@import "../../includes/views/billing_address/_desktop";
+@import "../../includes/views/billing_payment_option/_desktop";
+@import "../../includes/views/empty_shopping_bag/_desktop";
+@import "../../includes/views/search_page/_desktop";
+@import "../../includes/views/billing_form_japan/_desktop";
+@import "../../includes/views/choose_delivery_option_japan/_desktop";
+@import "../../includes/views/shipping_address_jp/_desktop";
+@import "../../includes/views/exhibitions/_desktop";
+@import "../../includes/views/bibliography/_desktop";
+@import "../../includes/views/reg_step3_jp/_desktop";
+ 
+
+/*------------------------------------*\
+    SOGOU - Desktop CSS
+\*------------------------------------*/
+@import "../_sogou";
+
+/* this file breaks ie 8 */

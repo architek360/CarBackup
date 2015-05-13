@@ -1,0 +1,59 @@
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><!--#echo var="PAGE_TITLE" --></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width =640px">
+
+<!-- 
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="width"> 
+initial-scale=.5, maximum-scale=.5,minimum-scale=.5, target-densitydpi=device-dpi,
+  <meta name="viewport" id="viewport" content="width=640px,  
+user-scalable=no" />
+-->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" type="image/png" href="/cartier/favicon.ico"/>
+       
+        <!--#if expr="${DEVICE} = 'mobile'"  -->
+        <link rel="stylesheet" href="../css/<!--#echo var="THEME_1" -->/mobile.css">
+         <link rel="stylesheet" href="../css/<!--#echo var="THEME_1" -->/ECSmobile.css">
+         <!--#endif -->
+         <!--#if expr="${DEVICE} = 'desktop'"  -->
+        <link rel="stylesheet" href="../css/<!--#echo var="THEME_1" -->/desktop.css">
+
+
+         <!--#endif -->
+            <!-- <script src="http://jwpsrv.com/library/NvakwnnBEeOOniIACi0I_Q.js"></script> -->
+
+  <!--    <script src="http://10.202.224.34:8080/target/target-script-min.js#anonymous"></script> 
+
+-->
+
+  <!--#if expr="${COUNTRY}" -->
+    <link rel="stylesheet" href="../css/country_specific/<!--#echo var="COUNTRY" -->.css">
+  <!--#endif -->
+
+
+            <!--#include virtual="../includes/_doc_country_handler.shtml" -->
+<script src="../js/libs/modernizr-2.6.2.min.js"></script>
+ 
+<script src="../js/libs/jquery-1.10.2.min.js"></script>
+<script src="../js/plugins/jquery.validate.min.js"></script>
+
+<script src="../js/richemont_base/action.callback.config.js"></script>
+<script src="../js/richemont_base/ajax.caller.js"></script>
+<script src="../js/richemont_base/ajax.wrapper.js"></script>
+
+
+    <!-- Google Analytics ends -->
+
+     </head>
+<script>
+  //countryCode = '';
+  I18nJson = {};
+</script>

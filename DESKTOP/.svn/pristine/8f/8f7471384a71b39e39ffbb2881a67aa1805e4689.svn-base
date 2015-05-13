@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    site map -- Mobile CSS
+\*------------------------------------*/
+/**
+ * BILLING shipping
+  */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+.site-map {
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	width:81.25%;
+	margin:0 auto;
+	text-align: center;
+
+	.heading2{
+		border:none;
+		@include rem('letter-spacing',3px);
+		@include bold-font;
+	}
+
+	.radio-btn {
+		border: 1px solid $primary-17;
+		.radio-btn-li{
+		 width: 47%;
+		}
+
+		.radio-title {
+			height: 72px;
+		}
+	}
+
+}

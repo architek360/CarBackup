@@ -1,0 +1,162 @@
+/*------------------------------------*\
+    search-result -- Mobile CSS
+\*------------------------------------*/
+/**
+ * SEARCH RESULT CONTAINER ..... (.search-result)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+
+.search-result{
+	@include brand-font;
+	@include font-color($primary-2);
+	display: block;
+	width:81.25%;
+	margin:0 auto;
+	text-align: center;
+
+	/*------------------------------------*\
+	    SEARCH WRAPPER
+	\*------------------------------------*/
+     .search {
+		@include clearfix;
+		width:75%;
+		@include rem('height', 52px);
+		@include rem('padding', 30px 0 30px);
+		margin:0 auto;
+		position: relative;
+
+		.magnify-glass {
+			@include setSprite(15px, 10px, -562px, -68px);
+			position: absolute;
+			top :  32%;
+			left : 0;
+			@include rem('width', 50px);
+			@include rem('height', 45px);
+		}
+
+		.search__label {
+			@include rem('text-indent', -9999px);
+			opacity: 0;
+			display: inline-block;
+		    overflow: hidden;
+		}
+		.search__term {		
+			
+			display:block;
+			background-color:$primary-2;
+		    border: 0 none;
+		    @include f(20);
+			@include main-font;
+			@include font-color($primary-1);
+		    font-weight: bold;
+		    width: 100%;
+			@include rem('height', 50px);
+			@include rem('padding', 5px 10px 5px 60px);
+		}
+
+	}
+		/*------------------------------------*\
+            Selection Slider AREA
+	\*------------------------------------*/	
+
+
+	.slide_switch {
+	    clear: both;
+	    @include rem('margin', 60px 0 20px);
+	    text-align: center;
+	    border-bottom:solid 2px $primary-1;
+		background:$primary-23;
+		@include bold-font;
+		@include rem(padding, 15px 0);
+
+		input + label::after {
+			@include rem(margin-right, 6px);
+		}
+	}
+	.slide_switch label {
+		@include rem(padding-top, 8px);
+		@include rem(padding-bottom, 8px);
+		@include rem('padding-top', 2px);
+	    @include rem('padding-bottom', 10px);
+	}
+
+	.category-wrapper{
+		text-align:left;
+	}
+
+	.search-product{
+		display:block;
+
+		.heading2{
+			@include rem(padding, 40px 0 25px);
+			@include bold-font;
+			@include f(26);
+		}
+
+
+	}
+
+	.product-list__listing{
+		display:inline-block;
+		width:100%;
+
+		 .heading4 {
+			/*position: relative;*/
+  			/* height: 98px;  exactly three lines */
+			line-height:30px;
+			
+		}
+		.test-box {
+			width : 412px;
+			@include ellipsis();
+		}
+		
+	}
+}
+
+.ellipsis {
+			overflow: hidden;
+			height: 92px;
+			line-height: 25px;
+			
+			}
+			
+
+		.ellipsis:before {
+			content:"";
+			float: left;
+			width: 5px; height: 92px; }
+
+		.ellipsis > *:first-child {
+			float: right;
+			width: 99%;
+			margin-left: -5px; }		
+
+		.ellipsis:after {
+			content: "\02026";  
+			font-size:20px;
+
+			box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+
+			float: right; position: relative;
+			top: -28px; left: 100%; 
+			width: 3em; margin-left: -3em;
+			padding-right: 5px;
+			color:#9F9E9E;
+			text-align: right;
+ }
+ 
+
+/*------------------------------------*\
+	    BREADCRUMB FIX
+\*------------------------------------*/
+.breadcrumb {
+	clear:both;
+	border-top:1px solid $primary-2;
+}

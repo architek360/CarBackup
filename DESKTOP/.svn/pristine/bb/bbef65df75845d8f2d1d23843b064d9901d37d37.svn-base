@@ -1,0 +1,1022 @@
+/*!
+ * cartier.form.validation.wrapper.js
+ * This file contains application namespace and initializing the other modules
+ *
+ * @project   cartier mobile
+ * @date      2014-01-03
+ * @author    SapientNitro 
+ * @site      cartier mobile
+   @dependency none
+ * @ NOTE:
+    This file has the following sequence of the actions
+    1) Declare all the private variables
+ 
+ */
+;
+(function(window, $, formValidationWrapper, undefined) {
+
+	//this will cause the browser to check for errors more aggressively
+	'use strict';
+
+	//check if jquery is defined, else retun
+	if ($ === undefined) {
+		console.log("jQuery not found");
+		return false;
+	}
+
+	/*
+        private variables
+        */
+	var
+	_objCache,
+		_objPropertiesMsg,
+		_objMessages,
+		_objRules,
+		_objRegExRules,
+
+		/*
+         Caching  jquery objects
+        */
+
+		_cacheObjects = function() {
+			_objCache = {
+				formWrapper: $('.js-form-validator form')
+			}
+		},
+		/*
+         Setting default messages
+        */
+		_setDefualtMsg = function() {
+			_objMessages = {
+				j_username: {
+					required: _objPropertiesMsg.mandatory,
+					email: _objPropertiesMsg.validEmailIdRequired
+				},
+				j_password: {
+					required: _objPropertiesMsg.mandatory,
+					minlength: _objPropertiesMsg.minlength
+				},
+				fn_chkprivnotc: {
+					required: _objPropertiesMsg.mandatory
+				},
+				payment_card_cvs: {
+					required: _objPropertiesMsg.mandatory,
+					number: _objPropertiesMsg.notaNumber,
+					cvvNum: _objPropertiesMsg.cvvNotValid
+				},
+
+				fn_fname: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_lname: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				payment_card_type: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				payment_card_name: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_addrname: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_strnum: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_strname: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_pobox: {
+					required: _objPropertiesMsg.mandatory
+				},
+				savNumber: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_city: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_state: {
+					required: _objPropertiesMsg.mandatory,
+					valueNotEquals: _objPropertiesMsg.mandatory
+				},
+
+				fn_phno: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_zip: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_emailcon: {
+					required: _objPropertiesMsg.mandatory,
+					email: _objPropertiesMsg.validEmailIdRequired
+				},
+
+				fn_passcon: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_wordvef: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_statep: {
+					isDisableSelected: _objPropertiesMsg.validOption
+
+				},
+				fn_msgdesc: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_chktnc: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_size: {
+					valueNotEquals: _objPropertiesMsg.invalidSize
+				},
+
+				fn_refid: {
+					valueNotEquals: _objPropertiesMsg.invalidSize
+
+				},
+
+				fn_mainmsg: {
+					isDisableSelected: _objPropertiesMsg.validOption
+				},
+
+				fn_wishlabel: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_country: {
+					valueNotEquals: _objPropertiesMsg.validOption
+				},
+				fn_msgrelatdto: {
+					isDisableSelected: _objPropertiesMsg.validOption
+				},
+
+				fn_newwishlistname: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_comment: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_grptitle: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_grptitle1: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_grptitle2: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_grpdoyouown: {
+					required: _objPropertiesMsg.mandatory
+				},
+				payment_card_number: {
+					required: _objPropertiesMsg.mandatory,
+					creditcard: _objPropertiesMsg.cardNotValid,
+					cardTypeMatch: _objPropertiesMsg.cardNotValid,
+					cardNumberLength: _objPropertiesMsg.cardNotValid
+				},
+				payment_card_month: {
+					expiryDate: _objPropertiesMsg.dateValidation
+				},
+				payment_card_year: {
+					expiryDate: _objPropertiesMsg.dateValidation
+				},
+
+				j_username_recv: {
+					required: _objPropertiesMsg.mandatory,
+					email: _objPropertiesMsg.validEmailIdRequired
+				},
+
+				fn_fname_recv: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_lname_recv: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				/** japan form validation **/
+				fn_lname2: {
+					required: _objPropertiesMsg.mandatory,
+					isKanji: _objPropertiesMsg.kanjiError
+				},
+				fn_fname2: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_zip2: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_prefecture: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_town: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_chome: {
+					required: _objPropertiesMsg.mandatory
+				},
+
+				fn_mobileno: {
+					required: _objPropertiesMsg.mandatory,
+					number: _objPropertiesMsg.notaNumber,
+
+				},
+				fn_mrmonth: {
+					required: _objPropertiesMsg.marraigeDateValidation
+				},
+				fn_createnewwishlistpdp: {
+					required: _objPropertiesMsg.mandatory
+				},
+				fn_grpdeliv: {
+					required: _objPropertiesMsg.mandatory
+				},
+				termCondition: {
+					required: _objPropertiesMsg.mandatory
+				}
+			};
+		},
+		/*
+         Setting default validation rule associates an element with a validation method
+        */
+		_setDefualtRules = function() {
+			_objRules = {
+
+				j_username: {
+					required: true,
+					email: true
+				},
+				fn_grpdeliv: {
+					required: true
+				},
+				j_password: {
+					required: true,
+					passwordTest: true
+				},
+
+				payment_card_cvs: {
+					required: true,
+					number: true,
+					cvvNum: true
+				},
+
+				fn_fname: {
+					required: true,
+					isKatakana: true
+				},
+
+				fn_lname: {
+					required: true,
+					isKatakana: true
+				},
+
+				payment_card_type: {
+					required: true
+				},
+
+				payment_card_name: {
+					required: true
+				},
+
+				fn_addrname: {
+					required: true
+				},
+
+				fn_strnum: {
+					required: true
+				},
+
+				fn_strname: {
+					required: true
+				},
+
+				fn_addrinfo: {
+
+				},
+
+				fn_pobox: {
+					required: true
+				},
+
+				fn_city: {
+					required: true
+				},
+
+				fn_state: {
+					required: true,
+					valueNotEquals: "default"
+				},
+
+				fn_zip: {
+					required: true
+				},
+
+				fn_phno: {
+					required: true
+				},
+
+				fn_emailcon: {
+					required: true,
+					mailConfirm: true
+				},
+
+				fn_passcon: {
+					required: true,
+					passwordConfirm: true
+				},
+				savNumber: {
+					required: true,
+					number: true,
+					minlength: 8
+				},
+				fn_wordvef: {
+					required: true
+				},
+
+				fn_statep: {
+					isDisableSelected: true
+				},
+
+				fn_msgdesc: {
+					required: true
+				},
+
+				fn_chktnc: {
+					required: true
+				},
+
+				fn_chkprivnotc: {
+					required: true
+				},
+
+				fn_size: {
+					valueNotEquals: "default" ////// CANNOT BE MOVED TO THE PROPERTY FILE
+				},
+
+				fn_refid: {
+					selectMethod: true,
+					valueNotEquals: "default" ////// CANNOT BE MOVED TO THE PROPERTY FILE
+
+				},
+
+				fn_mainmsg: {
+					isDisableSelected: true
+
+				},
+
+				fn_notifnum: {
+					alphaNumeric: true,
+					exactLength: 7
+				},
+
+				fn_country: {
+					valueNotEquals: "default" ////// CANNOT BE MOVED TO THE PROPERTY FILE
+				},
+
+				fn_msgrelatdto: {
+					isDisableSelected: true
+				},
+
+				fn_newwishlistname: {
+					required: true
+				},
+
+				fn_comment: {
+					required: true
+				},
+
+				fn_grptitle: {
+					required: true
+				},
+				fn_grptitle2: {
+					required: true
+				},
+				fn_grptitle1: {
+					required: true
+				},
+				fn_grpdoyouown: {
+					required: true
+				},
+
+				fn_wishlabel: {
+					required: true
+				},
+				payment_card_number: {
+					required: true,
+					creditcard: true,
+					cardTypeMatch: true,
+					cardNumberLength: true
+				},
+				payment_card_year: {
+					expiryDate: true
+				},
+				j_username_recv: {
+					required: true
+				},
+
+				fn_fname_recv: {
+					required: true
+				},
+
+				fn_lname_recv: {
+					required: true
+				},
+				/**   japan form validation**/
+
+				fn_lname2: {
+					required: true,
+					isKanji: true
+				},
+				fn_fname2: {
+					required: true
+				},
+				fn_zip2: {
+					required: true
+				},
+				fn_prefecture: {
+					required: true
+				},
+				fn_town: {
+					required: true
+				},
+				fn_chome: {
+					required: true
+				},
+				fn_mobileno: {
+					required: true,
+					number: true
+				},
+				fn_mrmonth: {
+					marraigeDate: true
+				},
+				fn_bdmonth: {
+					birthDate: true
+				},
+				fn_createnewwishlistpdp: {
+					required: true
+				},
+				termCondition: {
+					required: true
+				}
+
+			};
+		},
+		_createCustomeMethods = function() {
+
+			$.validator.messages = $.extend({}, $.validator.messages, {
+				required: _objPropertiesMsg.mandatory,
+				email: _objPropertiesMsg.validEmailIdRequired,
+				minlength: _objPropertiesMsg.minlength,
+				min: _objPropertiesMsg.minlength,
+
+				//remote: _objPropertiesMsg.remote,
+				//url: _objPropertiesMsg.url,
+				//date: _objPropertiesMsg.date,
+				//dateISO: _objPropertiesMsg.dateISO,
+				//number: _objPropertiesMsg.number,
+				//digits: _objPropertiesMsg.digits,
+				//equalTo: _objPropertiesMsg.equalTo,
+				//maxlength: _objPropertiesMsg.maxlength,
+				//rangelength: _objPropertiesMsg.rangelength,
+				//range: _objPropertiesMsg.range,
+				//max: _objPropertiesMsg.max,
+			});
+
+			$.validator.addMethod("isKanji", function(value) {
+				var newkanji = new RegExp("[\u4e00-\u9faf]"),
+					exnum = new RegExp("[0-9!@#\$%\^\&*\)\(+=._-]"),
+					exalpha = new RegExp("[a-zA-Z]");
+
+				if (window.countryCode === "jp" || window.countryCode === "JP" || window.countryCode === "Jp" || window.countryCode === "jP")
+					return ((newkanji.test(value.replace(/\s{1,}/g, '')) || exalpha.test(value.replace(/\s{1,}/g, ''))) && !exnum.test(value.replace(/\s{1,}/g, '')));
+				else
+					return true;
+			}, _objPropertiesMsg.kanjiError);
+
+			$.validator.addMethod("isKatakana", function(value) {
+				var newkatakana = new RegExp("[^\u30a0-\u30ff]");
+				if (window.countryCode === "jp" || window.countryCode === "JP" || window.countryCode === "Jp" || window.countryCode === "jP")
+					return !newkatakana.test(value.replace(/\s{1,}/g, ''));
+				else
+					return true;
+			}, _objPropertiesMsg.katakanaError);
+
+
+			$.validator.addMethod("valueNotEquals", function(value, element, arg) {
+				setTimeout(function() {
+					if ($(element).attr('name') === 'fn_state') {
+						if (arg === value) {
+							$('.js-statename .selector').find('span.error').remove();
+							$('.errormessage').html(_objPropertiesMsg.mandatory).closest('.error').css('display', 'initial');
+						} else {
+							$('.errormessage').html("").closest('.error').css('display', 'none');
+						}
+					}
+				}, 100);
+				return arg !== value;
+			}, _objPropertiesMsg.valueNotEquals);
+
+			$.validator.addMethod("selectMethod", function(value, element, arg) {
+				if ($(element).find("option:selected").attr('value') === "default") {
+					$(element).parent(".selector").addClass("select-error formerror");
+
+					return false;
+				} else {
+					$(element).parent(".selector").removeClass("select-error formerror");
+					return true;
+				}
+
+			}, _objPropertiesMsg.invalidSize);
+
+			$.validator.addMethod("mailConfirm", function(value, element) {
+				var previousEmail = $(element).closest('form').find("input[name='j_username']");
+
+				if ($('#piform_emailaddress').length) {
+					previousEmail = $('#piform_emailaddress');
+				}
+				return $(previousEmail).val() === value;
+			}, _objPropertiesMsg.sameEmailRequired);
+
+			$.validator.addMethod("passwordConfirm", function(value, element) {
+				var previousPass = $(element).closest('form').find("input[name='j_password']");
+				return $(previousPass).val() === value;
+			}, _objPropertiesMsg.samePasswordRequired);
+
+
+			$.validator.addMethod("isDisableSelected", function(value, element, arg) {
+				if ($(element).find("option:selected").attr('disabled') === "disabled")
+					return false;
+				else
+					return true;
+			}, _objPropertiesMsg.disabledValueSelected);
+
+			$.validator.addMethod("alphaNumeric", function(value, element) {
+				return this.optional(element) || /^[a-zA-Z0-9]+$/i.test(value);
+			}, _objPropertiesMsg.InputLetterAndNubmer);
+
+
+			$.validator.addMethod("passwordTest", function(value, element) {
+				return this.optional(element) || /^(?=.*\d)(?=.*[\!\@\#\$\%\^\&\*\)\(\+\=\.\_\-\?\}\{\]\[\>\<\"\\\/\'\:\;])[0-9a-zA-Z\!\@\#\$\%\^\&\*\)\(\+\=\.\_\-\?\}\{\]\[\>\<\"\\\/\'\:\;]{8,}$/i.test(value);
+			}, _objPropertiesMsg.passWeak);
+
+			$.validator.addMethod("exactLength", function(value, element, param) {
+				return this.optional(element) || value.length === param;
+			}, _objPropertiesMsg.exactLength);
+
+			$.validator.addMethod("cardTypeMatch", function(value, element) {
+
+				if ($(".cc-name-selector input[type='radio']:checked").data('cardname') === null) {
+					return false;
+				}
+				if ($(".cc-name-selector input[type='radio']:checked").data('cardname').toLowerCase() === cartier.common.getCardType(value).name) {
+					return true;
+				} else {
+					return false;
+				}
+
+			}, _objPropertiesMsg.cardNotValid);
+
+			$.validator.addMethod("cardNumberLength", function(value, element) {
+
+				if (value.length === cartier.common.getCardType(value).valid_length[0]) {
+					return true;
+				} else {
+					return false;
+				}
+
+			}, _objPropertiesMsg.cardNotValid);
+			$.validator.addMethod("cvvNum", function(value, element) {
+
+				if ($(".cc-name-selector input[type='radio']:checked").data('cardname') === null) {
+					return false;
+				}
+				if ($(".cc-name-selector input[type='radio']:checked").data('cardname').toLowerCase() === "amex") {
+					if (value.length === 4)
+						return true;
+					else
+						return false;
+				} else {
+					if (value.length === 3)
+						return true;
+					else
+						return false;
+				}
+			}, _objPropertiesMsg.cvvNotValid);
+
+			$.validator.addMethod("expiryDate", function(value, elDate) {
+
+				var currentdate = new Date(),
+					containerDate = $(elDate).closest('ul'),
+					month = containerDate.find('.js-month select').val(),
+					year = containerDate.find('.js-year select').val(),
+					selectedDate = new Date(),
+					monthList = {
+						'01': 0,
+						'02': 1,
+						'03': 2,
+						'04': 3,
+						'05': 4,
+						'06': 5,
+						'07': 6,
+						'08': 7,
+						'09': 8,
+						'10': 9,
+						'11': 10,
+						'12': 11
+					},
+					monthDays = {
+						'01': 31,
+						'02': 28,
+						'03': 31,
+						'04': 30,
+						'05': 31,
+						'06': 30,
+						'07': 31,
+						'08': 31,
+						'09': 30,
+						'10': 31,
+						'11': 30,
+						'12': 31
+					};
+
+				containerDate.find('.js-month, .js-year').addClass('select-wrapper');
+
+				if (year === "default" || month === "default") {
+					containerDate.find('.js-month .selector').addClass('formerror');
+					containerDate.find('.js-year .selector').addClass('formerror');
+					return false;
+				}
+
+				selectedDate.setFullYear(year);
+				selectedDate.setMonth(monthList[month]);
+				selectedDate.setDate(monthDays[month]);
+
+				if (currentdate > selectedDate) {
+					containerDate.find('.js-month .selector').addClass('formerror');
+					containerDate.find('.js-year .selector').addClass('formerror');
+					return false;
+				} else {
+					containerDate.find('.js-month .selector').removeClass('formerror');
+					containerDate.find('.js-year .selector').removeClass('formerror');
+					return true;
+				}
+			}, _objPropertiesMsg.dateValidation);
+
+
+		},
+
+		_removeSpecificRules = function() {
+			var inputVariable = $('.login .js-password-input');
+
+			if (inputVariable.length > 0) {
+				inputVariable.rules('remove', 'passwordTest');
+			}
+		},
+
+
+		/*
+        @pubic method : add custom validation for form buil
+        */
+		_customFormBuilderValidation = function() {
+
+			$.validator.addMethod("isMaxLength", function(value, element) {
+				var length = value.length;
+				if (length > 45) {
+					return false;
+				} else {
+					return true;
+				}
+
+			}, "you can enter 45 charter");
+
+			$.validator.addMethod("cardTypeMatch", function(value, element) {
+				if ($(".ecs-payment-wrapper input[type='radio']:checked").data('cardname') === null) {
+					return false;
+				}
+				if ($(".ecs-payment-wrapper input[type='radio']:checked").data('cardname').toLowerCase() === cartier.common.getCardType(value).name) {
+					return true;
+				} else {
+					return false;
+				}
+
+			}, _objPropertiesMsg.cardNotValid);
+
+			$.validator.addMethod("cardNumberLength", function(value, element) {
+
+				if (value.length === cartier.common.getCardType(value).valid_length[0]) {
+					return true;
+				} else {
+					return false;
+				}
+
+			}, _objPropertiesMsg.cardNotValid);
+			$.validator.addMethod("cvvNum", function(value, element) {
+
+				if ($(".ecs-payment-wrapper input[type='radio']:checked").data('cardname') === null) {
+					return false;
+				}
+				if ($(".ecs-payment-wrapper input[type='radio']:checked").data('cardname').toLowerCase() === "amex") {
+					if (value.length === 4)
+						return true;
+					else
+						return false;
+				} else {
+					if (value.length === 3)
+						return true;
+					else
+						return false;
+				}
+			}, _objPropertiesMsg.cvvNotValid);
+
+
+
+			$.validator.addMethod("mailConfirm", function(value, element) {
+				var previousEmail = $(element).closest('form').find("input[name='registration_j_username']");
+				if ($('#piform_emailaddress').length) {
+					previousEmail = $('#piform_emailaddress');
+					console.log($(previousEmail).val());
+				}
+				return $(previousEmail).val() === value;
+			}, _objPropertiesMsg.sameEmailRequired);
+
+			$.validator.addMethod("passwordTest", function(value, element) {
+				return this.optional(element) || /^(?=.*\d)(?=.*[\!\@\#\$\%\^\&\*\)\(\+\=\.\_\-\?\}\{\]\[\>\<\"\\\/\'\:\;])[0-9a-zA-Z\!\@\#\$\%\^\&\*\)\(\+\=\.\_\-\?\}\{\]\[\>\<\"\\\/\'\:\;]{8,}$/i.test(value);
+			}, _objPropertiesMsg.passWeak);
+
+			$.validator.addMethod("passwordConfirm", function(value, element) {
+				var previousPass = $(element).closest('form').find("input[name='registration_j_password']");
+				return $(previousPass).val() === value;
+			}, _objPropertiesMsg.samePasswordRequired);
+
+
+			$.validator.addMethod("marraigeDate", function(value, elDate) {
+
+				var containerDate = $(elDate).closest('.js-date-picker'),
+					month = containerDate.find('.js-month select').val(),
+					year = containerDate.find('.js-year select').val(),
+					day = containerDate.find('.js-date select').val(),
+					selectedDate = new Date(),
+					birthDate = new Date(),
+					birthDateEl = $($(elDate).closest('form').find('.js-date-picker')[0]);
+
+				selectedDate.setFullYear(year);
+				selectedDate.setMonth(month);
+				selectedDate.setDate(day);
+
+				birthDate.setFullYear(birthDateEl.find('.js-year select').val());
+				birthDate.setMonth(birthDateEl.find('.js-month select').val());
+				birthDate.setDate(birthDateEl.find('.js-date select').val());
+
+
+
+				if (month !== "-1" && year !== "-1" && day !== "-1") {
+					$(elDate).closest('.js-date-picker').removeClass('js-validation-ignore');
+				}
+
+				if ($(elDate).closest('.js-date-picker').hasClass('js-validation-ignore'))
+					return true;
+
+
+
+				if (year < birthDate.getFullYear() && year !== "-1") {
+					containerDate.find('.js-month .selector').addClass('select-error formerror');
+					containerDate.find('.js-year .selector').addClass('select-error formerror');
+					containerDate.find('.js-date .selector').addClass('select-error formerror');
+					return false;
+				}
+
+
+				if (month === "-1" && year === "-1" && day === "-1") {
+					containerDate.find('.js-month .selector').removeClass('select-error formerror');
+					containerDate.find('.js-year .selector').removeClass('select-error formerror');
+					containerDate.find('.js-date .selector').removeClass('select-error formerror');
+					return true;
+				}
+				if (month === "-1" || year === "-1" || day === "-1") {
+					containerDate.find('.js-month .selector').addClass('select-error formerror');
+					containerDate.find('.js-year .selector').addClass('select-error formerror');
+					containerDate.find('.js-date .selector').addClass('select-error formerror');
+					return false;
+				}
+
+				if (birthDate > selectedDate) {
+					containerDate.find('.js-month .selector').addClass('select-error formerror');
+					containerDate.find('.js-year .selector').addClass('select-error formerror');
+					containerDate.find('.js-date .selector').addClass('select-error formerror');
+					return false;
+				} else {
+					containerDate.find('.js-month .selector').removeClass('select-error formerror');
+					containerDate.find('.js-year .selector').removeClass('select-error formerror');
+					containerDate.find('.js-date .selector').removeClass('select-error formerror');
+					return true;
+				}
+			}, "invalid marraige");
+
+			$.validator.addMethod("birthDate", function(value, elDate) {
+
+				var containerDate = $(elDate).closest('.js-date-picker'),
+					month = containerDate.find('.js-month select').val(),
+					year = containerDate.find('.js-year select').val(),
+					day = containerDate.find('.js-date select').val(),
+					selectedDate = new Date(),
+					currentDate = new Date();
+				if (month === "-1" && year === "-1" && day === "-1") {
+					containerDate.find('.js-month .selector').removeClass('select-error formerror');
+					containerDate.find('.js-year .selector').removeClass('select-error formerror');
+					containerDate.find('.js-date .selector').removeClass('select-error formerror');
+					return true;
+				}
+				selectedDate.setFullYear(year);
+				selectedDate.setMonth(month);
+				selectedDate.setDate(day);
+
+				if (month !== "-1" && year !== "-1" && day !== "-1") {
+					$(elDate).closest('.js-date-picker').removeClass('js-validation-ignore');
+				}
+
+				if ($(elDate).closest('.js-date-picker').hasClass('js-validation-ignore'))
+					return true;
+
+				/* “ DATE  08-10-2014 |  DEFECT- CARE-4344 | BRANCH 2.0.0”  
+                    START
+                    date validation error mgs issue 
+                 */
+				if ((currentDate < selectedDate) || month === "-1" || year === "-1" || day === "-1") {
+					/*END*/
+					containerDate.find('.js-month .selector').addClass('select-error formerror');
+					containerDate.find('.js-year .selector').addClass('select-error formerror');
+					containerDate.find('.js-date .selector').addClass('select-error formerror');
+					return false;
+				} else {
+					containerDate.find('.js-month .selector').removeClass('select-error formerror');
+					containerDate.find('.js-year .selector').removeClass('select-error formerror');
+					containerDate.find('.js-date .selector').removeClass('select-error formerror');
+					return true;
+				}
+			}, "invalid birth");
+
+
+			var bdmonth = $("select[name=fn_bdmonth]"),
+				mrmonth = $("select[name=fn_mrmonth]"),
+				captcha = $("input[name=fn_wordvef]"),
+				cctype = $("input[name=payment_card_type]");
+
+
+
+			if (bdmonth.length > 0) {
+				bdmonth.closest('form').validate();
+				bdmonth.rules("add", {
+					birthDate: true,
+					messages: {
+						birthDate: "Invalid birth date "
+					}
+				});
+			}
+			if (mrmonth.length > 0) {
+				mrmonth.closest('form').validate();
+				mrmonth.rules("add", {
+					marraigeDate: true,
+					messages: {
+						marraigeDate: "Invalid marriage date"
+					}
+				});
+			}
+			if (captcha.length > 0) {
+				captcha.closest('form').validate();
+				captcha.rules("add", {
+					required: true,
+					messages: {
+						required: _objPropertiesMsg.mandatory
+					}
+				});
+
+			}
+
+			if (cctype.length > 0) {
+				cctype.closest('form').validate();                
+				cctype.rules("add", {                    
+					required: true,
+					                    messages: {                        
+						required: _objPropertiesMsg.mandatory                    
+					}                
+				});            
+			}
+
+
+		};
+
+
+
+	/*
+        @pubic method : apply validate methods on form
+        */
+	formValidationWrapper.applyValidation = function($form) {
+		if (_objRules === undefined || _objMessages === undefined) {
+			cartier.formValidationWrapper.init();
+		}
+
+		$form.each(function() {
+			var form = $(this);
+			form.validate({
+				rules: _objRules,
+				messages: _objMessages,
+				errorElement: "span",
+				ignore: ":hidden, .js-validation-ignore, .display-none",
+				focusInvalid: false,
+				invalidHandler: function(form, validator) {
+
+					if (!validator.numberOfInvalids()) {
+						return;
+					}
+
+					$(validator.errorList[0].element).ScrollTo({
+						duration: 800,
+						offsetTop: 450
+					});
+
+				},
+				errorPlacement: function(error, element) {
+					if (element.hasClass('js-ecspayTermCondition')) {
+						element.closest("li").find('label').append(error);
+
+					} else if (element.attr("type") === "checkbox") {
+						element.closest(".checker").append(error);
+					} else {
+
+
+						if (element.attr("type") === "radio") {
+
+
+							if (element.closest('ul').hasClass('cc-name-selector')) {
+
+
+								element.closest('.cc-name-selector').append(error);
+
+							} else if (element.closest('ul').hasClass('js-delivery-days')) {
+								error.insertAfter(element.closest('.js-delivery-days'));
+
+							} else {
+								error.insertAfter(element.closest("li").parent(".radio-btn"));
+							}
+
+
+						} else if (element.closest('li').hasClass('js-month') || element.closest('li').hasClass('js-year') || element.closest('li').hasClass('js-date')) {
+
+							error.insertAfter(element.closest('ul'));
+
+						} else if (element.hasClass('js-sizeselector')) {
+
+							error.insertBefore(element.closest('div'));
+
+						} else if (element.hasClass('js-password-input') && $('.login').length > 0) {
+							error.insertAfter(element.closest('div'));
+
+						} else {
+
+							error.insertAfter(element);
+						}
+					}
+				}
+			});
+		});
+
+
+	};
+
+	/*
+     	@pubic method : initailize the module
+    */
+	formValidationWrapper.init = function() {
+		_objPropertiesMsg = cartier.properties.messages;
+
+		_cacheObjects();
+		_createCustomeMethods();
+		if ($('.js-form-validator').length > 0) {
+			_setDefualtMsg();
+			_setDefualtRules();
+			formValidationWrapper.applyValidation($('.js-form-validator form'));
+			_removeSpecificRules();
+		}
+		if ($('.form-layout').length > 0) {
+			_customFormBuilderValidation();
+		}
+
+
+	};
+
+}(window, jQuery, cartier.formValidationWrapper));

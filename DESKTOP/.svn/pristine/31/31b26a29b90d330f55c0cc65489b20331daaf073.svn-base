@@ -1,0 +1,628 @@
+
+#address-container {
+		.message{
+				font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+				letter-spacing: .1em;
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: bold;
+				font-weight: normal;
+				margin-top: 15px;
+				text-align: center;
+	}
+
+	.txt, .comp-rich-text{
+			@include proxi-font;
+			border-top:1px solid $primary-11;
+			text-align: center;
+
+			p {
+				background: $primary-1;
+				@include rem('padding', 0 10px);
+				@include f(14);
+				position:relative;
+				top:-11px;
+				display:inline-block;
+				@include rem('letter-spacing', 1px);
+				ont-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+				font-size: 14px !important;
+			}
+	}
+
+			div.errormessage {
+			    color: #8F141A !important;
+			    display: block;
+			    font-family: Georgia,sans-serif !important;
+			    font-size: 12px !important;
+			    font-style: italic !important;
+			    letter-spacing: 0 !important;
+			    padding-top: 0.5rem;
+			    text-align: left;
+			    text-transform: none !important;
+			    -webkit-animation-duration:1s;
+			    -moz-animation-duration:1s;
+			    -o-animation-duration:1s;
+			    animation-duration:1s;
+			    -webkit-animation-fill-mode:both;
+			    -moz-animation-fill-mode:both;
+			    -o-animation-fill-mode:both;
+			    animation-fill-mode:both;
+		}
+}
+
+#address-container + .txt, #address-container + .comp-rich-text{
+			@include proxi-font;
+			border-top:1px solid $primary-11;
+			text-align: center;
+
+			p {
+				background: $primary-1;
+				@include rem('padding', 0 10px);
+				@include f(14);
+				position:relative;
+				top:-11px;
+				display:inline-block;
+				@include rem('letter-spacing', 1px);
+				ont-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+				font-size: 14px !important;
+			}
+	}
+	
+	.addressListingDetailView {
+			
+		@include rem('width',313px);
+		margin : 0 auto;
+		@include rem('padding-bottom' , 50px);
+
+		
+		.addressList {
+			
+			/*display: none;*/
+			
+			color: white;
+			text-align: center;
+			border: 1px solid #333333;
+			@include rem('padding' , 6px 29px 21px 29px);
+
+			.address {
+					
+					@include rem('padding-bottom', 17px);
+					.address-details,p,.address-name-view{
+						width: 265px;
+						padding: 15px;
+						margin:0 auto;
+						vertical-align: middle;
+						text-align: center;
+						font-style: italic;
+						line-height: 17px;
+						font-size: 12px;	
+						font-family: Georgia, sans-serif;
+						padding: 0 ;
+						p{
+							text-align: center;
+						}
+
+
+				}
+				h3 {
+					display :  inline;
+				}
+
+				.heading3{
+					display: none;
+				}
+
+				.message{
+					display: none;
+				}
+			}
+
+			
+				
+			.addressAction {
+				border-top: 1px solid #333333;
+				display: block;
+
+	            .button{
+	            	width:43%;
+	        		@include f(12);
+	        		//@include bold-font;
+	        		font-weight: normal;
+	        		@include proxi-font;
+	        		text-transform:uppercase;
+	        		display:inline-block;
+	        		@include box-sizing(border-box);
+	        		@include rem(padding, 20px 0 0);
+
+	            	.delete-icon {
+			       		@include setSprite(27px, 29px, -623px, -135px);           
+						display: inline-block;
+						@include rem('height', 15px);
+						@include rem(margin, 0 0 0 5px);
+						border-left:1px solid $primary-8;
+						position:relative;
+						top:-1px;
+
+			         }
+	            }
+	        	 .edit_add{
+	        		text-align:left;
+	        		@include rem(margin-right, 10px);
+
+	        		/* edit css*/
+
+	        		/*@include setSprite(54px, 29px, -701px, -134px);         */
+					display: inline-block;
+					@include rem('height', 15px);
+					@include rem(margin, 0 0 0 5px);
+					border-left:1px solid $primary-8;
+					position:relative;
+					top:-1px;
+
+	        	}
+
+	        	.delete_add{
+	        		text-align:left;
+	        		@include rem(margin-left, 10px);
+
+	        		/* delete button cass*/
+
+	        		/*@include setSprite(75px, 29px, -580px, -135px);           */
+					display: inline-block;
+					@include rem('height', 15px);
+					@include rem(margin, 0 0 0 5px);
+					border-left:1px solid $primary-8;
+					position:relative;
+					top:-1px;
+
+	        	}
+
+	        	
+			}
+
+
+			     
+
+
+			}
+
+			.default{
+				display: block;
+			}
+	}	
+	
+	
+	
+
+	/* delete */
+	
+
+
+
+/*end here addressss  */
+#address-container {
+	color :  white;
+}
+
+#address-select {
+	text-align: center;
+}
+#address-select .button-wrapper{
+  margin: 0 0 50px 0; 
+}
+#address-select .select-wrapper{
+  width:208px;
+  display: inline-block;
+}
+
+
+.js-address-form ,.js-address-form-uk, .js-address-form-jp{
+
+			
+			background: $primary-1  url($path-images + 'icons/popin-bg.png') no-repeat top left;
+			border: 1px solid $primary-11;
+			display: block;
+			float: left;
+    		width: 100%;
+    		@include box-sizing(border-box);
+    		@include rem('padding',0px 30px 10px);
+    		@include rem('margin-bottom',30px);
+    		@include rem('margin-right',10px);
+      		.form {
+    			@include rem('width',445px);
+
+    			margin : 5px auto 30px;
+    		}
+    		fieldset {
+    			position : relative;
+    			a {
+    				color : $primary-114;
+    				@include f(13);
+    				@include main-font;
+    				position : absolute;
+    				bottom :  -113px;
+    				right :  46%;
+    			}
+    		}
+
+    		.button-wrapper .form-button {
+				padding: 10px 15px 10px 23px;
+				background-position: -416px -482px;
+			}
+    		.group-wrapper {
+				margin: 2.5rem 0rem 1rem 0;
+
+				> label {
+					display: block;
+				   	width: 100%;
+					@include proxiBold-font();
+					@include f(10);
+					@include rem(letter-spacing, 1px);
+					@include rem(margin-bottom, 5px);
+					text-transform: uppercase;
+					text-align:left;
+				}
+
+				.radio-wrapper {
+					margin: 0.5rem 1rem 1rem 0;
+				}
+			}
+    		
+    		
+    		.addressform_address2 , .addressform_address12 {
+    			float :  left;
+    			@include rem('margin-right' , 117px);
+    			width: 22%;
+    		}
+
+    		.fn_fname,
+    		.addressform_firstName1,
+    		.addressform_address7,
+    		.addressform_phone {
+				width: 46%;
+				.form-input {
+					width : 100%;
+				}
+				
+			}
+
+			.addressLabel {
+				width :100%;
+				.form-input {
+					width: 46%;
+				}
+			}
+
+    		.addressform_address5 {
+    			width : 47.1%;
+    			
+    		}
+
+    		.form-input {
+    			width :96%;
+    		}
+    		.form-label {
+    			float: left;
+    		}
+    		.addressform_address5{
+    				.form-input {
+    					width : 100%;
+    				}
+    		}
+    		.fieldset-title {
+    				@include f(13);
+    				@include proxiBold-font;
+    				text-transform: uppercase;
+    				margin-top: 10px;
+    				@include rem('letter-spacing',1.3px);
+    				@include rem('line-height',18.2px);
+    				float: left;
+    				 width: 100%;
+    			}
+    			.radio-wrapper {
+    				@include rem('margin',25px 20px 10px 0);
+				    width:auto;
+				    display: block;
+    				float: left;
+  
+
+					.radio {
+				    	float: left;
+				    }
+				    .radio-name {
+				    	text-transform: uppercase;
+				    	@include proxiBold-font;
+				    	@include f(10);
+				    	@include rem('letter-spacing',1px);
+				    	@include rem('line-height',14px);
+				    	@include rem('margin-top',1px);
+				    	text-align: left;
+				    	float: left;
+				    	width: auto;
+				    	background: none
+				    }
+				}
+
+    			.checkbox-wrapper {
+    				display: block;
+    				float: left;
+    				@include rem('margin',10px 10px 10px 0);
+				    width: 11%;
+				    .form-radio-label {
+				    	.form-radio {
+				    		@include rem('margin-top' ,-4px);
+				    	}
+				    }
+				    .checker {
+				    	float: left;
+				    }
+				    .checkbox-name {
+				    	text-transform: uppercase;
+				    	@include proxiBold-font;
+				    	@include f(10);
+				    	@include rem('letter-spacing',1px);
+				    	@include rem('line-height',14px);
+				    	@include rem('margin-top',1px);
+				    	
+				    	text-align: left;
+				    	float: left;
+
+				    	p {
+				    		padding : 0;
+				    	}
+				    }
+				    
+    			}
+    			.addressform_principal {
+				    	 
+			    			clear : left;
+					    	.checkbox-name {
+								width : 94%;
+								margin-top : 0;
+							}
+				}
+
+    			.addressLabel {
+    				clear : both;
+    			}
+    			
+    			.select-wrapper {				
+    				display: block;
+				    float: left;
+				    margin-right: 0px;
+				    height: 50px;
+				    margin-bottom: 20px;
+				    margin-top: 0;
+
+				    label {
+				    	display: block;
+				    }
+    				.selector {
+    					width: 445px !important;
+    					display: block;
+
+    					span {
+    						width: 433px !important;
+    					}
+    				}
+
+    			}
+
+       			.show-button {
+		    				padding-top: 0;
+		    				@include rem('padding-bottom' ,20px);
+		    				.form-button {
+		    						margin : 0 auto;
+		    				}
+		    				
+		    	}
+		    			
+    			.add-button {
+				    
+				    @include rem('margin',-8px 0 15px);
+				    @include rem('padding',5px 0 10px);
+					display:inline-block;
+					width:100%;
+
+    				a {
+	    				@include setSpriteDesktop(auto, auto ,-431px ,-157px, $primary-1);
+						color: $primary-2;
+						float: left;
+						@include main-font;
+						@include f(12);
+						font-style: normal;
+						letter-spacing: normal;
+						@include rem('margin-top', 5px);
+						@include rem('padding-left', 10px);
+					}
+    			}
+
+
+    		.last-form-wrapper {
+    			border-bottom: 1px solid $primary-61;
+    		}
+
+    		
+    		.half-width.full-block .form-input {
+    			width: 49.2%;
+
+    		}
+    		.full-width {
+    			width: 90.6%;
+    		}
+    		.full-block {
+    			width: 90.6%;
+    		}
+    		.half-block {
+    			width: 44.1%;
+    		}
+
+    		.fieldset-description {
+    			@include f(11);
+    			@include rem('margin-bottom', 15px);
+    			@include main-font;
+    			text-transform: none;
+    			color: $primary-2;
+    			@include rem('line-height', 15.4px);
+    			display: inline-block;
+    			width: 105%;
+    		}
+    		.form-address-selector {
+
+    			height: 500px;
+    			display: block;
+    			clear :  both;
+    			float: left;
+    			@include rem('width', 43px);
+    			@include rem('height', 142px);
+
+    			
+    			@include  rem('margin-left' , -55px);
+    			.form-address-selector__radio {
+    				width: 10px;
+    				margin-right: 15px;
+    				float: left;
+    				margin-top: 42px;
+
+					.radio span {
+						background-position: -195px -432px;
+						height: 20px;
+						width: 20px
+					}
+					.radio span.checked {
+						background-position: -218px -432px;
+					}
+
+    				.checkbox-wrapper {
+    					@include rem('margin', 25px 10px 57px 0);
+    					
+    				}
+
+    				.fn_grpaddr label {
+    					font-size: 0px;
+
+    				}
+    			}
+    			.form-address-selector__bracket {
+    				border: 1px solid $primary-72;
+    				border-right: none;
+				    float: left;
+				    height: 97px;
+				    margin-top: 31px;
+				    width: 10px;
+    			}
+    		}
+
+    		.form-layout .select-wrapper {				
+    				display: block;
+				    
+
+				    label, .selector  {
+				    	display: block;
+				    }
+    		}
+			.tooltip-div {
+			    float: right;
+			    margin: 0.5rem 0 0 1rem;
+			    position: absolute;
+			    width: 20px;
+			}
+			 .tooltip-div:first-child {
+				right: 475px;
+			    top: 329px;
+			}
+			.tooltip-div:last-child {
+				right: 325px;
+				top: 738px;
+			}	
+}
+
+
+
+.default-button{ display: none;}
+
+.js-bobj-section-two{
+	.button-wrapper {
+		margin-top:0px;
+		margin-bottom:30px;
+	}
+}
+
+.js-bobj-address{
+	padding: 30px;
+	.js-bobj-address-li {
+		border:solid 1px $primary-11 ;
+		width: 274px;
+		margin: 0 auto;
+		@include main-font;
+		font-size:13px;
+		padding:20px;
+		margin-top: 10px;
+		span {
+			display: block;
+			text-align: center;
+			padding: 4px;
+		}
+
+		.radio-bobj{
+			display:inline-block;
+			margin:0;
+			vertical-align:top;
+
+			.radio{
+				line-height:160px;
+				vertical-align:middle;
+				span{
+					width:4px;
+				}
+				input{
+					width: 17px;
+					height: 27px;
+					margin-top: -11px;
+					margin-left: -6px;
+				}
+			}
+			span{
+				display:inline-block;
+			}
+		}
+
+		.address-bobj{
+			display:inline-block;
+			width:89%;
+		}
+
+		span.js-add-fname{
+			text-align: right;			
+			font-size:14px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		span.js-add-lname{
+			text-align: left;			
+			font-size:14px;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		span.js-add-snum {
+			text-align: right;			
+			display: inline-block;
+		}
+		span.js-add-sname {
+			text-align: left;
+			display: inline-block;
+		}
+		span.js-add-pobox {
+			text-align: left;
+			display: inline-block;
+		}
+		span.name-row , span.address-row {
+			display:block;
+			padding: 0px;
+		}
+	}	
+}
+
+.visibility-none {
+	visibility: hidden !important;
+}

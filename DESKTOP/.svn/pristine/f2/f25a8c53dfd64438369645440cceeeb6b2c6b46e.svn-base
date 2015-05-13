@@ -1,0 +1,54 @@
+
+<!-- Login Ends Here-->
+
+<!-- Registration Box Starts Here-->
+
+<div class="register-wrapper js-login">
+    <h1 class="heading1">Connection</h1>
+    <div class="register-form">
+
+    <!-- Login Box Starts Here-->
+    <div class="login">
+
+		
+				<div class="js-forgotpassword">
+					 <form name="forgot" action="#" method="get" accept-charset="utf-8">  
+						<span class="cross-button"></span>
+						 <h3 class="heading3">Forgot your password?</h3>
+						 <p >To receive your password, please enter the e-mail address associated to your cartier account. Your password will be sent to you by e-mail. </br> Thank you.</p>
+				  
+					   
+					    <div class="forgot-box__list">  
+					       <!--#set var="label-name" value="email" -->
+			                    <!--#set var="input-name" value="fn_email" -->  
+			                    <!--#set var="input-type" value="text" -->
+			                    <!--#set var="class-name" value="" -->  
+			                    <!--#include virtual="../../components/form_elements/desktop_input.shtml" -->
+					        
+					        
+					       	<!--#set var="text-detail" value="send" -->
+					       	<!--#set var="action-name" value="js-forgot-send" -->
+					       	
+			                <!--#include virtual="../../components/form_elements/desktop_button.shtml" -->
+				    	
+				    </div>
+				    	<a href="#" class="js-forgot-cancel">Cancel</a> 
+				</form>
+
+			</div>
+	        
+
+
+    </div>
+    <!-- Login Ends Here-->
+
+<!-- Reg Step 1 Box Starts Here-->
+
+    <!--#include virtual="../../views/reg_step1/desktop.shtml" -->
+
+<!-- Login Ends Here-->
+
+
+    </div>
+</div>
+<!-- Registration Box Ends Here-->

@@ -1,0 +1,7 @@
+<div class="form-element radio-wrapper <!--#echo var="radio-wrapper-class" -->">
+	<label for="<!--#echo var="radio-value" -->" value="" class="form-radio-label">
+		<input type="radio" name="<!--#echo var="radio-name" -->" id="<!--#echo var="radio-value" -->" value="<!--#echo var="radio-value" -->" class="form-radio">
+		<span class="radio-name"><!--#echo var="radio-text" --></span>
+	</label>
+</div>
+

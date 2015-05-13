@@ -1,0 +1,804 @@
+
+/*------------------------------------*\
+    Carousel -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.carousel__slider)
+ * INNER BLOCK......inner items (.carousel__item, etc.)
+ * HEADING GROUPS......carousel headings styling (.carousel__video__hgroup)
+ * PREV NEXT TAB STYLING......previous next button styling (.carousel__prev, .carousel__next, etc.)
+ * PAGING BLOCK......paging for list items (.carousel__control-paging, .carousel__list, etc.)
+ */ 
+ 
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.carousel{
+	position:relative;
+	.rslides,.bxslider{
+		width:100%;
+		position: relative;
+		display: block;
+		float: left;
+		@include set-ulFix;
+		border-top: 1px solid $white;
+		border-bottom: 1px solid $white;
+		.carousel__pic-desc{
+			@include main-font;
+	 	 	position:absolute;
+	 	 	top:0px;
+	 	 	text-transform: uppercase;
+	 	 	max-width:240px;
+	 	 	p{
+	 	 		@include f(29);
+	 	 		@include main-font;
+	 	 		@include rem('padding', 0 0 10px);
+	 	 		@include rem('letter-spacing', 2.9px);
+	 	 		line-height: normal;
+
+	 	 		&.carousel_pic-desc__header{
+	 	 			@include f(42);
+	 	 			max-width:340px;
+	 	 			@include main-font;
+
+	 	 		}
+
+	 	 		.subtitle{
+	 	 			@include f(29);
+	 	 			line-height: 25px;
+					display: inline-block;
+					@include bold-font();
+					letter-spacing: 2px;
+					@include main-font();
+	 	 		}
+
+	 	 		img{
+	 	 			max-width:100%; 
+	 	 			max-height:100%; 
+	 	 			height:auto; 
+	 	 			width:auto;
+	 	 		}
+	 	 	}
+	 	 	h1,h2,h3{
+	 	 		@include f(42);
+	 	 		max-width:340px;
+	 	 		@include main-font;
+	 	 		@include rem('padding', 10px 0px);
+	 	 	}
+	 	 	a{
+	 	 		text-decoration:none;
+	 	 		@include f(13);
+	 	 		@include bold-font;
+	 	 		top: 1px;
+	 	 		@include setSpriteMobileDesktop(auto, 20px, -1427px, -270px, transparent);
+ 	 			@include rem('margin-right', 7px);
+ 	 			@include rem('margin-top', 10px);
+ 	 			@include rem('padding-left', 20px);
+ 	 			letter-spacing: normal;
+ 	 			line-height: 25px;
+ 	 			display: inline;
+ 	 			font-weight: bold;
+	 	 	}
+	 	 }
+	 	li{
+	 	 	width:100%;
+	 	 	overflow:hidden;
+	 	 	height:390px !important;
+	 	 	.carousel__video{
+	 			width:100%;
+	 		}
+
+	 		img{
+				position:  absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				width:100%;
+				height: 100%;
+			}
+			
+	 	}
+
+	 	li:before{
+			content: "";
+			
+			padding-top: 60%; 	/* initial ratio of 1:1*/
+		}
+
+
+	 	.title-color-1{
+	 	 	@include font-color($primary-2);
+	 	}
+
+	 	.title-color-2{
+	 	 	@include font-color($primary-2);
+	 	}
+
+	 	.display-left{
+	 	 	@include rem('left', 90px);
+	 	}
+
+	 	.display-right{
+	 	 	@include rem('right', 90px);
+	 	}
+
+	 	.display-mid{
+	 		right:35%;
+	 	}
+
+	 	.display-top{
+	 	 	top:10%;
+	 	}
+	 	.display-middle{
+	 	 	top:25%;
+	 	}
+	 	.display-bottom{
+	 	 	top:42%;
+	 	}
+
+	 	.col__1{
+	 		left:5%;
+		}
+
+	 	.col__2{
+	 		left:25%;
+	 	}
+
+	 	.col__3{
+	 		left:40%;
+	 	}
+
+	 	.col__4{
+	 		left:51%;
+	 	}
+
+	 	.col__5{
+	 		left:63%;
+	 	}
+
+	 	.row__1{
+	 		top:5%;
+	 	}
+
+	 	.row__2{
+	 		top:25%;
+	 	}
+
+	 	.row__3{
+	 		top:53%;
+	 	}
+
+
+	}
+
+	.rslides_tabs {
+		width:100%;
+		text-align:center;
+		display: inline-block;
+		position: relative;
+		@include rem('top', -25px);
+		@include set-ulFix;
+		z-index: 5;
+
+		li {
+	 	 display: inline;
+	  	}
+
+	  	a {
+			@include rem('width', 13px);
+			@include rem('height', 13px);
+			@include rem('margin', 0px 2px);
+			@include border-radius(9px); 
+			@include rem('margin', 0px 4px);
+			box-shadow: 5px 4px 5px $black;
+			-webkit-box-shadow: 5px 4px 5px $black;
+			-moz-box-shadow: 5px 4px 5px $black;
+			-o-box-shadow: 5px 4px 5px $black;
+			background:$black; 
+			border:1px solid #edeae8; 
+			text-indent:-9000px; 
+			display:inline-block; 
+			overflow:hidden; 
+			outline:none;
+	 	}
+
+	 	.rslides_here a{
+	  		background:$white; 
+		 }
+	 }
+
+	 .bx-pager{
+	 	width:100%;
+		text-align:center;
+		display: inline-block;
+		position: relative;
+		@include rem('top', -25px);
+		@include set-ulFix;
+		z-index: 101;
+	 	.bx-pager-item{
+	 		display: inline;
+	 		a{
+	 			@include rem('width', 13px);
+				@include rem('height', 13px);
+				@include rem('margin', 0px 2px);
+				@include border-radius(9px); 
+				@include rem('margin', 0px 4px);
+				box-shadow: 5px 4px 5px $black;
+				-webkit-box-shadow: 5px 4px 5px $black;
+				-moz-box-shadow: 5px 4px 5px $black;
+				-o-box-shadow: 5px 4px 5px $black;
+				background:$black; 
+				border:1px solid #edeae8; 
+				text-indent:-9000px; 
+				display:inline-block; 
+				overflow:hidden; 
+				outline:none;
+	 		}
+
+	 		a.active{
+	 			background:$white; 
+	 		}
+	 	}
+	 }
+
+	.prev{
+		position: absolute;
+		width: 7%;
+		height: 90%;
+		@include rem('left', 0px);
+		cursor: pointer;
+		z-index:10;
+        -webkit-tap-highlight-color: transparent; /* For some Androids */
+		span{
+		position: absolute;
+		top:35%;
+		@include rem('left', 27px);
+
+		@include setSprite(35px, 100px, -19px, -285px);
+		overflow: hidden;
+		z-index: 10;
+		text-indent:-5000px;
+		text-decoration:none;
+		outline:0;
+		}
+		&:hover{
+			text-decoration:none;
+		}
+	}
+	.next{
+		position: absolute;
+		width: 7%;
+		height: 90%;
+		@include rem('right', 0px);	
+		cursor: pointer;
+		z-index:10;
+        -webkit-tap-highlight-color: transparent; /* For some Androids */
+		span{
+		position: absolute;
+		top:35%;
+		@include rem('right', 27px);
+
+		@include setSprite(35px, 100px, -72px, -285px);
+		z-index: 10;
+		overflow: hidden;
+		text-indent:-5000px;
+		text-decoration:none;
+		outline:0;
+		}
+		&:hover{
+			text-decoration:none;
+			outline: 0;
+			
+		}
+		&:focus {
+		outline: 0;
+
+		}
+	}
+	
+	.image{
+		background-size: contain;
+		width: 100%;
+		vertical-align: bottom;
+	}
+
+
+
+}
+
+
+
+/*------------------------------------*\
+    mobile Carousel -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.product-carousel)
+ * INNER BLOCK......inner items (.carousel__item, etc.)
+ * HEADING GROUPS......module heading (.product-carousel__title)
+ * PREV NEXT TAB STYLING......previous next button styling (.carousel__prev, .carousel__next, etc.)
+ * PAGING BLOCK......paging for list items (.carousel__control-paging, .carousel__list, etc.)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.product-carousel{
+	@include rem('line-height', 35px);
+	@include font-color($primary-2);
+	width:81.25%;
+	margin:0 auto;
+	@include rem(padding, 20px 0);
+	border:none;
+
+	/*------------------------------------*\
+    $HEADING CONTAINER
+	\*------------------------------------*/
+
+	.product-carousel__title{
+		display:block;
+		border-bottom:1px solid $primary-2;
+		border-top:1px solid $primary-2;
+		@include rem(margin, 20px 0 0 0);
+		@include rem(padding, 22px 0 25px);
+		.heading4{
+			@include rem(padding, 0px);
+			@include f(24);
+		}
+		.heading2{
+			@include rem(padding, 15px 0 0 0);
+			border:none;
+			@include f(34);
+		}
+	}
+
+	.product-detail__variant{
+		display:block;
+		@include f(26);
+		@include main-font;
+		font-style:italic;
+		text-align:center;
+	}
+	.product-detail__size{
+		display:block;
+		@include f(20);
+		@include brand-font;
+		text-transform:uppercase;
+		text-align:center;
+		@include rem('line-height', 24px);
+	}
+
+	/*------------------------------------*\
+    $PRODUCT CAROUSEL CONTAINER
+	\*------------------------------------*/
+	.carousel{
+		position:relative;
+		display:inline-block;
+		width: 100%;
+
+	.rslides{
+			border:none;
+			display:block;
+			@include set-ulFix;
+		 	li{
+		 		overflow:visible;
+		 		.rslides__title {
+					color: white;
+
+		 		}
+
+		 		.rslides__img{
+		 			@include rem('height', 565px);
+		 			position:relative;
+		 		}
+		 		
+		 		img{
+		 			margin:auto;
+		 			height:auto;
+		 			max-height:565px;
+		 			width: inherit;
+		 			max-width: 70%;
+
+				}
+
+				.rslides__desc--para {
+					@include font-color($primary-2);
+					@include f(26);
+					margin: auto;
+					@include main-font;
+					@include rem(padding, 100px 0 0 0);
+				}
+		 	}
+
+		 	li:before{
+				content: "";
+				display: block;
+				padding-top: 0; 	/* initial ratio of 1:1*/
+			}
+
+			.heading2{
+				@include f(28);
+				@include rem(padding, 35px 0 0 0);
+				border:none;
+			}
+		}
+
+		.prev, .next{
+			height: 690px;
+			span{
+				top:50%;
+			}
+		}
+		
+	}
+
+	.rslides_tabs{
+		display:none;
+	}
+
+	.zoom-icon{
+			bottom:none;
+			@include rem('top', 710px);
+			left:45%;
+	}
+
+	.more-button{
+		text-transform:uppercase;
+		@include font-color($primary-3);
+		@include rem(padding, 20px 0 0 0);
+		@include bold-font;
+	}
+
+	.carousel .rslides li{
+		height: auto !important;
+	}
+}
+
+/*------------------------------------*\
+    Product Carousel -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.carousel-product-detail)
+ * INNER BLOCK......inner items (.carousel__item, etc.)
+ * HEADING GROUPS......carousel headings styling (.carousel__video__hgroup)
+ * PREV NEXT TAB STYLING......previous next button styling (.carousel__prev, .carousel__next, etc.)
+ * PAGING BLOCK......paging for list items (.carousel__control-paging, .carousel__list, etc.)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.carousel-product-detail{
+		@include rem('line-height', 25px);
+		@include rem('margin-top', 45px);
+
+
+	.heading2{
+		@include rem('padding', 2px 0 0 0);
+		border:none;
+		@include f(28);
+	}
+
+	.product-detail__variant{
+		display:block;
+		@include f(26);
+		@include main-font;
+		font-style:italic;
+		font-weight:normal;
+		text-align:center;
+		@include rem('margin-top', 10px);
+	}
+	.product-detail__size{
+		display:block;
+		@include f(20);
+		@include bold-font;
+		text-transform:uppercase;
+		text-align:center;
+	}
+
+	.carousel{
+		position:relative;
+		@include rem('padding', 0 0 120px 0);
+
+		.rslides{
+				width:70%;
+				left:15%;
+				border:none;
+				top: 52px;
+				position: relative;
+				display: block;
+				float: left;
+				@include set-ulFix;
+			 	li{
+			 		img{
+						margin:auto;
+						max-width: 100%;
+						max-height: 100%;
+						height:auto;
+						width: auto;
+					}
+
+			 	}
+
+			}
+		
+	}
+
+	.rslides_tabs {
+		@include rem('top', 70px);
+	}
+
+}
+
+/*------------------------------------*\
+    SUGGESTION Carousel -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....main container (.suggestion-carousel)
+ * INNER BLOCK......inner items (.carousel__item, etc.)
+ * HEADING GROUPS......carousel headings styling (.carousel__video__hgroup)
+ * PREV NEXT TAB STYLING......previous next button styling (.carousel__prev, .carousel__next, etc.)
+ * PAGING BLOCK......paging for list items (.carousel__control-paging, .carousel__list, etc.)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.suggestion-carousel{
+	display:block;
+	@include rem('padding', 10px 0 30px 0);
+	
+	.carousel{
+		@include linear-gradient(135deg, $primary-1  73%, $primary-28 0%, $primary-27 100%);
+		position:relative;
+		.rslides{
+			@include linear-gradient(135deg, $primary-1  73%, $primary-28 0%, $primary-27 100%);
+
+			width:99%;
+			position: relative;
+			display: block;
+			float: left;
+			@include set-ulFix;
+			border:1px solid $primary-2;
+
+			.carousel__pic-desc{
+				@include main-font;
+		 	 	position:absolute;
+		 	 	top: 11.3%;
+		 	 	text-transform: uppercase;
+		 	 	right:0;
+		 	 	text-align:center;
+		 	 	max-width:60% !important;
+		 	 	@include rem('padding', 20px);
+		 	 	/*border:1px solid red;*/
+
+		 	 	.product-name{
+		 	 		@include brand-font;
+		 	 		@include font-color($primary-2);
+		 	 		@include f(30);
+		 	 		max-width: 100%;
+		 	 		text-align: center;
+		 	 		color:$primary-3;
+		 	 	}
+
+		 	 	.product-varaint{
+		 	 		font-style:italic;
+		 	 		@include f(30);
+		 	 		text-align: center;
+		 	 		letter-spacing: 0;
+		 	 		text-transform:capitalize;
+		 	 		max-width: 103%;
+					width: 103%;
+					color: $primary-3;
+		 	 	}
+		 	 }
+		 	li{
+		 	 	width:100%;
+		 	 	@include box-sizing(border-box);
+		 	 	overflow:hidden;
+		 	 	display: table-cell;
+		 	 	vertical-align: middle;
+		 	 	min-height: 230px;
+		 	 	padding: 20px;
+		 	 	line-height: 200px;
+
+		 	 	.carousel__video{
+		 			width:100%;
+		 		}
+
+		 		img{ 
+					width: initial;
+					height: initial;
+					visibility: visible;
+					left: auto;
+					right: auto;
+				}
+		 	}
+
+		 	li:before{
+				content: "";
+				display: block;
+				padding-top: 40%; 	/* initial ratio of 1:1*/
+			}
+		}
+
+		.rslides_tabs {
+			@include rem('top', 20px);
+		}
+		.prev{
+			display:none;
+		}
+		.next{
+			display:none;
+		}
+		
+		.image{
+			background-size: contain;
+			width: 100%;
+			vertical-align: bottom;
+		}
+	}
+}
+.carousel .bx-controls .bx-prev {
+  @include setSprite(35px, 100px, -19px, -285px);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-left: 2rem;
+  position: absolute;
+  top: 37%;
+  text-indent: -99999px;
+  z-index: 101;
+  left:0px;
+}
+
+.carousel .bx-controls .bx-next {
+@include setSprite(35px, 100px, -72px, -285px);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-right: 2rem;
+  position: absolute;
+  top: 37%;
+  right: 0px;
+  text-indent: -99999px;
+  z-index: 101;
+}
+
+.carousel .bx-wrapper .bx-viewport {
+	border-bottom:solid 1px $primary-4;
+}
+.carousel .bxslider.js-slider-framous li:before
+{
+	padding-top:0;
+}
+
+.js-slider-framous{
+	.sfy_content{
+		text-align:center;
+	}
+}
+
+.carousel .bxslider.js-slider-framous li img
+{
+	position:static;
+	width:auto;
+	height:auto;
+	max-height: 500px;
+}
+.carousel .bxslider.js-slider-history li:before{
+	padding-top:0;
+}
+
+
+
+/*image height added */ 
+
+.home-carousel .bx-wrapper .bx-viewport{
+	height:390px !important;
+
+}
+.home-carousel .bxslider li{
+	height:39rem !important;
+}
+
+.carousel  {
+	text-align: center;
+	.custom-images {
+		width: 100%;
+		display: inline-block;
+		padding-top: 80px;	
+		.thumbnail-list{
+			width: auto;
+			text-align: center;
+			display: inline-block;
+			
+			top: 9.5rem;
+			/*left: -30px;*/
+			margin: 0;
+			text-align: center;
+			padding: 0;
+			list-style: none;
+			z-index: 5;
+	    		.thumbnail{
+	    			border: 1px solid grey;
+					width: 30px;
+					height: 30px;
+					float: left;
+					margin-left: 12px;
+					padding: 15px;
+					text-align: center;
+
+					img {
+						max-width: 100%;
+						max-height: 100%;
+					}
+	    		}
+	    	}
+    }
+}
+.carousel .bxslider li .carousel__pic-desc img {
+	position: inherit;
+	padding: 0px;
+}
+
+.suggestion-carousel .carousel .rslides li:before{padding:0;}
+.suggestion-carousel .carousel .rslides li{text-align:left;height: 230px!important;}
+.suggestion-carousel li a > div {
+
+margin: 20px 0;
+width: 35%;
+text-align: center;
+display: inline-block;
+vertical-align: middle;
+}
+.suggestion-carousel .carousel .rslides .carousel__pic-desc {
+font-family: Georgia,sans-serif;
+position: static;
+height: auto;
+text-transform: uppercase;
+text-align: center;
+width: 64%;
+line-height: inherit;
+padding: 0;
+top: 0;
+display: inline-block;
+margin: auto;
+vertical-align: middle;
+right: 0;
+line-height: initial;
+}
+
+.suggestion-carousel .carousel .rslides li img {
+  max-width: 90%;
+width: initial;
+height: initial;
+max-height: 90%;
+margin: auto;
+padding: 0;
+vertical-align: middle;
+position: relative;
+max-height: 230px;
+}
+
+.suggestion-carousel .carousel .rslides .carousel__pic-desc .product-name{ 
+  display: inline-block; 
+  text-align: center;
+  width: 100%; 
+  color:#fff;
+}
+.suggestion-carousel .carousel .rslides .carousel__pic-desc .product-varaint{
+  color:#fff;
+  padding-top:0;
+  width:100%; 
+  max-width:100%;
+}
+.suggestion-carousel{
+  padding-bottom:60px;
+  display: inline-block;
+  width: 100%;
+}
+.suggestion-carousel .carousel .rslides_tabs {
+    top: 35px;
+}

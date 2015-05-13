@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    LIGHT ACCOUNT -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... (.js-light-account-form)
+ * CAPTCHA CONTAINER .....(captcha__input, .captcha-form-element, .captcha__image__container, .captcha__description)
+ * SUCCESS CONTAINER .... (.news-letter-success-page)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.js-light-account-form{
+	position:relative;
+	background: $primary-1; 
+	@include linear-gradient(135deg, #000000 0%, #010000 73%, #460000 100%);
+	border: 1px solid $primary-11;
+	@include rem('padding',20px 30px);
+	margin: 86px auto 0; /*This is CHANGED due to update the form container top position as per the error message*/
+	width: 82.25%;
+	.heading-wrapper .heading2{
+		position: absolute;
+		top: -64px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+		left: 0;
+		@include f(37);                                                                                                 
+	}
+
+	fieldset {
+		clear: none;
+	}
+	
+	.heading4{
+		@include rem('font-size', 26px);
+		text-transform: uppercase;
+		@include bold-font;
+		padding: 2.5rem 0;
+		line-height: 3rem;
+	}
+	p{
+		font-size: 24px !important;
+		font-family: Georgia,sans-serif !important;
+		color: $primary-2;
+		display: block; 
+		text-align: center;
+		font-style:italic;
+		@include rem('padding', 25px 0px 10px);
+		margin:0 auto;
+	}
+	a{
+		color: $primary-2 !important;
+		float: right;
+		font-size: 22px !important;
+		font-family: georgia !important;
+	}
+	hr{
+		background : $primary-3;
+		clear:both;
+	}
+
+	/*------------------------------------*\
+	    $CAPTCHA CONTAINER
+	\*------------------------------------*/
+
+	.captcha__input{
+		padding: 0;
+		width: 150px;
+		background:$primary-45;
+		border:1px solid $primary-12;
+		@include font-color($primary-3);
+		@include main-font;
+	    @include f(24);
+		display:inline-block;
+	}
+	.captcha-form-element{
+		label {
+			display : block;
+		}
+	}
+	.captcha__input{
+		width: 224px;
+		height: 50px;
+		display: inline-block;
+		clear: none;
+		margin-top: 40px;
+	}
+	.captcha__input ~ span.img {
+		display: inline-block;
+		padding: 0 0 0 10px;
+
+		vertical-align: bottom;
+
+		img {
+			vertical-align: bottom;
+		}
+	}
+	.captcha__image__container{
+		display: inline-block;
+		width: auto;
+		position: relative;
+		height: auto;
+
+		.img{
+			position: absolute;
+			left: 155px;
+			top: 47px;
+		}
+	}
+	.captcha__description{
+		@include f(22);
+		font-style: italic;
+		text-align: center;
+		@include rem('padding',20px 0);
+		@include main-font();
+		color : $primary-3;
+	}
+
+	.comp-rich-text.rte-wrapper{
+		width: 100%;
+	}
+}
+#errormessage-fn_chkprivnotc .error{
+	display: inline-block;
+	@include rem('margin-top',-18px);
+}
+.mobile-create-btn{
+    display:block;
+}
+
+/*------------------------------------*\
+    $SUCCESS CONTAINER
+\*------------------------------------*/
+
+.news-letter-success-page {
+	p {
+		margin: 0 auto;   
+	    width: 81.25%;
+	    border :  1pz solid $primary-3;
+	}
+}

@@ -1,0 +1,9 @@
+<div class="form-element checkbox-wrapper <!--#echo var="checkbox-class" -->">
+	<label class="form-checkbox-label" value="<!--#echo var="checkbox-value" -->">
+		<input type="checkbox" value="<!--#echo var="checkbox-value" -->" name="<!--#echo var="checkbox-name" -->" id="<!--#echo var="checkbox-name" -->" class="form-checkbox">
+		<span class="checkbox-name"><!--#echo var="checkbox-label-name" --></span>
+	</label>
+</div>
+
+
+

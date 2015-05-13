@@ -1,0 +1,266 @@
+<!-- store locater wrapper Starts Here-->
+<div class="store-locator-wrapper">
+
+	<div class="store-search-wrapper">
+
+		<div class="store-locater grid">
+			<span class="geolocate-error">User Denied Geolocation or Location Service off</span>
+			<h1 class="heading2">Find a boutique <br/> or retailer </h1>
+			<div class="change-loc__search"> 
+				<!--#set var="text-detail" value="geolocate me"-->
+				<a class="cta <!--#echo var="cta--varaint" --> js-geolocateButton" alt="geolocate me"><span class="location"></span><!--#echo var="text-detail" --></a>
+				<div class="store-locater__search">
+					<!--#set var="label-name" value="Or search by city, zip code or state : " -->
+					<!--#set var="mandatory" value="yes"-->
+					<!--#set var="input-name" value="js-search-box-1" -->
+
+					<!--#include virtual="../../components/form_elements/label.shtml" -->
+				
+					<input type="text" class="form-input js-search-box-1" id="js-search-box-1" placeholder="City,zipcode,state" />
+					<a class="js-search-but-1" alt="find">
+						<span class="store-locater__search__bg"></span>
+					</a>
+				</div>
+				<div class="js-store-locator_error-msg-1">Please fill a zipcode, city or state </div>
+				<div class="js-store-locator_error-msg-2">There is no result for your search, we suggest the following :</div>
+				<div class="js-store-locator_error-msg-3">There is no result for your search.</div>
+				<ul class="js-store-locater__error-suggest">
+	                <li> <a href="#"> Paris, France </a> </li>
+	                <li> <a href="#"> Parsberg, Germany </a> </li>
+	               
+	            </ul>
+			    <div class="store-locater__find-button">
+				      <!--#set var="text-detail" value="find a boutique"-->
+					  <a class="cta <!--#echo var="cta--varaint" --> js-search-but-1" alt="find a boutique"><span class="button-arrow"></span><!--#echo var="text-detail" --></a>
+				</div>
+			</div>
+
+			
+		</div>
+		<img alt="Cartier" class="store-locater__img" src="<!--#echo var="CONTENT_IMG_PATH" -->store_locator_bottom_img.png"> 
+	</div>
+
+ 
+<!-- Boutique Lister Starts Here-->
+ 	<div class="store-list js-store-list" data-show-more-count="5" data-near="near" data-in="in">
+		<div class="store-list__title">
+			<h2 class="heading2">
+				ALL BOUTIQUEs  <span class="js-GeoCity"></span>
+			</h2>
+		</div>
+
+		<a class="store-list__change-loc js-change-loc">
+			<span class="arrow-show"></span>Change location
+		</a>
+		<div class="change-loc__search js-change-loc_search">
+			<!--#set var="text-detail" value="geolocate me"-->
+			<a class="cta <!--#echo var="cta--varaint" --> js-geolocateButton" alt="geolocate me"><span class="location"></span><!--#echo var="text-detail" --></a>
+			<div class="store-locater__search">
+				<!--#set var="label-name" value="Or search by city, zip code or state : " -->
+				<!--#set var="mandatory" value="yes"-->
+				<!--#set var="input-name" value="js-search-box-2" -->
+				<!--#include virtual="../../components/form_elements/label.shtml" -->
+			
+				<input type="text"  class="form-input js-search-box-2" id="js-search-box-2" placeholder="City,zipcode,state" />
+				<a class="js-search-but-2" alt="find">
+					<span class="store-locater__search__bg"></span>
+				</a>
+			</div>
+			<div class="js-store-locator_error-msg-1">Please fill a zipcode, city or state </div>
+			<div class="js-store-locator_error-msg-2">There is no result for your search, we suggest the following :</div>
+			<ul class="js-store-locater__error-suggest">
+                <li> <a href="#"> Paris, France </a> </li>
+                <li> <a href="#"> Parsberg, Germany </a> </li>
+               
+            </ul>
+		    <div class="store-locater__find-button">
+			      <!--#set var="text-detail" value="find a boutique"-->
+				  <a class="cta <!--#echo var="cta--varaint" --> js-search-but-2" alt="find a boutique"><span class="button-arrow"></span><!--#echo var="text-detail" --></a>
+			</div>
+
+		</div>
+
+			<!-- Accordion For boutique filter starts here-->
+	 <div class="js-accordion boutique_filter_detail">
+		<div class="js-accordion__node boutique_filter_detail__node">
+			<div class="js-accordion_node__title boutique_filter_detail_node__title heading3">
+		        <span class="off"></span>
+		        <div class="boutique_filter_detail_node_title__ques">
+		            <p class="text-wrapper">refine by services and product offered</p>
+		        </div>
+		    </div>
+		    <div class="js-accordion_node__desc boutique_filter_detail_node__desc">
+		            <!-- REFINE MODULE CATEGORISATION AREA-->
+		        <ul class="category-wrapper js-filter-list">
+	                <li>
+	                	
+
+	                    <!--#set var="checkbox-value" value="fine-watchmaking" -->
+	                    <!--#set var="checkbox-label-name" value="fine watchmaking" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="fine watchmaking" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                    <!--#set var="checkbox-value" value="repair-service" -->
+	                    <!--#set var="checkbox-label-name" value="Repair Service" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="Repair Service" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                    <!--#set var="checkbox-value" value="vintage" -->
+	                    <!--#set var="checkbox-label-name" value="vintage" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="vintage" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                	
+	                    <!--#set var="checkbox-value" value="set-for-your-cartier" -->
+	                    <!--#set var="checkbox-label-name" value="set for your cartier" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="set for your cartier" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                	
+	                    <!--#set var="checkbox-value" value="timepieces" -->
+	                    <!--#set var="checkbox-label-name" value="timepieces" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="timepieces" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                	
+	                    <!--#set var="checkbox-value" value="leather-goods" -->
+	                    <!--#set var="checkbox-label-name" value="leather goods" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="leather goods" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                	
+	                    <!--#set var="checkbox-value" value="bridal" -->
+	                    <!--#set var="checkbox-label-name" value="bridal" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="bridal" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>	
+
+	                <li>
+	                	
+	                	
+	                    <!--#set var="checkbox-value" value="accessories" -->
+	                    <!--#set var="checkbox-label-name" value="accessories" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="accessories" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+	                	
+	                    <!--#set var="checkbox-value" value="eyewear" -->
+	                    <!--#set var="checkbox-label-name" value="eyewear" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="eyewear" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+	                	
+	                    <!--#set var="checkbox-value" value="fragance" -->
+	                    <!--#set var="checkbox-label-name" value="fragance" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="fragance" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+	                <li>
+	                	
+
+	                	
+	                    <!--#set var="checkbox-value" value="jewellery" -->
+	                    <!--#set var="checkbox-label-name" value="jewellery" -->
+	                    <!--#set var="checkbox-name" value="fn_category" -->
+	                    <!--#set var="checkbox-class" value="js-filter-checkbox" -->
+	                    <!--#set var="checkbox-filter" value="jewellery" -->
+	                    <!--#include virtual="../../components/form_elements/checkbox_2.shtml" -->
+	                </li>
+
+                    <li>
+                        <!--#set var="text-detail" value="confirm" -->
+                        <!--#set var="cta--varaint" value="cta--red js-filter-button" -->
+                        <!--#include virtual="../../components/form_elements/button.shtml" -->
+                    </li>		                
+		        </ul>
+		    </div>
+		</div>
+	</div>
+	<!-- Accordion For boutique filter ends here-->
+
+
+
+
+		<!-- Cartier boutique list starts here-->
+
+		<ul class="store-list__boutique js-boutique-list" data-readmore="Read More" data-showmap="Show Map" data-default-store-image="../etc/designs/dmp/clientlibs_base/images/content/Boutique_small.jpg"></ul>
+
+		<!-- Cartier boutique list ends here-->
+	
+		
+
+		<!-- Authorized retailer list starts here-->
+
+		<ul class="store-list__retailer js-retailer-list">
+			<h3 class="heading3 js-heading3">authorized retailers</h3>
+		</ul>
+
+		<!-- Authorized retailer list ends here-->
+
+		<!-- VIEW MORE LINK -->
+	    <div class="store-locator__view-more js-view-button">
+	        <span class="down-arrow"></span>Show more
+	    </div>
+
+
+		<p class="no-result-msg js-no-result-msg"> NO RESULTS FOUND </p>
+
+
+
+
+
+	</div><!-- Boutique Lister Ends Here-->
+
+</div><!-- store locater wrapper Ends Here-->
+</div>

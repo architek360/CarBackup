@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "serverMessage": "",
+  "content": {
+    "isSuccess": false,
+    "errorMessage": "fd",
+    "countryDropdown": [
+      {
+        "ccode": "fr",
+        "cname": "france"
+      }
+    ],
+    "captchaDetails" : {
+      "imageUrl" : "../etc/designs/dmp/clientlibs_base/images/icons/carticon.png",
+      "captchaId" : "asdas"
+    }
+  }
+}

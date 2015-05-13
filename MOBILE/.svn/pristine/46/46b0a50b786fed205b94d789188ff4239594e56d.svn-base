@@ -1,0 +1,5 @@
+<option value="default" selected="selected" data-price="" data-availability="">Size</option>
+<option data-refid="a2" value="341" data-price="" data-availability="" data-carousel='["url","url1","url2"]'>48 (US 4½)</option>
+<option data-refid="a3" value="343" data-price="" data-availability="" data-carousel='["url4","url5","url6"]'>49 (US 4¾)</option>
+<option data-refid="a4" value="345" data-price="" data-availability="" data-carousel=''>50 (US 5¼)</option>
+<option data-refid="a5" value="347" data-price="" data-availability="" data-carousel=''>51 (US 5¾)</option>

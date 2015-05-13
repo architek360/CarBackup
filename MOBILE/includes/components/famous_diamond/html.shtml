@@ -1,0 +1,22 @@
+  <!-- Famous Diamond Starts Here-->
+<div class="famous-diamond">
+    <ul class="famous-diamond__list ">
+        <li class="clearfix">
+             <!-- Famous Diamond Image-->
+            <div class="famous-diamond__img">
+                <img src="<!--#echo var="CONTENT_IMG_PATH" -->famous_diamond.jpg" alt="Rings" class="image">
+            </div>           
+        </li>
+        <li class="clearfix">             
+            <div class="famous-diamond__desc">
+                <p class="famous-diamond__desc--para">
+                    True jewelry masterpieces, these watches also constitute precious bracelets, crafted in the most noble of metals and adorned with spectacular stones. Perpetuating the secret of their creation, the dials of these watches are elegantly concealed at the heart of an exuberant bloom or a captivating animal.
+                </p>
+                <!-- Read More Button-->
+                    <!--#set var="more-text" value="read more" -->
+                    <!--#set var="arrow-class" value="arrow-show" -->
+                    <!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+            </div>
+        </li>
+   </ul>           
+</div>

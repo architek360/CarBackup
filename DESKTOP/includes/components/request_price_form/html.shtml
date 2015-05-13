@@ -1,0 +1,113 @@
+ <form>
+ <!-- REQUEST INFO BLOCK -->
+        <div class="request_info grid request_price">
+
+            <div class="grid__item grid__item--pad one-whole">
+                <!--#set var="input-name" value="fn_grptitle" -->
+                <!--#include virtual="../../components/radio_buttons_group/html.shtml" -->
+            </div>
+
+            <div class="grid__item grid__item--row one-whole palm--one-whole">
+                <!--#set var="label-name" value="first name" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_fname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+                
+            </div>
+
+            <div class="grid__item grid__item--row one-whole palm--one-whole">
+                <!--#set var="label-name" value="last name" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_lname" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+                
+            </div>
+
+             <div class="grid__item grid__item--pad one-whole palm--one-whole radio-conpref">
+                    <!--#set var="input-name" value="fn_grpcontpref" -->
+                    <!--#set var="head-label-name" value="contact preferance" -->
+                    <!--#set var="radio-text1" value="email" -->
+                    <!--#set var="radio-value1" value="email" -->
+                    <!--#set var="radio-text2" value="phone" -->
+                    <!--#set var="radio-value2" value="phone" -->
+                    <!--#include virtual="../../components/radio_buttons_group2/html.shtml" -->
+            </div>
+
+            <div class="grid__item grid__item--row one-whole palm--one-whole js-emaildiv">
+                <!--#set var="label-name" value="email address" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="j_username" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+                
+            </div>
+
+
+            <div class="grid__item grid__item--row one-whole palm--one-whole js-phonediv">
+                <!--#set var="label-name" value="phone number" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_phno" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="input-prop" value="form-input" -->    
+                <!--#set var="input-type" value="text" -->
+                <!--#include virtual="../../components/form_elements/input.shtml" -->
+                
+            </div>
+
+            <div class="grid__item privacy-check one-whole palm--one-whole js-add-message add-message">
+                <!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-label-name" value="Add Message" -->
+                <!--#set var="checkbox-name" value="fn_addmessage" -->
+                <!--#set var="checkbox-class" value="privacy-check__label" -->   
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+            </div>
+
+
+            <div class="grid__item grid__item--pad one-whole palm--one-whole js-messagebox display-none">
+                <!--#set var="label-name" value="message" -->
+                <!--#set var="mandatory" value="yes"-->
+                <!--#set var="input-name" value="fn_msgdesc" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="textarea-name" value="" -->
+                <!--#include virtual="../../components/form_elements/text_area.shtml" -->
+                
+            </div>
+
+            <div class="grid__item grid__item--pad one-whole palm--one-whole captchaDiv display-none">
+               <label for="fn_wordvef" class="form-label">captcha.label.text</label>
+               <!-- captcha Box Starts Here-->
+               <div class="captcha">
+                  <div class="captcha__image__container">
+                        <input type="text" name="fn_wordvef" id="code" class="captcha__input">
+                        <span class="img" id="cq-gen321"><img alt="" src="http://50.23.148.8:80/v1/captcha/140522c48c8d67b39b.png"></span>
+                  </div>
+                  <div class="captcha__description userinfo">
+                     captcha.description.text
+                  </div>
+               </div>
+            </div>
+
+
+            <div class="grid__item privacy-check one-whole palm--one-whole">
+                <!--#set var="checkbox-value" value="condition" -->
+                <!--#set var="checkbox-label-name" value="I have read and accepted the Privacy notice*" -->
+                <!--#set var="checkbox-name" value="fn_chkprivnotc" -->
+                <!--#set var="checkbox-class" value="privacy-check__label" -->   
+                <!--#include virtual="../../components/form_elements/checkbox.shtml" -->
+            </div>
+            <div class="next-step-cta">
+                <!--#set var="text-detail" value="Submit" -->
+                <!--#set var="cta--varaint" value="cta--red-width-auto" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>
+        </div>
+        <div id="success"></div>
+  </form>

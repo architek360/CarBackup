@@ -1,0 +1,415 @@
+.personal-info{
+	display:inline-block;
+	border: 1px solid #595959;
+	width:100%;
+	margin-bottom: 10px;
+	padding-bottom:20px;
+	.grid__item .form-label{
+		font-family: proximanovaBold, sans-serif;
+		font-size: 10px;
+		font-size: 1rem;
+	}
+	hr{
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		border-bottom: 1px solid #595959;
+		display: block;
+		float: left;
+		height: 2px;
+		@include rem('margin-top', 20px);
+		width: 100%;
+	}
+	.button-wrapper{
+		clear: both;
+		text-align: center;
+	}
+	.column{
+		/* @include rem('margin', 13px 10px 30px 0); */
+		display: block;
+		float: left;
+		width: 43.3%;
+		@include rem('padding', 30px);
+		.form-label{
+			padding:0;
+			float: left;
+		}
+		.tooltipDiv{
+			top: 11px;
+			left: -310px;
+		}
+		.radio-wrapper{
+			float: none;
+			display: table-cell;
+			width: 29%;
+		}
+		.first-name{
+			width:49%
+		}
+		.last-name{
+			width:49%;
+			margin-left: 2%;
+		}
+
+		.birthday-details__heading{
+			font-family: Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;
+			@include f(12);
+			font-style: italic;
+			letter-spacing: .1em;
+			font-style: normal;
+			letter-spacing: normal;
+			@include rem('margin-bottom', 5px);
+		}
+
+		.fieldset-title{
+			@include f(10);
+			font-family: proximanovaBold, sans-serif;
+			text-transform: uppercase;
+			@include rem('margin-top', 10px);
+			@include rem('letter-spacing', 1.3px);
+			@include rem('line-height', 18.2px);
+			float: left;
+			width: 100%;
+		}
+/*		.checkbox-wrapper{
+			display: block;
+			float: left;
+			@include rem('margin', 10px 10px 10px 30px);
+			width: 40%;
+			.checker{
+				float:left;
+			}
+			.checkbox-name{
+				text-transform: uppercase;
+				font-family: proximanovaBold, sans-serif;
+				font-size: 10px;
+				font-size: 1rem;
+				@include rem('letter-spacing', 1px);
+				@include rem('line-height', 14px);
+				@include rem('margin-top', 1px);
+				@include rem('width', 130px);
+				text-align: left;
+				float: left;
+			}
+		}*/
+	}
+	.last-col{
+		border-left:1px dotted $primary-3;
+		.radio-wrapper{
+			@include rem('margin', 5px 0px 10px);
+			width: 11%;
+			display: block;
+			float: left;
+		}
+	}
+}
+
+
+.piform_phoneDetail {
+
+	display: inline-block;
+	float: left;
+	@include rem('margin', 10px 10px 10px 30px);
+	width: 40%;
+
+	.form-checkbox-label {
+		.checker{
+			float:left;
+		}
+		.checkbox-name{
+			text-transform: uppercase;
+			font-family: proximanovaBold, sans-serif;
+			font-size: 10px;
+			font-size: 1rem;
+			@include rem('letter-spacing', 1px);
+			@include rem('line-height', 14px);
+			@include rem('margin-top', 1px);
+			@include rem('width', 130px);
+			text-align: left;
+			float: left;
+			color: $primary-2;
+		}
+	}
+}
+
+
+.piform_genderTitle {
+	float: none;
+	display: table-cell;
+	width: 29%;
+}
+
+
+
+#modalOverlay {
+	/*display: none !important; */
+}
+
+.cq-dd-image {
+	width: 100%;
+}
+
+
+.data-picker-wrapper {
+	margin-top: 15px;
+}
+.js-date-picker {
+	display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+
+    .select-wrapper {
+		display: table-cell;
+	    float: none;
+	    margin: 1rem 0;
+	    width: 102px;
+
+    }
+	
+	.select-wrapper .selector, .select-wrapper .selector span {
+		 width: 90px !important;
+	}
+}
+
+
+.js-personal-info-form {
+
+	
+	.cq-colctrl-lt0{
+		margin-top: 0;
+		padding-top: 30px;
+	}
+	p {
+		text-align: left;
+		color: $primary-3;
+		@include rem('margin-top', 0px);
+		@include rem('padding-top', 0px);
+	}
+
+	div.piform\.countryName{
+		@include rem('padding-top', 30px);
+		@include rem('margin-bottom', 0px);
+
+		label{
+			display: inline-block !important;
+			margin-bottom: 5px !important;
+		}
+
+		.selector{
+			display: block;
+			width: 421px !important;
+
+			span{
+				width: 421px !important;
+			}
+		}
+	}
+	.heading-wrapper {
+		width: 100%;
+
+		.heading5, .heading4 {
+			text-align: left;
+		}
+	}
+
+	.cq-colctrl-lt0 {
+		margin-bottom: 50px;
+		margin-top: 0px;
+
+
+		.cq-colctrl-lt0-c0, .cq-colctrl-lt0-c1 {
+			/*margin-top: 8rem;*/
+			margin-bottom: 40px;
+			/*padding: 1.5rem auto 1rem;*/
+
+			.heading-wrapper {
+				width: 100%;
+			}
+
+			hr {
+			    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+			    border-bottom: 1px solid #595959;
+			    display: block;
+			    float: left;
+			    height: 2px;
+			    width: 100%;
+			    margin: 20px 0;
+
+			}
+
+			hr:first-child {
+				margin: 0;
+			}
+		}
+
+		.cq-colctrl-lt0-c1 {
+			p {
+				margin: 0;
+				padding:0;
+				letter-spacing: 0;
+				color: $primary-2;
+				margin: 0;
+				@include main-font();
+				@include f(12);
+			}
+
+			.data-picker-wrapper{
+				.select-wrapper{
+					padding: 0;
+				}
+
+				.form-label{
+					padding: 0;
+					margin: 0;
+				}
+
+				.js-date-picker{
+					margin-bottom: 0;
+				}
+			}
+
+			.heading-wrapper{
+				.heading3{
+					@include f(10);
+					@include proxiBold-font();
+					text-align: left;
+					letter-spacing: 0px;
+				}
+			}
+
+			.group-wrapper{
+
+				.checkbox-wrapper{
+					width: 150px;
+					.form-checkbox-label{
+						width: auto;
+						@include rem('margin-top',5px);
+					}
+				}
+			}
+		}
+	}
+
+	.button-wrapper {
+		margin-bottom: 7rem;
+		margin-top: -12px;
+	}
+
+
+
+/* own cration */
+	.owned-creations{
+
+		width :  100%;
+
+		.group-wrapper{
+			margin-left: 0;
+		}
+		.checkbox-wrapper {
+			display: inline-block;
+			@include rem('margin-right',10px);
+
+			.form-radio-label {
+				.form-radio {
+					@include rem('margin-top',-1px);
+				}
+			} 
+		}
+		.select-wrapper {
+			.selector {
+				span {
+						width : 210px !important;
+				}
+				select {
+					width : 210px !important;
+				}
+			}
+		}
+
+		.owned-creations-label{
+			@include rem( 'margin-top', 16px );
+			@include proxi-font();
+			@include bold-font;
+		}
+		
+	.added-creation {
+		
+		
+		background :  $primary-52;
+		margin-top:  0;
+		.added-creation__name {
+			@include f(10);
+			@include proxi-font;
+		  	@include rem( 'padding', 10px);
+		  	@include rem( 'letter-spacing', 1px);
+			width: 86% ;
+			display : inline-block;
+		}
+		.delete-icon {
+			@include setSprite(27px, 29px, -623px, -135px);           
+			display: inline-block;
+			@include rem('height', 15px);
+			@include rem(margin, 0 0 0 5px);
+			position:relative;
+			top:-3px;
+			right: 0;
+			}
+
+	}
+			
+	}
+
+
+
+	.creation-link {
+		display: inherit;
+		@include brand-font;
+		@include f(12);
+		color: $primary-2;
+		@include main-font();
+		font-style: normal;
+		padding-top: 5px;
+
+		.creation-arrow {
+				@include setSprite(10px, 20px ,-577px,-17px);
+		}
+
+		.arrow-show{
+			width: 6px;
+		}
+			
+	}
+	.action-button{
+		text-align:center;
+		@include rem(margin, 20px 0 0 0);
+		clear:both;
+
+		.cta-button{
+			@include rem('margin-bottom',0px);
+		}
+	}
+
+}
+
+
+.js-personal-info-form .cq-colctrl-lt0 {
+    margin-bottom: -70px;
+    margin-top: 0;
+}
+
+
+
+.piform_countryName label, 
+.piform_countryName .selector {
+display:block;
+}
+
+.js-personal-info-form .js-owncreation-container .select-wrapper label{
+	width: 100%;
+	font-family: "ProximaNova","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 10px;
+	margin-bottom: 5px;
+}
+
+.js-personal-info-form .js-owncreation-container .js-own-dropthree .select-wrapper, .js-personal-info-form .js-owncreation-container .js-own-droptwo .select-wrapper {
+margin-top: 0;
+padding-top: 8px;
+}

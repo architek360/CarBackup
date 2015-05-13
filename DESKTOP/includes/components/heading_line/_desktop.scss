@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    My Cartier Title Component -- Desktop CSS
+\*------------------------------------*/
+
+.title-line{
+	font-family: proximanovaBold,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	border-top:1px solid $primary-11;
+	@include f(18);
+	padding:0;
+	text-transform: uppercase;
+	text-align: center;
+
+	span {
+		background: $primary-1;
+		@include rem('padding', 0 10px);
+		@include f(14);
+		@include rem('letter-spacing', 1px);
+		top:-10px;
+		position: relative;
+		color:$primary-2;
+	}
+}

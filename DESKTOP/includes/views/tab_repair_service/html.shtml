@@ -1,0 +1,32 @@
+<div class="tab_repair_service overlay-form">
+	<div class="repair-service">
+		<div class="notification ecs-repair-send-creation">
+		    <h2>Service Description</h2>
+			<p>To follow your repair service progress online, please enter your Repair Service Notification Number: </p>
+				
+			<h3>Dear <span>[ Client full name ]</span></h3>
+			
+			<p>To follow your repair service progress online, please enter your Repair Service Notification Number: </p>
+			<p>To follow your repair service progress online, please enter your Repair Service Notification Number: To follow your repair service progress online, please enter your Repair Service Notification Number: To follow your repair service progress online, please enter your Repair Service Notification Number: </p>
+			
+			<div class="address-box">
+				<p class="address-box__name">Alok Shama</p>
+				<p>Long Chausee 600</p>
+				<p>22419 Hamburg</p>
+				<p>Germany</p>
+				<p>2020202020</p>
+			</div>
+			
+			<p>To follow your repair service progress online, please enter your Repair Service Notification Number: To follow your repair service progress online, please enter your Repair Service Notification Number: To follow your repair service progress online, please enter your Repair Service Notification Number: <a class="telno" href="tel:1-800-227-123">1-800-227-123</a></p>
+
+
+		</div>
+		
+		<div class="side-image">
+			<!--#set var="link-to" value="#" -->
+			<!--#set var="class-name" value="image-link" -->
+			<!--#set var="img-src" value="3.jpg" -->
+			<!--#include virtual="../../components/nav_icon/top_nav_icon.shtml" -->
+		</div> 
+	</div>
+</div>

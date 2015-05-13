@@ -1,0 +1,93 @@
+/*------------------------------------*\
+  Edit footer -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER....
+ * address CONTAINER  (.edit-footer__address)
+ * edit CONTAINER  (.edit-footer__edit)
+ *
+*/
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+
+.edit-footer {
+  margin: 0 auto;
+  width: 84.5%;
+  color: $primary-2;
+  border : 1px solid $primary-3;
+  background-color: $primary-13;
+  
+  /*------------------------------------*\
+    $address CONTAINER
+  \*------------------------------------*/
+   .edit-footer__address {
+      display: table;
+      width: 100%;
+      @include rem('margin-top',50px);
+      @include rem('margin-bottom',52px);
+      @include f(22);
+      @include main-font;
+      .address {
+        display: table-cell;
+        vertical-align:middle;
+        text-align: center;
+        font-style: italic;
+        @include rem('line-height',23px);
+        span {
+          text-transform: uppercase;
+          font-style: normal;
+          font-weight: bold;
+          @include rem('margin-bottom',20px);
+          display: block;
+        }
+    }
+  }
+   /*------------------------------------*\
+    $Edit CONTAINER
+  \*------------------------------------*/
+  .edit-footer__edit {
+        @include f(22);
+        border-top: 1px solid $primary-11;
+        @include rem('padding', 19px 20px);
+        @include rem('line-height', 30px);
+        text-transform:uppercase;
+        @include bold-font;
+        text-align: right;
+        .delete-address {
+      text-align: left;
+      width: 49%;
+      display: inline-block;
+
+        .delete-icon {
+
+      @include setSprite(27px, 29px, -634px, -136px);           
+      display: inline-block;
+      @include rem('width', 15px);
+      @include rem('height', 15px);
+
+        }
+         }
+         .edit-address {
+            text-align: right;
+            @include bold-font;
+            width: 49%;
+            display: inline-block;
+            span{
+              display:inline;
+            }      
+            .edit-icon {
+                @include setSprite(27px, 29px, -730px, -134px);         
+                display: inline-block;
+                @include rem('height', 15px);
+                @include rem(margin, 0 0 0 5px);
+                border-left:1px solid $primary-8;
+                position:relative;
+                top:-1px;
+          }
+   
+        }
+        
+  }
+}

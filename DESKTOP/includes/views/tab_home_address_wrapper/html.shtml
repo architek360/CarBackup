@@ -1,0 +1,32 @@
+    <!-- Address Wrapper-->
+    <div class="address-details">
+    	<div class="grid__item grid__item--row js-streetnumber">
+            <!--#set var="label-name" value="street number" -->
+            <!--#set var="mandatory" value="yes"-->
+            <!--#set var="input-name" value="fn_strnum" -->
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#set var="input-prop" value="form-input" -->    
+            <!--#set var="input-type" value="text" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+    	</div>
+
+    	<div class="grid__item grid__item--row js-streetname">
+            <!--#set var="label-name" value="street name" -->
+            <!--#set var="mandatory" value="yes"-->
+            <!--#set var="input-name" value="fn_strname" -->
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#set var="input-prop" value="form-input" -->    
+            <!--#set var="input-type" value="text" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+    	</div>
+
+    	<div class="grid__item grid__item--row js-addinfo">
+            <!--#set var="label-name" value="additional address info" -->
+            <!--#set var="mandatory" value="no"-->
+            <!--#set var="input-name" value="fn_addrinfo" -->
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#set var="input-prop" value="form-input" -->    
+            <!--#set var="input-type" value="text" -->
+            <!--#include virtual="../../components/form_elements/input.shtml" -->
+    	</div>
+    </div>

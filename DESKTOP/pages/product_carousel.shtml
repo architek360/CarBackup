@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!--#if expr="($QUERY_STRING=/device=desktop/)" -->
+	<!--#set var="DEVICE" value="desktop" -->
+<!--#else -->
+	<!--#set var="DEVICE" value="mobile" -->
+<!--#endif -->
+<!--#set var="back-static-text" value="Back to Exceptional creations" -->
+<!--#set var="COMP_1" value="back_button" -->
+<!--#set var="THEME_1" value="main_theme" -->
+<!--#set var="TEMPLATE" value="home" -->
+<!--#set var="COMP_2" value="mobile_carousel" -->
+<!--#set var="MODULE" value="product" -->
+
+<!--#include virtual="../templates/base.shtml" -->

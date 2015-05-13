@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    EXPERT GUIDE  -- Mobile CSS
+\*------------------------------------*/
+/**
+	* collection template css
+	* SELECT CONTAINER....select container(.expert-guide__select)
+*/
+
+/*------------------------------------*\
+    $SELECT CONTAINER
+\*------------------------------------*/
+
+.expert-guide__select {
+	width: 81.25%;
+	margin: 0 auto;
+	@include rem('padding-top',44px);
+	label {
+		@include font-color($primary-2);
+		@include main-font;
+		@include f(24);
+		@include rem('padding-bottom',14px);
+	}
+	.select-1{
+		@include f(24);
+		@include main-font;
+		option{
+			color: $primary-2;
+		}
+	}
+}
+	

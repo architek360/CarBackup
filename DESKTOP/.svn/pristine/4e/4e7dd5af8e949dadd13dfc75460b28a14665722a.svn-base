@@ -1,0 +1,83 @@
+<!-- Contact Us Box Starts Here-->
+<div class="contact clearfix">
+    <div class="contact__contact-cont">
+
+        <h1 class="heading2">contact us</h1>
+        <p class="grey-text">To contact us please select your country of residence</p>
+        <!-- COUNTRY LABEL -->
+        <div class="contact__country-label">
+            <!--#if expr="${DEVICE} = 'mobile'"  -->
+            <!--#set var="label-name" value="your country" -->
+            <!--#set var="mandatory" value="no"-->
+            <!--#include virtual="../../components/form_elements/label.shtml" -->
+            <!--#endif -->
+            <!--#set var="input-name" value="form-select" -->
+            <!--#set var="input-name" value="fn_country" -->
+        	<!--#set var="style-name" value="select-1 js-country" -->
+            <!--#set var="option-component" value="state_option" -->
+            <!--#include virtual="../../components/form_elements/select.shtml" -->
+        </div>
+
+        <!-- SERVICE CONTAINER -->
+        <div class="contact__service-cont js-country-detail contact-relation">
+        	<h3 class="heading3">Customer service center</h3>	
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->contact_services.jpg" alt="Customer service center">
+            <a class="contact__service-cont__number" href="tel:1-800-227-8437" title="Telephone number"><span class="icon-phone"></span> : <span class="underline-text js-phone">1-800-227-8437</span></a>
+            <p class="contact__service-cont__timimgs">
+                <span class="js-weekdays">9AM - 10PM EST ,</span>
+                <span class="js-weekends">12PM - 7PM EST</span>
+                <span class="js-title-address">Client Relations Center</span>
+                <span class="js-address">Client Relations Center</span>
+            <!--     <span class="js-city">653 Fifth Avenue</span>
+                <span class="js-country">New York, NY. 10022</span>
+                <span class="js-countryName">United States</span> -->
+            <!--#if expr="${DEVICE} = 'desktop'"  -->
+            <!--#set var="text-detail" value="contact by email" -->
+            <!--#set var="cta--varaint" value="cta--red" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+            <!--#endif -->
+            </p>
+
+        </div>
+
+         <div class="contact-bridal">
+            <h3 class="heading3">ENGAGEMENT RINGS AND WEDDING BANDS</h3>   
+            <img src="<!--#echo var="CONTENT_IMG_PATH" -->contactus-bridal.jpg" alt="Customer service center">
+            <p class="telephone">Tel. + 86 400 885 2786</p>
+            <p class="contact__service-cont__timimgs">
+                 Monday - Saturday: 10 a.m. - 8 p.m. (exclude public holidays - HK)
+                <!--#if expr="${DEVICE} = 'desktop'"  -->
+                <!--#set var="text-detail" value="contact by email" -->
+                <!--#set var="cta--varaint" value="cta--red" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+            <!--#endif -->
+            </p>
+
+        </div>
+
+        <!-- JOINING CARTIER -->
+        <!--#if expr="${DEVICE} = 'desktop'"  -->
+        <div class="contact-joining-cartier">
+            <h3 class="heading3">Joining Cartier</h3>
+            <p class="joining-description">To become a part of Cartier's legendary story and join our staff, contact our Human Resources department.</p>
+            <div class="action-button">
+                <!--#set var="text-detail" value="contact us" -->
+            <!--#set var="cta--varaint" value="cta--red" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>
+        </div>
+        <!--#endif -->
+
+        <!-- BOUTIQUE BLOCK -->
+        <div class="contact_push-block">
+            <h3 class="heading3">Find a cartier boutique or a retailer</h3>
+            <div class="action-button">
+                <!--#set var="text-detail" value="find a boutique" -->
+                <!--#set var="cta--varaint" value="cta--red" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+            </div>
+        </div>
+    
+</div>
+
+<!-- Contact Us Box Ends Here-->

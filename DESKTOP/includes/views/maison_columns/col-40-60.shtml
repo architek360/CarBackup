@@ -1,0 +1,29 @@
+<div class="row grid">
+    <div class="column grid__item two-fifths">
+        <!--#set var="imgclass" value="left" -->
+        <!--#set var="image" value="${PRODUCT_IMG_PATH}striking_clock.jpg" -->
+       <!--#include virtual="../../components/column/content.shtml" -->
+    </div>
+    <div class="column grid__item three-fifths ">
+        <div class="row grid">
+            <div class="column grid__item one-whole nomargin">
+                <!--#set var="imgclass" value="left" -->
+                <!--#set var="image" value="${PRODUCT_IMG_PATH}clocks_precious.jpg" -->
+                 <h1><!--#include virtual="../../components/column/content.shtml" --></h1>
+            </div>
+            <div class="column grid__item one-whole nomargin">
+                <p class="border-wrapped bold">
+                    ned to imprint its highly inventive jewelry brand on traditionally functional objects like these clocks. Standing on a desk, they create a fantasy  dream-like ambiance with their eloquent motifs and precious materials. To achieve this effect, Cartier often draws inspiration from distant civilizations such as ancient Egypt, China and India.These sophisticated pieces require the expertise and participation of four or five different workshops.
+                </p>
+                <h2>STRIKING CLOCK</h2>
+                <h3>CARTIER PARIS, 1927</h3>
+                <p>
+                    Yellow gold, silver-gilt, mother-of-pearl, lapis lazuli (base and top), coral, emerald, cornelian, polychrome enamel.Rectangular 8-day movement, striking mechanism (hour and quarter-hours), gold-plated, beaded decoration,3 adjustments, 15 jewels, platform escapement, bimetallic balance, Breguet balance spring. <br><br>Sold to Mrs. Blumenthal.<br>George Blumenthal (1858-1941) headed Lazard, a Wall Street investment bank, and was a trustee of the Metropolitan Museum of Art from 1905 onward. This clock was sold to his first wife, Florence (1873-1930). As collectors and patrons of many French artists, the couple owned several major pieces by Cartier. In 1935, one year after he was appointed president of the Metropolitan Museum, Blumenthal married Mary Ann Payne.
+                </p>
+                <p class="productdata">
+                    24.00 x 15.70 x 12.70 cm
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<!-- Shopping bag starts here-->
+
+<div class="grid shopping-bag clearfix">
+
+    <div class="reservation-div js-reservation-div display-">
+      <p class="sub-alert">
+       Some products have been removed from your shopping bag due to availability. Please verify the quantity.  </p>
+      <p class="title-alert">For more information or to purchase by phone, Please <span>call 1-800-227-8437</span></p>
+    </div>
+
+    <h1 class="heading2">shopping bag</h1>
+
+    <!-- Shopping bag Info Wrapper-->
+    <div class="shopping-bag__info">
+        <div class="info-icon"></div>
+        <p>for additional information<a href="tel:3174562564" alt="Click to call">cal 1800-111-111</a></p>
+    </div>
+    <div class="js-dynamic-shopping-bag display-none">
+                <form>
+                <!--#set var="label-name" value="" -->
+                <!--#set var="mandatory" value="no"-->
+                <!--#set var="input-name" value="fn_countrycode" -->
+                <!--#include virtual="../../components/form_elements/label.shtml" -->
+                <!--#set var="style-name" value="select-1 js-country-dropdown" -->
+                <!--#set var="option-component" value="country_option_europe" -->
+                <!--#include virtual="../../components/form_elements/select.shtml" -->
+                <input type="hidden" name="currentPage" value="${currentPage.path}">
+                </form>
+
+        <ul class= "js-productlist-inbag">
+            <li class="js-product-inbag product-inbag js-form-validator"><form><!--#include virtual="../../views/shopping_bag/producthtml.shtml" --></form></li>
+        </ul>
+        <!--#set var="sales_tax" value="on" -->
+        <!--#include virtual="../../views/price_details/html.shtml" -->
+        <div class="shopping-bag__confirm">
+            <!--#set var="text-detail" value="proceed to checkout" -->
+            <!--#set var="cta--varaint" value="cta--grey-pad-30 js-proceed-to-checkout" -->
+            <!--#include virtual="../../components/form_elements/button.shtml" -->
+        </div>
+    </div>
+
+    <!--#include virtual="../../components/guest_checkout/html.shtml" -->
+    
+     <!-- Gift Wrapper-->
+    <div class="gift-wrapper">
+        <p>All creations are individually gift wrapped.</p>
+        <img src="<!--#echo var="CONTENT_IMG_PATH" -->shopping-bag.png" alt=""/>
+    </div>
+
+</div>
+<!-- Shopping bag ends here-->

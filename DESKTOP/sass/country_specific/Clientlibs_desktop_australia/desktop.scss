@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+@import "../_theme_vars";
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+.js-reg-step-3 {
+    .fn_state {
+        width: 44%;
+    }
+    .fn_phno {
+        margin-left: 8px;
+        clear: none !important;
+    }
+    .fn_zip {
+        clear: both !important;
+    }
+}
+.js-ga-mycartier-mypersonal-info {
+    .form {
+        position: relative;
+        hr {
+            position: absolute;
+            width: 43% !important;
+            left: initial;
+            bottom: 80px;
+        }
+    }
+    .label_piform_countryName {
+        margin-bottom: 5px !important;
+    }
+    .tooltip_piform_countryName {
+        margin-left: -20px!important;
+    }
+}
+.js-address-form {
+    .addressform_address9 {
+        width: 46%;
+        margin-left: 8px;
+    }
+    .addressform_zip {
+        width: 46%;
+        .form-input {
+            width: 100%;
+        }
+    }
+}

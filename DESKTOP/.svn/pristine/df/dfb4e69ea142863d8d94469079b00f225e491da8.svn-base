@@ -1,0 +1,96 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+
+@import "../_theme_vars";
+@import "../../_helpers";
+/*@import "../_normalize";
+@import "../_main";*/
+/*------------------------------------*\
+    $IMPORT - Themes Styles
+\*------------------------------------*/
+
+.js-reg-step-1 {
+    .fn_lname2, .fn_lname {
+        margin-left: 0px;
+        margin-right: 8px;
+    }
+    .fn_fname2, .fn_fname {
+        clear: none;
+    }
+}
+.js-reg-step-3 {
+    .regstep3-col4 {
+        float: left;
+    }
+    .regstep3-col2 {
+        width: 91%;
+        float: right;
+    }
+    .fn_addrname, .fn_city {
+        width: 44%;
+        float: left;
+        .form-input {
+            width: 100%;
+        }
+    }
+    .fn_strname {
+        clear: left;
+    }
+    .fn_strnum {
+        width: 35%;
+    }
+    .fn_addrinfo, .fn_phno {
+        width: 46%;
+        clear: none !important;
+        .form-input {
+            width: 100% !important;
+        }
+    }
+}
+.js-address-form {
+    .addressform_lastName2, .addressform_address5 {
+        clear: left;
+    }
+    .addressform_firstName2 {
+        width: 46%;
+        input#addressform_firstName2 {
+            width: 100%;
+        }
+    }
+    .addressform_firstName1 {
+        clear: none;
+        margin-left: 8px;
+    }
+    .addressform_address6 {
+        clear: none;
+        margin-left: 8px;
+        margin-top: 18px;
+        width: 46%;
+        .form-input {
+            width: 100%;
+        }
+    }
+    .addressform_lastName1, .addressLabel, .addressform_address5 {
+        margin-left: 0px;
+        width: 46%;
+        clear: left;
+        .form-input {
+            width: 100%;
+        }
+    }
+    .addressform_address2 {
+        margin-top: 15px;
+        margin-left: 8px;
+    }
+}

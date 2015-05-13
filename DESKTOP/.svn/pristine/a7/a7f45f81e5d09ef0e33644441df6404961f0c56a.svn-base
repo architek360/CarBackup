@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    One Services-push Component -- Desktop CSS
+\*------------------------------------*/
+
+		.pushes-wrapper-service-push {
+			position: relative;
+			color:$primary-3;
+			a{color:$primary-3;}
+			a:hover{color:$primary-2;}
+			.push-link{
+					position:absolute;
+					top: 0;
+					left:0;
+					width:100%;
+					height:100%;
+				}
+			.push-col{
+				height:auto;
+				width: 100%;
+				height: 230px;
+				display: block;
+				text-align: center;
+  				line-height: 228px;
+			}
+			.push-hover {
+				height:auto;
+				display:table;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				@include rem('height', 45px);
+				vertical-align: middle;
+			    display: inline-block;
+			    overflow: hidden;
+			    .more{
+			    	padding:0;
+			    	@include rem('padding-left',10px);
+			    	a{
+			    		 @include f(11);
+			    		 letter-spacing: 0.1em;
+			    	}
+				    }
+			    .push-col_title {
+					@include rem('padding',0 10px 0 10px);
+					@include rem('height',45px);
+					vertical-align: middle;
+					margin:0;
+					display:table;
+					h2 {
+						font-size: 16px;
+					}
+
+					.text-link {
+					    @include f(15);
+					    font-weight: normal;
+					    letter-spacing: 0.1em;
+					    text-transform: uppercase;
+					    vertical-align: middle;
+						display: table-cell;
+						@include rem('line-height', 15px);
+						color:$primary-3;
+						text-align: left;
+						h2 {
+							font-size: 16px;
+						}
+					}
+					:hover{
+					color:$primary-2;
+					}
+
+				}
+			    .description{
+			    	@include main-font;
+					@include rem('padding-left', 10px);
+					@include rem('margin-bottom', 10px);
+					@include f(12);
+						/* “ DATE  29-10-2014 |  DEFECT- CARE-5577 | BRANCH develop”  
+			                START
+			                decsription hover color 
+			            */
+					&:hover{
+						color: $primary-2;
+						/* “ DATE  29-10-2014 |  DEFECT- CARE-5577 | BRANCH develop”  
+			                END
+			                decsription hover color
+			            */
+					}
+			    }
+			}
+		}

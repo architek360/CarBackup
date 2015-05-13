@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    RETURN EXCHANGE -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..(.return-exchange, etc)
+ */
+
+/*------------------------------------*\
+    Return Exchange -- Desktop CSS
+\*------------------------------------*/
+.return-exchange {
+	@include rem('padding', 10px);
+	background: $primary-82;
+	@include rem('margin-top', 10px);
+	> ul {
+		text-align: left;
+		
+		> li {
+			width: 100%;
+			margin: 0;
+			text-align: left;
+			@include rem('padding', 0px);
+			.arrow-show {
+				width: 5px;
+			}
+			a.more-button {
+					@include proxi-font;
+					font-style: normal;
+					color: #fff;
+					text-transform:uppercase;
+					@include f(10);
+					line-height: 16px;
+					@include rem('margin-bottom', 10px);
+			}
+			
+		}
+		.norton-icon{
+				margin: 11px 22%;
+				background: url($path-images + 'icons/verisign.png') no-repeat;
+		}	
+	}
+}

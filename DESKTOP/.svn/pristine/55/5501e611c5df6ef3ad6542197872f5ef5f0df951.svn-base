@@ -1,0 +1,160 @@
+<div class="delivery-days">     
+    <ul class="delivery-days__list js-delivery-days" data-isjapan='true' data-selectoption="STDD">  
+        
+        <li class="STDD">
+            <!--#set var="radio-value" value="fn_grpdelivlabel1" -->
+            <!--#set var="radio-name" value="fn_grpdeliv" -->
+            <!--#set var="radio-text" value=" " -->                         
+            <!--#include virtual="../../components/form_elements/radio.shtml" -->
+        
+            <div class="delivery-days__desc">
+                <h3 class="delivery-days__desc__title">
+                    Standard delivery
+                
+                    (5-7 business days)
+                </h3>
+                <p class="delivery-days__desc__detail">
+                    if you place your order today, the estimated delivery date is Tuesday May 14, 2013
+                </p>
+            </div>
+        <div class="delivery-days__amt">$ 00.00</div>   
+           
+        <div class="delivery-day__japan js-delivery-day__japan display-none">
+               
+            <!--#set var="label-name" value="You can specify your prefered delivery date and time" -->
+                    <!--#set var="mandatory" value="no"-->
+                   
+                    <!--#include virtual="../../components/form_elements/label.shtml" -->
+               <ul>
+                     
+                    
+                     <li >
+                        <select  name="" class="form-select select-1">
+                            <option value="">Monday,December 05,2011 </option>
+                            <option value="">Tuesday,December 06,2011</option>
+                            <option value="">Tuesday,December 06,2011</option>
+                            <option value="">Tuesday,December 06,2011</option>
+                            <option value="">Tuesday,December 06,2011</option>
+
+                        </select>
+                    </li>
+                    <li >
+                        <select  name="" class="form-select select-1">
+                            <option value="">ANY TIME </option>
+                            <option value="">12:00 - 14:00</option>
+                            <option value="">14:00 - 16:00</option>
+                            <option value="">16:00 - 18:00</option>
+                            <option value="">18:00 - 21:00</option>
+
+                        </select>
+                    </li>
+               </ul> 
+        </div>                              
+        </li>
+         <li class="EXPR1">
+            <!--#set var="radio-value" value="fn_grpdelivlabel2" -->
+            <!--#set var="radio-name" value="fn_grpdeliv" -->
+            <!--#set var="radio-text" value=" " -->                             
+            <!--#include virtual="../../components/form_elements/radio.shtml" -->
+            <div class="delivery-days__desc">
+                <h3 class="delivery-days__desc__title">
+                    Express delivery
+
+                    (2 business days)
+                </h3>
+                <p class="delivery-days__desc__detail">
+                    if you place your order today, the estimated delivery date is Tuesday May 14, 2013
+                </p>
+            </div>
+            <div class="delivery-days__amt">$ 00.00</div>
+
+             
+                <div class="delivery-day__japan js-delivery-day__japan  display-none">
+                       <!--#set var="label-name" value="You can specify your prefered delivery date and time" -->
+                            <!--#set var="mandatory" value="no"-->
+                           
+                            <!--#include virtual="../../components/form_elements/label.shtml" -->
+                       <ul>
+                             
+                            
+                             <li >
+                                <select  name="" class="form-select select-1">
+                                    <option value="">Monday,December 05,2011 </option>
+                                    <option value="">Tuesday,December 06,2011</option>
+                                    <option value="">Tuesday,December 06,2011</option>
+                                    <option value="">Tuesday,December 06,2011</option>
+                                    <option value="">Tuesday,December 06,2011</option>
+
+                                </select>
+                            </li>
+                            <li >
+                                <select  name="" class="form-select select-1">
+                                    <option value="">ANY TIME </option>
+                                    <option value="">12:00 - 14:00</option>
+                                    <option value="">14:00 - 16:00</option>
+                                    <option value="">16:00 - 18:00</option>
+                                    <option value="">18:00 - 21:00</option>
+
+                                </select>
+                            </li>
+                       </ul> 
+            </div>    
+                            
+        </li>
+        <li class="EXPR">
+            <!--#set var="radio-value" value="fn_grpdelivlabel3" -->
+            <!--#set var="radio-name" value="fn_grpdeliv" -->
+            <!--#set var="radio-text" value=" " -->                             
+            <!--#include virtual="../../components/form_elements/radio.shtml" -->
+            <div class="delivery-days__desc">
+                <h3 class="delivery-days__desc__title">
+                    Express delivery
+
+                    (2 business days)
+                </h3>
+                <p class="delivery-days__desc__detail">
+                    if you place your order today, the estimated delivery date is Tuesday May 14, 2013
+                </p>
+            </div>
+            <div class="delivery-days__amt">$ 00.00</div>
+
+             
+                <div class="delivery-day__japan js-delivery-day__japan  display-none">
+                       <!--#set var="label-name" value="You can specify your prefered delivery date and time" -->
+                            <!--#set var="mandatory" value="no"-->
+                           
+                            <!--#include virtual="../../components/form_elements/label.shtml" -->
+                       <ul>
+                             
+                            
+                             <li >
+                                <select  name="" class="form-select select-1">
+                                    <option value="">Monday,December 05,2011 </option>
+                                    <option value="">Tuesday,December 06,2011</option>
+                                    <option value="">Tuesday,December 06,2011</option>
+                                    <option value="">Tuesday,December 06,2011</option>
+                                    <option value="">Tuesday,December 06,2011</option>
+
+                                </select>
+                            </li>
+                            <li >
+                                <select  name="" class="form-select select-1">
+                                    <option value="">ANY TIME </option>
+                                    <option value="">12:00 - 14:00</option>
+                                    <option value="">14:00 - 16:00</option>
+                                    <option value="">16:00 - 18:00</option>
+                                    <option value="">18:00 - 21:00</option>
+
+                                </select>
+                            </li>
+                       </ul> 
+            </div>    
+                            
+        </li> 
+
+    </ul>
+            
+            
+  
+
+</div>

@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "serverMessage": "Some Server Message",
+    "content": {
+    	"isSubmitSuccess" : true,
+    	"errorMessage" : "The zip code is not valid."
+    }
+}

@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    PRICE DETAILS -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..(.price-detail, etc)
+ */
+
+/*------------------------------------*\
+    Price Details -- Desktop CSS
+\*------------------------------------*/
+
+
+.price-detail__col {
+	line-height: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: auto;
+float: left;
+max-width: 50%;
+}
+.price-detail {
+	@include rem('padding', 20px 10px);
+
+	.grid__item {
+		@include rem('padding', 19px 0 0);
+	}
+	p, h2 {
+		text-align: center;
+		border-bottom: 1px solid #83464b;
+		@include rem('padding', 10px 0);
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 11px;
+		letter-spacing: 1px;
+		line-height: 18px;
+	}
+	.total-row {
+			border-top: 1px solid #fff;
+			margin-top: 14px;
+	}
+	.price-detail__row {
+		.js-totalprice{
+			font-weight:bold;
+		}
+		.js-totalprice-info{
+			float:left;
+		}
+		.tooltip-div{
+			position:relative;
+			top:7px;
+			p{
+				border-bottom:none;
+				font-weight:normal;
+				text-transform:none;
+			}
+		}
+
+		width : 100%;
+		 @include f(13);
+		 display : inline-block;
+		letter-spacing: 1px;
+		text-align: left;
+		.price-detail--note {
+		 	 @include f(13);
+		 	 color: $primary-3;
+		 	 @include main-font;
+		 	 font-weight: normal;
+			font-style: italic;
+			text-transform: lowercase;
+			display: block;
+			@include rem('padding',7px 0px 0px);
+		 }
+		 .right-zero {
+		 	 @include f(13);
+		 	 margin-left : 0;
+		}
+		.bold-font {
+			text-transform: uppercase;
+		}
+	}
+	.price-detail__col-right {
+		display: inline-block;
+		width:auto;
+		float:right;
+	}
+
+
+	.more-button {
+			@include proxi-font;
+			font-style: normal;
+			color: #fff;
+			text-transform:uppercase;
+			@include f(10);
+			line-height: 16px;
+			@include rem('margin-bottom', 15px);
+			@include rem('margin-top', 10px);
+			text-align: center;
+	}
+}
+.price-details-bg {
+	.price-detail {
+			background: $primary-82;
+ }
+}

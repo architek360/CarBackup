@@ -1,0 +1,57 @@
+<!-- bridal view  Starts Here-->
+<div class="bridal-home">
+    <div class="bridal-teaser">
+        <div class="bridal-teaser-wrapper">
+            <img  class="bridal-home__bg-image" src="<!--#echo var="CONTENT_IMG_PATH" -->hp_esfy.jpg">
+            <div class="comp-rich-text">
+
+                <div class="bridal-home__desc clearfix ">
+                   
+                        <h1 class="bridal-home__desc__img">
+                            <img   src="<!--#echo var="CONTENT_IMG_PATH" -->bridal_text.png">
+                        </h1>
+                        <p class="bridal-home__desc_text"> 
+                            In the great jewellery tradition, Cartier offers a service that can meet your dreams.
+                        </p>
+                        <p class="bridal-home__desc_text">
+                          Choose the design of ring you want and the diamond to illuminate it. Let this exclusive service guide you as you move towards a uniquely emotional moment.
+                        </p>
+                        <h3 class="bridal-home__desc_heading">create your very own  cartier solitaire </h3>
+                   
+                        <div class="bridal-home__desc__link">
+                                   <!--#set var="text-detail" value="select the setting" -->
+                <!--#set var="cta--varaint" value="cta--red-width-auto" -->
+                <!--#include virtual="../../components/form_elements/button.shtml" -->
+                        </div>
+                  
+                    
+                </div>
+        </div>
+    </div>
+        <!--<h2 class="bridal-home__qa">Quick Access</h2> -->
+    </div>
+</div>
+
+    <div class="services-pushes clearfix grid palm--one-whole">
+    <ul class="pushes-wrapper">
+        <li class="grid__item one-half" >
+        <!--#set var="pushes-title" value="Expertise" -->
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="more-text" value="Know more" -->
+        <!--#set var="no-read-more" value="no" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_esfy_expertise.jpg" -->
+        
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-half" >
+        <!--#set var="pushes-title" value="Legend" -->
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="more-text" value="Know more" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_esfy_legende.jpg" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+    </ul>
+</div>
+  <!--#include virtual="../../views/quick_links/desktop.shtml" -->  
+        
+<!-- bridal vien Ends Here-->

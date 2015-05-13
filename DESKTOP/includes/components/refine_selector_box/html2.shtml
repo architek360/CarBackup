@@ -1,0 +1,17 @@
+
+
+<div class="refine-selector js-refine-selector">
+    <div class="refine-selector__title js-refine-selector__title">Watch movements<span class="double-arrow"></span></div>
+    <div class="refine-selector__content js-refine-selector__content va-accordion">
+    	<div class="va-nav"> <span class="js-less-arrow less-arrow">Previous</span> <span class="js-more-arrow more-arrow">Next</span> </div>
+	    <ul class="sub-menu">
+	        
+	        <li ><label>chronongraph
+	        	<span class="js-refine-checkbox"><input type="checkbox" name="fn_rfnChk" value="js-chronongraph" /></span>
+	        	</label>
+	        </li>
+	       
+	                         
+	    </ul>
+    </div>
+</div>

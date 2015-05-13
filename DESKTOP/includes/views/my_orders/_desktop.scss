@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    MY ORDERS -- Desktop CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER..    (.my-orders)
+ * ORDER DETAIL BLOCK    (.my-orders__orders)
+ * BREADCRUMB            (.breadcrumb)
+ */
+
+/*------------------------------------*\
+    $MY ACCOUNT BLOCK
+\*------------------------------------*/
+.my-orders{
+	width: 100%;
+	border-bottom:none;
+
+	.heading2{
+		text-align: center;
+		@include proxi-font;
+	}
+
+	
+	.heading3{
+		@include proxi-font;
+	}
+
+	.error-page {
+		@include rem('top',132px);
+	}
+
+
+
+	/*------------------------------------*\
+    	$ORDER DETAIL BLOCK
+	\*------------------------------------*/
+	.my-orders__detail{
+		@include rem('margin', 0 0 30px 0);
+
+		.order-block{
+			display:block;
+			@include f(22);
+			@include main-font;
+			@include font-color($primary-2);
+			border: 1px solid $primary-11;
+			background: $primary-1; /* Old browsers */
+			text-align:center;
+			margin: 15px auto;
+			@include rem('padding', 25px);
+			background: $primary-1  url($path-images + 'icons/gradient-bot-right-bg.png') no-repeat bottom right;
+			@include font-color($primary-3);
+
+			.order-block__details{
+				@include proxiBold-font;
+				@include rem('letter-spacing', 1px);
+			}
+
+			.order-block__more{
+				@include rem('padding', 20px 0 10px);
+				line-height: 1.1em;
+
+				.more-button{
+					text-transform:none;
+					@include main-font;
+					@include f(11);
+					@include rem('padding', 0px);
+					@include rem('letter-spacing', 0px);
+				}
+
+				.arrow-show{
+					@include setSpriteDesktop(5px, 10px ,-431px ,-158px, transparent);
+				}
+
+			}
+
+			.listing{
+					
+				p{
+					@include f(12);
+					text-align:left;
+					text-transform:capitalize;
+					line-height:20px;
+					@include rem('padding', 5px);
+					@include rem('margin', 5px);
+				}
+			}
+		}
+	}
+
+
+	.grid__item.even{
+		@include rem('padding-left', 10px);
+		@include rem('padding-right', 10px);
+	}
+}

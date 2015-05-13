@@ -1,0 +1,75 @@
+<!--#if expr="${committment-carousel}=yes" -->
+<div class="services-pushes clearfix grid palm--one-whole">
+    <ul class="pushes-wrapper">
+         <!--#set var="more-text" value="View the film" -->
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-img-src" value="bloc_nav_commitments_fondation_cartier_33.jpg" -->
+        <!--#set var="pushes-title" value="The Spirit of the Maison" -->
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_commitments_FondationHH_33.jpg" -->
+        <!--#set var="pushes-title" value="Cartier, Jeweler to Kings" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history Delve into the heart" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_commitments_WIA_33.jpg" -->
+        <!--#set var="pushes-title" value="The Panther" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-whole palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_HPmaison_commitments_100.jpg" -->
+        <!--#set var="pushes-title" value="Flora" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+                
+    </ul>
+</div>
+
+<!--#else-->
+<div class="services-pushes clearfix grid palm--one-whole">
+    <ul class="pushes-wrapper">
+         <!--#set var="more-text" value="View the film" -->
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-img-src" value="bloc_nav_history_stories_cartier_spirit.jpg" -->
+        <!--#set var="pushes-title" value="The Spirit of the Maison" -->
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history" -->
+        <!--#set var="no-read-more" value="no" -->
+       
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_history_stories_jeweller_to_kings.jpg" -->
+        <!--#set var="pushes-title" value="Cartier, Jeweler to Kings" -->
+        <!--#set var="no-read-more" value="" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history Delve into the heart" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_history_stories_panther.jpg" -->
+        <!--#set var="pushes-title" value="The Panther" -->
+        <!--#set var="no-read-more" value="no" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-description" value="" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_history_stories_flora.jpg" -->
+        <!--#set var="pushes-title" value="Flora" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+        </li>
+        <li class="grid__item one-third palm--one-whole" >
+        <!--#set var="pushes-description" value="Delve into the heart of Cartier's history" -->
+        <!--#set var="pushes-img-src" value="bloc_nav_history_stories_fauna.jpg" -->
+        <!--#set var="pushes-title" value="Fauna" -->
+        <!--#include virtual="../../components/service_push/html.shtml" -->
+         </li>
+                
+    </ul>
+</div>
+
+<!--#endif-->

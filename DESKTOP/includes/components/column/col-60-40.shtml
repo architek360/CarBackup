@@ -1,0 +1,35 @@
+<div class="row column-control grid">
+    <!--#if expr="${column60}" -->
+
+        <!--#if expr="${image1}" -->
+            <!--#set var="image" value="${image1}" -->
+        <!--#endif -->
+        <!--#if expr="${colclass1}" -->
+            <!--#set var="colclass" value="${colclass1} three-fifths" -->
+        <!--#endif -->
+        <!--#if expr="${text1}" -->
+            <!--#set var="text" value="${text1}" -->
+        <!--#endif -->
+
+        <!--#set var="content" value="${column60}" -->
+        <!--#include virtual="../../components/column/column.shtml" -->
+    <!--#endif -->
+    <!--#if expr="${column40}" -->
+
+        <!--#if expr="${image2}" -->
+            <!--#set var="image" value="${image2}" -->
+        <!--#endif -->
+        <!--#if expr="${colclass2}" -->
+            <!--#set var="colclass" value="${colclass2} two-fifths" -->
+        <!--#endif -->
+        <!--#if expr="${text2}" -->
+            <!--#set var="text" value="${text2}" -->
+        <!--#endif -->
+
+
+        <!--#set var="content" value="${column40}" -->
+        <!--#include virtual="../../components/column/column.shtml" -->
+    <!--#endif -->
+</div>
+
+

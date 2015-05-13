@@ -1,0 +1,20 @@
+<!-- Cartier boutique list starts here-->
+<div class="boutique scrollable js-location" >
+    <div class="loadingindicator"></div>
+    <ul class="store-list__boutique js-store-list js-boutique-list" data-show-more-count="100" data-scroll-pane ="<!--#echo var="scrollPane" -->"  data-readmore="<!--#echo var="more-text" -->" data-default-store-image="../etc/designs/richemont-car/clientlibs/publish/Clientlibs_desktop/images/content/boutique_small.jpg"  data-showmap="<!--#echo var="showmap-text" -->">
+
+    </ul>
+
+    <!-- Cartier boutique list ends here-->
+
+    <!-- Authorized retailer list starts here-->
+
+    <ul class="store-list__retailer js-retailer-list ">
+        <h3 class="heading3 retailerHeading js-heading3 hideonload">authorized retailers</h3>
+    </ul>
+
+    <!-- Authorized retailer list ends here-->
+
+
+    <p class="no-result-msg js-no-result-msg hideonload">There are no Cartier boutiques or retailers in this region.</p>
+</div><!-- Cartier boutique list starts here-->

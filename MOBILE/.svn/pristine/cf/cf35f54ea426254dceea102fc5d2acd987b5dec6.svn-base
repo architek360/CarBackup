@@ -1,0 +1,220 @@
+/*------------------------------------*\
+    FORGOT PASSWORD -- Mobile CSS
+\*------------------------------------*/
+/**
+ * MODULE CONTAINER.... main container(.forgot)
+ * HEADING BLOCK .... (.forgot__title, .forgot-box)
+ * SUBMIT BUTTON .... (.cta--red)
+ * LABELS TITLE STYLING .... (label)
+ * SHOW PASSWORD BUTTON .... (.show_password)
+ * FORGOT PASSWORD .... (.forgot-box__forgot-password)
+ * PASSWORD INPUT BLOCK .... (.form-input, .password-input )
+ * FORGOT PASSWORD STYLING .... (.js-forgotpassword)
+ */
+
+/*------------------------------------*\
+    $MODULE CONTAINER
+\*------------------------------------*/
+.forgot {
+	display: block;
+	margin: 30px auto;
+	text-align: center;
+	@include brand-font;
+	@include font-color($primary-2);
+
+	/*------------------------------------*\
+	    $HEADING BLOCK
+	\*------------------------------------*/
+
+	.forgot__title{
+		border-top:1px solid $primary-2;
+		border-bottom:1px solid $primary-2;
+		@include rem('padding', 30px 0px);
+		@include rem('margin', 0 0 60px 0);
+		display:block;
+		.heading2{
+			@include rem('padding', 0px 0px);
+			border:none;
+		}
+		.heading3{
+			@include rem('padding', 0 0 20px 0);
+		}
+	}
+	.forgot-box {
+		position:relative;
+		background: $primary-1; 
+		@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+		border: 1px solid #464646;
+		@include rem('padding', 20px 0px);
+		.forgot-box__title {
+			@include rem('font-size', 20px);
+			font-weight: bold;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		.forgot-box__desc {
+			@include f(24);
+			@include main-font;
+			color: $primary-2;
+			display: inline-block; 
+			text-align: center;
+			width: 90%;
+			font-style:italic;
+			@include rem('padding', 30px 0px 15px);
+		}	
+		.forgot-box__list {  
+		    @include set-ulFix;	/* For normalizing margins, padding*/
+			span.error{
+				float:left;
+			}
+		    a{
+		    	font-size: 2rem;
+		    	text-transform:uppercase;
+		    	@include brand-font;
+		    }
+		    li {  
+				margin: 0px auto;
+			    clear: both;
+			    display: inline-block; 
+			    width: 91.19%;
+			    
+				/*------------------------------------*\
+				    $SUBMIT BUTTON
+				\*------------------------------------*/
+
+				.cta--red {
+					margin: 0 auto;
+					@include rem('margin-top', 40px);
+					@include rem('margin-bottom', 10px);
+					width: 25%;
+					text-align: center;
+				}
+
+				/*------------------------------------*\
+				    $LABELS TITLE STYLING
+				\*------------------------------------*/
+
+			    label {  
+				    @include brand-font;
+				   
+				    @include rem('margin', 30px 0px 0px);
+				    color: $white;
+				    display: inline-block;  
+				    
+				    text-align: left;
+				    text-transform: uppercase;
+			    	@include f(20);
+				}
+
+				/*------------------------------------*\
+				    $SHOW PASSWORD BUTTON
+				\*------------------------------------*/
+				
+				.show-password {
+				    @include f(20);
+				    @include rem('margin', -39px -12px -12px 0px);
+				    @include rem('padding', 15px);
+				    @include rem('padding-left', 30px);
+				     @include rem('padding-right', 23px);
+				    @include rem('width', 60px);
+				    background: $primary-3 url($path-images + 'icons/white_arrow.png') no-repeat 14px 18px;	
+				    border: none;
+				    @include font-color($primary-2); 
+				    @include brand-font;
+				    cursor: pointer;
+				    float: right;
+				    overflow: visible;
+				    position: relative;
+				    text-transform: uppercase;
+				    font-style:normal;
+				}
+
+				/*------------------------------------*\
+				    $FORGOT PASSWORD
+				\*------------------------------------*/
+
+				.forgot-box__forgot-password {
+					margin: 0.6em 0;
+					@include f(22);
+				    @include main-font;
+				    color: $light_grey;
+				    display: block; 
+				    float: right;
+				    text-decoration: underline;
+				}
+
+				/*------------------------------------*\
+				    $PASSWORD INPUT BLOCK
+				\*------------------------------------*/
+
+				> .form-input {
+					display: none;
+					float: left;
+					display: block;
+				}
+				.password-input {  
+					@include rem('padding', 0px);
+				    @include rem('margin', 0px);
+				    border: none;
+				    width: 75%;
+				}
+			}
+			li:first-child {
+				text-align: left;
+			}
+		}
+		.cross-button{
+			position:absolute;
+			top:7px;
+			right:7px;
+			width:20px;
+			height:20px;
+			@include setSprite(27px, 29px, -630px, -128px );  
+			background-repeat: no-repeat;
+		}
+	}
+	hr {
+		margin: 0 auto;
+		@include rem('margin-top', 60px);
+		@include rem('margin-bottom', 50px);
+	}
+	.cta--red {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/*------------------------------------*\
+    $FORGOT PASSWORD STYLING 
+\*------------------------------------*/
+
+.js-forgotpassword{
+	position:relative;
+	background: $primary-1; 
+	@include linear-gradient(-45deg, #000000 0%, #010000 73%, #460000 100%);
+	border: 1px solid #464646;
+	@include rem('padding', 20px 0px);
+	width:82.25%;
+    margin:0 auto;
+    .form{
+    	@include rem('padding', 0 40px 25px);
+	}
+	a{
+		bottom:8px;
+	    clear:both;
+	    display:table;
+	    color: $primary-2;
+	    height:30px;
+	    left:46.5%;
+	    margin:0 auto;
+        position:absolute;
+        text-align:center;
+        text-decoration:none!important;
+        font-size: 20px!important;
+		text-transform: uppercase;
+		@include brand-font();
+	}
+	a.cross-button{
+		left:inherit;
+	}
+}

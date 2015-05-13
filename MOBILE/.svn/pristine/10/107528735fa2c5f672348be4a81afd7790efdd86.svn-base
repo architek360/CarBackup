@@ -1,0 +1,101 @@
+<div class="social-share js-social-share">
+	<p>Share</p>
+	<ul>
+		<li> <a href="#" class="social-share__facebook" target="_blank">Facebook</a> </li>
+		<li> <a href="#" class="social-share__twitter" target="_blank">Twitter</a><input type="hidden" class="twitterPagePath" value="pagepath"> </li>
+		<li> <a href="#" class="social-share__pin-it" target="_blank">Pinterest</a> </li>
+		<li> 
+			<a href="#" class="social-share__email js-social-share__email" >Mail</a> 
+			<div class="social-share__email-form js-social-share__email-form">
+				<div class="form-layout send_email">
+    <script type="text/javascript" src="/etc/clientlibs/foundation/form.1388724522515.js"></script>
+<script type="text/javascript">
+  cq5forms_reloadForPreview = true;
+  function cq5forms_preCheck_send_email(submitid) {
+    var dMsgs = "Please fill out the required field.";
+    return true;
+  }
+</script>
+<form method="POST" action="/content/car/na/usa/en_us/sendwish.desktop.html" id="send_email" name="send_email" enctype="multipart/form-data" novalidate="novalidate"><input type="hidden" name=":formid" value="send_email"><input type="hidden" name=":formstart" value="/content/car/na/usa/en_us/sendwish/jcr:content/article-containt-par/formbuilder/start"><input type="hidden" name="_charset_" value="UTF-8"><div class="form"><script type="text/javascript">
+var rulesObjects = {};
+var messagesObjects = {};
+
+    $(document).ready(function(){
+		$("#send_email").validate({
+            rules: rulesObjects,
+            messages: messagesObjects,            
+            errorPlacement: function(error, element) {
+                return $('#errormessage-' + $(element).attr('name')).append(error);
+            }
+    	});
+    });
+</script>
+<fieldset>
+	<input id="wishlist_pagepath" type="hidden" name="wishlist_pagepath" value="abc">    
+    <div class="form-element input-wrapper fn_fname">
+        <label>first name</label>
+<input id="fn_fname" type="text" name="fn_fname" placeholder="Type your text" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_fname"></div></div>
+    <div class="form-element input-wrapper fn_lname">
+        <label>last name</label>
+<input id="fn_lname" type="text" name="fn_lname" placeholder="Type your text" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_lname"></div></div>
+    <div class="form-element input-wrapper j_username">
+        <label>Sender email address</label>
+<input id="j_username" type="text" name="j_username" placeholder="Type your text" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-j_username"></div></div>
+    <div class="group-wrapper">
+<div class="form-element checkbox-wrapper fn_recvmessage">
+								<input type="checkbox" id="fn_recvmessage" name="fn_recvmessage" value="fn_recvmessage" class="form-checkbox">
+									<label for="fn_recvmessage" class="checkbox  form-checkbox-label">I wish to receive a copy of my message
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_recvmessage"></div><div class="form-element input-wrapper fn_fname_recv">
+        <label>first name</label>
+<input id="fn_fname_recv" type="text" name="fn_fname_recv" placeholder="Type your text" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_fname_recv"></div></div>
+    <div class="form-element input-wrapper fn_lname_recv">
+        <label>last name</label>
+<input id="fn_lname_recv" type="text" name="fn_lname_recv" placeholder="Type your text" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-fn_lname_recv"></div></div>
+    <div class="form-element input-wrapper j_username_recv">
+        <label>Reciever email address</label>
+<input id="j_username_recv" type="text" name="j_username_recv" placeholder="Type your text" class=" form-input" value="">
+    	<div class="errormessage" id="errormessage-j_username_recv"></div></div>
+    <div class="form-element textarea-wrapper fn_msgdesc1">
+        <label>message</label>
+<textarea id="fn_msgdesc1" name="fn_msgdesc1" type="text" placeholder="Type your text" class=" form-textarea"></textarea>
+    	</div>
+    <div class="group-wrapper">
+<div class="form-element checkbox-wrapper fn_display_price">
+								<input type="checkbox" id="fn_display_price" name="fn_display_price" value="fn_display_price" class="form-checkbox">
+									<label for="fn_display_price" class="checkbox  form-checkbox-label">Do not display product price
+</label>
+                            </div>
+                        </div>
+            <div class="errormessage" id="errormessage-fn_display_price"></div><input id="hidden_0" type="hidden" name="hidden_0" value="">    
+    <input id="fn_title" type="hidden" name="fn_title" value="panthere ring">    
+    <input id="fn_titleimgsrc" type="hidden" name="fn_titleimgsrc" value="http://localhost../etc/designs/dmp/clientlibs_base/images/content/N4227900_0_cartier_rings.png">    
+    <input id="fn_titleurl" type="hidden" name="fn_titleurl" value="http://localhost/mobile/pages/contact_ambassador.shtml">    
+    <div class="form-element textarea-wrapper fn_titledesc">
+        <label>Description</label>
+        <textarea id="fn_titledesc" name="fn_titledesc" type="text" placeholder="" class=" form-textarea">
+
+        </textarea>
+    	</div>
+    <p class="instruction-text">fn_titledesc</p>
+
+</fieldset><div class="form-element button-wrapper send">
+<input class="form-button" type="submit" name="send" value="send">
+</div><div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+</div>
+			</div>
+		</li>
+	</ul>
+</div>

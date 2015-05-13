@@ -1,0 +1,198 @@
+/*!
+ * jquery.confirm.js
+ * This file contains application namespace and initializing the other modules
+ *
+ * @project   Cartier Desktop
+ * @date      2014-01-21
+ * @author    SapientNitro
+ * @licensor  Cartier Desktop
+ * @site      Cartier Desktop
+ *
+ * USAGE : $(this).modalWindow({
+    position:'fixed',
+   actionCallbacks:[{ className:'js-action', bindFunction: function(){ /*'action binding action goes here'*/
+/*} }]
+ })*/
+
+/*
+ * This is a plugin for calling a popup Whenever called :
+ 
+ */
+
+
+
+;
+(function($, window, document, undefined) {
+
+
+    // Create the defaults once
+    var pluginName = 'modalWindow',
+        defaults = {
+            $document: $(document),
+            $window: $(window),
+            $modalOverlay: $(".js-modal-overlay"),
+            $modalWindow: $(".js-modal-window"),
+            position: 'absolute',
+            lightBox:false,
+            actionCallbacks: []
+        },
+        docHeight,
+        topPos,
+        leftPos,
+        winHeight,
+        winWidth,
+        H,
+        W;
+
+    // The actual plugin constructor
+    function Plugin(element, options) {
+        this.element = element;
+        this.options = $.extend({}, defaults, options);
+
+        this._defaults = defaults;
+        this._name = pluginName;
+
+        this.init();
+    }
+
+    Plugin.prototype = {
+
+        init: function() {
+            if (this.options.$modalOverlay.length) {
+                if (!this.options.$modalOverlay.css('display') === "none") {
+                    if (!$(this.options.$modalWindow.children()[0]).hasClass("loading")) {
+                        this.resizer();
+                        this.options.$modalWindow.show();
+                    } else {
+                        this.resizer();
+                        this.options.$modalWindow.hide();
+                    }
+                    this.position();
+                    this.render();
+                } else {
+
+                    if (!$(this.options.$modalWindow.children()[0]).hasClass("loading")) {
+                        this.resizer();
+                        this.options.$modalWindow.show();
+                    } else {
+                        this.options.$modalWindow.hide();
+                    }
+                    this.position();
+                    this.render();
+                    this.bind();
+                    this.options.$modalOverlay.fadeIn(400, false);
+                }
+            }
+        },
+
+        /*
+         method to setup the modal window position
+        */
+        position: function() {
+            docHeight = this.options.$document.height();
+            winHeight = this.options.$window.height();
+            winWidth = this.options.$window.width();
+            H = this.options.$modalWindow.outerHeight();
+            W = this.options.$modalWindow.outerWidth();
+            if (winHeight !== 0 && H !== 0) {
+                topPos = winHeight / 2 - H / 2;
+
+                if(topPos<0){
+                    topPos=20;
+                }
+                topPos = topPos + $(window).scrollTop();   //// To position the window in the middle even if the user is scrolled 
+            }
+            if (winWidth !== 0 && W !== 0) {
+                leftPos = winWidth / 2 - W / 2;
+            }
+
+        },
+        resizer: function() {
+            docHeight = this.options.$document.height();
+
+            this.options.$modalOverlay.css({
+                height: docHeight,
+                position: this.options.position
+            });
+            var windowWidth = 0;
+            var children = this.options.$modalWindow.children();
+            $.each(children, function(i, child) {
+                var w = $(child).width();
+
+
+                // set windowWidth to childwith if child width is greater than windowWidth
+                windowWidth = windowWidth < w && w;
+            });
+
+            this.options.$modalWindow.css({
+                width: windowWidth + "px"
+            });
+
+            if(this.options.$modalWindow.width() < 1) {
+                $(this.options.$modalWindow).addClass('overlay-fix');
+            }
+            else{
+                $(this.options.$modalWindow).removeClass('overlay-fix');
+                
+                $(document).keydown(function(e) {
+
+                // ESCAPE key pressed
+                if (e.keyCode == 27) {
+                    $(".js-modal-overlay, .js-modal-features, #confirmOverlay").fadeOut();
+                }
+            });
+            }
+
+        },
+
+        /*
+             method to show the modal window
+         */
+        render: function() {
+            //console.log(H +" "+ W);
+            // position modal winow
+            this.options.$modalWindow.css({
+                'top': topPos + "px",
+                'left': leftPos + "px",
+                'margin': '0'
+            });
+
+        },
+
+        bind: function() {
+            $('.js-close').on('click', {that:this},function(e) {
+
+                e.data.that.options.$modalOverlay.fadeOut();
+            });
+            if (this.options.lightBox){
+                this.options.$modalOverlay.on('click', {that:this},function(e) {
+                    e.data.that.options.$modalOverlay.fadeOut();
+                });
+            }
+            $.each(this.options.actionCallbacks, function(index, obj) {
+
+                $('.' + obj.className).on('click', obj.bindFunction)
+            });
+            $('.js-overlay-action').on('click', this.options.actionCallback);
+        }
+
+
+
+
+
+    }
+
+    // A really lightweight plugin wrapper around the constructor,
+    // preventing against multiple instantiations
+    $.fn[pluginName] = function(options) {
+        return this.each(function() {
+            if (!$.data(this, 'plugin_' + pluginName)) {
+                $.data(this, 'plugin_' + pluginName,
+                    new Plugin(this, options));
+            } else {
+                $.data(this, 'plugin_' + pluginName).init();
+            }
+        });
+    }
+
+})(jQuery, window, document);

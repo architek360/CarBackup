@@ -1,0 +1,25 @@
+<!--#include virtual="../../components/social_share/html.shtml" -->
+
+<div class="comp-rich-text">
+	<h3>CARTIER CORPORATE RESPONSIBILITY POLICY</h3>
+	<img src="<!--#echo var="CONTENT_IMG_PATH" -->sdq_0.jpg" class="content-medias-left" alt="Image"/>
+	<p>Since 1847, the Cartier Maison has embodied a tradition of excellence. A tradition which has become our duty. This comittment to excellence extends to our creations, savoir-faire and quality of service, as well as in the way we conduct our activities – ethically, socially, and environmentally.</p>
+	<p>With our Corporate Responsibility policy, we formalize our commitments as a responsible jeweler and our dedication to continuing improvement. From our workshops to our boutiques, we make sure our people are kept informed in order to ensure that these commitments are honored in our daily operations.</p>
+	<p class="clearfix"><b>CARTIER'S CORPORATE RESPONSIBILITY POLICY</b></p>
+	<p>Handed down from generation to generation, Cartier creations are designed to be timeless. Every creation represents a moment, an event, a story, an emotion. For this reason, every activity – from purchasing activities, to manufacturing in our workshops and retailing in our boutiques – must measure up to the level of trust our customers place in us.</p>
+	<p>We have chosen to formalize our commitments in our Corporate Responsibility policy. This policy is consistent with the objectives of the RJC (Responsible Jewellery Council).</p>
+	<p>Our policy applies to all of our product lines, all of our activities and our entire supply chain, especially our suppliers, as their day-to-day practices reflect on our Maison. Cartier collaborates closely with its suppliers to encourage their participation and assist them in complying with our requirements.</p>
+	<img src="<!--#echo var="CONTENT_IMG_PATH" -->ARTICLE_CARTIER_CORPORATE_RESPONSIBILITY_POLICY_LOGO.jpg" alt="Image"/>
+	<p><b>Our commitments</b></p>
+	<p>Our commitments fall into three major categories:</p>
+	<ul>
+		<li>Business ethics</li>
+		<li>Social performance</li>
+		<li>Environmental performance</li>
+	</ul>
+	<p>
+	<!--#set var="more-text" value="Click here to access the full text of our Corporate Responsibility policy" -->
+	<!--#set var="arrow-class" value="arrow-show" -->
+	<!--#include virtual="../../components/form_elements/arrow_button.shtml" -->
+	</p>
+</div>

@@ -1,0 +1,24 @@
+{
+	"success": true,
+	"serverMessage": "Some Server Message",
+	"content": {
+		"productprice": "$12312",
+		"numericPrice": 0.0,
+		"hasVariants": true,
+		"availability": true,
+		"variants": [{
+			"refid": "a2",
+			"price": "$2212",
+			"numericPrice": 0.0,
+			"availability": true,
+			"images": ["../etc/designs/dmp/clientlibs_base/images/content/N4227900_0_cartier_rings.png", "../etc/designs/dmp/clientlibs_base/images/content/N4227900_0_cartier_rings.png", "../etc/designs/dmp/clientlibs_base/images/content/N4227900_0_cartier_rings.png"],
+			"size": "48"
+		}, {
+			"refid": "a3",
+			"availability": true,
+			"images": [],
+			"numericPrice": 1.5,
+			"size": "49"
+		}]
+	}
+}

@@ -1,0 +1,360 @@
+/*------------------------------------*\
+    HEADER -- MOBILE CSS
+\*------------------------------------*/
+/**
+* TOP NAVIGATION (.top-nav)
+
+*/
+
+/*------------------------------------*\
+    TOP NAVIGATION
+\*------------------------------------*/
+header{
+	height:94px;
+}
+.top-nav {
+	position: fixed;
+	top:0;
+	min-width:640px;
+	display:table;
+	left:0;
+    z-index: 999 !important;
+    @include box-sizing(border-box);
+    width:100%;
+    background:$primary-1;
+	border-bottom: solid 1px $primary-2	;
+    
+	.toggleMenu{
+		cursor:pointer;
+	}
+	
+	.top-nav__logo {
+		float:left;
+		@include rem('margin', 19px 0px 0px 6px);
+		display:block;
+		@include rem('height', 45px);
+		@include rem('width', 163px);
+
+		img{
+		  height:100%;
+		  width:100%;
+		}
+	}
+
+	.top-nav__main-nav {
+		float:right;
+		@include f(20);
+		@include font-color($primary-2);
+	}
+	.top-nav_main-nav__list {
+		@include set-ulFix;
+		@include rem('margin', 24px 24px 0px 0px);
+
+		li{
+			margin-left: -3px;
+			height:35px;
+			display:inline-block;
+			@include rem('padding', 0px 24px 0px 24px);
+			border-right:1px solid $primary-36 ;
+			vertical-align:top;
+		}
+
+		li:last-child{
+			border:none;
+			@include rem('padding', 0px 0px 0px 24px);
+		}
+	}		
+}
+
+
+
+/**
+	* NAV TRANSITION MIXIN  nav-transition for handheld
+	* MOBILE HEADER MAIN CONTAINER
+	* MOBILE HEADER SUB NAV
+	* MOBILE HEADER QUICK TOOLS
+	* HEADER SPOKE PAGE
+*/
+
+/*------------------------------------*\
+    $NAV TRANSITION MIXIN
+\*------------------------------------*/
+
+.header__nav{
+	position: absolute;
+	top: 70px;
+	left: 0;
+	z-index: 100;
+	visibility: visible;
+	max-width: 500px;
+	width: 90%;
+	/*height: 100%*/
+	padding:0 0 20px 0;
+	background:$primary-8;
+	@include linear-gradient(180deg, #0e0e0e 0%, $primary-8 5%);
+}
+
+.toggleMenu {
+    display:  none;
+    background: #666;
+    padding: 10px 15px;
+    color: #fff;
+}
+.body-push{
+	width:100%;
+	position:absolute;
+	left:450px;
+	overflow-x:hidden;
+}
+
+.body-push_h{
+	left:450px;
+	overflow-x:hidden;
+}
+
+
+.left-push-menu {
+     *zoom: 1;
+     @include linear-gradient(180deg, #0e0e0e 0%, $primary-8 5%);
+     position: fixed;
+     width:90%;
+     max-width: 450px;
+     min-width: 450px;
+     z-index:100;
+     top:0;
+     left:-450px;
+     height:100%;
+
+/*------------------------------------*\
+    SEARCH WRAPPER
+\*------------------------------------*/
+     .search {
+		@include clearfix;
+		width:100%;
+		border-bottom: 1px solid $primary-14;
+		@include rem('height', 52px);
+		@include rem('padding', 15px 0);
+		margin:0 auto;
+		position: relative;
+		.magnify-glass {
+			@include setSprite(15px, 10px, -562px, -68px);
+			position: absolute;
+			top :  19%;
+			@include rem('left', 35px);
+			@include rem('width', 50px);
+			@include rem('height', 45px);
+		}
+
+		.search__label {
+			@include rem('text-indent', -9999px);
+			opacity: 0;
+			display: inline-block;
+		    overflow: hidden;
+		}
+		.search__term {
+		
+		    border: 0 none;
+		    @include f(20);
+			@include main-font;
+			@include font-color($primary-8);
+		    width: 80%;
+			@include rem('height', 50px);
+			@include rem('padding', 5px 10px 5px 60px);
+			margin:0 0 0 10%;
+			@include box-sizing(border-box); 
+		}
+	}
+
+/*------------------------------------*\
+    CONNECTION BUTTON WRAPPER
+\*------------------------------------*/
+	.connection-btn {
+	    	display: block;
+	    	@include rem('padding', 25px 0 15px 0);
+	    	text-align: center;
+	    	text-transform: uppercase;
+
+	    	.cta {
+	    		@include f(22);
+	    	}
+		}
+
+
+/*------------------------------------*\
+    NAVIGATION HEADING WRAPPER
+\*------------------------------------*/
+
+	.nav-heading-cont{
+		@include rem('margin', 40px 0);
+
+	.nav-heading-cont__title{
+			font:italic 25px georgia;
+			font-style:italic;
+			@include f(25);
+			@include main-font;
+			@include font-color($primary-10);
+			@include rem('padding', 0 70px 20px 60px);
+			text-transform:capitalize;
+			text-align: left;
+		}
+
+	}			
+
+}
+
+/*------------------------------------*\
+    NAVIGATION LIST PROPERTIES
+\*------------------------------------*/
+
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+
+.nav:after {
+    clear: both;
+}
+
+.nav{
+	@include linear-gradient(180deg, #0e0e0e 0%,  #393939 5%);
+	@include set-ulFix;
+	vertical-align:top;
+
+	ul{
+		@include linear-gradient(180deg, #0e0e0e 0%,  $primary-14 5%);
+
+	}
+
+	> li{
+		@include f(26);
+		@include bold-font;
+		text-transform: uppercase;
+		border-top:1px solid $primary-8;
+
+		ul{
+			li:first-child{
+				border-top:0;
+			}
+		}
+
+		a {
+			@include rem('padding',30px 74px 30px 57px);
+			vertical-align:middle;
+			display:block;
+			line-height: 30px;
+			word-wrap: break-word;
+		}
+	}
+
+
+
+	 ul {
+	    @include set-ulFix;
+	    @include f(25);
+	    @include brand-font;
+	 	position: absolute;
+	    left: -9999px;
+
+	    li{
+			@include rem('margin', 0 40px 0 60px);
+			border-top:1px solid $primary-8;
+			a {
+				display: block;
+				@include rem('padding', 20px 28px 20px 0);
+				@include rem('line-height', 30px);
+				vertical-align: middle;
+				text-decoration: none;
+			}
+
+			.hover ul {
+			    left: 100%;
+			    top: 0;
+			}
+
+			ul{
+			    @include set-ulFix;
+			 	background:none;
+
+				li {
+					text-decoration: none;
+					margin:0;
+					@include rem('padding', 20px 20px 20px 0);
+					@include rem('line-height', 30px);
+					@include f(20);
+
+					a{
+					 	@include rem('padding', 0 30px);
+					}
+				}
+
+			}
+		}
+	}
+
+	> li.hover > ul {
+    	left: 0;
+	}
+
+	> li.hover > ul , li li.hover ul {
+    	position: static;
+	}
+
+	.nav-arrow{
+    	background: url($path-images + 'icons/right-icon.png') no-repeat 88% 49%;
+	}
+	
+	.nav-arrow-down {
+    	background: url($path-images + 'icons/down-icon.png') no-repeat 89% 49%;
+	}
+
+}
+
+
+
+/*@media screen and (max-width: 768px) {
+    .active {
+        display: block;
+    }
+    .nav > li {
+        float: none;
+    }
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+
+}*/
+
+.billing-header{
+	display: block;
+
+	.top-icons{
+		li{
+			display: inline-block;
+		}
+		
+		.back-icon{
+				@include setSprite(70px, 47px, -140px, -349px);
+				@include rem(margin, 0 20px 0);
+
+				img{
+					position: relative;
+					top: -4px;
+					left: 31px;
+				}
+				
+			}
+	}
+}

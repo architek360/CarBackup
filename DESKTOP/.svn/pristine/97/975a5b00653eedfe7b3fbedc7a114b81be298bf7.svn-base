@@ -1,0 +1,6 @@
+<!-- error page Starts Here-->
+<div class="error-page">
+	<p class="error-page__msg"> Sorry,page you requested could not be found </p>
+</div>
+
+<!-- error page end  Here-->

@@ -1,0 +1,249 @@
+/*------------------------------------*\
+    Carousel -- Mobile CSS
+\*------------------------------------*/
+
+.social-share{
+	background-color:$primary-46;
+	height:180px;
+	width:100%;
+	@include rem('margin-top', 20px);
+	position: relative;
+
+	p{
+		text-align:center;
+		font-style: italic;
+		@include main-font;
+		@include f(24);
+		color: $primary-3;
+		position: relative;
+		top:10px;
+	}
+	ul{
+		position: relative;
+		@include set-ulFix;
+		width:81.25%;
+		margin: 0 auto;
+		text-align: center;
+		li{
+			display:inline-block;
+			height: 90px;
+   			padding: 20px 20px 0;
+    		width: 70px;
+    		vertical-align:top;
+
+			a{
+				display:inline-block;
+				color: $primary-7;
+				text-decoration:none;
+				position:relative;
+				@include rem('text-indent', -9999px);
+				display: inline-block;
+			    overflow: hidden;
+				&:hover{
+				 	text-decoration:none;
+				}
+			}
+
+			.social-share__facebook{
+				@include setSprite(60px, 60px, -20px, -135px);
+			}
+
+			.social-share__twitter{
+				@include setSprite(58px, 60px, -174px, -135px);
+			}
+
+			.social-share__pin-it{
+				@include setSprite(60px, 60px, -97px, -135px);
+			}
+
+			.social-share__email{
+				@include setSprite(77px, 65px, -812px, -123px );
+			}
+
+			.social-share__email-deployed{
+				@include setSprite(77px, 65px, -812px, -198px );
+			}
+			.social-share__email-form {
+				background-color: $primary-25;
+				display: none;
+				height: 1400px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				top: 100px;
+
+
+				.email-form__wrapper{
+					@include rem('padding',30px 24px 20px 24px);
+					@include rem('margin',20px 0 52px 0);
+					@include font-color($primary-2);
+					display:inline-block;
+					text-transform:uppercase;
+					text-align: left;
+					width: 100%;
+					 -moz-box-sizing: border-box;
+					box-sizing: border-box;
+
+					.hidden-textarea {
+						display: none;
+					}
+
+					.error {
+						/*font-size: 12px !important;*/
+					}
+
+					.email-form__heading {
+						@include bold-font;
+						@include f(28);
+    					letter-spacing: 1px;
+    					text-align: center;
+    					display: block;
+    					margin-bottom: 40px;
+    					text-transform: uppercase;
+					}
+					.email-form__sub-heading {
+						@include bold-font;
+						@include f(22);
+    					letter-spacing: 1px;
+    					text-align: left;
+    					display: block;
+    					text-transform: uppercase;
+    					@include rem('margin',30px 0);
+					}
+						
+					.grid__item{
+						@include rem('padding',0px);
+						/*@include rem('margin-top',-2px);*/
+
+						label{
+							@include bold-font;
+							/*@include f(12);*/
+							letter-spacing: 1px;
+						}
+
+						.form-input, .form-textarea {
+							/*@include f(12);*/
+						}
+
+
+						.form-check{
+							margin-left: 18px;
+							width:105%;
+							@include main-font;
+							font-style:italic;
+							.form-check-label{
+								width:80%;
+							}
+							.form-check__icon {
+								height: 12px;
+							    left: 6px;
+							    width: 13px;
+							}
+							.form-check__wrapper {
+								 left: -5px;
+								 width: 12px;
+								 height: 12px;
+							}
+							input:checked + span.form-check__icon {
+								@include setSprite(12px, 13px, -746px, -51px);
+								height: 12px;
+    							vertical-align: top;
+							    width: 13px;
+
+							}
+						}
+
+						&:last-child{
+							padding:0;
+						}
+						.radio-btn{
+							@include rem('padding',0 0 33px);
+							@include rem('margin',15px 0 0px);
+						}
+						.radio-btn + span {
+							@include rem('margin',-29px 0 0px);
+						}
+					}
+					.next-step-cta{
+						margin: 0 auto;
+						width: 100%;
+						text-align: center;
+						display: inline;
+    					float: left;
+						.cta-button  {
+							@include rem('padding',10px 20px);
+							.cta-button__input {
+								/*@include f(18);*/
+							}
+						}
+
+						.loaderDiv {
+							 position: absolute;
+							 .loaderImage {
+								left: 60px;
+								top: 20px;
+							}
+						}
+						
+					}
+
+					.grid__item--row{
+
+						@include rem('min-height',126px);
+
+						input + span {
+							height: 35px
+						}
+					}
+					
+					.grid__item--pad{
+						@include rem('padding',0 0 30px 0);
+					}
+					.grid__item--pad20{
+						@include rem('padding',0 0 20px 0);
+					}
+
+					.mandatory{
+						color:$primary-5;
+						@include f(12);
+					}
+				}
+
+				.receive-message{
+					text-transform:none;
+					@include rem(margin-left, -25px);
+					@include rem('margin', -20px 0px 30px -25px);
+					.error {
+						font-size: 12px !important;
+						margin-left: 10px;
+					}
+
+				}
+
+				.receive-message__label{
+					display:block;
+					width:90%;
+					label{
+						@include main-font;
+					}
+
+				}
+
+/*======================================*/
+
+
+
+
+			}
+		}
+		.selected {
+			background-color: $primary-25;
+		}
+
+	}
+
+}
+
+.email-deployed {
+	margin-bottom: 1460px;
+}

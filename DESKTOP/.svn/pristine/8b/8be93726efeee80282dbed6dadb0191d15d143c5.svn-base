@@ -1,0 +1,11 @@
+<!--Html for progress step -->
+<section class="steps-progress">
+	<nav>
+    <ul class="progress">
+      <li class="active"><a href="#">1</a></li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+</nav>
+</section>
+<!--Html for progress step ends-->

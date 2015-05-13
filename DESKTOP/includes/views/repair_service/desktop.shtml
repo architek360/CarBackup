@@ -1,0 +1,45 @@
+<!-- Login Box Starts Here-->
+<div class="repair-service js-repair-service ">
+	<!-- <div class="title">	
+		<h3 class="heading2">MY REPAIR SERVICE</h2>
+	</div> -->
+	<div class="notification  js-form-validator">
+	    
+		    <div class="notification__desc">
+		    	<p>To follow your repair service progress online, please enter your Repair Service Notification Number: </p>
+		    </div>
+
+			<form name="notification-number" class="notification-number" >
+
+			    <div class="one-whole ">
+
+				    <div class="from_row ">
+				    	<div class="form_row_inner">
+				    				<!--#set var="input-name" value="savNumber" -->
+			    <!--#set var="label-name" value="notification number" -->
+			    <!--#include virtual="../../components/form_elements/label.shtml" -->
+				    <!--#set var="input-type" value="text" -->
+				    <!--#set var="input-name" value="savNumber" -->
+				    <!--#set var="input-prop" value="form-input" -->
+				    <!--#include virtual="../../components/form_elements/input.shtml" -->
+				</div>
+				    <!--#set var="links-to" --" value="#" -->
+			    	<!--#set var="img-src" value= "tooltip_icon.png" -->
+			    	<!--#include virtual="../../components/tool_tip/html.shtml" -->
+					</div>
+
+				</div>
+				<!--#set var="cta--varaint" value="cta--red" -->
+			    <!--#set var="text-detail" value="validate" -->
+			    <!--#include virtual="../../components/form_elements/button.shtml" -->
+			</form>  
+	</div>
+	
+	<div class="side-image">
+		<!--#set var="link-to" value="#" -->
+		<!--#set var="class-name" value="image-link" -->
+		<!--#set var="img-src" value="3.jpg" -->
+		<!--#include virtual="../../components/nav_icon/top_nav_icon.shtml" -->
+	</div>  
+		   
+</div> 

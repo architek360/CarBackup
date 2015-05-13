@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    $MAIN THEME - Desktop VIEW CSS
+\*------------------------------------*/
+
+/**
+ * IMPORT MOBILE STYELS....................first get all mobile styles
+ * IMPORT DESKTOP STYLES ..................get desktop styles
+ * HEADER & FOOTER.........................Global Header & Footer Style
+ * IMPORT COMPONENTS......................Components Styles
+ * IMPORT VIEW............................Views Styles
+ */
+
+/*------------------------------------*\
+    $IMPORT - Mobile Styles (As per mobile first approach)
+\*------------------------------------*/
+@import "_theme_vars";
+@import "../_helpers";
+
+
+.shopping-bag .personal-card .js-cursive-class{
+    font-family: "MS Gothic" ,"MS ゴシック","ＭＳ Ｐゴシック", "MS PGothic", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", OSAKA, Arial, sans-serif !important;
+}
+
+.shopping-bag .personal-card .js-bold-class{
+    font-family: "MS Minthe" , "MS 明朝" , "ＭＳ Ｐ明朝", "MS PMincho", "ＭＳ 明朝", "MS Mincho", Times, "Times New Roman", serif !important;
+}
+
